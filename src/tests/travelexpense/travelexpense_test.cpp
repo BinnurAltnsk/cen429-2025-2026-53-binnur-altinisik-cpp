@@ -12,7 +12,7 @@
 #define ENABLE_TRAVELEXPENSE_TEST
 
 #include "gtest/gtest.h"
-#include "../../travelexpense/header/travelexpense.h"
+#include "travelexpense.h"
 #include <cstring>
 #include <vector>
 

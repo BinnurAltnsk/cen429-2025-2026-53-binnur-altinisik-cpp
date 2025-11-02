@@ -11,13 +11,24 @@
 #ifndef TRAVELEXPENSEAPP_H
 #define TRAVELEXPENSEAPP_H
 
-#include "../travelexpense/header/travelexpense.h"
+#include "travelexpense.h"
 
 /**
  * @namespace TravelExpenseApp
  * @brief Konsol uygulaması menü sistemi
  */
 namespace TravelExpenseApp {
+
+    // Import all types and namespaces from TravelExpense
+    using namespace TravelExpense;
+    
+    // Explicit type imports for better IntelliSense support
+    using TravelExpense::ErrorCode;
+    using TravelExpense::User;
+    using TravelExpense::Trip;
+    using TravelExpense::Expense;
+    using TravelExpense::Budget;
+    using TravelExpense::ExpenseCategory;
 
     /**
      * @brief Ana menüyü göster ve yönet

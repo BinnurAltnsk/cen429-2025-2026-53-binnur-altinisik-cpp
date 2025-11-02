@@ -32,6 +32,16 @@ if(SQLITE3_AMALGAMATION)
     )
     # SQLite3'ü C dosyası olarak derle
     set_source_files_properties(${SQLITE3_AMALGAMATION_C} PROPERTIES LANGUAGE C)
+    
+    # Windows'ta SQLite3 için runtime library ayarını eşleştir
+    # SQLite3 C dosyası da aynı runtime library'yi kullanmalı
+    if(MSVC)
+        # SQLite3 C dosyası için de aynı runtime library'yi kullan
+        # Multi-configuration build için genel ayar
+        set_source_files_properties(${SQLITE3_AMALGAMATION_C} PROPERTIES 
+            COMPILE_OPTIONS "$<$<CONFIG:Debug>:/MTd>;$<$<CONFIG:Release>:/MT>"
+        )
+    endif()
 else()
     # Sistem SQLite3 kütüphanesini link et
     target_link_libraries(${LIBNAME} PRIVATE ${SQLite3_LIBRARIES})

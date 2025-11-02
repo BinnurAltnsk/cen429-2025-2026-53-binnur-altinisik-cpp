@@ -24,8 +24,8 @@ enable_testing()
 add_executable(${EXENAME} ${LIB_HEADERS} ${LIB_SOURCES})
 
 # Add included headers
+# Use the travelexpense library's include directories (automatically inherited via target_link_libraries)
 target_include_directories(${EXENAME} PUBLIC
-						   ${CMAKE_CURRENT_SOURCE_DIR}/../../travelexpense/header
 						   ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Link travelexpense library and gtest

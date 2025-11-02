@@ -21,8 +21,8 @@ source_group("src" FILES ${APP_SOURCES})
 add_executable(${APPNAME} ${APP_HEADERS} ${APP_SOURCES}) # for dynamic library use SHARED
 
 target_include_directories(${APPNAME} PUBLIC
-						   ${CMAKE_CURRENT_SOURCE_DIR}/../travelexpense/header
 						   ${CMAKE_CURRENT_SOURCE_DIR}/header)
+# travelexpense library's include directories are automatically inherited via target_link_libraries
 
 # Link travelexpense library
 target_link_libraries(${APPNAME} PRIVATE travelexpense)
