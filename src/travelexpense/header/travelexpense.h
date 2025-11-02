@@ -27,6 +27,12 @@
 // Güvenlik modülleri
 #include "security.h"
 #include "encryption.h"
+#include "softhsm.h"
+#include "codehardening.h"
+#include "rasp.h"
+
+// Migration modülü (Binary → SQLite)
+#include "migration.h"
 
 // Modüller
 #include "userAuth.h"

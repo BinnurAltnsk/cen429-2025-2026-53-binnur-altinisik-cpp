@@ -22,6 +22,7 @@ add_library(${LIBNAME} SHARED ${LIB_HEADERS} ${LIB_SOURCES}) # Dynamic library (
 
 target_include_directories(${LIBNAME} PUBLIC
 						   ${CMAKE_CURRENT_SOURCE_DIR}/header
+						   ${CMAKE_CURRENT_SOURCE_DIR}/third_party/pkcs11
 						   ${SQLite3_INCLUDE_DIRS})
 
 # Link SQLite3
@@ -47,11 +48,35 @@ else()
     target_link_libraries(${LIBNAME} PRIVATE ${SQLite3_LIBRARIES})
 endif()
 
+# Platform-specific libraries for SoftHSM (PKCS#11)
+if(UNIX AND NOT APPLE)
+    # Linux: dlopen için dl kütüphanesi
+    target_link_libraries(${LIBNAME} PRIVATE dl)
+endif()
+
 # Platform specific settings for DLL/SO
 if(WIN32)
     # Windows: DLL export definitions
     set_target_properties(${LIBNAME} PROPERTIES
         WINDOWS_EXPORT_ALL_SYMBOLS ON
+    )
+    # Windows SDK version for PROCESSENTRY32A
+    target_compile_definitions(${LIBNAME} PRIVATE
+        "_WIN32_WINNT=0x0601"  # Windows 7 or later
+    )
+    # Windows system libraries for RASP module (Process32FirstA, Process32NextA)
+    # Note: Process32FirstA and Process32NextA are in kernel32.dll
+    # These are standard Windows libraries and should be linked automatically,
+    # but we link them explicitly to ensure Process32FirstA and Process32NextA are found
+    # Note: On Windows with MSVC, system libraries are usually linked automatically,
+    # but we explicitly link them to avoid linker errors
+    # Windows system libraries for RASP module (Process32FirstA, Process32NextA)
+    # These functions are in kernel32.dll
+    # On Windows, kernel32 is usually linked automatically, but we link explicitly
+    target_link_libraries(${LIBNAME} PRIVATE 
+        kernel32
+        psapi
+        advapi32
     )
 else()
     # Linux/Unix: Set visibility for exported symbols

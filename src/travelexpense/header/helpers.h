@@ -1,10 +1,10 @@
-/**
+﻿/**
  * @file helpers.h
- * @brief Seyahat Gideri Takibi - Yardımcı Fonksiyonlar
+ * @brief Seyahat Gideri Takibi - Yard─▒mc─▒ Fonksiyonlar
  * 
- * Bu dosya, kategori string dönüşümleri gibi yardımcı fonksiyon bildirimlerini içerir.
+ * Bu dosya, kategori string d├Ân├╝┼ş├╝mleri gibi yard─▒mc─▒ fonksiyon bildirimlerini i├ğerir.
  * 
- * @author Binnur Altınışık
+ * @author Binnur Alt─▒n─▒┼ş─▒k
  * @date 2025
  */
 
@@ -18,12 +18,12 @@ namespace TravelExpense {
     /**
      * @brief Kategori string'ini al
      * @param category Gider kategorisi
-     * @return const char* Kategori adı
+     * @return const char* Kategori ad─▒
      */
     const char* getCategoryString(ExpenseCategory category);
 
     /**
-     * @brief String'i kategori enum'una çevir
+     * @brief String'i kategori enum'una ├ğevir
      * @param categoryStr Kategori string'i
      * @return ExpenseCategory Kategori enum'u
      */
