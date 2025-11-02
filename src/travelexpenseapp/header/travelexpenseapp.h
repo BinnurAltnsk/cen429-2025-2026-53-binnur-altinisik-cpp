@@ -86,7 +86,7 @@ namespace TravelExpenseApp {
      * @brief Hata mesajını göster
      * @param errorCode Hata kodu
      */
-    void showError(TravelExpense::ErrorCode errorCode);
+    void showError(ErrorCode errorCode);
 
     /**
      * @brief Başarı mesajını göster

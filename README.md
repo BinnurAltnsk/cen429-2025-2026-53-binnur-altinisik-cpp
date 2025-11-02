@@ -26,10 +26,25 @@ Bu proje, kullanıcıların seyahat planlarını yapmasına, giderlerini kaydetm
 
 - **CMake:** >= 3.12
 - **C++ Standard:** >= 11
+- **SQLite3:** Veritabanı için (kurulum için `docs/SQLITE_SETUP.md` dosyasına bakın)
 - **GoogleTest:** Birim testleri için
 - **Visual Studio Community Edition:** Windows için
 - **Ninja:** WSL/Linux için
 - **Whitebox Kriptografi:** Veri şifreleme için
+
+### SQLite3 Kurulumu
+
+**Hızlı Kurulum (Önerilen):**
+
+1. https://www.sqlite.org/download.html adresine gidin
+2. "Amalgamation" bölümünden `sqlite-amalgamation-XXX.zip` dosyasını indirin
+3. Zip içinden `sqlite3.c` ve `sqlite3.h` dosyalarını çıkarın
+4. Bu dosyaları şu klasöre kopyalayın:
+   ```
+   src/travelexpense/third_party/sqlite3/
+   ```
+
+Detaylı kurulum talimatları için: [`docs/SQLITE_SETUP.md`](docs/SQLITE_SETUP.md)
 
 ## Proje Yapısı
 

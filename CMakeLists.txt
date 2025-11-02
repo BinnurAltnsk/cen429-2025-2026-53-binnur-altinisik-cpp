@@ -96,6 +96,38 @@ endif()
 
 
 
+# Find SQLite3
+# Önce proje içindeki amalgamation dosyalarını kontrol et
+set(SQLITE3_AMALGAMATION_DIR "${CMAKE_CURRENT_SOURCE_DIR}/${ROOT}/travelexpense/third_party/sqlite3")
+set(SQLITE3_AMALGAMATION_C "${SQLITE3_AMALGAMATION_DIR}/sqlite3.c")
+set(SQLITE3_AMALGAMATION_H "${SQLITE3_AMALGAMATION_DIR}/sqlite3.h")
+
+if(EXISTS "${SQLITE3_AMALGAMATION_C}" AND EXISTS "${SQLITE3_AMALGAMATION_H}")
+    # Amalgamation dosyaları bulundu - proje içinde kullan
+    message(STATUS "[${ROOT}] Using SQLite3 amalgamation from project")
+    set(SQLite3_FOUND TRUE)
+    set(SQLite3_INCLUDE_DIRS "${SQLITE3_AMALGAMATION_DIR}")
+    set(SQLite3_LIBRARIES "") # Statik link edilecek
+    set(SQLITE3_AMALGAMATION TRUE)
+else()
+    # Sistem SQLite3'ü ara
+    message(STATUS "[${ROOT}] SQLite3 amalgamation not found, searching system SQLite3...")
+    find_package(SQLite3 QUIET)
+    if(SQLite3_FOUND)
+        message(STATUS "[${ROOT}] SQLite3 found: ${SQLite3_VERSION}")
+        message(STATUS "[${ROOT}] SQLite3 libraries: ${SQLite3_LIBRARIES}")
+        message(STATUS "[${ROOT}] SQLite3 include dirs: ${SQLite3_INCLUDE_DIRS}")
+        set(SQLITE3_AMALGAMATION FALSE)
+    else()
+        message(FATAL_ERROR "[${ROOT}] SQLite3 not found! Please:")
+        message(FATAL_ERROR "  Option 1: Download SQLite3 amalgamation:")
+        message(FATAL_ERROR "    https://www.sqlite.org/download.html")
+        message(FATAL_ERROR "    Copy sqlite3.c and sqlite3.h to:")
+        message(FATAL_ERROR "    ${SQLITE3_AMALGAMATION_DIR}/")
+        message(FATAL_ERROR "  Option 2: Install SQLite3 system-wide or via vcpkg")
+    endif()
+endif()
+
 # Logger submodule
 if(ENABLE_TRAVELEXPENSE)
 	add_subdirectory(${ROOT}/travelexpense)

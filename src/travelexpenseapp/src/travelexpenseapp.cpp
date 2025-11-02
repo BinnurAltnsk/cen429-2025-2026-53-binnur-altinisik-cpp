@@ -9,26 +9,48 @@
  */
 
 #include "../header/travelexpenseapp.h"
+#include <sqlite3.h>
+#include <vector>
 #include <iostream>
 #include <iomanip>
 #include <limits>
 #include <cstring>
+#include <cstdio>
+#include <algorithm>
 
 #ifdef _WIN32
+    #ifndef NOMINMAX
+        #define NOMINMAX  // Prevent Windows.h from defining min/max macros
+    #endif
     #include <windows.h>
+    #include <io.h>
+    #include <fcntl.h>
     #define CLEAR_SCREEN() system("cls")
 #else
     #include <cstdlib>
     #define CLEAR_SCREEN() system("clear")
 #endif
 
-using namespace TravelExpense;
+
 using namespace TravelExpenseApp;
 
 namespace TravelExpenseApp {
 
+    // ==================== Yardımcı Fonksiyonlar ====================
+
     void clearScreen() {
         CLEAR_SCREEN();
+    }
+
+    void printHeader(const char* title) {
+        std::cout << "\n";
+        std::cout << "========================================\n";
+        std::cout << "  " << title << "\n";
+        std::cout << "========================================\n\n";
+    }
+
+    void printSeparator() {
+        std::cout << "----------------------------------------\n";
     }
 
     bool getStringInput(const char* prompt, char* output, size_t maxLength) {
@@ -41,7 +63,12 @@ namespace TravelExpenseApp {
         
         if (std::cin.fail()) {
             std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+            return false;
+        }
+
+        // Boş string kontrolü
+        if (strlen(output) == 0) {
             return false;
         }
 
@@ -58,7 +85,7 @@ namespace TravelExpenseApp {
         
         if (std::cin.fail()) {
             std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
             return false;
         }
 
@@ -76,7 +103,7 @@ namespace TravelExpenseApp {
         
         if (std::cin.fail()) {
             std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
             return false;
         }
 
@@ -89,22 +116,22 @@ namespace TravelExpenseApp {
         
         switch (errorCode) {
             case ErrorCode::ERROR_FILE_NOT_FOUND:
-                std::cout << "Dosya bulunamadı.\n";
+                std::cout << "Dosya veya kaynak bulunamadı.\n";
                 break;
             case ErrorCode::ERROR_DECRYPTION_FAILED:
-                std::cout << "Şifre çözme hatası.\n";
+                std::cout << "Şifre çözme işlemi başarısız oldu.\n";
                 break;
             case ErrorCode::ERROR_CHECKSUM_MISMATCH:
-                std::cout << "Veri bütünlüğü hatası.\n";
+                std::cout << "Veri bütünlüğü hatası tespit edildi.\n";
                 break;
             case ErrorCode::ERROR_INVALID_USER:
-                std::cout << "Geçersiz kullanıcı.\n";
+                std::cout << "Geçersiz kullanıcı veya şifre.\n";
                 break;
             case ErrorCode::ERROR_BUDGET_EXCEEDED:
-                std::cout << "Bütçe limiti aşıldı.\n";
+                std::cout << "Bütçe limiti aşıldı!\n";
                 break;
             case ErrorCode::ERROR_INVALID_INPUT:
-                std::cout << "Geçersiz girdi.\n";
+                std::cout << "Geçersiz veya eksik girdi.\n";
                 break;
             case ErrorCode::ERROR_MEMORY_ALLOCATION:
                 std::cout << "Bellek ayırma hatası.\n";
@@ -113,10 +140,10 @@ namespace TravelExpenseApp {
                 std::cout << "Dosya okuma/yazma hatası.\n";
                 break;
             case ErrorCode::ERROR_ENCRYPTION_FAILED:
-                std::cout << "Şifreleme hatası.\n";
+                std::cout << "Şifreleme işlemi başarısız oldu.\n";
                 break;
             default:
-                std::cout << "Bilinmeyen hata.\n";
+                std::cout << "Bilinmeyen bir hata oluştu.\n";
                 break;
         }
     }
@@ -125,10 +152,26 @@ namespace TravelExpenseApp {
         std::cout << "\n[+] " << message << "\n";
     }
 
+    void showInfo(const char* message) {
+        std::cout << "\n[i] " << message << "\n";
+    }
+
     void waitForContinue() {
         std::cout << "\nDevam etmek için Enter'a basın...";
         std::cin.get();
     }
+
+    bool requireLogin() {
+        User* currentUser = UserAuth::getCurrentUser();
+        if (!currentUser || currentUser->userId <= 0) {
+            std::cout << "\n[!] Bu işlem için önce giriş yapmalısınız!\n";
+            waitForContinue();
+            return false;
+        }
+        return true;
+    }
+
+    // ==================== Kullanıcı İşlemleri Menüsü ====================
 
     void showUserMenu() {
         int choice;
@@ -137,42 +180,88 @@ namespace TravelExpenseApp {
 
         do {
             clearScreen();
-            std::cout << "=== KULLANICI İŞLEMLERİ ===\n\n";
+            printHeader("KULLANICI İŞLEMLERİ");
+
+            User* currentUser = UserAuth::getCurrentUser();
+            if (currentUser && currentUser->userId > 0) {
+                std::cout << "Mevcut Kullanıcı: " << currentUser->username;
+                if (currentUser->isGuest) {
+                    std::cout << " (Misafir)";
+                }
+                std::cout << "\n";
+                printSeparator();
+            }
+
             std::cout << "1. Giriş Yap\n";
-            std::cout << "2. Kaydol\n";
-            std::cout << "3. Misafir Modu\n";
-            std::cout << "0. Ana Menü\n\n";
+            std::cout << "2. Yeni Hesap Oluştur\n";
+            std::cout << "3. Misafir Modu (Giriş Yapmadan Devam Et)\n";
+            if (currentUser && currentUser->userId > 0) {
+                std::cout << "4. Çıkış Yap\n";
+            }
+            std::cout << "0. Ana Menüye Dön\n\n";
             std::cout << "Seçiminiz: ";
             std::cin >> choice;
             std::cin.ignore();
 
             switch (choice) {
                 case 1: {
-                    if (getStringInput("Kullanıcı Adı: ", username, sizeof(username)) &&
-                        getStringInput("Şifre: ", password, sizeof(password))) {
-                        ErrorCode result = UserAuth::loginUser(username, password);
-                        if (result == ErrorCode::SUCCESS) {
-                            showSuccess("Giriş başarılı!");
-                            waitForContinue();
-                            return;
-                        } else {
-                            showError(result);
-                            waitForContinue();
-                        }
+                    std::cout << "\n";
+                    if (!getStringInput("Kullanıcı Adı: ", username, sizeof(username))) {
+                        std::cout << "\n[!] Kullanıcı adı boş olamaz!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    if (!getStringInput("Şifre: ", password, sizeof(password))) {
+                        std::cout << "\n[!] Şifre boş olamaz!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    ErrorCode result = UserAuth::loginUser(username, password);
+                    if (result == ErrorCode::SUCCESS) {
+                        showSuccess("Giriş başarılı! Hoş geldiniz!");
+                        waitForContinue();
+                        return;
+                    } else {
+                        showError(result);
+                        waitForContinue();
                     }
                     break;
                 }
                 case 2: {
-                    if (getStringInput("Kullanıcı Adı: ", username, sizeof(username)) &&
-                        getStringInput("Şifre: ", password, sizeof(password))) {
-                        ErrorCode result = UserAuth::registerUser(username, password);
-                        if (result == ErrorCode::SUCCESS) {
-                            showSuccess("Kayıt başarılı!");
-                            waitForContinue();
-                        } else {
-                            showError(result);
-                            waitForContinue();
-                        }
+                    std::cout << "\n";
+                    if (!getStringInput("Yeni Kullanıcı Adı: ", username, sizeof(username))) {
+                        std::cout << "\n[!] Kullanıcı adı boş olamaz!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    if (strlen(username) < 3) {
+                        std::cout << "\n[!] Kullanıcı adı en az 3 karakter olmalıdır!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    if (!getStringInput("Şifre: ", password, sizeof(password))) {
+                        std::cout << "\n[!] Şifre boş olamaz!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    if (strlen(password) < 4) {
+                        std::cout << "\n[!] Şifre en az 4 karakter olmalıdır!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    ErrorCode result = UserAuth::registerUser(username, password);
+                    if (result == ErrorCode::SUCCESS) {
+                        showSuccess("Hesap başarıyla oluşturuldu! Giriş yapabilirsiniz.");
+                        waitForContinue();
+                    } else {
+                        showError(result);
+                        waitForContinue();
                     }
                     break;
                 }
@@ -188,27 +277,43 @@ namespace TravelExpenseApp {
                     }
                     break;
                 }
+                case 4: {
+                    if (currentUser && currentUser->userId > 0) {
+                        UserAuth::logoutUser();
+                        showSuccess("Başarıyla çıkış yapıldı.");
+                        waitForContinue();
+                        return;
+                    }
+                    break;
+                }
                 case 0:
                     return;
                 default:
-                    std::cout << "\nGeçersiz seçim!\n";
+                    std::cout << "\n[!] Geçersiz seçim! Lütfen 0-4 arası bir sayı girin.\n";
                     waitForContinue();
                     break;
             }
         } while (choice != 0);
     }
 
+    // ==================== Seyahat Planlama Menüsü ====================
+
     void showTripMenu() {
         int choice;
 
         do {
             clearScreen();
-            std::cout << "=== SEYAHAT PLANLAMA ===\n\n";
-            std::cout << "1. Seyahat Oluştur\n";
-            std::cout << "2. Seyahatleri Görüntüle\n";
-            std::cout << "3. Seyahati Düzenle\n";
-            std::cout << "4. Seyahati Sil\n";
-            std::cout << "0. Ana Menü\n\n";
+            printHeader("SEYAHAT PLANLAMA");
+
+            if (!requireLogin()) {
+                return;
+            }
+
+            std::cout << "1. Yeni Seyahat Oluştur\n";
+            std::cout << "2. Seyahatlerimi Görüntüle\n";
+            std::cout << "3. Seyahat Düzenle\n";
+            std::cout << "4. Seyahat Sil\n";
+            std::cout << "0. Ana Menüye Dön\n\n";
             std::cout << "Seçiminiz: ";
             std::cin >> choice;
             std::cin.ignore();
@@ -216,49 +321,93 @@ namespace TravelExpenseApp {
             switch (choice) {
                 case 1: {
                     User* currentUser = UserAuth::getCurrentUser();
-                    if (!currentUser || currentUser->userId <= 0) {
-                        std::cout << "\n[!] Önce giriş yapmalısınız!\n";
+                    Trip newTrip;
+                    newTrip.userId = currentUser->userId;
+
+                    std::cout << "\n--- Yeni Seyahat Bilgileri ---\n\n";
+
+                    if (!getStringInput("Varış Noktası: ", newTrip.destination, sizeof(newTrip.destination))) {
+                        std::cout << "\n[!] Varış noktası boş olamaz!\n";
                         waitForContinue();
                         break;
                     }
 
-                    Trip newTrip;
-                    newTrip.userId = currentUser->userId;
+                    if (!getStringInput("Başlangıç Tarihi (YYYY-MM-DD): ", newTrip.startDate, sizeof(newTrip.startDate))) {
+                        std::cout << "\n[!] Başlangıç tarihi boş olamaz!\n";
+                        waitForContinue();
+                        break;
+                    }
 
-                    if (getStringInput("Varış Noktası: ", newTrip.destination, sizeof(newTrip.destination)) &&
-                        getStringInput("Başlangıç Tarihi (YYYY-MM-DD): ", newTrip.startDate, sizeof(newTrip.startDate)) &&
-                        getStringInput("Bitiş Tarihi (YYYY-MM-DD): ", newTrip.endDate, sizeof(newTrip.endDate)) &&
-                        getStringInput("Konaklama: ", newTrip.accommodation, sizeof(newTrip.accommodation)) &&
-                        getStringInput("Ulaşım: ", newTrip.transportation, sizeof(newTrip.transportation)) &&
-                        getDoubleInput("Bütçe: ", newTrip.budget)) {
+                    if (!getStringInput("Bitiş Tarihi (YYYY-MM-DD): ", newTrip.endDate, sizeof(newTrip.endDate))) {
+                        std::cout << "\n[!] Bitiş tarihi boş olamaz!\n";
+                        waitForContinue();
+                        break;
+                    }
 
-                        int32_t tripId;
-                        ErrorCode result = TripManager::createTrip(newTrip, tripId);
-                        if (result == ErrorCode::SUCCESS) {
-                            std::cout << "\n[+] Seyahat başarıyla oluşturuldu! ID: " << tripId << "\n";
-                            waitForContinue();
-                        } else {
-                            showError(result);
-                            waitForContinue();
-                        }
+                    if (!getStringInput("Konaklama Bilgisi: ", newTrip.accommodation, sizeof(newTrip.accommodation))) {
+                        std::cout << "\n[!] Konaklama bilgisi boş olamaz!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    if (!getStringInput("Ulaşım Bilgisi: ", newTrip.transportation, sizeof(newTrip.transportation))) {
+                        std::cout << "\n[!] Ulaşım bilgisi boş olamaz!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    if (!getDoubleInput("Toplam Bütçe: ", newTrip.budget)) {
+                        std::cout << "\n[!] Geçersiz bütçe değeri!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    if (newTrip.budget < 0) {
+                        std::cout << "\n[!] Bütçe negatif olamaz!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    int32_t tripId;
+                    ErrorCode result = TripManager::createTrip(newTrip, tripId);
+                    if (result == ErrorCode::SUCCESS) {
+                        std::cout << "\n[+] Seyahat başarıyla oluşturuldu!\n";
+                        std::cout << "[i] Seyahat ID: " << tripId << "\n";
+                        waitForContinue();
+                    } else {
+                        showError(result);
+                        waitForContinue();
                     }
                     break;
                 }
                 case 2: {
                     User* currentUser = UserAuth::getCurrentUser();
-                    if (!currentUser || currentUser->userId <= 0) {
-                        std::cout << "\n[!] Önce giriş yapmalısınız!\n";
-                        waitForContinue();
-                        break;
-                    }
-
                     std::vector<Trip> trips;
                     ErrorCode result = TripManager::getTrips(currentUser->userId, trips);
+                    
                     if (result == ErrorCode::SUCCESS) {
-                        std::cout << "\n=== SEYAHATLER ===\n\n";
-                        for (const auto& trip : trips) {
-                            std::cout << "ID: " << trip.tripId << " - " << trip.destination 
-                                      << " (" << trip.startDate << " - " << trip.endDate << ")\n";
+                        std::cout << "\n--- Seyahatlerim ---\n\n";
+                        
+                        if (trips.empty()) {
+                            std::cout << "[i] Henüz seyahat eklenmemiş.\n";
+                        } else {
+                            std::cout << std::left << std::setw(6) << "ID" 
+                                     << std::setw(25) << "Varış Noktası"
+                                     << std::setw(15) << "Başlangıç"
+                                     << std::setw(15) << "Bitiş"
+                                     << std::setw(12) << "Bütçe"
+                                     << "\n";
+                            printSeparator();
+                            
+                            for (const auto& trip : trips) {
+                                std::cout << std::left << std::setw(6) << trip.tripId
+                                         << std::setw(25) << trip.destination
+                                         << std::setw(15) << trip.startDate
+                                         << std::setw(15) << trip.endDate
+                                         << std::fixed << std::setprecision(2)
+                                         << std::setw(12) << trip.budget
+                                         << "\n";
+                            }
                         }
                         waitForContinue();
                     } else {
@@ -267,32 +416,152 @@ namespace TravelExpenseApp {
                     }
                     break;
                 }
-                case 3:
-                case 4:
-                    std::cout << "\n[!] Bu özellik yakında eklenecek!\n";
-                    waitForContinue();
+                case 3: {
+                    int tripId;
+                    if (!getIntInput("\nDüzenlenecek Seyahat ID: ", tripId)) {
+                        std::cout << "\n[!] Geçersiz ID!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    Trip existingTrip;
+                    ErrorCode getResult = TripManager::getTrip(tripId, existingTrip);
+                    if (getResult != ErrorCode::SUCCESS) {
+                        std::cout << "\n[!] Seyahat bulunamadı!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    User* currentUser = UserAuth::getCurrentUser();
+                    if (existingTrip.userId != currentUser->userId) {
+                        std::cout << "\n[!] Bu seyahat size ait değil!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    std::cout << "\n--- Seyahat Bilgilerini Güncelle ---\n";
+                    std::cout << "[i] Değiştirmek istemediğiniz alanlar için Enter'a basın.\n\n";
+
+                    Trip updatedTrip = existingTrip;
+                    char prompt[200];
+                    
+                    snprintf(prompt, sizeof(prompt), "Varış Noktası [%s]: ", existingTrip.destination);
+                    if (getStringInput(prompt, updatedTrip.destination, sizeof(updatedTrip.destination))) {
+                        // Kullanıcı yeni değer girdi
+                    }
+                    
+                    snprintf(prompt, sizeof(prompt), "Başlangıç Tarihi [%s]: ", existingTrip.startDate);
+                    if (getStringInput(prompt, updatedTrip.startDate, sizeof(updatedTrip.startDate))) {
+                        // Kullanıcı yeni değer girdi
+                    }
+                    
+                    snprintf(prompt, sizeof(prompt), "Bitiş Tarihi [%s]: ", existingTrip.endDate);
+                    if (getStringInput(prompt, updatedTrip.endDate, sizeof(updatedTrip.endDate))) {
+                        // Kullanıcı yeni değer girdi
+                    }
+                    
+                    snprintf(prompt, sizeof(prompt), "Konaklama [%s]: ", existingTrip.accommodation);
+                    if (getStringInput(prompt, updatedTrip.accommodation, sizeof(updatedTrip.accommodation))) {
+                        // Kullanıcı yeni değer girdi
+                    }
+                    
+                    snprintf(prompt, sizeof(prompt), "Ulaşım [%s]: ", existingTrip.transportation);
+                    if (getStringInput(prompt, updatedTrip.transportation, sizeof(updatedTrip.transportation))) {
+                        // Kullanıcı yeni değer girdi
+                    }
+                    
+                    double newBudget = existingTrip.budget;
+                    char budgetStr[50];
+                    snprintf(budgetStr, sizeof(budgetStr), "%.2f", existingTrip.budget);
+                    snprintf(prompt, sizeof(prompt), "Bütçe [%.2f]: ", existingTrip.budget);
+                    if (getDoubleInput(prompt, newBudget)) {
+                        if (newBudget >= 0) {
+                            updatedTrip.budget = newBudget;
+                        }
+                    }
+
+                    ErrorCode result = TripManager::updateTrip(tripId, updatedTrip);
+                    if (result == ErrorCode::SUCCESS) {
+                        showSuccess("Seyahat başarıyla güncellendi!");
+                        waitForContinue();
+                    } else {
+                        showError(result);
+                        waitForContinue();
+                    }
                     break;
+                }
+                case 4: {
+                    int tripId;
+                    if (!getIntInput("\nSilinecek Seyahat ID: ", tripId)) {
+                        std::cout << "\n[!] Geçersiz ID!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    Trip existingTrip;
+                    ErrorCode getResult = TripManager::getTrip(tripId, existingTrip);
+                    if (getResult != ErrorCode::SUCCESS) {
+                        std::cout << "\n[!] Seyahat bulunamadı!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    User* currentUser = UserAuth::getCurrentUser();
+                    if (existingTrip.userId != currentUser->userId) {
+                        std::cout << "\n[!] Bu seyahat size ait değil!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    std::cout << "\n[?] '" << existingTrip.destination 
+                              << "' seyahatini silmek istediğinize emin misiniz? (e/h): ";
+                    char confirm;
+                    std::cin >> confirm;
+                    std::cin.ignore();
+
+                    if (confirm == 'e' || confirm == 'E') {
+                        ErrorCode result = TripManager::deleteTrip(tripId);
+                        if (result == ErrorCode::SUCCESS) {
+                            showSuccess("Seyahat başarıyla silindi!");
+                            waitForContinue();
+                        } else {
+                            showError(result);
+                            waitForContinue();
+                        }
+                    } else {
+                        showInfo("Silme işlemi iptal edildi.");
+                        waitForContinue();
+                    }
+                    break;
+                }
                 case 0:
                     return;
                 default:
-                    std::cout << "\nGeçersiz seçim!\n";
+                    std::cout << "\n[!] Geçersiz seçim! Lütfen 0-4 arası bir sayı girin.\n";
                     waitForContinue();
                     break;
             }
         } while (choice != 0);
     }
 
+    // ==================== Gider Kaydı Menüsü ====================
+
     void showExpenseMenu() {
         int choice;
 
         do {
             clearScreen();
-            std::cout << "=== GİDER KAYDI ===\n\n";
-            std::cout << "1. Gider Kaydet\n";
+            printHeader("GİDER KAYDI");
+
+            if (!requireLogin()) {
+                return;
+            }
+
+            std::cout << "1. Yeni Gider Kaydet\n";
             std::cout << "2. Giderleri Görüntüle\n";
-            std::cout << "3. Gideri Düzenle\n";
-            std::cout << "4. Gideri Sil\n";
-            std::cout << "0. Ana Menü\n\n";
+            std::cout << "3. Gider Düzenle\n";
+            std::cout << "4. Gider Sil\n";
+            std::cout << "0. Ana Menüye Dön\n\n";
             std::cout << "Seçiminiz: ";
             std::cin >> choice;
             std::cin.ignore();
@@ -300,15 +569,24 @@ namespace TravelExpenseApp {
             switch (choice) {
                 case 1: {
                     int tripId;
-                    if (!getIntInput("Seyahat ID: ", tripId)) {
+                    if (!getIntInput("\nSeyahat ID: ", tripId)) {
+                        std::cout << "\n[!] Geçersiz ID!\n";
+                        waitForContinue();
                         break;
                     }
 
                     Expense newExpense;
                     newExpense.tripId = tripId;
 
+                    std::cout << "\n--- Yeni Gider Bilgileri ---\n\n";
+
                     int categoryChoice;
-                    std::cout << "Kategori (1: Konaklama, 2: Ulaşım, 3: Yemek, 4: Eğlence): ";
+                    std::cout << "Kategori:\n";
+                    std::cout << "  1. Konaklama\n";
+                    std::cout << "  2. Ulaşım\n";
+                    std::cout << "  3. Yemek\n";
+                    std::cout << "  4. Eğlence\n";
+                    std::cout << "Seçim (1-4): ";
                     std::cin >> categoryChoice;
                     std::cin.ignore();
 
@@ -317,42 +595,99 @@ namespace TravelExpenseApp {
                         case 2: newExpense.category = ExpenseCategory::TRANSPORTATION; break;
                         case 3: newExpense.category = ExpenseCategory::FOOD; break;
                         case 4: newExpense.category = ExpenseCategory::ENTERTAINMENT; break;
-                        default: newExpense.category = ExpenseCategory::ACCOMMODATION; break;
+                        default: 
+                            std::cout << "\n[!] Geçersiz kategori! Varsayılan olarak Konaklama seçildi.\n";
+                            newExpense.category = ExpenseCategory::ACCOMMODATION;
+                            break;
                     }
 
-                    if (getDoubleInput("Tutar: ", newExpense.amount) &&
-                        getStringInput("Para Birimi (TRY/USD/EUR): ", newExpense.currency, sizeof(newExpense.currency)) &&
-                        getStringInput("Tarih (YYYY-MM-DD): ", newExpense.date, sizeof(newExpense.date)) &&
-                        getStringInput("Ödeme Yöntemi: ", newExpense.paymentMethod, sizeof(newExpense.paymentMethod)) &&
-                        getStringInput("Açıklama: ", newExpense.description, sizeof(newExpense.description))) {
+                    if (!getDoubleInput("Tutar: ", newExpense.amount)) {
+                        std::cout << "\n[!] Geçersiz tutar!\n";
+                        waitForContinue();
+                        break;
+                    }
 
-                        int32_t expenseId;
-                        ErrorCode result = ExpenseManager::logExpense(newExpense, expenseId);
-                        if (result == ErrorCode::SUCCESS) {
-                            std::cout << "\n[+] Gider başarıyla kaydedildi! ID: " << expenseId << "\n";
-                            waitForContinue();
-                        } else {
-                            showError(result);
-                            waitForContinue();
-                        }
+                    if (newExpense.amount <= 0) {
+                        std::cout << "\n[!] Tutar pozitif olmalıdır!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    if (!getStringInput("Para Birimi (TRY/USD/EUR): ", newExpense.currency, sizeof(newExpense.currency))) {
+                        std::cout << "\n[!] Para birimi boş olamaz!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    if (!getStringInput("Tarih (YYYY-MM-DD): ", newExpense.date, sizeof(newExpense.date))) {
+                        std::cout << "\n[!] Tarih boş olamaz!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    if (!getStringInput("Ödeme Yöntemi: ", newExpense.paymentMethod, sizeof(newExpense.paymentMethod))) {
+                        std::cout << "\n[!] Ödeme yöntemi boş olamaz!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    if (!getStringInput("Açıklama: ", newExpense.description, sizeof(newExpense.description))) {
+                        std::cout << "\n[!] Açıklama boş olamaz!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    int32_t expenseId;
+                    ErrorCode result = ExpenseManager::logExpense(newExpense, expenseId);
+                    if (result == ErrorCode::SUCCESS) {
+                        std::cout << "\n[+] Gider başarıyla kaydedildi!\n";
+                        std::cout << "[i] Gider ID: " << expenseId << "\n";
+                        waitForContinue();
+                    } else if (result == ErrorCode::ERROR_BUDGET_EXCEEDED) {
+                        std::cout << "\n[!] UYARI: Bütçe limiti aşıldı! Gider yine de kaydedildi.\n";
+                        waitForContinue();
+                    } else {
+                        showError(result);
+                        waitForContinue();
                     }
                     break;
                 }
                 case 2: {
                     int tripId;
-                    if (!getIntInput("Seyahat ID: ", tripId)) {
+                    if (!getIntInput("\nSeyahat ID: ", tripId)) {
+                        std::cout << "\n[!] Geçersiz ID!\n";
+                        waitForContinue();
                         break;
                     }
 
                     std::vector<Expense> expenses;
                     ErrorCode result = ExpenseManager::getExpenses(tripId, expenses);
+                    
                     if (result == ErrorCode::SUCCESS) {
-                        std::cout << "\n=== GİDERLER ===\n\n";
-                        for (const auto& expense : expenses) {
-                            std::cout << "ID: " << expense.expenseId << " - " 
-                                      << getCategoryString(expense.category)
-                                      << ": " << expense.amount << " " << expense.currency
-                                      << " (" << expense.date << ")\n";
+                        std::cout << "\n--- Giderler ---\n\n";
+                        
+                        if (expenses.empty()) {
+                            std::cout << "[i] Bu seyahat için henüz gider kaydedilmemiş.\n";
+                        } else {
+                            std::cout << std::left << std::setw(6) << "ID"
+                                     << std::setw(15) << "Kategori"
+                                     << std::setw(12) << "Tutar"
+                                     << std::setw(8) << "Birim"
+                                     << std::setw(15) << "Tarih"
+                                     << "Açıklama"
+                                     << "\n";
+                            printSeparator();
+                            
+                            for (const auto& expense : expenses) {
+                                std::cout << std::left << std::setw(6) << expense.expenseId
+                                         << std::setw(15) << getCategoryString(expense.category)
+                                         << std::fixed << std::setprecision(2)
+                                         << std::setw(12) << expense.amount
+                                         << std::setw(8) << expense.currency
+                                         << std::setw(15) << expense.date
+                                         << expense.description
+                                         << "\n";
+                            }
                         }
                         waitForContinue();
                     } else {
@@ -361,31 +696,147 @@ namespace TravelExpenseApp {
                     }
                     break;
                 }
-                case 3:
-                case 4:
-                    std::cout << "\n[!] Bu özellik yakında eklenecek!\n";
-                    waitForContinue();
+                case 3: {
+                    int expenseId;
+                    if (!getIntInput("\nDüzenlenecek Gider ID: ", expenseId)) {
+                        std::cout << "\n[!] Geçersiz ID!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    Expense existingExpense;
+                    ErrorCode getResult = ExpenseManager::getExpense(expenseId, existingExpense);
+                    if (getResult != ErrorCode::SUCCESS) {
+                        std::cout << "\n[!] Gider bulunamadı!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    std::cout << "\n--- Gider Bilgilerini Güncelle ---\n";
+                    std::cout << "[i] Değiştirmek istemediğiniz alanlar için Enter'a basın.\n\n";
+
+                    Expense updatedExpense = existingExpense;
+
+                    int categoryChoice;
+                    std::cout << "Kategori (1: Konaklama, 2: Ulaşım, 3: Yemek, 4: Eğlence) [Mevcut: "
+                              << (static_cast<int>(existingExpense.category) + 1) << "]: ";
+                    std::cin >> categoryChoice;
+                    std::cin.ignore();
+
+                    if (categoryChoice >= 1 && categoryChoice <= 4) {
+                        switch (categoryChoice) {
+                            case 1: updatedExpense.category = ExpenseCategory::ACCOMMODATION; break;
+                            case 2: updatedExpense.category = ExpenseCategory::TRANSPORTATION; break;
+                            case 3: updatedExpense.category = ExpenseCategory::FOOD; break;
+                            case 4: updatedExpense.category = ExpenseCategory::ENTERTAINMENT; break;
+                        }
+                    }
+
+                    double newAmount = existingExpense.amount;
+                    char prompt[200];
+                    snprintf(prompt, sizeof(prompt), "Tutar [%.2f]: ", existingExpense.amount);
+                    if (getDoubleInput(prompt, newAmount)) {
+                        if (newAmount > 0) {
+                            updatedExpense.amount = newAmount;
+                        }
+                    }
+                    
+                    snprintf(prompt, sizeof(prompt), "Para Birimi [%s]: ", existingExpense.currency);
+                    if (getStringInput(prompt, updatedExpense.currency, sizeof(updatedExpense.currency))) {
+                        // Kullanıcı yeni değer girdi
+                    }
+                    
+                    snprintf(prompt, sizeof(prompt), "Tarih [%s]: ", existingExpense.date);
+                    if (getStringInput(prompt, updatedExpense.date, sizeof(updatedExpense.date))) {
+                        // Kullanıcı yeni değer girdi
+                    }
+                    
+                    snprintf(prompt, sizeof(prompt), "Ödeme Yöntemi [%s]: ", existingExpense.paymentMethod);
+                    if (getStringInput(prompt, updatedExpense.paymentMethod, sizeof(updatedExpense.paymentMethod))) {
+                        // Kullanıcı yeni değer girdi
+                    }
+                    
+                    snprintf(prompt, sizeof(prompt), "Açıklama [%s]: ", existingExpense.description);
+                    if (getStringInput(prompt, updatedExpense.description, sizeof(updatedExpense.description))) {
+                        // Kullanıcı yeni değer girdi
+                    }
+
+                    ErrorCode result = ExpenseManager::updateExpense(expenseId, updatedExpense);
+                    if (result == ErrorCode::SUCCESS) {
+                        showSuccess("Gider başarıyla güncellendi!");
+                        waitForContinue();
+                    } else {
+                        showError(result);
+                        waitForContinue();
+                    }
                     break;
+                }
+                case 4: {
+                    int expenseId;
+                    if (!getIntInput("\nSilinecek Gider ID: ", expenseId)) {
+                        std::cout << "\n[!] Geçersiz ID!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    Expense existingExpense;
+                    ErrorCode getResult = ExpenseManager::getExpense(expenseId, existingExpense);
+                    if (getResult != ErrorCode::SUCCESS) {
+                        std::cout << "\n[!] Gider bulunamadı!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    std::cout << "\n[?] " << getCategoryString(existingExpense.category)
+                              << " kategorisindeki " << existingExpense.amount 
+                              << " " << existingExpense.currency 
+                              << " giderini silmek istediğinize emin misiniz? (e/h): ";
+                    char confirm;
+                    std::cin >> confirm;
+                    std::cin.ignore();
+
+                    if (confirm == 'e' || confirm == 'E') {
+                        ErrorCode result = ExpenseManager::deleteExpense(expenseId);
+                        if (result == ErrorCode::SUCCESS) {
+                            showSuccess("Gider başarıyla silindi!");
+                            waitForContinue();
+                        } else {
+                            showError(result);
+                            waitForContinue();
+                        }
+                    } else {
+                        showInfo("Silme işlemi iptal edildi.");
+                        waitForContinue();
+                    }
+                    break;
+                }
                 case 0:
                     return;
                 default:
-                    std::cout << "\nGeçersiz seçim!\n";
+                    std::cout << "\n[!] Geçersiz seçim! Lütfen 0-4 arası bir sayı girin.\n";
                     waitForContinue();
                     break;
             }
         } while (choice != 0);
     }
 
+    // ==================== Bütçe Yönetimi Menüsü ====================
+
     void showBudgetMenu() {
         int choice;
 
         do {
             clearScreen();
-            std::cout << "=== BÜTÇE YÖNETİMİ ===\n\n";
-            std::cout << "1. Bütçe Belirle\n";
+            printHeader("BÜTÇE YÖNETİMİ");
+
+            if (!requireLogin()) {
+                return;
+            }
+
+            std::cout << "1. Yeni Bütçe Belirle\n";
             std::cout << "2. Bütçeyi Görüntüle\n";
-            std::cout << "3. Bütçeyi Düzenle\n";
-            std::cout << "0. Ana Menü\n\n";
+            std::cout << "3. Bütçeyi Güncelle\n";
+            std::cout << "0. Ana Menüye Dön\n\n";
             std::cout << "Seçiminiz: ";
             std::cin >> choice;
             std::cin.ignore();
@@ -394,14 +845,29 @@ namespace TravelExpenseApp {
                 case 1: {
                     int tripId;
                     double totalBudget;
-                    double categoryBudgets[4];
+                    double categoryBudgets[4] = {0, 0, 0, 0};
 
-                    if (!getIntInput("Seyahat ID: ", tripId) ||
-                        !getDoubleInput("Toplam Bütçe: ", totalBudget)) {
+                    if (!getIntInput("\nSeyahat ID: ", tripId)) {
+                        std::cout << "\n[!] Geçersiz ID!\n";
+                        waitForContinue();
                         break;
                     }
 
-                    std::cout << "Kategori Bazlı Bütçeler:\n";
+                    if (!getDoubleInput("Toplam Bütçe: ", totalBudget)) {
+                        std::cout << "\n[!] Geçersiz bütçe değeri!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    if (totalBudget <= 0) {
+                        std::cout << "\n[!] Bütçe pozitif olmalıdır!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    std::cout << "\nKategori Bazlı Bütçeler (Opsiyonel):\n";
+                    std::cout << "[i] Boş bırakırsanız 0 kabul edilir.\n\n";
+                    
                     getDoubleInput("  Konaklama: ", categoryBudgets[0]);
                     getDoubleInput("  Ulaşım: ", categoryBudgets[1]);
                     getDoubleInput("  Yemek: ", categoryBudgets[2]);
@@ -410,7 +876,8 @@ namespace TravelExpenseApp {
                     int32_t budgetId;
                     ErrorCode result = BudgetManager::setBudget(tripId, totalBudget, categoryBudgets, budgetId);
                     if (result == ErrorCode::SUCCESS) {
-                        std::cout << "\n[+] Bütçe başarıyla belirlendi! ID: " << budgetId << "\n";
+                        std::cout << "\n[+] Bütçe başarıyla belirlendi!\n";
+                        std::cout << "[i] Bütçe ID: " << budgetId << "\n";
                         waitForContinue();
                     } else {
                         showError(result);
@@ -420,22 +887,48 @@ namespace TravelExpenseApp {
                 }
                 case 2: {
                     int tripId;
-                    if (!getIntInput("Seyahat ID: ", tripId)) {
+                    if (!getIntInput("\nSeyahat ID: ", tripId)) {
+                        std::cout << "\n[!] Geçersiz ID!\n";
+                        waitForContinue();
                         break;
                     }
 
                     Budget budget;
                     ErrorCode result = BudgetManager::getBudget(tripId, budget);
                     if (result == ErrorCode::SUCCESS) {
-                        std::cout << "\n=== BÜTÇE BİLGİLERİ ===\n\n";
-                        std::cout << "Toplam Bütçe: " << budget.totalBudget << "\n";
+                        std::cout << "\n--- Bütçe Bilgileri ---\n\n";
+                        std::cout << "Toplam Bütçe: " << std::fixed << std::setprecision(2) 
+                                  << budget.totalBudget << "\n";
                         std::cout << "Harcanan: " << budget.spentAmount << "\n";
                         std::cout << "Kalan: " << (budget.totalBudget - budget.spentAmount) << "\n";
-                        std::cout << "\nKategori Bazlı:\n";
-                        std::cout << "  Konaklama: " << budget.categorySpent[0] << " / " << budget.categoryBudgets[0] << "\n";
-                        std::cout << "  Ulaşım: " << budget.categorySpent[1] << " / " << budget.categoryBudgets[1] << "\n";
-                        std::cout << "  Yemek: " << budget.categorySpent[2] << " / " << budget.categoryBudgets[2] << "\n";
-                        std::cout << "  Eğlence: " << budget.categorySpent[3] << " / " << budget.categoryBudgets[3] << "\n";
+                        
+                        double remaining = budget.totalBudget - budget.spentAmount;
+                        if (remaining < 0) {
+                            std::cout << "\n[!] UYARI: Bütçe limiti aşıldı! Aşım: " 
+                                      << (-remaining) << "\n";
+                        } else if (remaining < budget.totalBudget * 0.1) {
+                            std::cout << "\n[i] UYARI: Bütçenin %90'ından fazlası harcanmış.\n";
+                        }
+                        
+                        std::cout << "\n--- Kategori Bazlı Detaylar ---\n";
+                        std::cout << std::left << std::setw(15) << "Kategori"
+                                 << std::setw(15) << "Bütçe"
+                                 << std::setw(15) << "Harcanan"
+                                 << "Kalan"
+                                 << "\n";
+                        printSeparator();
+                        
+                        const char* categories[] = {"Konaklama", "Ulaşım", "Yemek", "Eğlence"};
+                        for (int i = 0; i < 4; i++) {
+                            double catRemaining = budget.categoryBudgets[i] - budget.categorySpent[i];
+                            std::cout << std::left << std::setw(15) << categories[i]
+                                     << std::fixed << std::setprecision(2)
+                                     << std::setw(15) << budget.categoryBudgets[i]
+                                     << std::setw(15) << budget.categorySpent[i]
+                                     << catRemaining
+                                     << "\n";
+                        }
+                        
                         waitForContinue();
                     } else {
                         showError(result);
@@ -443,29 +936,84 @@ namespace TravelExpenseApp {
                     }
                     break;
                 }
-                case 3:
-                    std::cout << "\n[!] Bu özellik yakında eklenecek!\n";
-                    waitForContinue();
+                case 3: {
+                    int tripId;
+                    if (!getIntInput("\nGüncellenecek Seyahat ID: ", tripId)) {
+                        std::cout << "\n[!] Geçersiz ID!\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    Budget existingBudget;
+                    ErrorCode getResult = BudgetManager::getBudget(tripId, existingBudget);
+                    if (getResult != ErrorCode::SUCCESS) {
+                        std::cout << "\n[!] Bütçe bulunamadı! Önce bütçe belirleyin.\n";
+                        waitForContinue();
+                        break;
+                    }
+
+                    std::cout << "\n--- Bütçe Bilgilerini Güncelle ---\n";
+                    std::cout << "[i] Değiştirmek istemediğiniz alanlar için Enter'a basın.\n\n";
+
+                    Budget updatedBudget = existingBudget;
+                    double newTotalBudget;
+                    double newCategoryBudgets[4];
+
+                    char prompt[200];
+                    snprintf(prompt, sizeof(prompt), "Toplam Bütçe [%.2f]: ", existingBudget.totalBudget);
+                    if (getDoubleInput(prompt, newTotalBudget)) {
+                        if (newTotalBudget > 0) {
+                            updatedBudget.totalBudget = newTotalBudget;
+                        }
+                    }
+
+                    std::cout << "\nKategori Bazlı Bütçeler:\n";
+                    const char* categories[] = {"Konaklama", "Ulaşım", "Yemek", "Eğlence"};
+                    for (int i = 0; i < 4; i++) {
+                        snprintf(prompt, sizeof(prompt), "  %s [%.2f]: ", categories[i], existingBudget.categoryBudgets[i]);
+                        if (getDoubleInput(prompt, newCategoryBudgets[i])) {
+                            if (newCategoryBudgets[i] >= 0) {
+                                updatedBudget.categoryBudgets[i] = newCategoryBudgets[i];
+                            }
+                        }
+                    }
+
+                    ErrorCode result = BudgetManager::updateBudget(existingBudget.budgetId, updatedBudget);
+                    if (result == ErrorCode::SUCCESS) {
+                        showSuccess("Bütçe başarıyla güncellendi!");
+                        waitForContinue();
+                    } else {
+                        showError(result);
+                        waitForContinue();
+                    }
                     break;
+                }
                 case 0:
                     return;
                 default:
-                    std::cout << "\nGeçersiz seçim!\n";
+                    std::cout << "\n[!] Geçersiz seçim! Lütfen 0-3 arası bir sayı girin.\n";
                     waitForContinue();
                     break;
             }
         } while (choice != 0);
     }
 
+    // ==================== Özet Rapor Menüsü ====================
+
     void showReportMenu() {
         int choice;
 
         do {
             clearScreen();
-            std::cout << "=== ÖZET RAPOR ===\n\n";
-            std::cout << "1. Rapor Oluştur\n";
+            printHeader("ÖZET RAPOR");
+
+            if (!requireLogin()) {
+                return;
+            }
+
+            std::cout << "1. Seyahat Raporu Oluştur\n";
             std::cout << "2. Raporları Görüntüle\n";
-            std::cout << "0. Ana Menü\n\n";
+            std::cout << "0. Ana Menüye Dön\n\n";
             std::cout << "Seçiminiz: ";
             std::cin >> choice;
             std::cin.ignore();
@@ -473,14 +1021,21 @@ namespace TravelExpenseApp {
             switch (choice) {
                 case 1: {
                     int tripId;
-                    if (!getIntInput("Seyahat ID: ", tripId)) {
+                    if (!getIntInput("\nSeyahat ID: ", tripId)) {
+                        std::cout << "\n[!] Geçersiz ID!\n";
+                        waitForContinue();
                         break;
                     }
 
                     std::string report;
                     ErrorCode result = ReportGenerator::generateReport(tripId, report);
                     if (result == ErrorCode::SUCCESS) {
-                        std::cout << "\n" << report << "\n";
+                        std::cout << "\n";
+                        std::cout << "========================================\n";
+                        std::cout << "         SEYAHAT RAPORU\n";
+                        std::cout << "========================================\n\n";
+                        std::cout << report << "\n";
+                        std::cout << "========================================\n";
                         waitForContinue();
                     } else {
                         showError(result);
@@ -489,27 +1044,27 @@ namespace TravelExpenseApp {
                     break;
                 }
                 case 2:
-                    std::cout << "\n[!] Bu özellik yakında eklenecek!\n";
+                    std::cout << "\n[i] Bu özellik yakında eklenecek!\n";
                     waitForContinue();
                     break;
                 case 0:
                     return;
                 default:
-                    std::cout << "\nGeçersiz seçim!\n";
+                    std::cout << "\n[!] Geçersiz seçim! Lütfen 0-2 arası bir sayı girin.\n";
                     waitForContinue();
                     break;
             }
         } while (choice != 0);
     }
 
+    // ==================== Ana Menü ====================
+
     int showMainMenu() {
         int choice;
 
         do {
             clearScreen();
-            std::cout << "========================================\n";
-            std::cout << "    SEYAHAT GİDERİ TAKİBİ\n";
-            std::cout << "========================================\n\n";
+            printHeader("SEYAHAT GİDERİ TAKİBİ");
 
             User* currentUser = UserAuth::getCurrentUser();
             if (currentUser) {
@@ -550,11 +1105,11 @@ namespace TravelExpenseApp {
                     showReportMenu();
                     break;
                 case 0:
-                    std::cout << "\nÇıkılıyor...\n";
+                    std::cout << "\n[i] Çıkılıyor...\n";
                     UserAuth::logoutUser();
                     return 0;
                 default:
-                    std::cout << "\nGeçersiz seçim!\n";
+                    std::cout << "\n[!] Geçersiz seçim! Lütfen 0-5 arası bir sayı girin.\n";
                     waitForContinue();
                     break;
             }
@@ -569,6 +1124,25 @@ namespace TravelExpenseApp {
  * @brief Main fonksiyon
  */
 int main() {
-    return TravelExpenseApp::showMainMenu();
-}
+    // Windows'ta Türkçe karakter desteği için
+    #ifdef _WIN32
+        SetConsoleOutputCP(65001); // UTF-8
+        SetConsoleCP(65001);
+    #endif
 
+    // Veritabanını başlat
+    sqlite3* db = TravelExpense::Database::getDatabase();
+    if (!db) {
+        std::cerr << "[!] KRITIK HATA: Veritabanı başlatılamadı!\n";
+        std::cerr << "[!] Veritabanı dosyası oluşturulamıyor veya erişilemiyor.\n";
+        std::cerr << "[!] Lütfen 'data' klasörünün yazılabilir olduğundan emin olun.\n";
+        std::cout << "\nDevam etmek için Enter'a basın...";
+        std::cin.get();
+        return 1;
+    }
+
+    // Ana menüyü göster
+    int exitCode = TravelExpenseApp::showMainMenu();
+
+    return exitCode;
+}

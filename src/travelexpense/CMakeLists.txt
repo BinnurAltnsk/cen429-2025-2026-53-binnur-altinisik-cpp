@@ -18,15 +18,42 @@ source_group("header" FILES ${LIB_HEADERS})
 source_group("src" FILES ${LIB_SOURCES})
 
 # Set Properties->General->Configuration Type to Dynamic Library (.dll/.so/.dylib)
-add_library(${LIBNAME} STATIC ${LIB_HEADERS} ${LIB_SOURCES}) # for dynamic library use SHARED
+add_library(${LIBNAME} SHARED ${LIB_HEADERS} ${LIB_SOURCES}) # Dynamic library (DLL/SO)
 
 target_include_directories(${LIBNAME} PUBLIC
-						   ${CMAKE_CURRENT_SOURCE_DIR}/header)
+						   ${CMAKE_CURRENT_SOURCE_DIR}/header
+						   ${SQLite3_INCLUDE_DIRS})
 
+# Link SQLite3
+if(SQLITE3_AMALGAMATION)
+    # Amalgamation dosyasını direkt ekle (statik link)
+    target_sources(${LIBNAME} PRIVATE 
+        ${SQLITE3_AMALGAMATION_C}
+    )
+    # SQLite3'ü C dosyası olarak derle
+    set_source_files_properties(${SQLITE3_AMALGAMATION_C} PROPERTIES LANGUAGE C)
+else()
+    # Sistem SQLite3 kütüphanesini link et
+    target_link_libraries(${LIBNAME} PRIVATE ${SQLite3_LIBRARIES})
+endif()
 
+# Platform specific settings for DLL/SO
+if(WIN32)
+    # Windows: DLL export definitions
+    set_target_properties(${LIBNAME} PROPERTIES
+        WINDOWS_EXPORT_ALL_SYMBOLS ON
+    )
+else()
+    # Linux/Unix: Set visibility for exported symbols
+    set_target_properties(${LIBNAME} PROPERTIES
+        CXX_VISIBILITY_PRESET hidden
+        VISIBILITY_INLINES_HIDDEN ON
+    )
+endif()
 
 # creates preprocessor definition used for library exports
-add_compile_definitions("TRAVELEXPENSE_LIB_EXPORTS")
+target_compile_definitions(${LIBNAME} PRIVATE "TRAVELEXPENSE_LIB_EXPORTS")
+target_compile_definitions(${LIBNAME} INTERFACE "TRAVELEXPENSE_LIB_EXPORTS")
 
 install(TARGETS ${LIBNAME}
         LIBRARY DESTINATION lib

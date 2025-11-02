@@ -1,0 +1,8 @@
+# Bu klasöre SQLite3 amalgamation dosyalarını ekleyin:
+# - sqlite3.c
+# - sqlite3.h
+#
+# İndirme: https://www.sqlite.org/download.html
+# "Amalgamation" bölümünden sqlite-amalgamation-XXX.zip dosyasını indirin
+# Zip içinden sqlite3.c ve sqlite3.h dosyalarını bu klasöre kopyalayın
+

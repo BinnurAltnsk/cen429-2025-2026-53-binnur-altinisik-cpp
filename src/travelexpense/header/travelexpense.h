@@ -21,6 +21,13 @@
 // Dosya I/O yardımcı fonksiyonlar
 #include "fileIO.h"
 
+// Veritabanı modülü
+#include "database.h"
+
+// Güvenlik modülleri
+#include "security.h"
+#include "encryption.h"
+
 // Modüller
 #include "userAuth.h"
 #include "tripManager.h"
