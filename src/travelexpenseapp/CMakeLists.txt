@@ -1,6 +1,6 @@
 # aka5g/CMakeLists.txt
 set(ROOT src)
-set(APPNAME calculatorapp)
+set(APPNAME travelexpenseapp)
 
 message(STATUS "[${ROOT}/${APPNAME}] Module Processing...")
 
@@ -21,12 +21,11 @@ source_group("src" FILES ${APP_SOURCES})
 add_executable(${APPNAME} ${APP_HEADERS} ${APP_SOURCES}) # for dynamic library use SHARED
 
 target_include_directories(${APPNAME} PUBLIC
-						   ${CMAKE_CURRENT_SOURCE_DIR}/../utility/header
-						   ${CMAKE_CURRENT_SOURCE_DIR}/../calculator/header
+						   ${CMAKE_CURRENT_SOURCE_DIR}/../travelexpense/header
 						   ${CMAKE_CURRENT_SOURCE_DIR}/header)
 
-# Add any dependencies or compile options specific to lock6g
-target_link_libraries(${APPNAME} PRIVATE calculator utility)
+# Link travelexpense library
+target_link_libraries(${APPNAME} PRIVATE travelexpense)
 
 install(TARGETS ${APPNAME}
         LIBRARY DESTINATION lib
