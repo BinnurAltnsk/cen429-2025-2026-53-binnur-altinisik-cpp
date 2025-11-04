@@ -54,6 +54,15 @@ namespace TravelExpense {
                 return ErrorCode::EncryptionFailed;
             }
 
+            // Hash ve salt uzunluklarını kontrol et (kaydetmeden önce)
+            size_t hashLen = strlen(passwordHash);
+            size_t saltLen = strlen(salt);
+            if (hashLen != 64 || saltLen != 32) {
+                Security::secureCleanup(salt, sizeof(salt));
+                Security::secureCleanup(passwordHash, sizeof(passwordHash));
+                return ErrorCode::EncryptionFailed;
+            }
+
             // SQL sorgusu hazırla
             const char* sql = R"(
                 INSERT INTO users (username, password_hash, salt, is_guest, created_at, last_login)
@@ -70,9 +79,9 @@ namespace TravelExpense {
 
             // Parametreleri bağla
             time_t createdAt = time(nullptr);
-            sqlite3_bind_text(stmt, 1, username, -1, SQLITE_STATIC);
-            sqlite3_bind_text(stmt, 2, passwordHash, -1, SQLITE_STATIC);
-            sqlite3_bind_text(stmt, 3, salt, -1, SQLITE_STATIC);
+            sqlite3_bind_text(stmt, 1, username, -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(stmt, 2, passwordHash, -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(stmt, 3, salt, -1, SQLITE_TRANSIENT);
             sqlite3_bind_int64(stmt, 4, static_cast<sqlite3_int64>(createdAt));
 
             // Sorguyu çalıştır
@@ -81,10 +90,19 @@ namespace TravelExpense {
                 sqlite3_finalize(stmt);
                 Security::secureCleanup(salt, sizeof(salt));
                 Security::secureCleanup(passwordHash, sizeof(passwordHash));
+                // UNIQUE constraint hatası (kullanıcı zaten var)
+                if (rc == SQLITE_CONSTRAINT) {
+                    return ErrorCode::InvalidUser;
+                }
                 return ErrorCode::FileIO;
             }
 
             sqlite3_finalize(stmt);
+            
+            // Verilerin commit edildiğinden emin ol
+            // SQLite'da autocommit mode varsayılan olarak açıktır,
+            // ama bazı durumlarda açıkça commit etmek gerekebilir
+            sqlite3_exec(db, "COMMIT;", nullptr, nullptr, nullptr);
             
             // Güvenli temizlik
             Security::secureCleanup(salt, sizeof(salt));
@@ -94,7 +112,7 @@ namespace TravelExpense {
         }
 
         ErrorCode loginUser(const char* username, const char* password) {
-            if (!username || !password) {
+            if (!username || !password || strlen(username) == 0 || strlen(password) == 0) {
                 return ErrorCode::InvalidInput;
             }
 
@@ -114,11 +132,16 @@ namespace TravelExpense {
             }
 
             // Parametreleri bağla
-            sqlite3_bind_text(stmt, 1, username, -1, SQLITE_STATIC);
+            rc = sqlite3_bind_text(stmt, 1, username, -1, SQLITE_STATIC);
+            if (rc != SQLITE_OK) {
+                sqlite3_finalize(stmt);
+                return ErrorCode::FileIO;
+            }
 
             // Sorguyu çalıştır
             rc = sqlite3_step(stmt);
             if (rc != SQLITE_ROW) {
+                // Eğer kullanıcı bulunamadıysa, hatayı döndür
                 sqlite3_finalize(stmt);
                 return ErrorCode::InvalidUser;
             }
@@ -126,23 +149,57 @@ namespace TravelExpense {
             // Sonuçları al
             User foundUser;
             foundUser.userId = sqlite3_column_int(stmt, 0);
+            
+            // Veritabanından okunan değerlerin null olup olmadığını kontrol et
+            if (sqlite3_column_type(stmt, 1) == SQLITE_NULL ||
+                sqlite3_column_type(stmt, 2) == SQLITE_NULL ||
+                sqlite3_column_type(stmt, 3) == SQLITE_NULL) {
+                sqlite3_finalize(stmt);
+                return ErrorCode::InvalidUser;
+            }
+            
             const char* dbUsername = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
             const char* storedHash = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2));
             const char* storedSalt = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3));
+            
+            // Null pointer kontrolü
+            if (!dbUsername || !storedHash || !storedSalt) {
+                sqlite3_finalize(stmt);
+                return ErrorCode::InvalidUser;
+            }
+            
             foundUser.isGuest = (sqlite3_column_int(stmt, 4) != 0);
             foundUser.createdAt = sqlite3_column_int64(stmt, 5);
             foundUser.lastLogin = sqlite3_column_int64(stmt, 6);
 
             strncpy(foundUser.username, dbUsername, sizeof(foundUser.username) - 1);
             foundUser.username[sizeof(foundUser.username) - 1] = '\0';
-            strncpy(foundUser.passwordHash, storedHash, sizeof(foundUser.passwordHash) - 1);
-            foundUser.passwordHash[sizeof(foundUser.passwordHash) - 1] = '\0';
-            strncpy(foundUser.salt, storedSalt, sizeof(foundUser.salt) - 1);
-            foundUser.salt[sizeof(foundUser.salt) - 1] = '\0';
+            
+            // Hash ve salt'ı kopyala (hash 64 karakter, salt 32 karakter)
+            // strncpy kullanarak tam uzunluğu kopyala, sonra null terminator ekle
+            size_t hashLen = strlen(storedHash);
+            size_t saltLen = strlen(storedSalt);
+            
+            // Hash ve salt uzunluklarını kontrol et
+            if (hashLen != 64 || saltLen != 32) {
+                sqlite3_finalize(stmt);
+                return ErrorCode::InvalidUser;
+            }
+            
+            // Hash ve salt'ı tam uzunlukta kopyala
+            // passwordHash[64] buffer'ı var (0-63 arası indeksler = 64 byte)
+            // Hash 64 karakter, salt 32 karakter
+            // Buffer'ı tam kullanıp null terminator eklememek doğru
+            // verifyPassword fonksiyonunda strlen yerine sabit 64 kullanacağız
+            memcpy(foundUser.passwordHash, storedHash, 64);
+            memcpy(foundUser.salt, storedSalt, 32);
+            // Null terminator eklemiyoruz çünkü buffer tam dolu
+            // verifyPassword fonksiyonunda strlen yerine sabit 64 kullanılacak
 
             sqlite3_finalize(stmt);
 
             // Şifre doğrulama (SHA-256 hash kontrolü)
+            // Hash ve salt uzunlukları zaten kontrol edildi ve doğru kopyalandı
             if (!Encryption::verifyPassword(password, foundUser.salt, foundUser.passwordHash)) {
                 // Güvenli temizlik
                 Security::secureMemoryCleanup(&foundUser, sizeof(User));

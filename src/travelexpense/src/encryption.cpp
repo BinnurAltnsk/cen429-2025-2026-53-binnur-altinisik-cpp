@@ -246,12 +246,21 @@ namespace TravelExpense {
                 return false;
             }
 
+            // Stored hash her zaman 64 karakter (null-terminated olabilir veya olmayabilir)
+            // strlen kullanmak yerine, sabit 64 karakter olduğunu biliyoruz
+            // strlen kullanmak buffer overflow'a neden olabilir eğer null terminator yoksa
+            // Bu yüzden direkt constantTimeCompare kullanacağız
+            
             char calculatedHash[65];
             if (!hashPassword(password, salt, calculatedHash)) {
                 return false;
             }
 
             // Constant-time comparison (timing attack koruması)
+            // Hash her zaman 64 karakter, null terminator olup olmadığına bakmadan
+            // calculatedHash null-terminated (65 byte buffer, 64 karakter + null)
+            // storedHash null-terminated olabilir veya olmayabilir (64 byte buffer)
+            // Her iki durumda da ilk 64 karakteri karşılaştırıyoruz
             return constantTimeCompare(calculatedHash, storedHash, 64);
         }
 
