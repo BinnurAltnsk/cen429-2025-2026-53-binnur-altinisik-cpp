@@ -73,13 +73,10 @@ namespace TravelExpense {
             bool result = (diff & 0x80000000) == 0;
             result ^= (obfuscatedCurrent < obfuscatedLimit);
             
-            // Orijinal karşılaştırma
-            uint32_t originalCurrent = current;
-            originalCurrent ^= OPAQUE_MAGIC_2;
-            originalCurrent = (originalCurrent >> 3) | (originalCurrent << 29); // Rotate right 3 (inverse)
-            originalCurrent += OPAQUE_MAGIC_1;
-
-            return originalCurrent < limit;
+            // Orijinal karşılaştırma - current < limit kontrolü
+            // Obfuscation işlemleri sadece görünürlüğü gizlemek için,
+            // gerçek karşılaştırma current < limit olmalı
+            return current < limit;
         }
 
         uint32_t opaqueIncrement(uint32_t value, uint32_t increment) {

@@ -28,7 +28,12 @@
     #define FILE_EXISTS(path) (_access(path, 0) == 0)
 #else
     #include <unistd.h>
-    #define FILE_EXISTS(path) (access(path, F_OK) == 0)
+    // Platform-specific code for non-Windows platforms - not executed on Windows
+    // This code is excluded from coverage on Windows builds
+    static inline int file_exists_helper(const char* path) {
+        return access(path, F_OK) == 0;
+    }
+    #define FILE_EXISTS(path) file_exists_helper(path)
 #endif
 
 #ifdef _WIN32
