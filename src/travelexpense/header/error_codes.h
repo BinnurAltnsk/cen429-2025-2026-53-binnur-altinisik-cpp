@@ -19,22 +19,25 @@ namespace TravelExpense {
 
     /**
      * @brief Hata kodları enum'u
+     * 
+     * Uygulama genelinde kullanılan merkezi hata kodları enum'u.
+     * Tüm modüller bu enum'u kullanarak hata durumlarını bildirir.
      */
     enum class ErrorCode {
-        Success = 0,
-        FileNotFound = 1,
-        DecryptionFailed = 2,
-        ChecksumMismatch = 3,
-        InvalidUser = 4,
-        BudgetExceeded = 5,
-        InvalidInput = 6,
-        MemoryAllocation = 7,
-        FileIO = 8,
-        EncryptionFailed = 9,
-        ConnectionFailed = 10,
-        SecurityFailed = 11,
+        Success = 0,              /**< @brief İşlem başarıyla tamamlandı */
+        FileNotFound = 1,        /**< @brief Dosya bulunamadı */
+        DecryptionFailed = 2,     /**< @brief Şifre çözme işlemi başarısız */
+        ChecksumMismatch = 3,     /**< @brief Checksum uyuşmazlığı */
+        InvalidUser = 4,         /**< @brief Geçersiz kullanıcı */
+        BudgetExceeded = 5,      /**< @brief Bütçe aşıldı */
+        InvalidInput = 6,        /**< @brief Geçersiz girdi */
+        MemoryAllocation = 7,    /**< @brief Bellek tahsis hatası */
+        FileIO = 8,              /**< @brief Dosya giriş/çıkış hatası */
+        EncryptionFailed = 9,     /**< @brief Şifreleme işlemi başarısız */
+        ConnectionFailed = 10,   /**< @brief Bağlantı hatası */
+        SecurityFailed = 11,     /**< @brief Güvenlik kontrolü başarısız */
 
-        Unknown = 99
+        Unknown = 99             /**< @brief Bilinmeyen hata */
     };
 
 } // namespace TravelExpense

@@ -27,6 +27,11 @@ target_include_directories(${APPNAME} PUBLIC
 # Link travelexpense library
 target_link_libraries(${APPNAME} PRIVATE travelexpense)
 
+# Paralel derleme sırasında PDB dosyasına yazma çakışmasını önlemek için /FS flag'ini ekle
+if(MSVC)
+    target_compile_options(${APPNAME} PRIVATE /FS)
+endif()
+
 install(TARGETS ${APPNAME}
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib

@@ -25,6 +25,10 @@ namespace TravelExpense {
     /**
      * @namespace CodeHardening
      * @brief Kod sertleştirme teknikleri modülü
+     * 
+     * Bu modül, kod sertleştirme tekniklerini sağlar: opaque loops (kontrol akışı gizleme),
+     * string obfuscation (string gizleme), fonksiyon gizleme ve opaque boolean değişkenleri.
+     * Reverse engineering ve code analysis'a karşı koruma sağlar.
      */
     namespace CodeHardening {
 

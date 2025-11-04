@@ -20,6 +20,10 @@ namespace TravelExpense {
     /**
      * @namespace Security
      * @brief Güvenlik fonksiyonları modülü
+     * 
+     * Bu modül, güvenli bellek silme, bellek temizleme ve güvenli
+     * bellek işlemleri için yardımcı fonksiyonlar sağlar. Hassas
+     * verilerin güvenli şekilde temizlenmesini sağlar.
      */
     namespace Security {
         /**

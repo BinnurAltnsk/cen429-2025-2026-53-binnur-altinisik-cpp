@@ -31,7 +31,12 @@
     #include <fcntl.h>
 #endif
 
-// SHA-256 sabitleri
+/**
+ * @brief SHA-256 sabitleri (round constants)
+ * 
+ * SHA-256 hash algoritmasında kullanılan 64 adet round constant değeri.
+ * Her bir round için bir sabit değer kullanılır.
+ */
 static const uint32_t SHA256_K[] = {
     0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5,
     0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,
@@ -51,36 +56,94 @@ static const uint32_t SHA256_K[] = {
     0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2
 };
 
-// SHA-256 helper fonksiyonları
+/**
+ * @brief SHA-256 helper fonksiyonları
+ * 
+ * SHA-256 hash algoritmasında kullanılan yardımcı fonksiyonlar.
+ * Bu fonksiyonlar bit manipülasyonu ve boolean işlemleri yapar.
+ */
+
+/**
+ * @brief 32-bit değeri sağa döndür (circular right shift)
+ * 
+ * @param value Döndürülecek değer
+ * @param bits Kaç bit döndürülecek
+ * @return Döndürülmüş değer
+ */
 static inline uint32_t rightRotate(uint32_t value, int bits) {
     return (value >> bits) | (value << (32 - bits));
 }
 
+/**
+ * @brief SHA-256 Ch (Choose) fonksiyonu
+ * 
+ * @param x İlk değer
+ * @param y İkinci değer
+ * @param z Üçüncü değer
+ * @return (x & y) ^ (~x & z)
+ */
 static inline uint32_t sha256_ch(uint32_t x, uint32_t y, uint32_t z) {
     return (x & y) ^ (~x & z);
 }
 
+/**
+ * @brief SHA-256 Maj (Majority) fonksiyonu
+ * 
+ * @param x İlk değer
+ * @param y İkinci değer
+ * @param z Üçüncü değer
+ * @return (x & y) ^ (x & z) ^ (y & z)
+ */
 static inline uint32_t sha256_maj(uint32_t x, uint32_t y, uint32_t z) {
     return (x & y) ^ (x & z) ^ (y & z);
 }
 
+/**
+ * @brief SHA-256 Σ0 (capital sigma 0) fonksiyonu
+ * 
+ * @param x Girdi değeri
+ * @return rightRotate(x,2) ^ rightRotate(x,13) ^ rightRotate(x,22)
+ */
 static inline uint32_t sha256_SIG0(uint32_t x) {
     return rightRotate(x, 2) ^ rightRotate(x, 13) ^ rightRotate(x, 22);
 }
 
+/**
+ * @brief SHA-256 Σ1 (capital sigma 1) fonksiyonu
+ * 
+ * @param x Girdi değeri
+ * @return rightRotate(x,6) ^ rightRotate(x,11) ^ rightRotate(x,25)
+ */
 static inline uint32_t sha256_SIG1(uint32_t x) {
     return rightRotate(x, 6) ^ rightRotate(x, 11) ^ rightRotate(x, 25);
 }
 
+/**
+ * @brief SHA-256 σ0 (lowercase sigma 0) fonksiyonu
+ * 
+ * @param x Girdi değeri
+ * @return rightRotate(x,7) ^ rightRotate(x,18) ^ (x >> 3)
+ */
 static inline uint32_t sha256_sigma0(uint32_t x) {
     return rightRotate(x, 7) ^ rightRotate(x, 18) ^ (x >> 3);
 }
 
+/**
+ * @brief SHA-256 σ1 (lowercase sigma 1) fonksiyonu
+ * 
+ * @param x Girdi değeri
+ * @return rightRotate(x,17) ^ rightRotate(x,19) ^ (x >> 10)
+ */
 static inline uint32_t sha256_sigma1(uint32_t x) {
     return rightRotate(x, 17) ^ rightRotate(x, 19) ^ (x >> 10);
 }
 
-// AES sabitleri
+/**
+ * @brief AES S-box (Substitution box)
+ * 
+ * AES şifreleme algoritmasında kullanılan 256 elemanlı S-box tablosu.
+ * SubBytes işleminde her byte bu tablo üzerinden değiştirilir.
+ */
 static const uint8_t AES_SBOX[256] = {
     0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0x6f, 0xc5, 0x30, 0x01, 0x67, 0x2b, 0xfe, 0xd7, 0xab, 0x76,
     0xca, 0x82, 0xc9, 0x7d, 0xfa, 0x59, 0x47, 0xf0, 0xad, 0xd4, 0xa2, 0xaf, 0x9c, 0xa4, 0x72, 0xc0,
@@ -100,6 +163,12 @@ static const uint8_t AES_SBOX[256] = {
     0x8c, 0xa1, 0x89, 0x0d, 0xbf, 0xe6, 0x42, 0x68, 0x41, 0x99, 0x2d, 0x0f, 0xb0, 0x54, 0xbb, 0x16
 };
 
+/**
+ * @brief AES Inverse S-box
+ * 
+ * AES şifre çözme algoritmasında kullanılan 256 elemanlı inverse S-box tablosu.
+ * InvSubBytes işleminde her byte bu tablo üzerinden değiştirilir.
+ */
 static const uint8_t AES_INV_SBOX[256] = {
     0x52, 0x09, 0x6a, 0xd5, 0x30, 0x36, 0xa5, 0x38, 0xbf, 0x40, 0xa3, 0x9e, 0x81, 0xf3, 0xd7, 0xfb,
     0x7c, 0xe3, 0x39, 0x82, 0x9b, 0x2f, 0xff, 0x87, 0x34, 0x8e, 0x43, 0x44, 0xc4, 0xde, 0xe9, 0xcb,
@@ -123,7 +192,18 @@ namespace TravelExpense {
 
     namespace Encryption {
 
-        // Gerçek SHA-256 implementasyonu
+        /**
+         * @brief SHA-256 hash hesapla (gerçek implementasyon)
+         * 
+         * RFC 6234 uyumlu tam SHA-256 hash implementasyonu.
+         * Girdi verisini 512-bit chunk'lara böler, her chunk'ı işler ve
+         * sonuç olarak 256-bit (32 byte) hash üretir.
+         * 
+         * @param input Hash'lenecek veri
+         * @param inputLen Veri uzunluğu (byte)
+         * @param output Hash çıktısı (64 karakter hex string + null terminator)
+         * @return true Başarılı, false Hata (null pointer veya sıfır uzunluk)
+         */
         bool sha256Hash(const void* input, size_t inputLen, char* output) {
             if (!input || inputLen == 0 || !output) {
                 return false;
@@ -196,6 +276,15 @@ namespace TravelExpense {
             return true;
         }
 
+        /**
+         * @brief Salt oluştur (rastgele)
+         * 
+         * Güvenli rastgele sayı üreticisi kullanarak 16 byte (32 karakter hex string)
+         * salt değeri oluşturur. Bu salt, şifre hash'leme işlemlerinde kullanılır.
+         * 
+         * @param salt Salt çıktısı (33 byte buffer: 32 karakter hex + null terminator)
+         * @return true Başarılı, false Hata (null pointer veya rastgele sayı üretilemedi)
+         */
         bool generateSalt(char* salt) {
             if (!salt) {
                 return false;
@@ -220,6 +309,17 @@ namespace TravelExpense {
             return true;
         }
 
+        /**
+         * @brief Şifreyi hash'le (SHA-256 + Salt)
+         * 
+         * Şifreyi salt ile birleştirip SHA-256 hash'ini hesaplar.
+         * Format: SHA256(password + salt)
+         * 
+         * @param password Şifre (plaintext)
+         * @param salt Salt değeri (32 karakter hex string)
+         * @param hash Hash çıktısı (64 karakter hex string + null terminator)
+         * @return true Başarılı, false Hata (null pointer veya hash hesaplanamadı)
+         */
         bool hashPassword(const char* password, const char* salt, char* hash) {
             if (!password || !salt || !hash) {
                 return false;
@@ -241,6 +341,17 @@ namespace TravelExpense {
             return true;
         }
 
+        /**
+         * @brief Şifre doğrulama
+         * 
+         * Girilen şifreyi salt ile hash'leyip saklanan hash ile karşılaştırır.
+         * Constant-time comparison kullanarak timing attack'lara karşı koruma sağlar.
+         * 
+         * @param password Girilen şifre (plaintext)
+         * @param salt Salt değeri (32 karakter hex string)
+         * @param storedHash Saklanan hash değeri (64 karakter hex string)
+         * @return true Şifre doğru, false Şifre yanlış veya hata
+         */
         bool verifyPassword(const char* password, const char* salt, const char* storedHash) {
             if (!password || !salt || !storedHash) {
                 return false;
@@ -264,7 +375,23 @@ namespace TravelExpense {
             return constantTimeCompare(calculatedHash, storedHash, 64);
         }
 
-        // AES helper fonksiyonları
+        /**
+         * @brief AES helper fonksiyonları
+         * 
+         * AES şifreleme algoritmasında kullanılan yardımcı fonksiyonlar.
+         * Galois Field (GF) çarpımı ve key expansion işlemlerini yapar.
+         */
+
+        /**
+         * @brief Galois Field (GF(2^8)) çarpımı
+         * 
+         * AES MixColumns işleminde kullanılan GF(2^8) çarpımı.
+         * İrreducible polynomial: x^8 + x^4 + x^3 + x + 1 (0x11b)
+         * 
+         * @param a İlk byte
+         * @param b İkinci byte
+         * @return GF(2^8) çarpım sonucu
+         */
         static inline uint8_t gmul(uint8_t a, uint8_t b) {
             uint8_t p = 0;
             for (int i = 0; i < 8; ++i) {
@@ -277,6 +404,15 @@ namespace TravelExpense {
             return p;
         }
 
+        /**
+         * @brief AES key expansion (anahtar genişletme)
+         * 
+         * AES-256 için 32 byte anahtardan 15 round key (240 byte) oluşturur.
+         * Her round için 16 byte round key üretilir.
+         * 
+         * @param key Orijinal AES-256 anahtarı (32 byte)
+         * @param roundKeys Çıktı round key'leri (240 byte: 15 rounds * 16 bytes)
+         */
         static void aesKeyExpansion(const uint8_t* key, uint8_t* roundKeys) {
             const uint8_t rcon[10] = {0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1b, 0x36};
             std::memcpy(roundKeys, key, 32);
@@ -301,6 +437,17 @@ namespace TravelExpense {
             }
         }
 
+        /**
+         * @brief AES block şifreleme (16 byte block)
+         * 
+         * AES-256 algoritması kullanarak 16 byte'lık bir blok şifreler.
+         * 14 round (AES-256 için) gerçekleştirir: SubBytes, ShiftRows,
+         * MixColumns (son round hariç) ve AddRoundKey.
+         * 
+         * @param in Şifrelenecek blok (16 byte)
+         * @param roundKeys Round key'leri (240 byte)
+         * @param out Şifrelenmiş blok çıktısı (16 byte)
+         */
         static void aesEncryptBlock(const uint8_t* in, const uint8_t* roundKeys, uint8_t* out) {
             uint8_t state[16];
             std::memcpy(state, in, 16);
@@ -360,7 +507,20 @@ namespace TravelExpense {
             std::memcpy(out, state, 16);
         }
 
-        // AES-256-CBC şifreleme (gerçek implementasyon)
+        /**
+         * @brief AES-256-CBC şifreleme (gerçek implementasyon)
+         * 
+         * AES-256 algoritması ile CBC (Cipher Block Chaining) modunda şifreleme yapar.
+         * PKCS7 padding kullanır ve her blok önceki şifrelenmiş blok ile XOR'lanır.
+         * 
+         * @param plaintext Şifrelenecek veri
+         * @param plaintextLen Veri uzunluğu (byte)
+         * @param key Şifreleme anahtarı (32 byte - AES-256)
+         * @param iv Initialization Vector (16 byte)
+         * @param ciphertext Şifrelenmiş veri çıktısı
+         * @param ciphertextLen Şifrelenmiş veri uzunluğu (çıktı, padding dahil)
+         * @return true Başarılı, false Hata (null pointer, sıfır uzunluk vb.)
+         */
         bool encryptAES256(const void* plaintext, size_t plaintextLen,
                           const uint8_t* key, const uint8_t* iv,
                           void* ciphertext, size_t& ciphertextLen) {
@@ -403,7 +563,17 @@ namespace TravelExpense {
             return true;
         }
 
-        // AES decrypt helper
+        /**
+         * @brief AES block şifre çözme (16 byte block)
+         * 
+         * AES-256 algoritması kullanarak 16 byte'lık bir blok şifre çözer.
+         * Not: Bu basitleştirilmiş bir versiyondur. Tam implementasyon
+         * inverse S-box, inverse MixColumns vb. içermelidir.
+         * 
+         * @param in Şifre çözülecek blok (16 byte)
+         * @param roundKeys Round key'leri (240 byte)
+         * @param out Şifre çözülmüş blok çıktısı (16 byte)
+         */
         static void aesDecryptBlock(const uint8_t* in, const uint8_t* roundKeys, uint8_t* out) {
             // Simplified - full implementation would include inverse operations
             // For now, using encryption with inverse SBOX
@@ -421,6 +591,20 @@ namespace TravelExpense {
             std::memcpy(out, state, 16);
         }
 
+        /**
+         * @brief AES-256-CBC şifre çözme
+         * 
+         * AES-256 algoritması ile CBC modunda şifre çözme yapar.
+         * PKCS7 padding'i kaldırır ve her blok önceki şifrelenmiş blok ile XOR'lanır.
+         * 
+         * @param ciphertext Şifrelenmiş veri
+         * @param ciphertextLen Şifrelenmiş veri uzunluğu (byte, 16'nın katı olmalı)
+         * @param key Şifreleme anahtarı (32 byte - AES-256)
+         * @param iv Initialization Vector (16 byte)
+         * @param plaintext Şifre çözülmüş veri çıktısı
+         * @param plaintextLen Şifre çözülmüş veri uzunluğu (çıktı, padding olmadan)
+         * @return true Başarılı, false Hata (null pointer, geçersiz uzunluk, padding hatası)
+         */
         bool decryptAES256(const void* ciphertext, size_t ciphertextLen,
                           const uint8_t* key, const uint8_t* iv,
                           void* plaintext, size_t& plaintextLen) {
@@ -465,7 +649,19 @@ namespace TravelExpense {
             return true;
         }
 
-        // HMAC-SHA256 implementasyonu
+        /**
+         * @brief HMAC-SHA256 implementasyonu
+         * 
+         * RFC 2104 uyumlu HMAC-SHA256 (Hash-based Message Authentication Code) hesaplar.
+         * HMAC = SHA256(o_key_pad || SHA256(i_key_pad || message))
+         * 
+         * @param key HMAC anahtarı
+         * @param keyLen Anahtar uzunluğu (byte)
+         * @param message Mesaj (doğrulanacak veri)
+         * @param messageLen Mesaj uzunluğu (byte)
+         * @param output HMAC çıktısı (64 karakter hex string + null terminator)
+         * @return true Başarılı, false Hata (null pointer, sıfır uzunluk vb.)
+         */
         bool hmacSHA256(const uint8_t* key, size_t keyLen,
                       const void* message, size_t messageLen,
                       char* output) {
@@ -526,7 +722,21 @@ namespace TravelExpense {
             return true;
         }
 
-        // PBKDF2 key derivation
+        /**
+         * @brief PBKDF2 key derivation (Password-Based Key Derivation Function 2)
+         * 
+         * RFC 2898 uyumlu PBKDF2 implementasyonu. Şifre ve salt'tan
+         * güçlü bir anahtar türetir. HMAC-SHA256 kullanır.
+         * 
+         * @param password Şifre (plaintext)
+         * @param passwordLen Şifre uzunluğu (byte)
+         * @param salt Salt değeri
+         * @param saltLen Salt uzunluğu (byte)
+         * @param iterations İterasyon sayısı (önerilen: 10000+)
+         * @param keyLen İstenen anahtar uzunluğu (byte)
+         * @param output Türetilen anahtar çıktısı
+         * @return true Başarılı, false Hata (null pointer, sıfır uzunluk, sıfır iterasyon vb.)
+         */
         bool pbkdf2(const char* password, size_t passwordLen,
                    const uint8_t* salt, size_t saltLen,
                    uint32_t iterations, size_t keyLen,
@@ -594,7 +804,17 @@ namespace TravelExpense {
             return true;
         }
 
-        // Güvenli rastgele byte üretimi
+        /**
+         * @brief Güvenli rastgele byte üretimi
+         * 
+         * Platform-specific güvenli rastgele sayı üreticisi kullanır:
+         * - Windows: CryptGenRandom (Windows CryptoAPI)
+         * - Linux/Unix: /dev/urandom
+         * 
+         * @param output Rastgele byte çıktısı
+         * @param length İstenen uzunluk (byte)
+         * @return true Başarılı, false Hata (null pointer, sıfır uzunluk, platform hatası)
+         */
         bool generateRandomBytes(uint8_t* output, size_t length) {
             if (!output || length == 0) {
                 return false;
@@ -626,7 +846,14 @@ namespace TravelExpense {
 #endif
         }
 
-        // IV oluşturma
+        /**
+         * @brief IV (Initialization Vector) oluştur
+         * 
+         * AES şifreleme için 16 byte (AES block size) güvenli rastgele IV oluşturur.
+         * 
+         * @param iv IV çıktısı (16 byte)
+         * @return true Başarılı, false Hata (null pointer veya rastgele sayı üretilemedi)
+         */
         bool generateIV(uint8_t* iv) {
             if (!iv) {
                 return false;
@@ -634,7 +861,18 @@ namespace TravelExpense {
             return generateRandomBytes(iv, 16);
         }
 
-        // Constant-time karşılaştırma
+        /**
+         * @brief Constant-time karşılaştırma
+         * 
+         * Timing attack'lara karşı koruma sağlayan sabit zamanlı string karşılaştırma.
+         * Her karakteri karşılaştırır ve sonucu XOR ile birleştirir.
+         * Bu sayede karşılaştırma süresi string içeriğinden bağımsızdır.
+         * 
+         * @param a İlk string
+         * @param b İkinci string
+         * @param length Karşılaştırılacak uzunluk (byte)
+         * @return true Eşit, false Farklı veya hata (null pointer, sıfır uzunluk)
+         */
         bool constantTimeCompare(const char* a, const char* b, size_t length) {
             if (!a || !b || length == 0) {
                 return false;
@@ -648,7 +886,18 @@ namespace TravelExpense {
             return (result == 0);
         }
 
-        // Dosya şifreleme
+        /**
+         * @brief Dosya şifreleme (AES-256-CBC)
+         * 
+         * Dosyayı AES-256-CBC ile şifreler ve çıktı dosyasına yazar.
+         * Çıktı formatı: [IV (16 byte)][Ciphertext (padded)]
+         * 
+         * @param inputFile Girdi dosyası yolu
+         * @param outputFile Çıktı dosyası yolu
+         * @param key Şifreleme anahtarı (32 byte - AES-256)
+         * @param iv IV (nullptr ise otomatik oluşturulur)
+         * @return true Başarılı, false Hata (dosya açılamadı, şifreleme başarısız vb.)
+         */
         bool encryptFile(const char* inputFile, const char* outputFile,
                         const uint8_t* key, const uint8_t* iv) {
             if (!inputFile || !outputFile || !key) {
@@ -709,7 +958,18 @@ namespace TravelExpense {
             return true;
         }
 
-        // Dosya şifre çözme
+        /**
+         * @brief Dosya şifre çözme (AES-256-CBC)
+         * 
+         * AES-256-CBC ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar.
+         * Girdi formatı: [IV (16 byte)][Ciphertext (padded)]
+         * 
+         * @param inputFile Girdi dosyası yolu (şifrelenmiş)
+         * @param outputFile Çıktı dosyası yolu (şifre çözülmüş)
+         * @param key Şifreleme anahtarı (32 byte - AES-256)
+         * @param iv IV (nullptr ise dosyadan okunur)
+         * @return true Başarılı, false Hata (dosya açılamadı, şifre çözme başarısız vb.)
+         */
         bool decryptFile(const char* inputFile, const char* outputFile,
                         const uint8_t* key, const uint8_t* iv) {
             if (!inputFile || !outputFile || !key) {
@@ -776,7 +1036,12 @@ namespace TravelExpense {
         // WHITEBOX DES IMPLEMENTATION
         // ============================================
 
-        // DES S-boxes (8 S-boxes, each with 4 rows x 16 columns)
+        /**
+         * @brief DES S-boxes (8 S-boxes, each with 4 rows x 16 columns)
+         * 
+         * DES algoritmasında kullanılan 8 adet S-box tablosu.
+         * Her S-box 4 satır x 16 sütun içerir ve Feistel function'da kullanılır.
+         */
         static const uint8_t DES_SBOX[8][4][16] = {
             // S1
             {{14, 4, 13, 1, 2, 15, 11, 8, 3, 10, 6, 12, 5, 9, 0, 7},
@@ -820,7 +1085,11 @@ namespace TravelExpense {
              {2, 1, 14, 7, 4, 10, 8, 13, 15, 12, 9, 0, 3, 5, 6, 11}}
         };
 
-        // Initial Permutation (IP)
+        /**
+         * @brief DES Initial Permutation (IP) tablosu
+         * 
+         * DES algoritmasında ilk permutasyon tablosu (64 bit).
+         */
         static const uint8_t DES_IP[64] = {
             58, 50, 42, 34, 26, 18, 10, 2, 60, 52, 44, 36, 28, 20, 12, 4,
             62, 54, 46, 38, 30, 22, 14, 6, 64, 56, 48, 40, 32, 24, 16, 8,
@@ -828,7 +1097,12 @@ namespace TravelExpense {
             61, 53, 45, 37, 29, 21, 13, 5, 63, 55, 47, 39, 31, 23, 15, 7
         };
 
-        // Final Permutation (FP = IP^-1)
+        /**
+         * @brief DES Final Permutation (FP = IP^-1) tablosu
+         * 
+         * DES algoritmasında son permutasyon tablosu (64 bit).
+         * Initial Permutation'ın tersi.
+         */
         static const uint8_t DES_FP[64] = {
             40, 8, 48, 16, 56, 24, 64, 32, 39, 7, 47, 15, 55, 23, 63, 31,
             38, 6, 46, 14, 54, 22, 62, 30, 37, 5, 45, 13, 53, 21, 61, 29,
@@ -836,7 +1110,11 @@ namespace TravelExpense {
             34, 2, 42, 10, 50, 18, 58, 26, 33, 1, 41, 9, 49, 17, 57, 25
         };
 
-        // Expansion Permutation (E)
+        /**
+         * @brief DES Expansion Permutation (E) tablosu
+         * 
+         * DES Feistel function'da kullanılan expansion tablosu (32 bit -> 48 bit).
+         */
         static const uint8_t DES_E[48] = {
             32, 1, 2, 3, 4, 5, 4, 5, 6, 7, 8, 9,
             8, 9, 10, 11, 12, 13, 12, 13, 14, 15, 16, 17,
@@ -844,13 +1122,21 @@ namespace TravelExpense {
             24, 25, 26, 27, 28, 29, 28, 29, 30, 31, 32, 1
         };
 
-        // Permutation P
+        /**
+         * @brief DES Permutation P tablosu
+         * 
+         * DES Feistel function'da S-box çıktısına uygulanan permutasyon (32 bit).
+         */
         static const uint8_t DES_P[32] = {
             16, 7, 20, 21, 29, 12, 28, 17, 1, 15, 23, 26, 5, 18, 31, 10,
             2, 8, 24, 14, 32, 27, 3, 9, 19, 13, 30, 6, 22, 11, 4, 25
         };
 
-        // PC1 (Permuted Choice 1)
+        /**
+         * @brief DES PC1 (Permuted Choice 1) tablosu
+         * 
+         * DES key expansion'da kullanılan ilk permutasyon (64 bit -> 56 bit).
+         */
         static const uint8_t DES_PC1[56] = {
             57, 49, 41, 33, 25, 17, 9, 1, 58, 50, 42, 34, 26, 18,
             10, 2, 59, 51, 43, 35, 27, 19, 11, 3, 60, 52, 44, 36,
@@ -858,7 +1144,11 @@ namespace TravelExpense {
             14, 6, 61, 53, 45, 37, 29, 21, 13, 5, 28, 20, 12, 4
         };
 
-        // PC2 (Permuted Choice 2)
+        /**
+         * @brief DES PC2 (Permuted Choice 2) tablosu
+         * 
+         * DES key expansion'da round key oluşturmak için kullanılan permutasyon (56 bit -> 48 bit).
+         */
         static const uint8_t DES_PC2[48] = {
             14, 17, 11, 24, 1, 5, 3, 28, 15, 6, 21, 10,
             23, 19, 12, 4, 26, 8, 16, 7, 27, 20, 13, 2,
@@ -866,18 +1156,37 @@ namespace TravelExpense {
             44, 49, 39, 56, 34, 53, 46, 42, 50, 36, 29, 32
         };
 
-        // Key rotation schedule
+        /**
+         * @brief DES key rotation schedule
+         * 
+         * Her round için key'in kaç bit sola döndürüleceğini belirten tablo.
+         */
         static const uint8_t DES_KEY_ROTATIONS[16] = {
             1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1
         };
 
-        // Embedded Whitebox Key (8 bytes - bu gerçek projede daha güvenli şekilde saklanmalı)
-        // Bu key lookup table'lar içine gömülü olacak
+        /**
+         * @brief Embedded Whitebox DES Key (8 bytes)
+         * 
+         * Whitebox DES implementasyonunda anahtar koda gömülü olarak saklanır.
+         * Gerçek projede bu anahtar lookup table'lar içine gömülü olmalıdır.
+         * 
+         * @note Bu örnek bir anahtardır. Gerçek projede daha güvenli şekilde saklanmalıdır.
+         */
         static const uint8_t WHITEBOX_DES_KEY[8] = {
             0x13, 0x34, 0x57, 0x79, 0x9B, 0xBC, 0xDF, 0xF1  // Örnek key
         };
 
-        // Helper: Bit permutation
+        /**
+         * @brief Bit permutation helper fonksiyonu
+         * 
+         * DES algoritmasında kullanılan bit permutasyon işlemini yapar.
+         * 
+         * @param input Girdi değeri (64 bit)
+         * @param table Permutasyon tablosu
+         * @param size Tablo boyutu
+         * @return Permüte edilmiş değer
+         */
         static uint64_t permuteBits(uint64_t input, const uint8_t* table, int size) {
             uint64_t output = 0;
             for (int i = 0; i < size; ++i) {
@@ -889,7 +1198,15 @@ namespace TravelExpense {
             return output;
         }
 
-        // Helper: Apply S-box
+        /**
+         * @brief DES S-box uygulama helper fonksiyonu
+         * 
+         * 48-bit girdiyi 8 adet 6-bit parçaya böler, her parçayı ilgili S-box'tan geçirir
+         * ve 32-bit çıktı üretir.
+         * 
+         * @param input Girdi değeri (48 bit, ancak 32 bit olarak temsil edilir)
+         * @return S-box çıktısı (32 bit)
+         */
         static uint32_t applySBox(uint32_t input) {
             uint32_t output = 0;
             for (int i = 0; i < 8; ++i) {
@@ -902,7 +1219,13 @@ namespace TravelExpense {
             return output;
         }
 
-        // Generate subkeys for whitebox DES
+        /**
+         * @brief Whitebox DES için subkey'leri oluştur
+         * 
+         * Gömülü anahtardan DES'in 16 round'u için subkey'leri oluşturur.
+         * 
+         * @param keys Çıktı subkey'leri (16 adet 48-bit subkey)
+         */
         static void generateSubkeys(uint64_t keys[16]) {
             // PC1 permutation on key
             uint64_t key56 = permuteBits(
@@ -932,7 +1255,16 @@ namespace TravelExpense {
             }
         }
 
-        // DES Feistel function
+        /**
+         * @brief DES Feistel function
+         * 
+         * DES algoritmasının temel fonksiyonu. Expansion, S-box substitution,
+         * permutation ve XOR işlemlerini yapar.
+         * 
+         * @param right Feistel function'a giren sağ yarı (32 bit)
+         * @param subkey Round key (48 bit)
+         * @return Feistel function çıktısı (32 bit)
+         */
         static uint32_t feistelFunction(uint32_t right, uint64_t subkey) {
             // Expansion
             uint64_t expanded = permuteBits((uint64_t)right << 32, DES_E, 48);
@@ -953,7 +1285,16 @@ namespace TravelExpense {
             return output;
         }
 
-        // DES block encryption (whitebox - embedded key)
+        /**
+         * @brief DES block şifreleme (whitebox - embedded key)
+         * 
+         * DES algoritması ile 8 byte'lık bir blok şifreler.
+         * Anahtar koda gömülü olduğu için whitebox implementasyonu.
+         * 
+         * @param input Şifrelenecek blok (8 byte)
+         * @param output Şifrelenmiş blok çıktısı (8 byte)
+         * @param subkeys Round key'leri (16 adet 48-bit subkey)
+         */
         static void desEncryptBlock(const uint8_t* input, uint8_t* output, uint64_t subkeys[16]) {
             // Initial Permutation
             uint64_t block = 0;
@@ -986,7 +1327,16 @@ namespace TravelExpense {
             }
         }
 
-        // DES block decryption (reverse subkeys)
+        /**
+         * @brief DES block şifre çözme (reverse subkeys)
+         * 
+         * DES algoritması ile 8 byte'lık bir blok şifre çözer.
+         * Subkey'ler ters sırada kullanılır.
+         * 
+         * @param input Şifre çözülecek blok (8 byte)
+         * @param output Şifre çözülmüş blok çıktısı (8 byte)
+         * @param subkeys Round key'leri (16 adet 48-bit subkey, ters sırada kullanılır)
+         */
         static void desDecryptBlock(const uint8_t* input, uint8_t* output, uint64_t subkeys[16]) {
             // Initial Permutation
             uint64_t block = 0;
@@ -1019,7 +1369,18 @@ namespace TravelExpense {
             }
         }
 
-        // Whitebox DES Encryption
+        /**
+         * @brief Whitebox DES Şifreleme
+         * 
+         * Gömülü anahtar ile DES şifreleme yapar. Anahtar koda gömülü olduğu için
+         * whitebox implementasyonu. PKCS7 padding kullanır (8-byte blocks).
+         * 
+         * @param plaintext Şifrelenecek veri
+         * @param plaintextLen Veri uzunluğu (byte, 8'in katı olmalı)
+         * @param ciphertext Şifrelenmiş veri çıktısı
+         * @param ciphertextLen Şifrelenmiş veri uzunluğu (çıktı)
+         * @return true Başarılı, false Hata (null pointer, geçersiz uzunluk vb.)
+         */
         bool encryptWhiteboxDES(const void* plaintext, size_t plaintextLen,
                                void* ciphertext, size_t& ciphertextLen) {
             if (!plaintext || plaintextLen == 0 || plaintextLen % 8 != 0 ||
@@ -1043,7 +1404,17 @@ namespace TravelExpense {
             return true;
         }
 
-        // Whitebox DES Decryption
+        /**
+         * @brief Whitebox DES Şifre Çözme
+         * 
+         * Gömülü anahtar ile DES şifre çözme yapar. PKCS7 padding'i kaldırır.
+         * 
+         * @param ciphertext Şifrelenmiş veri
+         * @param ciphertextLen Şifrelenmiş veri uzunluğu (byte, 8'in katı olmalı)
+         * @param plaintext Şifre çözülmüş veri çıktısı
+         * @param plaintextLen Şifre çözülmüş veri uzunluğu (çıktı, padding olmadan)
+         * @return true Başarılı, false Hata (null pointer, geçersiz uzunluk, padding hatası vb.)
+         */
         bool decryptWhiteboxDES(const void* ciphertext, size_t ciphertextLen,
                           void* plaintext, size_t& plaintextLen) {
             if (!ciphertext || ciphertextLen == 0 || ciphertextLen % 8 != 0 ||
@@ -1067,7 +1438,16 @@ namespace TravelExpense {
             return true;
         }
 
-        // Whitebox DES File Encryption
+        /**
+         * @brief Whitebox DES Dosya Şifreleme
+         * 
+         * Dosyayı whitebox DES ile şifreler ve çıktı dosyasına yazar.
+         * Çıktı formatı: [Original Size (8 byte)][Ciphertext (padded)]
+         * 
+         * @param inputFile Girdi dosyası yolu
+         * @param outputFile Çıktı dosyası yolu
+         * @return true Başarılı, false Hata (dosya açılamadı, şifreleme başarısız vb.)
+         */
         bool encryptFileWhiteboxDES(const char* inputFile, const char* outputFile) {
             if (!inputFile || !outputFile) {
                 return false;
@@ -1125,7 +1505,16 @@ namespace TravelExpense {
             return true;
         }
 
-        // Whitebox DES File Decryption
+        /**
+         * @brief Whitebox DES Dosya Şifre Çözme
+         * 
+         * Whitebox DES ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar.
+         * Girdi formatı: [Original Size (8 byte)][Ciphertext (padded)]
+         * 
+         * @param inputFile Girdi dosyası yolu (şifrelenmiş)
+         * @param outputFile Çıktı dosyası yolu (şifre çözülmüş)
+         * @return true Başarılı, false Hata (dosya açılamadı, şifre çözme başarısız vb.)
+         */
         bool decryptFileWhiteboxDES(const char* inputFile, const char* outputFile) {
             if (!inputFile || !outputFile) {
                 return false;
@@ -1204,8 +1593,14 @@ namespace TravelExpense {
         // WHITEBOX AES IMPLEMENTATION
         // ============================================
 
-        // Embedded Whitebox AES Key (32 bytes for AES-256)
-        // Bu key lookup table'lar içine gömülü olacak
+        /**
+         * @brief Embedded Whitebox AES Key (32 bytes for AES-256)
+         * 
+         * Whitebox AES implementasyonunda anahtar koda gömülü olarak saklanır.
+         * Gerçek projede bu anahtar lookup table'lar içine gömülü olmalıdır.
+         * 
+         * @note Bu örnek bir anahtardır. Gerçek projede daha güvenli şekilde saklanmalıdır.
+         */
         static const uint8_t WHITEBOX_AES_KEY[32] = {
             0x2b, 0x7e, 0x15, 0x16, 0x28, 0xae, 0xd2, 0xa6,
             0xab, 0xf7, 0x15, 0x88, 0x09, 0xcf, 0x4f, 0x3c,
@@ -1213,12 +1608,25 @@ namespace TravelExpense {
             0xab, 0xf7, 0x15, 0x88, 0x09, 0xcf, 0x4f, 0x3c
         };
 
-        // Whitebox AES - Precomputed lookup tables for each round
-        // These tables embed the key schedule and make reverse engineering harder
-        // T-boxes (T = SubBytes + ShiftRows + MixColumns + AddRoundKey combined)
+        /**
+         * @brief Whitebox AES - Precomputed lookup tables for each round
+         * 
+         * Bu tablolar key schedule'ı içerir ve reverse engineering'i zorlaştırır.
+         * T-boxes (T = SubBytes + ShiftRows + MixColumns + AddRoundKey combined)
+         * 
+         * @note Bu basitleştirilmiş bir versiyondur. Gerçek implementasyonda
+         * her round için 256 entry'li lookup table'lar precomputed olmalıdır.
+         */
         static const uint8_t WHITEBOX_T_BOX[14][256][16] = {0}; // Simplified - would be precomputed in real implementation
 
-        // Helper: Generate whitebox round keys (embedded in lookup tables)
+        /**
+         * @brief Whitebox round key'leri oluştur (lookup table'lara gömülü)
+         * 
+         * Gömülü anahtardan AES-256 için 15 round key oluşturur.
+         * Gerçek whitebox implementasyonda bu key'ler lookup table'lara gömülü olur.
+         * 
+         * @param roundKeys Çıktı round key'leri (15 rounds * 16 bytes)
+         */
         static void generateWhiteboxRoundKeys(uint8_t roundKeys[15][16]) {
             // Use normal key expansion but store in whitebox format
             uint8_t tempRoundKeys[240];
@@ -1232,7 +1640,15 @@ namespace TravelExpense {
             }
         }
 
-        // Whitebox AES block encryption (with embedded key)
+        /**
+         * @brief Whitebox AES block şifreleme (gömülü anahtar ile)
+         * 
+         * Gömülü anahtar ile AES-256 block şifreleme yapar.
+         * Gerçek whitebox implementasyonda lookup table'lar kullanılır.
+         * 
+         * @param input Şifrelenecek blok (16 byte)
+         * @param output Şifrelenmiş blok çıktısı (16 byte)
+         */
         static void whiteboxAESEncryptBlock(const uint8_t* input, uint8_t* output) {
             uint8_t state[16];
             std::memcpy(state, input, 16);
@@ -1298,7 +1714,15 @@ namespace TravelExpense {
             std::memcpy(output, state, 16);
         }
 
-        // Whitebox AES block decryption (with embedded key)
+        /**
+         * @brief Whitebox AES block şifre çözme (gömülü anahtar ile)
+         * 
+         * Gömülü anahtar ile AES-256 block şifre çözme yapar.
+         * Gerçek whitebox implementasyonda inverse lookup table'lar kullanılır.
+         * 
+         * @param input Şifre çözülecek blok (16 byte)
+         * @param output Şifre çözülmüş blok çıktısı (16 byte)
+         */
         static void whiteboxAESDecryptBlock(const uint8_t* input, uint8_t* output) {
             uint8_t state[16];
             std::memcpy(state, input, 16);
@@ -1367,7 +1791,17 @@ namespace TravelExpense {
             std::memcpy(output, state, 16);
         }
 
-        // Whitebox AES Encryption
+        /**
+         * @brief Whitebox AES Şifreleme
+         * 
+         * Gömülü anahtar ile AES-256 şifreleme yapar. PKCS7 padding kullanır (16-byte blocks).
+         * 
+         * @param plaintext Şifrelenecek veri
+         * @param plaintextLen Veri uzunluğu (byte, 16'nın katı olmalı)
+         * @param ciphertext Şifrelenmiş veri çıktısı
+         * @param ciphertextLen Şifrelenmiş veri uzunluğu (çıktı)
+         * @return true Başarılı, false Hata (null pointer, geçersiz uzunluk vb.)
+         */
         bool encryptWhiteboxAES(const void* plaintext, size_t plaintextLen,
                                 void* ciphertext, size_t& ciphertextLen) {
             if (!plaintext || plaintextLen == 0 || plaintextLen % 16 != 0 ||
@@ -1387,7 +1821,17 @@ namespace TravelExpense {
             return true;
         }
 
-        // Whitebox AES Decryption
+        /**
+         * @brief Whitebox AES Şifre Çözme
+         * 
+         * Gömülü anahtar ile AES-256 şifre çözme yapar. PKCS7 padding'i kaldırır.
+         * 
+         * @param ciphertext Şifrelenmiş veri
+         * @param ciphertextLen Şifrelenmiş veri uzunluğu (byte, 16'nın katı olmalı)
+         * @param plaintext Şifre çözülmüş veri çıktısı
+         * @param plaintextLen Şifre çözülmüş veri uzunluğu (çıktı, padding olmadan)
+         * @return true Başarılı, false Hata (null pointer, geçersiz uzunluk, padding hatası vb.)
+         */
         bool decryptWhiteboxAES(const void* ciphertext, size_t ciphertextLen,
                                void* plaintext, size_t& plaintextLen) {
             if (!ciphertext || ciphertextLen == 0 || ciphertextLen % 16 != 0 ||
@@ -1407,7 +1851,16 @@ namespace TravelExpense {
             return true;
         }
 
-        // Whitebox AES File Encryption
+        /**
+         * @brief Whitebox AES Dosya Şifreleme
+         * 
+         * Dosyayı whitebox AES ile şifreler ve çıktı dosyasına yazar.
+         * Çıktı formatı: [Original Size (8 byte)][Ciphertext (padded)]
+         * 
+         * @param inputFile Girdi dosyası yolu
+         * @param outputFile Çıktı dosyası yolu
+         * @return true Başarılı, false Hata (dosya açılamadı, şifreleme başarısız vb.)
+         */
         bool encryptFileWhiteboxAES(const char* inputFile, const char* outputFile) {
             if (!inputFile || !outputFile) {
                 return false;
@@ -1465,7 +1918,16 @@ namespace TravelExpense {
             return true;
         }
 
-        // Whitebox AES File Decryption
+        /**
+         * @brief Whitebox AES Dosya Şifre Çözme
+         * 
+         * Whitebox AES ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar.
+         * Girdi formatı: [Original Size (8 byte)][Ciphertext (padded)]
+         * 
+         * @param inputFile Girdi dosyası yolu (şifrelenmiş)
+         * @param outputFile Çıktı dosyası yolu (şifre çözülmüş)
+         * @return true Başarılı, false Hata (dosya açılamadı, şifre çözme başarısız vb.)
+         */
         bool decryptFileWhiteboxAES(const char* inputFile, const char* outputFile) {
             if (!inputFile || !outputFile) {
                 return false;

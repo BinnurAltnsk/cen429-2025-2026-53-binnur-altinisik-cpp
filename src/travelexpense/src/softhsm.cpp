@@ -28,8 +28,16 @@
     #define FILE_EXISTS(path) (_access(path, 0) == 0)
 #else
     #include <unistd.h>
-    // Platform-specific code for non-Windows platforms - not executed on Windows
-    // This code is excluded from coverage on Windows builds
+    /**
+     * @brief Linux için dosya varlık kontrolü helper fonksiyonu
+     * 
+     * Bu fonksiyon, belirtilen dosya yolunun var olup olmadığını kontrol eder.
+     * Platform-specific code for non-Windows platforms - not executed on Windows.
+     * This code is excluded from coverage on Windows builds.
+     * 
+     * @param path Kontrol edilecek dosya yolu
+     * @return 0 Dosya varsa, -1 Dosya yoksa
+     */
     static inline int file_exists_helper(const char* path) {
         return access(path, F_OK) == 0;
     }
@@ -77,7 +85,17 @@ namespace TravelExpense {
         static char g_tokenLabel[64] = {0};
         static char g_pin[32] = {0};
 
-        // Helper: PKCS#11 return code'u ErrorCode'a çevir
+        /**
+         * @brief PKCS#11 return code'unu ErrorCode'a çevir
+         * 
+         * Bu helper fonksiyon, PKCS#11 standardından dönen return code'ları
+         * uygulamanın ErrorCode enum'una çevirir. PKCS#11 hata kodları
+         * CKR_* formatında olup, bunlar uygulama seviyesinde daha anlamlı
+         * hata kodlarına dönüştürülür.
+         * 
+         * @param rv PKCS#11 return code (CK_ULONG)
+         * @return ErrorCode Uygulama seviyesinde hata kodu
+         */
         static ErrorCode pkcs11ToErrorCode(CK_ULONG rv) {
             switch (rv) {
                 case CKR_OK:
@@ -103,7 +121,27 @@ namespace TravelExpense {
             }
         }
 
-        // Helper: SoftHSM kütüphanesi yolunu bul
+        /**
+         * @brief SoftHSM kütüphanesi yolunu bul
+         * 
+         * Bu helper fonksiyon, sistemde yüklü SoftHSM kütüphanesini bulur.
+         * Platform-specific varsayılan yolları kontrol eder ve ilk bulunan
+         * kütüphane yolunu döndürür.
+         * 
+         * Windows için kontrol edilen yollar:
+         * - softhsm2.dll (current directory)
+         * - C:\Program Files\SoftHSM2\lib\softhsm2.dll
+         * - C:\Program Files (x86)\SoftHSM2\lib\softhsm2.dll
+         * 
+         * Linux için kontrol edilen yollar:
+         * - libsofthsm2.so (current directory)
+         * - /usr/lib/softhsm/libsofthsm2.so
+         * - /usr/local/lib/softhsm/libsofthsm2.so
+         * - /usr/lib/x86_64-linux-gnu/softhsm/libsofthsm2.so
+         * - /opt/softhsm2/lib/libsofthsm2.so
+         * 
+         * @return const char* Bulunan kütüphane yolu, bulunamazsa nullptr
+         */
         static const char* findSoftHSMLibrary() {
             // Windows için
 #ifdef _WIN32
@@ -145,7 +183,20 @@ namespace TravelExpense {
 #endif
         }
 
-        // Helper: PKCS#11 kütüphanesini yükle
+        /**
+         * @brief PKCS#11 kütüphanesini yükle
+         * 
+         * Bu helper fonksiyon, PKCS#11 kütüphanesini dinamik olarak yükler.
+         * Eğer kütüphane zaten yüklüyse, hiçbir işlem yapmaz ve Success döner.
+         * Eğer libraryPath nullptr ise, findSoftHSMLibrary() ile otomatik bulma yapar.
+         * 
+         * Kütüphane yüklendikten sonra, C_GetFunctionList fonksiyonunu alır ve
+         * PKCS#11 function list'ini initialize eder. Bu işlem başarısız olursa,
+         * kütüphane kapatılır ve hata kodu döner.
+         * 
+         * @param libraryPath PKCS#11 kütüphanesi yolu (nullptr ise otomatik bulma yapılır)
+         * @return ErrorCode Başarı durumu (Success, FileNotFound, Unknown)
+         */
         static ErrorCode loadPKCS11Library(const char* libraryPath) {
             if (g_pkcs11Library != nullptr) {
                 // Zaten yüklü
@@ -186,7 +237,22 @@ namespace TravelExpense {
             return ErrorCode::Success;
         }
 
-        // SoftHSM başlatma
+        /**
+         * @brief SoftHSM'yi başlat ve PKCS#11 kütüphanesini yükle
+         * 
+         * SoftHSM modülünü başlatır ve belirtilen PKCS#11 kütüphanesini yükler.
+         * Eğer `libraryPath` nullptr ise, sistemdeki varsayılan kütüphane aranır.
+         * `tokenLabel` ve `pin` nullptr ise varsayılan değerler kullanılır.
+         * 
+         * @note Bu fonksiyon, zaten başlatılmışsa (InitStatus::INITIALIZED) hiçbir
+         * işlem yapmaz ve Success döner. PKCS#11 kütüphanesi yüklendikten sonra,
+         * C_Initialize() çağrılır ve token label ile PIN kaydedilir.
+         * 
+         * @param libraryPath SoftHSM PKCS#11 kütüphanesi yolu (nullptr ise otomatik bulma yapılır)
+         * @param tokenLabel Token etiketi (nullptr ise varsayılan "TravelExpense" kullanılır)
+         * @param pin PIN kodu (nullptr ise varsayılan "1234" kullanılır)
+         * @return ErrorCode Başarı durumu
+         */
         ErrorCode initialize(const char* libraryPath, const char* tokenLabel, const char* pin) {
             if (g_status == InitStatus::INITIALIZED) {
                 // Zaten başlatılmış
@@ -224,7 +290,18 @@ namespace TravelExpense {
             return ErrorCode::Success;
         }
 
-        // SoftHSM kapatma
+        /**
+         * @brief SoftHSM'yi kapat ve kaynakları temizle
+         * 
+         * SoftHSM modülünü kapatır ve tüm kaynakları temizler. Açık session varsa
+         * kapatılır, PKCS#11 finalize edilir ve dinamik kütüphane kapatılır.
+         * Token label ve PIN bilgileri güvenli şekilde temizlenir.
+         * 
+         * @note Bu fonksiyon, zaten kapatılmışsa (InitStatus::NOT_INITIALIZED)
+         * hiçbir işlem yapmaz ve Success döner.
+         * 
+         * @return ErrorCode Başarı durumu
+         */
         ErrorCode shutdown() {
             if (g_status != InitStatus::INITIALIZED) {
                 return ErrorCode::Success;
@@ -255,12 +332,32 @@ namespace TravelExpense {
             return ErrorCode::Success;
         }
 
-        // Durum kontrolü
+        /**
+         * @brief SoftHSM başlatma durumunu kontrol et
+         * 
+         * SoftHSM modülünün mevcut başlatma durumunu döndürür.
+         * 
+         * @return InitStatus Mevcut durum (NOT_INITIALIZED, INITIALIZED, ERROR)
+         */
         InitStatus getStatus() {
             return g_status;
         }
 
-        // Token oluştur (simplified - gerçek implementasyonda token creation gerekir)
+        /**
+         * @brief Token oluştur (simplified - gerçek implementasyonda token creation gerekir)
+         * 
+         * SoftHSM token'ları genellikle sistem seviyesinde oluşturulur.
+         * Bu fonksiyon sadece token label ve PIN bilgilerini kaydeder.
+         * Gerçek token oluşturma işlemi için SoftHSM CLI komutları gerekir.
+         * 
+         * @note Bu fonksiyon, simplified bir implementasyon olup gerçek token
+         * oluşturma işlemini yapmaz. Sadece parametreleri saklar.
+         * 
+         * @param label Token etiketi (nullptr ise InvalidInput döner)
+         * @param pin PIN kodu (nullptr ise InvalidInput döner)
+         * @param soPin SO (Security Officer) PIN kodu (kullanılmıyor, nullptr olabilir)
+         * @return ErrorCode Başarı durumu
+         */
         ErrorCode createToken(const char* label, const char* pin, const char* soPin) {
             // SoftHSM token'ları genellikle sistem seviyesinde oluşturulur
             // Burada sadece label'i kaydediyoruz
@@ -276,7 +373,21 @@ namespace TravelExpense {
             return ErrorCode::Success;
         }
 
-        // Token aç (session başlat)
+        /**
+         * @brief Token aç ve session başlat
+         * 
+         * Belirtilen token'ı açar ve PKCS#11 session başlatır. Token label'a göre
+         * slot listesinde token aranır, bulunduktan sonra session açılır ve
+         * PIN ile login yapılır.
+         * 
+         * @note Bu fonksiyon, SoftHSM'nin INITIALIZED durumunda olmasını gerektirir.
+         * Eğer label nullptr ise, kaydedilmiş g_tokenLabel kullanılır.
+         * Eğer pin nullptr ise, kaydedilmiş g_pin kullanılır.
+         * 
+         * @param label Token etiketi (nullptr ise kaydedilmiş label kullanılır)
+         * @param pin PIN kodu (nullptr ise kaydedilmiş PIN kullanılır)
+         * @return ErrorCode Başarı durumu
+         */
         ErrorCode openToken(const char* label, const char* pin) {
             if (g_status != InitStatus::INITIALIZED || !g_pFunctionList) {
                 return ErrorCode::InvalidInput;
@@ -342,7 +453,16 @@ namespace TravelExpense {
             return ErrorCode::Success;
         }
 
-        // Token kapat
+        /**
+         * @brief Token kapat ve session'ı sonlandır
+         * 
+         * Açık token session'ını kapatır. Önce logout yapılır, sonra session kapatılır.
+         * Session handle ve current slot sıfırlanır.
+         * 
+         * @note Bu fonksiyon, session açık değilse hiçbir işlem yapmaz ve Success döner.
+         * 
+         * @return ErrorCode Başarı durumu
+         */
         ErrorCode closeToken() {
             if (g_sessionHandle == 0 || !g_pFunctionList) {
                 return ErrorCode::Success;
@@ -356,7 +476,24 @@ namespace TravelExpense {
             return ErrorCode::Success;
         }
 
-        // Anahtar oluştur
+        /**
+         * @brief Kriptografik anahtar oluştur
+         * 
+         * Belirtilen tipte ve kullanım amacına göre kriptografik anahtar oluşturur.
+         * Desteklenen anahtar tipleri: AES-256, RSA-2048, EC-P256.
+         * Anahtar, token üzerinde saklanır ve keyId olarak döndürülür.
+         * 
+         * @note Bu fonksiyon, açık bir session gerektirir (openToken() çağrılmış olmalı).
+         * Simetrik anahtarlar (AES) için C_GenerateKey, asimetrik anahtarlar (RSA, EC)
+         * için C_GenerateKeyPair kullanılır.
+         * 
+         * @param keyType Anahtar tipi (AES_256, RSA_2048, EC_P256)
+         * @param keyUsage Anahtar kullanım amacı (ENCRYPT_DECRYPT, SIGN_VERIFY, vb.)
+         * @param keyLabel Anahtar etiketi (nullptr ise InvalidInput döner)
+         * @param keyId Oluşturulan anahtarın ID'si (çıktı, nullptr ise InvalidInput döner)
+         * @param keyIdLen keyId buffer boyutu (giriş), oluşturulan ID boyutu (çıktı)
+         * @return ErrorCode Başarı durumu
+         */
         ErrorCode generateKey(KeyType keyType, KeyUsage keyUsage,
                              const char* keyLabel, uint8_t* keyId, size_t& keyIdLen) {
             if (g_sessionHandle == 0 || !g_pFunctionList || !keyLabel || !keyId) {
@@ -506,7 +643,20 @@ namespace TravelExpense {
             return ErrorCode::Success;
         }
 
-        // Anahtar bul
+        /**
+         * @brief Anahtarı label'a göre bul
+         * 
+         * Belirtilen label'a sahip anahtarı token üzerinde arar ve keyId'sini döndürür.
+         * Arama, C_FindObjectsInit ve C_FindObjects kullanılarak yapılır.
+         * 
+         * @note Bu fonksiyon, açık bir session gerektirir (openToken() çağrılmış olmalı).
+         * Anahtar bulunamazsa FileNotFound döner.
+         * 
+         * @param keyLabel Anahtar etiketi (nullptr ise InvalidInput döner)
+         * @param keyId Bulunan anahtarın ID'si (çıktı, nullptr ise InvalidInput döner)
+         * @param keyIdLen keyId buffer boyutu (giriş), bulunan ID boyutu (çıktı)
+         * @return ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput)
+         */
         ErrorCode findKey(const char* keyLabel, uint8_t* keyId, size_t& keyIdLen) {
             if (g_sessionHandle == 0 || !g_pFunctionList || !keyLabel || !keyId) {
                 return ErrorCode::InvalidInput;
@@ -553,7 +703,19 @@ namespace TravelExpense {
             return ErrorCode::Success;
         }
 
-        // Anahtarı sil
+        /**
+         * @brief Anahtarı sil
+         * 
+         * Belirtilen keyId'ye sahip anahtarı token üzerinden siler.
+         * C_DestroyObject kullanılarak anahtar kalıcı olarak silinir.
+         * 
+         * @note Bu fonksiyon, açık bir session gerektirir (openToken() çağrılmış olmalı).
+         * Anahtar silindikten sonra geri getirilemez.
+         * 
+         * @param keyId Silinecek anahtarın ID'si (nullptr ise InvalidInput döner)
+         * @param keyIdLen keyId buffer boyutu (CK_OBJECT_HANDLE boyutu olmalı)
+         * @return ErrorCode Başarı durumu
+         */
         ErrorCode deleteKey(const uint8_t* keyId, size_t keyIdLen) {
             if (g_sessionHandle == 0 || !g_pFunctionList || !keyId) {
                 return ErrorCode::InvalidInput;
@@ -570,7 +732,26 @@ namespace TravelExpense {
             return pkcs11ToErrorCode(rv);
         }
 
-        // Şifreleme
+        /**
+         * @brief Veriyi şifrele (AES-CBC)
+         * 
+         * Belirtilen anahtar ile veriyi AES-CBC modunda şifreler.
+         * IV (Initialization Vector) belirtilmemişse, PKCS#11'nin rastgele
+         * sayı üreticisi ile oluşturulur.
+         * 
+         * @note Bu fonksiyon, açık bir session gerektirir (openToken() çağrılmış olmalı).
+         * AES-CBC-PAD mekanizması kullanılır, bu nedenle padding otomatik olarak eklenir.
+         * Ciphertext boyutu, plaintext boyutundan büyük olabilir.
+         * 
+         * @param keyId Şifreleme anahtarının ID'si (nullptr ise InvalidInput döner)
+         * @param keyIdLen keyId buffer boyutu
+         * @param plaintext Şifrelenecek veri (nullptr ise InvalidInput döner)
+         * @param plaintextLen Veri uzunluğu (byte, 0 ise InvalidInput döner)
+         * @param ciphertext Şifrelenmiş veri çıktısı (nullptr ise InvalidInput döner)
+         * @param ciphertextLen ciphertext buffer boyutu (giriş), şifrelenmiş veri boyutu (çıktı)
+         * @param iv Initialization Vector (nullptr ise otomatik oluşturulur)
+         * @return ErrorCode Başarı durumu
+         */
         ErrorCode encrypt(const uint8_t* keyId, size_t keyIdLen,
                          const void* plaintext, size_t plaintextLen,
                          void* ciphertext, size_t& ciphertextLen,
@@ -624,7 +805,26 @@ namespace TravelExpense {
             return ErrorCode::Success;
         }
 
-        // Şifre çözme
+        /**
+         * @brief Şifrelenmiş veriyi çöz (AES-CBC)
+         * 
+         * Belirtilen anahtar ile şifrelenmiş veriyi AES-CBC modunda çözer.
+         * IV (Initialization Vector) belirtilmemişse, ciphertext'in ilk 16 byte'ı
+         * IV olarak kullanılır.
+         * 
+         * @note Bu fonksiyon, açık bir session gerektirir (openToken() çağrılmış olmalı).
+         * AES-CBC-PAD mekanizması kullanılır, bu nedenle padding otomatik olarak kaldırılır.
+         * Plaintext boyutu, ciphertext boyutundan küçük veya eşit olabilir.
+         * 
+         * @param keyId Şifre çözme anahtarının ID'si (nullptr ise InvalidInput döner)
+         * @param keyIdLen keyId buffer boyutu
+         * @param ciphertext Şifrelenmiş veri (nullptr ise InvalidInput döner)
+         * @param ciphertextLen Şifrelenmiş veri uzunluğu (byte, 0 ise InvalidInput döner)
+         * @param plaintext Çözülmüş veri çıktısı (nullptr ise InvalidInput döner)
+         * @param plaintextLen plaintext buffer boyutu (giriş), çözülmüş veri boyutu (çıktı)
+         * @param iv Initialization Vector (nullptr ise ciphertext'in ilk 16 byte'ı kullanılır)
+         * @return ErrorCode Başarı durumu
+         */
         ErrorCode decrypt(const uint8_t* keyId, size_t keyIdLen,
                          const void* ciphertext, size_t ciphertextLen,
                          void* plaintext, size_t& plaintextLen,
@@ -679,7 +879,24 @@ namespace TravelExpense {
             return ErrorCode::Success;
         }
 
-        // İmzalama
+        /**
+         * @brief Veriyi imzala (SHA256-RSA-PKCS)
+         * 
+         * Belirtilen anahtar ile veriyi SHA256 hash'leyip RSA-PKCS imzası oluşturur.
+         * SHA256-RSA-PKCS mekanizması kullanılır.
+         * 
+         * @note Bu fonksiyon, açık bir session gerektirir (openToken() çağrılmış olmalı).
+         * Veri önce SHA256 ile hash'lenir, sonra RSA ile imzalanır.
+         * Signature boyutu, RSA anahtar boyutuna bağlıdır (2048-bit için 256 byte).
+         * 
+         * @param keyId İmzalama anahtarının ID'si (nullptr ise InvalidInput döner)
+         * @param keyIdLen keyId buffer boyutu
+         * @param data İmzalanacak veri (nullptr ise InvalidInput döner)
+         * @param dataLen Veri uzunluğu (byte, 0 ise InvalidInput döner)
+         * @param signature İmza çıktısı (nullptr ise InvalidInput döner)
+         * @param signatureLen signature buffer boyutu (giriş), imza boyutu (çıktı)
+         * @return ErrorCode Başarı durumu
+         */
         ErrorCode sign(const uint8_t* keyId, size_t keyIdLen,
                       const void* data, size_t dataLen,
                       void* signature, size_t& signatureLen) {
@@ -722,7 +939,23 @@ namespace TravelExpense {
             return ErrorCode::Success;
         }
 
-        // İmza doğrulama
+        /**
+         * @brief İmzayı doğrula (SHA256-RSA-PKCS)
+         * 
+         * Belirtilen anahtar ile veriyi SHA256 hash'leyip RSA-PKCS imzasını doğrular.
+         * SHA256-RSA-PKCS mekanizması kullanılır.
+         * 
+         * @note Bu fonksiyon, açık bir session gerektirir (openToken() çağrılmış olmalı).
+         * Veri önce SHA256 ile hash'lenir, sonra RSA ile imza doğrulanır.
+         * 
+         * @param keyId Doğrulama anahtarının ID'si (nullptr ise false döner)
+         * @param keyIdLen keyId buffer boyutu
+         * @param data Doğrulanacak veri (nullptr ise false döner)
+         * @param dataLen Veri uzunluğu (byte, 0 ise false döner)
+         * @param signature İmza (nullptr ise false döner)
+         * @param signatureLen İmza uzunluğu (byte, 0 ise false döner)
+         * @return true İmza geçerli, false İmza geçersiz veya hata
+         */
         bool verify(const uint8_t* keyId, size_t keyIdLen,
                    const void* data, size_t dataLen,
                    const void* signature, size_t signatureLen) {
@@ -759,7 +992,19 @@ namespace TravelExpense {
             return (rv == CKR_OK);
         }
 
-        // Rastgele veri üret
+        /**
+         * @brief Kriptografik olarak güvenli rastgele veri üret
+         * 
+         * PKCS#11'nin rastgele sayı üreticisini kullanarak kriptografik olarak
+         * güvenli rastgele veri üretir. C_GenerateRandom fonksiyonu kullanılır.
+         * 
+         * @note Bu fonksiyon, açık bir session gerektirir (openToken() çağrılmış olmalı).
+         * Üretilen rastgele veriler, kriptografik işlemler için uygundur (IV, salt, vb.).
+         * 
+         * @param output Rastgele veri çıktısı (nullptr ise InvalidInput döner)
+         * @param length Üretilecek veri uzunluğu (byte, 0 ise InvalidInput döner)
+         * @return ErrorCode Başarı durumu
+         */
         ErrorCode generateRandom(uint8_t* output, size_t length) {
             if (g_sessionHandle == 0 || !g_pFunctionList || !output || length == 0) {
                 return ErrorCode::InvalidInput;
@@ -770,7 +1015,20 @@ namespace TravelExpense {
             return pkcs11ToErrorCode(rv);
         }
 
-        // Token listesi
+        /**
+         * @brief Mevcut token'ları listele
+         * 
+         * Sistemde mevcut tüm token'ların label'larını listeler.
+         * C_GetSlotList ve C_GetTokenInfo kullanılarak token bilgileri alınır.
+         * 
+         * @note Bu fonksiyon, SoftHSM'nin INITIALIZED durumunda olmasını gerektirir.
+         * Maksimum 10 token listelenir. Token label'ları, boşluklarla doldurulmuş
+         * olabilir, bu nedenle son boşluklar temizlenir.
+         * 
+         * @param labels Token label'ları dizisi (nullptr ise InvalidInput döner)
+         * @param count labels dizisi boyutu (giriş), bulunan token sayısı (çıktı)
+         * @return ErrorCode Başarı durumu
+         */
         ErrorCode listTokens(char labels[][64], size_t& count) {
             if (g_status != InitStatus::INITIALIZED || !g_pFunctionList || !labels) {
                 return ErrorCode::InvalidInput;
@@ -812,7 +1070,20 @@ namespace TravelExpense {
             return ErrorCode::Success;
         }
 
-        // Anahtar listesi
+        /**
+         * @brief Mevcut anahtarları listele
+         * 
+         * Token üzerinde mevcut tüm secret key'lerin label'larını listeler.
+         * C_FindObjectsInit, C_FindObjects ve C_GetAttributeValue kullanılarak
+         * anahtar bilgileri alınır.
+         * 
+         * @note Bu fonksiyon, açık bir session gerektirir (openToken() çağrılmış olmalı).
+         * Maksimum 50 anahtar listelenir. Sadece secret key'ler listelenir.
+         * 
+         * @param labels Anahtar label'ları dizisi (nullptr ise InvalidInput döner)
+         * @param count labels dizisi boyutu (giriş), bulunan anahtar sayısı (çıktı)
+         * @return ErrorCode Başarı durumu
+         */
         ErrorCode listKeys(char labels[][64], size_t& count) {
             if (g_sessionHandle == 0 || !g_pFunctionList || !labels) {
                 return ErrorCode::InvalidInput;
@@ -863,7 +1134,24 @@ namespace TravelExpense {
             return ErrorCode::Success;
         }
 
-        // Anahtar import (simplified)
+        /**
+         * @brief Anahtarı import et (simplified)
+         * 
+         * Belirtilen anahtar verisini token üzerine import eder.
+         * C_CreateObject kullanılarak anahtar oluşturulur ve token üzerinde saklanır.
+         * 
+         * @note Bu fonksiyon, açık bir session gerektirir (openToken() çağrılmış olmalı).
+         * Desteklenen anahtar tipleri: AES-256, RSA-2048, EC-P256.
+         * Anahtar, token üzerinde saklanır ve keyId olarak döndürülür.
+         * 
+         * @param keyType Anahtar tipi (AES_256, RSA_2048, EC_P256)
+         * @param keyData Import edilecek anahtar verisi (nullptr ise InvalidInput döner)
+         * @param keyDataLen Anahtar verisi uzunluğu (byte, 0 ise InvalidInput döner)
+         * @param keyLabel Anahtar etiketi (nullptr ise InvalidInput döner)
+         * @param keyId Import edilen anahtarın ID'si (çıktı, nullptr ise InvalidInput döner)
+         * @param keyIdLen keyId buffer boyutu (giriş), oluşturulan ID boyutu (çıktı)
+         * @return ErrorCode Başarı durumu
+         */
         ErrorCode importKey(KeyType keyType,
                            const uint8_t* keyData, size_t keyDataLen,
                            const char* keyLabel, uint8_t* keyId, size_t& keyIdLen) {

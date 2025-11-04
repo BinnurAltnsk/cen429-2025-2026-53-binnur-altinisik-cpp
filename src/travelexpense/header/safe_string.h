@@ -15,6 +15,15 @@
 #include <cstddef>
 
 namespace TravelExpense {
+    /**
+     * @namespace SafeString
+     * @brief Güvenli string işlemleri modülü
+     * 
+     * Bu modül, platform-bağımsız güvenli string işlemleri sağlar.
+     * MSVC'de strncpy_s gibi güvenli fonksiyonlar kullanır, diğer
+     * platformlarda standart fonksiyonlar + null terminator kontrolü yapar.
+     * MSVC C4996 uyarılarını önler.
+     */
     namespace SafeString {
 
         /**

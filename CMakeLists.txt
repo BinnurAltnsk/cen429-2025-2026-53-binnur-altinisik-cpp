@@ -91,6 +91,19 @@ elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
   # Runtime library çakışmasını önlemek için CMake'in modern API'sini kullan
   set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
   
+  # Paralel derleme sırasında PDB dosyasına yazma çakışmasını önlemek için /FS flag'ini ekle
+  # /FS flag'i, birden fazla CL.EXE'nin aynı PDB dosyasına yazmasına izin verir
+  # Global olarak tüm target'lara uygula
+  add_compile_options(/FS)
+  
+  # Ayrıca Debug ve Release modları için de ayrı ayrı ekle (güvenlik için)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /FS")
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /FS")
+  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /FS")
+  set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} /FS")
+  set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /FS")
+  set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /FS")
+  
   # Geriye dönük uyumluluk için eski yöntem (CMAKE_MSVC_RUNTIME_LIBRARY yeterli olmalı)
   # set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
   # set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} /MTd")

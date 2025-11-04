@@ -24,6 +24,10 @@ namespace TravelExpense {
     /**
      * @namespace RASP
      * @brief RASP (Runtime Application Self-Protection) teknikleri modülü
+     * 
+     * Bu modül, runtime uygulama kendi kendini koruma tekniklerini sağlar:
+     * checksum doğrulama, anti-debug mekanizmaları, tamper detection ve
+     * periyodik kontrol sistemi. Uygulamanın çalışma zamanında güvenliğini sağlar.
      */
     namespace RASP {
 

@@ -27,30 +27,36 @@ namespace TravelExpense {
 
         /**
          * @brief SoftHSM başlatma durumu
+         * 
+         * SoftHSM modülünün başlatma durumunu belirtir.
          */
         enum class InitStatus {
-            NOT_INITIALIZED = 0,
-            INITIALIZED = 1,
-            ERROR = -1
+            NOT_INITIALIZED = 0,  /**< @brief SoftHSM henüz başlatılmadı */
+            INITIALIZED = 1,      /**< @brief SoftHSM başarıyla başlatıldı */
+            ERROR = -1           /**< @brief SoftHSM başlatma hatası */
         };
 
         /**
          * @brief Key tipi
+         * 
+         * Desteklenen kriptografik anahtar tipleri.
          */
         enum class KeyType {
-            AES_256 = 0,
-            RSA_2048 = 1,
-            EC_P256 = 2
+            AES_256 = 0,   /**< @brief AES-256 simetrik şifreleme anahtarı */
+            RSA_2048 = 1,  /**< @brief RSA-2048 asimetrik şifreleme anahtarı */
+            EC_P256 = 2    /**< @brief EC-P256 (secp256r1) eliptik eğri anahtarı */
         };
 
         /**
          * @brief Key kullanım amaçları
+         * 
+         * Anahtarın hangi kriptografik işlemler için kullanılabileceğini belirtir.
          */
         enum class KeyUsage {
-            ENCRYPT_DECRYPT = 0,
-            SIGN_VERIFY = 1,
-            WRAP_UNWRAP = 2,
-            DERIVE = 3
+            ENCRYPT_DECRYPT = 0,  /**< @brief Şifreleme ve şifre çözme işlemleri için */
+            SIGN_VERIFY = 1,      /**< @brief İmzalama ve doğrulama işlemleri için */
+            WRAP_UNWRAP = 2,     /**< @brief Anahtar sarma/çözme işlemleri için */
+            DERIVE = 3           /**< @brief Anahtar türetme işlemleri için */
         };
 
         /**

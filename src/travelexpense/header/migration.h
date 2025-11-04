@@ -22,6 +22,10 @@ namespace TravelExpense {
     /**
      * @namespace Migration
      * @brief Binary → SQLite migration işlemleri modülü
+     * 
+     * Bu modül, binary dosya tabanlı veri saklama sisteminden SQLite veritabanına
+     * geçiş işlemlerini yönetir. Veri migrasyonu, veri doğrulama ve rollback
+     * işlemlerini sağlar.
      */
     namespace Migration {
 

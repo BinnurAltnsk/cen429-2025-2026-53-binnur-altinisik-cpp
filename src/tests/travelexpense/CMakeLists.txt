@@ -54,6 +54,8 @@ if(MSVC)
     # Bu, Google Test ve diğer bağımlılıklarla uyumlu olmalı
     set_target_properties(${EXENAME} PROPERTIES
         MSVC_RUNTIME_LIBRARY "MultiThreadedDLL$<$<CONFIG:Debug>:Debug>")
+    # Paralel derleme sırasında PDB dosyasına yazma çakışmasını önlemek için /FS flag'ini ekle
+    target_compile_options(${EXENAME} PRIVATE /FS)
 endif()
 
 # Add included headers
@@ -72,6 +74,9 @@ if(TARGET gtest AND TARGET gtest_main)
     if(MSVC)
         set_target_properties(gtest gtest_main PROPERTIES
             MSVC_RUNTIME_LIBRARY "MultiThreadedDLL$<$<CONFIG:Debug>:Debug>")
+        # GoogleTest target'larına da /FS flag'ini ekle
+        target_compile_options(gtest PRIVATE /FS)
+        target_compile_options(gtest_main PRIVATE /FS)
     endif()
     target_link_libraries(${EXENAME} PRIVATE gtest gtest_main)
     # Google Test include dizinlerini ekle

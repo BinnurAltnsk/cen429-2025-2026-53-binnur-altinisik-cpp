@@ -20,43 +20,80 @@ namespace TravelExpense {
     /**
      * @namespace Encryption
      * @brief Şifreleme fonksiyonları modülü
+     * 
+     * Bu modül, veri şifreleme, hash hesaplama ve güvenli anahtar yönetimi
+     * fonksiyonlarını sağlar. SHA-256, AES-256, HMAC-SHA256, PBKDF2 ve
+     * diğer kriptografik algoritmaları destekler.
      */
     namespace Encryption {
         /**
          * @brief SHA-256 hash hesapla
          * 
-         * @param input Hash'lenecek veri
-         * @param inputLen Veri uzunluğu
-         * @param output Hash çıktısı (32 byte - 64 karakter hex string)
-         * @return true Başarılı, false Hata
+         * RFC 6234 uyumlu tam SHA-256 hash implementasyonu.
+         * Girdi verisini 512-bit chunk'lara böler, her chunk'ı işler ve
+         * sonuç olarak 256-bit (32 byte) hash üretir.
+         * 
+         * @note Bu fonksiyon, kriptografik olarak güvenli SHA-256 hash hesaplar.
+         * Hash çıktısı, 64 karakter hex string formatında döndürülür.
+         * 
+         * @param input Hash'lenecek veri (nullptr ise false döner)
+         * @param inputLen Veri uzunluğu (byte, 0 ise false döner)
+         * @param output Hash çıktısı (64 karakter hex string + null terminator, nullptr ise false döner)
+         *                Output buffer en az 65 byte olmalıdır.
+         * @return true Başarılı, false Hata (null pointer, sıfır uzunluk vb.)
          */
         TRAVELEXPENSE_API bool sha256Hash(const void* input, size_t inputLen, char* output);
 
         /**
-         * @brief Salt oluştur (rastgele)
+         * @brief Salt oluştur (kriptografik olarak güvenli rastgele)
          * 
-         * @param salt Salt çıktısı (32 byte - 64 karakter hex string)
-         * @return true Başarılı, false Hata
+         * Kriptografik olarak güvenli rastgele sayı üreticisi kullanarak
+         * 32 byte (256 bit) salt oluşturur. Salt, şifre hash'leme işlemlerinde
+         * kullanılır ve rainbow table saldırılarına karşı koruma sağlar.
+         * 
+         * @note Bu fonksiyon, platform-specific güvenli rastgele sayı üreticisi kullanır
+         * (Windows: CryptGenRandom, Linux: /dev/urandom).
+         * Salt çıktısı, 64 karakter hex string formatında döndürülür.
+         * 
+         * @param salt Salt çıktısı (64 karakter hex string + null terminator, nullptr ise false döner)
+         *             Output buffer en az 65 byte olmalıdır.
+         * @return true Başarılı, false Hata (null pointer, rastgele sayı üretme hatası vb.)
          */
         TRAVELEXPENSE_API bool generateSalt(char* salt);
 
         /**
          * @brief Şifreyi hash'le (SHA-256 + Salt)
          * 
-         * @param password Şifre
-         * @param salt Salt değeri
-         * @param hash Hash çıktısı (64 karakter hex string)
-         * @return true Başarılı, false Hata
+         * Belirtilen şifreyi salt ile birleştirerek SHA-256 hash'ler.
+         * Salt, şifre hash'leme işlemlerinde kullanılır ve aynı şifre için
+         * farklı hash'ler üretilmesini sağlar.
+         * 
+         * @note Bu fonksiyon, şifreyi salt ile birleştirir ve SHA-256 ile hash'ler.
+         * Format: SHA256(password + salt) veya SHA256(salt + password).
+         * Hash çıktısı, 64 karakter hex string formatında döndürülür.
+         * 
+         * @param password Şifre (nullptr ise false döner)
+         * @param salt Salt değeri (64 karakter hex string, nullptr ise false döner)
+         * @param hash Hash çıktısı (64 karakter hex string + null terminator, nullptr ise false döner)
+         *             Output buffer en az 65 byte olmalıdır.
+         * @return true Başarılı, false Hata (null pointer, geçersiz salt formatı vb.)
          */
         TRAVELEXPENSE_API bool hashPassword(const char* password, const char* salt, char* hash);
 
         /**
-         * @brief Şifre doğrulama
+         * @brief Şifre doğrulama (constant-time comparison)
          * 
-         * @param password Girilen şifre
-         * @param salt Salt değeri
-         * @param storedHash Saklanan hash değeri
-         * @return true Şifre doğru, false Yanlış
+         * Girilen şifreyi hash'ler ve saklanan hash ile karşılaştırır.
+         * Constant-time comparison kullanarak timing attack'lara karşı koruma sağlar.
+         * 
+         * @note Bu fonksiyon, şifreyi salt ile hash'ler ve storedHash ile karşılaştırır.
+         * Constant-time comparison kullanarak, şifre doğru/yanlış olmasına bakılmaksızın
+         * aynı sürede çalışır. Bu, timing attack'lara karşı koruma sağlar.
+         * 
+         * @param password Girilen şifre (nullptr ise false döner)
+         * @param salt Salt değeri (64 karakter hex string, nullptr ise false döner)
+         * @param storedHash Saklanan hash değeri (64 karakter hex string, nullptr ise false döner)
+         * @return true Şifre doğru, false Yanlış veya hata
          */
         TRAVELEXPENSE_API bool verifyPassword(const char* password, const char* salt, const char* storedHash);
 

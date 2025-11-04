@@ -34,6 +34,11 @@ namespace TravelExpense {
     /**
      * @namespace AssetManager
      * @brief Varlık yönetimi modülü
+     * 
+     * Bu modül, uygulamadaki varlıkların (veriler, anahtarlar, konfigürasyonlar)
+     * kayıt, güncelleme, silme ve listeleme işlemlerini yönetir. Her varlık için
+     * ad, açıklama, konum, kaynak, boyut, koruma şeması gibi özellikler takip edilir.
+     * Varlık yönetimi gereksinimlerini karşılar.
      */
     namespace AssetManager {
 

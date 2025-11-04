@@ -24,6 +24,10 @@ namespace TravelExpense {
     /**
      * @namespace Fingerprinting
      * @brief Cihaz ve uygulama fingerprinting modülü
+     * 
+     * Bu modül, cihaz ve uygulama fingerprint'lerinin oluşturulması,
+     * doğrulanması ve dinamik anahtar yönetimi işlemlerini sağlar.
+     * Dinamik varlıkların korunması gereksinimlerini karşılar.
      */
     namespace Fingerprinting {
 

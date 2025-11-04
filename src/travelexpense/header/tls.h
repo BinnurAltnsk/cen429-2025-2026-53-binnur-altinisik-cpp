@@ -36,14 +36,23 @@ namespace TravelExpense {
          * 
          * Bu yapı, TLS bağlantı bilgilerini saklar.
          * Gerçek implementasyonda OpenSSL SSL_CTX veya benzeri kullanılabilir.
+         * 
+         * @note Bu yapı, TLS bağlantısının yaşam döngüsü boyunca geçerli kalır.
+         * Bağlantı kapatıldığında cleanupTLSContext() ile temizlenmelidir.
          */
         struct TLSContext {
-            void* sslContext;          /**< @brief OpenSSL SSL_CTX* veya benzeri */
-            void* sslConnection;       /**< @brief OpenSSL SSL* veya benzeri */
-            bool isInitialized;        /**< @brief Bağlam başlatıldı mı? */
-            bool isConnected;          /**< @brief Bağlantı kuruldu mu? */
-            char serverHostname[256];  /**< @brief Sunucu hostname */
-            uint16_t serverPort;       /**< @brief Sunucu port */
+            /** @brief OpenSSL SSL_CTX* veya benzeri bağlam işaretçisi */
+            void* sslContext;
+            /** @brief OpenSSL SSL* veya benzeri bağlantı işaretçisi */
+            void* sslConnection;
+            /** @brief Bağlam başlatıldı mı? (true = başlatıldı, false = başlatılmadı) */
+            bool isInitialized;
+            /** @brief Bağlantı kuruldu mu? (true = bağlı, false = bağlı değil) */
+            bool isConnected;
+            /** @brief Sunucu hostname (max 255 karakter) */
+            char serverHostname[256];
+            /** @brief Sunucu port numarası (1-65535) */
+            uint16_t serverPort;
         };
 
         /**
@@ -110,13 +119,22 @@ namespace TravelExpense {
          * @brief Sertifika pin bilgisi
          * 
          * Bu yapı, pin'lenecek sertifika bilgilerini saklar.
+         * Certificate pinning, sunucu sertifikasının beklenen değerlerle eşleşmesini zorunlu kılar.
+         * 
+         * @note Hem fingerprint hem de public key hash pin'lenebilir.
+         * En güvenli yaklaşım, her ikisini de pin'lemektir.
          */
         struct CertificatePin {
-            char hostname[256];       // Hostname
-            char fingerprint[65];      // SHA-256 fingerprint (64 karakter hex)
-            char publicKeyHash[65];    // Public key hash (64 karakter hex)
-            bool pinCertificate;      // Sertifika pin'i etkin mi?
-            bool pinPublicKey;         // Public key pin'i etkin mi?
+            /** @brief Hostname (max 255 karakter) */
+            char hostname[256];
+            /** @brief SHA-256 fingerprint (64 karakter hex string + null terminator) */
+            char fingerprint[65];
+            /** @brief Public key hash (64 karakter hex string + null terminator) */
+            char publicKeyHash[65];
+            /** @brief Sertifika pin'i etkin mi? (true = pin aktif, false = pin pasif) */
+            bool pinCertificate;
+            /** @brief Public key pin'i etkin mi? (true = pin aktif, false = pin pasif) */
+            bool pinPublicKey;
         };
 
         /**

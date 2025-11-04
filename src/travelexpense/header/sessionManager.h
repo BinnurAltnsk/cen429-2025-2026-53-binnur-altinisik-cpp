@@ -27,6 +27,11 @@ namespace TravelExpense {
     /**
      * @namespace SessionManager
      * @brief Oturum yönetimi ve iletişim güvenliği modülü
+     * 
+     * Bu modül, oturum anahtarı yönetimi, cihaz ve sürüm kontrolü,
+     * gizli veri (confidential payload) şifreleme, bütünlük kontrolü
+     * ve dijital imza işlemlerini yönetir. İletim sırasındaki veri
+     * güvenliği gereksinimlerini karşılar.
      */
     namespace SessionManager {
 

@@ -66,6 +66,11 @@ if(WIN32)
     target_compile_definitions(${LIBNAME} PRIVATE
         "_WIN32_WINNT=0x0601"  # Windows 7 or later
     )
+    # Paralel derleme sırasında PDB dosyasına yazma çakışmasını önlemek için /FS flag'ini ekle
+    # /FS flag'i, birden fazla CL.EXE'nin aynı PDB dosyasına yazmasına izin verir
+    if(MSVC)
+        target_compile_options(${LIBNAME} PRIVATE /FS)
+    endif()
     # Windows system libraries for RASP module (Process32FirstA, Process32NextA)
     # Note: Process32FirstA and Process32NextA are in kernel32.dll
     # These are standard Windows libraries and should be linked automatically,

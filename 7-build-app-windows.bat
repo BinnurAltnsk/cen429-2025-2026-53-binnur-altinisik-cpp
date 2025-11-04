@@ -63,11 +63,16 @@ call reportgenerator "-title:Travelexpense Library Test Documentation Coverage R
 call reportgenerator "-reports:**/lcov_doxygen_test_win.info" "-targetdir:assets/doccoveragetestwin" "-reporttypes:Badges" "-filefilters:-*.md;-*.xml;-*[generated];-*build*"
 
 echo Testing Application with Coverage
+echo Clean build_win directory
+if exist build_win (
+    rmdir /s /q build_win
+)
 echo Configure CMAKE
 call cmake -B build_win -DCMAKE_BUILD_TYPE=Debug -G "Visual Studio 17 2022" -DCMAKE_INSTALL_PREFIX:PATH=publish_win
 echo Build CMAKE Debug/Release
-call cmake --build build_win --config Debug -j4
-call cmake --build build_win --config Release -j4
+rem /FS flag'i eklendi, paralel derleme için /m:1 kullanarak daha güvenli derleme yap
+call cmake --build build_win --config Debug -- /m:1
+call cmake --build build_win --config Release -- /m:1
 rem call cmake --install build_win --strip
 start "Install Debug" cmake --install build_win --config Debug --strip
 start "Install Release" cmake --install build_win --config Release --strip
