@@ -45,8 +45,8 @@ option(ENABLE_TRAVELEXPENSE_APP "Enable Travelexpense Application" ON)
 option(ENABLE_TESTS "Enable All Tests" ON)
 
 # Configure tests
-
-add_compile_definitions(ENABLE_TRAVELEXPENSE_TEST)
+# ENABLE_TRAVELEXPENSE_TEST artık sadece test target'ında tanımlı (test/CMakeLists.txt)
+# Global tanımlama kaldırıldı - her test target'ı kendi tanımını ekler
 
 
 # Configure logs
@@ -87,8 +87,15 @@ if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU" OR "${CMAKE_CXX_COMPILER_ID}" MATCH
 
 elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
   message(STATUS "[${ROOT}] Setting Windows C/C++ Flags")
-  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
-  set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
+  
+  # Runtime library çakışmasını önlemek için CMake'in modern API'sini kullan
+  set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+  
+  # Geriye dönük uyumluluk için eski yöntem (CMAKE_MSVC_RUNTIME_LIBRARY yeterli olmalı)
+  # set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+  # set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} /MTd")
+  # set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
+  # set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /MT")
 else()
   message(WARNING "[${ROOT}] Not supported with the current compiler.")
 endif()

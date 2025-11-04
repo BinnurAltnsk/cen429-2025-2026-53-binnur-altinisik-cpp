@@ -36,11 +36,13 @@ if(SQLITE3_AMALGAMATION)
     
     # Windows'ta SQLite3 için runtime library ayarını eşleştir
     # SQLite3 C dosyası da aynı runtime library'yi kullanmalı
+    # CMAKE_MSVC_RUNTIME_LIBRARY ana CMakeLists.txt'de ayarlanmış, otomatik devralınır
+    # 3rd-party dosyalar için güvenlik uyarılarını bastır
     if(MSVC)
-        # SQLite3 C dosyası için de aynı runtime library'yi kullan
-        # Multi-configuration build için genel ayar
-        set_source_files_properties(${SQLITE3_AMALGAMATION_C} PROPERTIES 
-            COMPILE_OPTIONS "$<$<CONFIG:Debug>:/MTd>;$<$<CONFIG:Release>:/MT>"
+        set_source_files_properties(${SQLITE3_AMALGAMATION_C}
+            PROPERTIES 
+            COMPILE_DEFINITIONS "_CRT_SECURE_NO_WARNINGS"
+            COMPILE_OPTIONS "/wd4996"
         )
     endif()
 else()
@@ -77,6 +79,7 @@ if(WIN32)
         kernel32
         psapi
         advapi32
+        iphlpapi
     )
 else()
     # Linux/Unix: Set visibility for exported symbols

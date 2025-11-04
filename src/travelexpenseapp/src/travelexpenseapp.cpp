@@ -19,6 +19,7 @@
 #include <algorithm>
 
 #ifdef _WIN32
+    #define WIN32_LEAN_AND_MEAN
     #ifndef NOMINMAX
         #define NOMINMAX  // Prevent Windows.h from defining min/max macros
     #endif
@@ -157,23 +158,23 @@ namespace TravelExpenseApp {
         std::cout << "\n[!] HATA: ";
         
         // Use if-else with full namespace path for better MSVC compatibility
-        if (errorCode == TravelExpense::ErrorCode::ERROR_FILE_NOT_FOUND) {
+        if (errorCode == TravelExpense::ErrorCode::FileNotFound) {
             std::cout << "Dosya veya kaynak bulunamadı.\n";
-        } else if (errorCode == TravelExpense::ErrorCode::ERROR_DECRYPTION_FAILED) {
+        } else if (errorCode == TravelExpense::ErrorCode::DecryptionFailed) {
             std::cout << "Şifre çözme işlemi başarısız oldu.\n";
-        } else if (errorCode == TravelExpense::ErrorCode::ERROR_CHECKSUM_MISMATCH) {
+        } else if (errorCode == TravelExpense::ErrorCode::ChecksumMismatch) {
             std::cout << "Veri bütünlüğü hatası tespit edildi.\n";
-        } else if (errorCode == TravelExpense::ErrorCode::ERROR_INVALID_USER) {
+        } else if (errorCode == TravelExpense::ErrorCode::InvalidUser) {
             std::cout << "Geçersiz kullanıcı veya şifre.\n";
-        } else if (errorCode == TravelExpense::ErrorCode::ERROR_BUDGET_EXCEEDED) {
+        } else if (errorCode == TravelExpense::ErrorCode::BudgetExceeded) {
             std::cout << "Bütçe limiti aşıldı!\n";
-        } else if (errorCode == TravelExpense::ErrorCode::ERROR_INVALID_INPUT) {
+        } else if (errorCode == TravelExpense::ErrorCode::InvalidInput) {
             std::cout << "Geçersiz veya eksik girdi.\n";
-        } else if (errorCode == TravelExpense::ErrorCode::ERROR_MEMORY_ALLOCATION) {
+        } else if (errorCode == TravelExpense::ErrorCode::MemoryAllocation) {
             std::cout << "Bellek ayırma hatası.\n";
-        } else if (errorCode == TravelExpense::ErrorCode::ERROR_FILE_IO) {
+        } else if (errorCode == TravelExpense::ErrorCode::FileIO) {
             std::cout << "Dosya okuma/yazma hatası.\n";
-        } else if (errorCode == TravelExpense::ErrorCode::ERROR_ENCRYPTION_FAILED) {
+        } else if (errorCode == TravelExpense::ErrorCode::EncryptionFailed) {
             std::cout << "Şifreleme işlemi başarısız oldu.\n";
         } else {
             std::cout << "Bilinmeyen bir hata oluştu.\n";
@@ -251,7 +252,7 @@ namespace TravelExpenseApp {
                     }
 
                     ErrorCode result = UserAuth::loginUser(username, password);
-                    if (result == TravelExpense::ErrorCode::SUCCESS) {
+                    if (result == TravelExpense::ErrorCode::Success) {
                         showSuccess("Giriş başarılı! Hoş geldiniz!");
                         waitForContinue();
                         return;
@@ -288,7 +289,7 @@ namespace TravelExpenseApp {
                     }
 
                     ErrorCode result = UserAuth::registerUser(username, password);
-                    if (result == TravelExpense::ErrorCode::SUCCESS) {
+                    if (result == TravelExpense::ErrorCode::Success) {
                         showSuccess("Hesap başarıyla oluşturuldu! Giriş yapabilirsiniz.");
                         waitForContinue();
                     } else {
@@ -299,7 +300,7 @@ namespace TravelExpenseApp {
                 }
                 case 3: {
                     ErrorCode result = UserAuth::enableGuestMode();
-                    if (result == TravelExpense::ErrorCode::SUCCESS) {
+                    if (result == TravelExpense::ErrorCode::Success) {
                         showSuccess("Misafir modu etkinleştirildi!");
                         waitForContinue();
                         return;
@@ -402,7 +403,7 @@ namespace TravelExpenseApp {
 
                     int32_t tripId;
                     ErrorCode result = TripManager::createTrip(newTrip, tripId);
-                    if (result == TravelExpense::ErrorCode::SUCCESS) {
+                    if (result == TravelExpense::ErrorCode::Success) {
                         std::cout << "\n[+] Seyahat başarıyla oluşturuldu!\n";
                         std::cout << "[i] Seyahat ID: " << tripId << "\n";
                         waitForContinue();
@@ -417,7 +418,7 @@ namespace TravelExpenseApp {
                     std::vector<Trip> trips;
                     ErrorCode result = TripManager::getTrips(currentUser->userId, trips);
                     
-                    if (result == TravelExpense::ErrorCode::SUCCESS) {
+                    if (result == TravelExpense::ErrorCode::Success) {
                         std::cout << "\n--- Seyahatlerim ---\n\n";
                         
                         if (trips.empty()) {
@@ -458,7 +459,7 @@ namespace TravelExpenseApp {
 
                     Trip existingTrip;
                     ErrorCode getResult = TripManager::getTrip(tripId, existingTrip);
-                    if (getResult != TravelExpense::ErrorCode::SUCCESS) {
+                    if (getResult != TravelExpense::ErrorCode::Success) {
                         std::cout << "\n[!] Seyahat bulunamadı!\n";
                         waitForContinue();
                         break;
@@ -513,7 +514,7 @@ namespace TravelExpenseApp {
                     }
 
                     ErrorCode result = TripManager::updateTrip(tripId, updatedTrip);
-                    if (result == TravelExpense::ErrorCode::SUCCESS) {
+                    if (result == TravelExpense::ErrorCode::Success) {
                         showSuccess("Seyahat başarıyla güncellendi!");
                         waitForContinue();
                     } else {
@@ -532,7 +533,7 @@ namespace TravelExpenseApp {
 
                     Trip existingTrip;
                     ErrorCode getResult = TripManager::getTrip(tripId, existingTrip);
-                    if (getResult != TravelExpense::ErrorCode::SUCCESS) {
+                    if (getResult != TravelExpense::ErrorCode::Success) {
                         std::cout << "\n[!] Seyahat bulunamadı!\n";
                         waitForContinue();
                         break;
@@ -553,7 +554,7 @@ namespace TravelExpenseApp {
 
                     if (confirm == 'e' || confirm == 'E') {
                         ErrorCode result = TripManager::deleteTrip(tripId);
-                        if (result == TravelExpense::ErrorCode::SUCCESS) {
+                        if (result == TravelExpense::ErrorCode::Success) {
                             showSuccess("Seyahat başarıyla silindi!");
                             waitForContinue();
                         } else {
@@ -674,11 +675,11 @@ namespace TravelExpenseApp {
 
                     int32_t expenseId;
                     ErrorCode result = ExpenseManager::logExpense(newExpense, expenseId);
-                    if (result == TravelExpense::ErrorCode::SUCCESS) {
+                    if (result == TravelExpense::ErrorCode::Success) {
                         std::cout << "\n[+] Gider başarıyla kaydedildi!\n";
                         std::cout << "[i] Gider ID: " << expenseId << "\n";
                         waitForContinue();
-                    } else if (result == TravelExpense::ErrorCode::ERROR_BUDGET_EXCEEDED) {
+                    } else if (result == TravelExpense::ErrorCode::BudgetExceeded) {
                         std::cout << "\n[!] UYARI: Bütçe limiti aşıldı! Gider yine de kaydedildi.\n";
                         waitForContinue();
                     } else {
@@ -698,7 +699,7 @@ namespace TravelExpenseApp {
                     std::vector<Expense> expenses;
                     ErrorCode result = ExpenseManager::getExpenses(tripId, expenses);
                     
-                    if (result == TravelExpense::ErrorCode::SUCCESS) {
+                    if (result == TravelExpense::ErrorCode::Success) {
                         std::cout << "\n--- Giderler ---\n\n";
                         
                         if (expenses.empty()) {
@@ -741,7 +742,7 @@ namespace TravelExpenseApp {
 
                     Expense existingExpense;
                     ErrorCode getResult = ExpenseManager::getExpense(expenseId, existingExpense);
-                    if (getResult != TravelExpense::ErrorCode::SUCCESS) {
+                    if (getResult != TravelExpense::ErrorCode::Success) {
                         std::cout << "\n[!] Gider bulunamadı!\n";
                         waitForContinue();
                         break;
@@ -801,7 +802,7 @@ namespace TravelExpenseApp {
                     }
 
                     ErrorCode result = ExpenseManager::updateExpense(expenseId, updatedExpense);
-                    if (result == TravelExpense::ErrorCode::SUCCESS) {
+                    if (result == TravelExpense::ErrorCode::Success) {
                         showSuccess("Gider başarıyla güncellendi!");
                         waitForContinue();
                     } else {
@@ -820,7 +821,7 @@ namespace TravelExpenseApp {
 
                     Expense existingExpense;
                     ErrorCode getResult = ExpenseManager::getExpense(expenseId, existingExpense);
-                    if (getResult != TravelExpense::ErrorCode::SUCCESS) {
+                    if (getResult != TravelExpense::ErrorCode::Success) {
                         std::cout << "\n[!] Gider bulunamadı!\n";
                         waitForContinue();
                         break;
@@ -836,7 +837,7 @@ namespace TravelExpenseApp {
 
                     if (confirm == 'e' || confirm == 'E') {
                         ErrorCode result = ExpenseManager::deleteExpense(expenseId);
-                        if (result == TravelExpense::ErrorCode::SUCCESS) {
+                        if (result == TravelExpense::ErrorCode::Success) {
                             showSuccess("Gider başarıyla silindi!");
                             waitForContinue();
                         } else {
@@ -914,7 +915,7 @@ namespace TravelExpenseApp {
 
                     int32_t budgetId;
                     ErrorCode result = BudgetManager::setBudget(tripId, totalBudget, categoryBudgets, budgetId);
-                    if (result == TravelExpense::ErrorCode::SUCCESS) {
+                    if (result == TravelExpense::ErrorCode::Success) {
                         std::cout << "\n[+] Bütçe başarıyla belirlendi!\n";
                         std::cout << "[i] Bütçe ID: " << budgetId << "\n";
                         waitForContinue();
@@ -934,7 +935,7 @@ namespace TravelExpenseApp {
 
                     Budget budget;
                     ErrorCode result = BudgetManager::getBudget(tripId, budget);
-                    if (result == TravelExpense::ErrorCode::SUCCESS) {
+                    if (result == TravelExpense::ErrorCode::Success) {
                         std::cout << "\n--- Bütçe Bilgileri ---\n\n";
                         std::cout << "Toplam Bütçe: " << std::fixed << std::setprecision(2) 
                                   << budget.totalBudget << "\n";
@@ -985,7 +986,7 @@ namespace TravelExpenseApp {
 
                     Budget existingBudget;
                     ErrorCode getResult = BudgetManager::getBudget(tripId, existingBudget);
-                    if (getResult != TravelExpense::ErrorCode::SUCCESS) {
+                    if (getResult != TravelExpense::ErrorCode::Success) {
                         std::cout << "\n[!] Bütçe bulunamadı! Önce bütçe belirleyin.\n";
                         waitForContinue();
                         break;
@@ -1018,7 +1019,7 @@ namespace TravelExpenseApp {
                     }
 
                     ErrorCode result = BudgetManager::updateBudget(existingBudget.budgetId, updatedBudget);
-                    if (result == TravelExpense::ErrorCode::SUCCESS) {
+                    if (result == TravelExpense::ErrorCode::Success) {
                         showSuccess("Bütçe başarıyla güncellendi!");
                         waitForContinue();
                     } else {
@@ -1068,7 +1069,7 @@ namespace TravelExpenseApp {
 
                     std::string report;
                     ErrorCode result = ReportGenerator::generateReport(tripId, report);
-                    if (result == TravelExpense::ErrorCode::SUCCESS) {
+                    if (result == TravelExpense::ErrorCode::Success) {
                         std::cout << "\n";
                         std::cout << "========================================\n";
                         std::cout << "         SEYAHAT RAPORU\n";

@@ -24,18 +24,18 @@ namespace TravelExpense {
 
         ErrorCode registerUser(const char* username, const char* password) {
             if (!username || !password || strlen(username) == 0 || strlen(password) == 0) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             // Şimdilik basit bir kontrol
             if (strlen(username) >= 50) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             // SQLite veritabanını al
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // Salt oluştur
@@ -43,7 +43,7 @@ namespace TravelExpense {
             char passwordHash[65] = {0};
             
             if (!Encryption::generateSalt(salt)) {
-                return ErrorCode::ERROR_MEMORY_ALLOCATION;
+                return ErrorCode::MemoryAllocation;
             }
             
             // Şifreyi hash'le (SHA-256 + Salt)
@@ -51,7 +51,7 @@ namespace TravelExpense {
                 // Salt'ı güvenli şekilde sil
                 Security::secureCleanup(salt, sizeof(salt));
                 Security::secureCleanup(passwordHash, sizeof(passwordHash));
-                return ErrorCode::ERROR_ENCRYPTION_FAILED;
+                return ErrorCode::EncryptionFailed;
             }
 
             // SQL sorgusu hazırla
@@ -65,7 +65,7 @@ namespace TravelExpense {
             if (rc != SQLITE_OK) {
                 Security::secureCleanup(salt, sizeof(salt));
                 Security::secureCleanup(passwordHash, sizeof(passwordHash));
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Parametreleri bağla
@@ -81,7 +81,7 @@ namespace TravelExpense {
                 sqlite3_finalize(stmt);
                 Security::secureCleanup(salt, sizeof(salt));
                 Security::secureCleanup(passwordHash, sizeof(passwordHash));
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             sqlite3_finalize(stmt);
@@ -90,18 +90,18 @@ namespace TravelExpense {
             Security::secureCleanup(salt, sizeof(salt));
             Security::secureCleanup(passwordHash, sizeof(passwordHash));
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         ErrorCode loginUser(const char* username, const char* password) {
             if (!username || !password) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             // SQLite veritabanını al
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // SQL sorgusu hazırla
@@ -110,7 +110,7 @@ namespace TravelExpense {
             sqlite3_stmt* stmt = nullptr;
             int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
             if (rc != SQLITE_OK) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Parametreleri bağla
@@ -120,7 +120,7 @@ namespace TravelExpense {
             rc = sqlite3_step(stmt);
             if (rc != SQLITE_ROW) {
                 sqlite3_finalize(stmt);
-                return ErrorCode::ERROR_INVALID_USER;
+                return ErrorCode::InvalidUser;
             }
 
             // Sonuçları al
@@ -146,7 +146,7 @@ namespace TravelExpense {
             if (!Encryption::verifyPassword(password, foundUser.salt, foundUser.passwordHash)) {
                 // Güvenli temizlik
                 Security::secureMemoryCleanup(&foundUser, sizeof(User));
-                return ErrorCode::ERROR_INVALID_USER;
+                return ErrorCode::InvalidUser;
             }
 
             // Last login'i güncelle
@@ -173,7 +173,7 @@ namespace TravelExpense {
             // Geçici değişkeni güvenli şekilde temizle
             Security::secureMemoryCleanup(&foundUser, sizeof(User));
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         ErrorCode enableGuestMode() {
@@ -187,7 +187,7 @@ namespace TravelExpense {
             strncpy(currentUser->username, "Guest", sizeof(currentUser->username) - 1);
             currentUser->createdAt = time(nullptr);
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         void logoutUser() {
@@ -205,7 +205,7 @@ namespace TravelExpense {
             // SQLite veritabanını al
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // SQL sorgusu hazırla
@@ -214,7 +214,7 @@ namespace TravelExpense {
             sqlite3_stmt* stmt = nullptr;
             int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
             if (rc != SQLITE_OK) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Parametreleri bağla
@@ -224,7 +224,7 @@ namespace TravelExpense {
             rc = sqlite3_step(stmt);
             if (rc != SQLITE_ROW) {
                 sqlite3_finalize(stmt);
-                return ErrorCode::ERROR_INVALID_USER;
+                return ErrorCode::InvalidUser;
             }
 
             // Sonuçları al
@@ -245,7 +245,7 @@ namespace TravelExpense {
 
             sqlite3_finalize(stmt);
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
     }
 

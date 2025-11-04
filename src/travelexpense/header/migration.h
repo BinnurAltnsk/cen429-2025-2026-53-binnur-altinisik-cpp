@@ -29,12 +29,12 @@ namespace TravelExpense {
          * @brief Migration sonuç yapısı
          */
         struct MigrationResult {
-            int32_t usersMigrated;
-            int32_t tripsMigrated;
-            int32_t expensesMigrated;
-            int32_t budgetsMigrated;
-            int32_t errors;
-            bool success;
+            int32_t usersMigrated;      /**< @brief Migrate edilen kullanıcı sayısı */
+            int32_t tripsMigrated;      /**< @brief Migrate edilen seyahat sayısı */
+            int32_t expensesMigrated;   /**< @brief Migrate edilen gider sayısı */
+            int32_t budgetsMigrated;    /**< @brief Migrate edilen bütçe sayısı */
+            int32_t errors;             /**< @brief Hata sayısı */
+            bool success;              /**< @brief Migration başarılı mı? */
         };
 
         /**

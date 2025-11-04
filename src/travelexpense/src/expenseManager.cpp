@@ -8,6 +8,7 @@
 
 #include "../header/expenseManager.h"
 #include "../header/database.h"
+#include "../header/safe_string.h"
 #include <sqlite3.h>
 #include <cstring>
 #include <ctime>
@@ -18,13 +19,13 @@ namespace TravelExpense {
 
         ErrorCode logExpense(const Expense& expense, int32_t& expenseId) {
             if (expense.tripId <= 0 || expense.amount <= 0) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             // SQLite veritabanını al
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // SQL sorgusu hazırla
@@ -37,7 +38,7 @@ namespace TravelExpense {
             sqlite3_stmt* stmt = nullptr;
             int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
             if (rc != SQLITE_OK) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Parametreleri bağla
@@ -55,7 +56,7 @@ namespace TravelExpense {
             rc = sqlite3_step(stmt);
             if (rc != SQLITE_DONE) {
                 sqlite3_finalize(stmt);
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Oluşturulan ID'yi al
@@ -63,7 +64,7 @@ namespace TravelExpense {
 
             sqlite3_finalize(stmt);
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         ErrorCode getExpenses(int32_t tripId, std::vector<Expense>& expenses) {
@@ -72,7 +73,7 @@ namespace TravelExpense {
             // SQLite veritabanını al
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // SQL sorgusu hazırla
@@ -85,7 +86,7 @@ namespace TravelExpense {
             sqlite3_stmt* stmt = nullptr;
             int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
             if (rc != SQLITE_OK) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Parametreleri bağla
@@ -105,28 +106,24 @@ namespace TravelExpense {
                 const char* paymentMethod = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 6));
                 const char* description = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 7));
 
-                strncpy(expense.currency, currency ? currency : "TRY", sizeof(expense.currency) - 1);
-                expense.currency[sizeof(expense.currency) - 1] = '\0';
-                strncpy(expense.date, date ? date : "", sizeof(expense.date) - 1);
-                expense.date[sizeof(expense.date) - 1] = '\0';
-                strncpy(expense.paymentMethod, paymentMethod ? paymentMethod : "", sizeof(expense.paymentMethod) - 1);
-                expense.paymentMethod[sizeof(expense.paymentMethod) - 1] = '\0';
-                strncpy(expense.description, description ? description : "", sizeof(expense.description) - 1);
-                expense.description[sizeof(expense.description) - 1] = '\0';
+                SafeString::safeCopy(expense.currency, sizeof(expense.currency), currency ? currency : "TRY");
+                SafeString::safeCopy(expense.date, sizeof(expense.date), date ? date : "");
+                SafeString::safeCopy(expense.paymentMethod, sizeof(expense.paymentMethod), paymentMethod ? paymentMethod : "");
+                SafeString::safeCopy(expense.description, sizeof(expense.description), description ? description : "");
 
                 expenses.push_back(expense);
             }
 
             sqlite3_finalize(stmt);
 
-            return (rc == SQLITE_DONE) ? ErrorCode::SUCCESS : ErrorCode::ERROR_FILE_IO;
+            return (rc == SQLITE_DONE) ? ErrorCode::Success : ErrorCode::FileIO;
         }
 
         ErrorCode updateExpense(int32_t expenseId, const Expense& expense) {
             // SQLite veritabanını al
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // SQL sorgusu hazırla
@@ -140,7 +137,7 @@ namespace TravelExpense {
             sqlite3_stmt* stmt = nullptr;
             int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
             if (rc != SQLITE_OK) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Parametreleri bağla
@@ -158,22 +155,22 @@ namespace TravelExpense {
             sqlite3_finalize(stmt);
 
             if (rc != SQLITE_DONE) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Etkilenen satır sayısını kontrol et
             if (sqlite3_changes(db) == 0) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         ErrorCode deleteExpense(int32_t expenseId) {
             // SQLite veritabanını al
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // SQL sorgusu hazırla
@@ -182,7 +179,7 @@ namespace TravelExpense {
             sqlite3_stmt* stmt = nullptr;
             int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
             if (rc != SQLITE_OK) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Parametreleri bağla
@@ -193,22 +190,22 @@ namespace TravelExpense {
             sqlite3_finalize(stmt);
 
             if (rc != SQLITE_DONE) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Etkilenen satır sayısını kontrol et
             if (sqlite3_changes(db) == 0) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         ErrorCode getExpense(int32_t expenseId, Expense& expense) {
             // SQLite veritabanını al
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // SQL sorgusu hazırla
@@ -221,7 +218,7 @@ namespace TravelExpense {
             sqlite3_stmt* stmt = nullptr;
             int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
             if (rc != SQLITE_OK) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Parametreleri bağla
@@ -231,7 +228,7 @@ namespace TravelExpense {
             rc = sqlite3_step(stmt);
             if (rc != SQLITE_ROW) {
                 sqlite3_finalize(stmt);
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             // Sonuçları al
@@ -246,18 +243,14 @@ namespace TravelExpense {
             const char* paymentMethod = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 6));
             const char* description = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 7));
 
-            strncpy(expense.currency, currency ? currency : "TRY", sizeof(expense.currency) - 1);
-            expense.currency[sizeof(expense.currency) - 1] = '\0';
-            strncpy(expense.date, date ? date : "", sizeof(expense.date) - 1);
-            expense.date[sizeof(expense.date) - 1] = '\0';
-            strncpy(expense.paymentMethod, paymentMethod ? paymentMethod : "", sizeof(expense.paymentMethod) - 1);
-            expense.paymentMethod[sizeof(expense.paymentMethod) - 1] = '\0';
-            strncpy(expense.description, description ? description : "", sizeof(expense.description) - 1);
-            expense.description[sizeof(expense.description) - 1] = '\0';
+            SafeString::safeCopy(expense.currency, sizeof(expense.currency), currency ? currency : "TRY");
+            SafeString::safeCopy(expense.date, sizeof(expense.date), date ? date : "");
+            SafeString::safeCopy(expense.paymentMethod, sizeof(expense.paymentMethod), paymentMethod ? paymentMethod : "");
+            SafeString::safeCopy(expense.description, sizeof(expense.description), description ? description : "");
 
             sqlite3_finalize(stmt);
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
     }
 

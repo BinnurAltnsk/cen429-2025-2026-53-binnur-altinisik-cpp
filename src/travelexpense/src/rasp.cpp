@@ -10,7 +10,9 @@
  * @author Binnur Altınışık
  * @date 2025
  */
-
+#include <cstdint>
+#include <cstring>
+using std::uint8_t;
 // CRITICAL: Windows SDK version MUST be defined before ANY includes or headers
 #ifdef _WIN32
     // Force Windows SDK version for PROCESSENTRY32A support
@@ -21,7 +23,7 @@
     // Ensure ANSI versions are used (not Unicode)
     #undef UNICODE
     #undef _UNICODE
-    
+
     // Prevent WIN32_LEAN_AND_MEAN from being defined (it excludes needed APIs)
     #ifdef WIN32_LEAN_AND_MEAN
         #undef WIN32_LEAN_AND_MEAN
@@ -30,6 +32,8 @@
 
 // Platform-specific includes - MUST be before other includes
 #ifdef _WIN32
+    // NOMINMAX ekle (WIN32_LEAN_AND_MEAN zaten undef edildi çünkü PROCESSENTRY32A için gerekli)
+    #define NOMINMAX
     // Include windows.h first - BEFORE any other headers
     #include <windows.h>
     
@@ -70,6 +74,7 @@
     #pragma comment(lib, "kernel32.lib")
     #pragma comment(lib, "psapi.lib")
     #pragma comment(lib, "advapi32.lib")
+    #include <intrin.h>
 #else
     #include <unistd.h>
     #include <sys/ptrace.h>
@@ -83,6 +88,7 @@
 // Now include our headers (after Windows headers to ensure definitions are available)
 #include "rasp.h"
 #include "encryption.h"
+#include "safe_string.h"
 #include <cstring>
 #include <cstdlib>
 #include <ctime>
@@ -638,6 +644,333 @@ namespace TravelExpense {
         }
 
         // ============================================================================
+        // HOOK DETECTION - Hook Saldırı Tespiti
+        // ============================================================================
+
+        // Global state for hook detection
+        static std::vector<void*> g_criticalFunctions;
+
+        bool detectHookAttack() {
+            // Kritik sistem fonksiyonlarını kontrol et
+            return checkCriticalFunctionHooks();
+        }
+        bool detectFunctionHook(const void* func, const char* functionName) {
+            if (!func || !functionName) {
+                return false;
+            }
+
+            const uint8_t* addr = static_cast<const uint8_t*>(func);
+
+            // İlk 5 baytı oku
+            uint8_t prolog[5] = { 0 };
+            std::memcpy(prolog, addr, sizeof(prolog));
+
+            // Ortak hızlı kontroller
+            // 0xE9: JMP rel32, 0xE8: CALL rel32, 0xFF 0x25: JMP [addr]
+            if (prolog[0] == 0xE9 || prolog[0] == 0xE8 || (prolog[0] == 0xFF && prolog[1] == 0x25)) {
+                return true;
+            }
+
+#ifdef _WIN32
+            // Bazı hook’larda PUSH imm (0x68) veya FF ... varyasyonları görülebilir
+            if (prolog[0] == 0xFF || prolog[0] == 0x68) {
+                return true;
+            }
+#else
+            // Linux tarafında da 0xE9/0xFF başlangıcı şüpheli sayılır
+            if (prolog[0] == 0xE9 || prolog[0] == 0xFF) {
+                return true;
+            }
+#endif
+
+            return false; // Hook tespit edilmedi
+        }
+
+        bool checkCriticalFunctionHooks() {
+            // Kritik fonksiyonların hook kontrolü
+            // Bu örnekte birkaç kritik sistem fonksiyonunu kontrol ediyoruz
+            
+            bool hookDetected = false;
+
+#ifdef _WIN32
+            // Windows: Kritik API fonksiyonlarını kontrol et
+            HMODULE hKernel32 = GetModuleHandleA("kernel32.dll");
+            if (hKernel32) {
+                // CreateFileA, ReadFile, WriteFile gibi kritik fonksiyonlar
+                FARPROC createFileA = GetProcAddress(hKernel32, "CreateFileA");
+                if (createFileA && detectFunctionHook(
+                    reinterpret_cast<const void*>(reinterpret_cast<uintptr_t>(createFileA)),
+                    "CreateFileA")) {
+                    hookDetected = true;
+                }
+                
+                FARPROC readFile = GetProcAddress(hKernel32, "ReadFile");
+                if (readFile && detectFunctionHook(
+                    reinterpret_cast<const void*>(reinterpret_cast<uintptr_t>(readFile)),
+                    "ReadFile")) {
+                    hookDetected = true;
+                }
+                
+                FARPROC writeFile = GetProcAddress(hKernel32, "WriteFile");
+                if (writeFile && detectFunctionHook(
+                    reinterpret_cast<const void*>(reinterpret_cast<uintptr_t>(writeFile)),
+                    "WriteFile")) {
+                    hookDetected = true;
+                }
+            }
+#else
+            // Linux: Kritik libc fonksiyonlarını kontrol et
+            // Not: Bu daha karmaşık ve dlopen/dladdr gerektirir
+            // Basit bir kontrol için fonksiyon pointer'larını kontrol edebiliriz
+            // Gerçek implementasyonda dlopen ile libc'yi açıp dlsym ile fonksiyon adreslerini alabiliriz
+#endif
+
+            // Kayıtlı kritik fonksiyonları kontrol et
+            for (void* funcPtr : g_criticalFunctions) {
+                if (detectFunctionHook(funcPtr, "CriticalFunction")) {
+                    hookDetected = true;
+                    break;
+                }
+            }
+
+            return hookDetected;
+        }
+
+        void handleHookDetected(bool terminate) {
+            // Hook tespit edildiğinde tepki ver
+            if (terminate) {
+                // Uygulamayı sonlandır
+#ifdef _WIN32
+                ExitProcess(3);
+#else
+                exit(3);
+#endif
+            }
+            // Aksi halde sadece log (implementasyon detayına göre eklenebilir)
+        }
+
+        // ============================================================================
+        // CONTROL FLOW COUNTER - Kontrol Akışı Sayacı Kontrolü
+        // ============================================================================
+
+        // Global state for control flow counter
+        static std::atomic<uint32_t> g_controlFlowCounter(0);
+        static std::atomic<bool> g_controlFlowInitialized(false);
+        static uint32_t g_expectedControlFlowValue(0);
+
+        bool initializeControlFlowCounter(uint32_t expectedValue) {
+            g_controlFlowCounter.store(0);
+            g_expectedControlFlowValue = expectedValue;
+            g_controlFlowInitialized = true;
+            return true;
+        }
+
+        bool incrementControlFlowCounter() {
+            if (!g_controlFlowInitialized.load()) {
+                return false;
+            }
+
+            // Thread-safe artırma
+            g_controlFlowCounter.fetch_add(1);
+            return true;
+        }
+
+        bool verifyControlFlowCounter(uint32_t expectedValue) {
+            if (!g_controlFlowInitialized.load()) {
+                return false;
+            }
+
+            uint32_t currentValue = g_controlFlowCounter.load();
+            
+            // Mevcut değerin beklenen değerle uyumlu olup olmadığını kontrol et
+            // Genellikle mevcut değer beklenen değerden küçük veya eşit olmalı
+            // (çünkü sayaç artıyor olabilir)
+            // Ancak tam eşitlik kontrolü daha güvenli
+            if (currentValue != expectedValue) {
+                // Sayaç değeri beklenen değerle eşleşmiyor - müdahale tespit edildi
+                return false;
+            }
+
+            return true;
+        }
+
+        uint32_t getControlFlowCounter() {
+            return g_controlFlowCounter.load();
+        }
+
+        bool resetControlFlowCounter() {
+            if (!g_controlFlowInitialized.load()) {
+                return false;
+            }
+
+            g_controlFlowCounter.store(0);
+            return true;
+        }
+
+        bool performControlFlowCheck(uint32_t expectedValue) {
+            if (!g_controlFlowInitialized.load()) {
+                return false;
+            }
+
+            // Kontrol akışı sayacını doğrula
+            if (!verifyControlFlowCounter(expectedValue)) {
+                // Kontrol akışı bütünlüğü bozulmuş - müdahale tespit edildi
+                return false;
+            }
+
+            return true;
+        }
+
+        // ============================================================================
+        // UNSAFE DEVICE DETECTION - Güvensiz Cihaz Tespiti
+        // ============================================================================
+
+        bool detectEmulator() {
+#ifdef _WIN32
+            // Windows: CPU ve sistem özelliklerini kontrol et
+            SYSTEM_INFO sysInfo;
+            GetSystemInfo(&sysInfo);
+            
+            // CPU sayısı kontrolü (emulator'ler genellikle düşük CPU sayısına sahiptir)
+            if (sysInfo.dwNumberOfProcessors < 2) {
+                return true; // Şüpheli: Çok az CPU
+            }
+            
+            // Bellek kontrolü (emulator'ler genellikle düşük bellek ile çalışır)
+            MEMORYSTATUSEX memStatus;
+            memStatus.dwLength = sizeof(MEMORYSTATUSEX);
+            if (GlobalMemoryStatusEx(&memStatus)) {
+                // 2 GB'dan az fiziksel bellek şüpheli olabilir
+                if (memStatus.ullTotalPhys < 2ULL * 1024 * 1024 * 1024) {
+                    return true; // Şüpheli: Çok az bellek
+                }
+            }
+            
+            // Registry kontrolü: Emulator imzaları
+            HKEY hKey;
+            const char* emulatorKeys[] = {
+                "SOFTWARE\\Microsoft\\Virtual Machine\\Guest\\Parameters",
+                "SYSTEM\\CurrentControlSet\\Services\\VBoxGuest",
+                "SYSTEM\\CurrentControlSet\\Services\\VBoxSF",
+                "SYSTEM\\CurrentControlSet\\Services\\VBoxMouse",
+                "SYSTEM\\CurrentControlSet\\Services\\VBoxVideo",
+                "SYSTEM\\CurrentControlSet\\Services\\VBoxService",
+            };
+            
+            for (size_t i = 0; i < sizeof(emulatorKeys) / sizeof(emulatorKeys[0]); ++i) {
+                if (RegOpenKeyExA(HKEY_LOCAL_MACHINE, emulatorKeys[i], 0, KEY_READ, &hKey) == ERROR_SUCCESS) {
+                    RegCloseKey(hKey);
+                    return true; // Emulator tespit edildi
+                }
+            }
+            
+            // CPUID kontrolü: Hypervisor bit kontrolü
+            int cpuInfo[4] = { 0 };
+            __cpuid(cpuInfo, 1);
+            // ECX bit 31: Hypervisor present bit
+            if ((cpuInfo[2] & (1 << 31)) != 0) {
+                // Hypervisor var, ancak bu emulator olmayabilir (legitimate virtualization)
+                // Daha detaylı kontrol gerekebilir
+            }
+            
+            return false;
+#else
+            // Linux: /proc/cpuinfo ve sistem özelliklerini kontrol et
+            FILE* cpuinfo = fopen("/proc/cpuinfo", "r");
+            if (cpuinfo) {
+                char line[256];
+                int cpuCount = 0;
+                bool hasHypervisor = false;
+                
+                while (fgets(line, sizeof(line), cpuinfo)) {
+                    // CPU sayısını say
+                    if (strncmp(line, "processor", 9) == 0) {
+                        cpuCount++;
+                    }
+                    
+                    // Hypervisor imzalarını kontrol et
+                    if (strstr(line, "hypervisor") != nullptr ||
+                        strstr(line, "QEMU") != nullptr ||
+                        strstr(line, "KVM") != nullptr ||
+                        strstr(line, "VMware") != nullptr ||
+                        strstr(line, "VirtualBox") != nullptr ||
+                        strstr(line, "Xen") != nullptr) {
+                        hasHypervisor = true;
+                    }
+                }
+                fclose(cpuinfo);
+                
+                // Çok az CPU şüpheli
+                if (cpuCount < 2) {
+                    return true;
+                }
+                
+                // Hypervisor varsa şüpheli (ancak legitimate virtualization olabilir)
+                if (hasHypervisor) {
+                    // Daha detaylı kontrol gerekebilir
+                    // Bu basit implementasyonda true döndürüyoruz
+                    return true;
+                }
+            }
+            
+            // /sys/class/dmi/id/product_name kontrolü
+            FILE* productName = fopen("/sys/class/dmi/id/product_name", "r");
+            if (productName) {
+                char product[256];
+                if (fgets(product, sizeof(product), productName)) {
+                    // Emulator imzalarını kontrol et
+                    if (strstr(product, "QEMU") != nullptr ||
+                        strstr(product, "KVM") != nullptr ||
+                        strstr(product, "VMware") != nullptr ||
+                        strstr(product, "VirtualBox") != nullptr ||
+                        strstr(product, "Xen") != nullptr) {
+                        fclose(productName);
+                        return true; // Emulator tespit edildi
+                    }
+                }
+                fclose(productName);
+            }
+            
+            return false;
+#endif
+        }
+
+        bool detectRootJailbreak() {
+#ifdef _WIN32
+            // Windows: Administrator privileges kontrolü
+            BOOL isAdmin = FALSE;
+            PSID adminGroup = nullptr;
+            SID_IDENTIFIER_AUTHORITY ntAuthority = SECURITY_NT_AUTHORITY;
+            
+            if (AllocateAndInitializeSid(&ntAuthority, 2, SECURITY_BUILTIN_DOMAIN_RID,
+                DOMAIN_ALIAS_RID_ADMINS, 0, 0, 0, 0, 0, 0, &adminGroup)) {
+                CheckTokenMembership(nullptr, adminGroup, &isAdmin);
+                FreeSid(adminGroup);
+            }
+            
+            // Administrator privileges varsa root tespit edildi
+            return isAdmin == TRUE;
+#else
+            // Linux: Root user kontrolü (UID 0)
+            return getuid() == 0 || geteuid() == 0;
+#endif
+        }
+
+        bool detectUnsafeDevice() {
+            // Emulator tespiti
+            if (detectEmulator()) {
+                return true;
+            }
+            
+            // Root/Jailbreak tespiti
+            if (detectRootJailbreak()) {
+                return true;
+            }
+            
+            return false; // Cihaz güvenli
+        }
+
+        // ============================================================================
         // RASP INITIALIZATION - RASP Başlatma ve Yönetimi
         // ============================================================================
 
@@ -647,8 +980,7 @@ namespace TravelExpense {
             }
 
             // Beklenen self checksum'u sakla
-            strncpy(g_expectedSelfChecksum, expectedSelfChecksum, 64);
-            g_expectedSelfChecksum[64] = '\0';
+            TravelExpense::SafeString::safeCopy(g_expectedSelfChecksum, sizeof(g_expectedSelfChecksum), expectedSelfChecksum);
 
             // Self checksum callback fonksiyonu
             auto selfChecksumCallback = []() -> bool {

@@ -60,20 +60,20 @@ namespace TravelExpense {
 
         ErrorCode closeDatabase(sqlite3* db) {
             if (!db) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             int rc = sqlite3_close(db);
             if (rc != SQLITE_OK) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         ErrorCode createTables(sqlite3* db) {
             if (!db) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             char* errMsg = nullptr;
@@ -97,7 +97,7 @@ namespace TravelExpense {
                 if (errMsg) {
                     sqlite3_free(errMsg);
                 }
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Trips tablosu
@@ -123,7 +123,7 @@ namespace TravelExpense {
                 if (errMsg) {
                     sqlite3_free(errMsg);
                 }
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Expenses tablosu
@@ -147,7 +147,7 @@ namespace TravelExpense {
                 if (errMsg) {
                     sqlite3_free(errMsg);
                 }
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Budgets tablosu
@@ -176,7 +176,34 @@ namespace TravelExpense {
                 if (errMsg) {
                     sqlite3_free(errMsg);
                 }
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
+            }
+
+            // Assets tablosu (Varlık Yönetimi)
+            const char* createAssetsTable = R"(
+                CREATE TABLE IF NOT EXISTS assets (
+                    asset_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    asset_type INTEGER NOT NULL,
+                    name TEXT NOT NULL,
+                    description TEXT,
+                    location TEXT NOT NULL,
+                    source TEXT,
+                    size INTEGER NOT NULL DEFAULT 0,
+                    created_at INTEGER NOT NULL,
+                    deleted_at INTEGER NOT NULL DEFAULT 0,
+                    default_value TEXT,
+                    protection_scheme INTEGER NOT NULL DEFAULT 0,
+                    is_encrypted INTEGER NOT NULL DEFAULT 0,
+                    is_active INTEGER NOT NULL DEFAULT 1
+                );
+            )";
+
+            rc = sqlite3_exec(db, createAssetsTable, nullptr, nullptr, &errMsg);
+            if (rc != SQLITE_OK) {
+                if (errMsg) {
+                    sqlite3_free(errMsg);
+                }
+                return ErrorCode::FileIO;
             }
 
             // Index'ler oluştur
@@ -184,6 +211,8 @@ namespace TravelExpense {
                 CREATE INDEX IF NOT EXISTS idx_trips_user_id ON trips(user_id);
                 CREATE INDEX IF NOT EXISTS idx_expenses_trip_id ON expenses(trip_id);
                 CREATE INDEX IF NOT EXISTS idx_budgets_trip_id ON budgets(trip_id);
+                CREATE INDEX IF NOT EXISTS idx_assets_type ON assets(asset_type);
+                CREATE INDEX IF NOT EXISTS idx_assets_active ON assets(is_active, deleted_at);
             )";
 
             rc = sqlite3_exec(db, createIndexes, nullptr, nullptr, &errMsg);
@@ -194,7 +223,7 @@ namespace TravelExpense {
                 // Index hatası kritik değil
             }
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         sqlite3* getDatabase() {
@@ -215,7 +244,7 @@ namespace TravelExpense {
 
             g_database = initializeDatabase();
             if (!g_database) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             return createTables(g_database);
@@ -223,7 +252,7 @@ namespace TravelExpense {
 
         ErrorCode executeQuery(sqlite3* db, const char* sql) {
             if (!db || !sql) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             char* errMsg = nullptr;
@@ -233,10 +262,10 @@ namespace TravelExpense {
                 if (errMsg) {
                     sqlite3_free(errMsg);
                 }
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         int64_t getLastInsertRowId(sqlite3* db) {

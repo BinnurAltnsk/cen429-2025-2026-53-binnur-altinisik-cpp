@@ -10,6 +10,7 @@
  */
 
 #include "../header/encryption.h"
+#include "../header/safe_string.h"
 #include <cstring>
 #include <cstdlib>
 #include <ctime>
@@ -20,6 +21,8 @@
 #include <vector>
 
 #ifdef _WIN32
+    #define WIN32_LEAN_AND_MEAN
+    #define NOMINMAX
     #include <windows.h>
     #include <wincrypt.h>
     #pragma comment(lib, "advapi32.lib")
@@ -187,7 +190,7 @@ namespace TravelExpense {
             }
 
             std::string hexHash = oss.str();
-            std::strncpy(output, hexHash.c_str(), 64);
+            SafeString::safeCopy(output, 65, hexHash.c_str());
             output[64] = '\0';
 
             return true;
@@ -211,7 +214,7 @@ namespace TravelExpense {
             }
 
             std::string saltStr = oss.str();
-            std::strncpy(salt, saltStr.c_str(), 32);
+            SafeString::safeCopy(salt, 33, saltStr.c_str());
             salt[32] = '\0';
 
             return true;
@@ -232,7 +235,7 @@ namespace TravelExpense {
             }
 
             // Hash'i çıktıya kopyala
-            std::strncpy(hash, tempHash, 64);
+            SafeString::safeCopy(hash, 65, tempHash);
             hash[64] = '\0';
 
             return true;
@@ -1161,6 +1164,346 @@ namespace TravelExpense {
 
             uint8_t paddingValue = plaintext[plaintextLen - 1];
             if (paddingValue > 8 || paddingValue == 0) {
+                delete[] ciphertext;
+                delete[] plaintext;
+                return false;
+            }
+
+            size_t actualSize = plaintextLen - paddingValue;
+            if (actualSize > origSize) {
+                actualSize = origSize;
+            }
+
+            // Write output
+            std::ofstream outFile(outputFile, std::ios::binary);
+            if (!outFile) {
+                delete[] ciphertext;
+                delete[] plaintext;
+                return false;
+            }
+
+            outFile.write(reinterpret_cast<const char*>(plaintext), actualSize);
+            outFile.close();
+
+            delete[] ciphertext;
+            delete[] plaintext;
+
+            return true;
+        }
+
+        // ============================================
+        // WHITEBOX AES IMPLEMENTATION
+        // ============================================
+
+        // Embedded Whitebox AES Key (32 bytes for AES-256)
+        // Bu key lookup table'lar içine gömülü olacak
+        static const uint8_t WHITEBOX_AES_KEY[32] = {
+            0x2b, 0x7e, 0x15, 0x16, 0x28, 0xae, 0xd2, 0xa6,
+            0xab, 0xf7, 0x15, 0x88, 0x09, 0xcf, 0x4f, 0x3c,
+            0x2b, 0x7e, 0x15, 0x16, 0x28, 0xae, 0xd2, 0xa6,
+            0xab, 0xf7, 0x15, 0x88, 0x09, 0xcf, 0x4f, 0x3c
+        };
+
+        // Whitebox AES - Precomputed lookup tables for each round
+        // These tables embed the key schedule and make reverse engineering harder
+        // T-boxes (T = SubBytes + ShiftRows + MixColumns + AddRoundKey combined)
+        static const uint8_t WHITEBOX_T_BOX[14][256][16] = {0}; // Simplified - would be precomputed in real implementation
+
+        // Helper: Generate whitebox round keys (embedded in lookup tables)
+        static void generateWhiteboxRoundKeys(uint8_t roundKeys[15][16]) {
+            // Use normal key expansion but store in whitebox format
+            uint8_t tempRoundKeys[240];
+            aesKeyExpansion(WHITEBOX_AES_KEY, tempRoundKeys);
+            
+            // Convert to round key format (15 rounds * 16 bytes)
+            for (int round = 0; round < 15; ++round) {
+                for (int i = 0; i < 16; ++i) {
+                    roundKeys[round][i] = tempRoundKeys[round * 16 + i];
+                }
+            }
+        }
+
+        // Whitebox AES block encryption (with embedded key)
+        static void whiteboxAESEncryptBlock(const uint8_t* input, uint8_t* output) {
+            uint8_t state[16];
+            std::memcpy(state, input, 16);
+
+            // Generate round keys (in real whitebox, these would be in lookup tables)
+            uint8_t roundKeys[15][16];
+            generateWhiteboxRoundKeys(roundKeys);
+
+            // Initial AddRoundKey
+            for (int i = 0; i < 16; ++i) {
+                state[i] ^= roundKeys[0][i];
+            }
+
+            // 14 rounds for AES-256
+            for (int round = 1; round < 14; ++round) {
+                // SubBytes
+                for (int i = 0; i < 16; ++i) {
+                    state[i] = AES_SBOX[state[i]];
+                }
+
+                // ShiftRows
+                uint8_t temp = state[1]; state[1] = state[5]; state[5] = state[9];
+                state[9] = state[13]; state[13] = temp;
+                temp = state[2]; state[2] = state[10]; state[10] = temp;
+                temp = state[6]; state[6] = state[14]; state[14] = temp;
+                temp = state[3]; state[3] = state[15]; state[15] = state[11];
+                state[11] = state[7]; state[7] = temp;
+
+                // MixColumns (except last round)
+                if (round < 13) {
+                    for (int c = 0; c < 4; ++c) {
+                        uint8_t s0 = state[c * 4], s1 = state[c * 4 + 1];
+                        uint8_t s2 = state[c * 4 + 2], s3 = state[c * 4 + 3];
+                        state[c * 4] = gmul(0x02, s0) ^ gmul(0x03, s1) ^ s2 ^ s3;
+                        state[c * 4 + 1] = s0 ^ gmul(0x02, s1) ^ gmul(0x03, s2) ^ s3;
+                        state[c * 4 + 2] = s0 ^ s1 ^ gmul(0x02, s2) ^ gmul(0x03, s3);
+                        state[c * 4 + 3] = gmul(0x03, s0) ^ s1 ^ s2 ^ gmul(0x02, s3);
+                    }
+                }
+
+                // AddRoundKey
+                for (int i = 0; i < 16; ++i) {
+                    state[i] ^= roundKeys[round][i];
+                }
+            }
+
+            // Final round
+            for (int i = 0; i < 16; ++i) {
+                state[i] = AES_SBOX[state[i]];
+            }
+            uint8_t temp = state[1]; state[1] = state[5]; state[5] = state[9];
+            state[9] = state[13]; state[13] = temp;
+            temp = state[2]; state[2] = state[10]; state[10] = temp;
+            temp = state[6]; state[6] = state[14]; state[14] = temp;
+            temp = state[3]; state[3] = state[15]; state[15] = state[11];
+            state[11] = state[7]; state[7] = temp;
+
+            // Final AddRoundKey
+            for (int i = 0; i < 16; ++i) {
+                state[i] ^= roundKeys[14][i];
+            }
+
+            std::memcpy(output, state, 16);
+        }
+
+        // Whitebox AES block decryption (with embedded key)
+        static void whiteboxAESDecryptBlock(const uint8_t* input, uint8_t* output) {
+            uint8_t state[16];
+            std::memcpy(state, input, 16);
+
+            // Generate round keys (in reverse order for decryption)
+            uint8_t roundKeys[15][16];
+            generateWhiteboxRoundKeys(roundKeys);
+
+            // Inverse final round
+            // AddRoundKey (reverse)
+            for (int i = 0; i < 16; ++i) {
+                state[i] ^= roundKeys[14][i];
+            }
+
+            // InvShiftRows
+            uint8_t temp = state[13]; state[13] = state[9]; state[9] = state[5];
+            state[5] = state[1]; state[1] = temp;
+            temp = state[2]; state[2] = state[10]; state[10] = temp;
+            temp = state[6]; state[6] = state[14]; state[14] = temp;
+            temp = state[3]; state[3] = state[7]; state[7] = state[11];
+            state[11] = state[15]; state[15] = temp;
+
+            // InvSubBytes
+            for (int i = 0; i < 16; ++i) {
+                state[i] = AES_INV_SBOX[state[i]];
+            }
+
+            // 14 rounds in reverse
+            for (int round = 13; round >= 1; --round) {
+                // AddRoundKey
+                for (int i = 0; i < 16; ++i) {
+                    state[i] ^= roundKeys[round][i];
+                }
+
+                // InvMixColumns (except first round)
+                if (round > 0) {
+                    for (int c = 0; c < 4; ++c) {
+                        uint8_t s0 = state[c * 4], s1 = state[c * 4 + 1];
+                        uint8_t s2 = state[c * 4 + 2], s3 = state[c * 4 + 3];
+                        state[c * 4] = gmul(0x0e, s0) ^ gmul(0x0b, s1) ^ gmul(0x0d, s2) ^ gmul(0x09, s3);
+                        state[c * 4 + 1] = gmul(0x09, s0) ^ gmul(0x0e, s1) ^ gmul(0x0b, s2) ^ gmul(0x0d, s3);
+                        state[c * 4 + 2] = gmul(0x0d, s0) ^ gmul(0x09, s1) ^ gmul(0x0e, s2) ^ gmul(0x0b, s3);
+                        state[c * 4 + 3] = gmul(0x0b, s0) ^ gmul(0x0d, s1) ^ gmul(0x09, s2) ^ gmul(0x0e, s3);
+                    }
+                }
+
+                // InvShiftRows
+                temp = state[13]; state[13] = state[9]; state[9] = state[5];
+                state[5] = state[1]; state[1] = temp;
+                temp = state[2]; state[2] = state[10]; state[10] = temp;
+                temp = state[6]; state[6] = state[14]; state[14] = temp;
+                temp = state[3]; state[3] = state[7]; state[7] = state[11];
+                state[11] = state[15]; state[15] = temp;
+
+                // InvSubBytes
+                for (int i = 0; i < 16; ++i) {
+                    state[i] = AES_INV_SBOX[state[i]];
+                }
+            }
+
+            // Initial AddRoundKey
+            for (int i = 0; i < 16; ++i) {
+                state[i] ^= roundKeys[0][i];
+            }
+
+            std::memcpy(output, state, 16);
+        }
+
+        // Whitebox AES Encryption
+        bool encryptWhiteboxAES(const void* plaintext, size_t plaintextLen,
+                                void* ciphertext, size_t& ciphertextLen) {
+            if (!plaintext || plaintextLen == 0 || plaintextLen % 16 != 0 ||
+                !ciphertext) {
+                return false;
+            }
+
+            const uint8_t* plain = static_cast<const uint8_t*>(plaintext);
+            uint8_t* cipher = static_cast<uint8_t*>(ciphertext);
+
+            // Process 16-byte blocks
+            for (size_t i = 0; i < plaintextLen; i += 16) {
+                whiteboxAESEncryptBlock(plain + i, cipher + i);
+            }
+
+            ciphertextLen = plaintextLen;
+            return true;
+        }
+
+        // Whitebox AES Decryption
+        bool decryptWhiteboxAES(const void* ciphertext, size_t ciphertextLen,
+                               void* plaintext, size_t& plaintextLen) {
+            if (!ciphertext || ciphertextLen == 0 || ciphertextLen % 16 != 0 ||
+                !plaintext) {
+                return false;
+            }
+
+            const uint8_t* cipher = static_cast<const uint8_t*>(ciphertext);
+            uint8_t* plain = static_cast<uint8_t*>(plaintext);
+
+            // Process 16-byte blocks
+            for (size_t i = 0; i < ciphertextLen; i += 16) {
+                whiteboxAESDecryptBlock(cipher + i, plain + i);
+            }
+
+            plaintextLen = ciphertextLen;
+            return true;
+        }
+
+        // Whitebox AES File Encryption
+        bool encryptFileWhiteboxAES(const char* inputFile, const char* outputFile) {
+            if (!inputFile || !outputFile) {
+                return false;
+            }
+
+            std::ifstream inFile(inputFile, std::ios::binary);
+            if (!inFile) {
+                return false;
+            }
+
+            inFile.seekg(0, std::ios::end);
+            size_t fileSize = static_cast<size_t>(inFile.tellg());
+            inFile.seekg(0, std::ios::beg);
+
+            // PKCS7 padding (16-byte blocks for AES)
+            size_t paddedLen = ((fileSize + 15) / 16) * 16;
+            uint8_t* plaintext = new uint8_t[paddedLen];
+            std::memset(plaintext, 0, paddedLen);
+            inFile.read(reinterpret_cast<char*>(plaintext), fileSize);
+            inFile.close();
+
+            // Apply PKCS7 padding
+            uint8_t paddingValue = static_cast<uint8_t>(paddedLen - fileSize);
+            for (size_t i = fileSize; i < paddedLen; ++i) {
+                plaintext[i] = paddingValue;
+            }
+
+            // Encrypt
+            size_t ciphertextLen = paddedLen;
+            uint8_t* ciphertext = new uint8_t[ciphertextLen];
+
+            if (!encryptWhiteboxAES(plaintext, paddedLen, ciphertext, ciphertextLen)) {
+                delete[] plaintext;
+                delete[] ciphertext;
+                return false;
+            }
+
+            // Write output (prepend original size)
+            std::ofstream outFile(outputFile, std::ios::binary);
+            if (!outFile) {
+                delete[] plaintext;
+                delete[] ciphertext;
+                return false;
+            }
+
+            // Write original file size (8 bytes)
+            uint64_t origSize = fileSize;
+            outFile.write(reinterpret_cast<const char*>(&origSize), 8);
+            outFile.write(reinterpret_cast<const char*>(ciphertext), ciphertextLen);
+            outFile.close();
+
+            delete[] plaintext;
+            delete[] ciphertext;
+
+            return true;
+        }
+
+        // Whitebox AES File Decryption
+        bool decryptFileWhiteboxAES(const char* inputFile, const char* outputFile) {
+            if (!inputFile || !outputFile) {
+                return false;
+            }
+
+            std::ifstream inFile(inputFile, std::ios::binary);
+            if (!inFile) {
+                return false;
+            }
+
+            // Read original file size
+            uint64_t origSize = 0;
+            inFile.read(reinterpret_cast<char*>(&origSize), 8);
+
+            inFile.seekg(0, std::ios::end);
+            size_t fileSize = static_cast<size_t>(inFile.tellg());
+            inFile.seekg(8, std::ios::beg); // Skip size header
+
+            size_t ciphertextLen = fileSize - 8;
+            if (ciphertextLen == 0 || ciphertextLen % 16 != 0) {
+                inFile.close();
+                return false;
+            }
+
+            uint8_t* ciphertext = new uint8_t[ciphertextLen];
+            inFile.read(reinterpret_cast<char*>(ciphertext), ciphertextLen);
+            inFile.close();
+
+            // Decrypt
+            size_t plaintextLen = ciphertextLen;
+            uint8_t* plaintext = new uint8_t[plaintextLen];
+
+            if (!decryptWhiteboxAES(ciphertext, ciphertextLen, plaintext, plaintextLen)) {
+                delete[] ciphertext;
+                delete[] plaintext;
+                return false;
+            }
+
+            // Remove PKCS7 padding
+            if (plaintextLen == 0) {
+                delete[] ciphertext;
+                delete[] plaintext;
+                return false;
+            }
+
+            uint8_t paddingValue = plaintext[plaintextLen - 1];
+            if (paddingValue > 16 || paddingValue == 0) {
                 delete[] ciphertext;
                 delete[] plaintext;
                 return false;

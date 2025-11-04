@@ -233,6 +233,138 @@ namespace TravelExpense {
         TRAVELEXPENSE_API void handleTamperDetected(bool terminate);
 
         // ============================================================================
+        // HOOK DETECTION - Hook Saldırı Tespiti
+        // ============================================================================
+
+        /**
+         * @brief Hook saldırısı tespit et
+         * 
+         * Sistem fonksiyonlarının hook'lanıp hook'lanmadığını kontrol eder.
+         * Windows ve Linux'ta farklı teknikler kullanır.
+         * 
+         * @return true Hook tespit edildi, false Hook yok
+         */
+        TRAVELEXPENSE_API bool detectHookAttack();
+
+        /**
+         * @brief Belirli bir fonksiyonun hook'lanıp hook'lanmadığını kontrol et
+         * 
+         * @param functionAddress Fonksiyon adresi
+         * @param functionName Fonksiyon adı (debug için)
+         * @return true Hook tespit edildi, false Hook yok
+         */
+         // rasp.h
+        TRAVELEXPENSE_API bool detectFunctionHook(const void* functionAddress, const char* functionName);
+
+
+        /**
+         * @brief Kritik fonksiyonların hook kontrolünü yap
+         * 
+         * Uygulamanın kritik fonksiyonlarının hook'lanıp hook'lanmadığını kontrol eder
+         * 
+         * @return true Hook tespit edildi, false Hook yok
+         */
+        TRAVELEXPENSE_API bool checkCriticalFunctionHooks();
+
+        /**
+         * @brief Hook tespiti durumunda tepki ver
+         * 
+         * Hook tespit edildiğinde uygulamayı kapatır veya başka bir tepki verir
+         * 
+         * @param terminate Uygulamayı sonlandır mı? (true: sonlandır, false: sadece log)
+         */
+        TRAVELEXPENSE_API void handleHookDetected(bool terminate);
+
+        // ============================================================================
+        // CONTROL FLOW COUNTER - Kontrol Akışı Sayacı Kontrolü
+        // ============================================================================
+
+        /**
+         * @brief Kontrol akışı sayacını başlat
+         * 
+         * Kontrol akışı bütünlüğünü sağlamak için sayaç başlatır
+         * 
+         * @param expectedValue Beklenen sayaç değeri
+         * @return true Başarılı, false Hata
+         */
+        TRAVELEXPENSE_API bool initializeControlFlowCounter(uint32_t expectedValue);
+
+        /**
+         * @brief Kontrol akışı sayacını artır
+         * 
+         * Her kritik kontrol akışı noktasında çağrılmalıdır
+         * 
+         * @return true Başarılı, false Hata
+         */
+        TRAVELEXPENSE_API bool incrementControlFlowCounter();
+
+        /**
+         * @brief Kontrol akışı sayacını doğrula
+         * 
+         * Mevcut sayaç değerinin beklenen değerle uyumlu olup olmadığını kontrol eder
+         * 
+         * @param expectedValue Beklenen sayaç değeri
+         * @return true Sayaç geçerli, false Sayaç geçersiz (müdahale tespit edildi)
+         */
+        TRAVELEXPENSE_API bool verifyControlFlowCounter(uint32_t expectedValue);
+
+        /**
+         * @brief Kontrol akışı sayacını al
+         * 
+         * @return Mevcut sayaç değeri
+         */
+        TRAVELEXPENSE_API uint32_t getControlFlowCounter();
+
+        /**
+         * @brief Kontrol akışı sayacını sıfırla
+         * 
+         * @return true Başarılı, false Hata
+         */
+        TRAVELEXPENSE_API bool resetControlFlowCounter();
+
+        /**
+         * @brief Kontrol akışı bütünlük kontrolü yap
+         * 
+         * Tüm kontrol akışı mekanizmalarını kontrol eder
+         * 
+         * @param expectedValue Beklenen sayaç değeri
+         * @return true Kontrol akışı geçerli, false Müdahale tespit edildi
+         */
+        TRAVELEXPENSE_API bool performControlFlowCheck(uint32_t expectedValue);
+
+        // ============================================================================
+        // UNSAFE DEVICE DETECTION - Güvensiz Cihaz Tespiti
+        // ============================================================================
+
+        /**
+         * @brief Emulator tespit et
+         * 
+         * Sistem özelliklerini kontrol ederek emulator kullanımını tespit eder
+         * 
+         * @return true Emulator tespit edildi, false Emulator yok
+         */
+        TRAVELEXPENSE_API bool detectEmulator();
+
+        /**
+         * @brief Güvensiz cihaz tespit et
+         * 
+         * Emulator, root/jailbreak ve diğer güvensiz cihaz durumlarını kontrol eder
+         * 
+         * @return true Güvensiz cihaz tespit edildi, false Cihaz güvenli
+         */
+        TRAVELEXPENSE_API bool detectUnsafeDevice();
+
+        /**
+         * @brief Root/Jailbreak tespit et
+         * 
+         * Windows: Administrator privileges kontrolü
+         * Linux: Root access kontrolü
+         * 
+         * @return true Root/Jailbreak tespit edildi, false Normal kullanıcı
+         */
+        TRAVELEXPENSE_API bool detectRootJailbreak();
+
+        // ============================================================================
         // RASP INITIALIZATION - RASP Başlatma ve Yönetimi
         // ============================================================================
 

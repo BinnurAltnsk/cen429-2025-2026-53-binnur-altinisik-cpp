@@ -19,13 +19,13 @@ namespace TravelExpense {
         ErrorCode setBudget(int32_t tripId, double totalBudget, 
                            const double* categoryBudgets, int32_t& budgetId) {
             if (tripId <= 0 || totalBudget <= 0 || !categoryBudgets) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             // SQLite veritabanını al
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // SQL sorgusu hazırla
@@ -42,7 +42,7 @@ namespace TravelExpense {
             sqlite3_stmt* stmt = nullptr;
             int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
             if (rc != SQLITE_OK) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Parametreleri bağla
@@ -60,7 +60,7 @@ namespace TravelExpense {
             rc = sqlite3_step(stmt);
             if (rc != SQLITE_DONE) {
                 sqlite3_finalize(stmt);
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Oluşturulan ID'yi al
@@ -68,14 +68,14 @@ namespace TravelExpense {
 
             sqlite3_finalize(stmt);
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         ErrorCode getBudget(int32_t tripId, Budget& budget) {
             // SQLite veritabanını al
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // SQL sorgusu hazırla
@@ -92,7 +92,7 @@ namespace TravelExpense {
             sqlite3_stmt* stmt = nullptr;
             int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
             if (rc != SQLITE_OK) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Parametreleri bağla
@@ -102,7 +102,7 @@ namespace TravelExpense {
             rc = sqlite3_step(stmt);
             if (rc != SQLITE_ROW) {
                 sqlite3_finalize(stmt);
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             // Sonuçları al
@@ -126,14 +126,14 @@ namespace TravelExpense {
 
             sqlite3_finalize(stmt);
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         ErrorCode updateBudget(int32_t budgetId, const Budget& budget) {
             // SQLite veritabanını al
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // SQL sorgusu hazırla
@@ -151,7 +151,7 @@ namespace TravelExpense {
             sqlite3_stmt* stmt = nullptr;
             int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
             if (rc != SQLITE_OK) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Parametreleri bağla
@@ -175,20 +175,20 @@ namespace TravelExpense {
             sqlite3_finalize(stmt);
 
             if (rc != SQLITE_DONE) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             // Etkilenen satır sayısını kontrol et
             if (sqlite3_changes(db) == 0) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         bool checkBudgetLimit(int32_t tripId, ExpenseCategory category, double amount) {
             Budget budget;
-            if (getBudget(tripId, budget) != ErrorCode::SUCCESS) {
+            if (getBudget(tripId, budget) != ErrorCode::Success) {
                 return false; // Bütçe bulunamazsa izin verilmez
             }
 

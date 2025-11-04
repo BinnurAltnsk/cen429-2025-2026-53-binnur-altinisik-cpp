@@ -10,7 +10,14 @@
  */
 
 #include "../header/softhsm.h"
+#include "../header/safe_string.h"
+
+// PKCS11 macro redefinition önlemek için koruma ekle
+#ifndef PKCS11_NO_EXPORTS
+#define PKCS11_NO_EXPORTS
+#endif
 #include "../third_party/pkcs11/pkcs11.h"
+
 #include <cstring>
 #include <vector>
 #include <memory>
@@ -25,6 +32,8 @@
 #endif
 
 #ifdef _WIN32
+    #define WIN32_LEAN_AND_MEAN
+    #define NOMINMAX
     #include <windows.h>
     // Windows header dosyaları ERROR ve ERROR_* makroları tanımlar, bunları undef ediyoruz
     // çünkü bizim ErrorCode ve InitStatus enum değerlerimizle çakışıyorlar
@@ -67,25 +76,25 @@ namespace TravelExpense {
         static ErrorCode pkcs11ToErrorCode(CK_ULONG rv) {
             switch (rv) {
                 case CKR_OK:
-                    return ErrorCode::SUCCESS;
+                    return ErrorCode::Success;
                 case CKR_ARGUMENTS_BAD:
-                    return ErrorCode::ERROR_INVALID_INPUT;
+                    return ErrorCode::InvalidInput;
                 case CKR_PIN_INCORRECT:
                 case CKR_PIN_INVALID:
-                    return ErrorCode::ERROR_INVALID_INPUT;
+                    return ErrorCode::InvalidInput;
                 case CKR_TOKEN_NOT_PRESENT:
                 case CKR_TOKEN_NOT_RECOGNIZED:
-                    return ErrorCode::ERROR_FILE_NOT_FOUND;
+                    return ErrorCode::FileNotFound;
                 case CKR_SESSION_HANDLE_INVALID:
-                    return ErrorCode::ERROR_INVALID_INPUT;
+                    return ErrorCode::InvalidInput;
                 case CKR_OBJECT_HANDLE_INVALID:
-                    return ErrorCode::ERROR_INVALID_INPUT;
+                    return ErrorCode::InvalidInput;
                 case CKR_MECHANISM_INVALID:
-                    return ErrorCode::ERROR_INVALID_INPUT;
+                    return ErrorCode::InvalidInput;
                 case CKR_FUNCTION_FAILED:
-                    return ErrorCode::ERROR_ENCRYPTION_FAILED;
+                    return ErrorCode::EncryptionFailed;
                 default:
-                    return ErrorCode::ERROR_UNKNOWN;
+                    return ErrorCode::Unknown;
             }
         }
 
@@ -135,20 +144,20 @@ namespace TravelExpense {
         static ErrorCode loadPKCS11Library(const char* libraryPath) {
             if (g_pkcs11Library != nullptr) {
                 // Zaten yüklü
-                return ErrorCode::SUCCESS;
+                return ErrorCode::Success;
             }
 
             const char* path = libraryPath;
             if (!path) {
                 path = findSoftHSMLibrary();
                 if (!path) {
-                    return ErrorCode::ERROR_FILE_NOT_FOUND;
+                    return ErrorCode::FileNotFound;
                 }
             }
 
             g_pkcs11Library = DL_OPEN(path);
             if (!g_pkcs11Library) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // C_GetFunctionList fonksiyonunu al
@@ -158,7 +167,7 @@ namespace TravelExpense {
             if (!C_GetFunctionList) {
                 DL_CLOSE(g_pkcs11Library);
                 g_pkcs11Library = nullptr;
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // Function list'i al
@@ -166,22 +175,22 @@ namespace TravelExpense {
             if (rv != CKR_OK || !g_pFunctionList) {
                 DL_CLOSE(g_pkcs11Library);
                 g_pkcs11Library = nullptr;
-                return ErrorCode::ERROR_UNKNOWN;
+                return ErrorCode::Unknown;
             }
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         // SoftHSM başlatma
         ErrorCode initialize(const char* libraryPath, const char* tokenLabel, const char* pin) {
             if (g_status == InitStatus::INITIALIZED) {
                 // Zaten başlatılmış
-                return ErrorCode::SUCCESS;
+                return ErrorCode::Success;
             }
 
             // PKCS#11 kütüphanesini yükle
             ErrorCode result = loadPKCS11Library(libraryPath);
-            if (result != ErrorCode::SUCCESS) {
+            if (result != ErrorCode::Success) {
                 g_status = InitStatus::ERROR;
                 return result;
             }
@@ -195,27 +204,25 @@ namespace TravelExpense {
 
             // Token label ve PIN'i sakla
             if (tokenLabel) {
-                std::strncpy(g_tokenLabel, tokenLabel, sizeof(g_tokenLabel) - 1);
-                g_tokenLabel[sizeof(g_tokenLabel) - 1] = '\0';
+                SafeString::safeCopy(g_tokenLabel, sizeof(g_tokenLabel), tokenLabel);
             } else {
-                std::strncpy(g_tokenLabel, "TravelExpense", sizeof(g_tokenLabel) - 1);
+                SafeString::safeCopy(g_tokenLabel, sizeof(g_tokenLabel), "TravelExpense");
             }
 
             if (pin) {
-                std::strncpy(g_pin, pin, sizeof(g_pin) - 1);
-                g_pin[sizeof(g_pin) - 1] = '\0';
+                SafeString::safeCopy(g_pin, sizeof(g_pin), pin);
             } else {
-                std::strncpy(g_pin, "1234", sizeof(g_pin) - 1);  // Varsayılan PIN
+                SafeString::safeCopy(g_pin, sizeof(g_pin), "1234");  // Varsayılan PIN
             }
 
             g_status = InitStatus::INITIALIZED;
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         // SoftHSM kapatma
         ErrorCode shutdown() {
             if (g_status != InitStatus::INITIALIZED) {
-                return ErrorCode::SUCCESS;
+                return ErrorCode::Success;
             }
 
             // Session'ı kapat
@@ -240,7 +247,7 @@ namespace TravelExpense {
             std::memset(g_tokenLabel, 0, sizeof(g_tokenLabel));
             std::memset(g_pin, 0, sizeof(g_pin));
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         // Durum kontrolü
@@ -253,23 +260,21 @@ namespace TravelExpense {
             // SoftHSM token'ları genellikle sistem seviyesinde oluşturulur
             // Burada sadece label'i kaydediyoruz
             if (!label || !pin) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             // Token oluşturma için SoftHSM CLI komutları gerekir
             // Bu fonksiyon sadece parametreleri saklar
-            std::strncpy(g_tokenLabel, label, sizeof(g_tokenLabel) - 1);
-            g_tokenLabel[sizeof(g_tokenLabel) - 1] = '\0';
-            std::strncpy(g_pin, pin, sizeof(g_pin) - 1);
-            g_pin[sizeof(g_pin) - 1] = '\0';
+            SafeString::safeCopy(g_tokenLabel, sizeof(g_tokenLabel), label);
+            SafeString::safeCopy(g_pin, sizeof(g_pin), pin);
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         // Token aç (session başlat)
         ErrorCode openToken(const char* label, const char* pin) {
             if (g_status != InitStatus::INITIALIZED || !g_pFunctionList) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             // Slot listesini al
@@ -295,7 +300,7 @@ namespace TravelExpense {
                 if (rv == CKR_OK) {
                     // Label karşılaştırması (null-terminated değil, boşluklarla doldurulmuş)
                     char tokenLabel[33] = {0};
-                    std::strncpy(tokenLabel, tokenInfo.label, 32);
+                    SafeString::safeCopy(tokenLabel, sizeof(tokenLabel), tokenInfo.label);
                     // Son boşlukları temizle
                     size_t len = std::strlen(tokenLabel);
                     while (len > 0 && tokenLabel[len - 1] == ' ') {
@@ -329,13 +334,13 @@ namespace TravelExpense {
             }
 
             g_currentSlot = selectedSlot;
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         // Token kapat
         ErrorCode closeToken() {
             if (g_sessionHandle == 0 || !g_pFunctionList) {
-                return ErrorCode::SUCCESS;
+                return ErrorCode::Success;
             }
 
             g_pFunctionList->C_Logout(g_sessionHandle);
@@ -343,14 +348,14 @@ namespace TravelExpense {
             g_sessionHandle = 0;
             g_currentSlot = 0;
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         // Anahtar oluştur
         ErrorCode generateKey(KeyType keyType, KeyUsage keyUsage,
                              const char* keyLabel, uint8_t* keyId, size_t& keyIdLen) {
             if (g_sessionHandle == 0 || !g_pFunctionList || !keyLabel || !keyId) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             CK_MECHANISM mechanism = {0};
@@ -493,13 +498,13 @@ namespace TravelExpense {
                 keyIdLen = copyLen;
             }
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         // Anahtar bul
         ErrorCode findKey(const char* keyLabel, uint8_t* keyId, size_t& keyIdLen) {
             if (g_sessionHandle == 0 || !g_pFunctionList || !keyLabel || !keyId) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             // Template ile arama
@@ -529,7 +534,7 @@ namespace TravelExpense {
             g_pFunctionList->C_FindObjectsFinal(g_sessionHandle);
 
             if (rv != CKR_OK || foundCount == 0) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // Key ID olarak handle'ı kullan
@@ -537,23 +542,23 @@ namespace TravelExpense {
                 std::memcpy(keyId, &keyHandle, sizeof(CK_OBJECT_HANDLE));
                 keyIdLen = sizeof(CK_OBJECT_HANDLE);
             } else {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         // Anahtarı sil
         ErrorCode deleteKey(const uint8_t* keyId, size_t keyIdLen) {
             if (g_sessionHandle == 0 || !g_pFunctionList || !keyId) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             CK_OBJECT_HANDLE keyHandle = 0;
             if (keyIdLen >= sizeof(CK_OBJECT_HANDLE)) {
                 std::memcpy(&keyHandle, keyId, sizeof(CK_OBJECT_HANDLE));
             } else {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             CK_ULONG rv = g_pFunctionList->C_DestroyObject(g_sessionHandle, keyHandle);
@@ -567,14 +572,14 @@ namespace TravelExpense {
                          uint8_t* iv) {
             if (g_sessionHandle == 0 || !g_pFunctionList || !keyId || !plaintext || 
                 plaintextLen == 0 || !ciphertext) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             CK_OBJECT_HANDLE keyHandle = 0;
             if (keyIdLen >= sizeof(CK_OBJECT_HANDLE)) {
                 std::memcpy(&keyHandle, keyId, sizeof(CK_OBJECT_HANDLE));
             } else {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             // IV oluştur (eğer verilmemişse)
@@ -611,7 +616,7 @@ namespace TravelExpense {
             }
 
             ciphertextLen = encryptedLen;
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         // Şifre çözme
@@ -621,14 +626,14 @@ namespace TravelExpense {
                          const uint8_t* iv) {
             if (g_sessionHandle == 0 || !g_pFunctionList || !keyId || !ciphertext ||
                 ciphertextLen == 0 || !plaintext) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             CK_OBJECT_HANDLE keyHandle = 0;
             if (keyIdLen >= sizeof(CK_OBJECT_HANDLE)) {
                 std::memcpy(&keyHandle, keyId, sizeof(CK_OBJECT_HANDLE));
             } else {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             // IV (ciphertext'in başından okunabilir veya parametre olarak verilebilir)
@@ -639,7 +644,7 @@ namespace TravelExpense {
                 iv = localIV;
                 // Ciphertext'i IV olmadan düzenle (gerçek implementasyonda dikkatli olunmalı)
             } else if (!iv) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             // AES-CBC mekanizması
@@ -666,7 +671,7 @@ namespace TravelExpense {
             }
 
             plaintextLen = decryptedLen;
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         // İmzalama
@@ -675,14 +680,14 @@ namespace TravelExpense {
                       void* signature, size_t& signatureLen) {
             if (g_sessionHandle == 0 || !g_pFunctionList || !keyId || !data ||
                 dataLen == 0 || !signature) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             CK_OBJECT_HANDLE keyHandle = 0;
             if (keyIdLen >= sizeof(CK_OBJECT_HANDLE)) {
                 std::memcpy(&keyHandle, keyId, sizeof(CK_OBJECT_HANDLE));
             } else {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             // SHA256-RSA-PKCS mechanism
@@ -709,7 +714,7 @@ namespace TravelExpense {
             }
 
             signatureLen = sigLen;
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         // İmza doğrulama
@@ -752,7 +757,7 @@ namespace TravelExpense {
         // Rastgele veri üret
         ErrorCode generateRandom(uint8_t* output, size_t length) {
             if (g_sessionHandle == 0 || !g_pFunctionList || !output || length == 0) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             CK_ULONG rv = g_pFunctionList->C_GenerateRandom(g_sessionHandle, output, 
@@ -763,7 +768,7 @@ namespace TravelExpense {
         // Token listesi
         ErrorCode listTokens(char labels[][64], size_t& count) {
             if (g_status != InitStatus::INITIALIZED || !g_pFunctionList || !labels) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             CK_ULONG slotCount = 0;
@@ -786,9 +791,7 @@ namespace TravelExpense {
                 rv = g_pFunctionList->C_GetTokenInfo(slots[i], &tokenInfo);
                 if (rv == CKR_OK) {
                     // Label'i kopyala (32 byte, boşluklarla doldurulmuş)
-                    size_t copyLen = 32 < 63 ? 32 : 63;
-                    std::strncpy(labels[foundCount], tokenInfo.label, copyLen);
-                    labels[foundCount][63] = '\0';
+                    SafeString::safeCopy(labels[foundCount], 64, tokenInfo.label);
                     
                     // Son boşlukları temizle
                     size_t len = std::strlen(labels[foundCount]);
@@ -801,13 +804,13 @@ namespace TravelExpense {
             }
 
             count = foundCount;
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         // Anahtar listesi
         ErrorCode listKeys(char labels[][64], size_t& count) {
             if (g_sessionHandle == 0 || !g_pFunctionList || !labels) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             // Tüm secret key'leri bul
@@ -843,7 +846,7 @@ namespace TravelExpense {
 
                 rv = g_pFunctionList->C_GetAttributeValue(g_sessionHandle, keyHandle, &attr, 1);
                 if (rv == CKR_OK && attr.ulValueLen > 0) {
-                    std::strncpy(labels[foundCount], labelBuffer, 63);
+                    SafeString::safeCopy(labels[foundCount], 64, labelBuffer);
                     labels[foundCount][63] = '\0';
                     foundCount++;
                 }
@@ -852,7 +855,7 @@ namespace TravelExpense {
             g_pFunctionList->C_FindObjectsFinal(g_sessionHandle);
             count = foundCount;
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         // Anahtar import (simplified)
@@ -861,7 +864,7 @@ namespace TravelExpense {
                            const char* keyLabel, uint8_t* keyId, size_t& keyIdLen) {
             if (g_sessionHandle == 0 || !g_pFunctionList || !keyData || keyDataLen == 0 ||
                 !keyLabel || !keyId) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
             CK_ATTRIBUTE template_[10];
@@ -932,10 +935,10 @@ namespace TravelExpense {
                 std::memcpy(keyId, &keyHandle, sizeof(CK_OBJECT_HANDLE));
                 keyIdLen = sizeof(CK_OBJECT_HANDLE);
             } else {
-                return ErrorCode::ERROR_INVALID_INPUT;
+                return ErrorCode::InvalidInput;
             }
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
     } // namespace SoftHSM

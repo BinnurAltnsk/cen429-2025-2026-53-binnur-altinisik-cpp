@@ -20,13 +20,13 @@ namespace TravelExpense {
 
         ErrorCode generateReport(int32_t tripId, std::string& report) {
             Trip trip;
-            if (TripManager::getTrip(tripId, trip) != ErrorCode::SUCCESS) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+            if (TripManager::getTrip(tripId, trip) != ErrorCode::Success) {
+                return ErrorCode::InvalidInput;
             }
 
             std::vector<Expense> expenses;
-            if (ExpenseManager::getExpenses(tripId, expenses) != ErrorCode::SUCCESS) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+            if (ExpenseManager::getExpenses(tripId, expenses) != ErrorCode::Success) {
+                return ErrorCode::InvalidInput;
             }
 
             Budget budget;
@@ -56,30 +56,30 @@ namespace TravelExpense {
             oss << "Kalan: " << (budget.totalBudget - totalExpenses) << "\n";
 
             report = oss.str();
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         ErrorCode getReports(int32_t userId, std::vector<std::string>& reports) {
             // TODO: Kullanıcıya ait tüm seyahatlerin raporlarını oluştur
             reports.clear();
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         ErrorCode saveReport(int32_t tripId, const char* filepath) {
             std::string report;
-            if (generateReport(tripId, report) != ErrorCode::SUCCESS) {
-                return ErrorCode::ERROR_INVALID_INPUT;
+            if (generateReport(tripId, report) != ErrorCode::Success) {
+                return ErrorCode::InvalidInput;
             }
 
             std::ofstream file(filepath);
             if (!file.is_open()) {
-                return ErrorCode::ERROR_FILE_IO;
+                return ErrorCode::FileIO;
             }
 
             file << report;
             file.close();
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
     }
 

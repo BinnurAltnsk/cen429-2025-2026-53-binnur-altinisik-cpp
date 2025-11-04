@@ -54,12 +54,12 @@ rem echo Run lcov genhtml
 rem call perl C:\ProgramData\chocolatey\lib\lcov\tools\bin\genhtml --legend --title "Documentation Coverage Report" ./docs/coverxygen/lcov.info -o docs/coverxygen
 
 echo Run Documentation Coverage Report Generator for Library 
-call reportgenerator "-title:Calculator Library Documentation Coverage Report" "-reports:**/lcov_doxygen_lib_win.info" "-targetdir:docs/coverxygenlibwin" "-reporttypes:Html" "-filefilters:-*.md;-*.xml;-*[generated];-*build*" "-historydir:report_doc_lib_hist_win"
-call reportgenerator "-reports:**/lcov_doxygen_lib_win.info" "-targetdir:assets/doccoveragelibwin" "-reporttypes:Badges" "-filefilters:-*.md;-*.xml;-*[generated];-*build*"
+call reportgenerator "-title:Travelexpense Library Documentation Coverage Report (Windows)" "-reports:docs/coverxygenlibwin/lcov_doxygen_lib_win.info" "-targetdir:docs/coveragereportlibwin" "-reporttypes:Html" "-filefilters:-*.md;-*.xml;-*[generated];-*build*" "-historydir:report_doc_lib_hist_win"
+call reportgenerator "-reports:docs/coverxygenlibwin/lcov_doxygen_lib_win.info" "-targetdir:assets/doccoveragelibwin" "-reporttypes:Badges" "-filefilters:-*.md;-*.xml;-*[generated];-*build*"
 
 echo Run Documentation Coverage Report Generator for Unit Tests 
-call reportgenerator "-title:Calculator Library Test Documentation Coverage Report" "-reports:**/lcov_doxygen_test_win.info" "-targetdir:docs/coverxygentestwin" "-reporttypes:Html" "-filefilters:-*.md;-*.xml;-*[generated];-*build*" "-historydir:report_doc_test_hist_win"
-call reportgenerator "-reports:**/lcov_doxygen_test_win.info" "-targetdir:assets/doccoveragetestwin" "-reporttypes:Badges" "-filefilters:-*.md;-*.xml;-*[generated];-*build*"
+call reportgenerator "-title:Travelexpense Library Test Documentation Coverage Report (Windows)" "-reports:docs/coverxygentestwin/lcov_doxygen_test_win.info" "-targetdir:docs/coveragereporttestwin" "-reporttypes:Html" "-filefilters:-*.md;-*.xml;-*[generated];-*build*" "-historydir:report_doc_test_hist_win"
+call reportgenerator "-reports:docs/coverxygentestwin/lcov_doxygen_test_win.info" "-targetdir:assets/doccoveragetestwin" "-reporttypes:Badges" "-filefilters:-*.md;-*.xml;-*[generated];-*build*"
 
 echo Copy the "assets" folder and its contents to "docs" recursively
 call robocopy assets "docs\assets" /E
@@ -70,10 +70,10 @@ call copy README.md "docs\index.md"
 echo Files and folders copied successfully.
 
 echo Package Publish Library Doc Coverage Report
-tar -czvf release_win\windows-lib-doc-coverage-report.tar.gz -C docs\coverxygenlibwin .
+tar -czvf release_win\windows-lib-doc-coverage-report.tar.gz -C docs\coveragereportlibwin .
 
 echo Package Publish Unit Test Doc Coverage Report
-tar -czvf release_win\windows-test-doc-coverage-report.tar.gz -C docs\coverxygentestwin .
+tar -czvf release_win\windows-test-doc-coverage-report.tar.gz -C docs\coveragereporttestwin .
 
 echo Package Publish Library Documentation
 tar -czvf release_win\windows-doxygen-lib-documentation.tar.gz -C docs\doxygenlibwin .

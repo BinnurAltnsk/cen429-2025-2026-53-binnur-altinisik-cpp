@@ -202,7 +202,7 @@ namespace TravelExpense {
             
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // Transaction başlat (performans için)
@@ -256,7 +256,7 @@ namespace TravelExpense {
             // Transaction commit et
             sqlite3_exec(db, "COMMIT;", nullptr, nullptr, nullptr);
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         ErrorCode migrateTripsToDatabase(const std::vector<Trip>& trips, int32_t& migratedCount) {
@@ -264,7 +264,7 @@ namespace TravelExpense {
             
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // Transaction başlat
@@ -321,7 +321,7 @@ namespace TravelExpense {
             // Transaction commit et
             sqlite3_exec(db, "COMMIT;", nullptr, nullptr, nullptr);
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         ErrorCode migrateExpensesToDatabase(const std::vector<Expense>& expenses, int32_t& migratedCount) {
@@ -329,7 +329,7 @@ namespace TravelExpense {
             
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // Transaction başlat
@@ -383,7 +383,7 @@ namespace TravelExpense {
             // Transaction commit et
             sqlite3_exec(db, "COMMIT;", nullptr, nullptr, nullptr);
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         ErrorCode migrateBudgetsToDatabase(const std::vector<Budget>& budgets, int32_t& migratedCount) {
@@ -391,7 +391,7 @@ namespace TravelExpense {
             
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // Transaction başlat
@@ -454,13 +454,13 @@ namespace TravelExpense {
             // Transaction commit et
             sqlite3_exec(db, "COMMIT;", nullptr, nullptr, nullptr);
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         ErrorCode migrateIdFiles() {
             sqlite3* db = Database::getDatabase();
             if (!db) {
-                return ErrorCode::ERROR_FILE_NOT_FOUND;
+                return ErrorCode::FileNotFound;
             }
 
             // ID dosyalarından maksimum ID'leri al ve veritabanındaki AUTOINCREMENT'i ayarla
@@ -478,7 +478,7 @@ namespace TravelExpense {
                 }
             }
 
-            return ErrorCode::SUCCESS;
+            return ErrorCode::Success;
         }
 
         bool isMigrationNeeded(const char* dataDir) {
@@ -527,13 +527,13 @@ namespace TravelExpense {
                 if (!db) {
                     result.success = false;
                     result.errors++;
-                    return ErrorCode::ERROR_FILE_NOT_FOUND;
+                    return ErrorCode::FileNotFound;
                 }
             }
 
             // Tabloları oluştur (yoksa)
             ErrorCode rc = Database::createTables(db);
-            if (rc != ErrorCode::SUCCESS) {
+            if (rc != ErrorCode::Success) {
                 result.success = false;
                 result.errors++;
             }
@@ -547,7 +547,7 @@ namespace TravelExpense {
                 if (readUsersFromBinary(usersFile.c_str(), users)) {
                     int32_t migrated = 0;
                     rc = migrateUsersToDatabase(users, migrated);
-                    if (rc == ErrorCode::SUCCESS) {
+                    if (rc == ErrorCode::Success) {
                         result.usersMigrated = migrated;
                     } else {
                         result.errors++;
@@ -564,7 +564,7 @@ namespace TravelExpense {
                 if (readTripsFromBinary(tripsFile.c_str(), trips)) {
                     int32_t migrated = 0;
                     rc = migrateTripsToDatabase(trips, migrated);
-                    if (rc == ErrorCode::SUCCESS) {
+                    if (rc == ErrorCode::Success) {
                         result.tripsMigrated = migrated;
                     } else {
                         result.errors++;
@@ -581,7 +581,7 @@ namespace TravelExpense {
                 if (readExpensesFromBinary(expensesFile.c_str(), expenses)) {
                     int32_t migrated = 0;
                     rc = migrateExpensesToDatabase(expenses, migrated);
-                    if (rc == ErrorCode::SUCCESS) {
+                    if (rc == ErrorCode::Success) {
                         result.expensesMigrated = migrated;
                     } else {
                         result.errors++;
@@ -598,7 +598,7 @@ namespace TravelExpense {
                 if (readBudgetsFromBinary(budgetsFile.c_str(), budgets)) {
                     int32_t migrated = 0;
                     rc = migrateBudgetsToDatabase(budgets, migrated);
-                    if (rc == ErrorCode::SUCCESS) {
+                    if (rc == ErrorCode::Success) {
                         result.budgetsMigrated = migrated;
                     } else {
                         result.errors++;
@@ -616,7 +616,7 @@ namespace TravelExpense {
                 result.success = false;
             }
 
-            return (result.success) ? ErrorCode::SUCCESS : ErrorCode::ERROR_FILE_IO;
+            return (result.success) ? ErrorCode::Success : ErrorCode::FileIO;
         }
 
     } // namespace Migration

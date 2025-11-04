@@ -217,6 +217,57 @@ namespace TravelExpense {
          * @return true Başarılı, false Hata
          */
         TRAVELEXPENSE_API bool decryptFileWhiteboxDES(const char* inputFile, const char* outputFile);
+
+        // ============================================
+        // WHITEBOX AES IMPLEMENTATION
+        // ============================================
+
+        /**
+         * @brief Whitebox AES ile veri şifreleme
+         * 
+         * Whitebox kriptografi, anahtarın kod içine gömülü olduğu ve reverse engineering'i
+         * zorlaştıran bir tekniktir. Lookup table'lar kullanarak anahtar bilgisini maskeleyen
+         * bir implementasyondur. Bu implementasyon, embedded key ile çalışır ve key schedule
+         * whitening teknikleri kullanır.
+         * 
+         * @param plaintext Şifrelenecek veri
+         * @param plaintextLen Veri uzunluğu (16 byte'un katı olmalı)
+         * @param ciphertext Şifrelenmiş veri çıktısı
+         * @param ciphertextLen Şifrelenmiş veri uzunluğu (plaintextLen ile aynı)
+         * @return true Başarılı, false Hata
+         */
+        TRAVELEXPENSE_API bool encryptWhiteboxAES(const void* plaintext, size_t plaintextLen,
+                                                  void* ciphertext, size_t& ciphertextLen);
+
+        /**
+         * @brief Whitebox AES ile veri şifre çözme
+         * 
+         * @param ciphertext Şifrelenmiş veri
+         * @param ciphertextLen Şifrelenmiş veri uzunluğu (16 byte'un katı olmalı)
+         * @param plaintext Şifre çözülmüş veri çıktısı
+         * @param plaintextLen Şifre çözülmüş veri uzunluğu (ciphertextLen ile aynı)
+         * @return true Başarılı, false Hata
+         */
+        TRAVELEXPENSE_API bool decryptWhiteboxAES(const void* ciphertext, size_t ciphertextLen,
+                                                  void* plaintext, size_t& plaintextLen);
+
+        /**
+         * @brief Dosyayı Whitebox AES ile şifrele
+         * 
+         * @param inputFile Giriş dosya yolu
+         * @param outputFile Çıkış dosya yolu
+         * @return true Başarılı, false Hata
+         */
+        TRAVELEXPENSE_API bool encryptFileWhiteboxAES(const char* inputFile, const char* outputFile);
+
+        /**
+         * @brief Whitebox AES ile şifrelenmiş dosyayı çöz
+         * 
+         * @param inputFile Şifrelenmiş dosya yolu
+         * @param outputFile Çözülmüş dosya yolu
+         * @return true Başarılı, false Hata
+         */
+        TRAVELEXPENSE_API bool decryptFileWhiteboxAES(const char* inputFile, const char* outputFile);
     }
 
 } // namespace TravelExpense

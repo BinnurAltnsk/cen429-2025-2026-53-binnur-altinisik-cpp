@@ -30,6 +30,9 @@
 #include "softhsm.h"
 #include "codehardening.h"
 #include "rasp.h"
+#include "sessionManager.h"
+#include "fingerprinting.h"
+#include "tls.h"
 
 // Migration modülü (Binary → SQLite)
 #include "migration.h"
@@ -40,5 +43,8 @@
 #include "expenseManager.h"
 #include "budgetManager.h"
 #include "reportGenerator.h"
+
+// Varlık Yönetimi
+#include "assetManager.h"
 
 #endif // TRAVELEXPENSE_H
