@@ -1,13 +1,13 @@
 /**
  * @file codehardening.cpp
  * @brief Seyahat Gideri Takibi - Kod Sertleştirme Fonksiyonları
- * 
+ *
  * Bu dosya, kod sertleştirme tekniklerinin implementasyonunu içerir:
  * - Opaque loops (Kontrol akışı gizleme)
  * - String obfuscation (String gizleme)
  * - Fonksiyon gizleme
  * - Opaque boolean değişkenleri
- * 
+ *
  * @author Binnur Altınışık
  * @date 2025
  */
@@ -18,26 +18,92 @@
 #include <cstring>
 #include <algorithm>
 
-// Platform-specific includes
+ // Platform-specific includes
 #ifdef _WIN32
-    #define WIN32_LEAN_AND_MEAN
-    #define NOMINMAX
-    #include <windows.h>
+#define WIN32_LEAN_AND_MEAN
+#define NOMINMAX
+#include <windows.h>
 #else
 #include <unistd.h>
 #endif
 
+/**
+ * @namespace TravelExpense
+ * @brief Seyahat Gideri Takibi uygulaması ana namespace'i
+ */
 namespace TravelExpense {
+    /**
+     * @namespace CodeHardening
+     * @brief Kod sertleştirme teknikleri modülü implementasyonu
+     */
     namespace CodeHardening {
 
         // ============================================================================
         // OPAQUE LOOPS - Kontrol Akışı Gizleme
         // ============================================================================
 
-        // Magic constants for obfuscation (compile-time randomization önerilir)
+        /**
+         * @var OPAQUE_MAGIC_1
+         * @brief Opaque loop obfuscation için magic constant 1
+         *
+         * Bu magic constant, opaque loop'ların kontrol akışını gizlemek için kullanılır.
+         * XOR işlemleri ile counter değerlerini obfuscate eder.
+         * Değer: 0x5A5A5A5A
+         *
+         * @note Compile-time randomization önerilir (her build'de farklı değer).
+         * @see createOpaqueCounter Opaque counter oluşturma (içeride kullanılır)
+         * @see OPAQUE_MAGIC_2 Magic constant 2
+         * @see OPAQUE_MAGIC_3 Magic constant 3
+         * @see OPAQUE_MAGIC_4 Magic constant 4
+         */
         static const uint32_t OPAQUE_MAGIC_1 = 0x5A5A5A5A;
+
+        /**
+         * @var OPAQUE_MAGIC_2
+         * @brief Opaque loop obfuscation için magic constant 2
+         *
+         * Bu magic constant, opaque loop'ların kontrol akışını gizlemek için kullanılır.
+         * XOR işlemleri ile counter değerlerini obfuscate eder.
+         * Değer: 0xA5A5A5A5 (OPAQUE_MAGIC_1'in bitwise complement'i)
+         *
+         * @note Compile-time randomization önerilir (her build'de farklı değer).
+         * @see createOpaqueCounter Opaque counter oluşturma (içeride kullanılır)
+         * @see OPAQUE_MAGIC_1 Magic constant 1
+         * @see OPAQUE_MAGIC_3 Magic constant 3
+         * @see OPAQUE_MAGIC_4 Magic constant 4
+         */
         static const uint32_t OPAQUE_MAGIC_2 = 0xA5A5A5A5;
+
+        /**
+         * @var OPAQUE_MAGIC_3
+         * @brief Opaque loop obfuscation için magic constant 3
+         *
+         * Bu magic constant, opaque loop'ların kontrol akışını gizlemek için kullanılır.
+         * Addition işlemleri ile counter değerlerini obfuscate eder.
+         * Değer: 0x12345678
+         *
+         * @note Compile-time randomization önerilir (her build'de farklı değer).
+         * @see createOpaqueCounter Opaque counter oluşturma (içeride kullanılır)
+         * @see OPAQUE_MAGIC_1 Magic constant 1
+         * @see OPAQUE_MAGIC_2 Magic constant 2
+         * @see OPAQUE_MAGIC_4 Magic constant 4
+         */
         static const uint32_t OPAQUE_MAGIC_3 = 0x12345678;
+
+        /**
+         * @var OPAQUE_MAGIC_4
+         * @brief Opaque loop obfuscation için magic constant 4
+         *
+         * Bu magic constant, opaque loop'ların kontrol akışını gizlemek için kullanılır.
+         * Addition işlemleri ile counter değerlerini obfuscate eder.
+         * Değer: 0x87654321 (OPAQUE_MAGIC_3'ün bitwise reverse'i)
+         *
+         * @note Compile-time randomization önerilir (her build'de farklı değer).
+         * @see createOpaqueCounter Opaque counter oluşturma (içeride kullanılır)
+         * @see OPAQUE_MAGIC_1 Magic constant 1
+         * @see OPAQUE_MAGIC_2 Magic constant 2
+         * @see OPAQUE_MAGIC_3 Magic constant 3
+         */
         static const uint32_t OPAQUE_MAGIC_4 = 0x87654321;
 
         uint32_t createOpaqueCounter(uint32_t base, uint32_t offset) {
@@ -72,7 +138,7 @@ namespace TravelExpense {
             // Sign bit kontrolü (carry flag simulation)
             bool result = (diff & 0x80000000) == 0;
             result ^= (obfuscatedCurrent < obfuscatedLimit);
-            
+
             // Orijinal karşılaştırma - current < limit kontrolü
             // Obfuscation işlemleri sadece görünürlüğü gizlemek için,
             // gerçek karşılaştırma current < limit olmalı
@@ -87,13 +153,13 @@ namespace TravelExpense {
             result ^= OPAQUE_MAGIC_2;
             result = (result << 2) | (result >> 30); // Rotate left 2
             result -= OPAQUE_MAGIC_3;
-            
+
             // Orijinal increment
             uint32_t original = value;
             original ^= OPAQUE_MAGIC_2;
             original = (original >> 2) | (original << 30); // Rotate right 2 (inverse)
             original += OPAQUE_MAGIC_3;
-            
+
             return original + increment;
         }
 
@@ -105,13 +171,13 @@ namespace TravelExpense {
             result ^= OPAQUE_MAGIC_4;
             result = (result << 4) | (result >> 28); // Rotate left 4
             result += OPAQUE_MAGIC_1;
-            
+
             // Orijinal decrement
             uint32_t original = value;
             original ^= OPAQUE_MAGIC_4;
             original = (original >> 4) | (original << 28); // Rotate right 4 (inverse)
             original -= OPAQUE_MAGIC_1;
-            
+
             return original - decrement;
         }
 
@@ -241,7 +307,7 @@ namespace TravelExpense {
         // ============================================================================
 
         // Opaque boolean magic values
-        static const uint32_t OPAQUE_TRUE  = 0xFACE1234;
+        static const uint32_t OPAQUE_TRUE = 0xFACE1234;
         static const uint32_t OPAQUE_FALSE = 0xBEEF5678;
 
         uint32_t createOpaqueBoolean(bool value) {
@@ -252,7 +318,8 @@ namespace TravelExpense {
                 result = (result << 7) | (result >> 25); // Rotate left 7
                 result += OPAQUE_MAGIC_2;
                 return result;
-            } else {
+            }
+            else {
                 uint32_t result = OPAQUE_FALSE;
                 result ^= OPAQUE_MAGIC_3;
                 result = (result << 11) | (result >> 21); // Rotate left 11

@@ -21,7 +21,7 @@
  * @namespace TravelExpense
  * @brief Ana namespace - Seyahat Gideri Takibi uygulaması
  */
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @struct User
@@ -146,7 +146,7 @@ namespace TravelExpense {
         }
     };
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // COMMON_TYPES_H
 

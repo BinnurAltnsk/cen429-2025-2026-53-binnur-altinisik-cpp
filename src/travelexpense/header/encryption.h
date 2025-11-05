@@ -15,7 +15,7 @@
 #include <cstddef>
 #include "export.h"
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace Encryption
@@ -307,7 +307,7 @@ namespace TravelExpense {
         TRAVELEXPENSE_API bool decryptFileWhiteboxAES(const char* inputFile, const char* outputFile);
     }
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // ENCRYPTION_H
 

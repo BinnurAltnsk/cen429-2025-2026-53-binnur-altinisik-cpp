@@ -17,7 +17,7 @@
 #include <sqlite3.h>
 #include <string>
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace Database
@@ -129,7 +129,7 @@ namespace TravelExpense {
         TRAVELEXPENSE_API int64_t getLastInsertRowId(sqlite3* db);
     }
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // DATABASE_H
 

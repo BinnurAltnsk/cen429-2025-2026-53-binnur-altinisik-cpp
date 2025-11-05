@@ -14,7 +14,7 @@
 #include "commonTypes.h"
 #include "export.h"
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace UserAuth
@@ -110,7 +110,7 @@ namespace TravelExpense {
         TRAVELEXPENSE_API ErrorCode getUserById(int32_t userId, User& user);
     }
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // USER_AUTH_H
 

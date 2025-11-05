@@ -17,7 +17,7 @@
 #include <cstdint>
 #include <vector>
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace Migration
@@ -150,7 +150,7 @@ namespace TravelExpense {
 
     } // namespace Migration
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // MIGRATION_H
 

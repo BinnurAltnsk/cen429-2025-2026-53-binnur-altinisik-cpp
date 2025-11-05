@@ -15,7 +15,7 @@
  * @namespace TravelExpense
  * @brief Ana namespace - Seyahat Gideri Takibi uygulaması
  */
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @brief Hata kodları enum'u
@@ -40,7 +40,7 @@ namespace TravelExpense {
         Unknown = 99             /**< @brief Bilinmeyen hata */
     };
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // ERROR_CODES_H
 

@@ -22,7 +22,7 @@
 #include <cstdint>
 #include <cstddef>
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace SessionManager
@@ -205,7 +205,7 @@ namespace TravelExpense {
 
     } // namespace SessionManager
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // SESSION_MANAGER_H
 

@@ -19,7 +19,7 @@
 #include <stdbool.h>
 #include "export.h"
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace RASP
@@ -416,7 +416,7 @@ namespace TravelExpense {
 
     } // namespace RASP
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // RASP_H
 

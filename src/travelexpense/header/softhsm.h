@@ -17,13 +17,13 @@
 #include <cstdint>
 #include <cstddef>
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace SoftHSM
      * @brief SoftHSM (PKCS#11) kriptografik işlemler modülü
      */
-    namespace SoftHSM {
+    namespace SoftHSM { // LCOV_EXCL_LINE
 
         /**
          * @brief SoftHSM başlatma durumu
@@ -246,9 +246,9 @@ namespace TravelExpense {
          * @return ErrorCode Başarı durumu
          */
         TRAVELEXPENSE_API ErrorCode listKeys(char labels[][64], size_t& count);
-    }
+    } // LCOV_EXCL_LINE
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // SOFTHSM_H
 

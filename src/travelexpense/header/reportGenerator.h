@@ -16,7 +16,7 @@
 #include <string>
 #include <vector>
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace ReportGenerator
@@ -78,7 +78,7 @@ namespace TravelExpense {
         TRAVELEXPENSE_API ErrorCode saveReport(int32_t tripId, const char* filepath);
     }
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // REPORT_GENERATOR_H
 

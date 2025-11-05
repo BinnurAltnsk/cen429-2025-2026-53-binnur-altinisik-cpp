@@ -13,7 +13,7 @@
 
 #include "commonTypes.h"
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @brief Kategori string'ini al
@@ -29,7 +29,7 @@ namespace TravelExpense {
      */
     ExpenseCategory getCategoryFromString(const char* categoryStr);
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // HELPERS_H
 

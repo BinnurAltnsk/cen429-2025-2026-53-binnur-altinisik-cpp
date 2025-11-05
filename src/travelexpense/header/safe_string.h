@@ -14,7 +14,7 @@
 #include <cstring>
 #include <cstddef>
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
     /**
      * @namespace SafeString
      * @brief Güvenli string işlemleri modülü
@@ -90,7 +90,7 @@ namespace TravelExpense {
         }
 
     } // namespace SafeString
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // SAFE_STRING_H
 

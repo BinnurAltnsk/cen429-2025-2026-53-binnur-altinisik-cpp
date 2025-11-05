@@ -19,7 +19,7 @@
 #include <cstdint>
 #include <cstddef>
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace TLS
@@ -240,7 +240,7 @@ namespace TravelExpense {
 
     } // namespace TLS
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // TLS_H
 

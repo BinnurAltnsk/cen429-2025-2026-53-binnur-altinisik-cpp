@@ -15,7 +15,7 @@
 #include <cstdint>
 #include <string>
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace FileIO
@@ -88,7 +88,7 @@ namespace TravelExpense {
         TRAVELEXPENSE_API int32_t generateId(const char* entityName);
     }
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // FILE_IO_H
 

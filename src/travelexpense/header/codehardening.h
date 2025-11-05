@@ -20,7 +20,7 @@
 #include <cstring>
 #include "export.h"
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace CodeHardening
@@ -246,7 +246,7 @@ namespace TravelExpense {
 
     } // namespace CodeHardening
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 // ============================================================================
 // MACROS - Fonksiyon Gizleme Makroları

@@ -15,7 +15,7 @@
 #include "export.h"
 #include <vector>
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace TripManager
@@ -108,7 +108,7 @@ namespace TravelExpense {
         TRAVELEXPENSE_API ErrorCode getTrip(int32_t tripId, Trip& trip);
     }
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // TRIP_MANAGER_H
 

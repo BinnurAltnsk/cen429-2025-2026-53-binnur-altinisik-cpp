@@ -15,7 +15,7 @@
 #include <cstddef>
 #include "export.h"
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace Security
@@ -56,7 +56,7 @@ namespace TravelExpense {
         TRAVELEXPENSE_API void secureMemset(void* ptr, int value, size_t size);
     }
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // SECURITY_H
 

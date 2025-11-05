@@ -19,7 +19,7 @@
 #include <cstdint>
 #include <cstddef>
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace Fingerprinting
@@ -147,7 +147,7 @@ namespace TravelExpense {
 
     } // namespace Fingerprinting
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // FINGERPRINTING_H
 

@@ -29,7 +29,7 @@
 #include <cstring>
 #include <vector>
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace AssetManager
@@ -101,9 +101,7 @@ namespace TravelExpense {
             }
         };
 
-        // ============================================
-        // VARLIK YÖNETİMİ
-        // ============================================
+
 
         /**
          * @brief Varlık kaydet
@@ -157,9 +155,7 @@ namespace TravelExpense {
          */
         TRAVELEXPENSE_API ErrorCode listAssetsByType(AssetType assetType, std::vector<Asset>& assets);
 
-        // ============================================
-        // VARLIK KORUMA ŞEMALARI
-        // ============================================
+    
 
         /**
          * @brief Varlık koruma şemasını ayarla
@@ -190,7 +186,7 @@ namespace TravelExpense {
 
     } // namespace AssetManager
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // ASSET_MANAGER_H
 

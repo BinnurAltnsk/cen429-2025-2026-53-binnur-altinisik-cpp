@@ -1,7 +1,7 @@
 /**
  * @file database.cpp
  * @brief Seyahat Gideri Takibi - SQLite Veritabanı Yönetimi Implementation
- * 
+ *
  * @author Binnur Altınışık
  * @date 2025
  */
@@ -13,22 +13,68 @@
 #include <cstdio>
 
 #ifdef _WIN32
-    #include <direct.h>
-    #include <io.h>
-    #define MKDIR(dir) _mkdir(dir.c_str())
-    #define ACCESS(path, mode) _access(path, mode)
+#include <direct.h>
+#include <io.h>
+ /**
+  * @def MKDIR(dir)
+  * @brief Windows için dizin oluşturma macro'su
+  *
+  * Windows platformunda dizin oluşturmak için _mkdir() fonksiyonunu kullanır.
+  * @param dir Oluşturulacak dizin yolu (std::string)
+  */
+#define MKDIR(dir) _mkdir(dir.c_str())
+  /**
+   * @def ACCESS(path, mode)
+   * @brief Windows için dosya erişim kontrolü macro'su
+   *
+   * Windows platformunda dosya erişim kontrolü yapmak için _access() fonksiyonunu kullanır.
+   * @param path Kontrol edilecek dosya yolu (std::string)
+   * @param mode Erişim modu (int)
+   */
+#define ACCESS(path, mode) _access(path, mode)
 #else
-    #include <sys/stat.h>
-    #include <unistd.h>
-    #define MKDIR(dir) mkdir(dir.c_str(), 0755)
-    #define ACCESS(path, mode) access(path, mode)
+#include <sys/stat.h>
+#include <unistd.h>
+ /**
+  * @def MKDIR(dir)
+  * @brief Linux/Unix için dizin oluşturma macro'su
+  *
+  * Linux/Unix platformunda dizin oluşturmak için mkdir() fonksiyonunu kullanır.
+  * Dizin izinleri 0755 olarak ayarlanır (rwxr-xr-x).
+  * @param dir Oluşturulacak dizin yolu (std::string)
+  */
+#define MKDIR(dir) mkdir(dir.c_str(), 0755)
+  /**
+   * @def ACCESS(path, mode)
+   * @brief Linux/Unix için dosya erişim kontrolü macro'su
+   *
+   * Linux/Unix platformunda dosya erişim kontrolü yapmak için access() fonksiyonunu kullanır.
+   * @param path Kontrol edilecek dosya yolu (std::string)
+   * @param mode Erişim modu (int)
+   */
+#define ACCESS(path, mode) access(path, mode)
 #endif
 
+   /**
+    * @namespace TravelExpense
+    * @brief Seyahat Gideri Takibi uygulaması ana namespace'i
+    */
 namespace TravelExpense {
 
+    /**
+     * @namespace Database
+     * @brief SQLite veritabanı yönetimi modülü implementasyonu
+     */
     namespace Database {
 
-        // Global veritabanı handle'ı (singleton)
+        /**
+         * @var g_database
+         * @brief Global veritabanı handle'ı (singleton)
+         *
+         * Bu static değişken, veritabanı bağlantısını singleton pattern ile yönetir.
+         * Tüm veritabanı işlemleri bu global handle üzerinden yapılır.
+         * initializeDatabase() ile başlatılır, closeDatabase() ile kapatılır.
+         */
         static sqlite3* g_database = nullptr;
 
         sqlite3* initializeDatabase(const char* dbPath) {
@@ -38,7 +84,8 @@ namespace TravelExpense {
             std::string path;
             if (dbPath) {
                 path = dbPath;
-            } else {
+            }
+            else {
                 path = "data/travelexpense.db";
             }
 
