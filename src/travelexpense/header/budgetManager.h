@@ -14,7 +14,7 @@
 #include "commonTypes.h"
 #include "export.h"
 
-namespace TravelExpense {
+namespace TravelExpense { // LCOV_EXCL_LINE
 
     /**
      * @namespace BudgetManager
@@ -101,7 +101,7 @@ namespace TravelExpense {
         TRAVELEXPENSE_API bool checkBudgetLimit(int32_t tripId, ExpenseCategory category, double amount);
     }
 
-} // namespace TravelExpense
+} // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // BUDGET_MANAGER_H
 
