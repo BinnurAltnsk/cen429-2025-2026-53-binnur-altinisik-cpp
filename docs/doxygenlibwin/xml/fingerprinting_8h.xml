@@ -491,7 +491,6 @@
 <codeline lineno="150"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="151"><highlight class="normal"></highlight></codeline>
 <codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>FINGERPRINTING_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="153"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/travelexpense/header/fingerprinting.h"/>
   </compounddef>

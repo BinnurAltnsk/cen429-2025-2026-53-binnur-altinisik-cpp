@@ -609,7 +609,6 @@
 <codeline lineno="153"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="154"><highlight class="normal"></highlight></codeline>
 <codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>MIGRATION_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/travelexpense/header/migration.h"/>
   </compounddef>

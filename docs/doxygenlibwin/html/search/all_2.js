@@ -35,8 +35,10 @@ var searchData=
   ['createdat_32',['createdAt',['../struct_travel_expense_1_1_budget.html#a205d86211043bbbaa313a5d4e129d869',1,'TravelExpense::Budget::createdAt'],['../struct_travel_expense_1_1_asset_manager_1_1_asset.html#aa3a5d6719dbe319a885e415965664289',1,'TravelExpense::AssetManager::Asset::createdAt'],['../struct_travel_expense_1_1_user.html#a3304e0e4fdd2d60ad4d9a2a530c08d51',1,'TravelExpense::User::createdAt'],['../struct_travel_expense_1_1_trip.html#aa8a9d62c7db7af79c25136386a9bee70',1,'TravelExpense::Trip::createdAt'],['../struct_travel_expense_1_1_expense.html#ab41221d87f44f7e4c358f4fb629f91b0',1,'TravelExpense::Expense::createdAt']]],
   ['createopaqueboolean_33',['createOpaqueBoolean',['../namespace_travel_expense_1_1_code_hardening.html#aaa9a69c131469aef9cfcc1c35994481d',1,'TravelExpense::CodeHardening']]],
   ['createopaquecounter_34',['createOpaqueCounter',['../namespace_travel_expense_1_1_code_hardening.html#a828ac59ea8c553d8583d1b749290e2d0',1,'TravelExpense::CodeHardening']]],
-  ['createtables_35',['createTables',['../namespace_travel_expense_1_1_database.html#a99d005e75737c809467eaa2bc6a50618',1,'TravelExpense::Database']]],
-  ['createtoken_36',['createToken',['../namespace_travel_expense_1_1_soft_h_s_m.html#a0d330cfb5deff1a7731392c78c8a4757',1,'TravelExpense::SoftHSM']]],
-  ['createtrip_37',['createTrip',['../namespace_travel_expense_1_1_trip_manager.html#ac7be4bff03b19399d7aa30b2d8a86c94',1,'TravelExpense::TripManager']]],
-  ['currency_38',['currency',['../struct_travel_expense_1_1_expense.html#ab773ece2064231345a2684dadae3cfbd',1,'TravelExpense::Expense']]]
+  ['createopaquepredicatefalse_35',['createOpaquePredicateFalse',['../namespace_travel_expense_1_1_code_hardening.html#a5a04ea6f023b705ac6b776ae60e8f306',1,'TravelExpense::CodeHardening']]],
+  ['createopaquepredicatetrue_36',['createOpaquePredicateTrue',['../namespace_travel_expense_1_1_code_hardening.html#ad7d58fff26340fdac80eb5c6c516793b',1,'TravelExpense::CodeHardening']]],
+  ['createtables_37',['createTables',['../namespace_travel_expense_1_1_database.html#a99d005e75737c809467eaa2bc6a50618',1,'TravelExpense::Database']]],
+  ['createtoken_38',['createToken',['../namespace_travel_expense_1_1_soft_h_s_m.html#a0d330cfb5deff1a7731392c78c8a4757',1,'TravelExpense::SoftHSM']]],
+  ['createtrip_39',['createTrip',['../namespace_travel_expense_1_1_trip_manager.html#ac7be4bff03b19399d7aa30b2d8a86c94',1,'TravelExpense::TripManager']]],
+  ['currency_40',['currency',['../struct_travel_expense_1_1_expense.html#ab773ece2064231345a2684dadae3cfbd',1,'TravelExpense::Expense']]]
 ];

@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/header/codehardening.h" line="261" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="261" bodyend="-1"/>
+        <location file="src/travelexpense/header/codehardening.h" line="334" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="334" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="codehardening_8h_1a61426ab0b61493d6c40c1880c633b123" prot="public" static="no">
         <name>CALL_OBFUSCATED_FUNC</name>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/header/codehardening.h" line="270" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="270" bodyend="-1"/>
+        <location file="src/travelexpense/header/codehardening.h" line="343" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="343" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="codehardening_8h_1a830676c1f0b50e2a255ae4e2e334d909" prot="public" static="no">
         <name>OPAQUE_LOOP</name>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/header/codehardening.h" line="279" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="279" bodyend="-1"/>
+        <location file="src/travelexpense/header/codehardening.h" line="352" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="352" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="codehardening_8h_1a0d0bec467a2aaeb875470d7d2d86cf73" prot="public" static="no">
         <name>OBFUSCATED_STRING</name>
@@ -122,7 +122,37 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/header/codehardening.h" line="293" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="293" bodyend="-1"/>
+        <location file="src/travelexpense/header/codehardening.h" line="366" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="codehardening_8h_1abf6bf1c1247bb8f89edec8d6bef5c6b0" prot="public" static="no">
+        <name>DEAD_BRANCH</name>
+        <param><defname>value</defname></param>
+        <initializer>  if (<ref refid="namespace_travel_expense_1_1_code_hardening_1a5a04ea6f023b705ac6b776ae60e8f306" kindref="member">TravelExpense::CodeHardening::createOpaquePredicateFalse</ref>(value))</initializer>
+        <briefdescription>
+<para>Dead branch oluşturmak için yardımcı makro. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Opaque predicate ile asla erişilemeyen kod bloğu oluşturur. Reverse engineering&apos;i zorlaştırmak için kullanılır.</para>
+<para>Kullanım: <ref refid="codehardening_8h_1abf6bf1c1247bb8f89edec8d6bef5c6b0" kindref="member">DEAD_BRANCH(value)</ref> { // Bu kod asla çalışmaz dummyFunction(1, 2); } </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/codehardening.h" line="381" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="codehardening_8h_1a0fe692a61733f7553ff1ddf77537565b" prot="public" static="no">
+        <name>ALWAYS_TRUE_BRANCH</name>
+        <param><defname>value</defname></param>
+        <initializer>  if (<ref refid="namespace_travel_expense_1_1_code_hardening_1ad7d58fff26340fdac80eb5c6c516793b" kindref="member">TravelExpense::CodeHardening::createOpaquePredicateTrue</ref>(value))</initializer>
+        <briefdescription>
+<para>Always-true dead branch oluşturmak için yardımcı makro. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Opaque predicate ile her zaman true dönen ama karmaşık kod bloğu oluşturur.</para>
+<para>Kullanım: <ref refid="codehardening_8h_1a0fe692a61733f7553ff1ddf77537565b" kindref="member">ALWAYS_TRUE_BRANCH(value)</ref> { // Bu kod her zaman çalışır, ancak karmaşık hesaplamalar içerir dummyOperation(data, size); } </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/codehardening.h" line="395" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="395" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -168,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="109" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="109" bodyend="118" declfile="src/travelexpense/header/codehardening.h" declline="48" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="110" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="110" bodyend="119" declfile="src/travelexpense/header/codehardening.h" declline="49" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a672620a323d70b733e20e41740975228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -212,7 +242,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="120" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="120" bodyend="142" declfile="src/travelexpense/header/codehardening.h" declline="59" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="121" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="121" bodyend="143" declfile="src/travelexpense/header/codehardening.h" declline="60" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1af5e0a7847c70ae9cd622ea48f577178e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -256,7 +286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="144" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="144" bodyend="158" declfile="src/travelexpense/header/codehardening.h" declline="70" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="145" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="145" bodyend="159" declfile="src/travelexpense/header/codehardening.h" declline="71" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a9551c47b4bd98f91527ac23186dd8709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -300,7 +330,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="160" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="160" bodyend="174" declfile="src/travelexpense/header/codehardening.h" declline="81" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="161" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="161" bodyend="175" declfile="src/travelexpense/header/codehardening.h" declline="82" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1aa9916facd38ff180b62777399ef07237" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint8_t *</type>
@@ -368,7 +398,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="180" column="9" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="180" bodyend="204" declfile="src/travelexpense/header/codehardening.h" declline="98" declcolumn="27"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="181" column="9" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="181" bodyend="205" declfile="src/travelexpense/header/codehardening.h" declline="99" declcolumn="27"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a9c5a5827aef07f92d0e050851e200e67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> char *</type>
@@ -436,7 +466,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="206" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="206" bodyend="233" declfile="src/travelexpense/header/codehardening.h" declline="111" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="207" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="207" bodyend="234" declfile="src/travelexpense/header/codehardening.h" declline="112" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1aaf489f94aa6a167ad49358d38d7dd4b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -516,7 +546,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="235" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="235" bodyend="256" declfile="src/travelexpense/header/codehardening.h" declline="125" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="236" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="236" bodyend="257" declfile="src/travelexpense/header/codehardening.h" declline="126" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1ad24cfcb00108f4eb544c0a32bc4776a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void</type>
@@ -558,7 +588,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="258" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="258" bodyend="266" declfile="src/travelexpense/header/codehardening.h" declline="135" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="259" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="259" bodyend="267" declfile="src/travelexpense/header/codehardening.h" declline="136" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1addad1bb570357bf02f353333473cb2eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void *</type>
@@ -589,7 +619,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="275" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="275" bodyend="285" declfile="src/travelexpense/header/codehardening.h" declline="147" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="276" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="276" bodyend="286" declfile="src/travelexpense/header/codehardening.h" declline="148" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1acfece1523d826b4d4452b58b6710d301" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void *</type>
@@ -620,7 +650,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="287" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="287" bodyend="297" declfile="src/travelexpense/header/codehardening.h" declline="155" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="288" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="288" bodyend="298" declfile="src/travelexpense/header/codehardening.h" declline="156" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1aaa9a69c131469aef9cfcc1c35994481d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -651,7 +681,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="307" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="307" bodyend="322" declfile="src/travelexpense/header/codehardening.h" declline="167" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="308" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="308" bodyend="323" declfile="src/travelexpense/header/codehardening.h" declline="168" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1ae23f659a4a6eac9d1fbd948ac1037390" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -682,7 +712,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="324" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="324" bodyend="342" declfile="src/travelexpense/header/codehardening.h" declline="175" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="325" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="325" bodyend="343" declfile="src/travelexpense/header/codehardening.h" declline="176" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a52652759091af100bc0ae95b5a135546" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -725,7 +755,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="344" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="344" bodyend="360" declfile="src/travelexpense/header/codehardening.h" declline="184" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="345" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="345" bodyend="361" declfile="src/travelexpense/header/codehardening.h" declline="185" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a218fad6204a74fc60eb80eb5b74e8007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -769,7 +799,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="362" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="362" bodyend="382" declfile="src/travelexpense/header/codehardening.h" declline="195" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="363" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="363" bodyend="383" declfile="src/travelexpense/header/codehardening.h" declline="196" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a77d09f0238262836f4856105cd98c62f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -812,7 +842,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="384" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="384" bodyend="397" declfile="src/travelexpense/header/codehardening.h" declline="204" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="385" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="385" bodyend="398" declfile="src/travelexpense/header/codehardening.h" declline="205" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a75bc7146f1565519f5f2cb01ae836e8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -856,7 +886,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="403" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="403" bodyend="416" declfile="src/travelexpense/header/codehardening.h" declline="219" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="404" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="404" bodyend="417" declfile="src/travelexpense/header/codehardening.h" declline="220" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1aa135cd231714ad26ccd8a574d82195b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -899,7 +929,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="418" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="418" bodyend="431" declfile="src/travelexpense/header/codehardening.h" declline="228" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="419" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="419" bodyend="432" declfile="src/travelexpense/header/codehardening.h" declline="229" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a54e6de63e3cd3464bbc4030b7930cb6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -942,7 +972,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="433" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="433" bodyend="446" declfile="src/travelexpense/header/codehardening.h" declline="237" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="434" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="434" bodyend="447" declfile="src/travelexpense/header/codehardening.h" declline="238" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a204fadf1cee37c67cdaf94cd972a57d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -973,7 +1003,221 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="448" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="448" bodyend="458" declfile="src/travelexpense/header/codehardening.h" declline="245" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="449" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="449" bodyend="459" declfile="src/travelexpense/header/codehardening.h" declline="246" declcolumn="28"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a5a04ea6f023b705ac6b776ae60e8f306" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::CodeHardening::createOpaquePredicateFalse</definition>
+        <argsstring>(uint32_t value)</argsstring>
+        <name>createOpaquePredicateFalse</name>
+        <qualifiedname>TravelExpense::CodeHardening::createOpaquePredicateFalse</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Opaque predicate - Her zaman false döner (compile-time&apos;da anlaşılamaz) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bu fonksiyon, dead branch oluşturmak için kullanılır. Runtime&apos;da her zaman false döner, ancak compiler bunu optimize edemez. Reverse engineering&apos;i zorlaştırmak için karmaşık hesaplamalar içerir.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Giriş değeri (karmaşık hesaplama için kullanılır) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Her zaman false (ancak compile-time&apos;da anlaşılamaz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/codehardening.cpp" line="477" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="477" bodyend="498" declfile="src/travelexpense/header/codehardening.h" declline="262" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1ad7d58fff26340fdac80eb5c6c516793b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::CodeHardening::createOpaquePredicateTrue</definition>
+        <argsstring>(uint32_t value)</argsstring>
+        <name>createOpaquePredicateTrue</name>
+        <qualifiedname>TravelExpense::CodeHardening::createOpaquePredicateTrue</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Opaque predicate - Her zaman true döner (compile-time&apos;da anlaşılamaz) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bu fonksiyon, dead branch oluşturmak için kullanılır. Runtime&apos;da her zaman true döner, ancak compiler bunu optimize edemez.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Giriş değeri (karmaşık hesaplama için kullanılır) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Her zaman true (ancak compile-time&apos;da anlaşılamaz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/codehardening.cpp" line="500" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="500" bodyend="520" declfile="src/travelexpense/header/codehardening.h" declline="273" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1ace43b2745bd11c3b21c29faf4b8d657f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::CodeHardening::opaquePredicateImpossible</definition>
+        <argsstring>(uint32_t x)</argsstring>
+        <name>opaquePredicateImpossible</name>
+        <qualifiedname>TravelExpense::CodeHardening::opaquePredicateImpossible</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Opaque predicate - Karmaşık hesaplama ile false döner. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Matematiksel olarak imkansız bir koşulu kontrol eder. Örnek: x^2 + 1 == 0 (gerçek sayılarda imkansız)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Giriş değeri </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Her zaman false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/codehardening.cpp" line="522" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="522" bodyend="540" declfile="src/travelexpense/header/codehardening.h" declline="284" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1acfb7ff38bd363b969590d6e38253e5eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::CodeHardening::opaquePredicateAlwaysTrue</definition>
+        <argsstring>(uint32_t x)</argsstring>
+        <name>opaquePredicateAlwaysTrue</name>
+        <qualifiedname>TravelExpense::CodeHardening::opaquePredicateAlwaysTrue</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Opaque predicate - Karmaşık hesaplama ile true döner. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Matematiksel olarak her zaman doğru olan bir koşulu kontrol eder. Örnek: x^2 &gt;= 0 (her zaman doğru)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Giriş değeri </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Her zaman true </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/codehardening.cpp" line="542" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="542" bodyend="559" declfile="src/travelexpense/header/codehardening.h" declline="295" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a050b80a35df0430cd2874fe13c3eaf4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
+        <definition>uint32_t TravelExpense::CodeHardening::dummyFunction</definition>
+        <argsstring>(uint32_t param1, uint32_t param2)</argsstring>
+        <name>dummyFunction</name>
+        <qualifiedname>TravelExpense::CodeHardening::dummyFunction</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>Sahte fonksiyon - Dead branch içinde çağrılır. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bu fonksiyon asla çağrılmaz, ancak dead branch içinde bulunur ve reverse engineering&apos;i zorlaştırır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İlk parametre </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İkinci parametre </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Sahte değer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/codehardening.cpp" line="561" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="561" bodyend="581" declfile="src/travelexpense/header/codehardening.h" declline="307" declcolumn="28"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a7d380eceb35fac3d0ad286d713470b29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void</type>
+        <definition>void TravelExpense::CodeHardening::dummyOperation</definition>
+        <argsstring>(void *data, size_t size)</argsstring>
+        <name>dummyOperation</name>
+        <qualifiedname>TravelExpense::CodeHardening::dummyOperation</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Sahte işlem - Dead branch içinde çalıştırılır. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bu fonksiyon asla çalışmaz, ancak dead branch içinde bulunur ve kod analizini zorlaştırır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İşlenecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri boyutu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/codehardening.cpp" line="583" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="583" bodyend="610" declfile="src/travelexpense/header/codehardening.h" declline="318" declcolumn="24"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -985,6 +1229,7 @@
 </listitem><listitem><para>String obfuscation (String gizleme)</para>
 </listitem><listitem><para>Fonksiyon gizleme</para>
 </listitem><listitem><para>Opaque boolean değişkenleri</para>
+</listitem><listitem><para>Dead branches (Sahte ölüm dallar)</para>
 </listitem></itemizedlist>
 </para>
 <para><simplesect kind="author"><para>Binnur Altınışık </para>
@@ -995,100 +1240,121 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CODEHARDENING_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CODEHARDENING_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="export_8h" kindref="compound">export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{<sp/></highlight><highlight class="comment">//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33" refid="namespace_travel_expense_1_1_code_hardening" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_code_hardening" kindref="compound">CodeHardening</ref><sp/>{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>OPAQUE<sp/>LOOPS<sp/>-<sp/>Kontrol<sp/>Akışı<sp/>Gizleme</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a828ac59ea8c553d8583d1b749290e2d0" kindref="member">createOpaqueCounter</ref>(uint32_t<sp/>base,<sp/>uint32_t<sp/>offset);</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a672620a323d70b733e20e41740975228" kindref="member">checkOpaqueLoopCondition</ref>(uint32_t<sp/>current,<sp/>uint32_t<sp/>limit);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1af5e0a7847c70ae9cd622ea48f577178e" kindref="member">opaqueIncrement</ref>(uint32_t<sp/>value,<sp/>uint32_t<sp/>increment);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a9551c47b4bd98f91527ac23186dd8709" kindref="member">opaqueDecrement</ref>(uint32_t<sp/>value,<sp/>uint32_t<sp/>decrement);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>STRING<sp/>OBFUSCATION<sp/>-<sp/>String<sp/>Gizleme</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint8_t<sp/>*<ref refid="namespace_travel_expense_1_1_code_hardening_1aa9916facd38ff180b62777399ef07237" kindref="member">obfuscateString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>inputLen,<sp/>uint8_t<sp/>key,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;outputLen);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="namespace_travel_expense_1_1_code_hardening_1a9c5a5827aef07f92d0e050851e200e67" kindref="member">deobfuscateString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*obfuscated,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>obfuscatedLen,<sp/>uint8_t<sp/>key,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;outputLen);</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1aaf489f94aa6a167ad49358d38d7dd4b9" kindref="member">getObfuscatedString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*obfuscated,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>obfuscatedLen,<sp/>uint8_t<sp/>key,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>outputSize);</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1ad24cfcb00108f4eb544c0a32bc4776a3" kindref="member">secureClearObfuscatedString</ref>(uint8_t<sp/>*obfuscated,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>obfuscatedLen);</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"></highlight></codeline>
-<codeline lineno="137"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FUNCTION<sp/>HIDING<sp/>-<sp/>Fonksiyon<sp/>Gizleme</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="namespace_travel_expense_1_1_code_hardening_1addad1bb570357bf02f353333473cb2eb" kindref="member">obfuscateFunctionPointer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*funcPtr);</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="namespace_travel_expense_1_1_code_hardening_1acfece1523d826b4d4452b58b6710d301" kindref="member">deobfuscateFunctionPointer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*obfuscated);</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment">//<sp/>OPAQUE<sp/>BOOLEAN<sp/>-<sp/>Opaque<sp/>Boolean<sp/>Değişkenleri</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="160"><highlight class="normal"></highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1aaa9a69c131469aef9cfcc1c35994481d" kindref="member">createOpaqueBoolean</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"></highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1ae23f659a4a6eac9d1fbd948ac1037390" kindref="member">getOpaqueBoolean</ref>(uint32_t<sp/>opaqueFlag);</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"></highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a52652759091af100bc0ae95b5a135546" kindref="member">compareOpaqueFlags</ref>(uint32_t<sp/>flag1,<sp/>uint32_t<sp/>flag2);</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"></highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a218fad6204a74fc60eb80eb5b74e8007" kindref="member">combineOpaqueFlags</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*values,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
-<codeline lineno="196"><highlight class="normal"></highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a77d09f0238262836f4856105cd98c62f" kindref="member">getOpaqueFlagAt</ref>(uint32_t<sp/>combinedFlag,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
-<codeline lineno="205"><highlight class="normal"></highlight></codeline>
-<codeline lineno="206"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="207"><highlight class="normal"></highlight><highlight class="comment">//<sp/>HELPER<sp/>FUNCTIONS<sp/>-<sp/>Yardımcı<sp/>Fonksiyonlar</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="208"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="209"><highlight class="normal"></highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a75bc7146f1565519f5f2cb01ae836e8a" kindref="member">opaqueXOR</ref>(uint32_t<sp/>a,<sp/>uint32_t<sp/>b);</highlight></codeline>
-<codeline lineno="220"><highlight class="normal"></highlight></codeline>
-<codeline lineno="228"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1aa135cd231714ad26ccd8a574d82195b7" kindref="member">opaqueAND</ref>(uint32_t<sp/>a,<sp/>uint32_t<sp/>b);</highlight></codeline>
-<codeline lineno="229"><highlight class="normal"></highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a54e6de63e3cd3464bbc4030b7930cb6f" kindref="member">opaqueOR</ref>(uint32_t<sp/>a,<sp/>uint32_t<sp/>b);</highlight></codeline>
-<codeline lineno="238"><highlight class="normal"></highlight></codeline>
-<codeline lineno="245"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a204fadf1cee37c67cdaf94cd972a57d6" kindref="member">opaqueNOT</ref>(uint32_t<sp/>a);</highlight></codeline>
-<codeline lineno="246"><highlight class="normal"></highlight></codeline>
-<codeline lineno="247"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>CodeHardening</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="248"><highlight class="normal"></highlight></codeline>
-<codeline lineno="249"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="250"><highlight class="normal"></highlight></codeline>
-<codeline lineno="251"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="252"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MACROS<sp/>-<sp/>Fonksiyon<sp/>Gizleme<sp/>Makroları</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="253"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="254"><highlight class="normal"></highlight></codeline>
-<codeline lineno="261" refid="codehardening_8h_1a987be372294289b6b50fb7f661e3b828" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OBFUSCATE_FUNC_NAME(name)<sp/>\</highlight></codeline>
-<codeline lineno="262"><highlight class="preprocessor"><sp/><sp/>TravelExpense::CodeHardening::obfuscateFunctionPointer(reinterpret_cast&lt;void*&gt;(name))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CODEHARDENING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CODEHARDENING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="export_8h" kindref="compound">export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{<sp/></highlight><highlight class="comment">//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="namespace_travel_expense_1_1_code_hardening" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_code_hardening" kindref="compound">CodeHardening</ref><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>OPAQUE<sp/>LOOPS<sp/>-<sp/>Kontrol<sp/>Akışı<sp/>Gizleme</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a828ac59ea8c553d8583d1b749290e2d0" kindref="member">createOpaqueCounter</ref>(uint32_t<sp/>base,<sp/>uint32_t<sp/>offset);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a672620a323d70b733e20e41740975228" kindref="member">checkOpaqueLoopCondition</ref>(uint32_t<sp/>current,<sp/>uint32_t<sp/>limit);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1af5e0a7847c70ae9cd622ea48f577178e" kindref="member">opaqueIncrement</ref>(uint32_t<sp/>value,<sp/>uint32_t<sp/>increment);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a9551c47b4bd98f91527ac23186dd8709" kindref="member">opaqueDecrement</ref>(uint32_t<sp/>value,<sp/>uint32_t<sp/>decrement);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">//<sp/>STRING<sp/>OBFUSCATION<sp/>-<sp/>String<sp/>Gizleme</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint8_t<sp/>*<ref refid="namespace_travel_expense_1_1_code_hardening_1aa9916facd38ff180b62777399ef07237" kindref="member">obfuscateString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>inputLen,<sp/>uint8_t<sp/>key,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;outputLen);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="namespace_travel_expense_1_1_code_hardening_1a9c5a5827aef07f92d0e050851e200e67" kindref="member">deobfuscateString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*obfuscated,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>obfuscatedLen,<sp/>uint8_t<sp/>key,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;outputLen);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1aaf489f94aa6a167ad49358d38d7dd4b9" kindref="member">getObfuscatedString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*obfuscated,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>obfuscatedLen,<sp/>uint8_t<sp/>key,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>outputSize);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1ad24cfcb00108f4eb544c0a32bc4776a3" kindref="member">secureClearObfuscatedString</ref>(uint8_t<sp/>*obfuscated,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>obfuscatedLen);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FUNCTION<sp/>HIDING<sp/>-<sp/>Fonksiyon<sp/>Gizleme</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="namespace_travel_expense_1_1_code_hardening_1addad1bb570357bf02f353333473cb2eb" kindref="member">obfuscateFunctionPointer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*funcPtr);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="namespace_travel_expense_1_1_code_hardening_1acfece1523d826b4d4452b58b6710d301" kindref="member">deobfuscateFunctionPointer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*obfuscated);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">//<sp/>OPAQUE<sp/>BOOLEAN<sp/>-<sp/>Opaque<sp/>Boolean<sp/>Değişkenleri</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1aaa9a69c131469aef9cfcc1c35994481d" kindref="member">createOpaqueBoolean</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1ae23f659a4a6eac9d1fbd948ac1037390" kindref="member">getOpaqueBoolean</ref>(uint32_t<sp/>opaqueFlag);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a52652759091af100bc0ae95b5a135546" kindref="member">compareOpaqueFlags</ref>(uint32_t<sp/>flag1,<sp/>uint32_t<sp/>flag2);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a218fad6204a74fc60eb80eb5b74e8007" kindref="member">combineOpaqueFlags</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*values,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a77d09f0238262836f4856105cd98c62f" kindref="member">getOpaqueFlagAt</ref>(uint32_t<sp/>combinedFlag,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="comment">//<sp/>HELPER<sp/>FUNCTIONS<sp/>-<sp/>Yardımcı<sp/>Fonksiyonlar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a75bc7146f1565519f5f2cb01ae836e8a" kindref="member">opaqueXOR</ref>(uint32_t<sp/>a,<sp/>uint32_t<sp/>b);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1aa135cd231714ad26ccd8a574d82195b7" kindref="member">opaqueAND</ref>(uint32_t<sp/>a,<sp/>uint32_t<sp/>b);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a54e6de63e3cd3464bbc4030b7930cb6f" kindref="member">opaqueOR</ref>(uint32_t<sp/>a,<sp/>uint32_t<sp/>b);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a204fadf1cee37c67cdaf94cd972a57d6" kindref="member">opaqueNOT</ref>(uint32_t<sp/>a);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DEAD<sp/>BRANCHES<sp/>-<sp/>Sahte<sp/>Ölüm<sp/>Dallar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a5a04ea6f023b705ac6b776ae60e8f306" kindref="member">createOpaquePredicateFalse</ref>(uint32_t<sp/>value);</highlight></codeline>
 <codeline lineno="263"><highlight class="normal"></highlight></codeline>
-<codeline lineno="270" refid="codehardening_8h_1a61426ab0b61493d6c40c1880c633b123" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CALL_OBFUSCATED_FUNC(retType,<sp/>obfPtr,<sp/>...)<sp/>\</highlight></codeline>
-<codeline lineno="271"><highlight class="preprocessor"><sp/><sp/>(reinterpret_cast&lt;retType(*)&gt;(TravelExpense::CodeHardening::deobfuscateFunctionPointer(obfPtr)))(__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="272"><highlight class="normal"></highlight></codeline>
-<codeline lineno="279" refid="codehardening_8h_1a830676c1f0b50e2a255ae4e2e334d909" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPAQUE_LOOP(var,<sp/>limit,<sp/>increment)<sp/>\</highlight></codeline>
-<codeline lineno="280"><highlight class="preprocessor"><sp/><sp/>for<sp/>(uint32_t<sp/>var<sp/>=<sp/>TravelExpense::CodeHardening::createOpaqueCounter(0,<sp/>increment);<sp/>\</highlight></codeline>
-<codeline lineno="281"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TravelExpense::CodeHardening::checkOpaqueLoopCondition(var,<sp/>limit);<sp/>\</highlight></codeline>
-<codeline lineno="282"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>=<sp/>TravelExpense::CodeHardening::opaqueIncrement(var,<sp/>increment))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="283"><highlight class="normal"></highlight></codeline>
-<codeline lineno="293" refid="codehardening_8h_1a0d0bec467a2aaeb875470d7d2d86cf73" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OBFUSCATED_STRING(obf,<sp/>obfLen,<sp/>key,<sp/>buf,<sp/>bufSize)<sp/>\</highlight></codeline>
-<codeline lineno="294"><highlight class="preprocessor"><sp/><sp/>TravelExpense::CodeHardening::getObfuscatedString(obf,<sp/>obfLen,<sp/>key,<sp/>buf,<sp/>bufSize)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="295"><highlight class="normal"></highlight></codeline>
-<codeline lineno="296"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CODEHARDENING_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1ad7d58fff26340fdac80eb5c6c516793b" kindref="member">createOpaquePredicateTrue</ref>(uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1ace43b2745bd11c3b21c29faf4b8d657f" kindref="member">opaquePredicateImpossible</ref>(uint32_t<sp/>x);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1acfb7ff38bd363b969590d6e38253e5eb" kindref="member">opaquePredicateAlwaysTrue</ref>(uint32_t<sp/>x);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>uint32_t<sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a050b80a35df0430cd2874fe13c3eaf4d" kindref="member">dummyFunction</ref>(uint32_t<sp/>param1,<sp/>uint32_t<sp/>param2);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_code_hardening_1a7d380eceb35fac3d0ad286d713470b29" kindref="member">dummyOperation</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>CodeHardening</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MACROS<sp/>-<sp/>Fonksiyon<sp/>Gizleme<sp/>Makroları</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334" refid="codehardening_8h_1a987be372294289b6b50fb7f661e3b828" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OBFUSCATE_FUNC_NAME(name)<sp/>\</highlight></codeline>
+<codeline lineno="335"><highlight class="preprocessor"><sp/><sp/>TravelExpense::CodeHardening::obfuscateFunctionPointer(reinterpret_cast&lt;void*&gt;(name))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343" refid="codehardening_8h_1a61426ab0b61493d6c40c1880c633b123" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CALL_OBFUSCATED_FUNC(retType,<sp/>obfPtr,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="344"><highlight class="preprocessor"><sp/><sp/>(reinterpret_cast&lt;retType(*)&gt;(TravelExpense::CodeHardening::deobfuscateFunctionPointer(obfPtr)))(__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352" refid="codehardening_8h_1a830676c1f0b50e2a255ae4e2e334d909" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPAQUE_LOOP(var,<sp/>limit,<sp/>increment)<sp/>\</highlight></codeline>
+<codeline lineno="353"><highlight class="preprocessor"><sp/><sp/>for<sp/>(uint32_t<sp/>var<sp/>=<sp/>TravelExpense::CodeHardening::createOpaqueCounter(0,<sp/>increment);<sp/>\</highlight></codeline>
+<codeline lineno="354"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TravelExpense::CodeHardening::checkOpaqueLoopCondition(var,<sp/>limit);<sp/>\</highlight></codeline>
+<codeline lineno="355"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>=<sp/>TravelExpense::CodeHardening::opaqueIncrement(var,<sp/>increment))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366" refid="codehardening_8h_1a0d0bec467a2aaeb875470d7d2d86cf73" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OBFUSCATED_STRING(obf,<sp/>obfLen,<sp/>key,<sp/>buf,<sp/>bufSize)<sp/>\</highlight></codeline>
+<codeline lineno="367"><highlight class="preprocessor"><sp/><sp/>TravelExpense::CodeHardening::getObfuscatedString(obf,<sp/>obfLen,<sp/>key,<sp/>buf,<sp/>bufSize)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381" refid="codehardening_8h_1abf6bf1c1247bb8f89edec8d6bef5c6b0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEAD_BRANCH(value)<sp/>\</highlight></codeline>
+<codeline lineno="382"><highlight class="preprocessor"><sp/><sp/>if<sp/>(TravelExpense::CodeHardening::createOpaquePredicateFalse(value))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395" refid="codehardening_8h_1a0fe692a61733f7553ff1ddf77537565b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ALWAYS_TRUE_BRANCH(value)<sp/>\</highlight></codeline>
+<codeline lineno="396"><highlight class="preprocessor"><sp/><sp/>if<sp/>(TravelExpense::CodeHardening::createOpaquePredicateTrue(value))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CODEHARDENING_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/travelexpense/header/codehardening.h"/>
   </compounddef>

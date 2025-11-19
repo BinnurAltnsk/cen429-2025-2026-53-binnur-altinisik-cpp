@@ -587,7 +587,6 @@
 <codeline lineno="262"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="263"><highlight class="normal"></highlight></codeline>
 <codeline lineno="264"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="265"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/travelexpense/src/tripManager.cpp"/>
   </compounddef>

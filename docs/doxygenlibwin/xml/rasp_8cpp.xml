@@ -2561,7 +2561,6 @@
 <codeline lineno="1168"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1169"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>RASP</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1170"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="1171"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/travelexpense/src/rasp.cpp"/>
   </compounddef>

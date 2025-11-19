@@ -1,10 +1,10 @@
 /**
  * @file pkcs11.h
  * @brief PKCS#11 v2.40 Standard Header
- * 
+ *
  * Bu dosya PKCS#11 standardının temel tanımlarını içerir.
  * SoftHSM entegrasyonu için gerekli.
- * 
+ *
  * PKCS#11 v2.40 standardına uygun minimal implementasyon
  */
 
@@ -28,7 +28,7 @@ extern "C" {
 typedef uint64_t CK_ULONG;
 typedef int64_t CK_LONG;
 typedef unsigned char CK_BYTE;
-typedef CK_BYTE* CK_BYTE_PTR;
+typedef CK_BYTE *CK_BYTE_PTR;
 typedef CK_ULONG CK_SLOT_ID;
 typedef CK_ULONG CK_SESSION_HANDLE;
 typedef CK_ULONG CK_OBJECT_HANDLE;
@@ -568,164 +568,163 @@ typedef CK_ULONG CK_STATE;
 // Structure definitions (simplified)
 // CK_VERSION must be defined before CK_SLOT_INFO and CK_TOKEN_INFO
 typedef struct CK_VERSION {
-    CK_BYTE major;
-    CK_BYTE minor;
+  CK_BYTE major;
+  CK_BYTE minor;
 } CK_VERSION;
 
 typedef struct CK_SLOT_INFO {
-    char slotDescription[64];
-    char manufacturerID[32];
-    CK_ULONG flags;
-    CK_VERSION hardwareVersion;
-    CK_VERSION firmwareVersion;
+  char slotDescription[64];
+  char manufacturerID[32];
+  CK_ULONG flags;
+  CK_VERSION hardwareVersion;
+  CK_VERSION firmwareVersion;
 } CK_SLOT_INFO;
 
 typedef struct CK_TOKEN_INFO {
-    char label[32];
-    char manufacturerID[32];
-    char model[16];
-    char serialNumber[16];
-    CK_ULONG flags;
-    CK_ULONG ulMaxSessionCount;
-    CK_ULONG ulSessionCount;
-    CK_ULONG ulMaxRwSessionCount;
-    CK_ULONG ulRwSessionCount;
-    CK_ULONG ulMaxPinLen;
-    CK_ULONG ulMinPinLen;
-    CK_ULONG ulTotalPublicMemory;
-    CK_ULONG ulFreePublicMemory;
-    CK_ULONG ulTotalPrivateMemory;
-    CK_ULONG ulFreePrivateMemory;
-    CK_VERSION hardwareVersion;
-    CK_VERSION firmwareVersion;
-    char utcTime[16];
+  char label[32];
+  char manufacturerID[32];
+  char model[16];
+  char serialNumber[16];
+  CK_ULONG flags;
+  CK_ULONG ulMaxSessionCount;
+  CK_ULONG ulSessionCount;
+  CK_ULONG ulMaxRwSessionCount;
+  CK_ULONG ulRwSessionCount;
+  CK_ULONG ulMaxPinLen;
+  CK_ULONG ulMinPinLen;
+  CK_ULONG ulTotalPublicMemory;
+  CK_ULONG ulFreePublicMemory;
+  CK_ULONG ulTotalPrivateMemory;
+  CK_ULONG ulFreePrivateMemory;
+  CK_VERSION hardwareVersion;
+  CK_VERSION firmwareVersion;
+  char utcTime[16];
 } CK_TOKEN_INFO;
 
 typedef struct CK_MECHANISM_INFO {
-    CK_ULONG ulMinKeySize;
-    CK_ULONG ulMaxKeySize;
-    CK_ULONG flags;
+  CK_ULONG ulMinKeySize;
+  CK_ULONG ulMaxKeySize;
+  CK_ULONG flags;
 } CK_MECHANISM_INFO;
 
 typedef struct CK_ATTRIBUTE {
-    CK_ULONG type;
-    void* pValue;
-    CK_ULONG ulValueLen;
+  CK_ULONG type;
+  void *pValue;
+  CK_ULONG ulValueLen;
 } CK_ATTRIBUTE;
 
 typedef struct CK_MECHANISM {
-    CK_ULONG mechanism;
-    void* pParameter;
-    CK_ULONG ulParameterLen;
+  CK_ULONG mechanism;
+  void *pParameter;
+  CK_ULONG ulParameterLen;
 } CK_MECHANISM;
 
 // Function pointer types
-typedef CK_ULONG (*CK_C_Initialize)(void*);
-typedef CK_ULONG (*CK_C_Finalize)(void*);
-typedef CK_ULONG (*CK_C_GetInfo)(void*);
-typedef CK_ULONG (*CK_C_GetSlotList)(CK_BYTE, CK_SLOT_ID*, CK_ULONG*);
-typedef CK_ULONG (*CK_C_GetSlotInfo)(CK_SLOT_ID, CK_SLOT_INFO*);
-typedef CK_ULONG (*CK_C_GetTokenInfo)(CK_SLOT_ID, CK_TOKEN_INFO*);
-typedef CK_ULONG (*CK_C_OpenSession)(CK_SLOT_ID, CK_ULONG, void*, void*, CK_SESSION_HANDLE*);
+typedef CK_ULONG (*CK_C_Initialize)(void *);
+typedef CK_ULONG (*CK_C_Finalize)(void *);
+typedef CK_ULONG (*CK_C_GetInfo)(void *);
+typedef CK_ULONG (*CK_C_GetSlotList)(CK_BYTE, CK_SLOT_ID *, CK_ULONG *);
+typedef CK_ULONG (*CK_C_GetSlotInfo)(CK_SLOT_ID, CK_SLOT_INFO *);
+typedef CK_ULONG (*CK_C_GetTokenInfo)(CK_SLOT_ID, CK_TOKEN_INFO *);
+typedef CK_ULONG (*CK_C_OpenSession)(CK_SLOT_ID, CK_ULONG, void *, void *, CK_SESSION_HANDLE *);
 typedef CK_ULONG (*CK_C_CloseSession)(CK_SESSION_HANDLE);
 typedef CK_ULONG (*CK_C_CloseAllSessions)(CK_SLOT_ID);
-typedef CK_ULONG (*CK_C_Login)(CK_SESSION_HANDLE, CK_USER_TYPE, CK_BYTE*, CK_ULONG);
+typedef CK_ULONG (*CK_C_Login)(CK_SESSION_HANDLE, CK_USER_TYPE, CK_BYTE *, CK_ULONG);
 typedef CK_ULONG (*CK_C_Logout)(CK_SESSION_HANDLE);
-typedef CK_ULONG (*CK_C_CreateObject)(CK_SESSION_HANDLE, CK_ATTRIBUTE*, CK_ULONG, CK_OBJECT_HANDLE*);
-typedef CK_ULONG (*CK_C_CopyObject)(CK_SESSION_HANDLE, CK_OBJECT_HANDLE, CK_ATTRIBUTE*, CK_ULONG, CK_OBJECT_HANDLE*);
+typedef CK_ULONG (*CK_C_CreateObject)(CK_SESSION_HANDLE, CK_ATTRIBUTE *, CK_ULONG, CK_OBJECT_HANDLE *);
+typedef CK_ULONG (*CK_C_CopyObject)(CK_SESSION_HANDLE, CK_OBJECT_HANDLE, CK_ATTRIBUTE *, CK_ULONG, CK_OBJECT_HANDLE *);
 typedef CK_ULONG (*CK_C_DestroyObject)(CK_SESSION_HANDLE, CK_OBJECT_HANDLE);
-typedef CK_ULONG (*CK_C_GetObjectSize)(CK_SESSION_HANDLE, CK_OBJECT_HANDLE, CK_ULONG*);
-typedef CK_ULONG (*CK_C_GetAttributeValue)(CK_SESSION_HANDLE, CK_OBJECT_HANDLE, CK_ATTRIBUTE*, CK_ULONG);
-typedef CK_ULONG (*CK_C_SetAttributeValue)(CK_SESSION_HANDLE, CK_OBJECT_HANDLE, CK_ATTRIBUTE*, CK_ULONG);
-typedef CK_ULONG (*CK_C_FindObjectsInit)(CK_SESSION_HANDLE, CK_ATTRIBUTE*, CK_ULONG);
-typedef CK_ULONG (*CK_C_FindObjects)(CK_SESSION_HANDLE, CK_OBJECT_HANDLE*, CK_ULONG, CK_ULONG*);
+typedef CK_ULONG (*CK_C_GetObjectSize)(CK_SESSION_HANDLE, CK_OBJECT_HANDLE, CK_ULONG *);
+typedef CK_ULONG (*CK_C_GetAttributeValue)(CK_SESSION_HANDLE, CK_OBJECT_HANDLE, CK_ATTRIBUTE *, CK_ULONG);
+typedef CK_ULONG (*CK_C_SetAttributeValue)(CK_SESSION_HANDLE, CK_OBJECT_HANDLE, CK_ATTRIBUTE *, CK_ULONG);
+typedef CK_ULONG (*CK_C_FindObjectsInit)(CK_SESSION_HANDLE, CK_ATTRIBUTE *, CK_ULONG);
+typedef CK_ULONG (*CK_C_FindObjects)(CK_SESSION_HANDLE, CK_OBJECT_HANDLE *, CK_ULONG, CK_ULONG *);
 typedef CK_ULONG (*CK_C_FindObjectsFinal)(CK_SESSION_HANDLE);
-typedef CK_ULONG (*CK_C_EncryptInit)(CK_SESSION_HANDLE, CK_MECHANISM*, CK_OBJECT_HANDLE);
-typedef CK_ULONG (*CK_C_Encrypt)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG, CK_BYTE*, CK_ULONG*);
-typedef CK_ULONG (*CK_C_EncryptUpdate)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG, CK_BYTE*, CK_ULONG*);
-typedef CK_ULONG (*CK_C_EncryptFinal)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG*);
-typedef CK_ULONG (*CK_C_DecryptInit)(CK_SESSION_HANDLE, CK_MECHANISM*, CK_OBJECT_HANDLE);
-typedef CK_ULONG (*CK_C_Decrypt)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG, CK_BYTE*, CK_ULONG*);
-typedef CK_ULONG (*CK_C_DecryptUpdate)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG, CK_BYTE*, CK_ULONG*);
-typedef CK_ULONG (*CK_C_DecryptFinal)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG*);
-typedef CK_ULONG (*CK_C_DigestInit)(CK_SESSION_HANDLE, CK_MECHANISM*);
-typedef CK_ULONG (*CK_C_Digest)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG, CK_BYTE*, CK_ULONG*);
-typedef CK_ULONG (*CK_C_DigestUpdate)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG);
-typedef CK_ULONG (*CK_C_DigestFinal)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG*);
-typedef CK_ULONG (*CK_C_SignInit)(CK_SESSION_HANDLE, CK_MECHANISM*, CK_OBJECT_HANDLE);
-typedef CK_ULONG (*CK_C_Sign)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG, CK_BYTE*, CK_ULONG*);
-typedef CK_ULONG (*CK_C_SignUpdate)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG);
-typedef CK_ULONG (*CK_C_SignFinal)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG*);
-typedef CK_ULONG (*CK_C_VerifyInit)(CK_SESSION_HANDLE, CK_MECHANISM*, CK_OBJECT_HANDLE);
-typedef CK_ULONG (*CK_C_Verify)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG, CK_BYTE*, CK_ULONG);
-typedef CK_ULONG (*CK_C_VerifyUpdate)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG);
-typedef CK_ULONG (*CK_C_VerifyFinal)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG);
-typedef CK_ULONG (*CK_C_GenerateKey)(CK_SESSION_HANDLE, CK_MECHANISM*, CK_ATTRIBUTE*, CK_ULONG, CK_OBJECT_HANDLE*);
-typedef CK_ULONG (*CK_C_GenerateKeyPair)(CK_SESSION_HANDLE, CK_MECHANISM*, CK_ATTRIBUTE*, CK_ULONG, CK_ATTRIBUTE*, CK_ULONG, CK_OBJECT_HANDLE*, CK_OBJECT_HANDLE*);
-typedef CK_ULONG (*CK_C_WrapKey)(CK_SESSION_HANDLE, CK_MECHANISM*, CK_OBJECT_HANDLE, CK_OBJECT_HANDLE, CK_BYTE*, CK_ULONG*);
-typedef CK_ULONG (*CK_C_UnwrapKey)(CK_SESSION_HANDLE, CK_MECHANISM*, CK_OBJECT_HANDLE, CK_BYTE*, CK_ULONG, CK_ATTRIBUTE*, CK_ULONG, CK_OBJECT_HANDLE*);
-typedef CK_ULONG (*CK_C_DeriveKey)(CK_SESSION_HANDLE, CK_MECHANISM*, CK_OBJECT_HANDLE, CK_ATTRIBUTE*, CK_ULONG, CK_OBJECT_HANDLE*);
-typedef CK_ULONG (*CK_C_SeedRandom)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG);
-typedef CK_ULONG (*CK_C_GenerateRandom)(CK_SESSION_HANDLE, CK_BYTE*, CK_ULONG);
+typedef CK_ULONG (*CK_C_EncryptInit)(CK_SESSION_HANDLE, CK_MECHANISM *, CK_OBJECT_HANDLE);
+typedef CK_ULONG (*CK_C_Encrypt)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG, CK_BYTE *, CK_ULONG *);
+typedef CK_ULONG (*CK_C_EncryptUpdate)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG, CK_BYTE *, CK_ULONG *);
+typedef CK_ULONG (*CK_C_EncryptFinal)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG *);
+typedef CK_ULONG (*CK_C_DecryptInit)(CK_SESSION_HANDLE, CK_MECHANISM *, CK_OBJECT_HANDLE);
+typedef CK_ULONG (*CK_C_Decrypt)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG, CK_BYTE *, CK_ULONG *);
+typedef CK_ULONG (*CK_C_DecryptUpdate)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG, CK_BYTE *, CK_ULONG *);
+typedef CK_ULONG (*CK_C_DecryptFinal)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG *);
+typedef CK_ULONG (*CK_C_DigestInit)(CK_SESSION_HANDLE, CK_MECHANISM *);
+typedef CK_ULONG (*CK_C_Digest)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG, CK_BYTE *, CK_ULONG *);
+typedef CK_ULONG (*CK_C_DigestUpdate)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG);
+typedef CK_ULONG (*CK_C_DigestFinal)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG *);
+typedef CK_ULONG (*CK_C_SignInit)(CK_SESSION_HANDLE, CK_MECHANISM *, CK_OBJECT_HANDLE);
+typedef CK_ULONG (*CK_C_Sign)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG, CK_BYTE *, CK_ULONG *);
+typedef CK_ULONG (*CK_C_SignUpdate)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG);
+typedef CK_ULONG (*CK_C_SignFinal)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG *);
+typedef CK_ULONG (*CK_C_VerifyInit)(CK_SESSION_HANDLE, CK_MECHANISM *, CK_OBJECT_HANDLE);
+typedef CK_ULONG (*CK_C_Verify)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG, CK_BYTE *, CK_ULONG);
+typedef CK_ULONG (*CK_C_VerifyUpdate)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG);
+typedef CK_ULONG (*CK_C_VerifyFinal)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG);
+typedef CK_ULONG (*CK_C_GenerateKey)(CK_SESSION_HANDLE, CK_MECHANISM *, CK_ATTRIBUTE *, CK_ULONG, CK_OBJECT_HANDLE *);
+typedef CK_ULONG (*CK_C_GenerateKeyPair)(CK_SESSION_HANDLE, CK_MECHANISM *, CK_ATTRIBUTE *, CK_ULONG, CK_ATTRIBUTE *, CK_ULONG, CK_OBJECT_HANDLE *, CK_OBJECT_HANDLE *);
+typedef CK_ULONG (*CK_C_WrapKey)(CK_SESSION_HANDLE, CK_MECHANISM *, CK_OBJECT_HANDLE, CK_OBJECT_HANDLE, CK_BYTE *, CK_ULONG *);
+typedef CK_ULONG (*CK_C_UnwrapKey)(CK_SESSION_HANDLE, CK_MECHANISM *, CK_OBJECT_HANDLE, CK_BYTE *, CK_ULONG, CK_ATTRIBUTE *, CK_ULONG, CK_OBJECT_HANDLE *);
+typedef CK_ULONG (*CK_C_DeriveKey)(CK_SESSION_HANDLE, CK_MECHANISM *, CK_OBJECT_HANDLE, CK_ATTRIBUTE *, CK_ULONG, CK_OBJECT_HANDLE *);
+typedef CK_ULONG (*CK_C_SeedRandom)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG);
+typedef CK_ULONG (*CK_C_GenerateRandom)(CK_SESSION_HANDLE, CK_BYTE *, CK_ULONG);
 
 // PKCS#11 function list structure
 typedef struct CK_FUNCTION_LIST {
-    CK_VERSION version;
-    CK_C_Initialize C_Initialize;
-    CK_C_Finalize C_Finalize;
-    CK_C_GetInfo C_GetInfo;
-    CK_C_GetSlotList C_GetSlotList;
-    CK_C_GetSlotInfo C_GetSlotInfo;
-    CK_C_GetTokenInfo C_GetTokenInfo;
-    CK_C_OpenSession C_OpenSession;
-    CK_C_CloseSession C_CloseSession;
-    CK_C_CloseAllSessions C_CloseAllSessions;
-    CK_C_Login C_Login;
-    CK_C_Logout C_Logout;
-    CK_C_CreateObject C_CreateObject;
-    CK_C_CopyObject C_CopyObject;
-    CK_C_DestroyObject C_DestroyObject;
-    CK_C_GetObjectSize C_GetObjectSize;
-    CK_C_GetAttributeValue C_GetAttributeValue;
-    CK_C_SetAttributeValue C_SetAttributeValue;
-    CK_C_FindObjectsInit C_FindObjectsInit;
-    CK_C_FindObjects C_FindObjects;
-    CK_C_FindObjectsFinal C_FindObjectsFinal;
-    CK_C_EncryptInit C_EncryptInit;
-    CK_C_Encrypt C_Encrypt;
-    CK_C_EncryptUpdate C_EncryptUpdate;
-    CK_C_EncryptFinal C_EncryptFinal;
-    CK_C_DecryptInit C_DecryptInit;
-    CK_C_Decrypt C_Decrypt;
-    CK_C_DecryptUpdate C_DecryptUpdate;
-    CK_C_DecryptFinal C_DecryptFinal;
-    CK_C_DigestInit C_DigestInit;
-    CK_C_Digest C_Digest;
-    CK_C_DigestUpdate C_DigestUpdate;
-    CK_C_DigestFinal C_DigestFinal;
-    CK_C_SignInit C_SignInit;
-    CK_C_Sign C_Sign;
-    CK_C_SignUpdate C_SignUpdate;
-    CK_C_SignFinal C_SignFinal;
-    CK_C_VerifyInit C_VerifyInit;
-    CK_C_Verify C_Verify;
-    CK_C_VerifyUpdate C_VerifyUpdate;
-    CK_C_VerifyFinal C_VerifyFinal;
-    CK_C_GenerateKey C_GenerateKey;
-    CK_C_GenerateKeyPair C_GenerateKeyPair;
-    CK_C_WrapKey C_WrapKey;
-    CK_C_UnwrapKey C_UnwrapKey;
-    CK_C_DeriveKey C_DeriveKey;
-    CK_C_SeedRandom C_SeedRandom;
-    CK_C_GenerateRandom C_GenerateRandom;
+  CK_VERSION version;
+  CK_C_Initialize C_Initialize;
+  CK_C_Finalize C_Finalize;
+  CK_C_GetInfo C_GetInfo;
+  CK_C_GetSlotList C_GetSlotList;
+  CK_C_GetSlotInfo C_GetSlotInfo;
+  CK_C_GetTokenInfo C_GetTokenInfo;
+  CK_C_OpenSession C_OpenSession;
+  CK_C_CloseSession C_CloseSession;
+  CK_C_CloseAllSessions C_CloseAllSessions;
+  CK_C_Login C_Login;
+  CK_C_Logout C_Logout;
+  CK_C_CreateObject C_CreateObject;
+  CK_C_CopyObject C_CopyObject;
+  CK_C_DestroyObject C_DestroyObject;
+  CK_C_GetObjectSize C_GetObjectSize;
+  CK_C_GetAttributeValue C_GetAttributeValue;
+  CK_C_SetAttributeValue C_SetAttributeValue;
+  CK_C_FindObjectsInit C_FindObjectsInit;
+  CK_C_FindObjects C_FindObjects;
+  CK_C_FindObjectsFinal C_FindObjectsFinal;
+  CK_C_EncryptInit C_EncryptInit;
+  CK_C_Encrypt C_Encrypt;
+  CK_C_EncryptUpdate C_EncryptUpdate;
+  CK_C_EncryptFinal C_EncryptFinal;
+  CK_C_DecryptInit C_DecryptInit;
+  CK_C_Decrypt C_Decrypt;
+  CK_C_DecryptUpdate C_DecryptUpdate;
+  CK_C_DecryptFinal C_DecryptFinal;
+  CK_C_DigestInit C_DigestInit;
+  CK_C_Digest C_Digest;
+  CK_C_DigestUpdate C_DigestUpdate;
+  CK_C_DigestFinal C_DigestFinal;
+  CK_C_SignInit C_SignInit;
+  CK_C_Sign C_Sign;
+  CK_C_SignUpdate C_SignUpdate;
+  CK_C_SignFinal C_SignFinal;
+  CK_C_VerifyInit C_VerifyInit;
+  CK_C_Verify C_Verify;
+  CK_C_VerifyUpdate C_VerifyUpdate;
+  CK_C_VerifyFinal C_VerifyFinal;
+  CK_C_GenerateKey C_GenerateKey;
+  CK_C_GenerateKeyPair C_GenerateKeyPair;
+  CK_C_WrapKey C_WrapKey;
+  CK_C_UnwrapKey C_UnwrapKey;
+  CK_C_DeriveKey C_DeriveKey;
+  CK_C_SeedRandom C_SeedRandom;
+  CK_C_GenerateRandom C_GenerateRandom;
 } CK_FUNCTION_LIST;
 
 // Get function list function
-typedef CK_ULONG (*CK_C_GetFunctionList)(CK_FUNCTION_LIST**);
+typedef CK_ULONG (*CK_C_GetFunctionList)(CK_FUNCTION_LIST **);
 
 #ifdef __cplusplus
 }
 #endif
 
 #endif // PKCS11_H
-

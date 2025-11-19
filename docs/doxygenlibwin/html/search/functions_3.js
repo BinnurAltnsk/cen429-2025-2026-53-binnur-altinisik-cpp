@@ -23,5 +23,7 @@ var searchData=
   ['detecthookattack_20',['detectHookAttack',['../namespace_travel_expense_1_1_r_a_s_p.html#a699852f95cd6023b93e9e0bc36eba409',1,'TravelExpense::RASP']]],
   ['detectrootjailbreak_21',['detectRootJailbreak',['../namespace_travel_expense_1_1_r_a_s_p.html#aff7e2174a761d6e7c7c342e485f25eed',1,'TravelExpense::RASP']]],
   ['detectunsafedevice_22',['detectUnsafeDevice',['../namespace_travel_expense_1_1_r_a_s_p.html#a92dcba759d1b1409134c7839b2cbee78',1,'TravelExpense::RASP']]],
-  ['disconnecttls_23',['disconnectTLS',['../namespace_travel_expense_1_1_t_l_s.html#a98d4f54141bfa0bda8cb66567d232e21',1,'TravelExpense::TLS']]]
+  ['disconnecttls_23',['disconnectTLS',['../namespace_travel_expense_1_1_t_l_s.html#a98d4f54141bfa0bda8cb66567d232e21',1,'TravelExpense::TLS']]],
+  ['dummyfunction_24',['dummyFunction',['../namespace_travel_expense_1_1_code_hardening.html#a050b80a35df0430cd2874fe13c3eaf4d',1,'TravelExpense::CodeHardening']]],
+  ['dummyoperation_25',['dummyOperation',['../namespace_travel_expense_1_1_code_hardening.html#a7d380eceb35fac3d0ad286d713470b29',1,'TravelExpense::CodeHardening']]]
 ];

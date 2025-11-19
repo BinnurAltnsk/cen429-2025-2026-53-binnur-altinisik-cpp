@@ -73,7 +73,8 @@ ErrorCode encryptSessionKey(const uint8_t *plainSessionKey,
   }
 
   // Oturum anahtarını AES-256-CBC ile şifrele
-  size_t ciphertextLen = 48; // 32 byte session key + 16 byte IV
+  // 32 byte session key + PKCS7 padding (16 byte) = 48 byte ciphertext
+  size_t ciphertextLen = 64; // 32 byte session key + 16 byte padding + buffer
   uint8_t *ciphertext = new uint8_t[ciphertextLen];
   size_t encryptedSize = ciphertextLen;
 
@@ -84,9 +85,10 @@ ErrorCode encryptSessionKey(const uint8_t *plainSessionKey,
   }
 
   // IV'yi öne ekle (IV + şifrelenmiş anahtar)
+  // encryptedSize artık 48 byte olmalı (32 + 16 padding)
   std::memcpy(encryptedSessionKey, iv, 16);
-  std::memcpy(encryptedSessionKey + 16, ciphertext, 32);
-  encryptedLen = 48;
+  std::memcpy(encryptedSessionKey + 16, ciphertext, encryptedSize);
+  encryptedLen = 16 + encryptedSize; // IV (16) + ciphertext (48) = 64
   delete[] ciphertext;
   return ErrorCode::Success;
 }
@@ -94,7 +96,8 @@ ErrorCode encryptSessionKey(const uint8_t *plainSessionKey,
 ErrorCode decryptSessionKey(const uint8_t *encryptedSessionKey,
                             size_t encryptedLen,
                             uint8_t *plainSessionKey) {
-  if (!encryptedSessionKey || encryptedLen != 48 || !plainSessionKey) {
+  // IV (16) + ciphertext (48) = 64 byte
+  if (!encryptedSessionKey || encryptedLen != 64 || !plainSessionKey) {
     return ErrorCode::InvalidInput;
   }
 
@@ -108,10 +111,10 @@ ErrorCode decryptSessionKey(const uint8_t *encryptedSessionKey,
   // IV'yi çıkar
   uint8_t iv[16];
   std::memcpy(iv, encryptedSessionKey, 16);
-  // Şifrelenmiş anahtarı çöz
+  // Şifrelenmiş anahtarı çöz (48 byte ciphertext)
   size_t plaintextLen = 32;
 
-  if (!Encryption::decryptAES256(encryptedSessionKey + 16, 32, MASTER_KEY, iv,
+  if (!Encryption::decryptAES256(encryptedSessionKey + 16, 48, MASTER_KEY, iv,
                                  plainSessionKey, plaintextLen)) {
     return ErrorCode::DecryptionFailed;
   }

@@ -903,7 +903,6 @@
 <codeline lineno="423"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>AssetManager</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="424"><highlight class="normal"></highlight></codeline>
 <codeline lineno="425"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="426"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/travelexpense/src/assetManager.cpp"/>
   </compounddef>

@@ -7,6 +7,7 @@
  * - String obfuscation (String gizleme)
  * - Fonksiyon gizleme
  * - Opaque boolean değişkenleri
+ * - Dead branches (Sahte ölüm dallar)
  *
  * @author Binnur Altınışık
  * @date 2025
@@ -244,6 +245,78 @@ TRAVELEXPENSE_API uint32_t opaqueOR(uint32_t a, uint32_t b);
  */
 TRAVELEXPENSE_API uint32_t opaqueNOT(uint32_t a);
 
+// ============================================================================
+// DEAD BRANCHES - Sahte Ölüm Dallar
+// ============================================================================
+
+/**
+ * @brief Opaque predicate - Her zaman false döner (compile-time'da anlaşılamaz)
+ *
+ * Bu fonksiyon, dead branch oluşturmak için kullanılır. Runtime'da
+ * her zaman false döner, ancak compiler bunu optimize edemez.
+ * Reverse engineering'i zorlaştırmak için karmaşık hesaplamalar içerir.
+ *
+ * @param value Giriş değeri (karmaşık hesaplama için kullanılır)
+ * @return Her zaman false (ancak compile-time'da anlaşılamaz)
+ */
+TRAVELEXPENSE_API bool createOpaquePredicateFalse(uint32_t value);
+
+/**
+ * @brief Opaque predicate - Her zaman true döner (compile-time'da anlaşılamaz)
+ *
+ * Bu fonksiyon, dead branch oluşturmak için kullanılır. Runtime'da
+ * her zaman true döner, ancak compiler bunu optimize edemez.
+ *
+ * @param value Giriş değeri (karmaşık hesaplama için kullanılır)
+ * @return Her zaman true (ancak compile-time'da anlaşılamaz)
+ */
+TRAVELEXPENSE_API bool createOpaquePredicateTrue(uint32_t value);
+
+/**
+ * @brief Opaque predicate - Karmaşık hesaplama ile false döner
+ *
+ * Matematiksel olarak imkansız bir koşulu kontrol eder.
+ * Örnek: x^2 + 1 == 0 (gerçek sayılarda imkansız)
+ *
+ * @param x Giriş değeri
+ * @return Her zaman false
+ */
+TRAVELEXPENSE_API bool opaquePredicateImpossible(uint32_t x);
+
+/**
+ * @brief Opaque predicate - Karmaşık hesaplama ile true döner
+ *
+ * Matematiksel olarak her zaman doğru olan bir koşulu kontrol eder.
+ * Örnek: x^2 >= 0 (her zaman doğru)
+ *
+ * @param x Giriş değeri
+ * @return Her zaman true
+ */
+TRAVELEXPENSE_API bool opaquePredicateAlwaysTrue(uint32_t x);
+
+/**
+ * @brief Sahte fonksiyon - Dead branch içinde çağrılır
+ *
+ * Bu fonksiyon asla çağrılmaz, ancak dead branch içinde
+ * bulunur ve reverse engineering'i zorlaştırır.
+ *
+ * @param param1 İlk parametre
+ * @param param2 İkinci parametre
+ * @return Sahte değer
+ */
+TRAVELEXPENSE_API uint32_t dummyFunction(uint32_t param1, uint32_t param2);
+
+/**
+ * @brief Sahte işlem - Dead branch içinde çalıştırılır
+ *
+ * Bu fonksiyon asla çalışmaz, ancak dead branch içinde
+ * bulunur ve kod analizini zorlaştırır.
+ *
+ * @param data İşlenecek veri
+ * @param size Veri boyutu
+ */
+TRAVELEXPENSE_API void dummyOperation(void *data, size_t size);
+
 } // namespace CodeHardening
 
 } // namespace TravelExpense // LCOV_EXCL_LINE
@@ -292,5 +365,34 @@ TRAVELEXPENSE_API uint32_t opaqueNOT(uint32_t a);
  */
 #define OBFUSCATED_STRING(obf, obfLen, key, buf, bufSize) \
   TravelExpense::CodeHardening::getObfuscatedString(obf, obfLen, key, buf, bufSize)
+
+/**
+ * @brief Dead branch oluşturmak için yardımcı makro
+ *
+ * Opaque predicate ile asla erişilemeyen kod bloğu oluşturur.
+ * Reverse engineering'i zorlaştırmak için kullanılır.
+ *
+ * Kullanım:
+ * DEAD_BRANCH(value) {
+ *   // Bu kod asla çalışmaz
+ *   dummyFunction(1, 2);
+ * }
+ */
+#define DEAD_BRANCH(value) \
+  if (TravelExpense::CodeHardening::createOpaquePredicateFalse(value))
+
+/**
+ * @brief Always-true dead branch oluşturmak için yardımcı makro
+ *
+ * Opaque predicate ile her zaman true dönen ama karmaşık kod bloğu oluşturur.
+ *
+ * Kullanım:
+ * ALWAYS_TRUE_BRANCH(value) {
+ *   // Bu kod her zaman çalışır, ancak karmaşık hesaplamalar içerir
+ *   dummyOperation(data, size);
+ * }
+ */
+#define ALWAYS_TRUE_BRANCH(value) \
+  if (TravelExpense::CodeHardening::createOpaquePredicateTrue(value))
 
 #endif // CODEHARDENING_H

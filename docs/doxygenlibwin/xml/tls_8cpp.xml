@@ -1249,7 +1249,6 @@
 <codeline lineno="416"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TLS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="417"><highlight class="normal"></highlight></codeline>
 <codeline lineno="418"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="419"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/travelexpense/src/tls.cpp"/>
   </compounddef>

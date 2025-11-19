@@ -40,7 +40,19 @@
 \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a54e6de63e3cd3464bbc4030b7930cb6f}{opaque\+OR}} (uint32\+\_\+t a, uint32\+\_\+t b)
 \begin{DoxyCompactList}\small\item\em Opaque OR işlemi. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a204fadf1cee37c67cdaf94cd972a57d6}{opaque\+NOT}} (uint32\+\_\+t a)
-\begin{DoxyCompactList}\small\item\em Opaque NOT işlemi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Opaque NOT işlemi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a5a04ea6f023b705ac6b776ae60e8f306}{create\+Opaque\+Predicate\+False}} (uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Opaque predicate -\/ Her zaman false döner (compile-\/time\textquotesingle{}da anlaşılamaz) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_ad7d58fff26340fdac80eb5c6c516793b}{create\+Opaque\+Predicate\+True}} (uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Opaque predicate -\/ Her zaman true döner (compile-\/time\textquotesingle{}da anlaşılamaz) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_ace43b2745bd11c3b21c29faf4b8d657f}{opaque\+Predicate\+Impossible}} (uint32\+\_\+t x)
+\begin{DoxyCompactList}\small\item\em Opaque predicate -\/ Karmaşık hesaplama ile false döner. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_acfb7ff38bd363b969590d6e38253e5eb}{opaque\+Predicate\+Always\+True}} (uint32\+\_\+t x)
+\begin{DoxyCompactList}\small\item\em Opaque predicate -\/ Karmaşık hesaplama ile true döner. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a050b80a35df0430cd2874fe13c3eaf4d}{dummy\+Function}} (uint32\+\_\+t param1, uint32\+\_\+t param2)
+\begin{DoxyCompactList}\small\item\em Sahte fonksiyon -\/ Dead branch içinde çağrılır. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} void \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a7d380eceb35fac3d0ad286d713470b29}{dummy\+Operation}} (void \texorpdfstring{$\ast$}{*}data, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Sahte işlem -\/ Dead branch içinde çalıştırılır. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -148,6 +160,46 @@ Döngü sayısını gizlemek için kullanılan opaque counter
 \begin{DoxyReturn}{Returns}
 Obfuscated counter değeri 
 \end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_code_hardening_a5a04ea6f023b705ac6b776ae60e8f306}\label{namespace_travel_expense_1_1_code_hardening_a5a04ea6f023b705ac6b776ae60e8f306} 
+\index{TravelExpense::CodeHardening@{TravelExpense::CodeHardening}!createOpaquePredicateFalse@{createOpaquePredicateFalse}}
+\index{createOpaquePredicateFalse@{createOpaquePredicateFalse}!TravelExpense::CodeHardening@{TravelExpense::CodeHardening}}
+\doxysubsubsection{\texorpdfstring{createOpaquePredicateFalse()}{createOpaquePredicateFalse()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Code\+Hardening\+::create\+Opaque\+Predicate\+False (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Opaque predicate -\/ Her zaman false döner (compile-\/time\textquotesingle{}da anlaşılamaz) 
+
+Bu fonksiyon, dead branch oluşturmak için kullanılır. Runtime\textquotesingle{}da her zaman false döner, ancak compiler bunu optimize edemez. Reverse engineering\textquotesingle{}i zorlaştırmak için karmaşık hesaplamalar içerir.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Giriş değeri (karmaşık hesaplama için kullanılır) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Her zaman false (ancak compile-\/time\textquotesingle{}da anlaşılamaz) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_code_hardening_ad7d58fff26340fdac80eb5c6c516793b}\label{namespace_travel_expense_1_1_code_hardening_ad7d58fff26340fdac80eb5c6c516793b} 
+\index{TravelExpense::CodeHardening@{TravelExpense::CodeHardening}!createOpaquePredicateTrue@{createOpaquePredicateTrue}}
+\index{createOpaquePredicateTrue@{createOpaquePredicateTrue}!TravelExpense::CodeHardening@{TravelExpense::CodeHardening}}
+\doxysubsubsection{\texorpdfstring{createOpaquePredicateTrue()}{createOpaquePredicateTrue()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Code\+Hardening\+::create\+Opaque\+Predicate\+True (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Opaque predicate -\/ Her zaman true döner (compile-\/time\textquotesingle{}da anlaşılamaz) 
+
+Bu fonksiyon, dead branch oluşturmak için kullanılır. Runtime\textquotesingle{}da her zaman true döner, ancak compiler bunu optimize edemez.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Giriş değeri (karmaşık hesaplama için kullanılır) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Her zaman true (ancak compile-\/time\textquotesingle{}da anlaşılamaz) 
+\end{DoxyReturn}
 \Hypertarget{namespace_travel_expense_1_1_code_hardening_acfece1523d826b4d4452b58b6710d301}\label{namespace_travel_expense_1_1_code_hardening_acfece1523d826b4d4452b58b6710d301} 
 \index{TravelExpense::CodeHardening@{TravelExpense::CodeHardening}!deobfuscateFunctionPointer@{deobfuscateFunctionPointer}}
 \index{deobfuscateFunctionPointer@{deobfuscateFunctionPointer}!TravelExpense::CodeHardening@{TravelExpense::CodeHardening}}
@@ -192,6 +244,47 @@ XOR tabanlı string deobfuscation
 \begin{DoxyReturn}{Returns}
 Deobfuscated string (heap\textquotesingle{}te, kullanıcı free etmeli) 
 \end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_code_hardening_a050b80a35df0430cd2874fe13c3eaf4d}\label{namespace_travel_expense_1_1_code_hardening_a050b80a35df0430cd2874fe13c3eaf4d} 
+\index{TravelExpense::CodeHardening@{TravelExpense::CodeHardening}!dummyFunction@{dummyFunction}}
+\index{dummyFunction@{dummyFunction}!TravelExpense::CodeHardening@{TravelExpense::CodeHardening}}
+\doxysubsubsection{\texorpdfstring{dummyFunction()}{dummyFunction()}}
+{\footnotesize\ttfamily uint32\+\_\+t Travel\+Expense\+::\+Code\+Hardening\+::dummy\+Function (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{param1,  }\item[{uint32\+\_\+t}]{param2 }\end{DoxyParamCaption})}
+
+
+
+Sahte fonksiyon -\/ Dead branch içinde çağrılır. 
+
+Bu fonksiyon asla çağrılmaz, ancak dead branch içinde bulunur ve reverse engineering\textquotesingle{}i zorlaştırır.
+
+
+\begin{DoxyParams}{Parameters}
+{\em param1} & İlk parametre \\
+\hline
+{\em param2} & İkinci parametre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sahte değer 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_code_hardening_a7d380eceb35fac3d0ad286d713470b29}\label{namespace_travel_expense_1_1_code_hardening_a7d380eceb35fac3d0ad286d713470b29} 
+\index{TravelExpense::CodeHardening@{TravelExpense::CodeHardening}!dummyOperation@{dummyOperation}}
+\index{dummyOperation@{dummyOperation}!TravelExpense::CodeHardening@{TravelExpense::CodeHardening}}
+\doxysubsubsection{\texorpdfstring{dummyOperation()}{dummyOperation()}}
+{\footnotesize\ttfamily void Travel\+Expense\+::\+Code\+Hardening\+::dummy\+Operation (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Sahte işlem -\/ Dead branch içinde çalıştırılır. 
+
+Bu fonksiyon asla çalışmaz, ancak dead branch içinde bulunur ve kod analizini zorlaştırır.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & İşlenecek veri \\
+\hline
+{\em size} & Veri boyutu \\
+\hline
+\end{DoxyParams}
 \Hypertarget{namespace_travel_expense_1_1_code_hardening_aaf489f94aa6a167ad49358d38d7dd4b9}\label{namespace_travel_expense_1_1_code_hardening_aaf489f94aa6a167ad49358d38d7dd4b9} 
 \index{TravelExpense::CodeHardening@{TravelExpense::CodeHardening}!getObfuscatedString@{getObfuscatedString}}
 \index{getObfuscatedString@{getObfuscatedString}!TravelExpense::CodeHardening@{TravelExpense::CodeHardening}}
@@ -403,6 +496,46 @@ Opaque OR işlemi.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 OR sonucu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_code_hardening_acfb7ff38bd363b969590d6e38253e5eb}\label{namespace_travel_expense_1_1_code_hardening_acfb7ff38bd363b969590d6e38253e5eb} 
+\index{TravelExpense::CodeHardening@{TravelExpense::CodeHardening}!opaquePredicateAlwaysTrue@{opaquePredicateAlwaysTrue}}
+\index{opaquePredicateAlwaysTrue@{opaquePredicateAlwaysTrue}!TravelExpense::CodeHardening@{TravelExpense::CodeHardening}}
+\doxysubsubsection{\texorpdfstring{opaquePredicateAlwaysTrue()}{opaquePredicateAlwaysTrue()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Code\+Hardening\+::opaque\+Predicate\+Always\+True (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{x }\end{DoxyParamCaption})}
+
+
+
+Opaque predicate -\/ Karmaşık hesaplama ile true döner. 
+
+Matematiksel olarak her zaman doğru olan bir koşulu kontrol eder. Örnek\+: x\texorpdfstring{$^\wedge$}{\string^}2 \texorpdfstring{$>$}{>}= 0 (her zaman doğru)
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Giriş değeri \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Her zaman true 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_code_hardening_ace43b2745bd11c3b21c29faf4b8d657f}\label{namespace_travel_expense_1_1_code_hardening_ace43b2745bd11c3b21c29faf4b8d657f} 
+\index{TravelExpense::CodeHardening@{TravelExpense::CodeHardening}!opaquePredicateImpossible@{opaquePredicateImpossible}}
+\index{opaquePredicateImpossible@{opaquePredicateImpossible}!TravelExpense::CodeHardening@{TravelExpense::CodeHardening}}
+\doxysubsubsection{\texorpdfstring{opaquePredicateImpossible()}{opaquePredicateImpossible()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Code\+Hardening\+::opaque\+Predicate\+Impossible (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{x }\end{DoxyParamCaption})}
+
+
+
+Opaque predicate -\/ Karmaşık hesaplama ile false döner. 
+
+Matematiksel olarak imkansız bir koşulu kontrol eder. Örnek\+: x\texorpdfstring{$^\wedge$}{\string^}2 + 1 == 0 (gerçek sayılarda imkansız)
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Giriş değeri \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Her zaman false 
 \end{DoxyReturn}
 \Hypertarget{namespace_travel_expense_1_1_code_hardening_a75bc7146f1565519f5f2cb01ae836e8a}\label{namespace_travel_expense_1_1_code_hardening_a75bc7146f1565519f5f2cb01ae836e8a} 
 \index{TravelExpense::CodeHardening@{TravelExpense::CodeHardening}!opaqueXOR@{opaqueXOR}}

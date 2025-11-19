@@ -20,7 +20,9 @@ var searchData=
   ['constanttimecompare_17',['constantTimeCompare',['../namespace_travel_expense_1_1_encryption.html#a1bc8df3a6e90bff77d7c9eb843036ba5',1,'TravelExpense::Encryption']]],
   ['createopaqueboolean_18',['createOpaqueBoolean',['../namespace_travel_expense_1_1_code_hardening.html#aaa9a69c131469aef9cfcc1c35994481d',1,'TravelExpense::CodeHardening']]],
   ['createopaquecounter_19',['createOpaqueCounter',['../namespace_travel_expense_1_1_code_hardening.html#a828ac59ea8c553d8583d1b749290e2d0',1,'TravelExpense::CodeHardening']]],
-  ['createtables_20',['createTables',['../namespace_travel_expense_1_1_database.html#a99d005e75737c809467eaa2bc6a50618',1,'TravelExpense::Database']]],
-  ['createtoken_21',['createToken',['../namespace_travel_expense_1_1_soft_h_s_m.html#a0d330cfb5deff1a7731392c78c8a4757',1,'TravelExpense::SoftHSM']]],
-  ['createtrip_22',['createTrip',['../namespace_travel_expense_1_1_trip_manager.html#ac7be4bff03b19399d7aa30b2d8a86c94',1,'TravelExpense::TripManager']]]
+  ['createopaquepredicatefalse_20',['createOpaquePredicateFalse',['../namespace_travel_expense_1_1_code_hardening.html#a5a04ea6f023b705ac6b776ae60e8f306',1,'TravelExpense::CodeHardening']]],
+  ['createopaquepredicatetrue_21',['createOpaquePredicateTrue',['../namespace_travel_expense_1_1_code_hardening.html#ad7d58fff26340fdac80eb5c6c516793b',1,'TravelExpense::CodeHardening']]],
+  ['createtables_22',['createTables',['../namespace_travel_expense_1_1_database.html#a99d005e75737c809467eaa2bc6a50618',1,'TravelExpense::Database']]],
+  ['createtoken_23',['createToken',['../namespace_travel_expense_1_1_soft_h_s_m.html#a0d330cfb5deff1a7731392c78c8a4757',1,'TravelExpense::SoftHSM']]],
+  ['createtrip_24',['createTrip',['../namespace_travel_expense_1_1_trip_manager.html#ac7be4bff03b19399d7aa30b2d8a86c94',1,'TravelExpense::TripManager']]]
 ];

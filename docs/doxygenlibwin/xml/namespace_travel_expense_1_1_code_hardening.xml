@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="59" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="59" bodyend="-1"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="60" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1aa44a1b58de50a659ad89338efe7f9fbf" prot="public" static="yes" mutable="no">
         <type>const uint32_t</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="75" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="75" bodyend="-1"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="76" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="76" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1ac7039568414267f978e25326e076684f" prot="public" static="yes" mutable="no">
         <type>const uint32_t</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="91" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="91" bodyend="-1"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="92" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="92" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1ad60d5ac50ff2dbed00f0c646f558b74d" prot="public" static="yes" mutable="no">
         <type>const uint32_t</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="107" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="107" bodyend="-1"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="108" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="108" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1a607257b1a1155ef2a283422c545ce1ec" prot="public" static="yes" mutable="no">
         <type>const uintptr_t</type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="273" column="24" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="273" bodyend="-1"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="274" column="24" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="274" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1afd1c8e893ee55184a538c2ec427b9af1" prot="public" static="yes" mutable="no">
         <type>const uint32_t</type>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="304" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="304" bodyend="-1"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="305" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="305" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1acc1290612d3c1d45ad11824d5a4681bc" prot="public" static="yes" mutable="no">
         <type>const uint32_t</type>
@@ -158,7 +158,39 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="305" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="305" bodyend="-1"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="306" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1ad70178ecd532452d80f25072b89f74b6" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>TravelExpense::CodeHardening::DEAD_BRANCH_MAGIC_1</definition>
+        <argsstring></argsstring>
+        <name>DEAD_BRANCH_MAGIC_1</name>
+        <qualifiedname>TravelExpense::CodeHardening::DEAD_BRANCH_MAGIC_1</qualifiedname>
+        <initializer>= 0xCAFEBABE</initializer>
+        <briefdescription>
+<para>Dead branch obfuscation için magic constant 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/codehardening.cpp" line="469" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="469" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1a9d81cde1c71e600ce3db7e6f6f87efda" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>TravelExpense::CodeHardening::DEAD_BRANCH_MAGIC_2</definition>
+        <argsstring></argsstring>
+        <name>DEAD_BRANCH_MAGIC_2</name>
+        <qualifiedname>TravelExpense::CodeHardening::DEAD_BRANCH_MAGIC_2</qualifiedname>
+        <initializer>= 0xDEADBEEF</initializer>
+        <briefdescription>
+<para>Dead branch obfuscation için magic constant 2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/codehardening.cpp" line="475" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="475" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -204,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="109" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="109" bodyend="118" declfile="src/travelexpense/header/codehardening.h" declline="48" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="110" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="110" bodyend="119" declfile="src/travelexpense/header/codehardening.h" declline="49" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a672620a323d70b733e20e41740975228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -248,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="120" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="120" bodyend="142" declfile="src/travelexpense/header/codehardening.h" declline="59" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="121" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="121" bodyend="143" declfile="src/travelexpense/header/codehardening.h" declline="60" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1af5e0a7847c70ae9cd622ea48f577178e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -292,7 +324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="144" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="144" bodyend="158" declfile="src/travelexpense/header/codehardening.h" declline="70" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="145" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="145" bodyend="159" declfile="src/travelexpense/header/codehardening.h" declline="71" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a9551c47b4bd98f91527ac23186dd8709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -336,7 +368,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="160" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="160" bodyend="174" declfile="src/travelexpense/header/codehardening.h" declline="81" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="161" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="161" bodyend="175" declfile="src/travelexpense/header/codehardening.h" declline="82" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1aa9916facd38ff180b62777399ef07237" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint8_t *</type>
@@ -404,7 +436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="180" column="9" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="180" bodyend="204" declfile="src/travelexpense/header/codehardening.h" declline="98" declcolumn="27"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="181" column="9" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="181" bodyend="205" declfile="src/travelexpense/header/codehardening.h" declline="99" declcolumn="27"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a9c5a5827aef07f92d0e050851e200e67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> char *</type>
@@ -472,7 +504,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="206" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="206" bodyend="233" declfile="src/travelexpense/header/codehardening.h" declline="111" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="207" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="207" bodyend="234" declfile="src/travelexpense/header/codehardening.h" declline="112" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1aaf489f94aa6a167ad49358d38d7dd4b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -552,7 +584,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="235" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="235" bodyend="256" declfile="src/travelexpense/header/codehardening.h" declline="125" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="236" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="236" bodyend="257" declfile="src/travelexpense/header/codehardening.h" declline="126" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1ad24cfcb00108f4eb544c0a32bc4776a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void</type>
@@ -594,7 +626,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="258" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="258" bodyend="266" declfile="src/travelexpense/header/codehardening.h" declline="135" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="259" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="259" bodyend="267" declfile="src/travelexpense/header/codehardening.h" declline="136" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1addad1bb570357bf02f353333473cb2eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void *</type>
@@ -625,7 +657,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="275" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="275" bodyend="285" declfile="src/travelexpense/header/codehardening.h" declline="147" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="276" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="276" bodyend="286" declfile="src/travelexpense/header/codehardening.h" declline="148" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1acfece1523d826b4d4452b58b6710d301" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void *</type>
@@ -656,7 +688,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="287" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="287" bodyend="297" declfile="src/travelexpense/header/codehardening.h" declline="155" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="288" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="288" bodyend="298" declfile="src/travelexpense/header/codehardening.h" declline="156" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1aaa9a69c131469aef9cfcc1c35994481d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -687,7 +719,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="307" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="307" bodyend="322" declfile="src/travelexpense/header/codehardening.h" declline="167" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="308" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="308" bodyend="323" declfile="src/travelexpense/header/codehardening.h" declline="168" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1ae23f659a4a6eac9d1fbd948ac1037390" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -718,7 +750,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="324" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="324" bodyend="342" declfile="src/travelexpense/header/codehardening.h" declline="175" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="325" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="325" bodyend="343" declfile="src/travelexpense/header/codehardening.h" declline="176" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a52652759091af100bc0ae95b5a135546" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -761,7 +793,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="344" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="344" bodyend="360" declfile="src/travelexpense/header/codehardening.h" declline="184" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="345" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="345" bodyend="361" declfile="src/travelexpense/header/codehardening.h" declline="185" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a218fad6204a74fc60eb80eb5b74e8007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -805,7 +837,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="362" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="362" bodyend="382" declfile="src/travelexpense/header/codehardening.h" declline="195" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="363" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="363" bodyend="383" declfile="src/travelexpense/header/codehardening.h" declline="196" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a77d09f0238262836f4856105cd98c62f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -848,7 +880,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="384" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="384" bodyend="397" declfile="src/travelexpense/header/codehardening.h" declline="204" declcolumn="24"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="385" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="385" bodyend="398" declfile="src/travelexpense/header/codehardening.h" declline="205" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a75bc7146f1565519f5f2cb01ae836e8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -892,7 +924,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="403" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="403" bodyend="416" declfile="src/travelexpense/header/codehardening.h" declline="219" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="404" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="404" bodyend="417" declfile="src/travelexpense/header/codehardening.h" declline="220" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1aa135cd231714ad26ccd8a574d82195b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -935,7 +967,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="418" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="418" bodyend="431" declfile="src/travelexpense/header/codehardening.h" declline="228" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="419" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="419" bodyend="432" declfile="src/travelexpense/header/codehardening.h" declline="229" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a54e6de63e3cd3464bbc4030b7930cb6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -978,7 +1010,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="433" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="433" bodyend="446" declfile="src/travelexpense/header/codehardening.h" declline="237" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="434" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="434" bodyend="447" declfile="src/travelexpense/header/codehardening.h" declline="238" declcolumn="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a204fadf1cee37c67cdaf94cd972a57d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
@@ -1009,13 +1041,227 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/codehardening.cpp" line="448" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="448" bodyend="458" declfile="src/travelexpense/header/codehardening.h" declline="245" declcolumn="28"/>
+        <location file="src/travelexpense/src/codehardening.cpp" line="449" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="449" bodyend="459" declfile="src/travelexpense/header/codehardening.h" declline="246" declcolumn="28"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a5a04ea6f023b705ac6b776ae60e8f306" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::CodeHardening::createOpaquePredicateFalse</definition>
+        <argsstring>(uint32_t value)</argsstring>
+        <name>createOpaquePredicateFalse</name>
+        <qualifiedname>TravelExpense::CodeHardening::createOpaquePredicateFalse</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Opaque predicate - Her zaman false döner (compile-time&apos;da anlaşılamaz) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bu fonksiyon, dead branch oluşturmak için kullanılır. Runtime&apos;da her zaman false döner, ancak compiler bunu optimize edemez. Reverse engineering&apos;i zorlaştırmak için karmaşık hesaplamalar içerir.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Giriş değeri (karmaşık hesaplama için kullanılır) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Her zaman false (ancak compile-time&apos;da anlaşılamaz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/codehardening.cpp" line="477" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="477" bodyend="498" declfile="src/travelexpense/header/codehardening.h" declline="262" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1ad7d58fff26340fdac80eb5c6c516793b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::CodeHardening::createOpaquePredicateTrue</definition>
+        <argsstring>(uint32_t value)</argsstring>
+        <name>createOpaquePredicateTrue</name>
+        <qualifiedname>TravelExpense::CodeHardening::createOpaquePredicateTrue</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Opaque predicate - Her zaman true döner (compile-time&apos;da anlaşılamaz) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bu fonksiyon, dead branch oluşturmak için kullanılır. Runtime&apos;da her zaman true döner, ancak compiler bunu optimize edemez.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Giriş değeri (karmaşık hesaplama için kullanılır) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Her zaman true (ancak compile-time&apos;da anlaşılamaz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/codehardening.cpp" line="500" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="500" bodyend="520" declfile="src/travelexpense/header/codehardening.h" declline="273" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1ace43b2745bd11c3b21c29faf4b8d657f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::CodeHardening::opaquePredicateImpossible</definition>
+        <argsstring>(uint32_t x)</argsstring>
+        <name>opaquePredicateImpossible</name>
+        <qualifiedname>TravelExpense::CodeHardening::opaquePredicateImpossible</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Opaque predicate - Karmaşık hesaplama ile false döner. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Matematiksel olarak imkansız bir koşulu kontrol eder. Örnek: x^2 + 1 == 0 (gerçek sayılarda imkansız)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Giriş değeri </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Her zaman false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/codehardening.cpp" line="522" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="522" bodyend="540" declfile="src/travelexpense/header/codehardening.h" declline="284" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1acfb7ff38bd363b969590d6e38253e5eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::CodeHardening::opaquePredicateAlwaysTrue</definition>
+        <argsstring>(uint32_t x)</argsstring>
+        <name>opaquePredicateAlwaysTrue</name>
+        <qualifiedname>TravelExpense::CodeHardening::opaquePredicateAlwaysTrue</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Opaque predicate - Karmaşık hesaplama ile true döner. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Matematiksel olarak her zaman doğru olan bir koşulu kontrol eder. Örnek: x^2 &gt;= 0 (her zaman doğru)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Giriş değeri </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Her zaman true </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/codehardening.cpp" line="542" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="542" bodyend="559" declfile="src/travelexpense/header/codehardening.h" declline="295" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a050b80a35df0430cd2874fe13c3eaf4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
+        <definition>uint32_t TravelExpense::CodeHardening::dummyFunction</definition>
+        <argsstring>(uint32_t param1, uint32_t param2)</argsstring>
+        <name>dummyFunction</name>
+        <qualifiedname>TravelExpense::CodeHardening::dummyFunction</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>param1</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>param2</declname>
+        </param>
+        <briefdescription>
+<para>Sahte fonksiyon - Dead branch içinde çağrılır. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bu fonksiyon asla çağrılmaz, ancak dead branch içinde bulunur ve reverse engineering&apos;i zorlaştırır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>param1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İlk parametre </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>param2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İkinci parametre </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Sahte değer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/codehardening.cpp" line="561" column="10" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="561" bodyend="581" declfile="src/travelexpense/header/codehardening.h" declline="307" declcolumn="28"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a7d380eceb35fac3d0ad286d713470b29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void</type>
+        <definition>void TravelExpense::CodeHardening::dummyOperation</definition>
+        <argsstring>(void *data, size_t size)</argsstring>
+        <name>dummyOperation</name>
+        <qualifiedname>TravelExpense::CodeHardening::dummyOperation</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Sahte işlem - Dead branch içinde çalıştırılır. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bu fonksiyon asla çalışmaz, ancak dead branch içinde bulunur ve kod analizini zorlaştırır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İşlenecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri boyutu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/codehardening.cpp" line="583" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="583" bodyend="610" declfile="src/travelexpense/header/codehardening.h" declline="318" declcolumn="24"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/travelexpense/header/codehardening.h" line="33" column="1"/>
+    <location file="src/travelexpense/header/codehardening.h" line="34" column="1"/>
   </compounddef>
 </doxygen>

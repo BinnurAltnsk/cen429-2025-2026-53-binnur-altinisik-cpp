@@ -1,10 +1,10 @@
 /**
  * @file travelexpense.h
  * @brief Seyahat Gideri Takibi - Ana Kütüphane Header Dosyası
- * 
+ *
  * Bu dosya, seyahat gideri takibi uygulamasının tüm modüllerini içeren ana header dosyasıdır.
  * Bu dosyayı include etmek tüm modüllere erişim sağlar.
- * 
+ *
  * @author Binnur Altınışık
  * @date 2025
  */

@@ -1324,7 +1324,6 @@
 <codeline lineno="419"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="420"><highlight class="normal"></highlight></codeline>
 <codeline lineno="421"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>RASP_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="422"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/travelexpense/header/rasp.h"/>
   </compounddef>

@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/sessionManager.cpp" line="54" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="54" bodyend="92" declfile="src/travelexpense/header/sessionManager.h" declline="61" declcolumn="29"/>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="54" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="54" bodyend="94" declfile="src/travelexpense/header/sessionManager.h" declline="61" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a95882d531215f84b305d891fc5f9631d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/sessionManager.cpp" line="94" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="94" bodyend="120" declfile="src/travelexpense/header/sessionManager.h" declline="73" declcolumn="29"/>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="96" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="96" bodyend="123" declfile="src/travelexpense/header/sessionManager.h" declline="73" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1aa420877416fa8452b1d1468585770e96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
@@ -187,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/sessionManager.cpp" line="126" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="126" bodyend="193" declfile="src/travelexpense/header/sessionManager.h" declline="89" declcolumn="29"/>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="129" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="129" bodyend="196" declfile="src/travelexpense/header/sessionManager.h" declline="89" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a85a30162b30da070bf49cd2ee0108ab8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
@@ -230,7 +230,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/sessionManager.cpp" line="195" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="195" bodyend="205" declfile="src/travelexpense/header/sessionManager.h" declline="98" declcolumn="29"/>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="198" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="198" bodyend="208" declfile="src/travelexpense/header/sessionManager.h" declline="98" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1ad6e58bd9ca5d725609dd33e56febf537" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
@@ -274,7 +274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/sessionManager.cpp" line="207" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="207" bodyend="237" declfile="src/travelexpense/header/sessionManager.h" declline="109" declcolumn="29"/>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="210" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="210" bodyend="240" declfile="src/travelexpense/header/sessionManager.h" declline="109" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a98f8147a318c7a1b09f0a33cb45e370b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
@@ -354,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/sessionManager.cpp" line="243" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="243" bodyend="274" declfile="src/travelexpense/header/sessionManager.h" declline="128" declcolumn="29"/>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="246" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="246" bodyend="277" declfile="src/travelexpense/header/sessionManager.h" declline="128" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a26e4f223ea8d2e55444a116613d7283c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
@@ -433,7 +433,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/sessionManager.cpp" line="276" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="276" bodyend="296" declfile="src/travelexpense/header/sessionManager.h" declline="142" declcolumn="29"/>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="279" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="279" bodyend="299" declfile="src/travelexpense/header/sessionManager.h" declline="142" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a66d5424f95a73b886a56e3671491d2a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
@@ -501,7 +501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/sessionManager.cpp" line="302" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="302" bodyend="315" declfile="src/travelexpense/header/sessionManager.h" declline="161" declcolumn="29"/>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="305" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="305" bodyend="318" declfile="src/travelexpense/header/sessionManager.h" declline="161" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1aceef3c52f919a1a4f68686d3985b0812" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
@@ -568,7 +568,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/sessionManager.cpp" line="317" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="317" bodyend="337" declfile="src/travelexpense/header/sessionManager.h" declline="174" declcolumn="29"/>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="320" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="320" bodyend="340" declfile="src/travelexpense/header/sessionManager.h" declline="174" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1ad56f31d3d436c019b72a4e7e530c2270" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
@@ -624,7 +624,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/sessionManager.cpp" line="343" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="343" bodyend="375" declfile="src/travelexpense/header/sessionManager.h" declline="192" declcolumn="29"/>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="346" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="346" bodyend="378" declfile="src/travelexpense/header/sessionManager.h" declline="192" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1aaf4139a793d646ebb66eac13338753b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
@@ -679,7 +679,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/sessionManager.cpp" line="377" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="377" bodyend="396" declfile="src/travelexpense/header/sessionManager.h" declline="203" declcolumn="29"/>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="380" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="380" bodyend="399" declfile="src/travelexpense/header/sessionManager.h" declline="203" declcolumn="29"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

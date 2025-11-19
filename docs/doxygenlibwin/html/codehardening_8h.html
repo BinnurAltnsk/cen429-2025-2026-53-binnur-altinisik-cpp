@@ -127,6 +127,12 @@ Macros</h2></td></tr>
 <tr class="memitem:a0d0bec467a2aaeb875470d7d2d86cf73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="codehardening_8h.html#a0d0bec467a2aaeb875470d7d2d86cf73">OBFUSCATED_STRING</a>(obf,  obfLen,  key,  buf,  bufSize)&#160;&#160;&#160;  <a class="el" href="namespace_travel_expense_1_1_code_hardening.html#aaf489f94aa6a167ad49358d38d7dd4b9">TravelExpense::CodeHardening::getObfuscatedString</a>(obf, obfLen, key, buf, bufSize)</td></tr>
 <tr class="memdesc:a0d0bec467a2aaeb875470d7d2d86cf73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque string için yardımcı makro.  <br /></td></tr>
 <tr class="separator:a0d0bec467a2aaeb875470d7d2d86cf73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf6bf1c1247bb8f89edec8d6bef5c6b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="codehardening_8h.html#abf6bf1c1247bb8f89edec8d6bef5c6b0">DEAD_BRANCH</a>(value)&#160;&#160;&#160;  if (<a class="el" href="namespace_travel_expense_1_1_code_hardening.html#a5a04ea6f023b705ac6b776ae60e8f306">TravelExpense::CodeHardening::createOpaquePredicateFalse</a>(value))</td></tr>
+<tr class="memdesc:abf6bf1c1247bb8f89edec8d6bef5c6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dead branch oluşturmak için yardımcı makro.  <br /></td></tr>
+<tr class="separator:abf6bf1c1247bb8f89edec8d6bef5c6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fe692a61733f7553ff1ddf77537565b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="codehardening_8h.html#a0fe692a61733f7553ff1ddf77537565b">ALWAYS_TRUE_BRANCH</a>(value)&#160;&#160;&#160;  if (<a class="el" href="namespace_travel_expense_1_1_code_hardening.html#ad7d58fff26340fdac80eb5c6c516793b">TravelExpense::CodeHardening::createOpaquePredicateTrue</a>(value))</td></tr>
+<tr class="memdesc:a0fe692a61733f7553ff1ddf77537565b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always-true dead branch oluşturmak için yardımcı makro.  <br /></td></tr>
+<tr class="separator:a0fe692a61733f7553ff1ddf77537565b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -187,6 +193,24 @@ Functions</h2></td></tr>
 <tr class="memitem:a204fadf1cee37c67cdaf94cd972a57d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="export_8h.html#a21d78c0dc6e2907cbb76e2b0468cceb6">TRAVELEXPENSE_API</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_travel_expense_1_1_code_hardening.html#a204fadf1cee37c67cdaf94cd972a57d6">TravelExpense::CodeHardening::opaqueNOT</a> (uint32_t a)</td></tr>
 <tr class="memdesc:a204fadf1cee37c67cdaf94cd972a57d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque NOT işlemi.  <br /></td></tr>
 <tr class="separator:a204fadf1cee37c67cdaf94cd972a57d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a04ea6f023b705ac6b776ae60e8f306"><td class="memItemLeft" align="right" valign="top"><a class="el" href="export_8h.html#a21d78c0dc6e2907cbb76e2b0468cceb6">TRAVELEXPENSE_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_travel_expense_1_1_code_hardening.html#a5a04ea6f023b705ac6b776ae60e8f306">TravelExpense::CodeHardening::createOpaquePredicateFalse</a> (uint32_t value)</td></tr>
+<tr class="memdesc:a5a04ea6f023b705ac6b776ae60e8f306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque predicate - Her zaman false döner (compile-time'da anlaşılamaz)  <br /></td></tr>
+<tr class="separator:a5a04ea6f023b705ac6b776ae60e8f306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7d58fff26340fdac80eb5c6c516793b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="export_8h.html#a21d78c0dc6e2907cbb76e2b0468cceb6">TRAVELEXPENSE_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_travel_expense_1_1_code_hardening.html#ad7d58fff26340fdac80eb5c6c516793b">TravelExpense::CodeHardening::createOpaquePredicateTrue</a> (uint32_t value)</td></tr>
+<tr class="memdesc:ad7d58fff26340fdac80eb5c6c516793b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque predicate - Her zaman true döner (compile-time'da anlaşılamaz)  <br /></td></tr>
+<tr class="separator:ad7d58fff26340fdac80eb5c6c516793b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace43b2745bd11c3b21c29faf4b8d657f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="export_8h.html#a21d78c0dc6e2907cbb76e2b0468cceb6">TRAVELEXPENSE_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_travel_expense_1_1_code_hardening.html#ace43b2745bd11c3b21c29faf4b8d657f">TravelExpense::CodeHardening::opaquePredicateImpossible</a> (uint32_t x)</td></tr>
+<tr class="memdesc:ace43b2745bd11c3b21c29faf4b8d657f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque predicate - Karmaşık hesaplama ile false döner.  <br /></td></tr>
+<tr class="separator:ace43b2745bd11c3b21c29faf4b8d657f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb7ff38bd363b969590d6e38253e5eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="export_8h.html#a21d78c0dc6e2907cbb76e2b0468cceb6">TRAVELEXPENSE_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_travel_expense_1_1_code_hardening.html#acfb7ff38bd363b969590d6e38253e5eb">TravelExpense::CodeHardening::opaquePredicateAlwaysTrue</a> (uint32_t x)</td></tr>
+<tr class="memdesc:acfb7ff38bd363b969590d6e38253e5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque predicate - Karmaşık hesaplama ile true döner.  <br /></td></tr>
+<tr class="separator:acfb7ff38bd363b969590d6e38253e5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a050b80a35df0430cd2874fe13c3eaf4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="export_8h.html#a21d78c0dc6e2907cbb76e2b0468cceb6">TRAVELEXPENSE_API</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_travel_expense_1_1_code_hardening.html#a050b80a35df0430cd2874fe13c3eaf4d">TravelExpense::CodeHardening::dummyFunction</a> (uint32_t param1, uint32_t param2)</td></tr>
+<tr class="memdesc:a050b80a35df0430cd2874fe13c3eaf4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sahte fonksiyon - Dead branch içinde çağrılır.  <br /></td></tr>
+<tr class="separator:a050b80a35df0430cd2874fe13c3eaf4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d380eceb35fac3d0ad286d713470b29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="export_8h.html#a21d78c0dc6e2907cbb76e2b0468cceb6">TRAVELEXPENSE_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_travel_expense_1_1_code_hardening.html#a7d380eceb35fac3d0ad286d713470b29">TravelExpense::CodeHardening::dummyOperation</a> (void *data, size_t size)</td></tr>
+<tr class="memdesc:a7d380eceb35fac3d0ad286d713470b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sahte işlem - Dead branch içinde çalıştırılır.  <br /></td></tr>
+<tr class="separator:a7d380eceb35fac3d0ad286d713470b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Seyahat Gideri Takibi - Kod Sertleştirme Fonksiyonları </p>
@@ -195,10 +219,33 @@ Functions</h2></td></tr>
 <li>String obfuscation (String gizleme)</li>
 <li>Fonksiyon gizleme</li>
 <li>Opaque boolean değişkenleri</li>
+<li>Dead branches (Sahte ölüm dallar)</li>
 </ul>
 <dl class="section author"><dt>Author</dt><dd>Binnur Altınışık </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2025 </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a0fe692a61733f7553ff1ddf77537565b" name="a0fe692a61733f7553ff1ddf77537565b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe692a61733f7553ff1ddf77537565b">&#9670;&#160;</a></span>ALWAYS_TRUE_BRANCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ALWAYS_TRUE_BRANCH</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value</td><td>)</td>
+          <td>&#160;&#160;&#160;  if (<a class="el" href="namespace_travel_expense_1_1_code_hardening.html#ad7d58fff26340fdac80eb5c6c516793b">TravelExpense::CodeHardening::createOpaquePredicateTrue</a>(value))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Always-true dead branch oluşturmak için yardımcı makro. </p>
+<p>Opaque predicate ile her zaman true dönen ama karmaşık kod bloğu oluşturur.</p>
+<p>Kullanım: <a class="el" href="codehardening_8h.html#a0fe692a61733f7553ff1ddf77537565b" title="Always-true dead branch oluşturmak için yardımcı makro.">ALWAYS_TRUE_BRANCH(value)</a> { // Bu kod her zaman çalışır, ancak karmaşık hesaplamalar içerir dummyOperation(data, size); } </p>
+
+</div>
+</div>
 <a id="a61426ab0b61493d6c40c1880c633b123" name="a61426ab0b61493d6c40c1880c633b123"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a61426ab0b61493d6c40c1880c633b123">&#9670;&#160;</a></span>CALL_OBFUSCATED_FUNC</h2>
 
@@ -233,6 +280,28 @@ Functions</h2></td></tr>
 
 <p>Obfuscated fonksiyonu çağırmak için makro. </p>
 <p>Kullanım: <a class="el" href="codehardening_8h.html#a61426ab0b61493d6c40c1880c633b123" title="Obfuscated fonksiyonu çağırmak için makro.">CALL_OBFUSCATED_FUNC(returnType, obfuscatedPtr, args...)</a> </p>
+
+</div>
+</div>
+<a id="abf6bf1c1247bb8f89edec8d6bef5c6b0" name="abf6bf1c1247bb8f89edec8d6bef5c6b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf6bf1c1247bb8f89edec8d6bef5c6b0">&#9670;&#160;</a></span>DEAD_BRANCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEAD_BRANCH</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">value</td><td>)</td>
+          <td>&#160;&#160;&#160;  if (<a class="el" href="namespace_travel_expense_1_1_code_hardening.html#a5a04ea6f023b705ac6b776ae60e8f306">TravelExpense::CodeHardening::createOpaquePredicateFalse</a>(value))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dead branch oluşturmak için yardımcı makro. </p>
+<p>Opaque predicate ile asla erişilemeyen kod bloğu oluşturur. Reverse engineering'i zorlaştırmak için kullanılır.</p>
+<p>Kullanım: <a class="el" href="codehardening_8h.html#abf6bf1c1247bb8f89edec8d6bef5c6b0" title="Dead branch oluşturmak için yardımcı makro.">DEAD_BRANCH(value)</a> { // Bu kod asla çalışmaz dummyFunction(1, 2); } </p>
 
 </div>
 </div>
@@ -341,8 +410,8 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">for</span> (uint32_t var = <a class="code hl_function" href="namespace_travel_expense_1_1_code_hardening.html#a828ac59ea8c553d8583d1b749290e2d0">TravelExpense::CodeHardening::createOpaqueCounter</a>(0, increment); \</div>
 <div class="line">       TravelExpense::CodeHardening::checkOpaqueLoopCondition(var, limit); \</div>
 <div class="line">       var = <a class="code hl_function" href="namespace_travel_expense_1_1_code_hardening.html#af5e0a7847c70ae9cd622ea48f577178e">TravelExpense::CodeHardening::opaqueIncrement</a>(var, increment))</div>
-<div class="ttc" id="anamespace_travel_expense_1_1_code_hardening_html_a828ac59ea8c553d8583d1b749290e2d0"><div class="ttname"><a href="namespace_travel_expense_1_1_code_hardening.html#a828ac59ea8c553d8583d1b749290e2d0">TravelExpense::CodeHardening::createOpaqueCounter</a></div><div class="ttdeci">TRAVELEXPENSE_API uint32_t createOpaqueCounter(uint32_t base, uint32_t offset)</div><div class="ttdoc">Opaque loop counter oluştur.</div><div class="ttdef"><b>Definition</b> codehardening.cpp:109</div></div>
-<div class="ttc" id="anamespace_travel_expense_1_1_code_hardening_html_af5e0a7847c70ae9cd622ea48f577178e"><div class="ttname"><a href="namespace_travel_expense_1_1_code_hardening.html#af5e0a7847c70ae9cd622ea48f577178e">TravelExpense::CodeHardening::opaqueIncrement</a></div><div class="ttdeci">TRAVELEXPENSE_API uint32_t opaqueIncrement(uint32_t value, uint32_t increment)</div><div class="ttdoc">Opaque loop increment.</div><div class="ttdef"><b>Definition</b> codehardening.cpp:144</div></div>
+<div class="ttc" id="anamespace_travel_expense_1_1_code_hardening_html_a828ac59ea8c553d8583d1b749290e2d0"><div class="ttname"><a href="namespace_travel_expense_1_1_code_hardening.html#a828ac59ea8c553d8583d1b749290e2d0">TravelExpense::CodeHardening::createOpaqueCounter</a></div><div class="ttdeci">TRAVELEXPENSE_API uint32_t createOpaqueCounter(uint32_t base, uint32_t offset)</div><div class="ttdoc">Opaque loop counter oluştur.</div><div class="ttdef"><b>Definition</b> codehardening.cpp:110</div></div>
+<div class="ttc" id="anamespace_travel_expense_1_1_code_hardening_html_af5e0a7847c70ae9cd622ea48f577178e"><div class="ttname"><a href="namespace_travel_expense_1_1_code_hardening.html#af5e0a7847c70ae9cd622ea48f577178e">TravelExpense::CodeHardening::opaqueIncrement</a></div><div class="ttdeci">TRAVELEXPENSE_API uint32_t opaqueIncrement(uint32_t value, uint32_t increment)</div><div class="ttdoc">Opaque loop increment.</div><div class="ttdef"><b>Definition</b> codehardening.cpp:145</div></div>
 </div><!-- fragment -->
 <p>Opaque loop için yardımcı makro. </p>
 <p>Kullanım: <a class="el" href="codehardening_8h.html#a830676c1f0b50e2a255ae4e2e334d909" title="Opaque loop için yardımcı makro.">OPAQUE_LOOP(var, limit, increment)</a> { ... } </p>

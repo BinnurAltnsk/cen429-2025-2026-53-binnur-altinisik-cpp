@@ -16,6 +16,8 @@
 #include <limits>
 #include <cstring>
 #include <cstdio>
+#include <cstdlib>
+#include <string>
 #include <algorithm>
 
 #ifdef _WIN32
@@ -504,39 +506,59 @@ void showTripMenu() {
         std::cout << "[i] Değiştirmek istemediğiniz alanlar için Enter'a basın.\n\n";
         Trip updatedTrip = existingTrip;
         char prompt[200];
+        char tempBuffer[256];
+        // Varış Noktası
         snprintf(prompt, sizeof(prompt), "Varış Noktası [%s]: ", existingTrip.destination);
+        strncpy(tempBuffer, updatedTrip.destination, sizeof(tempBuffer) - 1);
+        tempBuffer[sizeof(tempBuffer) - 1] = '\0';
 
-        if (getStringInput(prompt, updatedTrip.destination, sizeof(updatedTrip.destination))) {
-          // Kullanıcı yeni değer girdi
+        if (getStringInput(prompt, tempBuffer, sizeof(tempBuffer))) {
+          strncpy(updatedTrip.destination, tempBuffer, sizeof(updatedTrip.destination) - 1);
+          updatedTrip.destination[sizeof(updatedTrip.destination) - 1] = '\0';
         }
 
+        // Başlangıç Tarihi
         snprintf(prompt, sizeof(prompt), "Başlangıç Tarihi [%s]: ", existingTrip.startDate);
+        strncpy(tempBuffer, updatedTrip.startDate, sizeof(tempBuffer) - 1);
+        tempBuffer[sizeof(tempBuffer) - 1] = '\0';
 
-        if (getStringInput(prompt, updatedTrip.startDate, sizeof(updatedTrip.startDate))) {
-          // Kullanıcı yeni değer girdi
+        if (getStringInput(prompt, tempBuffer, sizeof(tempBuffer))) {
+          strncpy(updatedTrip.startDate, tempBuffer, sizeof(updatedTrip.startDate) - 1);
+          updatedTrip.startDate[sizeof(updatedTrip.startDate) - 1] = '\0';
         }
 
+        // Bitiş Tarihi
         snprintf(prompt, sizeof(prompt), "Bitiş Tarihi [%s]: ", existingTrip.endDate);
+        strncpy(tempBuffer, updatedTrip.endDate, sizeof(tempBuffer) - 1);
+        tempBuffer[sizeof(tempBuffer) - 1] = '\0';
 
-        if (getStringInput(prompt, updatedTrip.endDate, sizeof(updatedTrip.endDate))) {
-          // Kullanıcı yeni değer girdi
+        if (getStringInput(prompt, tempBuffer, sizeof(tempBuffer))) {
+          strncpy(updatedTrip.endDate, tempBuffer, sizeof(updatedTrip.endDate) - 1);
+          updatedTrip.endDate[sizeof(updatedTrip.endDate) - 1] = '\0';
         }
 
+        // Konaklama
         snprintf(prompt, sizeof(prompt), "Konaklama [%s]: ", existingTrip.accommodation);
+        strncpy(tempBuffer, updatedTrip.accommodation, sizeof(tempBuffer) - 1);
+        tempBuffer[sizeof(tempBuffer) - 1] = '\0';
 
-        if (getStringInput(prompt, updatedTrip.accommodation, sizeof(updatedTrip.accommodation))) {
-          // Kullanıcı yeni değer girdi
+        if (getStringInput(prompt, tempBuffer, sizeof(tempBuffer))) {
+          strncpy(updatedTrip.accommodation, tempBuffer, sizeof(updatedTrip.accommodation) - 1);
+          updatedTrip.accommodation[sizeof(updatedTrip.accommodation) - 1] = '\0';
         }
 
+        // Ulaşım
         snprintf(prompt, sizeof(prompt), "Ulaşım [%s]: ", existingTrip.transportation);
+        strncpy(tempBuffer, updatedTrip.transportation, sizeof(tempBuffer) - 1);
+        tempBuffer[sizeof(tempBuffer) - 1] = '\0';
 
-        if (getStringInput(prompt, updatedTrip.transportation, sizeof(updatedTrip.transportation))) {
-          // Kullanıcı yeni değer girdi
+        if (getStringInput(prompt, tempBuffer, sizeof(tempBuffer))) {
+          strncpy(updatedTrip.transportation, tempBuffer, sizeof(updatedTrip.transportation) - 1);
+          updatedTrip.transportation[sizeof(updatedTrip.transportation) - 1] = '\0';
         }
 
+        // Bütçe
         double newBudget = existingTrip.budget;
-        char budgetStr[50];
-        snprintf(budgetStr, sizeof(budgetStr), "%.2f", existingTrip.budget);
         snprintf(prompt, sizeof(prompt), "Bütçe [%.2f]: ", existingTrip.budget);
 
         if (getDoubleInput(prompt, newBudget)) {
@@ -801,25 +823,31 @@ void showExpenseMenu() {
         std::cout << "\n--- Gider Bilgilerini Güncelle ---\n";
         std::cout << "[i] Değiştirmek istemediğiniz alanlar için Enter'a basın.\n\n";
         Expense updatedExpense = existingExpense;
-        int categoryChoice;
+        char tempBuffer[256];
+        // Kategori
         std::cout << "Kategori (1: Konaklama, 2: Ulaşım, 3: Yemek, 4: Eğlence) [Mevcut: "
                   << (static_cast<int>(existingExpense.category) + 1) << "]: ";
-        std::cin >> categoryChoice;
-        std::cin.ignore();
+        std::string categoryInput;
+        std::getline(std::cin, categoryInput);
 
-        if (categoryChoice >= 1 && categoryChoice <= 4) {
-          // Use if-else instead of switch for better MSVC compatibility with enum class
-          if (categoryChoice == 1) {
-            updatedExpense.category = TravelExpense::ExpenseCategory::ACCOMMODATION;
-          } else if (categoryChoice == 2) {
-            updatedExpense.category = TravelExpense::ExpenseCategory::TRANSPORTATION;
-          } else if (categoryChoice == 3) {
-            updatedExpense.category = TravelExpense::ExpenseCategory::FOOD;
-          } else if (categoryChoice == 4) {
-            updatedExpense.category = TravelExpense::ExpenseCategory::ENTERTAINMENT;
+        if (!categoryInput.empty()) {
+          int categoryChoice = std::atoi(categoryInput.c_str());
+
+          if (categoryChoice >= 1 && categoryChoice <= 4) {
+            // Use if-else instead of switch for better MSVC compatibility with enum class
+            if (categoryChoice == 1) {
+              updatedExpense.category = TravelExpense::ExpenseCategory::ACCOMMODATION;
+            } else if (categoryChoice == 2) {
+              updatedExpense.category = TravelExpense::ExpenseCategory::TRANSPORTATION;
+            } else if (categoryChoice == 3) {
+              updatedExpense.category = TravelExpense::ExpenseCategory::FOOD;
+            } else if (categoryChoice == 4) {
+              updatedExpense.category = TravelExpense::ExpenseCategory::ENTERTAINMENT;
+            }
           }
         }
 
+        // Tutar
         double newAmount = existingExpense.amount;
         char prompt[200];
         snprintf(prompt, sizeof(prompt), "Tutar [%.2f]: ", existingExpense.amount);
@@ -830,28 +858,44 @@ void showExpenseMenu() {
           }
         }
 
+        // Para Birimi
         snprintf(prompt, sizeof(prompt), "Para Birimi [%s]: ", existingExpense.currency);
+        strncpy(tempBuffer, updatedExpense.currency, sizeof(tempBuffer) - 1);
+        tempBuffer[sizeof(tempBuffer) - 1] = '\0';
 
-        if (getStringInput(prompt, updatedExpense.currency, sizeof(updatedExpense.currency))) {
-          // Kullanıcı yeni değer girdi
+        if (getStringInput(prompt, tempBuffer, sizeof(tempBuffer))) {
+          strncpy(updatedExpense.currency, tempBuffer, sizeof(updatedExpense.currency) - 1);
+          updatedExpense.currency[sizeof(updatedExpense.currency) - 1] = '\0';
         }
 
+        // Tarih
         snprintf(prompt, sizeof(prompt), "Tarih [%s]: ", existingExpense.date);
+        strncpy(tempBuffer, updatedExpense.date, sizeof(tempBuffer) - 1);
+        tempBuffer[sizeof(tempBuffer) - 1] = '\0';
 
-        if (getStringInput(prompt, updatedExpense.date, sizeof(updatedExpense.date))) {
-          // Kullanıcı yeni değer girdi
+        if (getStringInput(prompt, tempBuffer, sizeof(tempBuffer))) {
+          strncpy(updatedExpense.date, tempBuffer, sizeof(updatedExpense.date) - 1);
+          updatedExpense.date[sizeof(updatedExpense.date) - 1] = '\0';
         }
 
+        // Ödeme Yöntemi
         snprintf(prompt, sizeof(prompt), "Ödeme Yöntemi [%s]: ", existingExpense.paymentMethod);
+        strncpy(tempBuffer, updatedExpense.paymentMethod, sizeof(tempBuffer) - 1);
+        tempBuffer[sizeof(tempBuffer) - 1] = '\0';
 
-        if (getStringInput(prompt, updatedExpense.paymentMethod, sizeof(updatedExpense.paymentMethod))) {
-          // Kullanıcı yeni değer girdi
+        if (getStringInput(prompt, tempBuffer, sizeof(tempBuffer))) {
+          strncpy(updatedExpense.paymentMethod, tempBuffer, sizeof(updatedExpense.paymentMethod) - 1);
+          updatedExpense.paymentMethod[sizeof(updatedExpense.paymentMethod) - 1] = '\0';
         }
 
+        // Açıklama
         snprintf(prompt, sizeof(prompt), "Açıklama [%s]: ", existingExpense.description);
+        strncpy(tempBuffer, updatedExpense.description, sizeof(tempBuffer) - 1);
+        tempBuffer[sizeof(tempBuffer) - 1] = '\0';
 
-        if (getStringInput(prompt, updatedExpense.description, sizeof(updatedExpense.description))) {
-          // Kullanıcı yeni değer girdi
+        if (getStringInput(prompt, tempBuffer, sizeof(tempBuffer))) {
+          strncpy(updatedExpense.description, tempBuffer, sizeof(updatedExpense.description) - 1);
+          updatedExpense.description[sizeof(updatedExpense.description) - 1] = '\0';
         }
 
         ErrorCode result = ExpenseManager::updateExpense(expenseId, updatedExpense);

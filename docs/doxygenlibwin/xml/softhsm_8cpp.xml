@@ -3261,7 +3261,6 @@
 <codeline lineno="1504"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>SoftHSM</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1505"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1506"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="1507"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/travelexpense/src/softhsm.cpp"/>
   </compounddef>

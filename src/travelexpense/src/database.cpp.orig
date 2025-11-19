@@ -13,29 +13,29 @@
 #include <cstdio>
 
 #ifdef _WIN32
-#include <direct.h>
-#include <io.h>
- /**
+  #include <direct.h>
+  #include <io.h>
+  /**
   * @def MKDIR(dir)
   * @brief Windows için dizin oluşturma macro'su
   *
   * Windows platformunda dizin oluşturmak için _mkdir() fonksiyonunu kullanır.
   * @param dir Oluşturulacak dizin yolu (std::string)
   */
-#define MKDIR(dir) _mkdir(dir.c_str())
+  #define MKDIR(dir) _mkdir(dir.c_str())
   /**
-   * @def ACCESS(path, mode)
-   * @brief Windows için dosya erişim kontrolü macro'su
-   *
-   * Windows platformunda dosya erişim kontrolü yapmak için _access() fonksiyonunu kullanır.
-   * @param path Kontrol edilecek dosya yolu (std::string)
-   * @param mode Erişim modu (int)
-   */
-#define ACCESS(path, mode) _access(path, mode)
+  * @def ACCESS(path, mode)
+  * @brief Windows için dosya erişim kontrolü macro'su
+  *
+  * Windows platformunda dosya erişim kontrolü yapmak için _access() fonksiyonunu kullanır.
+  * @param path Kontrol edilecek dosya yolu (std::string)
+  * @param mode Erişim modu (int)
+  */
+  #define ACCESS(path, mode) _access(path, mode)
 #else
-#include <sys/stat.h>
-#include <unistd.h>
- /**
+  #include <sys/stat.h>
+  #include <unistd.h>
+  /**
   * @def MKDIR(dir)
   * @brief Linux/Unix için dizin oluşturma macro'su
   *
@@ -43,91 +43,90 @@
   * Dizin izinleri 0755 olarak ayarlanır (rwxr-xr-x).
   * @param dir Oluşturulacak dizin yolu (std::string)
   */
-#define MKDIR(dir) mkdir(dir.c_str(), 0755)
+  #define MKDIR(dir) mkdir(dir.c_str(), 0755)
   /**
-   * @def ACCESS(path, mode)
-   * @brief Linux/Unix için dosya erişim kontrolü macro'su
-   *
-   * Linux/Unix platformunda dosya erişim kontrolü yapmak için access() fonksiyonunu kullanır.
-   * @param path Kontrol edilecek dosya yolu (std::string)
-   * @param mode Erişim modu (int)
-   */
-#define ACCESS(path, mode) access(path, mode)
+  * @def ACCESS(path, mode)
+  * @brief Linux/Unix için dosya erişim kontrolü macro'su
+  *
+  * Linux/Unix platformunda dosya erişim kontrolü yapmak için access() fonksiyonunu kullanır.
+  * @param path Kontrol edilecek dosya yolu (std::string)
+  * @param mode Erişim modu (int)
+  */
+  #define ACCESS(path, mode) access(path, mode)
 #endif
 
-   /**
-    * @namespace TravelExpense
-    * @brief Seyahat Gideri Takibi uygulaması ana namespace'i
-    */
+/**
+ * @namespace TravelExpense
+ * @brief Seyahat Gideri Takibi uygulaması ana namespace'i
+ */
 namespace TravelExpense {
 
-    /**
-     * @namespace Database
-     * @brief SQLite veritabanı yönetimi modülü implementasyonu
-     */
-    namespace Database {
+/**
+ * @namespace Database
+ * @brief SQLite veritabanı yönetimi modülü implementasyonu
+ */
+namespace Database {
 
-        /**
-         * @var g_database
-         * @brief Global veritabanı handle'ı (singleton)
-         *
-         * Bu static değişken, veritabanı bağlantısını singleton pattern ile yönetir.
-         * Tüm veritabanı işlemleri bu global handle üzerinden yapılır.
-         * initializeDatabase() ile başlatılır, closeDatabase() ile kapatılır.
-         */
-        static sqlite3* g_database = nullptr;
+/**
+ * @var g_database
+ * @brief Global veritabanı handle'ı (singleton)
+ *
+ * Bu static değişken, veritabanı bağlantısını singleton pattern ile yönetir.
+ * Tüm veritabanı işlemleri bu global handle üzerinden yapılır.
+ * initializeDatabase() ile başlatılır, closeDatabase() ile kapatılır.
+ */
+static sqlite3 *g_database = nullptr;
 
-        sqlite3* initializeDatabase(const char* dbPath) {
-            // Veritabanı dizinini oluştur
-            FileIO::ensureDataDirectory();
+sqlite3 *initializeDatabase(const char *dbPath) {
+  // Veritabanı dizinini oluştur
+  FileIO::ensureDataDirectory();
+  std::string path;
 
-            std::string path;
-            if (dbPath) {
-                path = dbPath;
-            }
-            else {
-                path = "data/travelexpense.db";
-            }
+  if (dbPath) {
+    path = dbPath;
+  } else {
+    path = "data/travelexpense.db";
+  }
 
-            sqlite3* db = nullptr;
-            int rc = sqlite3_open(path.c_str(), &db);
+  sqlite3 *db = nullptr;
+  int rc = sqlite3_open(path.c_str(), &db);
 
-            if (rc != SQLITE_OK) {
-                if (db) {
-                    sqlite3_close(db);
-                }
-                return nullptr;
-            }
+  if (rc != SQLITE_OK) {
+    if (db) {
+      sqlite3_close(db);
+    }
 
-            // Foreign keys'i etkinleştir
-            sqlite3_exec(db, "PRAGMA foreign_keys = ON;", nullptr, nullptr, nullptr);
+    return nullptr;
+  }
 
-            return db;
-        }
+  // Foreign keys'i etkinleştir
+  sqlite3_exec(db, "PRAGMA foreign_keys = ON;", nullptr, nullptr, nullptr);
+  return db;
+}
 
-        ErrorCode closeDatabase(sqlite3* db) {
-            if (!db) {
-                return ErrorCode::InvalidInput;
-            }
+ErrorCode closeDatabase(sqlite3 *db) {
+  if (!db) {
+    return ErrorCode::InvalidInput;
+  }
 
-            int rc = sqlite3_close(db);
-            if (rc != SQLITE_OK) {
-                return ErrorCode::FileIO;
-            }
+  int rc = sqlite3_close(db);
 
-            return ErrorCode::Success;
-        }
+  if (rc != SQLITE_OK) {
+    return ErrorCode::FileIO;
+  }
 
-        ErrorCode createTables(sqlite3* db) {
-            if (!db) {
-                return ErrorCode::InvalidInput;
-            }
+  return ErrorCode::Success;
+}
 
-            char* errMsg = nullptr;
-            int rc;
+ErrorCode createTables(sqlite3 *db) {
+  if (!db) {
+    return ErrorCode::InvalidInput;
+  }
 
-            // Users tablosu
-            const char* createUsersTable = R"(
+  char *errMsg = nullptr;
+  int rc;
+  // Users tablosu
+  const char *createUsersTable = R"(
                 CREATE TABLE IF NOT EXISTS users (
                     user_id INTEGER PRIMARY KEY AUTOINCREMENT,
                     username TEXT NOT NULL UNIQUE,
@@ -138,17 +137,18 @@ namespace TravelExpense {
                     last_login INTEGER NOT NULL DEFAULT 0
                 );
             )";
+  rc = sqlite3_exec(db, createUsersTable, nullptr, nullptr, &errMsg);
 
-            rc = sqlite3_exec(db, createUsersTable, nullptr, nullptr, &errMsg);
-            if (rc != SQLITE_OK) {
-                if (errMsg) {
-                    sqlite3_free(errMsg);
-                }
-                return ErrorCode::FileIO;
-            }
+  if (rc != SQLITE_OK) {
+    if (errMsg) {
+      sqlite3_free(errMsg);
+    }
 
-            // Trips tablosu
-            const char* createTripsTable = R"(
+    return ErrorCode::FileIO;
+  }
+
+  // Trips tablosu
+  const char *createTripsTable = R"(
                 CREATE TABLE IF NOT EXISTS trips (
                     trip_id INTEGER PRIMARY KEY AUTOINCREMENT,
                     user_id INTEGER NOT NULL,
@@ -164,17 +164,18 @@ namespace TravelExpense {
                     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
                 );
             )";
+  rc = sqlite3_exec(db, createTripsTable, nullptr, nullptr, &errMsg);
 
-            rc = sqlite3_exec(db, createTripsTable, nullptr, nullptr, &errMsg);
-            if (rc != SQLITE_OK) {
-                if (errMsg) {
-                    sqlite3_free(errMsg);
-                }
-                return ErrorCode::FileIO;
-            }
+  if (rc != SQLITE_OK) {
+    if (errMsg) {
+      sqlite3_free(errMsg);
+    }
 
-            // Expenses tablosu
-            const char* createExpensesTable = R"(
+    return ErrorCode::FileIO;
+  }
+
+  // Expenses tablosu
+  const char *createExpensesTable = R"(
                 CREATE TABLE IF NOT EXISTS expenses (
                     expense_id INTEGER PRIMARY KEY AUTOINCREMENT,
                     trip_id INTEGER NOT NULL,
@@ -188,17 +189,18 @@ namespace TravelExpense {
                     FOREIGN KEY (trip_id) REFERENCES trips(trip_id) ON DELETE CASCADE
                 );
             )";
+  rc = sqlite3_exec(db, createExpensesTable, nullptr, nullptr, &errMsg);
 
-            rc = sqlite3_exec(db, createExpensesTable, nullptr, nullptr, &errMsg);
-            if (rc != SQLITE_OK) {
-                if (errMsg) {
-                    sqlite3_free(errMsg);
-                }
-                return ErrorCode::FileIO;
-            }
+  if (rc != SQLITE_OK) {
+    if (errMsg) {
+      sqlite3_free(errMsg);
+    }
 
-            // Budgets tablosu
-            const char* createBudgetsTable = R"(
+    return ErrorCode::FileIO;
+  }
+
+  // Budgets tablosu
+  const char *createBudgetsTable = R"(
                 CREATE TABLE IF NOT EXISTS budgets (
                     budget_id INTEGER PRIMARY KEY AUTOINCREMENT,
                     trip_id INTEGER NOT NULL UNIQUE,
@@ -217,17 +219,18 @@ namespace TravelExpense {
                     FOREIGN KEY (trip_id) REFERENCES trips(trip_id) ON DELETE CASCADE
                 );
             )";
+  rc = sqlite3_exec(db, createBudgetsTable, nullptr, nullptr, &errMsg);
 
-            rc = sqlite3_exec(db, createBudgetsTable, nullptr, nullptr, &errMsg);
-            if (rc != SQLITE_OK) {
-                if (errMsg) {
-                    sqlite3_free(errMsg);
-                }
-                return ErrorCode::FileIO;
-            }
+  if (rc != SQLITE_OK) {
+    if (errMsg) {
+      sqlite3_free(errMsg);
+    }
 
-            // Assets tablosu (Varlık Yönetimi)
-            const char* createAssetsTable = R"(
+    return ErrorCode::FileIO;
+  }
+
+  // Assets tablosu (Varlık Yönetimi)
+  const char *createAssetsTable = R"(
                 CREATE TABLE IF NOT EXISTS assets (
                     asset_id INTEGER PRIMARY KEY AUTOINCREMENT,
                     asset_type INTEGER NOT NULL,
@@ -244,85 +247,91 @@ namespace TravelExpense {
                     is_active INTEGER NOT NULL DEFAULT 1
                 );
             )";
+  rc = sqlite3_exec(db, createAssetsTable, nullptr, nullptr, &errMsg);
 
-            rc = sqlite3_exec(db, createAssetsTable, nullptr, nullptr, &errMsg);
-            if (rc != SQLITE_OK) {
-                if (errMsg) {
-                    sqlite3_free(errMsg);
-                }
-                return ErrorCode::FileIO;
-            }
+  if (rc != SQLITE_OK) {
+    if (errMsg) {
+      sqlite3_free(errMsg);
+    }
 
-            // Index'ler oluştur
-            const char* createIndexes = R"(
+    return ErrorCode::FileIO;
+  }
+
+  // Index'ler oluştur
+  const char *createIndexes = R"(
                 CREATE INDEX IF NOT EXISTS idx_trips_user_id ON trips(user_id);
                 CREATE INDEX IF NOT EXISTS idx_expenses_trip_id ON expenses(trip_id);
                 CREATE INDEX IF NOT EXISTS idx_budgets_trip_id ON budgets(trip_id);
                 CREATE INDEX IF NOT EXISTS idx_assets_type ON assets(asset_type);
                 CREATE INDEX IF NOT EXISTS idx_assets_active ON assets(is_active, deleted_at);
             )";
+  rc = sqlite3_exec(db, createIndexes, nullptr, nullptr, &errMsg);
 
-            rc = sqlite3_exec(db, createIndexes, nullptr, nullptr, &errMsg);
-            if (rc != SQLITE_OK) {
-                if (errMsg) {
-                    sqlite3_free(errMsg);
-                }
-                // Index hatası kritik değil
-            }
+  if (rc != SQLITE_OK) {
+    if (errMsg) {
+      sqlite3_free(errMsg);
+    }
 
-            return ErrorCode::Success;
-        }
+    // Index hatası kritik değil
+  }
 
-        sqlite3* getDatabase() {
-            if (!g_database) {
-                g_database = initializeDatabase();
-                if (g_database) {
-                    createTables(g_database);
-                }
-            }
-            return g_database;
-        }
+  return ErrorCode::Success;
+}
 
-        ErrorCode resetDatabase() {
-            if (g_database) {
-                closeDatabase(g_database);
-                g_database = nullptr;
-            }
+sqlite3 *getDatabase() {
+  if (!g_database) {
+    g_database = initializeDatabase();
 
-            g_database = initializeDatabase();
-            if (!g_database) {
-                return ErrorCode::FileIO;
-            }
+    if (g_database) {
+      createTables(g_database);
+    }
+  }
 
-            return createTables(g_database);
-        }
+  return g_database;
+}
 
-        ErrorCode executeQuery(sqlite3* db, const char* sql) {
-            if (!db || !sql) {
-                return ErrorCode::InvalidInput;
-            }
+ErrorCode resetDatabase() {
+  if (g_database) {
+    closeDatabase(g_database);
+    g_database = nullptr;
+  }
 
-            char* errMsg = nullptr;
-            int rc = sqlite3_exec(db, sql, nullptr, nullptr, &errMsg);
+  g_database = initializeDatabase();
 
-            if (rc != SQLITE_OK) {
-                if (errMsg) {
-                    sqlite3_free(errMsg);
-                }
-                return ErrorCode::FileIO;
-            }
+  if (!g_database) {
+    return ErrorCode::FileIO;
+  }
 
-            return ErrorCode::Success;
-        }
+  return createTables(g_database);
+}
 
-        int64_t getLastInsertRowId(sqlite3* db) {
-            if (!db) {
-                return 0;
-            }
-            return sqlite3_last_insert_rowid(db);
-        }
+ErrorCode executeQuery(sqlite3 *db, const char *sql) {
+  if (!db || !sql) {
+    return ErrorCode::InvalidInput;
+  }
 
-    } // namespace Database
+  char *errMsg = nullptr;
+  int rc = sqlite3_exec(db, sql, nullptr, nullptr, &errMsg);
+
+  if (rc != SQLITE_OK) {
+    if (errMsg) {
+      sqlite3_free(errMsg);
+    }
+
+    return ErrorCode::FileIO;
+  }
+
+  return ErrorCode::Success;
+}
+
+int64_t getLastInsertRowId(sqlite3 *db) {
+  if (!db) {
+    return 0;
+  }
+
+  return sqlite3_last_insert_rowid(db);
+}
+
+} // namespace Database
 
 } // namespace TravelExpense
-

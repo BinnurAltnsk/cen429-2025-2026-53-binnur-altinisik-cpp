@@ -370,7 +370,6 @@
 <codeline lineno="40" refid="export_8h_1ab7e5ee0cfe82490598f5a3f6752d9894" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRAVELEXPENSE_INTERNAL</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>EXPORT_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/travelexpense/header/export.h"/>
   </compounddef>

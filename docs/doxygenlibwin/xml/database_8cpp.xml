@@ -695,7 +695,6 @@
 <codeline lineno="335"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Database</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="336"><highlight class="normal"></highlight></codeline>
 <codeline lineno="337"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="338"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/travelexpense/src/database.cpp"/>
   </compounddef>

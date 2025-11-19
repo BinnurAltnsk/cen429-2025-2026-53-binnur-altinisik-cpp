@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tests/travelexpense/travelexpense_test.cpp" line="50" column="8" bodyfile="src/tests/travelexpense/travelexpense_test.cpp" bodystart="50" bodyend="68"/>
+        <location file="src/tests/travelexpense/travelexpense_test.cpp" line="50" column="10" bodyfile="src/tests/travelexpense/travelexpense_test.cpp" bodystart="50" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="class_travel_expense_tracker_test_1a68b63dc0abfd705b1faec4a0d08c512c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tests/travelexpense/travelexpense_test.cpp" line="75" column="8" bodyfile="src/tests/travelexpense/travelexpense_test.cpp" bodystart="75" bodyend="82"/>
+        <location file="src/tests/travelexpense/travelexpense_test.cpp" line="80" column="10" bodyfile="src/tests/travelexpense/travelexpense_test.cpp" bodystart="80" bodyend="87"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -65,7 +65,7 @@
         <label>testing::Test</label>
       </node>
     </collaborationgraph>
-    <location file="src/tests/travelexpense/travelexpense_test.cpp" line="43" column="1" bodyfile="src/tests/travelexpense/travelexpense_test.cpp" bodystart="43" bodyend="83"/>
+    <location file="src/tests/travelexpense/travelexpense_test.cpp" line="43" column="1" bodyfile="src/tests/travelexpense/travelexpense_test.cpp" bodystart="43" bodyend="88"/>
     <listofallmembers>
       <member refid="class_travel_expense_tracker_test_1afc2ea39bd2f8fa9a1dc6b685e69ab3b2" prot="protected" virt="non-virtual"><scope>TravelExpenseTrackerTest</scope><name>SetUp</name></member>
       <member refid="class_travel_expense_tracker_test_1a68b63dc0abfd705b1faec4a0d08c512c" prot="protected" virt="non-virtual"><scope>TravelExpenseTrackerTest</scope><name>TearDown</name></member>

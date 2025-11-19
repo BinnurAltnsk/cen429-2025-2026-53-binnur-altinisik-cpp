@@ -178,6 +178,8 @@
     <member refid="namespace_travel_expense_1_1_code_hardening_1a607257b1a1155ef2a283422c545ce1ec" kind="variable"><name>FUNC_PTR_KEY</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1afd1c8e893ee55184a538c2ec427b9af1" kind="variable"><name>OPAQUE_TRUE</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1acc1290612d3c1d45ad11824d5a4681bc" kind="variable"><name>OPAQUE_FALSE</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1ad70178ecd532452d80f25072b89f74b6" kind="variable"><name>DEAD_BRANCH_MAGIC_1</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a9d81cde1c71e600ce3db7e6f6f87efda" kind="variable"><name>DEAD_BRANCH_MAGIC_2</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a828ac59ea8c553d8583d1b749290e2d0" kind="function"><name>createOpaqueCounter</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a672620a323d70b733e20e41740975228" kind="function"><name>checkOpaqueLoopCondition</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1af5e0a7847c70ae9cd622ea48f577178e" kind="function"><name>opaqueIncrement</name></member>
@@ -197,6 +199,12 @@
     <member refid="namespace_travel_expense_1_1_code_hardening_1aa135cd231714ad26ccd8a574d82195b7" kind="function"><name>opaqueAND</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a54e6de63e3cd3464bbc4030b7930cb6f" kind="function"><name>opaqueOR</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a204fadf1cee37c67cdaf94cd972a57d6" kind="function"><name>opaqueNOT</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a5a04ea6f023b705ac6b776ae60e8f306" kind="function"><name>createOpaquePredicateFalse</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1ad7d58fff26340fdac80eb5c6c516793b" kind="function"><name>createOpaquePredicateTrue</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1ace43b2745bd11c3b21c29faf4b8d657f" kind="function"><name>opaquePredicateImpossible</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1acfb7ff38bd363b969590d6e38253e5eb" kind="function"><name>opaquePredicateAlwaysTrue</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a050b80a35df0430cd2874fe13c3eaf4d" kind="function"><name>dummyFunction</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a7d380eceb35fac3d0ad286d713470b29" kind="function"><name>dummyOperation</name></member>
   </compound>
   <compound refid="namespace_travel_expense_1_1_database" kind="namespace"><name>TravelExpense::Database</name>
     <member refid="namespace_travel_expense_1_1_database_1a879bc0655c88733b1bd80c84980d38ba" kind="variable"><name>g_database</name></member>
@@ -492,6 +500,8 @@
     <member refid="codehardening_8h_1a61426ab0b61493d6c40c1880c633b123" kind="define"><name>CALL_OBFUSCATED_FUNC</name></member>
     <member refid="codehardening_8h_1a830676c1f0b50e2a255ae4e2e334d909" kind="define"><name>OPAQUE_LOOP</name></member>
     <member refid="codehardening_8h_1a0d0bec467a2aaeb875470d7d2d86cf73" kind="define"><name>OBFUSCATED_STRING</name></member>
+    <member refid="codehardening_8h_1abf6bf1c1247bb8f89edec8d6bef5c6b0" kind="define"><name>DEAD_BRANCH</name></member>
+    <member refid="codehardening_8h_1a0fe692a61733f7553ff1ddf77537565b" kind="define"><name>ALWAYS_TRUE_BRANCH</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a828ac59ea8c553d8583d1b749290e2d0" kind="function"><name>createOpaqueCounter</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a672620a323d70b733e20e41740975228" kind="function"><name>checkOpaqueLoopCondition</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1af5e0a7847c70ae9cd622ea48f577178e" kind="function"><name>opaqueIncrement</name></member>
@@ -511,6 +521,12 @@
     <member refid="namespace_travel_expense_1_1_code_hardening_1aa135cd231714ad26ccd8a574d82195b7" kind="function"><name>opaqueAND</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a54e6de63e3cd3464bbc4030b7930cb6f" kind="function"><name>opaqueOR</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a204fadf1cee37c67cdaf94cd972a57d6" kind="function"><name>opaqueNOT</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a5a04ea6f023b705ac6b776ae60e8f306" kind="function"><name>createOpaquePredicateFalse</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1ad7d58fff26340fdac80eb5c6c516793b" kind="function"><name>createOpaquePredicateTrue</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1ace43b2745bd11c3b21c29faf4b8d657f" kind="function"><name>opaquePredicateImpossible</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1acfb7ff38bd363b969590d6e38253e5eb" kind="function"><name>opaquePredicateAlwaysTrue</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a050b80a35df0430cd2874fe13c3eaf4d" kind="function"><name>dummyFunction</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a7d380eceb35fac3d0ad286d713470b29" kind="function"><name>dummyOperation</name></member>
   </compound>
   <compound refid="common_types_8h" kind="file"><name>commonTypes.h</name>
     <member refid="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62" kind="enum"><name>ExpenseCategory</name></member>
@@ -771,6 +787,8 @@
     <member refid="namespace_travel_expense_1_1_code_hardening_1a607257b1a1155ef2a283422c545ce1ec" kind="variable"><name>FUNC_PTR_KEY</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1afd1c8e893ee55184a538c2ec427b9af1" kind="variable"><name>OPAQUE_TRUE</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1acc1290612d3c1d45ad11824d5a4681bc" kind="variable"><name>OPAQUE_FALSE</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1ad70178ecd532452d80f25072b89f74b6" kind="variable"><name>DEAD_BRANCH_MAGIC_1</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a9d81cde1c71e600ce3db7e6f6f87efda" kind="variable"><name>DEAD_BRANCH_MAGIC_2</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a828ac59ea8c553d8583d1b749290e2d0" kind="function"><name>createOpaqueCounter</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a672620a323d70b733e20e41740975228" kind="function"><name>checkOpaqueLoopCondition</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1af5e0a7847c70ae9cd622ea48f577178e" kind="function"><name>opaqueIncrement</name></member>
@@ -790,6 +808,12 @@
     <member refid="namespace_travel_expense_1_1_code_hardening_1aa135cd231714ad26ccd8a574d82195b7" kind="function"><name>opaqueAND</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a54e6de63e3cd3464bbc4030b7930cb6f" kind="function"><name>opaqueOR</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a204fadf1cee37c67cdaf94cd972a57d6" kind="function"><name>opaqueNOT</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a5a04ea6f023b705ac6b776ae60e8f306" kind="function"><name>createOpaquePredicateFalse</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1ad7d58fff26340fdac80eb5c6c516793b" kind="function"><name>createOpaquePredicateTrue</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1ace43b2745bd11c3b21c29faf4b8d657f" kind="function"><name>opaquePredicateImpossible</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1acfb7ff38bd363b969590d6e38253e5eb" kind="function"><name>opaquePredicateAlwaysTrue</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a050b80a35df0430cd2874fe13c3eaf4d" kind="function"><name>dummyFunction</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a7d380eceb35fac3d0ad286d713470b29" kind="function"><name>dummyOperation</name></member>
   </compound>
   <compound refid="database_8cpp" kind="file"><name>database.cpp</name>
     <member refid="database_8cpp_1a2b42ceef59ec198c6eee355a96d2cd1c" kind="define"><name>MKDIR</name></member>

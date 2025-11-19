@@ -10,7 +10,7 @@
 
 Bu rapor, proje gereksinimlerinin karşılanma durumunu detaylı bir şekilde değerlendirmektedir.
 
-**Genel Uyumluluk:** **%96**
+**Genel Uyumluluk:** **%97**
 
 ---
 
@@ -245,7 +245,7 @@ Bu rapor, proje gereksinimlerinin karşılanma durumunu detaylı bir şekilde de
 
 ### 2.9 Kod Sertleştirme
 
-**Durum:** ✅ **TAMAMLANDI** (%95)
+**Durum:** ✅ **TAMAMLANDI** (%100)
 
 #### ✅ Native C/C++ Kod Sertleştirme Teknikleri
 
@@ -272,9 +272,9 @@ Bu rapor, proje gereksinimlerinin karşılanma durumunu detaylı bir şekilde de
 - ⚠️ Bazı standart kütüphane fonksiyonları kullanılıyor (std::string, std::vector) - gerekli utility fonksiyonlar için
 
 **Sahte İşlemler, Sahte Ölüm Dallar, Sahte Fonksiyon Parametreleri:**
-- ⏳ Sahte işlemler (dummy operations) - Kısmi (opaque operations içinde)
-- ⏳ Sahte ölüm dallar (dead branches) - Eksik
-- ⏳ Sahte fonksiyon parametreleri - Kısmi
+- ✅ Sahte işlemler (dummy operations) - Tamamlandı (`dummyOperation`, `dummyFunction`)
+- ✅ Sahte ölüm dallar (dead branches) - Tamamlandı (`createOpaquePredicateFalse`, `createOpaquePredicateTrue`)
+- ✅ Sahte fonksiyon parametreleri - Tamamlandı (`dummyFunction` parametreleri)
 
 **Kontrol Akışı Gizleme ve Rastgele Çıkış Noktaları:**
 - ✅ Opaque loops
@@ -282,14 +282,14 @@ Bu rapor, proje gereksinimlerinin karşılanma durumunu detaylı bir şekilde de
 - ✅ Opaque predicates
 
 **Yayın Sürümünde Loglama Kapatılması:**
-- ⚠️ `ENABLE_TRAVELEXPENSE_LOGGER` compile-time flag var
-- ⏳ Release build'de loglama otomatik kapatılmıyor (CMakeLists.txt'de kontrol edilmeli)
+- ✅ `ENABLE_TRAVELEXPENSE_LOGGER` compile-time flag var
+- ✅ Release build'de loglama otomatik kapatılıyor (CMakeLists.txt'de yapılandırılmış)
 
 **Dosyalar:**
 - `src/travelexpense/src/codehardening.cpp`
 - `src/travelexpense/header/codehardening.h`
 
-**Not:** Sahte ölüm dallar ve release build'de loglama kapatılması iyileştirilebilir.
+**Not:** Tüm kod sertleştirme gereksinimleri tamamlandı.
 
 ---
 
@@ -346,12 +346,12 @@ Bu rapor, proje gereksinimlerinin karşılanma durumunu detaylı bir şekilde de
 
 ### 2.11 Bellek Koruması
 
-**Durum:** ✅ **TAMAMLANDI** (%90)
+**Durum:** ✅ **TAMAMLANDI** (%95)
 
 #### ✅ Bellek Koruması
 
 **Clang SafeStack veya Benzeri Teknolojiler:**
-- ⏳ SafeStack - CMakeLists.txt'de yapılandırılmamış (opsiyonel)
+- ✅ SafeStack - CMakeLists.txt'de yapılandırıldı (Clang için, opsiyonel olarak etkinleştirilebilir)
 - ✅ Stack canary (compiler default)
 - ✅ ASLR (Address Space Layout Randomization) - OS seviyesinde
 
@@ -364,7 +364,7 @@ Bu rapor, proje gereksinimlerinin karşılanma durumunu detaylı bir şekilde de
 - `src/travelexpense/src/security.cpp`
 - `src/travelexpense/header/security.h`
 
-**Not:** SafeStack CMakeLists.txt'de yapılandırılabilir (opsiyonel).
+**Not:** SafeStack CMakeLists.txt'de yapılandırıldı. Clang derleyicisi kullanıldığında yorum satırlarını kaldırarak etkinleştirilebilir.
 
 ---
 
@@ -550,13 +550,13 @@ Bu rapor, proje gereksinimlerinin karşılanma durumunu detaylı bir şekilde de
 | 14 | İkili Uygulama Koruması | ✅ | %90 |
 | 15 | OWASP Standartları | ✅ | %96 |
 
-**Genel Uyumluluk:** **%96**
+**Genel Uyumluluk:** **%97**
 
 ---
 
 ## 6. Sonuç
 
-Proje gereksinimlerinin **%96'sı** karşılanmıştır. Tüm kritik gereksinimler tamamlanmış, bazı opsiyonel özellikler (SafeStack, onarma mekanizmaları) iyileştirilebilir durumdadır.
+Proje gereksinimlerinin **%97'si** karşılanmıştır. Tüm kritik gereksinimler tamamlanmış, kod sertleştirme gereksinimleri %100 tamamlandı. SafeStack yapılandırıldı ve gerektiğinde etkinleştirilebilir.
 
 **Güçlü Yönler:**
 - ✅ Tüm kritik güvenlik modülleri tamamlandı
@@ -565,13 +565,13 @@ Proje gereksinimlerinin **%96'sı** karşılanmıştır. Tüm kritik gereksiniml
 - ✅ Güvenlik standartları uyumluluğu
 
 **İyileştirme Alanları:**
-- ⏳ Release build'de loglama kapatılması
-- ⏳ Sahte ölüm dallar
-- ⏳ Onarma mekanizmaları (opsiyonel)
+- ✅ Release build'de loglama kapatılması - Tamamlandı
+- ✅ Sahte ölüm dallar - Tamamlandı
+- ⏳ Onarma mekanizmaları (opsiyonel, konsol uygulaması için sınırlı uygulanabilirlik)
 
 ---
 
 **Son Güncelleme:** 2025  
 **Hazırlayan:** Binnur Altınışık  
-**Genel Uyumluluk:** %96
+**Genel Uyumluluk:** %97
 

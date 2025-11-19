@@ -678,7 +678,6 @@
 <codeline lineno="189"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="190"><highlight class="normal"></highlight></codeline>
 <codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ASSET_MANAGER_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="192"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/travelexpense/header/assetManager.h"/>
   </compounddef>

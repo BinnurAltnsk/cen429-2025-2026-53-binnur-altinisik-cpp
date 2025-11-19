@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1080" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1080" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1198" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1198" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1ada0587bba502a11214b955e0eb1aa4cd" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1136" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1136" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1254" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1254" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1ac3ded76cf60aa87e96a8de192c6b6b81" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1149" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1149" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1267" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1267" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1a5cabf8ac9238178392c4ef3a1a2d425d" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1161" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1161" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1279" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1279" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1ac2135b936686e48b64a6c9a8e1e14868" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1173" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1173" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1291" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1291" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1a79322dbd295d3667fe20667a41ac62cf" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1183" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1183" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1301" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1301" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1a9d270a8a0b57667c48bcd0f09ed27421" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -147,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1195" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1195" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1313" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1313" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1a12e914f70722e440cf9bd66734f1f766" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -166,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1207" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1207" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1325" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1325" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1ae7ec65eb3ab1870a8d621f96a7c34f05" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1219" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1219" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1337" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1337" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1a345a2cb3a56ab3da7f5fa1b317ca2893" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -213,7 +213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1648" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1648" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1766" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1766" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1abc5b82337e0c82092aaff2968e5f6c50" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -235,7 +235,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1661" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1661" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1779" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1779" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1af4ad2ac1e8add87ec4cd90e588c20c0a" prot="public" static="yes" mutable="no">
         <type>uint8_t</type>
@@ -260,7 +260,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1683" column="16" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1683" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1801" column="16" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1801" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1a34ec3b4b4d572219959c2a7e4873a3e5" prot="public" static="yes" mutable="no">
         <type>bool</type>
@@ -275,7 +275,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1684" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1684" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1802" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1802" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -733,7 +733,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="557" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="557" bodyend="595" declfile="src/travelexpense/header/encryption.h" declline="111" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="557" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="557" bodyend="600" declfile="src/travelexpense/header/encryption.h" declline="111" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a8b06d829778298f0975c1b85ed746270" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -878,7 +878,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="638" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="638" bodyend="679" declfile="src/travelexpense/header/encryption.h" declline="126" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="711" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="711" bodyend="797" declfile="src/travelexpense/header/encryption.h" declline="126" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a9556af2bcbc41232a11630b9de1d36d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1003,7 +1003,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="694" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="694" bodyend="756" declfile="src/travelexpense/header/encryption.h" declline="140" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="812" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="812" bodyend="874" declfile="src/travelexpense/header/encryption.h" declline="140" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a53f29cf73c5a46e8ff3c3344408bcefa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1167,7 +1167,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="773" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="773" bodyend="838" declfile="src/travelexpense/header/encryption.h" declline="156" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="891" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="891" bodyend="956" declfile="src/travelexpense/header/encryption.h" declline="156" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1aab13cbee61c87e29e4f07badb68ee006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1236,7 +1236,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="851" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="851" bodyend="881" declfile="src/travelexpense/header/encryption.h" declline="168" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="969" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="969" bodyend="999" declfile="src/travelexpense/header/encryption.h" declline="168" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1af19dc3b309d69a616590466cd620921c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1281,7 +1281,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="891" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="891" bodyend="897" declfile="src/travelexpense/header/encryption.h" declline="176" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1009" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1009" bodyend="1015" declfile="src/travelexpense/header/encryption.h" declline="176" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a1bc8df3a6e90bff77d7c9eb843036ba5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1366,7 +1366,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="911" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="911" bodyend="923" declfile="src/travelexpense/header/encryption.h" declline="186" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1029" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1029" bodyend="1041" declfile="src/travelexpense/header/encryption.h" declline="186" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a0195e1357626a5075951ae990e99ca8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1472,7 +1472,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="937" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="937" bodyend="994" declfile="src/travelexpense/header/encryption.h" declline="197" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1055" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1055" bodyend="1112" declfile="src/travelexpense/header/encryption.h" declline="197" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a7d0d5da1d2c1edf0044d80f025c889b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1578,7 +1578,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1008" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1008" bodyend="1068" declfile="src/travelexpense/header/encryption.h" declline="209" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1126" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1126" bodyend="1186" declfile="src/travelexpense/header/encryption.h" declline="209" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a90b1f8daf4e4e6a110cce5aa4a1a135f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1684,7 +1684,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1431" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1431" bodyend="1451" declfile="src/travelexpense/header/encryption.h" declline="225" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1549" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1549" bodyend="1569" declfile="src/travelexpense/header/encryption.h" declline="225" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a894ef88976e4ddeccc27e33506180f6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1789,7 +1789,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1464" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1464" bodyend="1484" declfile="src/travelexpense/header/encryption.h" declline="237" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1582" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1582" bodyend="1602" declfile="src/travelexpense/header/encryption.h" declline="237" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a531df9d656f8e6e5b539c2db02ff09b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1854,7 +1854,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1496" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1496" bodyend="1550" declfile="src/travelexpense/header/encryption.h" declline="247" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1614" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1614" bodyend="1668" declfile="src/travelexpense/header/encryption.h" declline="247" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a34495d70a42f169639fe1d6d51f4fa79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1919,7 +1919,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1562" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1562" bodyend="1634" declfile="src/travelexpense/header/encryption.h" declline="256" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1680" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1680" bodyend="1752" declfile="src/travelexpense/header/encryption.h" declline="256" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1ac04f3733c0d1a05113a11221e344e0e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -2025,7 +2025,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1977" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1977" bodyend="1994" declfile="src/travelexpense/header/encryption.h" declline="276" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="2095" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2095" bodyend="2112" declfile="src/travelexpense/header/encryption.h" declline="276" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a539e19ad6f2560392c8a73000fb71e21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -2130,7 +2130,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="2007" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2007" bodyend="2024" declfile="src/travelexpense/header/encryption.h" declline="288" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="2125" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2125" bodyend="2142" declfile="src/travelexpense/header/encryption.h" declline="288" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1ad2ec9054ce42bc1b7376ed47caf91e56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -2195,7 +2195,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="2036" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2036" bodyend="2090" declfile="src/travelexpense/header/encryption.h" declline="298" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="2154" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2154" bodyend="2208" declfile="src/travelexpense/header/encryption.h" declline="298" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1ae7b964b2a339d09c81020de250276b43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -2260,7 +2260,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="2102" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2102" bodyend="2174" declfile="src/travelexpense/header/encryption.h" declline="307" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="2220" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2220" bodyend="2292" declfile="src/travelexpense/header/encryption.h" declline="307" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a7f4e7da39c6111a455c5eac7742ee2ca" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint8_t</type>
@@ -2456,7 +2456,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="608" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="608" bodyend="622"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="613" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="613" bodyend="695"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1aa21281925ebbddc33d8d9b1e21a3e9f3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint64_t</type>
@@ -2512,7 +2512,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1233" column="17" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1233" bodyend="1245"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1351" column="17" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1351" bodyend="1363"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a2223bb19403d3c90b2065255495234c4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -2544,7 +2544,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1256" column="17" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1256" bodyend="1268"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1374" column="17" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1374" bodyend="1386"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a21eded60c1cf7235461197fd2460b70d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2575,7 +2575,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1277" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1277" bodyend="1303"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1395" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1395" bodyend="1421"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a243ea97669400e7912592845c92ab449" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -2619,7 +2619,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1315" column="17" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1315" bodyend="1333"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1433" column="17" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1433" bodyend="1451"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a3cb83cfc9a9de8f4d8ce6b2aff8b11f5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2674,7 +2674,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1345" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1345" bodyend="1375"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1463" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1463" bodyend="1493"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1aa7953e65818b5d62653b95ca7809b56d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2729,7 +2729,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1387" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1387" bodyend="1417"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1505" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1505" bodyend="1535"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a6a3e9d695986ac31ede29ddf25508afc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2760,7 +2760,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1694" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1694" bodyend="1741"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1812" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1812" bodyend="1859"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1afcf186a72103b15843f033e602b31da1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2791,7 +2791,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1751" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1751" bodyend="1774"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1869" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1869" bodyend="1892"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1ac0fb577cc25e724fa38273806e7b5f2e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2833,7 +2833,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1785" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1785" bodyend="1868"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1903" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1903" bodyend="1986"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1aceb10e0ec6c2eefebeeea4ae2c1cb1cf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2875,7 +2875,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1879" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1879" bodyend="1964"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1997" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1997" bodyend="2082"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

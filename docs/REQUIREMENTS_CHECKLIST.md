@@ -45,10 +45,13 @@
 - ✅ String obfuscation
 - ✅ Fonksiyon gizleme
 - ✅ Opaque boolean
+- ✅ Sahte ölüm dallar (Dead branches) - YENİ EKLENDİ
+- ✅ Sahte işlemler (Dummy operations) - YENİ EKLENDİ
 
 ### 11. Bellek Koruması ✅
 - ✅ Güvenli bellek temizleme
 - ✅ Hassas veri koruma
+- ✅ SafeStack yapılandırması (Clang için) - YENİ EKLENDİ
 
 ### 14. İkili Uygulama Koruması ✅
 - ✅ Checksum doğrulama

@@ -9,6 +9,6 @@
 <para>Kod sertleştirme teknikleri modülü implementasyonu.</para>
 <para>Bu modül, kod sertleştirme tekniklerini sağlar: opaque loops (kontrol akışı gizleme), string obfuscation (string gizleme), fonksiyon gizleme ve opaque boolean değişkenleri. Reverse engineering ve code analysis&apos;a karşı koruma sağlar. </para>
     </detaileddescription>
-    <location file="src/travelexpense/header/codehardening.h" line="26" column="1"/>
+    <location file="src/travelexpense/header/codehardening.h" line="27" column="1"/>
   </compounddef>
 </doxygen>

@@ -67,7 +67,19 @@ namespace \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening}{Travel\+
 \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a54e6de63e3cd3464bbc4030b7930cb6f}{Travel\+Expense\+::\+Code\+Hardening\+::opaque\+OR}} (uint32\+\_\+t a, uint32\+\_\+t b)
 \begin{DoxyCompactList}\small\item\em Opaque OR işlemi. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a204fadf1cee37c67cdaf94cd972a57d6}{Travel\+Expense\+::\+Code\+Hardening\+::opaque\+NOT}} (uint32\+\_\+t a)
-\begin{DoxyCompactList}\small\item\em Opaque NOT işlemi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Opaque NOT işlemi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a5a04ea6f023b705ac6b776ae60e8f306}{Travel\+Expense\+::\+Code\+Hardening\+::create\+Opaque\+Predicate\+False}} (uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Opaque predicate -\/ Her zaman false döner (compile-\/time\textquotesingle{}da anlaşılamaz) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_ad7d58fff26340fdac80eb5c6c516793b}{Travel\+Expense\+::\+Code\+Hardening\+::create\+Opaque\+Predicate\+True}} (uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Opaque predicate -\/ Her zaman true döner (compile-\/time\textquotesingle{}da anlaşılamaz) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_ace43b2745bd11c3b21c29faf4b8d657f}{Travel\+Expense\+::\+Code\+Hardening\+::opaque\+Predicate\+Impossible}} (uint32\+\_\+t x)
+\begin{DoxyCompactList}\small\item\em Opaque predicate -\/ Karmaşık hesaplama ile false döner. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_acfb7ff38bd363b969590d6e38253e5eb}{Travel\+Expense\+::\+Code\+Hardening\+::opaque\+Predicate\+Always\+True}} (uint32\+\_\+t x)
+\begin{DoxyCompactList}\small\item\em Opaque predicate -\/ Karmaşık hesaplama ile true döner. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a050b80a35df0430cd2874fe13c3eaf4d}{Travel\+Expense\+::\+Code\+Hardening\+::dummy\+Function}} (uint32\+\_\+t param1, uint32\+\_\+t param2)
+\begin{DoxyCompactList}\small\item\em Sahte fonksiyon -\/ Dead branch içinde çağrılır. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} void \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a7d380eceb35fac3d0ad286d713470b29}{Travel\+Expense\+::\+Code\+Hardening\+::dummy\+Operation}} (void \texorpdfstring{$\ast$}{*}data, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Sahte işlem -\/ Dead branch içinde çalıştırılır. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -79,6 +91,7 @@ Bu dosya, kod sertleştirme tekniklerinin implementasyonunu içerir\+:
 \item String obfuscation (String gizleme)
 \item Fonksiyon gizleme
 \item Opaque boolean değişkenleri
+\item Dead branches (Sahte ölüm dallar)
 \end{DoxyItemize}
 
 \begin{DoxyAuthor}{Author}

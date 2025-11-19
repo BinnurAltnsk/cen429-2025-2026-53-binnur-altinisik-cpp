@@ -1279,7 +1279,6 @@
 <codeline lineno="663"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Migration</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="664"><highlight class="normal"></highlight></codeline>
 <codeline lineno="665"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="666"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/travelexpense/src/migration.cpp"/>
   </compounddef>

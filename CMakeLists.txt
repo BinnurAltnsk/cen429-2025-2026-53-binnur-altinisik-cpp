@@ -85,6 +85,24 @@ if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU" OR "${CMAKE_CXX_COMPILER_ID}" MATCH
   set(COMP_OPTIMIZATION "-O0") #for debugging
   set(COMP_SHARED "-shared -fPIC")
 
+  # SafeStack yapılandırması (sadece Clang için)
+  # SafeStack, stack overflow saldırılarına karşı koruma sağlar
+  # Hassas verileri ayrı bir "safe stack"te saklar
+  if("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
+    message(STATUS "[${ROOT}] Clang detected - SafeStack support available")
+    # SafeStack'i etkinleştir (opsiyonel - güvenlik için)
+    # Not: SafeStack sadece Clang'de desteklenir
+    # Kullanmak için aşağıdaki satırın yorumunu kaldırın:
+    # set(COMP_SAFESTACK "-fsanitize=safe-stack")
+    # set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} ${COMP_SAFESTACK}")
+    # set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} ${COMP_SAFESTACK}")
+    # set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} ${COMP_SAFESTACK}")
+    # set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} ${COMP_SAFESTACK}")
+    # set(CMAKE_EXE_LINKER_FLAGS_DEBUG "${CMAKE_EXE_LINKER_FLAGS_DEBUG} ${COMP_SAFESTACK}")
+    # set(CMAKE_EXE_LINKER_FLAGS_RELEASE "${CMAKE_EXE_LINKER_FLAGS_RELEASE} ${COMP_SAFESTACK}")
+    message(STATUS "[${ROOT}] SafeStack is available but disabled by default (uncomment to enable)")
+  endif()
+
   set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g ${COMP_OPTIMIZATION} ${COMP_WARNINGS} ${COMP_PROFILE}")
   set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -g ${COMP_OPTIMIZATION} ${COMP_WARNINGS} ${COMP_PROFILE}")
 
