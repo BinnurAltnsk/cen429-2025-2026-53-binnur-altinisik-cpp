@@ -1,0 +1,208 @@
+\doxysection{Travel\+Expense\+::Asset\+Manager\+::Asset Struct Reference}
+\hypertarget{struct_travel_expense_1_1_asset_manager_1_1_asset}{}\label{struct_travel_expense_1_1_asset_manager_1_1_asset}\index{TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}}
+
+
+Varlık veri modeli.  
+
+
+
+
+{\ttfamily \#include $<$asset\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Travel\+Expense\+::Asset\+Manager\+::Asset\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{struct_travel_expense_1_1_asset_manager_1_1_asset__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a8ae977d0ef54c270ff01f06399025944}{Asset}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset} constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a986c8230bbcc243780250752e1c75276}{asset\+Id}}
+\begin{DoxyCompactList}\small\item\em Varlık kimliği. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036}{Asset\+Type}} \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a088985bed7307cea0baded90e87c0512}{asset\+Type}}
+\begin{DoxyCompactList}\small\item\em Varlık tipi. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a4c169d5889293f4d105b034e6fc2218c}{name}} \mbox{[}100\mbox{]}
+\begin{DoxyCompactList}\small\item\em Varlık adı \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a61d14f4b2f3877e037e0e362f669e55e}{description}} \mbox{[}500\mbox{]}
+\begin{DoxyCompactList}\small\item\em Varlık açıklaması \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a714eed1010cdf1f4ea7da880d90d494e}{location}} \mbox{[}200\mbox{]}
+\begin{DoxyCompactList}\small\item\em Konum (veritabanı, tablo, sütun) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_ae0dbfd7c5c7eba966e65f3c21bd595ca}{source}} \mbox{[}200\mbox{]}
+\begin{DoxyCompactList}\small\item\em Kaynak. \end{DoxyCompactList}\item 
+int64\+\_\+t \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a051fb7b159bac648ed7c05605e6c57ea}{size}}
+\begin{DoxyCompactList}\small\item\em Boyut (byte) \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_aa3a5d6719dbe319a885e415965664289}{created\+At}}
+\begin{DoxyCompactList}\small\item\em Oluşturulma zamanı \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a4fbe11c20d6d6104bba02cfd49e7fbba}{deleted\+At}}
+\begin{DoxyCompactList}\small\item\em Silinme zamanı (0 = silinmemiş) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_ad940f2534891c4337c471cd041e623c2}{default\+Value}} \mbox{[}500\mbox{]}
+\begin{DoxyCompactList}\small\item\em Varsayılan değer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a2e780b5ecfe34dd4b006785747ebc27f}{protection\+Scheme}}
+\begin{DoxyCompactList}\small\item\em Koruma şeması (bit flags) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a946e38d5cff7598bf5dcd0803af4e1c0}{is\+Encrypted}}
+\begin{DoxyCompactList}\small\item\em Şifrelenmiş mi? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a1e0ea888fc82efdca59cfc16f1c4b409}{is\+Active}}
+\begin{DoxyCompactList}\small\item\em Aktif mi? \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Varlık veri modeli. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_travel_expense_1_1_asset_manager_1_1_asset_a8ae977d0ef54c270ff01f06399025944}\label{struct_travel_expense_1_1_asset_manager_1_1_asset_a8ae977d0ef54c270ff01f06399025944} 
+\index{TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}!Asset@{Asset}}
+\index{Asset@{Asset}!TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}}
+\doxysubsubsection{\texorpdfstring{Asset()}{Asset()}}
+{\footnotesize\ttfamily Travel\+Expense\+::\+Asset\+Manager\+::\+Asset\+::\+Asset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset} constructor. 
+
+Varsayılan değerlerle yeni bir \doxylink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset} oluşturur. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_travel_expense_1_1_asset_manager_1_1_asset_a986c8230bbcc243780250752e1c75276}\label{struct_travel_expense_1_1_asset_manager_1_1_asset_a986c8230bbcc243780250752e1c75276} 
+\index{TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}!assetId@{assetId}}
+\index{assetId@{assetId}!TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}}
+\doxysubsubsection{\texorpdfstring{assetId}{assetId}}
+{\footnotesize\ttfamily int32\+\_\+t Travel\+Expense\+::\+Asset\+Manager\+::\+Asset\+::asset\+Id}
+
+
+
+Varlık kimliği. 
+
+\Hypertarget{struct_travel_expense_1_1_asset_manager_1_1_asset_a088985bed7307cea0baded90e87c0512}\label{struct_travel_expense_1_1_asset_manager_1_1_asset_a088985bed7307cea0baded90e87c0512} 
+\index{TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}!assetType@{assetType}}
+\index{assetType@{assetType}!TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}}
+\doxysubsubsection{\texorpdfstring{assetType}{assetType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036}{Asset\+Type}} Travel\+Expense\+::\+Asset\+Manager\+::\+Asset\+::asset\+Type}
+
+
+
+Varlık tipi. 
+
+\Hypertarget{struct_travel_expense_1_1_asset_manager_1_1_asset_aa3a5d6719dbe319a885e415965664289}\label{struct_travel_expense_1_1_asset_manager_1_1_asset_aa3a5d6719dbe319a885e415965664289} 
+\index{TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}!createdAt@{createdAt}}
+\index{createdAt@{createdAt}!TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}}
+\doxysubsubsection{\texorpdfstring{createdAt}{createdAt}}
+{\footnotesize\ttfamily time\+\_\+t Travel\+Expense\+::\+Asset\+Manager\+::\+Asset\+::created\+At}
+
+
+
+Oluşturulma zamanı 
+
+\Hypertarget{struct_travel_expense_1_1_asset_manager_1_1_asset_ad940f2534891c4337c471cd041e623c2}\label{struct_travel_expense_1_1_asset_manager_1_1_asset_ad940f2534891c4337c471cd041e623c2} 
+\index{TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}!defaultValue@{defaultValue}}
+\index{defaultValue@{defaultValue}!TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}}
+\doxysubsubsection{\texorpdfstring{defaultValue}{defaultValue}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+Asset\+Manager\+::\+Asset\+::default\+Value\mbox{[}500\mbox{]}}
+
+
+
+Varsayılan değer. 
+
+\Hypertarget{struct_travel_expense_1_1_asset_manager_1_1_asset_a4fbe11c20d6d6104bba02cfd49e7fbba}\label{struct_travel_expense_1_1_asset_manager_1_1_asset_a4fbe11c20d6d6104bba02cfd49e7fbba} 
+\index{TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}!deletedAt@{deletedAt}}
+\index{deletedAt@{deletedAt}!TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}}
+\doxysubsubsection{\texorpdfstring{deletedAt}{deletedAt}}
+{\footnotesize\ttfamily time\+\_\+t Travel\+Expense\+::\+Asset\+Manager\+::\+Asset\+::deleted\+At}
+
+
+
+Silinme zamanı (0 = silinmemiş) 
+
+\Hypertarget{struct_travel_expense_1_1_asset_manager_1_1_asset_a61d14f4b2f3877e037e0e362f669e55e}\label{struct_travel_expense_1_1_asset_manager_1_1_asset_a61d14f4b2f3877e037e0e362f669e55e} 
+\index{TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}!description@{description}}
+\index{description@{description}!TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+Asset\+Manager\+::\+Asset\+::description\mbox{[}500\mbox{]}}
+
+
+
+Varlık açıklaması 
+
+\Hypertarget{struct_travel_expense_1_1_asset_manager_1_1_asset_a1e0ea888fc82efdca59cfc16f1c4b409}\label{struct_travel_expense_1_1_asset_manager_1_1_asset_a1e0ea888fc82efdca59cfc16f1c4b409} 
+\index{TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}!isActive@{isActive}}
+\index{isActive@{isActive}!TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}}
+\doxysubsubsection{\texorpdfstring{isActive}{isActive}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Asset\+Manager\+::\+Asset\+::is\+Active}
+
+
+
+Aktif mi? 
+
+\Hypertarget{struct_travel_expense_1_1_asset_manager_1_1_asset_a946e38d5cff7598bf5dcd0803af4e1c0}\label{struct_travel_expense_1_1_asset_manager_1_1_asset_a946e38d5cff7598bf5dcd0803af4e1c0} 
+\index{TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}!isEncrypted@{isEncrypted}}
+\index{isEncrypted@{isEncrypted}!TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}}
+\doxysubsubsection{\texorpdfstring{isEncrypted}{isEncrypted}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Asset\+Manager\+::\+Asset\+::is\+Encrypted}
+
+
+
+Şifrelenmiş mi? 
+
+\Hypertarget{struct_travel_expense_1_1_asset_manager_1_1_asset_a714eed1010cdf1f4ea7da880d90d494e}\label{struct_travel_expense_1_1_asset_manager_1_1_asset_a714eed1010cdf1f4ea7da880d90d494e} 
+\index{TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}!location@{location}}
+\index{location@{location}!TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}}
+\doxysubsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+Asset\+Manager\+::\+Asset\+::location\mbox{[}200\mbox{]}}
+
+
+
+Konum (veritabanı, tablo, sütun) 
+
+\Hypertarget{struct_travel_expense_1_1_asset_manager_1_1_asset_a4c169d5889293f4d105b034e6fc2218c}\label{struct_travel_expense_1_1_asset_manager_1_1_asset_a4c169d5889293f4d105b034e6fc2218c} 
+\index{TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}!name@{name}}
+\index{name@{name}!TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+Asset\+Manager\+::\+Asset\+::name\mbox{[}100\mbox{]}}
+
+
+
+Varlık adı 
+
+\Hypertarget{struct_travel_expense_1_1_asset_manager_1_1_asset_a2e780b5ecfe34dd4b006785747ebc27f}\label{struct_travel_expense_1_1_asset_manager_1_1_asset_a2e780b5ecfe34dd4b006785747ebc27f} 
+\index{TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}!protectionScheme@{protectionScheme}}
+\index{protectionScheme@{protectionScheme}!TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}}
+\doxysubsubsection{\texorpdfstring{protectionScheme}{protectionScheme}}
+{\footnotesize\ttfamily uint8\+\_\+t Travel\+Expense\+::\+Asset\+Manager\+::\+Asset\+::protection\+Scheme}
+
+
+
+Koruma şeması (bit flags) 
+
+\Hypertarget{struct_travel_expense_1_1_asset_manager_1_1_asset_a051fb7b159bac648ed7c05605e6c57ea}\label{struct_travel_expense_1_1_asset_manager_1_1_asset_a051fb7b159bac648ed7c05605e6c57ea} 
+\index{TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}!size@{size}}
+\index{size@{size}!TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int64\+\_\+t Travel\+Expense\+::\+Asset\+Manager\+::\+Asset\+::size}
+
+
+
+Boyut (byte) 
+
+\Hypertarget{struct_travel_expense_1_1_asset_manager_1_1_asset_ae0dbfd7c5c7eba966e65f3c21bd595ca}\label{struct_travel_expense_1_1_asset_manager_1_1_asset_ae0dbfd7c5c7eba966e65f3c21bd595ca} 
+\index{TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}!source@{source}}
+\index{source@{source}!TravelExpense::AssetManager::Asset@{TravelExpense::AssetManager::Asset}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+Asset\+Manager\+::\+Asset\+::source\mbox{[}200\mbox{]}}
+
+
+
+Kaynak. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/travelexpense/header/\mbox{\hyperlink{asset_manager_8h}{asset\+Manager.\+h}}\end{DoxyCompactItemize}

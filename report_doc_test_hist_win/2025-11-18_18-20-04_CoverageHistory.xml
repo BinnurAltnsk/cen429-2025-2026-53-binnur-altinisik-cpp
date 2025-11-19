@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2025-11-18_18-20-04" tag="">
+  <assembly name="Default">
+    <class name="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\tests\travelexpense\travelexpense_test.cpp" coveredlines="59" coverablelines="62" totallines="1156" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="0" />
+  </assembly>
+</coverage>

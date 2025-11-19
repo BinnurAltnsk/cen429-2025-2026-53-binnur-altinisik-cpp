@@ -1,0 +1,48 @@
+\doxysection{src/travelexpense/src/report\+Generator.cpp File Reference}
+\hypertarget{report_generator_8cpp}{}\label{report_generator_8cpp}\index{src/travelexpense/src/reportGenerator.cpp@{src/travelexpense/src/reportGenerator.cpp}}
+
+
+Seyahat Gideri Takibi -\/ Rapor Oluşturma Implementation.  
+
+
+{\ttfamily \#include \"{}../header/report\+Generator.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/trip\+Manager.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/expense\+Manager.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/budget\+Manager.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/helpers.\+h\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+Include dependency graph for report\+Generator.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{report_generator_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense}{Travel\+Expense}}
+\begin{DoxyCompactList}\small\item\em Ana namespace -\/ Seyahat Gideri Takibi uygulaması \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_report_generator}{Travel\+Expense\+::\+Report\+Generator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_report_generator_a11092ae6775867e46e8394b8dc9df738}{Travel\+Expense\+::\+Report\+Generator\+::generate\+Report}} (int32\+\_\+t trip\+Id, std\+::string \&report)
+\begin{DoxyCompactList}\small\item\em Seyahat için özet rapor oluştur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_report_generator_a148c9b2e6caba9a6bb8cafada8ac6058}{Travel\+Expense\+::\+Report\+Generator\+::get\+Reports}} (int32\+\_\+t user\+Id, std\+::vector$<$ std\+::string $>$ \&reports)
+\begin{DoxyCompactList}\small\item\em Kullanıcıya ait raporları listele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_report_generator_a01211ec6473b3250e051bf1a41e96d60}{Travel\+Expense\+::\+Report\+Generator\+::save\+Report}} (int32\+\_\+t trip\+Id, const char \texorpdfstring{$\ast$}{*}filepath)
+\begin{DoxyCompactList}\small\item\em Raporu dosyaya kaydet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ Rapor Oluşturma Implementation. 
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}

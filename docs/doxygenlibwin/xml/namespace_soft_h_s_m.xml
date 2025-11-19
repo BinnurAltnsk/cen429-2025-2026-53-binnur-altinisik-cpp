@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_soft_h_s_m" kind="namespace" language="C++">
+    <compoundname>SoftHSM</compoundname>
+    <briefdescription>
+<para><ref refid="namespace_soft_h_s_m" kindref="compound">SoftHSM</ref> (PKCS#11) kriptografik işlemler modülü </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/travelexpense/header/softhsm.h" line="23" column="1"/>
+  </compounddef>
+</doxygen>

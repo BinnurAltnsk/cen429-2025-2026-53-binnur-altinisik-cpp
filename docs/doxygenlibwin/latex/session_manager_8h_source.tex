@@ -1,0 +1,84 @@
+\doxysection{session\+Manager.\+h}
+\hypertarget{session_manager_8h_source}{}\label{session_manager_8h_source}\index{src/travelexpense/header/sessionManager.h@{src/travelexpense/header/sessionManager.h}}
+\mbox{\hyperlink{session_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifndef\ SESSION\_MANAGER\_H}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ SESSION\_MANAGER\_H}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{common_types_8h}{commonTypes.h}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{export_8h}{export.h}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_travel_expense}{TravelExpense}}\ \{\ \textcolor{comment}{//\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_session_manager}{SessionManager}}\ \{}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ OTURUM\ ANAHTARI\ YÖNETİMİ}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00049\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_a12a41739ca5b6def4d5c42ef155d951c}{generateSessionKey}}(uint8\_t\ *sessionKey,\ \textcolor{keywordtype}{size\_t}\ sessionKeyLen);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00061\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_a7434e31c9b23e2a214624a2f68932efe}{encryptSessionKey}}(\textcolor{keyword}{const}\ uint8\_t\ *plainSessionKey,}
+\DoxyCodeLine{00062\ \ \ \ \ uint8\_t\ *encryptedSessionKey,}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \&encryptedLen);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00073\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_a95882d531215f84b305d891fc5f9631d}{decryptSessionKey}}(\textcolor{keyword}{const}\ uint8\_t\ *encryptedSessionKey,}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ encryptedLen,}
+\DoxyCodeLine{00075\ \ \ \ \ uint8\_t\ *plainSessionKey);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00078\ \textcolor{comment}{//\ CİHAZ\ BAĞLANTISI\ VE\ SÜRÜM\ KONTROLÜ}}
+\DoxyCodeLine{00079\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00089\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_aa420877416fa8452b1d1468585770e96}{getDeviceFingerprint}}(\textcolor{keywordtype}{char}\ *fingerprint);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00098\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_a85a30162b30da070bf49cd2ee0108ab8}{getApplicationVersion}}(\textcolor{keywordtype}{char}\ *version,\ \textcolor{keywordtype}{size\_t}\ versionLen);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00109\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_ad6e58bd9ca5d725609dd33e56febf537}{validateDeviceAndVersion}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *deviceFingerprint,}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *appVersion);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00113\ \textcolor{comment}{//\ GİZLİ\ VERİ\ (CONFIDENTIAL\ PAYLOAD)}}
+\DoxyCodeLine{00114\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00128\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_a98f8147a318c7a1b09f0a33cb45e370b}{encryptPayload}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *plaintext,\ \textcolor{keywordtype}{size\_t}\ plaintextLen,}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *sessionKey,}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ *ciphertext,\ \textcolor{keywordtype}{size\_t}\ \&ciphertextLen);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00142\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_a26e4f223ea8d2e55444a116613d7283c}{decryptPayload}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *ciphertext,\ \textcolor{keywordtype}{size\_t}\ ciphertextLen,}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *sessionKey,}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ *plaintext,\ \textcolor{keywordtype}{size\_t}\ \&plaintextLen);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00147\ \textcolor{comment}{//\ BÜTÜNLÜK\ KONTROLÜ\ VE\ KİMLİK\ DOĞRULAMA}}
+\DoxyCodeLine{00148\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00161\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_a66d5424f95a73b886a56e3671491d2a6}{calculateHMAC}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{size\_t}\ dataLen,}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *sessionKey,}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{char}\ *hmac);}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00174\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_aceef3c52f919a1a4f68686d3985b0812}{verifyHMAC}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{size\_t}\ dataLen,}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *sessionKey,}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expectedHMAC);}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00179\ \textcolor{comment}{//\ SUNUCU\ DOĞRULAMA\ KODU\ (DİJİTAL\ İMZA)}}
+\DoxyCodeLine{00180\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00192\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_ad56f31d3d436c019b72a4e7e530c2270}{signData}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{size\_t}\ dataLen,}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *signature);}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00203\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_aaf4139a793d646ebb66eac13338753b5}{verifySignature}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{size\_t}\ dataLen,}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *signature);}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \}\ \textcolor{comment}{//\ namespace\ SessionManager}}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \}\ \textcolor{comment}{//\ namespace\ TravelExpense\ //\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00210\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SESSION\_MANAGER\_H}}
+\DoxyCodeLine{00211\ }
+
+\end{DoxyCode}

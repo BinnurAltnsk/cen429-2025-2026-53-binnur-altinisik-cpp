@@ -1,0 +1,1443 @@
+\doxysection{Travel\+Expense\+::Soft\+HSM Namespace Reference}
+\hypertarget{namespace_travel_expense_1_1_soft_h_s_m}{}\label{namespace_travel_expense_1_1_soft_h_s_m}\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a6fb8347ca19497bb25f5f0a6e696d96f}{Error\+Code}} = \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24a}{Init\+Status}} \{ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aa02de9649e258d1dd94056e676061e969}{NOT\+\_\+\+INITIALIZED}} = 0
+, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aadee5f03c2c4e73657824e028494b18c0}{INITIALIZED}} = 1
+, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aabb1ca97ec761fc37101737ba0aa2e7c5}{ERROR}} = -\/1
+ \}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_soft_h_s_m}{Soft\+HSM} başlatma durumu. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021a}{Key\+Type}} \{ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021aa78a61f5f64f7ea0d31a7cc487d2b14e8}{AES\+\_\+256}} = 0
+, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021aa5b3bf47dace955c9874047820a78d5b8}{RSA\+\_\+2048}} = 1
+, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021aac5e459c10e5e8348c719df2702c3abe6}{EC\+\_\+\+P256}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Key tipi. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42}{Key\+Usage}} \{ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42a52db93ea6808e2184bfb7a4c8a3c0151}{ENCRYPT\+\_\+\+DECRYPT}} = 0
+, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42a6540894fc3bdc9f2597e6d1d4ea0e190}{SIGN\+\_\+\+VERIFY}} = 1
+, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42a7464a3e54ec3ca720fa0d199d59426a4}{WRAP\+\_\+\+UNWRAP}} = 2
+, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42abc63603c862fa6bdbb49fae1611c572c}{DERIVE}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Key kullanım amaçları \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_af71b3824984e7e34e84fc5c0a606b418}{initialize}} (const char \texorpdfstring{$\ast$}{*}library\+Path=nullptr, const char \texorpdfstring{$\ast$}{*}token\+Label=nullptr, const char \texorpdfstring{$\ast$}{*}pin=nullptr)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM}\textquotesingle{}yi başlat ve PKCS\#11 kütüphanesini yükle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aa08cccf8f5db8d63231a3b706351b212}{shutdown}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM}\textquotesingle{}yi kapat ve kaynakları temizle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24a}{Init\+Status}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a0fa272e6522244baa0af55f77332e6f5}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM} başlatma durumunu kontrol et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a0d330cfb5deff1a7731392c78c8a4757}{create\+Token}} (const char \texorpdfstring{$\ast$}{*}label, const char \texorpdfstring{$\ast$}{*}pin, const char \texorpdfstring{$\ast$}{*}so\+Pin)
+\begin{DoxyCompactList}\small\item\em Token oluştur (eğer yoksa) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a1dd53afa782d6054163658a225a3e3bf}{open\+Token}} (const char \texorpdfstring{$\ast$}{*}label, const char \texorpdfstring{$\ast$}{*}pin)
+\begin{DoxyCompactList}\small\item\em Token aç (oturum başlat) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a355d45677c9adebfb9afa591275bb8d4}{close\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Token\textquotesingle{}ı kapat (oturum kapat) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a100a3043a4e2c9d8cd6922248a46f335}{generate\+Key}} (\mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021a}{Key\+Type}} key\+Type, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42}{Key\+Usage}} key\+Usage, const char \texorpdfstring{$\ast$}{*}key\+Label, uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t \&key\+Id\+Len)
+\begin{DoxyCompactList}\small\item\em Anahtar oluştur (generate key) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a04b9cc48d95cd483ab84818c43ed967d}{import\+Key}} (\mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021a}{Key\+Type}} key\+Type, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Data, size\+\_\+t key\+Data\+Len, const char \texorpdfstring{$\ast$}{*}key\+Label, uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t \&key\+Id\+Len)
+\begin{DoxyCompactList}\small\item\em Anahtarı içe aktar (import key) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_af8527db38f2e8d22d54baf72e43315cf}{find\+Key}} (const char \texorpdfstring{$\ast$}{*}key\+Label, uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t \&key\+Id\+Len)
+\begin{DoxyCompactList}\small\item\em Anahtarı bul (find key by label) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aa4b7ad5db79291a92b339855944a4208}{delete\+Key}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t key\+Id\+Len)
+\begin{DoxyCompactList}\small\item\em Anahtarı sil. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aa76da1d2f45b48a32039219d89930d6b}{encrypt}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t key\+Id\+Len, const void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t plaintext\+Len, void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t \&ciphertext\+Len, uint8\+\_\+t \texorpdfstring{$\ast$}{*}iv=nullptr)
+\begin{DoxyCompactList}\small\item\em Veriyi şifrele (encrypt using HSM key) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_af50d97c17003e1b54df285fbf5fa76b9}{decrypt}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t key\+Id\+Len, const void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t ciphertext\+Len, void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t \&plaintext\+Len, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}iv=nullptr)
+\begin{DoxyCompactList}\small\item\em Veriyi şifre çöz (decrypt using HSM key) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ac14ac62bb1ee91f10908af2ba8f7a832}{sign}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t key\+Id\+Len, const void \texorpdfstring{$\ast$}{*}data, size\+\_\+t data\+Len, void \texorpdfstring{$\ast$}{*}signature, size\+\_\+t \&signature\+Len)
+\begin{DoxyCompactList}\small\item\em Veriyi imzala (sign data) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a6e1b43ac34b60670eafe4cb1c347335a}{verify}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t key\+Id\+Len, const void \texorpdfstring{$\ast$}{*}data, size\+\_\+t data\+Len, const void \texorpdfstring{$\ast$}{*}signature, size\+\_\+t signature\+Len)
+\begin{DoxyCompactList}\small\item\em İmzayı doğrula (verify signature) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ac132d386ec4642b70cbfc87db1dd84f3}{generate\+Random}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}output, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Rastgele veri üret (HSM\textquotesingle{}den güvenli random) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a627d80f41250c6562b1cd91521787245}{list\+Tokens}} (char labels\mbox{[}$\,$\mbox{]}\mbox{[}64\mbox{]}, size\+\_\+t \&count)
+\begin{DoxyCompactList}\small\item\em Mevcut token\textquotesingle{}ları listele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ae037de28b34ae8a110a65f222e52ac06}{list\+Keys}} (char labels\mbox{[}$\,$\mbox{]}\mbox{[}64\mbox{]}, size\+\_\+t \&count)
+\begin{DoxyCompactList}\small\item\em Mevcut anahtarları listele. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_a6fb8347ca19497bb25f5f0a6e696d96f}\label{namespace_travel_expense_1_1_soft_h_s_m_a6fb8347ca19497bb25f5f0a6e696d96f} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!ErrorCode@{ErrorCode}}
+\index{ErrorCode@{ErrorCode}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{ErrorCode}{ErrorCode}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Soft\+HSM\+::\+Error\+Code}} = typedef \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24a}\label{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24a} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!InitStatus@{InitStatus}}
+\index{InitStatus@{InitStatus}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{InitStatus}{InitStatus}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24a}{Travel\+Expense\+::\+Soft\+HSM\+::\+Init\+Status}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+\doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM} başlatma durumu. 
+
+\doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM} modülünün başlatma durumunu belirtir. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NOT\_INITIALIZED@{NOT\_INITIALIZED}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!NOT\_INITIALIZED@{NOT\_INITIALIZED}}}\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aa02de9649e258d1dd94056e676061e969}\label{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aa02de9649e258d1dd94056e676061e969} 
+NOT\+\_\+\+INITIALIZED&\doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM} henüz başlatılmadı \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INITIALIZED@{INITIALIZED}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!INITIALIZED@{INITIALIZED}}}\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aadee5f03c2c4e73657824e028494b18c0}\label{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aadee5f03c2c4e73657824e028494b18c0} 
+INITIALIZED&\doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM} başarıyla başlatıldı \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR@{ERROR}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!ERROR@{ERROR}}}\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aabb1ca97ec761fc37101737ba0aa2e7c5}\label{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aabb1ca97ec761fc37101737ba0aa2e7c5} 
+ERROR&\doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM} başlatma hatası \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021a}\label{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021a} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!KeyType@{KeyType}}
+\index{KeyType@{KeyType}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{KeyType}{KeyType}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021a}{Travel\+Expense\+::\+Soft\+HSM\+::\+Key\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Key tipi. 
+
+Desteklenen kriptografik anahtar tipleri. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AES\_256@{AES\_256}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!AES\_256@{AES\_256}}}\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021aa78a61f5f64f7ea0d31a7cc487d2b14e8}\label{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021aa78a61f5f64f7ea0d31a7cc487d2b14e8} 
+AES\+\_\+256&AES-\/256 simetrik şifreleme anahtarı \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RSA\_2048@{RSA\_2048}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!RSA\_2048@{RSA\_2048}}}\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021aa5b3bf47dace955c9874047820a78d5b8}\label{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021aa5b3bf47dace955c9874047820a78d5b8} 
+RSA\+\_\+2048&RSA-\/2048 asimetrik şifreleme anahtarı \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EC\_P256@{EC\_P256}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!EC\_P256@{EC\_P256}}}\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021aac5e459c10e5e8348c719df2702c3abe6}\label{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021aac5e459c10e5e8348c719df2702c3abe6} 
+EC\+\_\+\+P256&EC-\/\+P256 (secp256r1) eliptik eğri anahtarı \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42}\label{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!KeyUsage@{KeyUsage}}
+\index{KeyUsage@{KeyUsage}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{KeyUsage}{KeyUsage}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42}{Travel\+Expense\+::\+Soft\+HSM\+::\+Key\+Usage}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Key kullanım amaçları 
+
+Anahtarın hangi kriptografik işlemler için kullanılabileceğini belirtir. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENCRYPT\_DECRYPT@{ENCRYPT\_DECRYPT}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!ENCRYPT\_DECRYPT@{ENCRYPT\_DECRYPT}}}\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42a52db93ea6808e2184bfb7a4c8a3c0151}\label{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42a52db93ea6808e2184bfb7a4c8a3c0151} 
+ENCRYPT\+\_\+\+DECRYPT&Şifreleme ve şifre çözme işlemleri için. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SIGN\_VERIFY@{SIGN\_VERIFY}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!SIGN\_VERIFY@{SIGN\_VERIFY}}}\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42a6540894fc3bdc9f2597e6d1d4ea0e190}\label{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42a6540894fc3bdc9f2597e6d1d4ea0e190} 
+SIGN\+\_\+\+VERIFY&İmzalama ve doğrulama işlemleri için. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WRAP\_UNWRAP@{WRAP\_UNWRAP}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!WRAP\_UNWRAP@{WRAP\_UNWRAP}}}\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42a7464a3e54ec3ca720fa0d199d59426a4}\label{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42a7464a3e54ec3ca720fa0d199d59426a4} 
+WRAP\+\_\+\+UNWRAP&Anahtar sarma/çözme işlemleri için. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DERIVE@{DERIVE}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!DERIVE@{DERIVE}}}\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42abc63603c862fa6bdbb49fae1611c572c}\label{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42abc63603c862fa6bdbb49fae1611c572c} 
+DERIVE&Anahtar türetme işlemleri için. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_a355d45677c9adebfb9afa591275bb8d4}\label{namespace_travel_expense_1_1_soft_h_s_m_a355d45677c9adebfb9afa591275bb8d4} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!closeToken@{closeToken}}
+\index{closeToken@{closeToken}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{closeToken()}{closeToken()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Soft\+HSM\+::close\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Token\textquotesingle{}ı kapat (oturum kapat) 
+
+Token kapat ve session\textquotesingle{}ı sonlandır.
+
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu
+\end{DoxyReturn}
+
+
+Açık token session\textquotesingle{}ını kapatır. Önce logout yapılır, sonra session kapatılır. Session handle ve current slot sıfırlanır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, session açık değilse hiçbir işlem yapmaz ve Success döner.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_a0d330cfb5deff1a7731392c78c8a4757}\label{namespace_travel_expense_1_1_soft_h_s_m_a0d330cfb5deff1a7731392c78c8a4757} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!createToken@{createToken}}
+\index{createToken@{createToken}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{createToken()}{createToken()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Soft\+HSM\+::create\+Token (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{label,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{pin,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{so\+Pin }\end{DoxyParamCaption})}
+
+
+
+Token oluştur (eğer yoksa) 
+
+Token oluştur (simplified -\/ gerçek implementasyonda token creation gerekir)
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & Token etiketi \\
+\hline
+{\em pin} & PIN kodu \\
+\hline
+{\em so\+Pin} & \doxylink{namespace_travel_expense_1_1_security}{Security} Officer PIN kodu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu
+\end{DoxyReturn}
+
+
+\doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM} token\textquotesingle{}ları genellikle sistem seviyesinde oluşturulur. Bu fonksiyon sadece token label ve PIN bilgilerini kaydeder. Gerçek token oluşturma işlemi için \doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM} CLI komutları gerekir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, simplified bir implementasyon olup gerçek token oluşturma işlemini yapmaz. Sadece parametreleri saklar.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em label} & Token etiketi (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em pin} & PIN kodu (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em so\+Pin} & SO (\doxylink{namespace_travel_expense_1_1_security}{Security} Officer) PIN kodu (kullanılmıyor, nullptr olabilir) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_af50d97c17003e1b54df285fbf5fa76b9}\label{namespace_travel_expense_1_1_soft_h_s_m_af50d97c17003e1b54df285fbf5fa76b9} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Soft\+HSM\+::decrypt (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{key\+Id,  }\item[{size\+\_\+t}]{key\+Id\+Len,  }\item[{const void \texorpdfstring{$\ast$}{*}}]{ciphertext,  }\item[{size\+\_\+t}]{ciphertext\+Len,  }\item[{void \texorpdfstring{$\ast$}{*}}]{plaintext,  }\item[{size\+\_\+t \&}]{plaintext\+Len,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{iv = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Veriyi şifre çöz (decrypt using HSM key) 
+
+Şifrelenmiş veriyi çöz (AES-\/\+CBC)
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Id} & Anahtar ID\textquotesingle{}si \\
+\hline
+{\em key\+Id\+Len} & Anahtar ID uzunluğu \\
+\hline
+{\em ciphertext} & Şifrelenmiş veri \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu \\
+\hline
+{\em plaintext} & Şifre çözülmüş veri çıktısı \\
+\hline
+{\em plaintext\+Len} & Şifre çözülmüş veri uzunluğu (çıktı) \\
+\hline
+{\em iv} & IV (nullptr ise ciphertext\textquotesingle{}in başından okunur) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu
+\end{DoxyReturn}
+
+
+Belirtilen anahtar ile şifrelenmiş veriyi AES-\/\+CBC modunda çözer. IV (Initialization Vector) belirtilmemişse, ciphertext\textquotesingle{}in ilk 16 byte\textquotesingle{}ı IV olarak kullanılır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, açık bir session gerektirir (\doxylink{namespace_travel_expense_1_1_soft_h_s_m_a1dd53afa782d6054163658a225a3e3bf}{open\+Token()} çağrılmış olmalı). AES-\/\+CBC-\/\+PAD mekanizması kullanılır, bu nedenle padding otomatik olarak kaldırılır. Plaintext boyutu, ciphertext boyutundan küçük veya eşit olabilir.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Id} & Şifre çözme anahtarının ID\textquotesingle{}si (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em key\+Id\+Len} & key\+Id buffer boyutu \\
+\hline
+{\em ciphertext} & Şifrelenmiş veri (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu (byte, 0 ise Invalid\+Input döner) \\
+\hline
+{\em plaintext} & Çözülmüş veri çıktısı (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em plaintext\+Len} & plaintext buffer boyutu (giriş), çözülmüş veri boyutu (çıktı) \\
+\hline
+{\em iv} & Initialization Vector (nullptr ise ciphertext\textquotesingle{}in ilk 16 byte\textquotesingle{}ı kullanılır) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+IV (Initialization Vector) alma
+
+Eğer IV verilmemişse, ciphertext\textquotesingle{}in ilk 16 byte\textquotesingle{}ı IV olarak kullanılır. Bu, yaygın bir uygulama pratiğidir (IV + ciphertext formatı). Eğer IV verilmemiş ve ciphertext 16 byte\textquotesingle{}dan küçükse, hata döner.
+
+\texorpdfstring{$<$}{<} Local IV buffer (16 byte = AES block size)
+
+IV verilmemiş ve ciphertext yeterli uzunlukta\+: Ciphertext\textquotesingle{}in ilk 16 byte\textquotesingle{}ı IV olarak kullanılır.
+
+IV verilmemiş ve ciphertext yeterli uzunlukta değil\+: hata
+
+AES-\/\+CBC mekanizması ayarlama
+
+CKM\+\_\+\+AES\+\_\+\+CBC\+\_\+\+PAD mekanizması kullanılır. Bu mekanizma, PKCS7 padding otomatik olarak kaldırır. IV, mechanism parametresi olarak belirtilir (16 byte).
+
+\texorpdfstring{$<$}{<} AES-\/\+CBC modu + PKCS7 padding
+
+\texorpdfstring{$<$}{<} IV (16 byte)
+
+\texorpdfstring{$<$}{<} IV uzunluğu (16 byte)
+
+IV (Initialization Vector) alma
+
+Eğer IV verilmemişse, ciphertext\textquotesingle{}in ilk 16 byte\textquotesingle{}ı IV olarak kullanılır. Bu, yaygın bir uygulama pratiğidir (IV + ciphertext formatı). Eğer IV verilmemiş ve ciphertext 16 byte\textquotesingle{}dan küçükse, hata döner.
+
+\texorpdfstring{$<$}{<} Local IV buffer (16 byte = AES block size)
+
+IV verilmemiş ve ciphertext yeterli uzunlukta\+: Ciphertext\textquotesingle{}in ilk 16 byte\textquotesingle{}ı IV olarak kullanılır.
+
+IV verilmemiş ve ciphertext yeterli uzunlukta değil\+: hata
+
+AES-\/\+CBC mekanizması ayarlama
+
+CKM\+\_\+\+AES\+\_\+\+CBC\+\_\+\+PAD mekanizması kullanılır. Bu mekanizma, PKCS7 padding otomatik olarak kaldırır. IV, mechanism parametresi olarak belirtilir (16 byte).
+
+\texorpdfstring{$<$}{<} AES-\/\+CBC modu + PKCS7 padding
+
+\texorpdfstring{$<$}{<} IV (16 byte)
+
+\texorpdfstring{$<$}{<} IV uzunluğu (16 byte)\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_aa4b7ad5db79291a92b339855944a4208}\label{namespace_travel_expense_1_1_soft_h_s_m_aa4b7ad5db79291a92b339855944a4208} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!deleteKey@{deleteKey}}
+\index{deleteKey@{deleteKey}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{deleteKey()}{deleteKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Soft\+HSM\+::delete\+Key (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{key\+Id,  }\item[{size\+\_\+t}]{key\+Id\+Len }\end{DoxyParamCaption})}
+
+
+
+Anahtarı sil. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Id} & Anahtar ID\textquotesingle{}si \\
+\hline
+{\em key\+Id\+Len} & Anahtar ID uzunluğu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu
+\end{DoxyReturn}
+
+
+Belirtilen key\+Id\textquotesingle{}ye sahip anahtarı token üzerinden siler. C\+\_\+\+Destroy\+Object kullanılarak anahtar kalıcı olarak silinir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, açık bir session gerektirir (\doxylink{namespace_travel_expense_1_1_soft_h_s_m_a1dd53afa782d6054163658a225a3e3bf}{open\+Token()} çağrılmış olmalı). Anahtar silindikten sonra geri getirilemez.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Id} & Silinecek anahtarın ID\textquotesingle{}si (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em key\+Id\+Len} & key\+Id buffer boyutu (CK\+\_\+\+OBJECT\+\_\+\+HANDLE boyutu olmalı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_aa76da1d2f45b48a32039219d89930d6b}\label{namespace_travel_expense_1_1_soft_h_s_m_aa76da1d2f45b48a32039219d89930d6b} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Soft\+HSM\+::encrypt (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{key\+Id,  }\item[{size\+\_\+t}]{key\+Id\+Len,  }\item[{const void \texorpdfstring{$\ast$}{*}}]{plaintext,  }\item[{size\+\_\+t}]{plaintext\+Len,  }\item[{void \texorpdfstring{$\ast$}{*}}]{ciphertext,  }\item[{size\+\_\+t \&}]{ciphertext\+Len,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{iv = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Veriyi şifrele (encrypt using HSM key) 
+
+Veriyi şifrele (AES-\/\+CBC)
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Id} & Anahtar ID\textquotesingle{}si \\
+\hline
+{\em key\+Id\+Len} & Anahtar ID uzunluğu \\
+\hline
+{\em plaintext} & Şifrelenecek veri \\
+\hline
+{\em plaintext\+Len} & Veri uzunluğu \\
+\hline
+{\em ciphertext} & Şifrelenmiş veri çıktısı \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu (çıktı) \\
+\hline
+{\em iv} & IV çıktısı (nullptr ise otomatik oluşturulur) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu
+\end{DoxyReturn}
+
+
+Belirtilen anahtar ile veriyi AES-\/\+CBC modunda şifreler. IV (Initialization Vector) belirtilmemişse, PKCS\#11\textquotesingle{}nin rastgele sayı üreticisi ile oluşturulur.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, açık bir session gerektirir (\doxylink{namespace_travel_expense_1_1_soft_h_s_m_a1dd53afa782d6054163658a225a3e3bf}{open\+Token()} çağrılmış olmalı). AES-\/\+CBC-\/\+PAD mekanizması kullanılır, bu nedenle padding otomatik olarak eklenir. Ciphertext boyutu, plaintext boyutundan büyük olabilir.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Id} & Şifreleme anahtarının ID\textquotesingle{}si (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em key\+Id\+Len} & key\+Id buffer boyutu \\
+\hline
+{\em plaintext} & Şifrelenecek veri (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em plaintext\+Len} & Veri uzunluğu (byte, 0 ise Invalid\+Input döner) \\
+\hline
+{\em ciphertext} & Şifrelenmiş veri çıktısı (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em ciphertext\+Len} & ciphertext buffer boyutu (giriş), şifrelenmiş veri boyutu (çıktı) \\
+\hline
+{\em iv} & Initialization Vector (nullptr ise otomatik oluşturulur) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+IV (Initialization Vector) oluşturma
+
+Eğer IV verilmemişse, PKCS\#11\textquotesingle{}nin rastgele sayı üreticisi ile 16 byte (128 bit) IV oluşturulur. IV, AES-\/\+CBC modunda her şifreleme işlemi için benzersiz olmalıdır.
+
+\texorpdfstring{$<$}{<} Local IV buffer (16 byte = AES block size)
+
+IV verilmemiş\+: PKCS\#11 ile rastgele IV oluştur
+
+AES-\/\+CBC mekanizması ayarlama
+
+CKM\+\_\+\+AES\+\_\+\+CBC\+\_\+\+PAD mekanizması kullanılır. Bu mekanizma, PKCS7 padding otomatik olarak ekler ve kaldırır. IV, mechanism parametresi olarak belirtilir (16 byte).
+
+\texorpdfstring{$<$}{<} AES-\/\+CBC modu + PKCS7 padding
+
+\texorpdfstring{$<$}{<} IV (16 byte)
+
+\texorpdfstring{$<$}{<} IV uzunluğu (16 byte)
+
+IV (Initialization Vector) oluşturma
+
+Eğer IV verilmemişse, PKCS\#11\textquotesingle{}nin rastgele sayı üreticisi ile 16 byte (128 bit) IV oluşturulur. IV, AES-\/\+CBC modunda her şifreleme işlemi için benzersiz olmalıdır.
+
+\texorpdfstring{$<$}{<} Local IV buffer (16 byte = AES block size)
+
+IV verilmemiş\+: PKCS\#11 ile rastgele IV oluştur
+
+AES-\/\+CBC mekanizması ayarlama
+
+CKM\+\_\+\+AES\+\_\+\+CBC\+\_\+\+PAD mekanizması kullanılır. Bu mekanizma, PKCS7 padding otomatik olarak ekler ve kaldırır. IV, mechanism parametresi olarak belirtilir (16 byte).
+
+\texorpdfstring{$<$}{<} AES-\/\+CBC modu + PKCS7 padding
+
+\texorpdfstring{$<$}{<} IV (16 byte)
+
+\texorpdfstring{$<$}{<} IV uzunluğu (16 byte)\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_af8527db38f2e8d22d54baf72e43315cf}\label{namespace_travel_expense_1_1_soft_h_s_m_af8527db38f2e8d22d54baf72e43315cf} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!findKey@{findKey}}
+\index{findKey@{findKey}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{findKey()}{findKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Soft\+HSM\+::find\+Key (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{key\+Label,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{key\+Id,  }\item[{size\+\_\+t \&}]{key\+Id\+Len }\end{DoxyParamCaption})}
+
+
+
+Anahtarı bul (find key by label) 
+
+Anahtarı label\textquotesingle{}a göre bul.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Label} & Anahtar etiketi \\
+\hline
+{\em key\+Id} & Çıktı\+: Bulunan anahtar ID\textquotesingle{}si \\
+\hline
+{\em key\+Id\+Len} & Çıktı\+: Anahtar ID uzunluğu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu
+\end{DoxyReturn}
+
+
+Belirtilen label\textquotesingle{}a sahip anahtarı token üzerinde arar ve key\+Id\textquotesingle{}sini döndürür. Arama, C\+\_\+\+Find\+Objects\+Init ve C\+\_\+\+Find\+Objects kullanılarak yapılır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, açık bir session gerektirir (\doxylink{namespace_travel_expense_1_1_soft_h_s_m_a1dd53afa782d6054163658a225a3e3bf}{open\+Token()} çağrılmış olmalı). Anahtar bulunamazsa File\+Not\+Found döner.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Label} & Anahtar etiketi (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em key\+Id} & Bulunan anahtarın ID\textquotesingle{}si (çıktı, nullptr ise Invalid\+Input döner) \\
+\hline
+{\em key\+Id\+Len} & key\+Id buffer boyutu (giriş), bulunan ID boyutu (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, File\+Not\+Found, Invalid\+Input) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_a100a3043a4e2c9d8cd6922248a46f335}\label{namespace_travel_expense_1_1_soft_h_s_m_a100a3043a4e2c9d8cd6922248a46f335} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!generateKey@{generateKey}}
+\index{generateKey@{generateKey}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{generateKey()}{generateKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Soft\+HSM\+::generate\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021a}{Key\+Type}}}]{key\+Type,  }\item[{\mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42}{Key\+Usage}}}]{key\+Usage,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{key\+Label,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{key\+Id,  }\item[{size\+\_\+t \&}]{key\+Id\+Len }\end{DoxyParamCaption})}
+
+
+
+Anahtar oluştur (generate key) 
+
+Kriptografik anahtar oluştur.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Type} & Anahtar tipi (AES, RSA, EC) \\
+\hline
+{\em key\+Usage} & Anahtar kullanım amacı \\
+\hline
+{\em key\+Label} & Anahtar etiketi (identifier) \\
+\hline
+{\em key\+Id} & Çıktı\+: Oluşturulan anahtar ID\textquotesingle{}si \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu
+\end{DoxyReturn}
+
+
+Belirtilen tipte ve kullanım amacına göre kriptografik anahtar oluşturur. Desteklenen anahtar tipleri\+: AES-\/256, RSA-\/2048, EC-\/\+P256. Anahtar, token üzerinde saklanır ve key\+Id olarak döndürülür.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, açık bir session gerektirir (\doxylink{namespace_travel_expense_1_1_soft_h_s_m_a1dd53afa782d6054163658a225a3e3bf}{open\+Token()} çağrılmış olmalı). Simetrik anahtarlar (AES) için C\+\_\+\+Generate\+Key, asimetrik anahtarlar (RSA, EC) için C\+\_\+\+Generate\+Key\+Pair kullanılır.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Type} & Anahtar tipi (AES\+\_\+256, RSA\+\_\+2048, EC\+\_\+\+P256) \\
+\hline
+{\em key\+Usage} & Anahtar kullanım amacı (ENCRYPT\+\_\+\+DECRYPT, SIGN\+\_\+\+VERIFY, vb.) \\
+\hline
+{\em key\+Label} & Anahtar etiketi (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em key\+Id} & Oluşturulan anahtarın ID\textquotesingle{}si (çıktı, nullptr ise Invalid\+Input döner) \\
+\hline
+{\em key\+Id\+Len} & key\+Id buffer boyutu (giriş), oluşturulan ID boyutu (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+PKCS\#11 mekanizma ve attribute template oluşturma
+
+Key type\textquotesingle{}a göre uygun PKCS\#11 mekanizması ve attribute template\textquotesingle{}leri oluşturulur. Her anahtar tipi için farklı mekanizma ve key class kullanılır.
+
+\texorpdfstring{$<$}{<} Varsayılan\+: Secret key (AES için)
+
+\texorpdfstring{$<$}{<} Varsayılan\+: AES key type
+
+\texorpdfstring{$<$}{<} 32 bytes for AES-\/256
+
+Anahtar tipine göre PKCS\#11 mekanizması ve key class ayarlama
+
+Her anahtar tipi için farklı PKCS\#11 mekanizması ve key class kullanılır\+:
+\begin{DoxyItemize}
+\item AES\+\_\+256\+: CKM\+\_\+\+AES\+\_\+\+KEY\+\_\+\+GEN, CKO\+\_\+\+SECRET\+\_\+\+KEY, CKK\+\_\+\+AES
+\item RSA\+\_\+2048\+: CKM\+\_\+\+RSA\+\_\+\+PKCS\+\_\+\+KEY\+\_\+\+PAIR\+\_\+\+GEN, CKO\+\_\+\+PRIVATE\+\_\+\+KEY, CKK\+\_\+\+RSA
+\item EC\+\_\+\+P256\+: CKM\+\_\+\+EC\+\_\+\+KEY\+\_\+\+PAIR\+\_\+\+GEN, CKO\+\_\+\+PRIVATE\+\_\+\+KEY, CKK\+\_\+\+EC
+\end{DoxyItemize}
+
+PKCS\#11 attribute template oluşturma
+
+Anahtar özelliklerini belirten PKCS\#11 attribute\textquotesingle{}ları oluşturulur. Her attribute, anahtarın nasıl kullanılacağını ve saklanacağını belirtir.
+
+\texorpdfstring{$<$}{<} Anahtar sınıfı (secret key veya private key)
+
+\texorpdfstring{$<$}{<} Anahtar tipi (AES, RSA, EC)
+
+\texorpdfstring{$<$}{<} Anahtar etiketi (kullanıcı tanımlı)
+
+\texorpdfstring{$<$}{<} Boolean true değeri (PKCS\#11 attribute\textquotesingle{}ları için)
+
+\texorpdfstring{$<$}{<} Boolean false değeri (kullanılmıyor)
+
+\texorpdfstring{$<$}{<} Anahtar token\textquotesingle{}da saklanacak (kalıcı)
+
+\texorpdfstring{$<$}{<} Anahtar private (sadece PIN ile erişilebilir)
+
+Key usage attributes -\/ Anahtar kullanım amacına göre özellikler
+
+Anahtarın hangi işlemler için kullanılabileceğini belirten attribute\textquotesingle{}lar eklenir\+:
+\begin{DoxyItemize}
+\item ENCRYPT\+\_\+\+DECRYPT\+: CKA\+\_\+\+ENCRYPT ve CKA\+\_\+\+DECRYPT attribute\textquotesingle{}ları
+\item SIGN\+\_\+\+VERIFY\+: CKA\+\_\+\+SIGN ve CKA\+\_\+\+VERIFY attribute\textquotesingle{}ları
+\end{DoxyItemize}
+
+AES için key size attribute\textquotesingle{}u
+
+AES anahtarları için key size (256 bit = 32 byte) belirtilir. RSA ve EC anahtarları için key size attribute\textquotesingle{}u gerekmez.
+
+\texorpdfstring{$<$}{<} AES anahtar uzunluğu (32 byte)
+
+PKCS\#11 anahtar oluşturma
+
+Simetrik anahtarlar (AES) için C\+\_\+\+Generate\+Key, asimetrik anahtarlar (RSA, EC) için C\+\_\+\+Generate\+Key\+Pair kullanılır. Key pair generation için public key template\textquotesingle{}i de oluşturulmalıdır.
+
+\texorpdfstring{$<$}{<} Oluşturulan anahtar handle\textquotesingle{}ı
+
+\texorpdfstring{$<$}{<} PKCS\#11 return code
+
+Key pair generation -\/ Public key template
+
+Asimetrik anahtarlar (RSA, EC) için public key template\textquotesingle{}i oluşturulur. Public key template\textquotesingle{}i, key class ve key type bilgilerini içerir.
+
+\texorpdfstring{$<$}{<} Public key attribute template
+
+\texorpdfstring{$<$}{<} Public key template attribute sayısı
+
+Key ID oluşturma
+
+Oluşturulan anahtarın handle\textquotesingle{}ı key\+Id olarak kullanılır. Eğer key\+Id buffer yeterli büyüklükteyse (CK\+\_\+\+OBJECT\+\_\+\+HANDLE boyutu), handle kopyalanır. Aksi takdirde, label\textquotesingle{}den hash oluşturulur.
+
+Key ID buffer yeterli\+: handle\textquotesingle{}ı kopyala
+
+Key ID buffer küçük\+: label\textquotesingle{}den hash oluştur
+
+Bu durumda, label\textquotesingle{}ın ilk N karakteri key\+Id olarak kullanılır. N, key\+Id buffer boyutu ve label uzunluğunun minimum\textquotesingle{}udur.
+
+PKCS\#11 mekanizma ve attribute template oluşturma
+
+Key type\textquotesingle{}a göre uygun PKCS\#11 mekanizması ve attribute template\textquotesingle{}leri oluşturulur. Her anahtar tipi için farklı mekanizma ve key class kullanılır.
+
+\texorpdfstring{$<$}{<} Varsayılan\+: Secret key (AES için)
+
+\texorpdfstring{$<$}{<} Varsayılan\+: AES key type
+
+\texorpdfstring{$<$}{<} 32 bytes for AES-\/256
+
+Anahtar tipine göre PKCS\#11 mekanizması ve key class ayarlama
+
+Her anahtar tipi için farklı PKCS\#11 mekanizması ve key class kullanılır\+:
+\begin{DoxyItemize}
+\item AES\+\_\+256\+: CKM\+\_\+\+AES\+\_\+\+KEY\+\_\+\+GEN, CKO\+\_\+\+SECRET\+\_\+\+KEY, CKK\+\_\+\+AES
+\item RSA\+\_\+2048\+: CKM\+\_\+\+RSA\+\_\+\+PKCS\+\_\+\+KEY\+\_\+\+PAIR\+\_\+\+GEN, CKO\+\_\+\+PRIVATE\+\_\+\+KEY, CKK\+\_\+\+RSA
+\item EC\+\_\+\+P256\+: CKM\+\_\+\+EC\+\_\+\+KEY\+\_\+\+PAIR\+\_\+\+GEN, CKO\+\_\+\+PRIVATE\+\_\+\+KEY, CKK\+\_\+\+EC
+\end{DoxyItemize}
+
+PKCS\#11 attribute template oluşturma
+
+Anahtar özelliklerini belirten PKCS\#11 attribute\textquotesingle{}ları oluşturulur. Her attribute, anahtarın nasıl kullanılacağını ve saklanacağını belirtir.
+
+\texorpdfstring{$<$}{<} Anahtar sınıfı (secret key veya private key)
+
+\texorpdfstring{$<$}{<} Anahtar tipi (AES, RSA, EC)
+
+\texorpdfstring{$<$}{<} Anahtar etiketi (kullanıcı tanımlı)
+
+\texorpdfstring{$<$}{<} Boolean true değeri (PKCS\#11 attribute\textquotesingle{}ları için)
+
+\texorpdfstring{$<$}{<} Boolean false değeri (kullanılmıyor)
+
+\texorpdfstring{$<$}{<} Anahtar token\textquotesingle{}da saklanacak (kalıcı)
+
+\texorpdfstring{$<$}{<} Anahtar private (sadece PIN ile erişilebilir)
+
+Key usage attributes -\/ Anahtar kullanım amacına göre özellikler
+
+Anahtarın hangi işlemler için kullanılabileceğini belirten attribute\textquotesingle{}lar eklenir\+:
+\begin{DoxyItemize}
+\item ENCRYPT\+\_\+\+DECRYPT\+: CKA\+\_\+\+ENCRYPT ve CKA\+\_\+\+DECRYPT attribute\textquotesingle{}ları
+\item SIGN\+\_\+\+VERIFY\+: CKA\+\_\+\+SIGN ve CKA\+\_\+\+VERIFY attribute\textquotesingle{}ları
+\end{DoxyItemize}
+
+AES için key size attribute\textquotesingle{}u
+
+AES anahtarları için key size (256 bit = 32 byte) belirtilir. RSA ve EC anahtarları için key size attribute\textquotesingle{}u gerekmez.
+
+\texorpdfstring{$<$}{<} AES anahtar uzunluğu (32 byte)
+
+PKCS\#11 anahtar oluşturma
+
+Simetrik anahtarlar (AES) için C\+\_\+\+Generate\+Key, asimetrik anahtarlar (RSA, EC) için C\+\_\+\+Generate\+Key\+Pair kullanılır. Key pair generation için public key template\textquotesingle{}i de oluşturulmalıdır.
+
+\texorpdfstring{$<$}{<} Oluşturulan anahtar handle\textquotesingle{}ı
+
+\texorpdfstring{$<$}{<} PKCS\#11 return code
+
+Key pair generation -\/ Public key template
+
+Asimetrik anahtarlar (RSA, EC) için public key template\textquotesingle{}i oluşturulur. Public key template\textquotesingle{}i, key class ve key type bilgilerini içerir.
+
+\texorpdfstring{$<$}{<} Public key attribute template
+
+\texorpdfstring{$<$}{<} Public key template attribute sayısı
+
+Key ID oluşturma
+
+Oluşturulan anahtarın handle\textquotesingle{}ı key\+Id olarak kullanılır. Eğer key\+Id buffer yeterli büyüklükteyse (CK\+\_\+\+OBJECT\+\_\+\+HANDLE boyutu), handle kopyalanır. Aksi takdirde, label\textquotesingle{}den hash oluşturulur.
+
+Key ID buffer yeterli\+: handle\textquotesingle{}ı kopyala
+
+Key ID buffer küçük\+: label\textquotesingle{}den hash oluştur
+
+Bu durumda, label\textquotesingle{}ın ilk N karakteri key\+Id olarak kullanılır. N, key\+Id buffer boyutu ve label uzunluğunun minimum\textquotesingle{}udur.\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_ac132d386ec4642b70cbfc87db1dd84f3}\label{namespace_travel_expense_1_1_soft_h_s_m_ac132d386ec4642b70cbfc87db1dd84f3} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!generateRandom@{generateRandom}}
+\index{generateRandom@{generateRandom}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{generateRandom()}{generateRandom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Soft\+HSM\+::generate\+Random (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{output,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Rastgele veri üret (HSM\textquotesingle{}den güvenli random) 
+
+Kriptografik olarak güvenli rastgele veri üret.
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & Rastgele veri çıktısı \\
+\hline
+{\em length} & İstenen uzunluk (byte) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu
+\end{DoxyReturn}
+
+
+PKCS\#11\textquotesingle{}nin rastgele sayı üreticisini kullanarak kriptografik olarak güvenli rastgele veri üretir. C\+\_\+\+Generate\+Random fonksiyonu kullanılır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, açık bir session gerektirir (\doxylink{namespace_travel_expense_1_1_soft_h_s_m_a1dd53afa782d6054163658a225a3e3bf}{open\+Token()} çağrılmış olmalı). Üretilen rastgele veriler, kriptografik işlemler için uygundur (IV, salt, vb.).
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em output} & Rastgele veri çıktısı (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em length} & Üretilecek veri uzunluğu (byte, 0 ise Invalid\+Input döner) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_a0fa272e6522244baa0af55f77332e6f5}\label{namespace_travel_expense_1_1_soft_h_s_m_a0fa272e6522244baa0af55f77332e6f5} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24a}{Init\+Status}} Travel\+Expense\+::\+Soft\+HSM\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM} başlatma durumunu kontrol et. 
+
+\begin{DoxyReturn}{Returns}
+Init\+Status Başlatma durumu
+\end{DoxyReturn}
+
+
+\doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM} modülünün mevcut başlatma durumunu döndürür.
+
+\begin{DoxyReturn}{Returns}
+Init\+Status Mevcut durum (NOT\+\_\+\+INITIALIZED, INITIALIZED, ERROR) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_a04b9cc48d95cd483ab84818c43ed967d}\label{namespace_travel_expense_1_1_soft_h_s_m_a04b9cc48d95cd483ab84818c43ed967d} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!importKey@{importKey}}
+\index{importKey@{importKey}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{importKey()}{importKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Soft\+HSM\+::import\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021a}{Key\+Type}}}]{key\+Type,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{key\+Data,  }\item[{size\+\_\+t}]{key\+Data\+Len,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{key\+Label,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{key\+Id,  }\item[{size\+\_\+t \&}]{key\+Id\+Len }\end{DoxyParamCaption})}
+
+
+
+Anahtarı içe aktar (import key) 
+
+Anahtarı import et (simplified)
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Type} & Anahtar tipi \\
+\hline
+{\em key\+Data} & Anahtar verisi \\
+\hline
+{\em key\+Data\+Len} & Anahtar verisi uzunluğu \\
+\hline
+{\em key\+Label} & Anahtar etiketi \\
+\hline
+{\em key\+Id} & Çıktı\+: İçe aktarılan anahtar ID\textquotesingle{}si \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu
+\end{DoxyReturn}
+
+
+Belirtilen anahtar verisini token üzerine import eder. C\+\_\+\+Create\+Object kullanılarak anahtar oluşturulur ve token üzerinde saklanır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, açık bir session gerektirir (\doxylink{namespace_travel_expense_1_1_soft_h_s_m_a1dd53afa782d6054163658a225a3e3bf}{open\+Token()} çağrılmış olmalı). Desteklenen anahtar tipleri\+: AES-\/256, RSA-\/2048, EC-\/\+P256. Anahtar, token üzerinde saklanır ve key\+Id olarak döndürülür.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Type} & Anahtar tipi (AES\+\_\+256, RSA\+\_\+2048, EC\+\_\+\+P256) \\
+\hline
+{\em key\+Data} & Import edilecek anahtar verisi (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em key\+Data\+Len} & Anahtar verisi uzunluğu (byte, 0 ise Invalid\+Input döner) \\
+\hline
+{\em key\+Label} & Anahtar etiketi (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em key\+Id} & Import edilen anahtarın ID\textquotesingle{}si (çıktı, nullptr ise Invalid\+Input döner) \\
+\hline
+{\em key\+Id\+Len} & key\+Id buffer boyutu (giriş), oluşturulan ID boyutu (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+PKCS\#11 attribute template oluşturma (import için)
+
+Import edilecek anahtar için PKCS\#11 attribute template\textquotesingle{}i oluşturulur. Anahtar tipine göre farklı key class ve key type kullanılır.
+
+\texorpdfstring{$<$}{<} Attribute template dizisi (max 10 attribute)
+
+\texorpdfstring{$<$}{<} Template attribute sayısı
+
+\texorpdfstring{$<$}{<} Varsayılan\+: Secret key (AES için)
+
+\texorpdfstring{$<$}{<} Varsayılan\+: AES key type
+
+\texorpdfstring{$<$}{<} Boolean true değeri
+
+Anahtar tipine göre key class ve key type ayarlama
+
+Her anahtar tipi için farklı key class ve key type kullanılır\+:
+\begin{DoxyItemize}
+\item AES\+\_\+256\+: CKO\+\_\+\+SECRET\+\_\+\+KEY, CKK\+\_\+\+AES
+\item RSA\+\_\+2048\+: CKO\+\_\+\+PRIVATE\+\_\+\+KEY, CKK\+\_\+\+RSA
+\item EC\+\_\+\+P256\+: CKO\+\_\+\+PRIVATE\+\_\+\+KEY, CKK\+\_\+\+EC
+\end{DoxyItemize}
+
+PKCS\#11 attribute template oluşturma (import anahtar için)
+
+Import edilecek anahtar için gerekli attribute\textquotesingle{}lar oluşturulur\+:
+\begin{DoxyItemize}
+\item CKA\+\_\+\+CLASS\+: Anahtar sınıfı (secret key veya private key)
+\item CKA\+\_\+\+KEY\+\_\+\+TYPE\+: Anahtar tipi (AES, RSA, EC)
+\item CKA\+\_\+\+LABEL\+: Anahtar etiketi
+\item CKA\+\_\+\+VALUE\+: Anahtar verisi (import edilecek anahtar)
+\item CKA\+\_\+\+TOKEN\+: Token\textquotesingle{}da saklanacak (kalıcı)
+\item CKA\+\_\+\+ENCRYPT/\+CKA\+\_\+\+DECRYPT\+: Şifreleme/şifre çözme için kullanılabilir
+\end{DoxyItemize}
+
+\texorpdfstring{$<$}{<} Anahtar sınıfı
+
+\texorpdfstring{$<$}{<} Anahtar tipi
+
+\texorpdfstring{$<$}{<} Anahtar etiketi
+
+\texorpdfstring{$<$}{<} Anahtar verisi (import edilecek)
+
+\texorpdfstring{$<$}{<} Token\textquotesingle{}da saklanacak (kalıcı)
+
+\texorpdfstring{$<$}{<} Şifreleme için kullanılabilir
+
+\texorpdfstring{$<$}{<} Şifre çözme için kullanılabilir
+
+PKCS\#11 anahtar oluşturma (import)
+
+C\+\_\+\+Create\+Object ile import edilecek anahtar token üzerinde oluşturulur. Anahtar verisi (CKA\+\_\+\+VALUE) template içinde belirtilir.
+
+\texorpdfstring{$<$}{<} Oluşturulan anahtar handle\textquotesingle{}ı
+
+Key ID oluşturma (import için)
+
+Import edilen anahtarın handle\textquotesingle{}ı key\+Id olarak kullanılır. key\+Id buffer, CK\+\_\+\+OBJECT\+\_\+\+HANDLE boyutunda olmalıdır. Eğer buffer yeterli değilse, Invalid\+Input hatası döner.
+
+Key ID buffer yeterli\+: handle\textquotesingle{}ı kopyala
+
+Key ID buffer yetersiz\+: hata döner
+
+Import işleminde, key\+Id buffer mutlaka CK\+\_\+\+OBJECT\+\_\+\+HANDLE boyutunda olmalıdır. Aksi takdirde, handle kopyalanamaz.
+
+PKCS\#11 attribute template oluşturma (import için)
+
+Import edilecek anahtar için PKCS\#11 attribute template\textquotesingle{}i oluşturulur. Anahtar tipine göre farklı key class ve key type kullanılır.
+
+\texorpdfstring{$<$}{<} Attribute template dizisi (max 10 attribute)
+
+\texorpdfstring{$<$}{<} Template attribute sayısı
+
+\texorpdfstring{$<$}{<} Varsayılan\+: Secret key (AES için)
+
+\texorpdfstring{$<$}{<} Varsayılan\+: AES key type
+
+\texorpdfstring{$<$}{<} Boolean true değeri
+
+Anahtar tipine göre key class ve key type ayarlama
+
+Her anahtar tipi için farklı key class ve key type kullanılır\+:
+\begin{DoxyItemize}
+\item AES\+\_\+256\+: CKO\+\_\+\+SECRET\+\_\+\+KEY, CKK\+\_\+\+AES
+\item RSA\+\_\+2048\+: CKO\+\_\+\+PRIVATE\+\_\+\+KEY, CKK\+\_\+\+RSA
+\item EC\+\_\+\+P256\+: CKO\+\_\+\+PRIVATE\+\_\+\+KEY, CKK\+\_\+\+EC
+\end{DoxyItemize}
+
+PKCS\#11 attribute template oluşturma (import anahtar için)
+
+Import edilecek anahtar için gerekli attribute\textquotesingle{}lar oluşturulur\+:
+\begin{DoxyItemize}
+\item CKA\+\_\+\+CLASS\+: Anahtar sınıfı (secret key veya private key)
+\item CKA\+\_\+\+KEY\+\_\+\+TYPE\+: Anahtar tipi (AES, RSA, EC)
+\item CKA\+\_\+\+LABEL\+: Anahtar etiketi
+\item CKA\+\_\+\+VALUE\+: Anahtar verisi (import edilecek anahtar)
+\item CKA\+\_\+\+TOKEN\+: Token\textquotesingle{}da saklanacak (kalıcı)
+\item CKA\+\_\+\+ENCRYPT/\+CKA\+\_\+\+DECRYPT\+: Şifreleme/şifre çözme için kullanılabilir
+\end{DoxyItemize}
+
+\texorpdfstring{$<$}{<} Anahtar sınıfı
+
+\texorpdfstring{$<$}{<} Anahtar tipi
+
+\texorpdfstring{$<$}{<} Anahtar etiketi
+
+\texorpdfstring{$<$}{<} Anahtar verisi (import edilecek)
+
+\texorpdfstring{$<$}{<} Token\textquotesingle{}da saklanacak (kalıcı)
+
+\texorpdfstring{$<$}{<} Şifreleme için kullanılabilir
+
+\texorpdfstring{$<$}{<} Şifre çözme için kullanılabilir
+
+PKCS\#11 anahtar oluşturma (import)
+
+C\+\_\+\+Create\+Object ile import edilecek anahtar token üzerinde oluşturulur. Anahtar verisi (CKA\+\_\+\+VALUE) template içinde belirtilir.
+
+\texorpdfstring{$<$}{<} Oluşturulan anahtar handle\textquotesingle{}ı
+
+Key ID oluşturma (import için)
+
+Import edilen anahtarın handle\textquotesingle{}ı key\+Id olarak kullanılır. key\+Id buffer, CK\+\_\+\+OBJECT\+\_\+\+HANDLE boyutunda olmalıdır. Eğer buffer yeterli değilse, Invalid\+Input hatası döner.
+
+Key ID buffer yeterli\+: handle\textquotesingle{}ı kopyala
+
+Key ID buffer yetersiz\+: hata döner
+
+Import işleminde, key\+Id buffer mutlaka CK\+\_\+\+OBJECT\+\_\+\+HANDLE boyutunda olmalıdır. Aksi takdirde, handle kopyalanamaz.\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_af71b3824984e7e34e84fc5c0a606b418}\label{namespace_travel_expense_1_1_soft_h_s_m_af71b3824984e7e34e84fc5c0a606b418} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!initialize@{initialize}}
+\index{initialize@{initialize}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Soft\+HSM\+::initialize (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{library\+Path = {\ttfamily nullptr},  }\item[{const char \texorpdfstring{$\ast$}{*}}]{token\+Label = {\ttfamily nullptr},  }\item[{const char \texorpdfstring{$\ast$}{*}}]{pin = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM}\textquotesingle{}yi başlat ve PKCS\#11 kütüphanesini yükle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em library\+Path} & \doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM} PKCS\#11 kütüphanesi yolu (nullptr ise otomatik bulma yapılır) \\
+\hline
+{\em token\+Label} & Token etiketi (nullptr ise varsayılan token oluşturulur) \\
+\hline
+{\em pin} & PIN kodu (nullptr ise varsayılan \"{}1234\"{} kullanılır) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu
+\end{DoxyReturn}
+
+
+\doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM} modülünü başlatır ve belirtilen PKCS\#11 kütüphanesini yükler. Eğer {\ttfamily library\+Path} nullptr ise, sistemdeki varsayılan kütüphane aranır. {\ttfamily token\+Label} ve {\ttfamily pin} nullptr ise varsayılan değerler kullanılır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, zaten başlatılmışsa (\doxylink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aadee5f03c2c4e73657824e028494b18c0}{Init\+Status\+::\+INITIALIZED}) hiçbir işlem yapmaz ve Success döner. PKCS\#11 kütüphanesi yüklendikten sonra, C\+\_\+\+Initialize() çağrılır ve token label ile PIN kaydedilir.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em library\+Path} & \doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM} PKCS\#11 kütüphanesi yolu (nullptr ise otomatik bulma yapılır) \\
+\hline
+{\em token\+Label} & Token etiketi (nullptr ise varsayılan \"{}\+Travel\+Expense\"{} kullanılır) \\
+\hline
+{\em pin} & PIN kodu (nullptr ise varsayılan \"{}1234\"{} kullanılır) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_ae037de28b34ae8a110a65f222e52ac06}\label{namespace_travel_expense_1_1_soft_h_s_m_ae037de28b34ae8a110a65f222e52ac06} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!listKeys@{listKeys}}
+\index{listKeys@{listKeys}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{listKeys()}{listKeys()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Soft\+HSM\+::list\+Keys (\begin{DoxyParamCaption}\item[{char}]{labels\mbox{[}$\,$\mbox{]}\mbox{[}64\mbox{]},  }\item[{size\+\_\+t \&}]{count }\end{DoxyParamCaption})}
+
+
+
+Mevcut anahtarları listele. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em labels} & Çıktı\+: Anahtar etiketleri dizisi (max 50 key) \\
+\hline
+{\em count} & Çıktı\+: Bulunan anahtar sayısı \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu
+\end{DoxyReturn}
+
+
+Token üzerinde mevcut tüm secret key\textquotesingle{}lerin label\textquotesingle{}larını listeler. C\+\_\+\+Find\+Objects\+Init, C\+\_\+\+Find\+Objects ve C\+\_\+\+Get\+Attribute\+Value kullanılarak anahtar bilgileri alınır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, açık bir session gerektirir (\doxylink{namespace_travel_expense_1_1_soft_h_s_m_a1dd53afa782d6054163658a225a3e3bf}{open\+Token()} çağrılmış olmalı). Maksimum 50 anahtar listelenir. Sadece secret key\textquotesingle{}ler listelenir.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em labels} & Anahtar label\textquotesingle{}ları dizisi (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em count} & labels dizisi boyutu (giriş), bulunan anahtar sayısı (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+Anahtar label\textquotesingle{}larını toplama
+
+Token üzerindeki tüm secret key\textquotesingle{}lerin label\textquotesingle{}ları alınır ve listeye eklenir. Maksimum 50 anahtar listelenir (performans için sınır). Her anahtar için C\+\_\+\+Get\+Attribute\+Value ile label attribute\textquotesingle{}u alınır.
+
+\texorpdfstring{$<$}{<} Bulunan anahtar sayısı
+
+\texorpdfstring{$<$}{<} Maksimum listelenecek anahtar sayısı
+
+Anahtar bulma ve label alma döngüsü
+
+C\+\_\+\+Find\+Objects ile her iterasyonda bir anahtar bulunur. Her anahtar için C\+\_\+\+Get\+Attribute\+Value ile label attribute\textquotesingle{}u alınır. Label bulunursa, listeye eklenir.
+
+\texorpdfstring{$<$}{<} Bulunan anahtar handle\textquotesingle{}ı
+
+\texorpdfstring{$<$}{<} Bulunan obje sayısı
+
+Anahtar bulunamadı\+: döngüden çık
+
+Label attribute\textquotesingle{}unu alma
+
+C\+\_\+\+Get\+Attribute\+Value ile anahtarın CKA\+\_\+\+LABEL attribute\textquotesingle{}u alınır. Label, 64 karakter buffer\textquotesingle{}a yazılır ve null-\/terminated olarak ayarlanır.
+
+\texorpdfstring{$<$}{<} Label attribute tipi
+
+\texorpdfstring{$<$}{<} Label buffer (64 karakter)
+
+\texorpdfstring{$<$}{<} Buffer boyutu -\/ 1 (null terminator için)
+
+Label başarıyla alındı\+: listeye ekle
+
+\texorpdfstring{$<$}{<} Null terminator garanti
+
+Anahtar label\textquotesingle{}larını toplama
+
+Token üzerindeki tüm secret key\textquotesingle{}lerin label\textquotesingle{}ları alınır ve listeye eklenir. Maksimum 50 anahtar listelenir (performans için sınır). Her anahtar için C\+\_\+\+Get\+Attribute\+Value ile label attribute\textquotesingle{}u alınır.
+
+\texorpdfstring{$<$}{<} Bulunan anahtar sayısı
+
+\texorpdfstring{$<$}{<} Maksimum listelenecek anahtar sayısı
+
+Anahtar bulma ve label alma döngüsü
+
+C\+\_\+\+Find\+Objects ile her iterasyonda bir anahtar bulunur. Her anahtar için C\+\_\+\+Get\+Attribute\+Value ile label attribute\textquotesingle{}u alınır. Label bulunursa, listeye eklenir.
+
+\texorpdfstring{$<$}{<} Bulunan anahtar handle\textquotesingle{}ı
+
+\texorpdfstring{$<$}{<} Bulunan obje sayısı
+
+Anahtar bulunamadı\+: döngüden çık
+
+Label attribute\textquotesingle{}unu alma
+
+C\+\_\+\+Get\+Attribute\+Value ile anahtarın CKA\+\_\+\+LABEL attribute\textquotesingle{}u alınır. Label, 64 karakter buffer\textquotesingle{}a yazılır ve null-\/terminated olarak ayarlanır.
+
+\texorpdfstring{$<$}{<} Label attribute tipi
+
+\texorpdfstring{$<$}{<} Label buffer (64 karakter)
+
+\texorpdfstring{$<$}{<} Buffer boyutu -\/ 1 (null terminator için)
+
+Label başarıyla alındı\+: listeye ekle
+
+\texorpdfstring{$<$}{<} Null terminator garanti\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_a627d80f41250c6562b1cd91521787245}\label{namespace_travel_expense_1_1_soft_h_s_m_a627d80f41250c6562b1cd91521787245} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!listTokens@{listTokens}}
+\index{listTokens@{listTokens}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{listTokens()}{listTokens()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Soft\+HSM\+::list\+Tokens (\begin{DoxyParamCaption}\item[{char}]{labels\mbox{[}$\,$\mbox{]}\mbox{[}64\mbox{]},  }\item[{size\+\_\+t \&}]{count }\end{DoxyParamCaption})}
+
+
+
+Mevcut token\textquotesingle{}ları listele. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em labels} & Çıktı\+: Token etiketleri dizisi (max 10 token) \\
+\hline
+{\em count} & Çıktı\+: Bulunan token sayısı \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu
+\end{DoxyReturn}
+
+
+Sistemde mevcut tüm token\textquotesingle{}ların label\textquotesingle{}larını listeler. C\+\_\+\+Get\+Slot\+List ve C\+\_\+\+Get\+Token\+Info kullanılarak token bilgileri alınır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, \doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM}\textquotesingle{}nin INITIALIZED durumunda olmasını gerektirir. Maksimum 10 token listelenir. Token label\textquotesingle{}ları, boşluklarla doldurulmuş olabilir, bu nedenle son boşluklar temizlenir.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em labels} & Token label\textquotesingle{}ları dizisi (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em count} & labels dizisi boyutu (giriş), bulunan token sayısı (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+Token label\textquotesingle{}larını toplama
+
+Her slot\textquotesingle{}taki token\textquotesingle{}ın label\textquotesingle{}ı alınır ve listeye eklenir. Maksimum 10 token listelenir (performans için sınır). Token label\textquotesingle{}ları PKCS\#11\textquotesingle{}de boşluklarla doldurulmuş olabilir, bu nedenle son boşluklar temizlenir.
+
+\texorpdfstring{$<$}{<} Bulunan token sayısı
+
+\texorpdfstring{$<$}{<} Token bilgisi
+
+Token bulundu\+: Label\textquotesingle{}i kopyala ve boşlukları temizle
+
+PKCS\#11 token label\textquotesingle{}ları 32 byte uzunluğunda ve null-\/terminated değildir. Boşluklarla doldurulmuş olabilir, bu nedenle son boşluklar temizlenir.
+
+Token label\textquotesingle{}larını toplama
+
+Her slot\textquotesingle{}taki token\textquotesingle{}ın label\textquotesingle{}ı alınır ve listeye eklenir. Maksimum 10 token listelenir (performans için sınır). Token label\textquotesingle{}ları PKCS\#11\textquotesingle{}de boşluklarla doldurulmuş olabilir, bu nedenle son boşluklar temizlenir.
+
+\texorpdfstring{$<$}{<} Bulunan token sayısı
+
+\texorpdfstring{$<$}{<} Token bilgisi
+
+Token bulundu\+: Label\textquotesingle{}i kopyala ve boşlukları temizle
+
+PKCS\#11 token label\textquotesingle{}ları 32 byte uzunluğunda ve null-\/terminated değildir. Boşluklarla doldurulmuş olabilir, bu nedenle son boşluklar temizlenir.\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_a1dd53afa782d6054163658a225a3e3bf}\label{namespace_travel_expense_1_1_soft_h_s_m_a1dd53afa782d6054163658a225a3e3bf} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!openToken@{openToken}}
+\index{openToken@{openToken}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{openToken()}{openToken()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Soft\+HSM\+::open\+Token (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{label,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{pin }\end{DoxyParamCaption})}
+
+
+
+Token aç (oturum başlat) 
+
+Token aç ve session başlat.
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & Token etiketi (nullptr ise varsayılan token) \\
+\hline
+{\em pin} & PIN kodu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu
+\end{DoxyReturn}
+
+
+Belirtilen token\textquotesingle{}ı açar ve PKCS\#11 session başlatır. Token label\textquotesingle{}a göre slot listesinde token aranır, bulunduktan sonra session açılır ve PIN ile login yapılır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, \doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM}\textquotesingle{}nin INITIALIZED durumunda olmasını gerektirir. Eğer label nullptr ise, kaydedilmiş g\+\_\+token\+Label kullanılır. Eğer pin nullptr ise, kaydedilmiş g\+\_\+pin kullanılır.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em label} & Token etiketi (nullptr ise kaydedilmiş label kullanılır) \\
+\hline
+{\em pin} & PIN kodu (nullptr ise kaydedilmiş PIN kullanılır) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+Slot listesi alma
+
+C\+\_\+\+Get\+Slot\+List ile token içeren slot\textquotesingle{}ların listesi alınır. İlk çağrıda slot sayısı alınır, ikinci çağrıda slot ID\textquotesingle{}leri alınır.
+
+\texorpdfstring{$<$}{<} Token içeren slot sayısı (çıktı)
+
+\texorpdfstring{$<$}{<} Slot ID\textquotesingle{}leri dizisi
+
+Label\textquotesingle{}a göre token bulma
+
+Her slot\textquotesingle{}taki token\textquotesingle{}ın label\textquotesingle{}ı kontrol edilir ve aranan label ile karşılaştırılır. Token label\textquotesingle{}ları PKCS\#11\textquotesingle{}de null-\/terminated değildir, boşluklarla doldurulmuş olabilir, bu nedenle temizlenir.
+
+\texorpdfstring{$<$}{<} Varsayılan olarak ilk slot
+
+\texorpdfstring{$<$}{<} Aranacak token label
+
+Token label karşılaştırması
+
+Her slot\textquotesingle{}taki token\textquotesingle{}ın label\textquotesingle{}ı C\+\_\+\+Get\+Token\+Info ile alınır ve aranan label ile karşılaştırılır. Eşleşme bulunursa, o slot seçilir.
+
+PKCS\#11 session açma
+
+Seçilen slot\textquotesingle{}ta read-\/write session açılır. CKF\+\_\+\+RW\+\_\+\+SESSION flag\textquotesingle{}i ile yazma işlemleri yapılabilir, CKF\+\_\+\+SERIAL\+\_\+\+SESSION flag\textquotesingle{}i ile serial session açılır (paralel session değil).
+
+\texorpdfstring{$<$}{<} Read-\/write ve serial session flag\textquotesingle{}leri
+
+PIN ile login
+
+Kullanıcı PIN\textquotesingle{}i ile token\textquotesingle{}a login yapılır. CKU\+\_\+\+USER ile normal kullanıcı olarak login yapılır. Eğer zaten login yapılmışsa (CKR\+\_\+\+USER\+\_\+\+ALREADY\+\_\+\+LOGGED\+\_\+\+IN), hata olarak kabul edilmez.
+
+\texorpdfstring{$<$}{<} Kullanılacak PIN (parametre veya kaydedilmiş)
+
+Slot listesi alma
+
+C\+\_\+\+Get\+Slot\+List ile token içeren slot\textquotesingle{}ların listesi alınır. İlk çağrıda slot sayısı alınır, ikinci çağrıda slot ID\textquotesingle{}leri alınır.
+
+\texorpdfstring{$<$}{<} Token içeren slot sayısı (çıktı)
+
+\texorpdfstring{$<$}{<} Slot ID\textquotesingle{}leri dizisi
+
+Label\textquotesingle{}a göre token bulma
+
+Her slot\textquotesingle{}taki token\textquotesingle{}ın label\textquotesingle{}ı kontrol edilir ve aranan label ile karşılaştırılır. Token label\textquotesingle{}ları PKCS\#11\textquotesingle{}de null-\/terminated değildir, boşluklarla doldurulmuş olabilir, bu nedenle temizlenir.
+
+\texorpdfstring{$<$}{<} Varsayılan olarak ilk slot
+
+\texorpdfstring{$<$}{<} Aranacak token label
+
+Token label karşılaştırması
+
+Her slot\textquotesingle{}taki token\textquotesingle{}ın label\textquotesingle{}ı C\+\_\+\+Get\+Token\+Info ile alınır ve aranan label ile karşılaştırılır. Eşleşme bulunursa, o slot seçilir.
+
+PKCS\#11 session açma
+
+Seçilen slot\textquotesingle{}ta read-\/write session açılır. CKF\+\_\+\+RW\+\_\+\+SESSION flag\textquotesingle{}i ile yazma işlemleri yapılabilir, CKF\+\_\+\+SERIAL\+\_\+\+SESSION flag\textquotesingle{}i ile serial session açılır (paralel session değil).
+
+\texorpdfstring{$<$}{<} Read-\/write ve serial session flag\textquotesingle{}leri
+
+PIN ile login
+
+Kullanıcı PIN\textquotesingle{}i ile token\textquotesingle{}a login yapılır. CKU\+\_\+\+USER ile normal kullanıcı olarak login yapılır. Eğer zaten login yapılmışsa (CKR\+\_\+\+USER\+\_\+\+ALREADY\+\_\+\+LOGGED\+\_\+\+IN), hata olarak kabul edilmez.
+
+\texorpdfstring{$<$}{<} Kullanılacak PIN (parametre veya kaydedilmiş)\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_aa08cccf8f5db8d63231a3b706351b212}\label{namespace_travel_expense_1_1_soft_h_s_m_aa08cccf8f5db8d63231a3b706351b212} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Soft\+HSM\+::shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM}\textquotesingle{}yi kapat ve kaynakları temizle. 
+
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu
+\end{DoxyReturn}
+
+
+\doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM} modülünü kapatır ve tüm kaynakları temizler. Açık session varsa kapatılır, PKCS\#11 finalize edilir ve dinamik kütüphane kapatılır. Token label ve PIN bilgileri güvenli şekilde temizlenir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, zaten kapatılmışsa (\doxylink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aa02de9649e258d1dd94056e676061e969}{Init\+Status\+::\+NOT\+\_\+\+INITIALIZED}) hiçbir işlem yapmaz ve Success döner.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_ac14ac62bb1ee91f10908af2ba8f7a832}\label{namespace_travel_expense_1_1_soft_h_s_m_ac14ac62bb1ee91f10908af2ba8f7a832} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!sign@{sign}}
+\index{sign@{sign}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{sign()}{sign()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Soft\+HSM\+::sign (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{key\+Id,  }\item[{size\+\_\+t}]{key\+Id\+Len,  }\item[{const void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{size\+\_\+t}]{data\+Len,  }\item[{void \texorpdfstring{$\ast$}{*}}]{signature,  }\item[{size\+\_\+t \&}]{signature\+Len }\end{DoxyParamCaption})}
+
+
+
+Veriyi imzala (sign data) 
+
+Veriyi imzala (SHA256-\/\+RSA-\/\+PKCS)
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Id} & Anahtar ID\textquotesingle{}si \\
+\hline
+{\em key\+Id\+Len} & Anahtar ID uzunluğu \\
+\hline
+{\em data} & İmzalanacak veri \\
+\hline
+{\em data\+Len} & Veri uzunluğu \\
+\hline
+{\em signature} & İmza çıktısı \\
+\hline
+{\em signature\+Len} & İmza uzunluğu (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu
+\end{DoxyReturn}
+
+
+Belirtilen anahtar ile veriyi SHA256 hash\textquotesingle{}leyip RSA-\/\+PKCS imzası oluşturur. SHA256-\/\+RSA-\/\+PKCS mekanizması kullanılır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, açık bir session gerektirir (\doxylink{namespace_travel_expense_1_1_soft_h_s_m_a1dd53afa782d6054163658a225a3e3bf}{open\+Token()} çağrılmış olmalı). Veri önce SHA256 ile hash\textquotesingle{}lenir, sonra RSA ile imzalanır. Signature boyutu, RSA anahtar boyutuna bağlıdır (2048-\/bit için 256 byte).
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Id} & İmzalama anahtarının ID\textquotesingle{}si (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em key\+Id\+Len} & key\+Id buffer boyutu \\
+\hline
+{\em data} & İmzalanacak veri (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em data\+Len} & Veri uzunluğu (byte, 0 ise Invalid\+Input döner) \\
+\hline
+{\em signature} & İmza çıktısı (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em signature\+Len} & signature buffer boyutu (giriş), imza boyutu (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+SHA256-\/\+RSA-\/\+PKCS mekanizması ayarlama
+
+CKM\+\_\+\+SHA256\+\_\+\+RSA\+\_\+\+PKCS mekanizması kullanılır. Bu mekanizma, veriyi önce SHA-\/256 ile hash\textquotesingle{}ler, sonra RSA-\/\+PKCS ile imzalar. Parametre gerektirmez.
+
+\texorpdfstring{$<$}{<} SHA-\/256 hash + RSA-\/\+PKCS imzalama
+
+\texorpdfstring{$<$}{<} Parametre gerekmez
+
+\texorpdfstring{$<$}{<} Parametre uzunluğu 0
+
+İmzalama işlemini başlatma
+
+C\+\_\+\+Sign\+Init ile imzalama mekanizması ve anahtar ayarlanır. Bu işlem, sonraki C\+\_\+\+Sign çağrısı için hazırlık yapar.
+
+Veriyi imzalama
+
+C\+\_\+\+Sign ile veri imzalanır. Veri önce SHA-\/256 ile hash\textquotesingle{}lenir, sonra RSA-\/\+PKCS ile imzalanır. İmza boyutu, RSA anahtar boyutuna bağlıdır (2048-\/bit için 256 byte).
+
+\texorpdfstring{$<$}{<} İmza buffer boyutu (giriş), gerçek imza boyutu (çıktı)
+
+SHA256-\/\+RSA-\/\+PKCS mekanizması ayarlama
+
+CKM\+\_\+\+SHA256\+\_\+\+RSA\+\_\+\+PKCS mekanizması kullanılır. Bu mekanizma, veriyi önce SHA-\/256 ile hash\textquotesingle{}ler, sonra RSA-\/\+PKCS ile imzalar. Parametre gerektirmez.
+
+\texorpdfstring{$<$}{<} SHA-\/256 hash + RSA-\/\+PKCS imzalama
+
+\texorpdfstring{$<$}{<} Parametre gerekmez
+
+\texorpdfstring{$<$}{<} Parametre uzunluğu 0
+
+İmzalama işlemini başlatma
+
+C\+\_\+\+Sign\+Init ile imzalama mekanizması ve anahtar ayarlanır. Bu işlem, sonraki C\+\_\+\+Sign çağrısı için hazırlık yapar.
+
+Veriyi imzalama
+
+C\+\_\+\+Sign ile veri imzalanır. Veri önce SHA-\/256 ile hash\textquotesingle{}lenir, sonra RSA-\/\+PKCS ile imzalanır. İmza boyutu, RSA anahtar boyutuna bağlıdır (2048-\/bit için 256 byte).
+
+\texorpdfstring{$<$}{<} İmza buffer boyutu (giriş), gerçek imza boyutu (çıktı)\Hypertarget{namespace_travel_expense_1_1_soft_h_s_m_a6e1b43ac34b60670eafe4cb1c347335a}\label{namespace_travel_expense_1_1_soft_h_s_m_a6e1b43ac34b60670eafe4cb1c347335a} 
+\index{TravelExpense::SoftHSM@{TravelExpense::SoftHSM}!verify@{verify}}
+\index{verify@{verify}!TravelExpense::SoftHSM@{TravelExpense::SoftHSM}}
+\doxysubsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Soft\+HSM\+::verify (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{key\+Id,  }\item[{size\+\_\+t}]{key\+Id\+Len,  }\item[{const void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{size\+\_\+t}]{data\+Len,  }\item[{const void \texorpdfstring{$\ast$}{*}}]{signature,  }\item[{size\+\_\+t}]{signature\+Len }\end{DoxyParamCaption})}
+
+
+
+İmzayı doğrula (verify signature) 
+
+İmzayı doğrula (SHA256-\/\+RSA-\/\+PKCS)
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Id} & Anahtar ID\textquotesingle{}si \\
+\hline
+{\em key\+Id\+Len} & Anahtar ID uzunluğu \\
+\hline
+{\em data} & İmzalanmış veri \\
+\hline
+{\em data\+Len} & Veri uzunluğu \\
+\hline
+{\em signature} & İmza \\
+\hline
+{\em signature\+Len} & İmza uzunluğu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true İmza geçerli, false Geçersiz
+\end{DoxyReturn}
+
+
+Belirtilen anahtar ile veriyi SHA256 hash\textquotesingle{}leyip RSA-\/\+PKCS imzasını doğrular. SHA256-\/\+RSA-\/\+PKCS mekanizması kullanılır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, açık bir session gerektirir (\doxylink{namespace_travel_expense_1_1_soft_h_s_m_a1dd53afa782d6054163658a225a3e3bf}{open\+Token()} çağrılmış olmalı). Veri önce SHA256 ile hash\textquotesingle{}lenir, sonra RSA ile imza doğrulanır.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Id} & Doğrulama anahtarının ID\textquotesingle{}si (nullptr ise false döner) \\
+\hline
+{\em key\+Id\+Len} & key\+Id buffer boyutu \\
+\hline
+{\em data} & Doğrulanacak veri (nullptr ise false döner) \\
+\hline
+{\em data\+Len} & Veri uzunluğu (byte, 0 ise false döner) \\
+\hline
+{\em signature} & İmza (nullptr ise false döner) \\
+\hline
+{\em signature\+Len} & İmza uzunluğu (byte, 0 ise false döner) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true İmza geçerli, false İmza geçersiz veya hata 
+\end{DoxyReturn}
+SHA256-\/\+RSA-\/\+PKCS mekanizması ayarlama
+
+CKM\+\_\+\+SHA256\+\_\+\+RSA\+\_\+\+PKCS mekanizması kullanılır. Bu mekanizma, veriyi önce SHA-\/256 ile hash\textquotesingle{}ler, sonra RSA-\/\+PKCS ile imza doğrular. Parametre gerektirmez.
+
+\texorpdfstring{$<$}{<} SHA-\/256 hash + RSA-\/\+PKCS imza doğrulama
+
+\texorpdfstring{$<$}{<} Parametre gerekmez
+
+\texorpdfstring{$<$}{<} Parametre uzunluğu 0
+
+İmza doğrulama işlemini başlatma
+
+C\+\_\+\+Verify\+Init ile imza doğrulama mekanizması ve anahtar ayarlanır. Bu işlem, sonraki C\+\_\+\+Verify çağrısı için hazırlık yapar.
+
+İmzayı doğrulama
+
+C\+\_\+\+Verify ile imza doğrulanır. Veri önce SHA-\/256 ile hash\textquotesingle{}lenir, sonra RSA-\/\+PKCS ile imza doğrulanır. İmza geçerliyse CKR\+\_\+\+OK döner.
+
+\texorpdfstring{$<$}{<} true = imza geçerli, false = imza geçersiz veya hata
+
+SHA256-\/\+RSA-\/\+PKCS mekanizması ayarlama
+
+CKM\+\_\+\+SHA256\+\_\+\+RSA\+\_\+\+PKCS mekanizması kullanılır. Bu mekanizma, veriyi önce SHA-\/256 ile hash\textquotesingle{}ler, sonra RSA-\/\+PKCS ile imza doğrular. Parametre gerektirmez.
+
+\texorpdfstring{$<$}{<} SHA-\/256 hash + RSA-\/\+PKCS imza doğrulama
+
+\texorpdfstring{$<$}{<} Parametre gerekmez
+
+\texorpdfstring{$<$}{<} Parametre uzunluğu 0
+
+İmza doğrulama işlemini başlatma
+
+C\+\_\+\+Verify\+Init ile imza doğrulama mekanizması ve anahtar ayarlanır. Bu işlem, sonraki C\+\_\+\+Verify çağrısı için hazırlık yapar.
+
+İmzayı doğrulama
+
+C\+\_\+\+Verify ile imza doğrulanır. Veri önce SHA-\/256 ile hash\textquotesingle{}lenir, sonra RSA-\/\+PKCS ile imza doğrulanır. İmza geçerliyse CKR\+\_\+\+OK döner.
+
+\texorpdfstring{$<$}{<} true = imza geçerli, false = imza geçersiz veya hata

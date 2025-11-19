@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_travel_expense" kind="namespace" language="C++">
+    <compoundname>TravelExpense</compoundname>
+    <innerclass refid="struct_travel_expense_1_1_budget" prot="public">TravelExpense::Budget</innerclass>
+    <innerclass refid="struct_travel_expense_1_1_expense" prot="public">TravelExpense::Expense</innerclass>
+    <innerclass refid="struct_travel_expense_1_1_trip" prot="public">TravelExpense::Trip</innerclass>
+    <innerclass refid="struct_travel_expense_1_1_user" prot="public">TravelExpense::User</innerclass>
+    <innernamespace refid="namespace_travel_expense_1_1_asset_manager">TravelExpense::AssetManager</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_budget_manager">TravelExpense::BudgetManager</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_code_hardening">TravelExpense::CodeHardening</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_database">TravelExpense::Database</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_encryption">TravelExpense::Encryption</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_expense_manager">TravelExpense::ExpenseManager</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_file_i_o">TravelExpense::FileIO</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_fingerprinting">TravelExpense::Fingerprinting</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_migration">TravelExpense::Migration</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_r_a_s_p">TravelExpense::RASP</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_report_generator">TravelExpense::ReportGenerator</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_safe_string">TravelExpense::SafeString</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_security">TravelExpense::Security</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_session_manager">TravelExpense::SessionManager</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_soft_h_s_m">TravelExpense::SoftHSM</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_t_l_s">TravelExpense::TLS</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_trip_manager">TravelExpense::TripManager</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_user_auth">TravelExpense::UserAuth</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ExpenseCategory</name>
+        <qualifiedname>TravelExpense::ExpenseCategory</qualifiedname>
+        <enumvalue id="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62aedd22f15b1b8b701b7d2c7d8114bc638" prot="public">
+          <name>ACCOMMODATION</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Konaklama. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62acf76afe165258d38e1ef8683601cb5b6" prot="public">
+          <name>TRANSPORTATION</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Ulaşım. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62acc9284597026dcc021735c0970ca0c93" prot="public">
+          <name>FOOD</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Yemek. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62a30745c1ec37b7320355b5b1750b98f84" prot="public">
+          <name>ENTERTAINMENT</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>Eğlence. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Gider kategorileri. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="87" column="1" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="87" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ErrorCode</name>
+        <qualifiedname>TravelExpense::ErrorCode</qualifiedname>
+        <enumvalue id="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" prot="public">
+          <name>Success</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>İşlem başarıyla tamamlandı </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba2767828026039e8ba7b38973cbb701f2" prot="public">
+          <name>FileNotFound</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Dosya bulunamadı </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad1fc762e8f39e812667213e92037bc08" prot="public">
+          <name>DecryptionFailed</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Şifre çözme işlemi başarısız. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba23cd86e43512932a4bc975552c8d17fd" prot="public">
+          <name>ChecksumMismatch</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>Checksum uyuşmazlığı </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dababe4679ad0ec4fefd37bc5b23679d0e7d" prot="public">
+          <name>InvalidUser</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>Geçersiz kullanıcı </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba96bf1c44545e98afb4a0147f8ea37e45" prot="public">
+          <name>BudgetExceeded</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>Bütçe aşıldı </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" prot="public">
+          <name>InvalidInput</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para>Geçersiz girdi. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba6a10b4834f9cabcc57ddbf0ee05eeb47" prot="public">
+          <name>MemoryAllocation</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para>Bellek tahsis hatası </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba86bef3f9f8669a7395a877ff014aecd9" prot="public">
+          <name>FileIO</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para>Dosya giriş/çıkış hatası </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabaf8bf95b659f617159eb42c2099352a26" prot="public">
+          <name>EncryptionFailed</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para>Şifreleme işlemi başarısız. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabaaf98071f760be899f4fcf1d53a29ba17" prot="public">
+          <name>ConnectionFailed</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para>Bağlantı hatası </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabaf49c172e5177f15fafb78d0baade4ee5" prot="public">
+          <name>SecurityFailed</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para>Güvenlik kontrolü başarısız. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba88183b946cc5f0e8c96b2e66e1c74a7e" prot="public">
+          <name>Unknown</name>
+          <initializer>= 99</initializer>
+          <briefdescription>
+<para>Bilinmeyen hata. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Hata kodları enum&apos;u. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uygulama genelinde kullanılan merkezi hata kodları enum&apos;u. Tüm modüller bu enum&apos;u kullanarak hata durumlarını bildirir. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/error_codes.h" line="26" column="1" bodyfile="src/travelexpense/header/error_codes.h" bodystart="26" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1ae772eeb5adb7c53bcb85f66d7b4e5580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * TravelExpense::getCategoryString</definition>
+        <argsstring>(ExpenseCategory category)</argsstring>
+        <name>getCategoryString</name>
+        <qualifiedname>TravelExpense::getCategoryString</qualifiedname>
+        <param>
+          <type><ref refid="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62" kindref="member">ExpenseCategory</ref></type>
+          <declname>category</declname>
+        </param>
+        <briefdescription>
+<para>Kategori string&apos;ini al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gider kategorisi </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>const char* Kategori ad─▒ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/helpers.cpp" line="14" column="12" bodyfile="src/travelexpense/src/helpers.cpp" bodystart="14" bodyend="31" declfile="src/travelexpense/header/helpers.h" declline="23" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1a6d05a96a536569e40ed4584b4d4aaa70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62" kindref="member">ExpenseCategory</ref></type>
+        <definition>ExpenseCategory TravelExpense::getCategoryFromString</definition>
+        <argsstring>(const char *categoryStr)</argsstring>
+        <name>getCategoryFromString</name>
+        <qualifiedname>TravelExpense::getCategoryFromString</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>categoryStr</declname>
+        </param>
+        <briefdescription>
+<para>String&apos;i kategori enum&apos;una ├ğevir. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>categoryStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kategori string&apos;i </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ExpenseCategory Kategori enum&apos;u </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/helpers.cpp" line="33" column="17" bodyfile="src/travelexpense/src/helpers.cpp" bodystart="33" bodyend="45" declfile="src/travelexpense/header/helpers.h" declline="30" declcolumn="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Ana namespace - Seyahat Gideri Takibi uygulaması </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Seyahat Gideri Takibi uygulaması ana namespace&apos;i. </para>
+    </detaileddescription>
+    <location file="src/travelexpense/header/assetManager.h" line="32" column="1"/>
+  </compounddef>
+</doxygen>

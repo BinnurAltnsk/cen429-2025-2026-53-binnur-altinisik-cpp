@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_travel_expense_1_1_security" kind="namespace" language="C++">
+    <compoundname>TravelExpense::Security</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_security_1a146f27ab484fcf4d9f824709194ba931" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Security::secureMemoryCleanup</definition>
+        <argsstring>(void *ptr, size_t size)</argsstring>
+        <name>secureMemoryCleanup</name>
+        <qualifiedname>TravelExpense::Security::secureMemoryCleanup</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Bellekteki hassas verileri güvenli şekilde sil. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bellekteki hassas verileri güvenli şekilde sil (çoklu geçişli temizleme)</para>
+<para>Bu fonksiyon, bellek içeriğini sıfırlar ve ardından rastgele verilerle doldurarak verilerin kurtarılamamasını sağlar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Silinecek bellek alanının başlangıç adresi </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Silinecek bellek alanının boyutu (byte) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>Bu fonksiyon, bellek içeriğini üç geçişli bir algoritma ile güvenli şekilde siler:<orderedlist>
+<listitem><para>Geçiş: Bellek alanını sıfırlama (SecureZeroMemory veya secure_memset)</para>
+</listitem><listitem><para>Geçiş: Rastgele verilerle doldurma (veri kurtarmayı zorlaştırmak için)</para>
+</listitem><listitem><para>Geçiş: Tekrar sıfırlama ve volatile pointer ile kontrol</para>
+</listitem></orderedlist>
+</para>
+<para>Bu yöntem, hassas verilerin (şifreler, anahtarlar, token&apos;lar vb.) güvenli şekilde temizlenmesini sağlar. Çoklu geçişli silme, manyetik kalıntı (magnetic remanence) tabanlı veri kurtarma saldırılarına karşı ek koruma sağlar.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, platform-specific güvenli bellek silme fonksiyonlarını kullanır (Windows: SecureZeroMemory, Linux: secure_memset). Volatile pointer kullanarak compiler optimizer&apos;ın silme işlemini atlamasını engeller.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Silinecek bellek alanının başlangıç adresi (nullptr ise false döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Silinecek bellek alanının boyutu (byte, 0 ise false döner) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer veya sıfır uzunluk) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/security.cpp" line="103" column="6" bodyfile="src/travelexpense/src/security.cpp" bodystart="103" bodyend="137" declfile="src/travelexpense/header/security.h" declline="39" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_security_1afb3af2295588c9ff5fd055651d3f3ac7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void</type>
+        <definition>void TravelExpense::Security::secureCleanup</definition>
+        <argsstring>(char *buffer, size_t size)</argsstring>
+        <name>secureCleanup</name>
+        <qualifiedname>TravelExpense::Security::secureCleanup</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Buffer içeriğini güvenli şekilde temizle (overload - char array için) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Buffer içeriğini güvenli şekilde temizle (char array için overload)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Silinecek buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer boyutu</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+<para>Bu fonksiyon, char buffer içeriğini güvenli şekilde temizler. <computeroutput><ref refid="namespace_travel_expense_1_1_security_1a146f27ab484fcf4d9f824709194ba931" kindref="member">secureMemoryCleanup()</ref></computeroutput> fonksiyonunu çağırarak çoklu geçişli temizleme algoritmasını kullanır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, özellikle string buffer&apos;ları (şifreler, token&apos;lar vb.) temizlemek için kullanılır. Null pointer veya sıfır uzunluk kontrolü yapılır.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Silinecek buffer (nullptr ise işlem yapılmaz) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer boyutu (byte, 0 ise işlem yapılmaz) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/security.cpp" line="152" column="6" bodyfile="src/travelexpense/src/security.cpp" bodystart="152" bodyend="158" declfile="src/travelexpense/header/security.h" declline="47" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_security_1a2f60f65c6c6216fc1926ab85b3a8fee2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void</type>
+        <definition>void TravelExpense::Security::secureMemset</definition>
+        <argsstring>(void *ptr, int value, size_t size)</argsstring>
+        <name>secureMemset</name>
+        <qualifiedname>TravelExpense::Security::secureMemset</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Bellek bölgesini sıfırla (memset güvenli versiyonu) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bellek bölgesini güvenli şekilde doldur (memset güvenli versiyonu)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bellek adresi </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Boyut </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Doldurulacak değer (genellikle 0)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+<para>Bu fonksiyon, bellek alanını belirtilen değerle doldurur. Volatile pointer kullanarak compiler optimizer&apos;ın bu işlemi atlamasını engeller. Bu sayede hassas verilerin güvenli şekilde temizlenmesi sağlanır.</para>
+<para><simplesect kind="note"><para>Standart memset() fonksiyonundan farklı olarak, bu fonksiyon optimizer&apos;ın silme işlemini atlamasını engellemek için volatile pointer kullanır. Bu, hassas verilerin (şifreler, anahtarlar vb.) güvenli şekilde temizlenmesi için kritiktir.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bellek alanının başlangıç adresi (nullptr ise işlem yapılmaz) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Doldurulacak değer (unsigned char olarak yorumlanır) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Doldurulacak byte sayısı (0 ise işlem yapılmaz) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/security.cpp" line="67" column="6" bodyfile="src/travelexpense/src/security.cpp" bodystart="67" bodyend="81" declfile="src/travelexpense/header/security.h" declline="56" declcolumn="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/travelexpense/header/security.h" line="28" column="1"/>
+  </compounddef>
+</doxygen>

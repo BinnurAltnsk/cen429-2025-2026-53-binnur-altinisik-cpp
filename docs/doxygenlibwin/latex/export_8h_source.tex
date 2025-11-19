@@ -1,0 +1,29 @@
+\doxysection{export.\+h}
+\hypertarget{export_8h_source}{}\label{export_8h_source}\index{src/travelexpense/header/export.h@{src/travelexpense/header/export.h}}
+\mbox{\hyperlink{export_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ EXPORT\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ EXPORT\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\ \ \#ifdef\ TRAVELEXPENSE\_LIB\_EXPORTS}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ \ \ \#define\ TRAVELEXPENSE\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\ \ \#else}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \ \ \ \#define\ TRAVELEXPENSE\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00024\ \ \ \textcolor{comment}{//\ Linux/Unix\ için\ visibility\ attribute}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \ \#ifdef\ TRAVELEXPENSE\_LIB\_EXPORTS}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\ \ \ \ \#define\ TRAVELEXPENSE\_API\ \_\_attribute\_\_((visibility("{}default"{}})))}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\ \ \#else}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \ \ \ \#define\ TRAVELEXPENSE\_API}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ TRAVELEXPENSE\_INTERNAL}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ EXPORT\_H}}
+\DoxyCodeLine{00043\ }
+
+\end{DoxyCode}

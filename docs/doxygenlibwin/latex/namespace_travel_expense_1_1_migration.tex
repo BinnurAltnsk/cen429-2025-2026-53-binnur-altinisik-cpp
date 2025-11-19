@@ -1,0 +1,268 @@
+\doxysection{Travel\+Expense\+::Migration Namespace Reference}
+\hypertarget{namespace_travel_expense_1_1_migration}{}\label{namespace_travel_expense_1_1_migration}\index{TravelExpense::Migration@{TravelExpense::Migration}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_travel_expense_1_1_migration_1_1_migration_result}{Migration\+Result}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_migration}{Migration} sonuç yapısı \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_migration_a955c1f9b5d20a45b3d2aeb281a547ce1}{check\+Binary\+File\+Exists}} (const char \texorpdfstring{$\ast$}{*}entity\+Name)
+\begin{DoxyCompactList}\small\item\em Binary dosya formatını kontrol et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_migration_a93c2b602b2307e02959d597329d82777}{read\+Users\+From\+Binary}} (const char \texorpdfstring{$\ast$}{*}file\+Path, std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_user}{User}} $>$ \&users)
+\begin{DoxyCompactList}\small\item\em Binary dosyadan \doxylink{struct_travel_expense_1_1_user}{User} verilerini oku. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_migration_aaa5d0a04ab4b2489a7b9f6996125a480}{read\+Trips\+From\+Binary}} (const char \texorpdfstring{$\ast$}{*}file\+Path, std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} $>$ \&trips)
+\begin{DoxyCompactList}\small\item\em Binary dosyadan \doxylink{struct_travel_expense_1_1_trip}{Trip} verilerini oku. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_migration_a4bda6ee9a2a9014bdd07abf585368609}{read\+Expenses\+From\+Binary}} (const char \texorpdfstring{$\ast$}{*}file\+Path, std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} $>$ \&expenses)
+\begin{DoxyCompactList}\small\item\em Binary dosyadan \doxylink{struct_travel_expense_1_1_expense}{Expense} verilerini oku. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_migration_a7192c5df2a455e3fd9833c78f1328640}{read\+Budgets\+From\+Binary}} (const char \texorpdfstring{$\ast$}{*}file\+Path, std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_budget}{Budget}} $>$ \&budgets)
+\begin{DoxyCompactList}\small\item\em Binary dosyadan \doxylink{struct_travel_expense_1_1_budget}{Budget} verilerini oku. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_migration_ad9ea52c32ab75768e4f494a5f381a37f}{migrate\+Users\+To\+Database}} (const std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_user}{User}} $>$ \&users, int32\+\_\+t \&migrated\+Count)
+\begin{DoxyCompactList}\small\item\em Users verilerini SQLite veritabanına migrate et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_migration_a336f33556eca236abeee8c07a092174a}{migrate\+Trips\+To\+Database}} (const std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} $>$ \&trips, int32\+\_\+t \&migrated\+Count)
+\begin{DoxyCompactList}\small\item\em Trips verilerini SQLite veritabanına migrate et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_migration_a183d7e8c8198b4545072decb2d3a147c}{migrate\+Expenses\+To\+Database}} (const std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} $>$ \&expenses, int32\+\_\+t \&migrated\+Count)
+\begin{DoxyCompactList}\small\item\em Expenses verilerini SQLite veritabanına migrate et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_migration_a0585996bd000e2e35d0e36022d08bd6c}{migrate\+Budgets\+To\+Database}} (const std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_budget}{Budget}} $>$ \&budgets, int32\+\_\+t \&migrated\+Count)
+\begin{DoxyCompactList}\small\item\em Budgets verilerini SQLite veritabanına migrate et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_migration_abac0abce63e7e7b06bad2913e311f552}{migrate\+Id\+Files}} ()
+\begin{DoxyCompactList}\small\item\em ID dosyalarını migrate et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_migration_ac56a5704bf31629e1b35b2dcd161a98b}{migrate\+All\+From\+Binary}} (const char \texorpdfstring{$\ast$}{*}data\+Dir, \mbox{\hyperlink{struct_travel_expense_1_1_migration_1_1_migration_result}{Migration\+Result}} \&result)
+\begin{DoxyCompactList}\small\item\em Tüm binary dosyaları SQLite veritabanına migrate et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_migration_aa03aad8d3d6ebd000572fc61b10ba1ed}{is\+Migration\+Needed}} (const char \texorpdfstring{$\ast$}{*}data\+Dir)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_migration}{Migration} durumunu kontrol et. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_1_1_migration_a955c1f9b5d20a45b3d2aeb281a547ce1}\label{namespace_travel_expense_1_1_migration_a955c1f9b5d20a45b3d2aeb281a547ce1} 
+\index{TravelExpense::Migration@{TravelExpense::Migration}!checkBinaryFileExists@{checkBinaryFileExists}}
+\index{checkBinaryFileExists@{checkBinaryFileExists}!TravelExpense::Migration@{TravelExpense::Migration}}
+\doxysubsubsection{\texorpdfstring{checkBinaryFileExists()}{checkBinaryFileExists()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Migration\+::check\+Binary\+File\+Exists (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{entity\+Name }\end{DoxyParamCaption})}
+
+
+
+Binary dosya formatını kontrol et. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity\+Name} & Entity adı (users, trips, expenses, budgets) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Binary dosya mevcut, false Mevcut değil 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_migration_aa03aad8d3d6ebd000572fc61b10ba1ed}\label{namespace_travel_expense_1_1_migration_aa03aad8d3d6ebd000572fc61b10ba1ed} 
+\index{TravelExpense::Migration@{TravelExpense::Migration}!isMigrationNeeded@{isMigrationNeeded}}
+\index{isMigrationNeeded@{isMigrationNeeded}!TravelExpense::Migration@{TravelExpense::Migration}}
+\doxysubsubsection{\texorpdfstring{isMigrationNeeded()}{isMigrationNeeded()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Migration\+::is\+Migration\+Needed (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{data\+Dir }\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_travel_expense_1_1_migration}{Migration} durumunu kontrol et. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Dir} & Binary dosyaların bulunduğu dizin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true \doxylink{namespace_travel_expense_1_1_migration}{Migration} gerekli (binary dosyalar var), false Gerekli değil 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_migration_ac56a5704bf31629e1b35b2dcd161a98b}\label{namespace_travel_expense_1_1_migration_ac56a5704bf31629e1b35b2dcd161a98b} 
+\index{TravelExpense::Migration@{TravelExpense::Migration}!migrateAllFromBinary@{migrateAllFromBinary}}
+\index{migrateAllFromBinary@{migrateAllFromBinary}!TravelExpense::Migration@{TravelExpense::Migration}}
+\doxysubsubsection{\texorpdfstring{migrateAllFromBinary()}{migrateAllFromBinary()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Migration\+::migrate\+All\+From\+Binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{data\+Dir,  }\item[{\mbox{\hyperlink{struct_travel_expense_1_1_migration_1_1_migration_result}{Migration\+Result}} \&}]{result }\end{DoxyParamCaption})}
+
+
+
+Tüm binary dosyaları SQLite veritabanına migrate et. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Dir} & Binary dosyaların bulunduğu dizin (varsayılan\+: \"{}data\"{}) \\
+\hline
+{\em result} & \doxylink{namespace_travel_expense_1_1_migration}{Migration} sonuçları \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code İşlem sonucu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_migration_a0585996bd000e2e35d0e36022d08bd6c}\label{namespace_travel_expense_1_1_migration_a0585996bd000e2e35d0e36022d08bd6c} 
+\index{TravelExpense::Migration@{TravelExpense::Migration}!migrateBudgetsToDatabase@{migrateBudgetsToDatabase}}
+\index{migrateBudgetsToDatabase@{migrateBudgetsToDatabase}!TravelExpense::Migration@{TravelExpense::Migration}}
+\doxysubsubsection{\texorpdfstring{migrateBudgetsToDatabase()}{migrateBudgetsToDatabase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Migration\+::migrate\+Budgets\+To\+Database (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_budget}{Budget}} $>$ \&}]{budgets,  }\item[{int32\+\_\+t \&}]{migrated\+Count }\end{DoxyParamCaption})}
+
+
+
+Budgets verilerini SQLite veritabanına migrate et. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em budgets} & Migrate edilecek \doxylink{struct_travel_expense_1_1_budget}{Budget} verileri \\
+\hline
+{\em migrated\+Count} & Migrate edilen kayıt sayısı \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code İşlem sonucu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_migration_a183d7e8c8198b4545072decb2d3a147c}\label{namespace_travel_expense_1_1_migration_a183d7e8c8198b4545072decb2d3a147c} 
+\index{TravelExpense::Migration@{TravelExpense::Migration}!migrateExpensesToDatabase@{migrateExpensesToDatabase}}
+\index{migrateExpensesToDatabase@{migrateExpensesToDatabase}!TravelExpense::Migration@{TravelExpense::Migration}}
+\doxysubsubsection{\texorpdfstring{migrateExpensesToDatabase()}{migrateExpensesToDatabase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Migration\+::migrate\+Expenses\+To\+Database (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} $>$ \&}]{expenses,  }\item[{int32\+\_\+t \&}]{migrated\+Count }\end{DoxyParamCaption})}
+
+
+
+Expenses verilerini SQLite veritabanına migrate et. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expenses} & Migrate edilecek \doxylink{struct_travel_expense_1_1_expense}{Expense} verileri \\
+\hline
+{\em migrated\+Count} & Migrate edilen kayıt sayısı \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code İşlem sonucu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_migration_abac0abce63e7e7b06bad2913e311f552}\label{namespace_travel_expense_1_1_migration_abac0abce63e7e7b06bad2913e311f552} 
+\index{TravelExpense::Migration@{TravelExpense::Migration}!migrateIdFiles@{migrateIdFiles}}
+\index{migrateIdFiles@{migrateIdFiles}!TravelExpense::Migration@{TravelExpense::Migration}}
+\doxysubsubsection{\texorpdfstring{migrateIdFiles()}{migrateIdFiles()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Migration\+::migrate\+Id\+Files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ID dosyalarını migrate et. 
+
+ID dosyalarından (user.\+id, trip.\+id, vb.) maksimum ID değerlerini alır ve veritabanındaki AUTOINCREMENT\textquotesingle{}i ayarlar.
+
+\begin{DoxyReturn}{Returns}
+Error\+Code İşlem sonucu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_migration_a336f33556eca236abeee8c07a092174a}\label{namespace_travel_expense_1_1_migration_a336f33556eca236abeee8c07a092174a} 
+\index{TravelExpense::Migration@{TravelExpense::Migration}!migrateTripsToDatabase@{migrateTripsToDatabase}}
+\index{migrateTripsToDatabase@{migrateTripsToDatabase}!TravelExpense::Migration@{TravelExpense::Migration}}
+\doxysubsubsection{\texorpdfstring{migrateTripsToDatabase()}{migrateTripsToDatabase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Migration\+::migrate\+Trips\+To\+Database (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} $>$ \&}]{trips,  }\item[{int32\+\_\+t \&}]{migrated\+Count }\end{DoxyParamCaption})}
+
+
+
+Trips verilerini SQLite veritabanına migrate et. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trips} & Migrate edilecek \doxylink{struct_travel_expense_1_1_trip}{Trip} verileri \\
+\hline
+{\em migrated\+Count} & Migrate edilen kayıt sayısı \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code İşlem sonucu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_migration_ad9ea52c32ab75768e4f494a5f381a37f}\label{namespace_travel_expense_1_1_migration_ad9ea52c32ab75768e4f494a5f381a37f} 
+\index{TravelExpense::Migration@{TravelExpense::Migration}!migrateUsersToDatabase@{migrateUsersToDatabase}}
+\index{migrateUsersToDatabase@{migrateUsersToDatabase}!TravelExpense::Migration@{TravelExpense::Migration}}
+\doxysubsubsection{\texorpdfstring{migrateUsersToDatabase()}{migrateUsersToDatabase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Migration\+::migrate\+Users\+To\+Database (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_user}{User}} $>$ \&}]{users,  }\item[{int32\+\_\+t \&}]{migrated\+Count }\end{DoxyParamCaption})}
+
+
+
+Users verilerini SQLite veritabanına migrate et. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em users} & Migrate edilecek \doxylink{struct_travel_expense_1_1_user}{User} verileri \\
+\hline
+{\em migrated\+Count} & Migrate edilen kayıt sayısı \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code İşlem sonucu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_migration_a7192c5df2a455e3fd9833c78f1328640}\label{namespace_travel_expense_1_1_migration_a7192c5df2a455e3fd9833c78f1328640} 
+\index{TravelExpense::Migration@{TravelExpense::Migration}!readBudgetsFromBinary@{readBudgetsFromBinary}}
+\index{readBudgetsFromBinary@{readBudgetsFromBinary}!TravelExpense::Migration@{TravelExpense::Migration}}
+\doxysubsubsection{\texorpdfstring{readBudgetsFromBinary()}{readBudgetsFromBinary()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Migration\+::read\+Budgets\+From\+Binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+Path,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_budget}{Budget}} $>$ \&}]{budgets }\end{DoxyParamCaption})}
+
+
+
+Binary dosyadan \doxylink{struct_travel_expense_1_1_budget}{Budget} verilerini oku. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Binary dosya yolu \\
+\hline
+{\em budgets} & Okunan \doxylink{struct_travel_expense_1_1_budget}{Budget} verileri \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_migration_a4bda6ee9a2a9014bdd07abf585368609}\label{namespace_travel_expense_1_1_migration_a4bda6ee9a2a9014bdd07abf585368609} 
+\index{TravelExpense::Migration@{TravelExpense::Migration}!readExpensesFromBinary@{readExpensesFromBinary}}
+\index{readExpensesFromBinary@{readExpensesFromBinary}!TravelExpense::Migration@{TravelExpense::Migration}}
+\doxysubsubsection{\texorpdfstring{readExpensesFromBinary()}{readExpensesFromBinary()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Migration\+::read\+Expenses\+From\+Binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+Path,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} $>$ \&}]{expenses }\end{DoxyParamCaption})}
+
+
+
+Binary dosyadan \doxylink{struct_travel_expense_1_1_expense}{Expense} verilerini oku. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Binary dosya yolu \\
+\hline
+{\em expenses} & Okunan \doxylink{struct_travel_expense_1_1_expense}{Expense} verileri \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_migration_aaa5d0a04ab4b2489a7b9f6996125a480}\label{namespace_travel_expense_1_1_migration_aaa5d0a04ab4b2489a7b9f6996125a480} 
+\index{TravelExpense::Migration@{TravelExpense::Migration}!readTripsFromBinary@{readTripsFromBinary}}
+\index{readTripsFromBinary@{readTripsFromBinary}!TravelExpense::Migration@{TravelExpense::Migration}}
+\doxysubsubsection{\texorpdfstring{readTripsFromBinary()}{readTripsFromBinary()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Migration\+::read\+Trips\+From\+Binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+Path,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} $>$ \&}]{trips }\end{DoxyParamCaption})}
+
+
+
+Binary dosyadan \doxylink{struct_travel_expense_1_1_trip}{Trip} verilerini oku. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Binary dosya yolu \\
+\hline
+{\em trips} & Okunan \doxylink{struct_travel_expense_1_1_trip}{Trip} verileri \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_migration_a93c2b602b2307e02959d597329d82777}\label{namespace_travel_expense_1_1_migration_a93c2b602b2307e02959d597329d82777} 
+\index{TravelExpense::Migration@{TravelExpense::Migration}!readUsersFromBinary@{readUsersFromBinary}}
+\index{readUsersFromBinary@{readUsersFromBinary}!TravelExpense::Migration@{TravelExpense::Migration}}
+\doxysubsubsection{\texorpdfstring{readUsersFromBinary()}{readUsersFromBinary()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Migration\+::read\+Users\+From\+Binary (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+Path,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_user}{User}} $>$ \&}]{users }\end{DoxyParamCaption})}
+
+
+
+Binary dosyadan \doxylink{struct_travel_expense_1_1_user}{User} verilerini oku. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Binary dosya yolu \\
+\hline
+{\em users} & Okunan \doxylink{struct_travel_expense_1_1_user}{User} verileri \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}

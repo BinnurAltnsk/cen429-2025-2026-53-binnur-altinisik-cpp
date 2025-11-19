@@ -1,0 +1,975 @@
+\doxysection{src/tests/travelexpense/travelexpense\+\_\+test.cpp File Reference}
+\hypertarget{travelexpense__test_8cpp}{}\label{travelexpense__test_8cpp}\index{src/tests/travelexpense/travelexpense\_test.cpp@{src/tests/travelexpense/travelexpense\_test.cpp}}
+
+
+Seyahat Gideri Takibi -\/ Birim Testleri.  
+
+
+{\ttfamily \#include \"{}travelexpense.\+h\"{}}\newline
+{\ttfamily \#include \"{}safe\+\_\+string.\+h\"{}}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for travelexpense\+\_\+test.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{travelexpense__test_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}
+\begin{DoxyCompactList}\small\item\em Test fixture sınıfı \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{travelexpense__test_8cpp_a4bdc0245afe661f69ff2948076aaaf1b}{FILE\+\_\+\+EXISTS}}(path)~(access(path, F\+\_\+\+OK) == 0)
+\item 
+\#define \mbox{\hyperlink{travelexpense__test_8cpp_a33f0483b64221b258b080bba5882cf3c}{MKDIR}}(path)~mkdir(path, 0755)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a9309c43adb4be795daa1a794ab5f0e5e}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, SHA256\+Hash\+Calculation)
+\begin{DoxyCompactList}\small\item\em SHA-\/256 hash hesaplama testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a7d8af03a56dd3f0b15b3352020dc2338}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Salt\+Generation)
+\begin{DoxyCompactList}\small\item\em Salt üretimi testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_ad4d5782cf29f40f242886f53cbb73e98}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Password\+Hashing)
+\begin{DoxyCompactList}\small\item\em Şifre hashleme testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a35fe0821f2ed7e1a0862ebc84443dc9f}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Secure\+Buffer\+Cleanup)
+\begin{DoxyCompactList}\small\item\em Statik buffer güvenli temizleme testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_aff8ccc25e10cc39c4eae7cee9d875d21}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Secure\+Memory\+Cleanup)
+\begin{DoxyCompactList}\small\item\em Dinamik bellek güvenli temizleme testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_af8389b723d3b8717311861ef1d87382e}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Opaque\+Counter\+Creation)
+\begin{DoxyCompactList}\small\item\em Opaque counter oluşturma testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a780f18a5f3abd76977322736928cae27}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Opaque\+Loop\+Condition\+True)
+\begin{DoxyCompactList}\small\item\em Opaque loop condition doğru durum testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a22df2c833f5898a5a8d0ad112fd98e92}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Opaque\+Loop\+Condition\+False)
+\begin{DoxyCompactList}\small\item\em Opaque loop condition yanlış durum testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_ac8876a7395c46599051d7e99dcad280d}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Opaque\+Boolean\+True)
+\begin{DoxyCompactList}\small\item\em Opaque boolean true değeri testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_ad59e2dbbb0fb4b177859650f741b9131}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Opaque\+Boolean\+False)
+\begin{DoxyCompactList}\small\item\em Opaque boolean false değeri testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a64d8eb156b01a256e77b28683a257a16}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Combine\+Opaque\+Flags)
+\begin{DoxyCompactList}\small\item\em Opaque flag birleştirme testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a89286cedebcc419752e5bafeeaa19cac}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Get\+Opaque\+Flag\+At\+Index0)
+\begin{DoxyCompactList}\small\item\em Opaque flag indeks okuma testi -\/ index 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a2231dca1f796df9d15d5340ec877c62b}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Get\+Opaque\+Flag\+At\+Index1)
+\begin{DoxyCompactList}\small\item\em Opaque flag indeks okuma testi -\/ index 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a66c762a36eb7fb99c2605e6333c9debe}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Calculate\+Code\+Checksum)
+\begin{DoxyCompactList}\small\item\em Kod checksum hesaplama testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a291433df69c0a255ae5f5c4f9b214fff}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Verify\+Code\+Checksum)
+\begin{DoxyCompactList}\small\item\em Kod checksum doğrulama testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a3cf0b913ae6ad97a2242a19fc4152dcc}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Anti\+Debug\+Check)
+\begin{DoxyCompactList}\small\item\em Anti-\/debug kontrolü testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a70f1b92d2cbcd20be3f733d8122c9a46}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Tamper\+Check\+With\+Self\+Checksum)
+\begin{DoxyCompactList}\small\item\em Self-\/checksum ve tamper detection testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a81a022f3bb83d8c0882a34900597f62e}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Tamper\+Check\+With\+Null\+Pointer)
+\begin{DoxyCompactList}\small\item\em Null pointer ile tamper check testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a1240e548564855caf6fcab3718e71b77}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Database\+Initialization)
+\begin{DoxyCompactList}\small\item\em Veritabanı başlatma testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a244784ae740f6c824931476e111b68ea}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Create\+Database\+Tables)
+\begin{DoxyCompactList}\small\item\em Veritabanı tablo oluşturma testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a64d7bb2025dded9023223c02ed4d6289}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Close\+Database)
+\begin{DoxyCompactList}\small\item\em Veritabanı kapatma testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_ab2759c4180cb5df65de8d6ced535ff3e}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, User\+Registration)
+\begin{DoxyCompactList}\small\item\em Kullanıcı kayıt testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a998109ade06180db43f36d7cd3fbd626}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, User\+Login)
+\begin{DoxyCompactList}\small\item\em Kullanıcı giriş testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a42b2a18c88b786707f8f5802ef067a46}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Get\+Current\+User)
+\begin{DoxyCompactList}\small\item\em Mevcut kullanıcı alma testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a06ee8077aeaebaa10efc11472331ffb7}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Enable\+Guest\+Mode)
+\begin{DoxyCompactList}\small\item\em Misafir modu etkinleştirme testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a8084b6caac2c3a93a6813dcbbd93a8c4}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, User\+Logout)
+\begin{DoxyCompactList}\small\item\em Kullanıcı çıkış testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a1774a374e71d4912166a0462354a3064}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Create\+Trip)
+\begin{DoxyCompactList}\small\item\em Seyahat oluşturma testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a5fd2a8b32d04bb11197cbfe4986e880b}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Get\+Trip)
+\begin{DoxyCompactList}\small\item\em Seyahat getirme testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a4424e4ba81d90596cd6842bf9aa8ff73}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Log\+Expense)
+\begin{DoxyCompactList}\small\item\em Gider kaydetme testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a07d0ecbbe882716ddd229493b66c7b87}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Get\+Expenses)
+\begin{DoxyCompactList}\small\item\em Gider listeleme testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_aaf5612e49808de5d5d8e17f8ac81b415}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Set\+Budget)
+\begin{DoxyCompactList}\small\item\em Bütçe ayarlama testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_abe31bbb726f223084ae3fcd16a9fab6b}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Get\+Budget)
+\begin{DoxyCompactList}\small\item\em Bütçe getirme testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a50a04b0a77a81ffdd28260d245a94aac}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Check\+Budget\+Limit\+Over\+Limit)
+\begin{DoxyCompactList}\small\item\em Bütçe limit kontrolü -\/ limit aşımı testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a3ea5c1a7e94f0a5c4423126578d5885b}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Check\+Budget\+Limit\+Under\+Limit)
+\begin{DoxyCompactList}\small\item\em Bütçe limit kontrolü -\/ limit altında testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_ad2272d0e912cd1f5adcabbf10fbe7d4e}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Generate\+Device\+Fingerprint)
+\begin{DoxyCompactList}\small\item\em Cihaz parmak izi üretimi testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_ad9c24192c186bc852537417be40a69e7}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Verify\+Device\+Fingerprint)
+\begin{DoxyCompactList}\small\item\em Cihaz parmak izi doğrulama testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a3fba549a4f3653d4dd1db7eb8fb9f885}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Generate\+Application\+Fingerprint)
+\begin{DoxyCompactList}\small\item\em Uygulama parmak izi üretimi testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a8ebea3dc7cde0c9dd8ba761735e17b5e}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Initialize\+TLSContext)
+\begin{DoxyCompactList}\small\item\em TLS bağlamı başlatma testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_ad682addd277849b181b6aee0badbb193}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Cleanup\+TLSContext)
+\begin{DoxyCompactList}\small\item\em TLS bağlamı temizleme testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_aee24c1da33a3ca30e7891cb0f0782182}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Generate\+Session\+Key)
+\begin{DoxyCompactList}\small\item\em Oturum anahtarı üretimi testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a3e593ffb590d6e29ff6107bf7308a8f9}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Get\+Device\+Fingerprint\+From\+Session\+Manager)
+\begin{DoxyCompactList}\small\item\em Cihaz parmak izi alma testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a5e2ea427e0b557098818165100c399ac}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Platform\+Specific\+Macros\+Coverage)
+\begin{DoxyCompactList}\small\item\em Platform-\/specific macro coverage testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_ab51188115652f8e6506fcf6615eb678c}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Whitebox\+AESEncryption\+Decryption)
+\begin{DoxyCompactList}\small\item\em Whitebox AES encryption/decryption testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a80104b6b6dd6fc020f21d52475bb5155}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Whitebox\+DESEncryption\+Decryption)
+\begin{DoxyCompactList}\small\item\em Whitebox DES encryption/decryption testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a7792fc0e5e016436692be6b379b4ef4c}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, AES256\+CBCEncryption\+Decryption)
+\begin{DoxyCompactList}\small\item\em AES-\/256-\/\+CBC encryption/decryption testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a3f2953ccfa735b79dfcdfaf8abc77e19}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, HMACSHA256\+Calculation)
+\begin{DoxyCompactList}\small\item\em HMAC-\/\+SHA256 testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a903fe367e6d65c7b23b932eb0232c125}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, PBKDF2\+Key\+Derivation)
+\begin{DoxyCompactList}\small\item\em PBKDF2 testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_af7e7bf105aeb9a96feaf7f6b3b62c433}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Code\+Checksum\+Verification)
+\begin{DoxyCompactList}\small\item\em Checksum doğrulama testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_ad5fce6a4c5b9050cd511ee38f7a012eb}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, File\+Checksum\+Verification)
+\begin{DoxyCompactList}\small\item\em File checksum doğrulama testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a9f7e95210787d1c91af1050fd30114cb}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Control\+Flow\+Counter)
+\begin{DoxyCompactList}\small\item\em Control flow counter testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a7776302b8bbb90cc14547181c486e1a1}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Hook\+Detection)
+\begin{DoxyCompactList}\small\item\em Hook detection testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_adc8c6d9f230d6f5cac812ef8f830211c}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, String\+Obfuscation)
+\begin{DoxyCompactList}\small\item\em String obfuscation testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_a49eb9bd08455c8de007b10ee27186681}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Opaque\+Boolean)
+\begin{DoxyCompactList}\small\item\em Opaque boolean testi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{travelexpense__test_8cpp_aa7e47b902f7565422491885cb9072a85}{TEST\+\_\+F}} (\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}, Session\+Key\+Encryption\+Decryption)
+\begin{DoxyCompactList}\small\item\em Session key encryption/decryption testi. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{travelexpense__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\begin{DoxyCompactList}\small\item\em Ana test fonksiyonu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ Birim Testleri. 
+
+Bu dosya, proje için Google Test framework kullanılarak yazılmış birim testlerini içerir.
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{travelexpense__test_8cpp_a4bdc0245afe661f69ff2948076aaaf1b}\label{travelexpense__test_8cpp_a4bdc0245afe661f69ff2948076aaaf1b} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!FILE\_EXISTS@{FILE\_EXISTS}}
+\index{FILE\_EXISTS@{FILE\_EXISTS}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{FILE\_EXISTS}{FILE\_EXISTS}}
+{\footnotesize\ttfamily \#define FILE\+\_\+\+EXISTS(\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})~(access(path, F\+\_\+\+OK) == 0)}
+
+
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a33f0483b64221b258b080bba5882cf3c}\label{travelexpense__test_8cpp_a33f0483b64221b258b080bba5882cf3c} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!MKDIR@{MKDIR}}
+\index{MKDIR@{MKDIR}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{MKDIR}{MKDIR}}
+{\footnotesize\ttfamily \#define MKDIR(\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})~mkdir(path, 0755)}
+
+
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{travelexpense__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{travelexpense__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!main@{main}}
+\index{main@{main}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+
+
+Ana test fonksiyonu. 
+
+Google Test framework\textquotesingle{}ü başlatır ve testleri çalıştırır.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Komut satırı argüman sayısı \\
+\hline
+{\em argv} & Komut satırı argümanları \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Test sonuçlarına göre exit code 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l01148}{1148}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a7792fc0e5e016436692be6b379b4ef4c}\label{travelexpense__test_8cpp_a7792fc0e5e016436692be6b379b4ef4c} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [1/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{AES256\+CBCEncryption\+Decryption}]{ }\end{DoxyParamCaption})}
+
+
+
+AES-\/256-\/\+CBC encryption/decryption testi. 
+
+Bu test, AES-\/256-\/\+CBC şifreleme ve şifre çözme fonksiyonlarının doğru çalışıp çalışmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00850}{850}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a3cf0b913ae6ad97a2242a19fc4152dcc}\label{travelexpense__test_8cpp_a3cf0b913ae6ad97a2242a19fc4152dcc} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [2/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Anti\+Debug\+Check}]{ }\end{DoxyParamCaption})}
+
+
+
+Anti-\/debug kontrolü testi. 
+
+Bu test, anti-\/debug kontrolünün çalışıp çalışmadığını kontrol eder. Fonksiyon her durumda geçerli bir boolean değer döndürmelidir. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00311}{311}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a66c762a36eb7fb99c2605e6333c9debe}\label{travelexpense__test_8cpp_a66c762a36eb7fb99c2605e6333c9debe} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [3/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Calculate\+Code\+Checksum}]{ }\end{DoxyParamCaption})}
+
+
+
+Kod checksum hesaplama testi. 
+
+Bu test, belirli bir veri bloğu için checksum değerinin başarıyla hesaplanıp hesaplanmadığını kontrol eder. Checksum çıktısı boş olmamalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00283}{283}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a50a04b0a77a81ffdd28260d245a94aac}\label{travelexpense__test_8cpp_a50a04b0a77a81ffdd28260d245a94aac} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [4/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Check\+Budget\+Limit\+Over\+Limit}]{ }\end{DoxyParamCaption})}
+
+
+
+Bütçe limit kontrolü -\/ limit aşımı testi. 
+
+Bu test, bütçe limitinin aşıldığı durumda fonksiyonun doğru şekilde çalışıp çalışmadığını kontrol eder. check\+Budget\+Limit fonksiyonu limit aşıldığında false döner. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00612}{612}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a3ea5c1a7e94f0a5c4423126578d5885b}\label{travelexpense__test_8cpp_a3ea5c1a7e94f0a5c4423126578d5885b} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [5/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Check\+Budget\+Limit\+Under\+Limit}]{ }\end{DoxyParamCaption})}
+
+
+
+Bütçe limit kontrolü -\/ limit altında testi. 
+
+Bu test, bütçe limitinin altında kaldığı durumda fonksiyonun doğru şekilde çalışıp çalışmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00629}{629}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_ad682addd277849b181b6aee0badbb193}\label{travelexpense__test_8cpp_ad682addd277849b181b6aee0badbb193} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [6/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Cleanup\+TLSContext}]{ }\end{DoxyParamCaption})}
+
+
+
+TLS bağlamı temizleme testi. 
+
+Bu test, TLS bağlamının başarıyla temizlenip temizlenmediğini kontrol eder. İşlem başarılı olmalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00704}{704}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a64d7bb2025dded9023223c02ed4d6289}\label{travelexpense__test_8cpp_a64d7bb2025dded9023223c02ed4d6289} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [7/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Close\+Database}]{ }\end{DoxyParamCaption})}
+
+
+
+Veritabanı kapatma testi. 
+
+Bu test, veritabanı bağlantısının başarıyla kapatılıp kapatılmadığını kontrol eder. İşlem başarılı olmalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00385}{385}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_af7e7bf105aeb9a96feaf7f6b3b62c433}\label{travelexpense__test_8cpp_af7e7bf105aeb9a96feaf7f6b3b62c433} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [8/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Code\+Checksum\+Verification}]{ }\end{DoxyParamCaption})}
+
+
+
+Checksum doğrulama testi. 
+
+Bu test, kod bloğu checksum hesaplama ve doğrulama fonksiyonlarının doğru çalışıp çalışmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00950}{950}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a64d8eb156b01a256e77b28683a257a16}\label{travelexpense__test_8cpp_a64d8eb156b01a256e77b28683a257a16} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [9/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Combine\+Opaque\+Flags}]{ }\end{DoxyParamCaption})}
+
+
+
+Opaque flag birleştirme testi. 
+
+Bu test, birden fazla boolean değerinin tek bir belirsizleştirilmiş değerde birleştirilip birleştirilemediğini kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00238}{238}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a9f7e95210787d1c91af1050fd30114cb}\label{travelexpense__test_8cpp_a9f7e95210787d1c91af1050fd30114cb} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [10/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Control\+Flow\+Counter}]{ }\end{DoxyParamCaption})}
+
+
+
+Control flow counter testi. 
+
+Bu test, kontrol akışı sayacının doğru çalışıp çalışmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l01002}{1002}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a244784ae740f6c824931476e111b68ea}\label{travelexpense__test_8cpp_a244784ae740f6c824931476e111b68ea} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [11/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Create\+Database\+Tables}]{ }\end{DoxyParamCaption})}
+
+
+
+Veritabanı tablo oluşturma testi. 
+
+Bu test, veritabanı tablolarının başarıyla oluşturulup oluşturulmadığını kontrol eder. İşlem başarılı olmalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00372}{372}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a1774a374e71d4912166a0462354a3064}\label{travelexpense__test_8cpp_a1774a374e71d4912166a0462354a3064} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [12/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Create\+Trip}]{ }\end{DoxyParamCaption})}
+
+
+
+Seyahat oluşturma testi. 
+
+Bu test, yeni bir seyahatin başarıyla oluşturulup oluşturulmadığını kontrol eder. Seyahat ID\textquotesingle{}si atanmış olmalı ve sıfırdan farklı olmalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00486}{486}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a1240e548564855caf6fcab3718e71b77}\label{travelexpense__test_8cpp_a1240e548564855caf6fcab3718e71b77} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [13/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Database\+Initialization}]{ }\end{DoxyParamCaption})}
+
+
+
+Veritabanı başlatma testi. 
+
+Bu test, veritabanı bağlantısının başarıyla başlatılıp başlatılmadığını kontrol eder. Veritabanı pointer\textquotesingle{}ı null olmamalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00361}{361}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a06ee8077aeaebaa10efc11472331ffb7}\label{travelexpense__test_8cpp_a06ee8077aeaebaa10efc11472331ffb7} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [14/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Enable\+Guest\+Mode}]{ }\end{DoxyParamCaption})}
+
+
+
+Misafir modu etkinleştirme testi. 
+
+Bu test, misafir modunun başarıyla etkinleştirilip etkinleştirilmediğini kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00458}{458}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_ad5fce6a4c5b9050cd511ee38f7a012eb}\label{travelexpense__test_8cpp_ad5fce6a4c5b9050cd511ee38f7a012eb} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [15/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{File\+Checksum\+Verification}]{ }\end{DoxyParamCaption})}
+
+
+
+File checksum doğrulama testi. 
+
+Bu test, dosya checksum hesaplama ve doğrulama fonksiyonlarının doğru çalışıp çalışmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00977}{977}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a3fba549a4f3653d4dd1db7eb8fb9f885}\label{travelexpense__test_8cpp_a3fba549a4f3653d4dd1db7eb8fb9f885} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [16/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Generate\+Application\+Fingerprint}]{ }\end{DoxyParamCaption})}
+
+
+
+Uygulama parmak izi üretimi testi. 
+
+Bu test, uygulama parmak izinin başarıyla üretilip üretilmediğini kontrol eder. Parmak izi çıktısı boş olmamalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00674}{674}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_ad2272d0e912cd1f5adcabbf10fbe7d4e}\label{travelexpense__test_8cpp_ad2272d0e912cd1f5adcabbf10fbe7d4e} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [17/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Generate\+Device\+Fingerprint}]{ }\end{DoxyParamCaption})}
+
+
+
+Cihaz parmak izi üretimi testi. 
+
+Bu test, cihaz parmak izinin başarıyla üretilip üretilmediğini kontrol eder. Parmak izi çıktısı boş olmamalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00648}{648}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_aee24c1da33a3ca30e7891cb0f0782182}\label{travelexpense__test_8cpp_aee24c1da33a3ca30e7891cb0f0782182} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [18/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Generate\+Session\+Key}]{ }\end{DoxyParamCaption})}
+
+
+
+Oturum anahtarı üretimi testi. 
+
+Bu test, oturum anahtarının başarıyla üretilip üretilmediğini kontrol eder. Anahtar çıktısı boş olmamalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00721}{721}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_abe31bbb726f223084ae3fcd16a9fab6b}\label{travelexpense__test_8cpp_abe31bbb726f223084ae3fcd16a9fab6b} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [19/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Get\+Budget}]{ }\end{DoxyParamCaption})}
+
+
+
+Bütçe getirme testi. 
+
+Bu test, ayarlanan bütçenin doğru şekilde getirilip getirilemediğini kontrol eder. Bütçe toplam değeri kaydedilen değerle eşleşmelidir. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00594}{594}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a42b2a18c88b786707f8f5802ef067a46}\label{travelexpense__test_8cpp_a42b2a18c88b786707f8f5802ef067a46} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [20/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Get\+Current\+User}]{ }\end{DoxyParamCaption})}
+
+
+
+Mevcut kullanıcı alma testi. 
+
+Bu test, giriş yapmış kullanıcının bilgilerinin doğru şekilde alınıp alınamadığını kontrol eder. Kullanıcı pointer\textquotesingle{}ı null olmamalı ve kullanıcı adı eşleşmelidir. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00434}{434}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a3e593ffb590d6e29ff6107bf7308a8f9}\label{travelexpense__test_8cpp_a3e593ffb590d6e29ff6107bf7308a8f9} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [21/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Get\+Device\+Fingerprint\+From\+Session\+Manager}]{ }\end{DoxyParamCaption})}
+
+
+
+Cihaz parmak izi alma testi. 
+
+Bu test, oturum yönetimi modülünden cihaz parmak izinin başarıyla alınıp alınamadığını kontrol eder. Parmak izi çıktısı boş olmamalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00744}{744}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a07d0ecbbe882716ddd229493b66c7b87}\label{travelexpense__test_8cpp_a07d0ecbbe882716ddd229493b66c7b87} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [22/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Get\+Expenses}]{ }\end{DoxyParamCaption})}
+
+
+
+Gider listeleme testi. 
+
+Bu test, belirli bir seyahat için giderlerin başarıyla listelenip listelenmediğini kontrol eder. Liste boş olmamalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00553}{553}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a89286cedebcc419752e5bafeeaa19cac}\label{travelexpense__test_8cpp_a89286cedebcc419752e5bafeeaa19cac} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [23/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Get\+Opaque\+Flag\+At\+Index0}]{ }\end{DoxyParamCaption})}
+
+
+
+Opaque flag indeks okuma testi -\/ index 0. 
+
+Bu test, birleştirilmiş flag değerinden belirli bir indeksteki boolean değerinin doğru şekilde okunup okunamadığını kontrol eder. İndeks 0\textquotesingle{}daki değer true olmalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00251}{251}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a2231dca1f796df9d15d5340ec877c62b}\label{travelexpense__test_8cpp_a2231dca1f796df9d15d5340ec877c62b} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [24/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Get\+Opaque\+Flag\+At\+Index1}]{ }\end{DoxyParamCaption})}
+
+
+
+Opaque flag indeks okuma testi -\/ index 1. 
+
+Bu test, birleştirilmiş flag değerinden belirli bir indeksteki boolean değerinin doğru şekilde okunup okunamadığını kontrol eder. İndeks 1\textquotesingle{}deki değer false olmalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00265}{265}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a5fd2a8b32d04bb11197cbfe4986e880b}\label{travelexpense__test_8cpp_a5fd2a8b32d04bb11197cbfe4986e880b} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [25/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Get\+Trip}]{ }\end{DoxyParamCaption})}
+
+
+
+Seyahat getirme testi. 
+
+Bu test, oluşturulan seyahatin veritabanından doğru şekilde getirilip getirilemediğini kontrol eder. Seyahat bilgileri kaydedilen değerlerle eşleşmelidir. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00507}{507}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a3f2953ccfa735b79dfcdfaf8abc77e19}\label{travelexpense__test_8cpp_a3f2953ccfa735b79dfcdfaf8abc77e19} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [26/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{HMACSHA256\+Calculation}]{ }\end{DoxyParamCaption})}
+
+
+
+HMAC-\/\+SHA256 testi. 
+
+Bu test, HMAC-\/\+SHA256 fonksiyonunun doğru çalışıp çalışmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00886}{886}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a7776302b8bbb90cc14547181c486e1a1}\label{travelexpense__test_8cpp_a7776302b8bbb90cc14547181c486e1a1} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [27/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Hook\+Detection}]{ }\end{DoxyParamCaption})}
+
+
+
+Hook detection testi. 
+
+Bu test, hook detection fonksiyonunun çalışıp çalışmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l01029}{1029}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a8ebea3dc7cde0c9dd8ba761735e17b5e}\label{travelexpense__test_8cpp_a8ebea3dc7cde0c9dd8ba761735e17b5e} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [28/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Initialize\+TLSContext}]{ }\end{DoxyParamCaption})}
+
+
+
+TLS bağlamı başlatma testi. 
+
+Bu test, TLS bağlamının başarıyla başlatılıp başlatılmadığını kontrol eder. Bağlam başlatılmış olmalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00691}{691}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a4424e4ba81d90596cd6842bf9aa8ff73}\label{travelexpense__test_8cpp_a4424e4ba81d90596cd6842bf9aa8ff73} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [29/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Log\+Expense}]{ }\end{DoxyParamCaption})}
+
+
+
+Gider kaydetme testi. 
+
+Bu test, yeni bir giderin başarıyla kaydedilip kaydedilmediğini kontrol eder. Gider ID\textquotesingle{}si atanmış olmalı ve sıfırdan farklı olmalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00533}{533}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a49eb9bd08455c8de007b10ee27186681}\label{travelexpense__test_8cpp_a49eb9bd08455c8de007b10ee27186681} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [30/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Opaque\+Boolean}]{ }\end{DoxyParamCaption})}
+
+
+
+Opaque boolean testi. 
+
+Bu test, opaque boolean fonksiyonlarının doğru çalışıp çalışmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l01079}{1079}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_ad59e2dbbb0fb4b177859650f741b9131}\label{travelexpense__test_8cpp_ad59e2dbbb0fb4b177859650f741b9131} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [31/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Opaque\+Boolean\+False}]{ }\end{DoxyParamCaption})}
+
+
+
+Opaque boolean false değeri testi. 
+
+Bu test, false değerinin belirsizleştirilmiş formatta doğru şekilde saklanıp geri alınıp alınamadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00226}{226}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_ac8876a7395c46599051d7e99dcad280d}\label{travelexpense__test_8cpp_ac8876a7395c46599051d7e99dcad280d} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [32/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Opaque\+Boolean\+True}]{ }\end{DoxyParamCaption})}
+
+
+
+Opaque boolean true değeri testi. 
+
+Bu test, true değerinin belirsizleştirilmiş formatta doğru şekilde saklanıp geri alınıp alınamadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00214}{214}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_af8389b723d3b8717311861ef1d87382e}\label{travelexpense__test_8cpp_af8389b723d3b8717311861ef1d87382e} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [33/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Opaque\+Counter\+Creation}]{ }\end{DoxyParamCaption})}
+
+
+
+Opaque counter oluşturma testi. 
+
+Bu test, belirsizleştirilmiş bir sayaç değerinin başarıyla oluşturulup oluşturulmadığını kontrol eder. Sayaç değeri sıfır olmamalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00181}{181}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a22df2c833f5898a5a8d0ad112fd98e92}\label{travelexpense__test_8cpp_a22df2c833f5898a5a8d0ad112fd98e92} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [34/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Opaque\+Loop\+Condition\+False}]{ }\end{DoxyParamCaption})}
+
+
+
+Opaque loop condition yanlış durum testi. 
+
+Bu test, döngü koşulunun yanlış durumda doğru çalışıp çalışmadığını kontrol eder. İlk değer ikinci değerden büyük olduğunda false dönmelidir. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00203}{203}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a780f18a5f3abd76977322736928cae27}\label{travelexpense__test_8cpp_a780f18a5f3abd76977322736928cae27} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [35/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Opaque\+Loop\+Condition\+True}]{ }\end{DoxyParamCaption})}
+
+
+
+Opaque loop condition doğru durum testi. 
+
+Bu test, döngü koşulunun doğru çalışıp çalışmadığını kontrol eder. İlk değer ikinci değerden küçük olduğunda true dönmelidir. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00192}{192}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_ad4d5782cf29f40f242886f53cbb73e98}\label{travelexpense__test_8cpp_ad4d5782cf29f40f242886f53cbb73e98} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [36/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Password\+Hashing}]{ }\end{DoxyParamCaption})}
+
+
+
+Şifre hashleme testi. 
+
+Bu test, bir şifre ve salt değeri kullanılarak güvenli şifre hash\textquotesingle{}inin oluşturulup oluşturulmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00121}{121}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a903fe367e6d65c7b23b932eb0232c125}\label{travelexpense__test_8cpp_a903fe367e6d65c7b23b932eb0232c125} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [37/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{PBKDF2\+Key\+Derivation}]{ }\end{DoxyParamCaption})}
+
+
+
+PBKDF2 testi. 
+
+Bu test, PBKDF2 key derivation fonksiyonunun doğru çalışıp çalışmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00916}{916}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a5e2ea427e0b557098818165100c399ac}\label{travelexpense__test_8cpp_a5e2ea427e0b557098818165100c399ac} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [38/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Platform\+Specific\+Macros\+Coverage}]{ }\end{DoxyParamCaption})}
+
+
+
+Platform-\/specific macro coverage testi. 
+
+Bu test, platform-\/specific makroların (FILE\+\_\+\+EXISTS, MKDIR) coverage\textquotesingle{}ını sağlamak için eklenmiştir. Bu makrolar test dosyasında tanımlanmıştır ve coverage \%100\textquotesingle{}e çıkarmak için kullanılmalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00758}{758}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a7d8af03a56dd3f0b15b3352020dc2338}\label{travelexpense__test_8cpp_a7d8af03a56dd3f0b15b3352020dc2338} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [39/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Salt\+Generation}]{ }\end{DoxyParamCaption})}
+
+
+
+Salt üretimi testi. 
+
+Bu test, güvenli rastgele salt değerinin üretilip üretilmediğini ve çıktının boş olmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00108}{108}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a35fe0821f2ed7e1a0862ebc84443dc9f}\label{travelexpense__test_8cpp_a35fe0821f2ed7e1a0862ebc84443dc9f} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [40/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Secure\+Buffer\+Cleanup}]{ }\end{DoxyParamCaption})}
+
+
+
+Statik buffer güvenli temizleme testi. 
+
+Bu test, hassas veri içeren bir buffer\textquotesingle{}ın güvenli temizleme fonksiyonu ile tamamen sıfırlanıp sıfırlanmadığını kontrol eder. Buffer\textquotesingle{}daki tüm byte\textquotesingle{}ların sıfır olması gerekmektedir. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00141}{141}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_aff8ccc25e10cc39c4eae7cee9d875d21}\label{travelexpense__test_8cpp_aff8ccc25e10cc39c4eae7cee9d875d21} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [41/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Secure\+Memory\+Cleanup}]{ }\end{DoxyParamCaption})}
+
+
+
+Dinamik bellek güvenli temizleme testi. 
+
+Bu test, dinamik olarak ayrılmış belleğin güvenli temizleme fonksiyonu ile başarıyla temizlenip temizlenmediğini kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00162}{162}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_aa7e47b902f7565422491885cb9072a85}\label{travelexpense__test_8cpp_aa7e47b902f7565422491885cb9072a85} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [42/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Session\+Key\+Encryption\+Decryption}]{ }\end{DoxyParamCaption})}
+
+
+
+Session key encryption/decryption testi. 
+
+Bu test, oturum anahtarı şifreleme ve şifre çözme fonksiyonlarının doğru çalışıp çalışmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l01105}{1105}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_aaf5612e49808de5d5d8e17f8ac81b415}\label{travelexpense__test_8cpp_aaf5612e49808de5d5d8e17f8ac81b415} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [43/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Set\+Budget}]{ }\end{DoxyParamCaption})}
+
+
+
+Bütçe ayarlama testi. 
+
+Bu test, yeni bir bütçenin başarıyla ayarlanıp ayarlanmadığını kontrol eder. Bütçe ID\textquotesingle{}si atanmış olmalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00579}{579}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a9309c43adb4be795daa1a794ab5f0e5e}\label{travelexpense__test_8cpp_a9309c43adb4be795daa1a794ab5f0e5e} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [44/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{SHA256\+Hash\+Calculation}]{ }\end{DoxyParamCaption})}
+
+
+
+SHA-\/256 hash hesaplama testi. 
+
+Bu test, belirli bir giriş string\textquotesingle{}i için SHA-\/256 hash değerinin başarıyla hesaplanıp hesaplanmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00095}{95}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_adc8c6d9f230d6f5cac812ef8f830211c}\label{travelexpense__test_8cpp_adc8c6d9f230d6f5cac812ef8f830211c} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [45/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{String\+Obfuscation}]{ }\end{DoxyParamCaption})}
+
+
+
+String obfuscation testi. 
+
+Bu test, string obfuscation fonksiyonlarının doğru çalışıp çalışmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l01046}{1046}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a81a022f3bb83d8c0882a34900597f62e}\label{travelexpense__test_8cpp_a81a022f3bb83d8c0882a34900597f62e} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [46/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Tamper\+Check\+With\+Null\+Pointer}]{ }\end{DoxyParamCaption})}
+
+
+
+Null pointer ile tamper check testi. 
+
+Bu test, null pointer ile tamper check yapıldığında fonksiyonun false döndürüp döndürmediğini kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00346}{346}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a70f1b92d2cbcd20be3f733d8122c9a46}\label{travelexpense__test_8cpp_a70f1b92d2cbcd20be3f733d8122c9a46} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [47/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Tamper\+Check\+With\+Self\+Checksum}]{ }\end{DoxyParamCaption})}
+
+
+
+Self-\/checksum ve tamper detection testi. 
+
+Bu test, uygulamanın kendi checksum\textquotesingle{}unu hesaplayıp değişiklik tespiti yapıp yapamadığını kontrol eder. Eğer self-\/checksum hesaplanamazsa test atlanır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00326}{326}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a998109ade06180db43f36d7cd3fbd626}\label{travelexpense__test_8cpp_a998109ade06180db43f36d7cd3fbd626} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [48/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{User\+Login}]{ }\end{DoxyParamCaption})}
+
+
+
+Kullanıcı giriş testi. 
+
+Bu test, kayıtlı bir kullanıcının doğru şifre ile başarıyla giriş yapıp yapamadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00413}{413}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a8084b6caac2c3a93a6813dcbbd93a8c4}\label{travelexpense__test_8cpp_a8084b6caac2c3a93a6813dcbbd93a8c4} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [49/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{User\+Logout}]{ }\end{DoxyParamCaption})}
+
+
+
+Kullanıcı çıkış testi. 
+
+Bu test, kullanıcının başarıyla çıkış yapıp yapamadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00468}{468}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_ab2759c4180cb5df65de8d6ced535ff3e}\label{travelexpense__test_8cpp_ab2759c4180cb5df65de8d6ced535ff3e} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [50/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{User\+Registration}]{ }\end{DoxyParamCaption})}
+
+
+
+Kullanıcı kayıt testi. 
+
+Bu test, yeni bir kullanıcının başarıyla kaydedilip kaydedilmediğini kontrol eder. Kayıt işlemi başarılı olmalıdır. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00402}{402}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a291433df69c0a255ae5f5c4f9b214fff}\label{travelexpense__test_8cpp_a291433df69c0a255ae5f5c4f9b214fff} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [51/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Verify\+Code\+Checksum}]{ }\end{DoxyParamCaption})}
+
+
+
+Kod checksum doğrulama testi. 
+
+Bu test, hesaplanan checksum değerinin orijinal veri ile doğru şekilde doğrulanıp doğrulanmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00297}{297}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_ad9c24192c186bc852537417be40a69e7}\label{travelexpense__test_8cpp_ad9c24192c186bc852537417be40a69e7} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [52/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Verify\+Device\+Fingerprint}]{ }\end{DoxyParamCaption})}
+
+
+
+Cihaz parmak izi doğrulama testi. 
+
+Bu test, üretilen cihaz parmak izinin doğru şekilde doğrulanıp doğrulanmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00661}{661}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_ab51188115652f8e6506fcf6615eb678c}\label{travelexpense__test_8cpp_ab51188115652f8e6506fcf6615eb678c} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [53/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Whitebox\+AESEncryption\+Decryption}]{ }\end{DoxyParamCaption})}
+
+
+
+Whitebox AES encryption/decryption testi. 
+
+Bu test, Whitebox AES şifreleme ve şifre çözme fonksiyonlarının doğru çalışıp çalışmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00786}{786}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+
+\Hypertarget{travelexpense__test_8cpp_a80104b6b6dd6fc020f21d52475bb5155}\label{travelexpense__test_8cpp_a80104b6b6dd6fc020f21d52475bb5155} 
+\index{travelexpense\_test.cpp@{travelexpense\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!travelexpense\_test.cpp@{travelexpense\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [54/54]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_travel_expense_tracker_test}{Travel\+Expense\+Tracker\+Test}}}]{,  }\item[{Whitebox\+DESEncryption\+Decryption}]{ }\end{DoxyParamCaption})}
+
+
+
+Whitebox DES encryption/decryption testi. 
+
+Bu test, Whitebox DES şifreleme ve şifre çözme fonksiyonlarının doğru çalışıp çalışmadığını kontrol eder. 
+
+Definition at line \mbox{\hyperlink{travelexpense__test_8cpp_source_l00825}{825}} of file \mbox{\hyperlink{travelexpense__test_8cpp_source}{travelexpense\+\_\+test.\+cpp}}.
+

@@ -1,0 +1,60 @@
+\doxysection{Travel\+Expense\+::Safe\+String Namespace Reference}
+\hypertarget{namespace_travel_expense_1_1_safe_string}{}\label{namespace_travel_expense_1_1_safe_string}\index{TravelExpense::SafeString@{TravelExpense::SafeString}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespace_travel_expense_1_1_safe_string_a5555a53d845f3644d0dfc17c0f097075}{safe\+Copy}} (char \texorpdfstring{$\ast$}{*}dest, size\+\_\+t dest\+Size, const char \texorpdfstring{$\ast$}{*}src)
+\begin{DoxyCompactList}\small\item\em Güvenli string kopyalama. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_travel_expense_1_1_safe_string_a569736a8bdffe728575d3baf0a515712}{safe\+Concat}} (char \texorpdfstring{$\ast$}{*}dest, size\+\_\+t dest\+Size, const char \texorpdfstring{$\ast$}{*}src)
+\begin{DoxyCompactList}\small\item\em Güvenli string birleştirme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_1_1_safe_string_a569736a8bdffe728575d3baf0a515712}\label{namespace_travel_expense_1_1_safe_string_a569736a8bdffe728575d3baf0a515712} 
+\index{TravelExpense::SafeString@{TravelExpense::SafeString}!safeConcat@{safeConcat}}
+\index{safeConcat@{safeConcat}!TravelExpense::SafeString@{TravelExpense::SafeString}}
+\doxysubsubsection{\texorpdfstring{safeConcat()}{safeConcat()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Safe\+String\+::safe\+Concat (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{dest,  }\item[{size\+\_\+t}]{dest\+Size,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Güvenli string birleştirme. 
+
+MSVC\textquotesingle{}de strncat\+\_\+s kullanır, diğer platformlarda strncat.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & Hedef buffer \\
+\hline
+{\em dest\+Size} & Hedef buffer boyutu \\
+\hline
+{\em src} & Eklenecek string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_safe_string_a5555a53d845f3644d0dfc17c0f097075}\label{namespace_travel_expense_1_1_safe_string_a5555a53d845f3644d0dfc17c0f097075} 
+\index{TravelExpense::SafeString@{TravelExpense::SafeString}!safeCopy@{safeCopy}}
+\index{safeCopy@{safeCopy}!TravelExpense::SafeString@{TravelExpense::SafeString}}
+\doxysubsubsection{\texorpdfstring{safeCopy()}{safeCopy()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Safe\+String\+::safe\+Copy (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{dest,  }\item[{size\+\_\+t}]{dest\+Size,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Güvenli string kopyalama. 
+
+MSVC\textquotesingle{}de strncpy\+\_\+s kullanır, diğer platformlarda strncpy + null terminator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dest} & Hedef buffer \\
+\hline
+{\em dest\+Size} & Hedef buffer boyutu \\
+\hline
+{\em src} & Kaynak string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}

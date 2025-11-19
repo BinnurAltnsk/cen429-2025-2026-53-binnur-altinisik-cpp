@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="budget_manager_8h" kind="file" language="C++">
+    <compoundname>budgetManager.h</compoundname>
+    <includes refid="common_types_8h" local="yes">commonTypes.h</includes>
+    <includes refid="export_8h" local="yes">export.h</includes>
+    <includedby refid="travelexpense_8h" local="yes">src/travelexpense/header/travelexpense.h</includedby>
+    <includedby refid="budget_manager_8cpp" local="yes">src/travelexpense/src/budgetManager.cpp</includedby>
+    <includedby refid="report_generator_8cpp" local="yes">src/travelexpense/src/reportGenerator.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/travelexpense/header/budgetManager.h</label>
+        <link refid="budget_manager_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>commonTypes.h</label>
+        <link refid="common_types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>error_codes.h</label>
+        <link refid="error__codes_8h"/>
+      </node>
+      <node id="7">
+        <label>export.h</label>
+        <link refid="export_8h"/>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>cstring</label>
+      </node>
+      <node id="4">
+        <label>ctime</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/travelexpense/header/budgetManager.h</label>
+        <link refid="budget_manager_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/travelexpense/header/travelexpense.h</label>
+        <link refid="travelexpense_8h"/>
+      </node>
+      <node id="3">
+        <label>src/travelexpense/src/budgetManager.cpp</label>
+        <link refid="budget_manager_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/travelexpense/src/reportGenerator.cpp</label>
+        <link refid="report_generator_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
+    <innernamespace refid="namespace_budget_manager">BudgetManager</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_budget_manager">TravelExpense::BudgetManager</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_budget_manager_1a87ed02030d083a4a76b3ba7212cbeaa7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::BudgetManager::setBudget</definition>
+        <argsstring>(int32_t tripId, double totalBudget, const double *categoryBudgets, int32_t &amp;budgetId)</argsstring>
+        <name>setBudget</name>
+        <qualifiedname>TravelExpense::BudgetManager::setBudget</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>tripId</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>totalBudget</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>categoryBudgets</declname>
+        </param>
+        <param>
+          <type>int32_t &amp;</type>
+          <declname>budgetId</declname>
+        </param>
+        <briefdescription>
+<para>Seyahat için bütçe belirle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen seyahat için toplam bütçe ve kategori bazlı bütçeleri ayarlar. Bütçe, veritabanına kaydedilir ve benzersiz bir budgetId ile döndürülür.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, seyahat için yeni bir bütçe kaydı oluşturur. Eğer seyahat için zaten bir bütçe varsa, yeni bütçe eski bütçeyi geçersiz kılmaz, ayrı bir kayıt olarak saklanır.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tripId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Seyahat ID (geçerli bir tripId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>totalBudget</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Toplam bütçe miktarı (TL cinsinden, 0&apos;dan büyük olmalı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>categoryBudgets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kategori bazlı bütçeler dizisi (4 eleman: Accommodation, Transportation, Food, Other) nullptr ise InvalidInput döner. Her kategori bütçesi 0 veya pozitif olmalı. Toplamı totalBudget&apos;ı aşmamalı (opsiyonel kontrol). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>budgetId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oluşturulan bütçenin benzersiz ID&apos;si (çıktı parametresi) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput, FileNotFound vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/budgetManager.cpp" line="19" column="11" bodyfile="src/travelexpense/src/budgetManager.cpp" bodystart="19" bodyend="71" declfile="src/travelexpense/header/budgetManager.h" declline="46" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_budget_manager_1aa06d0fd91539d4e3d978e62a00d67897" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::BudgetManager::getBudget</definition>
+        <argsstring>(int32_t tripId, Budget &amp;budget)</argsstring>
+        <name>getBudget</name>
+        <qualifiedname>TravelExpense::BudgetManager::getBudget</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>tripId</declname>
+        </param>
+        <param>
+          <type>Budget &amp;</type>
+          <declname>budget</declname>
+        </param>
+        <briefdescription>
+<para>Seyahat bütçesini görüntüle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen seyahat ID&apos;sine ait bütçe bilgilerini veritabanından alır ve budget parametresine doldurur. Bütçe bilgisi, toplam bütçe ve kategori bazlı bütçeleri içerir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, seyahat için kayıtlı en son bütçeyi döndürür. Eğer seyahat için bütçe bulunamazsa, FileNotFound hatası döner.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tripId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Seyahat ID (geçerli bir tripId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>budget</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bütçe bilgisi (çıktı parametresi, <ref refid="struct_travel_expense_1_1_budget" kindref="compound">Budget</ref> struct&apos;ı doldurulur) İçerik: totalBudget, categoryBudgets[4], budgetId, tripId vb. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/budgetManager.cpp" line="73" column="11" bodyfile="src/travelexpense/src/budgetManager.cpp" bodystart="73" bodyend="125" declfile="src/travelexpense/header/budgetManager.h" declline="64" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_budget_manager_1aa6d74518da8cb56fda03f783e7664c05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::BudgetManager::updateBudget</definition>
+        <argsstring>(int32_t budgetId, const Budget &amp;budget)</argsstring>
+        <name>updateBudget</name>
+        <qualifiedname>TravelExpense::BudgetManager::updateBudget</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>budgetId</declname>
+        </param>
+        <param>
+          <type>const Budget &amp;</type>
+          <declname>budget</declname>
+        </param>
+        <briefdescription>
+<para>Bütçeyi güncelle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen budgetId&apos;ye sahip bütçeyi, yeni bütçe bilgileriyle günceller. Toplam bütçe ve kategori bazlı bütçeler değiştirilebilir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, mevcut bütçe kaydını günceller. Eğer budgetId geçersizse veya bütçe bulunamazsa, FileNotFound hatası döner. Güncelleme işlemi, veritabanında mevcut kaydı değiştirir.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>budgetId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Güncellenecek bütçenin benzersiz ID&apos;si (geçerli bir budgetId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>budget</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Güncellenmiş bütçe bilgileri (const referans, <ref refid="struct_travel_expense_1_1_budget" kindref="compound">Budget</ref> struct&apos;ı) İçerik: totalBudget, categoryBudgets[4] vb. Tüm alanlar geçerli olmalı. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/budgetManager.cpp" line="127" column="11" bodyfile="src/travelexpense/src/budgetManager.cpp" bodystart="127" bodyend="182" declfile="src/travelexpense/header/budgetManager.h" declline="81" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_budget_manager_1a6635276a27a73233c16e25046e1476ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::BudgetManager::checkBudgetLimit</definition>
+        <argsstring>(int32_t tripId, ExpenseCategory category, double amount)</argsstring>
+        <name>checkBudgetLimit</name>
+        <qualifiedname>TravelExpense::BudgetManager::checkBudgetLimit</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>tripId</declname>
+        </param>
+        <param>
+          <type>ExpenseCategory</type>
+          <declname>category</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Bütçe limiti kontrolü </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen seyahat ve kategori için bütçe limitini kontrol eder. Mevcut harcamaları veritabanından alır ve yeni harcama miktarıyla toplamın kategori bütçesini aşıp aşmadığını kontrol eder.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, yeni bir gider eklenmeden önce bütçe kontrolü yapmak için kullanılır. Eğer seyahat için bütçe bulunamazsa, false döner (bütçe olmadığı için limit aşılmış kabul edilir).</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tripId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Seyahat ID (geçerli bir tripId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gider kategorisi (Accommodation, Transportation, Food, Other) Bu kategori için bütçe limiti kontrol edilir. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kontrol edilecek harcama miktarı (TL cinsinden, 0 veya pozitif olmalı) Bu miktar, mevcut harcamalara eklendiğinde limit aşılıyor mu kontrol edilir. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Bütçe limiti içinde (harcama yapılabilir), false Limit aşıldı (harcama yapılamaz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/budgetManager.cpp" line="184" column="6" bodyfile="src/travelexpense/src/budgetManager.cpp" bodystart="184" bodyend="198" declfile="src/travelexpense/header/budgetManager.h" declline="101" declcolumn="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Seyahat Gideri Takibi - Bütçe Yönetimi Modülü </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu dosya, bütçe yönetimi işlemlerinin fonksiyon bildirimlerini içerir.</para>
+<para><simplesect kind="author"><para>Binnur Altınışık </para>
+</simplesect>
+<simplesect kind="date"><para>2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BUDGET_MANAGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUDGET_MANAGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_types_8h" kindref="compound">commonTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="export_8h" kindref="compound">export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{<sp/></highlight><highlight class="comment">//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="namespace_travel_expense_1_1_budget_manager" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_budget_manager" kindref="compound">BudgetManager</ref><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_budget_manager_1a87ed02030d083a4a76b3ba7212cbeaa7" kindref="member">setBudget</ref>(int32_t<sp/>tripId,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>totalBudget,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*categoryBudgets,<sp/>int32_t<sp/>&amp;budgetId);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_budget_manager_1aa06d0fd91539d4e3d978e62a00d67897" kindref="member">getBudget</ref>(int32_t<sp/>tripId,<sp/><ref refid="struct_travel_expense_1_1_budget" kindref="compound">Budget</ref><sp/>&amp;budget);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_budget_manager_1aa6d74518da8cb56fda03f783e7664c05" kindref="member">updateBudget</ref>(int32_t<sp/>budgetId,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_budget" kindref="compound">Budget</ref><sp/>&amp;budget);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_budget_manager_1a6635276a27a73233c16e25046e1476ae" kindref="member">checkBudgetLimit</ref>(int32_t<sp/>tripId,<sp/><ref refid="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62" kindref="member">ExpenseCategory</ref><sp/>category,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>amount);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>BUDGET_MANAGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/travelexpense/header/budgetManager.h"/>
+  </compounddef>
+</doxygen>

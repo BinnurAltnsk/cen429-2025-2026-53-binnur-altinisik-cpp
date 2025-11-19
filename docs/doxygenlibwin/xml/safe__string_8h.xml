@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="safe__string_8h" kind="file" language="C++">
+    <compoundname>safe_string.h</compoundname>
+    <includes local="no">cstring</includes>
+    <includes local="no">cstddef</includes>
+    <includedby refid="asset_manager_8cpp" local="yes">src/travelexpense/src/assetManager.cpp</includedby>
+    <includedby refid="encryption_8cpp" local="yes">src/travelexpense/src/encryption.cpp</includedby>
+    <includedby refid="expense_manager_8cpp" local="yes">src/travelexpense/src/expenseManager.cpp</includedby>
+    <includedby refid="fingerprinting_8cpp" local="yes">src/travelexpense/src/fingerprinting.cpp</includedby>
+    <includedby refid="rasp_8cpp" local="yes">src/travelexpense/src/rasp.cpp</includedby>
+    <includedby refid="session_manager_8cpp" local="yes">src/travelexpense/src/sessionManager.cpp</includedby>
+    <includedby refid="softhsm_8cpp" local="yes">src/travelexpense/src/softhsm.cpp</includedby>
+    <includedby refid="tls_8cpp" local="yes">src/travelexpense/src/tls.cpp</includedby>
+    <includedby refid="trip_manager_8cpp" local="yes">src/travelexpense/src/tripManager.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/travelexpense/header/safe_string.h</label>
+        <link refid="safe__string_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstddef</label>
+      </node>
+      <node id="2">
+        <label>cstring</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/travelexpense/header/safe_string.h</label>
+        <link refid="safe__string_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/travelexpense/src/assetManager.cpp</label>
+        <link refid="asset_manager_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/travelexpense/src/encryption.cpp</label>
+        <link refid="encryption_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/travelexpense/src/expenseManager.cpp</label>
+        <link refid="expense_manager_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/travelexpense/src/fingerprinting.cpp</label>
+        <link refid="fingerprinting_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/travelexpense/src/rasp.cpp</label>
+        <link refid="rasp_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/travelexpense/src/sessionManager.cpp</label>
+        <link refid="session_manager_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/travelexpense/src/softhsm.cpp</label>
+        <link refid="softhsm_8cpp"/>
+      </node>
+      <node id="9">
+        <label>src/travelexpense/src/tls.cpp</label>
+        <link refid="tls_8cpp"/>
+      </node>
+      <node id="10">
+        <label>src/travelexpense/src/tripManager.cpp</label>
+        <link refid="trip_manager_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
+    <innernamespace refid="namespace_safe_string">SafeString</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_safe_string">TravelExpense::SafeString</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_safe_string_1a5555a53d845f3644d0dfc17c0f097075" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TravelExpense::SafeString::safeCopy</definition>
+        <argsstring>(char *dest, size_t destSize, const char *src)</argsstring>
+        <name>safeCopy</name>
+        <qualifiedname>TravelExpense::SafeString::safeCopy</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>destSize</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Güvenli string kopyalama. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>MSVC&apos;de strncpy_s kullanır, diğer platformlarda strncpy + null terminator.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hedef buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hedef buffer boyutu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kaynak string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/safe_string.h" line="39" column="13" bodyfile="src/travelexpense/header/safe_string.h" bodystart="39" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_safe_string_1a569736a8bdffe728575d3baf0a515712" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TravelExpense::SafeString::safeConcat</definition>
+        <argsstring>(char *dest, size_t destSize, const char *src)</argsstring>
+        <name>safeConcat</name>
+        <qualifiedname>TravelExpense::SafeString::safeConcat</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>destSize</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Güvenli string birleştirme. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>MSVC&apos;de strncat_s kullanır, diğer platformlarda strncat.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hedef buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hedef buffer boyutu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Eklenecek string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/safe_string.h" line="73" column="13" bodyfile="src/travelexpense/header/safe_string.h" bodystart="73" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Güvenli string işlemleri için yardımcı fonksiyonlar. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu dosya, MSVC C4996 uyarılarını önlemek için güvenli string işlemleri sağlar.</para>
+<para><simplesect kind="author"><para>Binnur Altınışık </para>
+</simplesect>
+<simplesect kind="date"><para>2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SAFE_STRING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAFE_STRING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{<sp/></highlight><highlight class="comment">//<sp/>LCOV_EXCL_LINE</highlight></codeline>
+<codeline lineno="27" refid="namespace_travel_expense_1_1_safe_string" refkind="compound"><highlight class="comment"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_safe_string" kindref="compound">SafeString</ref><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="namespace_travel_expense_1_1_safe_string_1a5555a53d845f3644d0dfc17c0f097075" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_safe_string_1a5555a53d845f3644d0dfc17c0f097075" kindref="member">safeCopy</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dest,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>destSize,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*src)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!dest<sp/>||<sp/>destSize<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strncpy_s(dest,<sp/>destSize,<sp/>src<sp/>?<sp/>src<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>_TRUNCATE)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!src)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>dest[0]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>std::strncpy(dest,<sp/>src,<sp/>destSize<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>dest[destSize<sp/>-<sp/>1]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="namespace_travel_expense_1_1_safe_string_1a569736a8bdffe728575d3baf0a515712" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_safe_string_1a569736a8bdffe728575d3baf0a515712" kindref="member">safeConcat</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dest,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>destSize,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*src)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!dest<sp/>||<sp/>destSize<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strncat_s(dest,<sp/>destSize,<sp/>src<sp/>?<sp/>src<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>_TRUNCATE)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!src)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>destLen<sp/>=<sp/>std::strlen(dest);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(destLen<sp/>&gt;=<sp/>destSize<sp/>-<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>std::strncat(dest,<sp/>src,<sp/>destSize<sp/>-<sp/>destLen<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>dest[destSize<sp/>-<sp/>1]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>SafeString</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>SAFE_STRING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/travelexpense/header/safe_string.h"/>
+  </compounddef>
+</doxygen>

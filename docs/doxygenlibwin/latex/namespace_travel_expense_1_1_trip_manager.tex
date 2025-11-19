@@ -1,0 +1,141 @@
+\doxysection{Travel\+Expense\+::Trip\+Manager Namespace Reference}
+\hypertarget{namespace_travel_expense_1_1_trip_manager}{}\label{namespace_travel_expense_1_1_trip_manager}\index{TravelExpense::TripManager@{TravelExpense::TripManager}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager_ac7be4bff03b19399d7aa30b2d8a86c94}{create\+Trip}} (const \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} \&trip, int32\+\_\+t \&trip\+Id)
+\begin{DoxyCompactList}\small\item\em Yeni seyahat oluştur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager_a8b213c27d6c49d746400185703232b7e}{get\+Trips}} (int32\+\_\+t user\+Id, std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} $>$ \&trips)
+\begin{DoxyCompactList}\small\item\em Kullanıcıya ait seyahatleri listele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager_a39bc3ac908aab3ead121a77c6f290ea0}{update\+Trip}} (int32\+\_\+t trip\+Id, const \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} \&trip)
+\begin{DoxyCompactList}\small\item\em Seyahat bilgisini güncelle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager_a6686b59f40b7a211db40096af483de6c}{delete\+Trip}} (int32\+\_\+t trip\+Id)
+\begin{DoxyCompactList}\small\item\em Seyahati sil. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager_a6e49251e6e2091a7a6db0b84cf64cacb}{get\+Trip}} (int32\+\_\+t trip\+Id, \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} \&trip)
+\begin{DoxyCompactList}\small\item\em Seyahat detayını al. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_1_1_trip_manager_ac7be4bff03b19399d7aa30b2d8a86c94}\label{namespace_travel_expense_1_1_trip_manager_ac7be4bff03b19399d7aa30b2d8a86c94} 
+\index{TravelExpense::TripManager@{TravelExpense::TripManager}!createTrip@{createTrip}}
+\index{createTrip@{createTrip}!TravelExpense::TripManager@{TravelExpense::TripManager}}
+\doxysubsubsection{\texorpdfstring{createTrip()}{createTrip()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Trip\+Manager\+::create\+Trip (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} \&}]{trip,  }\item[{int32\+\_\+t \&}]{trip\+Id }\end{DoxyParamCaption})}
+
+
+
+Yeni seyahat oluştur. 
+
+Belirtilen seyahat bilgilerini veritabanına kaydeder ve benzersiz bir trip\+Id oluşturur. Seyahat, kullanıcı ID\textquotesingle{}si, başlangıç/bitiş tarihi, destinasyon ve açıklama bilgilerini içerir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, yeni bir seyahat kaydı oluşturur. Seyahat ID otomatik olarak oluşturulur ve trip\+Id parametresine yazılır.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em trip} & Seyahat bilgileri (const referans, \doxylink{struct_travel_expense_1_1_trip}{Trip} struct\textquotesingle{}ı) İçerik\+: user\+Id, start\+Date, end\+Date, destination, description vb. Tüm alanlar geçerli olmalı (user\+Id \texorpdfstring{$>$}{>} 0, tarih geçerliliği vb.). \\
+\hline
+{\em trip\+Id} & Oluşturulan seyahatin benzersiz ID\textquotesingle{}si (çıktı parametresi) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, Invalid\+Input, File\+Not\+Found vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_trip_manager_a6686b59f40b7a211db40096af483de6c}\label{namespace_travel_expense_1_1_trip_manager_a6686b59f40b7a211db40096af483de6c} 
+\index{TravelExpense::TripManager@{TravelExpense::TripManager}!deleteTrip@{deleteTrip}}
+\index{deleteTrip@{deleteTrip}!TravelExpense::TripManager@{TravelExpense::TripManager}}
+\doxysubsubsection{\texorpdfstring{deleteTrip()}{deleteTrip()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Trip\+Manager\+::delete\+Trip (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{trip\+Id }\end{DoxyParamCaption})}
+
+
+
+Seyahati sil. 
+
+Belirtilen trip\+Id\textquotesingle{}ye sahip seyahati veritabanından kalıcı olarak siler. Seyahate ait giderler de silinebilir (cascade delete).
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, seyahati kalıcı olarak siler. Silinen seyahat geri getirilemez. Eğer trip\+Id geçersizse veya seyahat bulunamazsa, File\+Not\+Found hatası döner.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em trip\+Id} & Silinecek seyahatin benzersiz ID\textquotesingle{}si (geçerli bir trip\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, File\+Not\+Found, Invalid\+Input vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_trip_manager_a6e49251e6e2091a7a6db0b84cf64cacb}\label{namespace_travel_expense_1_1_trip_manager_a6e49251e6e2091a7a6db0b84cf64cacb} 
+\index{TravelExpense::TripManager@{TravelExpense::TripManager}!getTrip@{getTrip}}
+\index{getTrip@{getTrip}!TravelExpense::TripManager@{TravelExpense::TripManager}}
+\doxysubsubsection{\texorpdfstring{getTrip()}{getTrip()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Trip\+Manager\+::get\+Trip (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{trip\+Id,  }\item[{\mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} \&}]{trip }\end{DoxyParamCaption})}
+
+
+
+Seyahat detayını al. 
+
+Belirtilen trip\+Id\textquotesingle{}ye sahip seyahatin detaylı bilgilerini veritabanından alır ve trip parametresine doldurur.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, tek bir seyahatin detaylarını getirir. Eğer seyahat bulunamazsa, File\+Not\+Found hatası döner.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em trip\+Id} & Seyahat ID (geçerli bir trip\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+{\em trip} & Seyahat bilgisi (çıktı parametresi, \doxylink{struct_travel_expense_1_1_trip}{Trip} struct\textquotesingle{}ı) İçerik\+: trip\+Id, user\+Id, start\+Date, end\+Date, destination, description vb. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, File\+Not\+Found, Invalid\+Input vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_trip_manager_a8b213c27d6c49d746400185703232b7e}\label{namespace_travel_expense_1_1_trip_manager_a8b213c27d6c49d746400185703232b7e} 
+\index{TravelExpense::TripManager@{TravelExpense::TripManager}!getTrips@{getTrips}}
+\index{getTrips@{getTrips}!TravelExpense::TripManager@{TravelExpense::TripManager}}
+\doxysubsubsection{\texorpdfstring{getTrips()}{getTrips()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Trip\+Manager\+::get\+Trips (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{user\+Id,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} $>$ \&}]{trips }\end{DoxyParamCaption})}
+
+
+
+Kullanıcıya ait seyahatleri listele. 
+
+Belirtilen kullanıcı ID\textquotesingle{}sine ait tüm seyahatleri veritabanından alır ve trips vektörüne doldurur. Seyahatler tarih sırasına göre sıralanabilir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, trips vektörünü temizler ve yeni seyahatlerle doldurur. Eğer kullanıcı için seyahat bulunamazsa, trips vektörü boş kalır.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & Kullanıcı ID (geçerli bir user\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+{\em trips} & Seyahat listesi (çıktı parametresi, std\+::vector$<$\+Trip$>$) Fonksiyon çağrıldığında temizlenir ve yeni seyahatlerle doldurulur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, File\+Not\+Found, Invalid\+Input vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_trip_manager_a39bc3ac908aab3ead121a77c6f290ea0}\label{namespace_travel_expense_1_1_trip_manager_a39bc3ac908aab3ead121a77c6f290ea0} 
+\index{TravelExpense::TripManager@{TravelExpense::TripManager}!updateTrip@{updateTrip}}
+\index{updateTrip@{updateTrip}!TravelExpense::TripManager@{TravelExpense::TripManager}}
+\doxysubsubsection{\texorpdfstring{updateTrip()}{updateTrip()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Trip\+Manager\+::update\+Trip (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{trip\+Id,  }\item[{const \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} \&}]{trip }\end{DoxyParamCaption})}
+
+
+
+Seyahat bilgisini güncelle. 
+
+Belirtilen trip\+Id\textquotesingle{}ye sahip seyahati, yeni seyahat bilgileriyle günceller. Tarih, destinasyon ve açıklama gibi alanlar değiştirilebilir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, mevcut seyahat kaydını günceller. Eğer trip\+Id geçersizse veya seyahat bulunamazsa, File\+Not\+Found hatası döner.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em trip\+Id} & Güncellenecek seyahatin benzersiz ID\textquotesingle{}si (geçerli bir trip\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+{\em trip} & Güncellenmiş seyahat bilgileri (const referans, \doxylink{struct_travel_expense_1_1_trip}{Trip} struct\textquotesingle{}ı) İçerik\+: user\+Id, start\+Date, end\+Date, destination, description vb. Tüm alanlar geçerli olmalı. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, File\+Not\+Found, Invalid\+Input vb.) 
+\end{DoxyReturn}

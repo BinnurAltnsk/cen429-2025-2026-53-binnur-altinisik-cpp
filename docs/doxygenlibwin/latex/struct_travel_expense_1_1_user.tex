@@ -1,0 +1,136 @@
+\doxysection{Travel\+Expense\+::User Struct Reference}
+\hypertarget{struct_travel_expense_1_1_user}{}\label{struct_travel_expense_1_1_user}\index{TravelExpense::User@{TravelExpense::User}}
+
+
+Kullanıcı veri modeli.  
+
+
+
+
+{\ttfamily \#include $<$common\+Types.\+h$>$}
+
+
+
+Collaboration diagram for Travel\+Expense\+::User\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{struct_travel_expense_1_1_user__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_travel_expense_1_1_user_a3602bdcbdd2ea037db5c536f1de39a47}{User}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_travel_expense_1_1_user}{User} constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{struct_travel_expense_1_1_user_a4cec5fe99724491f8257d41396940c70}{user\+Id}}
+\begin{DoxyCompactList}\small\item\em Kullanıcı kimliği. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_user_a7f54291ba35d532e5938771f83e061de}{username}} \mbox{[}50\mbox{]}
+\begin{DoxyCompactList}\small\item\em Kullanıcı adı \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_user_af81ef00d0811c65e427d2ff19780ba05}{password\+Hash}} \mbox{[}64\mbox{]}
+\begin{DoxyCompactList}\small\item\em SHA-\/256 hash (32 bytes hex = 64 chars) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_user_a06181fd6756249e6e4d537c6378691dd}{salt}} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em Salt değeri (16 bytes hex = 32 chars) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_travel_expense_1_1_user_a320d17e6980555c332bb5269e5cb5938}{is\+Guest}}
+\begin{DoxyCompactList}\small\item\em Misafir kullanıcı mı? \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{struct_travel_expense_1_1_user_a3304e0e4fdd2d60ad4d9a2a530c08d51}{created\+At}}
+\begin{DoxyCompactList}\small\item\em Oluşturulma zamanı \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{struct_travel_expense_1_1_user_afdd67cdd7df39e0ea95f92742eb6c6fd}{last\+Login}}
+\begin{DoxyCompactList}\small\item\em Son giriş zamanı \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Kullanıcı veri modeli. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_travel_expense_1_1_user_a3602bdcbdd2ea037db5c536f1de39a47}\label{struct_travel_expense_1_1_user_a3602bdcbdd2ea037db5c536f1de39a47} 
+\index{TravelExpense::User@{TravelExpense::User}!User@{User}}
+\index{User@{User}!TravelExpense::User@{TravelExpense::User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily Travel\+Expense\+::\+User\+::\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{struct_travel_expense_1_1_user}{User} constructor. 
+
+Varsayılan değerlerle yeni bir \doxylink{struct_travel_expense_1_1_user}{User} oluşturur. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_travel_expense_1_1_user_a3304e0e4fdd2d60ad4d9a2a530c08d51}\label{struct_travel_expense_1_1_user_a3304e0e4fdd2d60ad4d9a2a530c08d51} 
+\index{TravelExpense::User@{TravelExpense::User}!createdAt@{createdAt}}
+\index{createdAt@{createdAt}!TravelExpense::User@{TravelExpense::User}}
+\doxysubsubsection{\texorpdfstring{createdAt}{createdAt}}
+{\footnotesize\ttfamily time\+\_\+t Travel\+Expense\+::\+User\+::created\+At}
+
+
+
+Oluşturulma zamanı 
+
+\Hypertarget{struct_travel_expense_1_1_user_a320d17e6980555c332bb5269e5cb5938}\label{struct_travel_expense_1_1_user_a320d17e6980555c332bb5269e5cb5938} 
+\index{TravelExpense::User@{TravelExpense::User}!isGuest@{isGuest}}
+\index{isGuest@{isGuest}!TravelExpense::User@{TravelExpense::User}}
+\doxysubsubsection{\texorpdfstring{isGuest}{isGuest}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+User\+::is\+Guest}
+
+
+
+Misafir kullanıcı mı? 
+
+\Hypertarget{struct_travel_expense_1_1_user_afdd67cdd7df39e0ea95f92742eb6c6fd}\label{struct_travel_expense_1_1_user_afdd67cdd7df39e0ea95f92742eb6c6fd} 
+\index{TravelExpense::User@{TravelExpense::User}!lastLogin@{lastLogin}}
+\index{lastLogin@{lastLogin}!TravelExpense::User@{TravelExpense::User}}
+\doxysubsubsection{\texorpdfstring{lastLogin}{lastLogin}}
+{\footnotesize\ttfamily time\+\_\+t Travel\+Expense\+::\+User\+::last\+Login}
+
+
+
+Son giriş zamanı 
+
+\Hypertarget{struct_travel_expense_1_1_user_af81ef00d0811c65e427d2ff19780ba05}\label{struct_travel_expense_1_1_user_af81ef00d0811c65e427d2ff19780ba05} 
+\index{TravelExpense::User@{TravelExpense::User}!passwordHash@{passwordHash}}
+\index{passwordHash@{passwordHash}!TravelExpense::User@{TravelExpense::User}}
+\doxysubsubsection{\texorpdfstring{passwordHash}{passwordHash}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+User\+::password\+Hash\mbox{[}64\mbox{]}}
+
+
+
+SHA-\/256 hash (32 bytes hex = 64 chars) 
+
+\Hypertarget{struct_travel_expense_1_1_user_a06181fd6756249e6e4d537c6378691dd}\label{struct_travel_expense_1_1_user_a06181fd6756249e6e4d537c6378691dd} 
+\index{TravelExpense::User@{TravelExpense::User}!salt@{salt}}
+\index{salt@{salt}!TravelExpense::User@{TravelExpense::User}}
+\doxysubsubsection{\texorpdfstring{salt}{salt}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+User\+::salt\mbox{[}32\mbox{]}}
+
+
+
+Salt değeri (16 bytes hex = 32 chars) 
+
+\Hypertarget{struct_travel_expense_1_1_user_a4cec5fe99724491f8257d41396940c70}\label{struct_travel_expense_1_1_user_a4cec5fe99724491f8257d41396940c70} 
+\index{TravelExpense::User@{TravelExpense::User}!userId@{userId}}
+\index{userId@{userId}!TravelExpense::User@{TravelExpense::User}}
+\doxysubsubsection{\texorpdfstring{userId}{userId}}
+{\footnotesize\ttfamily int32\+\_\+t Travel\+Expense\+::\+User\+::user\+Id}
+
+
+
+Kullanıcı kimliği. 
+
+\Hypertarget{struct_travel_expense_1_1_user_a7f54291ba35d532e5938771f83e061de}\label{struct_travel_expense_1_1_user_a7f54291ba35d532e5938771f83e061de} 
+\index{TravelExpense::User@{TravelExpense::User}!username@{username}}
+\index{username@{username}!TravelExpense::User@{TravelExpense::User}}
+\doxysubsubsection{\texorpdfstring{username}{username}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+User\+::username\mbox{[}50\mbox{]}}
+
+
+
+Kullanıcı adı 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/travelexpense/header/\mbox{\hyperlink{common_types_8h}{common\+Types.\+h}}\end{DoxyCompactItemize}

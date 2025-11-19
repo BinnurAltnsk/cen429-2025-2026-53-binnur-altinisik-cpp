@@ -1,0 +1,100 @@
+\doxysection{common\+Types.\+h}
+\hypertarget{common_types_8h_source}{}\label{common_types_8h_source}\index{src/travelexpense/header/commonTypes.h@{src/travelexpense/header/commonTypes.h}}
+\mbox{\hyperlink{common_types_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ COMMON\_TYPES\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ COMMON\_TYPES\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{error__codes_8h}{error\_codes.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_travel_expense}{TravelExpense}}\ \{\ \textcolor{comment}{//\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_travel_expense_1_1_user}{User}}\ \{}
+\DoxyCodeLine{00031\ \ \ int32\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_user_a4cec5fe99724491f8257d41396940c70}{userId}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_user_a7f54291ba35d532e5938771f83e061de}{username}}[50];\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_user_af81ef00d0811c65e427d2ff19780ba05}{passwordHash}}[64];\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_user_a06181fd6756249e6e4d537c6378691dd}{salt}}[32];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_travel_expense_1_1_user_a320d17e6980555c332bb5269e5cb5938}{isGuest}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ time\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_user_a3304e0e4fdd2d60ad4d9a2a530c08d51}{createdAt}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ time\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_user_afdd67cdd7df39e0ea95f92742eb6c6fd}{lastLogin}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \mbox{\hyperlink{struct_travel_expense_1_1_user_a3602bdcbdd2ea037db5c536f1de39a47}{User}}()\ :\ \mbox{\hyperlink{struct_travel_expense_1_1_user_a4cec5fe99724491f8257d41396940c70}{userId}}(0),\ \mbox{\hyperlink{struct_travel_expense_1_1_user_a320d17e6980555c332bb5269e5cb5938}{isGuest}}(false),\ \mbox{\hyperlink{struct_travel_expense_1_1_user_a3304e0e4fdd2d60ad4d9a2a530c08d51}{createdAt}}(0),\ \mbox{\hyperlink{struct_travel_expense_1_1_user_afdd67cdd7df39e0ea95f92742eb6c6fd}{lastLogin}}(0)\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_user_a7f54291ba35d532e5938771f83e061de}{username}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_user_a7f54291ba35d532e5938771f83e061de}{username}}));}
+\DoxyCodeLine{00046\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_user_af81ef00d0811c65e427d2ff19780ba05}{passwordHash}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_user_af81ef00d0811c65e427d2ff19780ba05}{passwordHash}}));}
+\DoxyCodeLine{00047\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_user_a06181fd6756249e6e4d537c6378691dd}{salt}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_user_a06181fd6756249e6e4d537c6378691dd}{salt}}));}
+\DoxyCodeLine{00048\ \ \ \}}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}}\ \{}
+\DoxyCodeLine{00056\ \ \ int32\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_aa46fcc235f25f50cfef9aebbc6040ade}{tripId}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ int32\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_a3e331ff4035a3269150c8d99f08c874a}{userId}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_afd98a09bdb753d91200b64d78d6704c1}{destination}}[100];\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_ac5a834a054677985faf4b7330b9689ac}{startDate}}[11];\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_a324df3d5c655543161f59c78f88a1666}{endDate}}[11];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_abd14f42c5baec4e98e017a798f16eeb9}{accommodation}}[200];\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_ab669c2d5e68f7546b7c8696f4a85e53d}{transportation}}[100];\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_aef741342c3407345bd9dc3b5beb56eb9}{budget}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_a91fa6e04133accc77988ee4ecf19cc77}{totalExpenses}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ time\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_aa8a9d62c7db7af79c25136386a9bee70}{createdAt}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ time\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_a28f9028c8257a3ad54038e18ab0422d0}{updatedAt}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00073\ \ \ \mbox{\hyperlink{struct_travel_expense_1_1_trip_a2b0e5496b4460de325004462b1c94133}{Trip}}()\ :\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_aa46fcc235f25f50cfef9aebbc6040ade}{tripId}}(0),\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_a3e331ff4035a3269150c8d99f08c874a}{userId}}(0),\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_aef741342c3407345bd9dc3b5beb56eb9}{budget}}(0.0),\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_a91fa6e04133accc77988ee4ecf19cc77}{totalExpenses}}(0.0),}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{struct_travel_expense_1_1_trip_aa8a9d62c7db7af79c25136386a9bee70}{createdAt}}(0),\ \mbox{\hyperlink{struct_travel_expense_1_1_trip_a28f9028c8257a3ad54038e18ab0422d0}{updatedAt}}(0)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_trip_afd98a09bdb753d91200b64d78d6704c1}{destination}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_trip_afd98a09bdb753d91200b64d78d6704c1}{destination}}));}
+\DoxyCodeLine{00076\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_trip_ac5a834a054677985faf4b7330b9689ac}{startDate}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_trip_ac5a834a054677985faf4b7330b9689ac}{startDate}}));}
+\DoxyCodeLine{00077\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_trip_a324df3d5c655543161f59c78f88a1666}{endDate}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_trip_a324df3d5c655543161f59c78f88a1666}{endDate}}));}
+\DoxyCodeLine{00078\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_trip_abd14f42c5baec4e98e017a798f16eeb9}{accommodation}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_trip_abd14f42c5baec4e98e017a798f16eeb9}{accommodation}}));}
+\DoxyCodeLine{00079\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_trip_ab669c2d5e68f7546b7c8696f4a85e53d}{transportation}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_trip_ab669c2d5e68f7546b7c8696f4a85e53d}{transportation}}));}
+\DoxyCodeLine{00080\ \ \ \}}
+\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62}{ExpenseCategory}}\ \{}
+\DoxyCodeLine{00088\ \ \ \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62aedd22f15b1b8b701b7d2c7d8114bc638}{ACCOMMODATION}}\ =\ 0,\ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62acf76afe165258d38e1ef8683601cb5b6}{TRANSPORTATION}}\ =\ 1,\ \ \ }
+\DoxyCodeLine{00090\ \ \ \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62acc9284597026dcc021735c0970ca0c93}{FOOD}}\ =\ 2,\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62a30745c1ec37b7320355b5b1750b98f84}{ENTERTAINMENT}}\ =\ 3\ \ \ \ \ }
+\DoxyCodeLine{00092\ \};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}}\ \{}
+\DoxyCodeLine{00099\ \ \ int32\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_expense_a8b8d0d8ab050ba52969213b047f9f503}{expenseId}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00100\ \ \ int32\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_expense_a5e2b7f2582ecff9f3e7c20b441b1428e}{tripId}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62}{ExpenseCategory}}\ \mbox{\hyperlink{struct_travel_expense_1_1_expense_a9cfd21fc4f2d632e4c92e229ed9a5076}{category}};\ \ \ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_travel_expense_1_1_expense_a9befa852d17625a297af572e6e48239c}{amount}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_expense_ab773ece2064231345a2684dadae3cfbd}{currency}}[4];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_expense_ab5b36883541b77fb18feec3cf9602623}{date}}[11];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_expense_a6ead31c5484d9ddc9d6d419536c8821e}{paymentMethod}}[50];\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_expense_a0b62d0af8229f9b9d743909fb4d66b87}{description}}[200];\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ time\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_expense_ab41221d87f44f7e4c358f4fb629f91b0}{createdAt}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00114\ \ \ \mbox{\hyperlink{struct_travel_expense_1_1_expense_a22e75d7cb8a8fa7c7e4bdbf18b773930}{Expense}}()\ :\ \mbox{\hyperlink{struct_travel_expense_1_1_expense_a8b8d0d8ab050ba52969213b047f9f503}{expenseId}}(0),\ \mbox{\hyperlink{struct_travel_expense_1_1_expense_a5e2b7f2582ecff9f3e7c20b441b1428e}{tripId}}(0),\ \mbox{\hyperlink{struct_travel_expense_1_1_expense_a9cfd21fc4f2d632e4c92e229ed9a5076}{category}}(\mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62}{ExpenseCategory}}::\mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62aedd22f15b1b8b701b7d2c7d8114bc638}{ACCOMMODATION}}),}
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{struct_travel_expense_1_1_expense_a9befa852d17625a297af572e6e48239c}{amount}}(0.0),\ \mbox{\hyperlink{struct_travel_expense_1_1_expense_ab41221d87f44f7e4c358f4fb629f91b0}{createdAt}}(0)\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_expense_ab773ece2064231345a2684dadae3cfbd}{currency}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_expense_ab773ece2064231345a2684dadae3cfbd}{currency}}));}
+\DoxyCodeLine{00117\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_expense_ab5b36883541b77fb18feec3cf9602623}{date}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_expense_ab5b36883541b77fb18feec3cf9602623}{date}}));}
+\DoxyCodeLine{00118\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_expense_a6ead31c5484d9ddc9d6d419536c8821e}{paymentMethod}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_expense_a6ead31c5484d9ddc9d6d419536c8821e}{paymentMethod}}));}
+\DoxyCodeLine{00119\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_expense_a0b62d0af8229f9b9d743909fb4d66b87}{description}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_expense_a0b62d0af8229f9b9d743909fb4d66b87}{description}}));}
+\DoxyCodeLine{00120\ \ \ \}}
+\DoxyCodeLine{00121\ \};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00127\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_travel_expense_1_1_budget}{Budget}}\ \{}
+\DoxyCodeLine{00128\ \ \ int32\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_budget_a767da4abb6223ee5ade59c404cbb5d09}{budgetId}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ int32\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_budget_a53ae78e859633faf63db41dc520532c9}{tripId}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00130\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_travel_expense_1_1_budget_af1d95a16d19b023a624e9fc722e60549}{totalBudget}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00131\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_travel_expense_1_1_budget_a86d7bf63fbddde80afc5af3b199245e2}{spentAmount}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_travel_expense_1_1_budget_a26aa3029683674b7114248c7f1bf4fc9}{categoryBudgets}}[4];\ \ \ \ \ }
+\DoxyCodeLine{00133\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_travel_expense_1_1_budget_a753452857928b1d572bea18be83ebc4c}{categorySpent}}[4];\ \ \ \ \ \ \ }
+\DoxyCodeLine{00134\ \ \ time\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_budget_a205d86211043bbbaa313a5d4e129d869}{createdAt}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00135\ \ \ time\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_budget_ab9bd8b9ca6b45f9a89c487ee5c914254}{updatedAt}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00142\ \ \ \mbox{\hyperlink{struct_travel_expense_1_1_budget_a16518e438fdc159f7a000352ab111f52}{Budget}}()\ :\ \mbox{\hyperlink{struct_travel_expense_1_1_budget_a767da4abb6223ee5ade59c404cbb5d09}{budgetId}}(0),\ \mbox{\hyperlink{struct_travel_expense_1_1_budget_a53ae78e859633faf63db41dc520532c9}{tripId}}(0),\ \mbox{\hyperlink{struct_travel_expense_1_1_budget_af1d95a16d19b023a624e9fc722e60549}{totalBudget}}(0.0),\ \mbox{\hyperlink{struct_travel_expense_1_1_budget_a86d7bf63fbddde80afc5af3b199245e2}{spentAmount}}(0.0),}
+\DoxyCodeLine{00143\ \ \ \ \ \mbox{\hyperlink{struct_travel_expense_1_1_budget_a205d86211043bbbaa313a5d4e129d869}{createdAt}}(0),\ \mbox{\hyperlink{struct_travel_expense_1_1_budget_ab9bd8b9ca6b45f9a89c487ee5c914254}{updatedAt}}(0)\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_budget_a26aa3029683674b7114248c7f1bf4fc9}{categoryBudgets}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_budget_a26aa3029683674b7114248c7f1bf4fc9}{categoryBudgets}}));}
+\DoxyCodeLine{00145\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_budget_a753452857928b1d572bea18be83ebc4c}{categorySpent}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_budget_a753452857928b1d572bea18be83ebc4c}{categorySpent}}));}
+\DoxyCodeLine{00146\ \ \ \}}
+\DoxyCodeLine{00147\ \};}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \}\ \textcolor{comment}{//\ namespace\ TravelExpense\ //\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ COMMON\_TYPES\_H}}
+\DoxyCodeLine{00152\ }
+
+\end{DoxyCode}

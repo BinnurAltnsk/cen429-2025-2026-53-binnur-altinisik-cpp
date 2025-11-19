@@ -1,0 +1,122 @@
+\doxysection{Travel\+Expense\+::Budget\+Manager Namespace Reference}
+\hypertarget{namespace_travel_expense_1_1_budget_manager}{}\label{namespace_travel_expense_1_1_budget_manager}\index{TravelExpense::BudgetManager@{TravelExpense::BudgetManager}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_budget_manager_a87ed02030d083a4a76b3ba7212cbeaa7}{set\+Budget}} (int32\+\_\+t trip\+Id, double total\+Budget, const double \texorpdfstring{$\ast$}{*}category\+Budgets, int32\+\_\+t \&budget\+Id)
+\begin{DoxyCompactList}\small\item\em Seyahat için bütçe belirle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_budget_manager_aa06d0fd91539d4e3d978e62a00d67897}{get\+Budget}} (int32\+\_\+t trip\+Id, \mbox{\hyperlink{struct_travel_expense_1_1_budget}{Budget}} \&budget)
+\begin{DoxyCompactList}\small\item\em Seyahat bütçesini görüntüle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_budget_manager_aa6d74518da8cb56fda03f783e7664c05}{update\+Budget}} (int32\+\_\+t budget\+Id, const \mbox{\hyperlink{struct_travel_expense_1_1_budget}{Budget}} \&budget)
+\begin{DoxyCompactList}\small\item\em Bütçeyi güncelle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_budget_manager_a6635276a27a73233c16e25046e1476ae}{check\+Budget\+Limit}} (int32\+\_\+t trip\+Id, \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62}{Expense\+Category}} category, double amount)
+\begin{DoxyCompactList}\small\item\em Bütçe limiti kontrolü \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_1_1_budget_manager_a6635276a27a73233c16e25046e1476ae}\label{namespace_travel_expense_1_1_budget_manager_a6635276a27a73233c16e25046e1476ae} 
+\index{TravelExpense::BudgetManager@{TravelExpense::BudgetManager}!checkBudgetLimit@{checkBudgetLimit}}
+\index{checkBudgetLimit@{checkBudgetLimit}!TravelExpense::BudgetManager@{TravelExpense::BudgetManager}}
+\doxysubsubsection{\texorpdfstring{checkBudgetLimit()}{checkBudgetLimit()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Budget\+Manager\+::check\+Budget\+Limit (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{trip\+Id,  }\item[{\mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62}{Expense\+Category}}}]{category,  }\item[{double}]{amount }\end{DoxyParamCaption})}
+
+
+
+Bütçe limiti kontrolü 
+
+Belirtilen seyahat ve kategori için bütçe limitini kontrol eder. Mevcut harcamaları veritabanından alır ve yeni harcama miktarıyla toplamın kategori bütçesini aşıp aşmadığını kontrol eder.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, yeni bir gider eklenmeden önce bütçe kontrolü yapmak için kullanılır. Eğer seyahat için bütçe bulunamazsa, false döner (bütçe olmadığı için limit aşılmış kabul edilir).
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em trip\+Id} & Seyahat ID (geçerli bir trip\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+{\em category} & Gider kategorisi (Accommodation, Transportation, Food, Other) Bu kategori için bütçe limiti kontrol edilir. \\
+\hline
+{\em amount} & Kontrol edilecek harcama miktarı (TL cinsinden, 0 veya pozitif olmalı) Bu miktar, mevcut harcamalara eklendiğinde limit aşılıyor mu kontrol edilir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Bütçe limiti içinde (harcama yapılabilir), false Limit aşıldı (harcama yapılamaz) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_budget_manager_aa06d0fd91539d4e3d978e62a00d67897}\label{namespace_travel_expense_1_1_budget_manager_aa06d0fd91539d4e3d978e62a00d67897} 
+\index{TravelExpense::BudgetManager@{TravelExpense::BudgetManager}!getBudget@{getBudget}}
+\index{getBudget@{getBudget}!TravelExpense::BudgetManager@{TravelExpense::BudgetManager}}
+\doxysubsubsection{\texorpdfstring{getBudget()}{getBudget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Budget\+Manager\+::get\+Budget (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{trip\+Id,  }\item[{\mbox{\hyperlink{struct_travel_expense_1_1_budget}{Budget}} \&}]{budget }\end{DoxyParamCaption})}
+
+
+
+Seyahat bütçesini görüntüle. 
+
+Belirtilen seyahat ID\textquotesingle{}sine ait bütçe bilgilerini veritabanından alır ve budget parametresine doldurur. Bütçe bilgisi, toplam bütçe ve kategori bazlı bütçeleri içerir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, seyahat için kayıtlı en son bütçeyi döndürür. Eğer seyahat için bütçe bulunamazsa, File\+Not\+Found hatası döner.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em trip\+Id} & Seyahat ID (geçerli bir trip\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+{\em budget} & Bütçe bilgisi (çıktı parametresi, \doxylink{struct_travel_expense_1_1_budget}{Budget} struct\textquotesingle{}ı doldurulur) İçerik\+: total\+Budget, category\+Budgets\mbox{[}4\mbox{]}, budget\+Id, trip\+Id vb. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, File\+Not\+Found, Invalid\+Input vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_budget_manager_a87ed02030d083a4a76b3ba7212cbeaa7}\label{namespace_travel_expense_1_1_budget_manager_a87ed02030d083a4a76b3ba7212cbeaa7} 
+\index{TravelExpense::BudgetManager@{TravelExpense::BudgetManager}!setBudget@{setBudget}}
+\index{setBudget@{setBudget}!TravelExpense::BudgetManager@{TravelExpense::BudgetManager}}
+\doxysubsubsection{\texorpdfstring{setBudget()}{setBudget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Budget\+Manager\+::set\+Budget (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{trip\+Id,  }\item[{double}]{total\+Budget,  }\item[{const double \texorpdfstring{$\ast$}{*}}]{category\+Budgets,  }\item[{int32\+\_\+t \&}]{budget\+Id }\end{DoxyParamCaption})}
+
+
+
+Seyahat için bütçe belirle. 
+
+Belirtilen seyahat için toplam bütçe ve kategori bazlı bütçeleri ayarlar. Bütçe, veritabanına kaydedilir ve benzersiz bir budget\+Id ile döndürülür.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, seyahat için yeni bir bütçe kaydı oluşturur. Eğer seyahat için zaten bir bütçe varsa, yeni bütçe eski bütçeyi geçersiz kılmaz, ayrı bir kayıt olarak saklanır.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em trip\+Id} & Seyahat ID (geçerli bir trip\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+{\em total\+Budget} & Toplam bütçe miktarı (TL cinsinden, 0\textquotesingle{}dan büyük olmalı) \\
+\hline
+{\em category\+Budgets} & Kategori bazlı bütçeler dizisi (4 eleman\+: Accommodation, Transportation, Food, Other) nullptr ise Invalid\+Input döner. Her kategori bütçesi 0 veya pozitif olmalı. Toplamı total\+Budget\textquotesingle{}ı aşmamalı (opsiyonel kontrol). \\
+\hline
+{\em budget\+Id} & Oluşturulan bütçenin benzersiz ID\textquotesingle{}si (çıktı parametresi) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, Invalid\+Input, File\+Not\+Found vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_budget_manager_aa6d74518da8cb56fda03f783e7664c05}\label{namespace_travel_expense_1_1_budget_manager_aa6d74518da8cb56fda03f783e7664c05} 
+\index{TravelExpense::BudgetManager@{TravelExpense::BudgetManager}!updateBudget@{updateBudget}}
+\index{updateBudget@{updateBudget}!TravelExpense::BudgetManager@{TravelExpense::BudgetManager}}
+\doxysubsubsection{\texorpdfstring{updateBudget()}{updateBudget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Budget\+Manager\+::update\+Budget (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{budget\+Id,  }\item[{const \mbox{\hyperlink{struct_travel_expense_1_1_budget}{Budget}} \&}]{budget }\end{DoxyParamCaption})}
+
+
+
+Bütçeyi güncelle. 
+
+Belirtilen budget\+Id\textquotesingle{}ye sahip bütçeyi, yeni bütçe bilgileriyle günceller. Toplam bütçe ve kategori bazlı bütçeler değiştirilebilir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, mevcut bütçe kaydını günceller. Eğer budget\+Id geçersizse veya bütçe bulunamazsa, File\+Not\+Found hatası döner. Güncelleme işlemi, veritabanında mevcut kaydı değiştirir.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em budget\+Id} & Güncellenecek bütçenin benzersiz ID\textquotesingle{}si (geçerli bir budget\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+{\em budget} & Güncellenmiş bütçe bilgileri (const referans, \doxylink{struct_travel_expense_1_1_budget}{Budget} struct\textquotesingle{}ı) İçerik\+: total\+Budget, category\+Budgets\mbox{[}4\mbox{]} vb. Tüm alanlar geçerli olmalı. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, File\+Not\+Found, Invalid\+Input vb.) 
+\end{DoxyReturn}

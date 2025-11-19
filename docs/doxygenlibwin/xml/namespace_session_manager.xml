@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_session_manager" kind="namespace" language="C++">
+    <compoundname>SessionManager</compoundname>
+    <briefdescription>
+<para>Oturum yönetimi ve iletişim güvenliği modülü </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu modül, oturum anahtarı yönetimi, cihaz ve sürüm kontrolü, gizli veri (confidential payload) şifreleme, bütünlük kontrolü ve dijital imza işlemlerini yönetir. İletim sırasındaki veri güvenliği gereksinimlerini karşılar. </para>
+    </detaileddescription>
+    <location file="src/travelexpense/header/sessionManager.h" line="28" column="1"/>
+  </compounddef>
+</doxygen>

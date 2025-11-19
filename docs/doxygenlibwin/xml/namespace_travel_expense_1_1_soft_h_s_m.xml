@@ -1,0 +1,2251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_travel_expense_1_1_soft_h_s_m" kind="namespace" language="C++">
+    <compoundname>TravelExpense::SoftHSM</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24a" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>InitStatus</name>
+        <qualifiedname>TravelExpense::SoftHSM::InitStatus</qualifiedname>
+        <enumvalue id="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24aa02de9649e258d1dd94056e676061e969" prot="public">
+          <name>NOT_INITIALIZED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> henüz başlatılmadı </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24aadee5f03c2c4e73657824e028494b18c0" prot="public">
+          <name>INITIALIZED</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> başarıyla başlatıldı </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24aabb1ca97ec761fc37101737ba0aa2e7c5" prot="public">
+          <name>ERROR</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> başlatma hatası </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> başlatma durumu. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> modülünün başlatma durumunu belirtir. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/softhsm.h" line="33" column="1" bodyfile="src/travelexpense/header/softhsm.h" bodystart="33" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_travel_expense_1_1_soft_h_s_m_1a8859119f0e92029bcc9c29081d79021a" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>KeyType</name>
+        <qualifiedname>TravelExpense::SoftHSM::KeyType</qualifiedname>
+        <enumvalue id="namespace_travel_expense_1_1_soft_h_s_m_1a8859119f0e92029bcc9c29081d79021aa78a61f5f64f7ea0d31a7cc487d2b14e8" prot="public">
+          <name>AES_256</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>AES-256 simetrik şifreleme anahtarı </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1_1_soft_h_s_m_1a8859119f0e92029bcc9c29081d79021aa5b3bf47dace955c9874047820a78d5b8" prot="public">
+          <name>RSA_2048</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>RSA-2048 asimetrik şifreleme anahtarı </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1_1_soft_h_s_m_1a8859119f0e92029bcc9c29081d79021aac5e459c10e5e8348c719df2702c3abe6" prot="public">
+          <name>EC_P256</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>EC-P256 (secp256r1) eliptik eğri anahtarı </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Key tipi. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Desteklenen kriptografik anahtar tipleri. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/softhsm.h" line="44" column="1" bodyfile="src/travelexpense/header/softhsm.h" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_travel_expense_1_1_soft_h_s_m_1ada96f17213af3032466f091866ca6e42" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>KeyUsage</name>
+        <qualifiedname>TravelExpense::SoftHSM::KeyUsage</qualifiedname>
+        <enumvalue id="namespace_travel_expense_1_1_soft_h_s_m_1ada96f17213af3032466f091866ca6e42a52db93ea6808e2184bfb7a4c8a3c0151" prot="public">
+          <name>ENCRYPT_DECRYPT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Şifreleme ve şifre çözme işlemleri için. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1_1_soft_h_s_m_1ada96f17213af3032466f091866ca6e42a6540894fc3bdc9f2597e6d1d4ea0e190" prot="public">
+          <name>SIGN_VERIFY</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>İmzalama ve doğrulama işlemleri için. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1_1_soft_h_s_m_1ada96f17213af3032466f091866ca6e42a7464a3e54ec3ca720fa0d199d59426a4" prot="public">
+          <name>WRAP_UNWRAP</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Anahtar sarma/çözme işlemleri için. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1_1_soft_h_s_m_1ada96f17213af3032466f091866ca6e42abc63603c862fa6bdbb49fae1611c572c" prot="public">
+          <name>DERIVE</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>Anahtar türetme işlemleri için. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Key kullanım amaçları </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Anahtarın hangi kriptografik işlemler için kullanılabileceğini belirtir. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/softhsm.h" line="55" column="1" bodyfile="src/travelexpense/header/softhsm.h" bodystart="55" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" prot="public" static="no">
+        <type><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>using TravelExpense::SoftHSM::ErrorCode = typedef TravelExpense::ErrorCode</definition>
+        <argsstring></argsstring>
+        <name>ErrorCode</name>
+        <qualifiedname>TravelExpense::SoftHSM::ErrorCode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="77" column="1" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_soft_h_s_m_1a25b47e9b2a2df901ca4dc5044147214a" prot="public" static="yes" mutable="no">
+        <type><ref refid="softhsm_8cpp_1a3b81e0f561932d8761fb8675437e2659" kindref="member">DL_HANDLE</ref></type>
+        <definition>DL_HANDLE TravelExpense::SoftHSM::g_pkcs11Library</definition>
+        <argsstring></argsstring>
+        <name>g_pkcs11Library</name>
+        <qualifiedname>TravelExpense::SoftHSM::g_pkcs11Library</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Global state variables for <ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> module. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bu global değişkenler, <ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> modülünün durumunu saklar. Singleton pattern kullanılarak tek bir PKCS#11 bağlantısı yönetilir.</para>
+<para>PKCS#11 dinamik kütüphane handle&apos;ı (Windows: HMODULE, Linux: void*) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="86" column="18" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_soft_h_s_m_1aaeba772df23a3ca6603606546f2bceb1" prot="public" static="yes" mutable="no">
+        <type>CK_FUNCTION_LIST *</type>
+        <definition>CK_FUNCTION_LIST* TravelExpense::SoftHSM::g_pFunctionList</definition>
+        <argsstring></argsstring>
+        <name>g_pFunctionList</name>
+        <qualifiedname>TravelExpense::SoftHSM::g_pFunctionList</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>PKCS#11 function list pointer&apos;ı - C_GetFunctionList ile alınır. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="88" column="25" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_soft_h_s_m_1ae9e5e1f09fca7edbf90a13dffd07c6ec" prot="public" static="yes" mutable="no">
+        <type>CK_SLOT_ID</type>
+        <definition>CK_SLOT_ID TravelExpense::SoftHSM::g_currentSlot</definition>
+        <argsstring></argsstring>
+        <name>g_currentSlot</name>
+        <qualifiedname>TravelExpense::SoftHSM::g_currentSlot</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Mevcut token slot ID&apos;si - <ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> ile ayarlanır. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="90" column="19" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_soft_h_s_m_1a09efc2a51c5b4224c51861d960ed0bf2" prot="public" static="yes" mutable="no">
+        <type>CK_SESSION_HANDLE</type>
+        <definition>CK_SESSION_HANDLE TravelExpense::SoftHSM::g_sessionHandle</definition>
+        <argsstring></argsstring>
+        <name>g_sessionHandle</name>
+        <qualifiedname>TravelExpense::SoftHSM::g_sessionHandle</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Açık PKCS#11 session handle&apos;ı - <ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> ile açılır. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="92" column="26" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_soft_h_s_m_1a4360df71e0a4fcf4686308a1a79d8807" prot="public" static="yes" mutable="no">
+        <type><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24a" kindref="member">InitStatus</ref></type>
+        <definition>InitStatus TravelExpense::SoftHSM::g_status</definition>
+        <argsstring></argsstring>
+        <name>g_status</name>
+        <qualifiedname>TravelExpense::SoftHSM::g_status</qualifiedname>
+        <initializer>= <ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24aa02de9649e258d1dd94056e676061e969" kindref="member">InitStatus::NOT_INITIALIZED</ref></initializer>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> başlatma durumu - <ref refid="namespace_travel_expense_1_1_soft_h_s_m_1af71b3824984e7e34e84fc5c0a606b418" kindref="member">initialize()</ref> ve <ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aa08cccf8f5db8d63231a3b706351b212" kindref="member">shutdown()</ref> ile yönetilir. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="94" column="19" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_soft_h_s_m_1ac2a97453e170a334157072ebf27b6afe" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::SoftHSM::g_tokenLabel[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>g_tokenLabel</name>
+        <qualifiedname>TravelExpense::SoftHSM::g_tokenLabel</qualifiedname>
+        <initializer>= { 0 }</initializer>
+        <briefdescription>
+<para>Token label - <ref refid="namespace_travel_expense_1_1_soft_h_s_m_1af71b3824984e7e34e84fc5c0a606b418" kindref="member">initialize()</ref> veya <ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a0d330cfb5deff1a7731392c78c8a4757" kindref="member">createToken()</ref> ile ayarlanır (max 64 karakter) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="96" column="13" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_soft_h_s_m_1a18fb49db0706ae6bc570f9054425004d" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::SoftHSM::g_pin[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>g_pin</name>
+        <qualifiedname>TravelExpense::SoftHSM::g_pin</qualifiedname>
+        <initializer>= { 0 }</initializer>
+        <briefdescription>
+<para>Token PIN - <ref refid="namespace_travel_expense_1_1_soft_h_s_m_1af71b3824984e7e34e84fc5c0a606b418" kindref="member">initialize()</ref> veya <ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a0d330cfb5deff1a7731392c78c8a4757" kindref="member">createToken()</ref> ile ayarlanır (max 32 karakter) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="98" column="13" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1af71b3824984e7e34e84fc5c0a606b418" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SoftHSM::initialize</definition>
+        <argsstring>(const char *libraryPath=nullptr, const char *tokenLabel=nullptr, const char *pin=nullptr)</argsstring>
+        <name>initialize</name>
+        <qualifiedname>TravelExpense::SoftHSM::initialize</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>libraryPath</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>tokenLabel</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pin</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref>&apos;yi başlat ve PKCS#11 kütüphanesini yükle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>libraryPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> PKCS#11 kütüphanesi yolu (nullptr ise otomatik bulma yapılır) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tokenLabel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Token etiketi (nullptr ise varsayılan token oluşturulur) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PIN kodu (nullptr ise varsayılan &quot;1234&quot; kullanılır) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+</simplesect>
+</para>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> modülünü başlatır ve belirtilen PKCS#11 kütüphanesini yükler. Eğer <computeroutput>libraryPath</computeroutput> nullptr ise, sistemdeki varsayılan kütüphane aranır. <computeroutput>tokenLabel</computeroutput> ve <computeroutput>pin</computeroutput> nullptr ise varsayılan değerler kullanılır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, zaten başlatılmışsa (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24aadee5f03c2c4e73657824e028494b18c0" kindref="member">InitStatus::INITIALIZED</ref>) hiçbir işlem yapmaz ve Success döner. PKCS#11 kütüphanesi yüklendikten sonra, C_Initialize() çağrılır ve token label ile PIN kaydedilir.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>libraryPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> PKCS#11 kütüphanesi yolu (nullptr ise otomatik bulma yapılır) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tokenLabel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Token etiketi (nullptr ise varsayılan &quot;TravelExpense&quot; kullanılır) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PIN kodu (nullptr ise varsayılan &quot;1234&quot; kullanılır) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="280" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="280" bodyend="317" declfile="src/travelexpense/header/softhsm.h" declline="70" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1aa08cccf8f5db8d63231a3b706351b212" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SoftHSM::shutdown</definition>
+        <argsstring>()</argsstring>
+        <name>shutdown</name>
+        <qualifiedname>TravelExpense::SoftHSM::shutdown</qualifiedname>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref>&apos;yi kapat ve kaynakları temizle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+</simplesect>
+</para>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> modülünü kapatır ve tüm kaynakları temizler. Açık session varsa kapatılır, PKCS#11 finalize edilir ve dinamik kütüphane kapatılır. Token label ve PIN bilgileri güvenli şekilde temizlenir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, zaten kapatılmışsa (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24aa02de9649e258d1dd94056e676061e969" kindref="member">InitStatus::NOT_INITIALIZED</ref>) hiçbir işlem yapmaz ve Success döner.</para>
+</simplesect>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="331" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="331" bodyend="358" declfile="src/travelexpense/header/softhsm.h" declline="79" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1a0fa272e6522244baa0af55f77332e6f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24a" kindref="member">InitStatus</ref></type>
+        <definition>InitStatus TravelExpense::SoftHSM::getStatus</definition>
+        <argsstring>()</argsstring>
+        <name>getStatus</name>
+        <qualifiedname>TravelExpense::SoftHSM::getStatus</qualifiedname>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> başlatma durumunu kontrol et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>InitStatus Başlatma durumu</para>
+</simplesect>
+</para>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> modülünün mevcut başlatma durumunu döndürür.</para>
+<para><simplesect kind="return"><para>InitStatus Mevcut durum (NOT_INITIALIZED, INITIALIZED, ERROR) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="367" column="12" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="367" bodyend="369" declfile="src/travelexpense/header/softhsm.h" declline="86" declcolumn="30"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1a0d330cfb5deff1a7731392c78c8a4757" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SoftHSM::createToken</definition>
+        <argsstring>(const char *label, const char *pin, const char *soPin)</argsstring>
+        <name>createToken</name>
+        <qualifiedname>TravelExpense::SoftHSM::createToken</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>soPin</declname>
+        </param>
+        <briefdescription>
+<para>Token oluştur (eğer yoksa) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Token oluştur (simplified - gerçek implementasyonda token creation gerekir)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Token etiketi </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PIN kodu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>soPin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_security" kindref="compound">Security</ref> Officer PIN kodu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+</simplesect>
+</para>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> token&apos;ları genellikle sistem seviyesinde oluşturulur. Bu fonksiyon sadece token label ve PIN bilgilerini kaydeder. Gerçek token oluşturma işlemi için <ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> CLI komutları gerekir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, simplified bir implementasyon olup gerçek token oluşturma işlemini yapmaz. Sadece parametreleri saklar.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Token etiketi (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PIN kodu (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>soPin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SO (<ref refid="namespace_travel_expense_1_1_security" kindref="compound">Security</ref> Officer) PIN kodu (kullanılmıyor, nullptr olabilir) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="386" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="386" bodyend="398" declfile="src/travelexpense/header/softhsm.h" declline="96" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SoftHSM::openToken</definition>
+        <argsstring>(const char *label, const char *pin)</argsstring>
+        <name>openToken</name>
+        <qualifiedname>TravelExpense::SoftHSM::openToken</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Token aç (oturum başlat) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Token aç ve session başlat.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Token etiketi (nullptr ise varsayılan token) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PIN kodu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+</simplesect>
+</para>
+<para>Belirtilen token&apos;ı açar ve PKCS#11 session başlatır. Token label&apos;a göre slot listesinde token aranır, bulunduktan sonra session açılır ve PIN ile login yapılır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, <ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref>&apos;nin INITIALIZED durumunda olmasını gerektirir. Eğer label nullptr ise, kaydedilmiş g_tokenLabel kullanılır. Eğer pin nullptr ise, kaydedilmiş g_pin kullanılır.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Token etiketi (nullptr ise kaydedilmiş label kullanılır) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PIN kodu (nullptr ise kaydedilmiş PIN kullanılır) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Slot listesi alma</para>
+<para>C_GetSlotList ile token içeren slot&apos;ların listesi alınır. İlk çağrıda slot sayısı alınır, ikinci çağrıda slot ID&apos;leri alınır.</para>
+<para>&lt; Token içeren slot sayısı (çıktı)</para>
+<para>&lt; Slot ID&apos;leri dizisi</para>
+<para>Label&apos;a göre token bulma</para>
+<para>Her slot&apos;taki token&apos;ın label&apos;ı kontrol edilir ve aranan label ile karşılaştırılır. Token label&apos;ları PKCS#11&apos;de null-terminated değildir, boşluklarla doldurulmuş olabilir, bu nedenle temizlenir.</para>
+<para>&lt; Varsayılan olarak ilk slot</para>
+<para>&lt; Aranacak token label</para>
+<para>Token label karşılaştırması</para>
+<para>Her slot&apos;taki token&apos;ın label&apos;ı C_GetTokenInfo ile alınır ve aranan label ile karşılaştırılır. Eşleşme bulunursa, o slot seçilir.</para>
+<para>PKCS#11 session açma</para>
+<para>Seçilen slot&apos;ta read-write session açılır. CKF_RW_SESSION flag&apos;i ile yazma işlemleri yapılabilir, CKF_SERIAL_SESSION flag&apos;i ile serial session açılır (paralel session değil).</para>
+<para>&lt; Read-write ve serial session flag&apos;leri</para>
+<para>PIN ile login</para>
+<para>Kullanıcı PIN&apos;i ile token&apos;a login yapılır. CKU_USER ile normal kullanıcı olarak login yapılır. Eğer zaten login yapılmışsa (CKR_USER_ALREADY_LOGGED_IN), hata olarak kabul edilmez.</para>
+<para>&lt; Kullanılacak PIN (parametre veya kaydedilmiş)</para>
+<para>Slot listesi alma</para>
+<para>C_GetSlotList ile token içeren slot&apos;ların listesi alınır. İlk çağrıda slot sayısı alınır, ikinci çağrıda slot ID&apos;leri alınır.</para>
+<para>&lt; Token içeren slot sayısı (çıktı)</para>
+<para>&lt; Slot ID&apos;leri dizisi</para>
+<para>Label&apos;a göre token bulma</para>
+<para>Her slot&apos;taki token&apos;ın label&apos;ı kontrol edilir ve aranan label ile karşılaştırılır. Token label&apos;ları PKCS#11&apos;de null-terminated değildir, boşluklarla doldurulmuş olabilir, bu nedenle temizlenir.</para>
+<para>&lt; Varsayılan olarak ilk slot</para>
+<para>&lt; Aranacak token label</para>
+<para>Token label karşılaştırması</para>
+<para>Her slot&apos;taki token&apos;ın label&apos;ı C_GetTokenInfo ile alınır ve aranan label ile karşılaştırılır. Eşleşme bulunursa, o slot seçilir.</para>
+<para>PKCS#11 session açma</para>
+<para>Seçilen slot&apos;ta read-write session açılır. CKF_RW_SESSION flag&apos;i ile yazma işlemleri yapılabilir, CKF_SERIAL_SESSION flag&apos;i ile serial session açılır (paralel session değil).</para>
+<para>&lt; Read-write ve serial session flag&apos;leri</para>
+<para>PIN ile login</para>
+<para>Kullanıcı PIN&apos;i ile token&apos;a login yapılır. CKU_USER ile normal kullanıcı olarak login yapılır. Eğer zaten login yapılmışsa (CKR_USER_ALREADY_LOGGED_IN), hata olarak kabul edilmez.</para>
+<para>&lt; Kullanılacak PIN (parametre veya kaydedilmiş)</para>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="415" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="415" bodyend="516" declfile="src/travelexpense/header/softhsm.h" declline="105" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1a355d45677c9adebfb9afa591275bb8d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SoftHSM::closeToken</definition>
+        <argsstring>()</argsstring>
+        <name>closeToken</name>
+        <qualifiedname>TravelExpense::SoftHSM::closeToken</qualifiedname>
+        <briefdescription>
+<para>Token&apos;ı kapat (oturum kapat) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Token kapat ve session&apos;ı sonlandır.</para>
+<para><simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+</simplesect>
+</para>
+<para>Açık token session&apos;ını kapatır. Önce logout yapılır, sonra session kapatılır. Session handle ve current slot sıfırlanır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, session açık değilse hiçbir işlem yapmaz ve Success döner.</para>
+</simplesect>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="528" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="528" bodyend="538" declfile="src/travelexpense/header/softhsm.h" declline="112" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1a100a3043a4e2c9d8cd6922248a46f335" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SoftHSM::generateKey</definition>
+        <argsstring>(KeyType keyType, KeyUsage keyUsage, const char *keyLabel, uint8_t *keyId, size_t &amp;keyIdLen)</argsstring>
+        <name>generateKey</name>
+        <qualifiedname>TravelExpense::SoftHSM::generateKey</qualifiedname>
+        <param>
+          <type><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a8859119f0e92029bcc9c29081d79021a" kindref="member">KeyType</ref></type>
+          <declname>keyType</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1ada96f17213af3032466f091866ca6e42" kindref="member">KeyUsage</ref></type>
+          <declname>keyUsage</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>keyLabel</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>keyId</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>keyIdLen</declname>
+        </param>
+        <briefdescription>
+<para>Anahtar oluştur (generate key) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Kriptografik anahtar oluştur.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar tipi (AES, RSA, EC) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyUsage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar kullanım amacı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLabel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar etiketi (identifier) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı: Oluşturulan anahtar ID&apos;si </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+</simplesect>
+</para>
+<para>Belirtilen tipte ve kullanım amacına göre kriptografik anahtar oluşturur. Desteklenen anahtar tipleri: AES-256, RSA-2048, EC-P256. Anahtar, token üzerinde saklanır ve keyId olarak döndürülür.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Simetrik anahtarlar (AES) için C_GenerateKey, asimetrik anahtarlar (RSA, EC) için C_GenerateKeyPair kullanılır.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar tipi (AES_256, RSA_2048, EC_P256) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyUsage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar kullanım amacı (ENCRYPT_DECRYPT, SIGN_VERIFY, vb.) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLabel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar etiketi (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oluşturulan anahtarın ID&apos;si (çıktı, nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyIdLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>keyId buffer boyutu (giriş), oluşturulan ID boyutu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>PKCS#11 mekanizma ve attribute template oluşturma</para>
+<para>Key type&apos;a göre uygun PKCS#11 mekanizması ve attribute template&apos;leri oluşturulur. Her anahtar tipi için farklı mekanizma ve key class kullanılır.</para>
+<para>&lt; Varsayılan: Secret key (AES için)</para>
+<para>&lt; Varsayılan: AES key type</para>
+<para>&lt; 32 bytes for AES-256</para>
+<para>Anahtar tipine göre PKCS#11 mekanizması ve key class ayarlama</para>
+<para>Her anahtar tipi için farklı PKCS#11 mekanizması ve key class kullanılır:<itemizedlist>
+<listitem><para>AES_256: CKM_AES_KEY_GEN, CKO_SECRET_KEY, CKK_AES</para>
+</listitem><listitem><para>RSA_2048: CKM_RSA_PKCS_KEY_PAIR_GEN, CKO_PRIVATE_KEY, CKK_RSA</para>
+</listitem><listitem><para>EC_P256: CKM_EC_KEY_PAIR_GEN, CKO_PRIVATE_KEY, CKK_EC</para>
+</listitem></itemizedlist>
+</para>
+<para>PKCS#11 attribute template oluşturma</para>
+<para>Anahtar özelliklerini belirten PKCS#11 attribute&apos;ları oluşturulur. Her attribute, anahtarın nasıl kullanılacağını ve saklanacağını belirtir.</para>
+<para>&lt; Anahtar sınıfı (secret key veya private key)</para>
+<para>&lt; Anahtar tipi (AES, RSA, EC)</para>
+<para>&lt; Anahtar etiketi (kullanıcı tanımlı)</para>
+<para>&lt; Boolean true değeri (PKCS#11 attribute&apos;ları için)</para>
+<para>&lt; Boolean false değeri (kullanılmıyor)</para>
+<para>&lt; Anahtar token&apos;da saklanacak (kalıcı)</para>
+<para>&lt; Anahtar private (sadece PIN ile erişilebilir)</para>
+<para>Key usage attributes - Anahtar kullanım amacına göre özellikler</para>
+<para>Anahtarın hangi işlemler için kullanılabileceğini belirten attribute&apos;lar eklenir:<itemizedlist>
+<listitem><para>ENCRYPT_DECRYPT: CKA_ENCRYPT ve CKA_DECRYPT attribute&apos;ları</para>
+</listitem><listitem><para>SIGN_VERIFY: CKA_SIGN ve CKA_VERIFY attribute&apos;ları</para>
+</listitem></itemizedlist>
+</para>
+<para>AES için key size attribute&apos;u</para>
+<para>AES anahtarları için key size (256 bit = 32 byte) belirtilir. RSA ve EC anahtarları için key size attribute&apos;u gerekmez.</para>
+<para>&lt; AES anahtar uzunluğu (32 byte)</para>
+<para>PKCS#11 anahtar oluşturma</para>
+<para>Simetrik anahtarlar (AES) için C_GenerateKey, asimetrik anahtarlar (RSA, EC) için C_GenerateKeyPair kullanılır. Key pair generation için public key template&apos;i de oluşturulmalıdır.</para>
+<para>&lt; Oluşturulan anahtar handle&apos;ı</para>
+<para>&lt; PKCS#11 return code</para>
+<para>Key pair generation - Public key template</para>
+<para>Asimetrik anahtarlar (RSA, EC) için public key template&apos;i oluşturulur. Public key template&apos;i, key class ve key type bilgilerini içerir.</para>
+<para>&lt; Public key attribute template</para>
+<para>&lt; Public key template attribute sayısı</para>
+<para>Key ID oluşturma</para>
+<para>Oluşturulan anahtarın handle&apos;ı keyId olarak kullanılır. Eğer keyId buffer yeterli büyüklükteyse (CK_OBJECT_HANDLE boyutu), handle kopyalanır. Aksi takdirde, label&apos;den hash oluşturulur.</para>
+<para>Key ID buffer yeterli: handle&apos;ı kopyala</para>
+<para>Key ID buffer küçük: label&apos;den hash oluştur</para>
+<para>Bu durumda, label&apos;ın ilk N karakteri keyId olarak kullanılır. N, keyId buffer boyutu ve label uzunluğunun minimum&apos;udur.</para>
+<para>PKCS#11 mekanizma ve attribute template oluşturma</para>
+<para>Key type&apos;a göre uygun PKCS#11 mekanizması ve attribute template&apos;leri oluşturulur. Her anahtar tipi için farklı mekanizma ve key class kullanılır.</para>
+<para>&lt; Varsayılan: Secret key (AES için)</para>
+<para>&lt; Varsayılan: AES key type</para>
+<para>&lt; 32 bytes for AES-256</para>
+<para>Anahtar tipine göre PKCS#11 mekanizması ve key class ayarlama</para>
+<para>Her anahtar tipi için farklı PKCS#11 mekanizması ve key class kullanılır:<itemizedlist>
+<listitem><para>AES_256: CKM_AES_KEY_GEN, CKO_SECRET_KEY, CKK_AES</para>
+</listitem><listitem><para>RSA_2048: CKM_RSA_PKCS_KEY_PAIR_GEN, CKO_PRIVATE_KEY, CKK_RSA</para>
+</listitem><listitem><para>EC_P256: CKM_EC_KEY_PAIR_GEN, CKO_PRIVATE_KEY, CKK_EC</para>
+</listitem></itemizedlist>
+</para>
+<para>PKCS#11 attribute template oluşturma</para>
+<para>Anahtar özelliklerini belirten PKCS#11 attribute&apos;ları oluşturulur. Her attribute, anahtarın nasıl kullanılacağını ve saklanacağını belirtir.</para>
+<para>&lt; Anahtar sınıfı (secret key veya private key)</para>
+<para>&lt; Anahtar tipi (AES, RSA, EC)</para>
+<para>&lt; Anahtar etiketi (kullanıcı tanımlı)</para>
+<para>&lt; Boolean true değeri (PKCS#11 attribute&apos;ları için)</para>
+<para>&lt; Boolean false değeri (kullanılmıyor)</para>
+<para>&lt; Anahtar token&apos;da saklanacak (kalıcı)</para>
+<para>&lt; Anahtar private (sadece PIN ile erişilebilir)</para>
+<para>Key usage attributes - Anahtar kullanım amacına göre özellikler</para>
+<para>Anahtarın hangi işlemler için kullanılabileceğini belirten attribute&apos;lar eklenir:<itemizedlist>
+<listitem><para>ENCRYPT_DECRYPT: CKA_ENCRYPT ve CKA_DECRYPT attribute&apos;ları</para>
+</listitem><listitem><para>SIGN_VERIFY: CKA_SIGN ve CKA_VERIFY attribute&apos;ları</para>
+</listitem></itemizedlist>
+</para>
+<para>AES için key size attribute&apos;u</para>
+<para>AES anahtarları için key size (256 bit = 32 byte) belirtilir. RSA ve EC anahtarları için key size attribute&apos;u gerekmez.</para>
+<para>&lt; AES anahtar uzunluğu (32 byte)</para>
+<para>PKCS#11 anahtar oluşturma</para>
+<para>Simetrik anahtarlar (AES) için C_GenerateKey, asimetrik anahtarlar (RSA, EC) için C_GenerateKeyPair kullanılır. Key pair generation için public key template&apos;i de oluşturulmalıdır.</para>
+<para>&lt; Oluşturulan anahtar handle&apos;ı</para>
+<para>&lt; PKCS#11 return code</para>
+<para>Key pair generation - Public key template</para>
+<para>Asimetrik anahtarlar (RSA, EC) için public key template&apos;i oluşturulur. Public key template&apos;i, key class ve key type bilgilerini içerir.</para>
+<para>&lt; Public key attribute template</para>
+<para>&lt; Public key template attribute sayısı</para>
+<para>Key ID oluşturma</para>
+<para>Oluşturulan anahtarın handle&apos;ı keyId olarak kullanılır. Eğer keyId buffer yeterli büyüklükteyse (CK_OBJECT_HANDLE boyutu), handle kopyalanır. Aksi takdirde, label&apos;den hash oluşturulur.</para>
+<para>Key ID buffer yeterli: handle&apos;ı kopyala</para>
+<para>Key ID buffer küçük: label&apos;den hash oluştur</para>
+<para>Bu durumda, label&apos;ın ilk N karakteri keyId olarak kullanılır. N, keyId buffer boyutu ve label uzunluğunun minimum&apos;udur.</para>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="558" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="558" bodyend="755" declfile="src/travelexpense/header/softhsm.h" declline="123" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1a04b9cc48d95cd483ab84818c43ed967d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SoftHSM::importKey</definition>
+        <argsstring>(KeyType keyType, const uint8_t *keyData, size_t keyDataLen, const char *keyLabel, uint8_t *keyId, size_t &amp;keyIdLen)</argsstring>
+        <name>importKey</name>
+        <qualifiedname>TravelExpense::SoftHSM::importKey</qualifiedname>
+        <param>
+          <type><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a8859119f0e92029bcc9c29081d79021a" kindref="member">KeyType</ref></type>
+          <declname>keyType</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>keyData</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyDataLen</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>keyLabel</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>keyId</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>keyIdLen</declname>
+        </param>
+        <briefdescription>
+<para>Anahtarı içe aktar (import key) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Anahtarı import et (simplified)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar tipi </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar verisi </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyDataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar verisi uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLabel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar etiketi </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı: İçe aktarılan anahtar ID&apos;si </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+</simplesect>
+</para>
+<para>Belirtilen anahtar verisini token üzerine import eder. C_CreateObject kullanılarak anahtar oluşturulur ve token üzerinde saklanır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Desteklenen anahtar tipleri: AES-256, RSA-2048, EC-P256. Anahtar, token üzerinde saklanır ve keyId olarak döndürülür.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar tipi (AES_256, RSA_2048, EC_P256) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Import edilecek anahtar verisi (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyDataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar verisi uzunluğu (byte, 0 ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLabel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar etiketi (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Import edilen anahtarın ID&apos;si (çıktı, nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyIdLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>keyId buffer boyutu (giriş), oluşturulan ID boyutu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>PKCS#11 attribute template oluşturma (import için)</para>
+<para>Import edilecek anahtar için PKCS#11 attribute template&apos;i oluşturulur. Anahtar tipine göre farklı key class ve key type kullanılır.</para>
+<para>&lt; Attribute template dizisi (max 10 attribute)</para>
+<para>&lt; Template attribute sayısı</para>
+<para>&lt; Varsayılan: Secret key (AES için)</para>
+<para>&lt; Varsayılan: AES key type</para>
+<para>&lt; Boolean true değeri</para>
+<para>Anahtar tipine göre key class ve key type ayarlama</para>
+<para>Her anahtar tipi için farklı key class ve key type kullanılır:<itemizedlist>
+<listitem><para>AES_256: CKO_SECRET_KEY, CKK_AES</para>
+</listitem><listitem><para>RSA_2048: CKO_PRIVATE_KEY, CKK_RSA</para>
+</listitem><listitem><para>EC_P256: CKO_PRIVATE_KEY, CKK_EC</para>
+</listitem></itemizedlist>
+</para>
+<para>PKCS#11 attribute template oluşturma (import anahtar için)</para>
+<para>Import edilecek anahtar için gerekli attribute&apos;lar oluşturulur:<itemizedlist>
+<listitem><para>CKA_CLASS: Anahtar sınıfı (secret key veya private key)</para>
+</listitem><listitem><para>CKA_KEY_TYPE: Anahtar tipi (AES, RSA, EC)</para>
+</listitem><listitem><para>CKA_LABEL: Anahtar etiketi</para>
+</listitem><listitem><para>CKA_VALUE: Anahtar verisi (import edilecek anahtar)</para>
+</listitem><listitem><para>CKA_TOKEN: Token&apos;da saklanacak (kalıcı)</para>
+</listitem><listitem><para>CKA_ENCRYPT/CKA_DECRYPT: Şifreleme/şifre çözme için kullanılabilir</para>
+</listitem></itemizedlist>
+</para>
+<para>&lt; Anahtar sınıfı</para>
+<para>&lt; Anahtar tipi</para>
+<para>&lt; Anahtar etiketi</para>
+<para>&lt; Anahtar verisi (import edilecek)</para>
+<para>&lt; Token&apos;da saklanacak (kalıcı)</para>
+<para>&lt; Şifreleme için kullanılabilir</para>
+<para>&lt; Şifre çözme için kullanılabilir</para>
+<para>PKCS#11 anahtar oluşturma (import)</para>
+<para>C_CreateObject ile import edilecek anahtar token üzerinde oluşturulur. Anahtar verisi (CKA_VALUE) template içinde belirtilir.</para>
+<para>&lt; Oluşturulan anahtar handle&apos;ı</para>
+<para>Key ID oluşturma (import için)</para>
+<para>Import edilen anahtarın handle&apos;ı keyId olarak kullanılır. keyId buffer, CK_OBJECT_HANDLE boyutunda olmalıdır. Eğer buffer yeterli değilse, InvalidInput hatası döner.</para>
+<para>Key ID buffer yeterli: handle&apos;ı kopyala</para>
+<para>Key ID buffer yetersiz: hata döner</para>
+<para>Import işleminde, keyId buffer mutlaka CK_OBJECT_HANDLE boyutunda olmalıdır. Aksi takdirde, handle kopyalanamaz.</para>
+<para>PKCS#11 attribute template oluşturma (import için)</para>
+<para>Import edilecek anahtar için PKCS#11 attribute template&apos;i oluşturulur. Anahtar tipine göre farklı key class ve key type kullanılır.</para>
+<para>&lt; Attribute template dizisi (max 10 attribute)</para>
+<para>&lt; Template attribute sayısı</para>
+<para>&lt; Varsayılan: Secret key (AES için)</para>
+<para>&lt; Varsayılan: AES key type</para>
+<para>&lt; Boolean true değeri</para>
+<para>Anahtar tipine göre key class ve key type ayarlama</para>
+<para>Her anahtar tipi için farklı key class ve key type kullanılır:<itemizedlist>
+<listitem><para>AES_256: CKO_SECRET_KEY, CKK_AES</para>
+</listitem><listitem><para>RSA_2048: CKO_PRIVATE_KEY, CKK_RSA</para>
+</listitem><listitem><para>EC_P256: CKO_PRIVATE_KEY, CKK_EC</para>
+</listitem></itemizedlist>
+</para>
+<para>PKCS#11 attribute template oluşturma (import anahtar için)</para>
+<para>Import edilecek anahtar için gerekli attribute&apos;lar oluşturulur:<itemizedlist>
+<listitem><para>CKA_CLASS: Anahtar sınıfı (secret key veya private key)</para>
+</listitem><listitem><para>CKA_KEY_TYPE: Anahtar tipi (AES, RSA, EC)</para>
+</listitem><listitem><para>CKA_LABEL: Anahtar etiketi</para>
+</listitem><listitem><para>CKA_VALUE: Anahtar verisi (import edilecek anahtar)</para>
+</listitem><listitem><para>CKA_TOKEN: Token&apos;da saklanacak (kalıcı)</para>
+</listitem><listitem><para>CKA_ENCRYPT/CKA_DECRYPT: Şifreleme/şifre çözme için kullanılabilir</para>
+</listitem></itemizedlist>
+</para>
+<para>&lt; Anahtar sınıfı</para>
+<para>&lt; Anahtar tipi</para>
+<para>&lt; Anahtar etiketi</para>
+<para>&lt; Anahtar verisi (import edilecek)</para>
+<para>&lt; Token&apos;da saklanacak (kalıcı)</para>
+<para>&lt; Şifreleme için kullanılabilir</para>
+<para>&lt; Şifre çözme için kullanılabilir</para>
+<para>PKCS#11 anahtar oluşturma (import)</para>
+<para>C_CreateObject ile import edilecek anahtar token üzerinde oluşturulur. Anahtar verisi (CKA_VALUE) template içinde belirtilir.</para>
+<para>&lt; Oluşturulan anahtar handle&apos;ı</para>
+<para>Key ID oluşturma (import için)</para>
+<para>Import edilen anahtarın handle&apos;ı keyId olarak kullanılır. keyId buffer, CK_OBJECT_HANDLE boyutunda olmalıdır. Eğer buffer yeterli değilse, InvalidInput hatası döner.</para>
+<para>Key ID buffer yeterli: handle&apos;ı kopyala</para>
+<para>Key ID buffer yetersiz: hata döner</para>
+<para>Import işleminde, keyId buffer mutlaka CK_OBJECT_HANDLE boyutunda olmalıdır. Aksi takdirde, handle kopyalanamaz.</para>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="1382" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="1382" bodyend="1502" declfile="src/travelexpense/header/softhsm.h" declline="136" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1af8527db38f2e8d22d54baf72e43315cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SoftHSM::findKey</definition>
+        <argsstring>(const char *keyLabel, uint8_t *keyId, size_t &amp;keyIdLen)</argsstring>
+        <name>findKey</name>
+        <qualifiedname>TravelExpense::SoftHSM::findKey</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>keyLabel</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>keyId</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>keyIdLen</declname>
+        </param>
+        <briefdescription>
+<para>Anahtarı bul (find key by label) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Anahtarı label&apos;a göre bul.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyLabel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar etiketi </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı: Bulunan anahtar ID&apos;si </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyIdLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı: Anahtar ID uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+</simplesect>
+</para>
+<para>Belirtilen label&apos;a sahip anahtarı token üzerinde arar ve keyId&apos;sini döndürür. Arama, C_FindObjectsInit ve C_FindObjects kullanılarak yapılır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Anahtar bulunamazsa FileNotFound döner.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyLabel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar etiketi (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bulunan anahtarın ID&apos;si (çıktı, nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyIdLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>keyId buffer boyutu (giriş), bulunan ID boyutu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="771" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="771" bodyend="813" declfile="src/travelexpense/header/softhsm.h" declline="148" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1aa4b7ad5db79291a92b339855944a4208" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SoftHSM::deleteKey</definition>
+        <argsstring>(const uint8_t *keyId, size_t keyIdLen)</argsstring>
+        <name>deleteKey</name>
+        <qualifiedname>TravelExpense::SoftHSM::deleteKey</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>keyId</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyIdLen</declname>
+        </param>
+        <briefdescription>
+<para>Anahtarı sil. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar ID&apos;si </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyIdLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar ID uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+</simplesect>
+</para>
+<para>Belirtilen keyId&apos;ye sahip anahtarı token üzerinden siler. C_DestroyObject kullanılarak anahtar kalıcı olarak silinir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Anahtar silindikten sonra geri getirilemez.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Silinecek anahtarın ID&apos;si (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyIdLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>keyId buffer boyutu (CK_OBJECT_HANDLE boyutu olmalı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="828" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="828" bodyend="843" declfile="src/travelexpense/header/softhsm.h" declline="157" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1aa76da1d2f45b48a32039219d89930d6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SoftHSM::encrypt</definition>
+        <argsstring>(const uint8_t *keyId, size_t keyIdLen, const void *plaintext, size_t plaintextLen, void *ciphertext, size_t &amp;ciphertextLen, uint8_t *iv=nullptr)</argsstring>
+        <name>encrypt</name>
+        <qualifiedname>TravelExpense::SoftHSM::encrypt</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>keyId</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyIdLen</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>plaintext</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>plaintextLen</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ciphertext</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>ciphertextLen</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>iv</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Veriyi şifrele (encrypt using HSM key) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Veriyi şifrele (AES-CBC)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar ID&apos;si </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyIdLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar ID uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IV çıktısı (nullptr ise otomatik oluşturulur) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+</simplesect>
+</para>
+<para>Belirtilen anahtar ile veriyi AES-CBC modunda şifreler. IV (Initialization Vector) belirtilmemişse, PKCS#11&apos;nin rastgele sayı üreticisi ile oluşturulur.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). AES-CBC-PAD mekanizması kullanılır, bu nedenle padding otomatik olarak eklenir. Ciphertext boyutu, plaintext boyutundan büyük olabilir.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifreleme anahtarının ID&apos;si (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyIdLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>keyId buffer boyutu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenecek veri (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu (byte, 0 ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri çıktısı (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ciphertext buffer boyutu (giriş), şifrelenmiş veri boyutu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialization Vector (nullptr ise otomatik oluşturulur) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>IV (Initialization Vector) oluşturma</para>
+<para>Eğer IV verilmemişse, PKCS#11&apos;nin rastgele sayı üreticisi ile 16 byte (128 bit) IV oluşturulur. IV, AES-CBC modunda her şifreleme işlemi için benzersiz olmalıdır.</para>
+<para>&lt; Local IV buffer (16 byte = AES block size)</para>
+<para>IV verilmemiş: PKCS#11 ile rastgele IV oluştur</para>
+<para>AES-CBC mekanizması ayarlama</para>
+<para>CKM_AES_CBC_PAD mekanizması kullanılır. Bu mekanizma, PKCS7 padding otomatik olarak ekler ve kaldırır. IV, mechanism parametresi olarak belirtilir (16 byte).</para>
+<para>&lt; AES-CBC modu + PKCS7 padding</para>
+<para>&lt; IV (16 byte)</para>
+<para>&lt; IV uzunluğu (16 byte)</para>
+<para>IV (Initialization Vector) oluşturma</para>
+<para>Eğer IV verilmemişse, PKCS#11&apos;nin rastgele sayı üreticisi ile 16 byte (128 bit) IV oluşturulur. IV, AES-CBC modunda her şifreleme işlemi için benzersiz olmalıdır.</para>
+<para>&lt; Local IV buffer (16 byte = AES block size)</para>
+<para>IV verilmemiş: PKCS#11 ile rastgele IV oluştur</para>
+<para>AES-CBC mekanizması ayarlama</para>
+<para>CKM_AES_CBC_PAD mekanizması kullanılır. Bu mekanizma, PKCS7 padding otomatik olarak ekler ve kaldırır. IV, mechanism parametresi olarak belirtilir (16 byte).</para>
+<para>&lt; AES-CBC modu + PKCS7 padding</para>
+<para>&lt; IV (16 byte)</para>
+<para>&lt; IV uzunluğu (16 byte)</para>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="865" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="865" bodyend="935" declfile="src/travelexpense/header/softhsm.h" declline="171" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1af50d97c17003e1b54df285fbf5fa76b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SoftHSM::decrypt</definition>
+        <argsstring>(const uint8_t *keyId, size_t keyIdLen, const void *ciphertext, size_t ciphertextLen, void *plaintext, size_t &amp;plaintextLen, const uint8_t *iv=nullptr)</argsstring>
+        <name>decrypt</name>
+        <qualifiedname>TravelExpense::SoftHSM::decrypt</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>keyId</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyIdLen</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>ciphertext</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ciphertextLen</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>plaintext</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>plaintextLen</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>iv</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Veriyi şifre çöz (decrypt using HSM key) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Şifrelenmiş veriyi çöz (AES-CBC)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar ID&apos;si </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyIdLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar ID uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri uzunluğu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IV (nullptr ise ciphertext&apos;in başından okunur) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+</simplesect>
+</para>
+<para>Belirtilen anahtar ile şifrelenmiş veriyi AES-CBC modunda çözer. IV (Initialization Vector) belirtilmemişse, ciphertext&apos;in ilk 16 byte&apos;ı IV olarak kullanılır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). AES-CBC-PAD mekanizması kullanılır, bu nedenle padding otomatik olarak kaldırılır. Plaintext boyutu, ciphertext boyutundan küçük veya eşit olabilir.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözme anahtarının ID&apos;si (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyIdLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>keyId buffer boyutu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (byte, 0 ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çözülmüş veri çıktısı (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>plaintext buffer boyutu (giriş), çözülmüş veri boyutu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialization Vector (nullptr ise ciphertext&apos;in ilk 16 byte&apos;ı kullanılır) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>IV (Initialization Vector) alma</para>
+<para>Eğer IV verilmemişse, ciphertext&apos;in ilk 16 byte&apos;ı IV olarak kullanılır. Bu, yaygın bir uygulama pratiğidir (IV + ciphertext formatı). Eğer IV verilmemiş ve ciphertext 16 byte&apos;dan küçükse, hata döner.</para>
+<para>&lt; Local IV buffer (16 byte = AES block size)</para>
+<para>IV verilmemiş ve ciphertext yeterli uzunlukta: Ciphertext&apos;in ilk 16 byte&apos;ı IV olarak kullanılır.</para>
+<para>IV verilmemiş ve ciphertext yeterli uzunlukta değil: hata</para>
+<para>AES-CBC mekanizması ayarlama</para>
+<para>CKM_AES_CBC_PAD mekanizması kullanılır. Bu mekanizma, PKCS7 padding otomatik olarak kaldırır. IV, mechanism parametresi olarak belirtilir (16 byte).</para>
+<para>&lt; AES-CBC modu + PKCS7 padding</para>
+<para>&lt; IV (16 byte)</para>
+<para>&lt; IV uzunluğu (16 byte)</para>
+<para>IV (Initialization Vector) alma</para>
+<para>Eğer IV verilmemişse, ciphertext&apos;in ilk 16 byte&apos;ı IV olarak kullanılır. Bu, yaygın bir uygulama pratiğidir (IV + ciphertext formatı). Eğer IV verilmemiş ve ciphertext 16 byte&apos;dan küçükse, hata döner.</para>
+<para>&lt; Local IV buffer (16 byte = AES block size)</para>
+<para>IV verilmemiş ve ciphertext yeterli uzunlukta: Ciphertext&apos;in ilk 16 byte&apos;ı IV olarak kullanılır.</para>
+<para>IV verilmemiş ve ciphertext yeterli uzunlukta değil: hata</para>
+<para>AES-CBC mekanizması ayarlama</para>
+<para>CKM_AES_CBC_PAD mekanizması kullanılır. Bu mekanizma, PKCS7 padding otomatik olarak kaldırır. IV, mechanism parametresi olarak belirtilir (16 byte).</para>
+<para>&lt; AES-CBC modu + PKCS7 padding</para>
+<para>&lt; IV (16 byte)</para>
+<para>&lt; IV uzunluğu (16 byte)</para>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="957" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="957" bodyend="1029" declfile="src/travelexpense/header/softhsm.h" declline="188" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1ac14ac62bb1ee91f10908af2ba8f7a832" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SoftHSM::sign</definition>
+        <argsstring>(const uint8_t *keyId, size_t keyIdLen, const void *data, size_t dataLen, void *signature, size_t &amp;signatureLen)</argsstring>
+        <name>sign</name>
+        <qualifiedname>TravelExpense::SoftHSM::sign</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>keyId</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyIdLen</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dataLen</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>signature</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>signatureLen</declname>
+        </param>
+        <briefdescription>
+<para>Veriyi imzala (sign data) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Veriyi imzala (SHA256-RSA-PKCS)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar ID&apos;si </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyIdLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar ID uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İmzalanacak veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İmza çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signatureLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İmza uzunluğu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+</simplesect>
+</para>
+<para>Belirtilen anahtar ile veriyi SHA256 hash&apos;leyip RSA-PKCS imzası oluşturur. SHA256-RSA-PKCS mekanizması kullanılır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Veri önce SHA256 ile hash&apos;lenir, sonra RSA ile imzalanır. Signature boyutu, RSA anahtar boyutuna bağlıdır (2048-bit için 256 byte).</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İmzalama anahtarının ID&apos;si (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyIdLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>keyId buffer boyutu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İmzalanacak veri (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu (byte, 0 ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İmza çıktısı (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signatureLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>signature buffer boyutu (giriş), imza boyutu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>SHA256-RSA-PKCS mekanizması ayarlama</para>
+<para>CKM_SHA256_RSA_PKCS mekanizması kullanılır. Bu mekanizma, veriyi önce SHA-256 ile hash&apos;ler, sonra RSA-PKCS ile imzalar. Parametre gerektirmez.</para>
+<para>&lt; SHA-256 hash + RSA-PKCS imzalama</para>
+<para>&lt; Parametre gerekmez</para>
+<para>&lt; Parametre uzunluğu 0</para>
+<para>İmzalama işlemini başlatma</para>
+<para>C_SignInit ile imzalama mekanizması ve anahtar ayarlanır. Bu işlem, sonraki C_Sign çağrısı için hazırlık yapar.</para>
+<para>Veriyi imzalama</para>
+<para>C_Sign ile veri imzalanır. Veri önce SHA-256 ile hash&apos;lenir, sonra RSA-PKCS ile imzalanır. İmza boyutu, RSA anahtar boyutuna bağlıdır (2048-bit için 256 byte).</para>
+<para>&lt; İmza buffer boyutu (giriş), gerçek imza boyutu (çıktı)</para>
+<para>SHA256-RSA-PKCS mekanizması ayarlama</para>
+<para>CKM_SHA256_RSA_PKCS mekanizması kullanılır. Bu mekanizma, veriyi önce SHA-256 ile hash&apos;ler, sonra RSA-PKCS ile imzalar. Parametre gerektirmez.</para>
+<para>&lt; SHA-256 hash + RSA-PKCS imzalama</para>
+<para>&lt; Parametre gerekmez</para>
+<para>&lt; Parametre uzunluğu 0</para>
+<para>İmzalama işlemini başlatma</para>
+<para>C_SignInit ile imzalama mekanizması ve anahtar ayarlanır. Bu işlem, sonraki C_Sign çağrısı için hazırlık yapar.</para>
+<para>Veriyi imzalama</para>
+<para>C_Sign ile veri imzalanır. Veri önce SHA-256 ile hash&apos;lenir, sonra RSA-PKCS ile imzalanır. İmza boyutu, RSA anahtar boyutuna bağlıdır (2048-bit için 256 byte).</para>
+<para>&lt; İmza buffer boyutu (giriş), gerçek imza boyutu (çıktı)</para>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="1049" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="1049" bodyend="1109" declfile="src/travelexpense/header/softhsm.h" declline="204" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1a6e1b43ac34b60670eafe4cb1c347335a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::SoftHSM::verify</definition>
+        <argsstring>(const uint8_t *keyId, size_t keyIdLen, const void *data, size_t dataLen, const void *signature, size_t signatureLen)</argsstring>
+        <name>verify</name>
+        <qualifiedname>TravelExpense::SoftHSM::verify</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>keyId</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyIdLen</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dataLen</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>signature</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>signatureLen</declname>
+        </param>
+        <briefdescription>
+<para>İmzayı doğrula (verify signature) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>İmzayı doğrula (SHA256-RSA-PKCS)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar ID&apos;si </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyIdLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar ID uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İmzalanmış veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İmza </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signatureLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İmza uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true İmza geçerli, false Geçersiz</para>
+</simplesect>
+</para>
+<para>Belirtilen anahtar ile veriyi SHA256 hash&apos;leyip RSA-PKCS imzasını doğrular. SHA256-RSA-PKCS mekanizması kullanılır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Veri önce SHA256 ile hash&apos;lenir, sonra RSA ile imza doğrulanır.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Doğrulama anahtarının ID&apos;si (nullptr ise false döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyIdLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>keyId buffer boyutu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Doğrulanacak veri (nullptr ise false döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu (byte, 0 ise false döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İmza (nullptr ise false döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signatureLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İmza uzunluğu (byte, 0 ise false döner) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true İmza geçerli, false İmza geçersiz veya hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>SHA256-RSA-PKCS mekanizması ayarlama</para>
+<para>CKM_SHA256_RSA_PKCS mekanizması kullanılır. Bu mekanizma, veriyi önce SHA-256 ile hash&apos;ler, sonra RSA-PKCS ile imza doğrular. Parametre gerektirmez.</para>
+<para>&lt; SHA-256 hash + RSA-PKCS imza doğrulama</para>
+<para>&lt; Parametre gerekmez</para>
+<para>&lt; Parametre uzunluğu 0</para>
+<para>İmza doğrulama işlemini başlatma</para>
+<para>C_VerifyInit ile imza doğrulama mekanizması ve anahtar ayarlanır. Bu işlem, sonraki C_Verify çağrısı için hazırlık yapar.</para>
+<para>İmzayı doğrulama</para>
+<para>C_Verify ile imza doğrulanır. Veri önce SHA-256 ile hash&apos;lenir, sonra RSA-PKCS ile imza doğrulanır. İmza geçerliyse CKR_OK döner.</para>
+<para>&lt; true = imza geçerli, false = imza geçersiz veya hata</para>
+<para>SHA256-RSA-PKCS mekanizması ayarlama</para>
+<para>CKM_SHA256_RSA_PKCS mekanizması kullanılır. Bu mekanizma, veriyi önce SHA-256 ile hash&apos;ler, sonra RSA-PKCS ile imza doğrular. Parametre gerektirmez.</para>
+<para>&lt; SHA-256 hash + RSA-PKCS imza doğrulama</para>
+<para>&lt; Parametre gerekmez</para>
+<para>&lt; Parametre uzunluğu 0</para>
+<para>İmza doğrulama işlemini başlatma</para>
+<para>C_VerifyInit ile imza doğrulama mekanizması ve anahtar ayarlanır. Bu işlem, sonraki C_Verify çağrısı için hazırlık yapar.</para>
+<para>İmzayı doğrulama</para>
+<para>C_Verify ile imza doğrulanır. Veri önce SHA-256 ile hash&apos;lenir, sonra RSA-PKCS ile imza doğrulanır. İmza geçerliyse CKR_OK döner.</para>
+<para>&lt; true = imza geçerli, false = imza geçersiz veya hata</para>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="1128" column="6" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="1128" bodyend="1180" declfile="src/travelexpense/header/softhsm.h" declline="219" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1ac132d386ec4642b70cbfc87db1dd84f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SoftHSM::generateRandom</definition>
+        <argsstring>(uint8_t *output, size_t length)</argsstring>
+        <name>generateRandom</name>
+        <qualifiedname>TravelExpense::SoftHSM::generateRandom</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Rastgele veri üret (HSM&apos;den güvenli random) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Kriptografik olarak güvenli rastgele veri üret.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rastgele veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İstenen uzunluk (byte) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+</simplesect>
+</para>
+<para>PKCS#11&apos;nin rastgele sayı üreticisini kullanarak kriptografik olarak güvenli rastgele veri üretir. C_GenerateRandom fonksiyonu kullanılır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Üretilen rastgele veriler, kriptografik işlemler için uygundur (IV, salt, vb.).</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rastgele veri çıktısı (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Üretilecek veri uzunluğu (byte, 0 ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="1195" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="1195" bodyend="1203" declfile="src/travelexpense/header/softhsm.h" declline="230" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1a627d80f41250c6562b1cd91521787245" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SoftHSM::listTokens</definition>
+        <argsstring>(char labels[][64], size_t &amp;count)</argsstring>
+        <name>listTokens</name>
+        <qualifiedname>TravelExpense::SoftHSM::listTokens</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>labels</declname>
+          <array>[][64]</array>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Mevcut token&apos;ları listele. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>labels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı: Token etiketleri dizisi (max 10 token) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı: Bulunan token sayısı </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+</simplesect>
+</para>
+<para>Sistemde mevcut tüm token&apos;ların label&apos;larını listeler. C_GetSlotList ve C_GetTokenInfo kullanılarak token bilgileri alınır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, <ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref>&apos;nin INITIALIZED durumunda olmasını gerektirir. Maksimum 10 token listelenir. Token label&apos;ları, boşluklarla doldurulmuş olabilir, bu nedenle son boşluklar temizlenir.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>labels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Token label&apos;ları dizisi (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>labels dizisi boyutu (giriş), bulunan token sayısı (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Token label&apos;larını toplama</para>
+<para>Her slot&apos;taki token&apos;ın label&apos;ı alınır ve listeye eklenir. Maksimum 10 token listelenir (performans için sınır). Token label&apos;ları PKCS#11&apos;de boşluklarla doldurulmuş olabilir, bu nedenle son boşluklar temizlenir.</para>
+<para>&lt; Bulunan token sayısı</para>
+<para>&lt; Token bilgisi</para>
+<para>Token bulundu: Label&apos;i kopyala ve boşlukları temizle</para>
+<para>PKCS#11 token label&apos;ları 32 byte uzunluğunda ve null-terminated değildir. Boşluklarla doldurulmuş olabilir, bu nedenle son boşluklar temizlenir.</para>
+<para>Token label&apos;larını toplama</para>
+<para>Her slot&apos;taki token&apos;ın label&apos;ı alınır ve listeye eklenir. Maksimum 10 token listelenir (performans için sınır). Token label&apos;ları PKCS#11&apos;de boşluklarla doldurulmuş olabilir, bu nedenle son boşluklar temizlenir.</para>
+<para>&lt; Bulunan token sayısı</para>
+<para>&lt; Token bilgisi</para>
+<para>Token bulundu: Label&apos;i kopyala ve boşlukları temizle</para>
+<para>PKCS#11 token label&apos;ları 32 byte uzunluğunda ve null-terminated değildir. Boşluklarla doldurulmuş olabilir, bu nedenle son boşluklar temizlenir.</para>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="1219" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="1219" bodyend="1276" declfile="src/travelexpense/header/softhsm.h" declline="239" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1ae037de28b34ae8a110a65f222e52ac06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SoftHSM::listKeys</definition>
+        <argsstring>(char labels[][64], size_t &amp;count)</argsstring>
+        <name>listKeys</name>
+        <qualifiedname>TravelExpense::SoftHSM::listKeys</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>labels</declname>
+          <array>[][64]</array>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Mevcut anahtarları listele. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>labels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı: Anahtar etiketleri dizisi (max 50 key) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı: Bulunan anahtar sayısı </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+</simplesect>
+</para>
+<para>Token üzerinde mevcut tüm secret key&apos;lerin label&apos;larını listeler. C_FindObjectsInit, C_FindObjects ve C_GetAttributeValue kullanılarak anahtar bilgileri alınır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Maksimum 50 anahtar listelenir. Sadece secret key&apos;ler listelenir.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>labels</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar label&apos;ları dizisi (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>labels dizisi boyutu (giriş), bulunan anahtar sayısı (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Anahtar label&apos;larını toplama</para>
+<para>Token üzerindeki tüm secret key&apos;lerin label&apos;ları alınır ve listeye eklenir. Maksimum 50 anahtar listelenir (performans için sınır). Her anahtar için C_GetAttributeValue ile label attribute&apos;u alınır.</para>
+<para>&lt; Bulunan anahtar sayısı</para>
+<para>&lt; Maksimum listelenecek anahtar sayısı</para>
+<para>Anahtar bulma ve label alma döngüsü</para>
+<para>C_FindObjects ile her iterasyonda bir anahtar bulunur. Her anahtar için C_GetAttributeValue ile label attribute&apos;u alınır. Label bulunursa, listeye eklenir.</para>
+<para>&lt; Bulunan anahtar handle&apos;ı</para>
+<para>&lt; Bulunan obje sayısı</para>
+<para>Anahtar bulunamadı: döngüden çık</para>
+<para>Label attribute&apos;unu alma</para>
+<para>C_GetAttributeValue ile anahtarın CKA_LABEL attribute&apos;u alınır. Label, 64 karakter buffer&apos;a yazılır ve null-terminated olarak ayarlanır.</para>
+<para>&lt; Label attribute tipi</para>
+<para>&lt; Label buffer (64 karakter)</para>
+<para>&lt; Buffer boyutu - 1 (null terminator için)</para>
+<para>Label başarıyla alındı: listeye ekle</para>
+<para>&lt; Null terminator garanti</para>
+<para>Anahtar label&apos;larını toplama</para>
+<para>Token üzerindeki tüm secret key&apos;lerin label&apos;ları alınır ve listeye eklenir. Maksimum 50 anahtar listelenir (performans için sınır). Her anahtar için C_GetAttributeValue ile label attribute&apos;u alınır.</para>
+<para>&lt; Bulunan anahtar sayısı</para>
+<para>&lt; Maksimum listelenecek anahtar sayısı</para>
+<para>Anahtar bulma ve label alma döngüsü</para>
+<para>C_FindObjects ile her iterasyonda bir anahtar bulunur. Her anahtar için C_GetAttributeValue ile label attribute&apos;u alınır. Label bulunursa, listeye eklenir.</para>
+<para>&lt; Bulunan anahtar handle&apos;ı</para>
+<para>&lt; Bulunan obje sayısı</para>
+<para>Anahtar bulunamadı: döngüden çık</para>
+<para>Label attribute&apos;unu alma</para>
+<para>C_GetAttributeValue ile anahtarın CKA_LABEL attribute&apos;u alınır. Label, 64 karakter buffer&apos;a yazılır ve null-terminated olarak ayarlanır.</para>
+<para>&lt; Label attribute tipi</para>
+<para>&lt; Label buffer (64 karakter)</para>
+<para>&lt; Buffer boyutu - 1 (null terminator için)</para>
+<para>Label başarıyla alındı: listeye ekle</para>
+<para>&lt; Null terminator garanti</para>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="1292" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="1292" bodyend="1362" declfile="src/travelexpense/header/softhsm.h" declline="248" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1a45bb7e36eb2dcea9e98bd740d17463f1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>static ErrorCode TravelExpense::SoftHSM::pkcs11ToErrorCode</definition>
+        <argsstring>(CK_ULONG rv)</argsstring>
+        <name>pkcs11ToErrorCode</name>
+        <qualifiedname>TravelExpense::SoftHSM::pkcs11ToErrorCode</qualifiedname>
+        <param>
+          <type>CK_ULONG</type>
+          <declname>rv</declname>
+        </param>
+        <briefdescription>
+<para>PKCS#11 return code&apos;unu ErrorCode&apos;a çevir. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bu helper fonksiyon, PKCS#11 standardından dönen return code&apos;ları uygulamanın ErrorCode enum&apos;una çevirir. PKCS#11 hata kodları CKR_* formatında olup, bunlar uygulama seviyesinde daha anlamlı hata kodlarına dönüştürülür.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PKCS#11 return code (CK_ULONG) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Uygulama seviyesinde hata kodu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="111" column="18" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="111" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1ad8c0a39f841e627e3ebc2a1a840e2fd9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>static const char * TravelExpense::SoftHSM::findSoftHSMLibrary</definition>
+        <argsstring>()</argsstring>
+        <name>findSoftHSMLibrary</name>
+        <qualifiedname>TravelExpense::SoftHSM::findSoftHSMLibrary</qualifiedname>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> kütüphanesi yolunu bul. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bu helper fonksiyon, sistemde yüklü <ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> kütüphanesini bulur. Platform-specific varsayılan yolları kontrol eder ve ilk bulunan kütüphane yolunu döndürür.</para>
+<para>Windows için kontrol edilen yollar:<itemizedlist>
+<listitem><para>softhsm2.dll (current directory)</para>
+</listitem><listitem><para>C:\Program Files\SoftHSM2\lib\softhsm2.dll</para>
+</listitem><listitem><para>C:\Program Files (x86)\SoftHSM2\lib\softhsm2.dll</para>
+</listitem></itemizedlist>
+</para>
+<para>Linux için kontrol edilen yollar:<itemizedlist>
+<listitem><para>libsofthsm2.so (current directory)</para>
+</listitem><listitem><para>/usr/lib/softhsm/libsofthsm2.so</para>
+</listitem><listitem><para>/usr/local/lib/softhsm/libsofthsm2.so</para>
+</listitem><listitem><para>/usr/lib/x86_64-linux-gnu/softhsm/libsofthsm2.so</para>
+</listitem><listitem><para>/opt/softhsm2/lib/libsofthsm2.so</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="return"><para>const char* Bulunan kütüphane yolu, bulunamazsa nullptr </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="165" column="19" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="165" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_soft_h_s_m_1aec8dc7984165792e83c0e751aa6db093" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>static ErrorCode TravelExpense::SoftHSM::loadPKCS11Library</definition>
+        <argsstring>(const char *libraryPath)</argsstring>
+        <name>loadPKCS11Library</name>
+        <qualifiedname>TravelExpense::SoftHSM::loadPKCS11Library</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>libraryPath</declname>
+        </param>
+        <briefdescription>
+<para>PKCS#11 kütüphanesini yükle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bu helper fonksiyon, PKCS#11 kütüphanesini dinamik olarak yükler. Eğer kütüphane zaten yüklüyse, hiçbir işlem yapmaz ve Success döner. Eğer libraryPath nullptr ise, findSoftHSMLibrary() ile otomatik bulma yapar.</para>
+<para>Kütüphane yüklendikten sonra, C_GetFunctionList fonksiyonunu alır ve PKCS#11 function list&apos;ini initialize eder. Bu işlem başarısız olursa, kütüphane kapatılır ve hata kodu döner.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>libraryPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PKCS#11 kütüphanesi yolu (nullptr ise otomatik bulma yapılır) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, Unknown) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/softhsm.cpp" line="220" column="18" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="220" bodyend="262"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/travelexpense/header/softhsm.h" line="26" column="1"/>
+  </compounddef>
+</doxygen>

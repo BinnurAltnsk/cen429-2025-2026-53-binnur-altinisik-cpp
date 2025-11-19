@@ -1,0 +1,91 @@
+\doxysection{asset\+Manager.\+h}
+\hypertarget{asset_manager_8h_source}{}\label{asset_manager_8h_source}\index{src/travelexpense/header/assetManager.h@{src/travelexpense/header/assetManager.h}}
+\mbox{\hyperlink{asset_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#ifndef\ ASSET\_MANAGER\_H}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ ASSET\_MANAGER\_H}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{common_types_8h}{commonTypes.h}}"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{export_8h}{export.h}}"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_travel_expense}{TravelExpense}}\ \{\ \textcolor{comment}{//\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_asset_manager}{AssetManager}}\ \{}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036}{AssetType}}\ \{}
+\DoxyCodeLine{00050\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a92b88f40b6fded293e62bb292b687afe}{USER\_DATA}}\ =\ 0,\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036acc5f630cdb1d9a7493b64899f1103cb4}{TRIP\_DATA}}\ =\ 1,\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a4e73617e2a63787c8a4b4d705a1f1644}{EXPENSE\_DATA}}\ =\ 2,\ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a7d3525c0a7a81d48ef14b7b668188554}{BUDGET\_DATA}}\ =\ 3,\ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036ab5cbe81d2939ba7ec0e72e8cff758dab}{SESSION\_DATA}}\ =\ 4,\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a7f50cb1a4957ebc516d71e864068a308}{ENCRYPTION\_KEY}}\ =\ 5,\ \ \ }
+\DoxyCodeLine{00056\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036aec7e491fc5a65ca0d1dcf313a8a51134}{CONFIG\_DATA}}\ =\ 6\ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0b}{ProtectionScheme}}\ \{}
+\DoxyCodeLine{00064\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0ba4ddb4b92d87973bd0fc314979deba833}{CONFIDENTIALITY}}\ =\ 0x01,\ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0ba9922a31d0eb8cadab61858b5ca94e9df}{INTEGRITY}}\ =\ 0x02,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0bac1f244be04c43841756fff0cdb74f994}{AUTHENTICATION}}\ =\ 0x04\ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}}\ \{}
+\DoxyCodeLine{00074\ \ \ int32\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a986c8230bbcc243780250752e1c75276}{assetId}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036}{AssetType}}\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a088985bed7307cea0baded90e87c0512}{assetType}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a4c169d5889293f4d105b034e6fc2218c}{name}}[100];\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a61d14f4b2f3877e037e0e362f669e55e}{description}}[500];\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a714eed1010cdf1f4ea7da880d90d494e}{location}}[200];\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_ae0dbfd7c5c7eba966e65f3c21bd595ca}{source}}[200];\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00080\ \ \ int64\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a051fb7b159bac648ed7c05605e6c57ea}{size}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ time\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_aa3a5d6719dbe319a885e415965664289}{createdAt}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ time\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a4fbe11c20d6d6104bba02cfd49e7fbba}{deletedAt}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_ad940f2534891c4337c471cd041e623c2}{defaultValue}}[500];\ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ uint8\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a2e780b5ecfe34dd4b006785747ebc27f}{protectionScheme}};\ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a946e38d5cff7598bf5dcd0803af4e1c0}{isEncrypted}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00086\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a1e0ea888fc82efdca59cfc16f1c4b409}{isActive}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a8ae977d0ef54c270ff01f06399025944}{Asset}}()\ :\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a986c8230bbcc243780250752e1c75276}{assetId}}(0),\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a088985bed7307cea0baded90e87c0512}{assetType}}(\mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036}{AssetType}}::\mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a92b88f40b6fded293e62bb292b687afe}{USER\_DATA}}),}
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a051fb7b159bac648ed7c05605e6c57ea}{size}}(0),\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_aa3a5d6719dbe319a885e415965664289}{createdAt}}(0),\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a4fbe11c20d6d6104bba02cfd49e7fbba}{deletedAt}}(0),}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a2e780b5ecfe34dd4b006785747ebc27f}{protectionScheme}}(0),\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a946e38d5cff7598bf5dcd0803af4e1c0}{isEncrypted}}(false),\ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a1e0ea888fc82efdca59cfc16f1c4b409}{isActive}}(true)\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a4c169d5889293f4d105b034e6fc2218c}{name}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a4c169d5889293f4d105b034e6fc2218c}{name}}));}
+\DoxyCodeLine{00097\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a61d14f4b2f3877e037e0e362f669e55e}{description}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a61d14f4b2f3877e037e0e362f669e55e}{description}}));}
+\DoxyCodeLine{00098\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a714eed1010cdf1f4ea7da880d90d494e}{location}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_a714eed1010cdf1f4ea7da880d90d494e}{location}}));}
+\DoxyCodeLine{00099\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_ae0dbfd7c5c7eba966e65f3c21bd595ca}{source}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_ae0dbfd7c5c7eba966e65f3c21bd595ca}{source}}));}
+\DoxyCodeLine{00100\ \ \ \ \ memset(\mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_ad940f2534891c4337c471cd041e623c2}{defaultValue}},\ 0,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset_ad940f2534891c4337c471cd041e623c2}{defaultValue}}));}
+\DoxyCodeLine{00101\ \ \ \}}
+\DoxyCodeLine{00102\ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00113\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a33ae1a53f9af6e03e81b1acb903c6958}{registerAsset}}(\textcolor{keyword}{const}\ Asset\ \&asset,\ int32\_t\ \&assetId);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00122\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a000f5700909ef864a26945183de16404}{getAsset}}(int32\_t\ assetId,\ Asset\ \&asset);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00131\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a35d1fbd75c391130eab2e700b9f8a75f}{updateAsset}}(int32\_t\ assetId,\ \textcolor{keyword}{const}\ Asset\ \&asset);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00139\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_abb26bb2442086fa911159baf2c80668f}{deleteAsset}}(int32\_t\ assetId);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00147\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a8905f38d9bd74d60801d67a798d1c9de}{listAssets}}(std::vector<Asset>\ \&assets);}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00156\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_ae88b60bbe936e860fbb648a8fc024951}{listAssetsByType}}(\mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036}{AssetType}}\ assetType,\ std::vector<Asset>\ \&assets);}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00167\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_ad6039789a53809ffd63c8acc4dfeb17e}{setProtectionScheme}}(int32\_t\ assetId,\ uint8\_t\ protectionScheme);}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00176\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_aa4e8c39db1d427c8fee2e3d6deb3c05f}{getProtectionScheme}}(int32\_t\ assetId,\ uint8\_t\ \&protectionScheme);}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00185\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_ab6141a7865bafc003e40f228550b388c}{verifyProtectionScheme}}(int32\_t\ assetId,\ uint8\_t\ requiredScheme);}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \}\ \textcolor{comment}{//\ namespace\ AssetManager}}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \}\ \textcolor{comment}{//\ namespace\ TravelExpense\ //\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ASSET\_MANAGER\_H}}
+\DoxyCodeLine{00192\ }
+
+\end{DoxyCode}

@@ -1,7 +1,7 @@
 /**
  * @file reportGenerator.cpp
  * @brief Seyahat Gideri Takibi - Rapor Oluşturma Implementation
- * 
+ *
  * @author Binnur Altınışık
  * @date 2025
  */
@@ -16,72 +16,71 @@
 
 namespace TravelExpense {
 
-    namespace ReportGenerator {
+namespace ReportGenerator {
 
-        ErrorCode generateReport(int32_t tripId, std::string& report) {
-            Trip trip;
-            if (TripManager::getTrip(tripId, trip) != ErrorCode::Success) {
-                return ErrorCode::InvalidInput;
-            }
+ErrorCode generateReport(int32_t tripId, std::string &report) {
+  Trip trip;
 
-            std::vector<Expense> expenses;
-            if (ExpenseManager::getExpenses(tripId, expenses) != ErrorCode::Success) {
-                return ErrorCode::InvalidInput;
-            }
+  if (TripManager::getTrip(tripId, trip) != ErrorCode::Success) {
+    return ErrorCode::InvalidInput;
+  }
 
-            Budget budget;
-            BudgetManager::getBudget(tripId, budget);
+  std::vector<Expense> expenses;
 
-            std::ostringstream oss;
-            
-            oss << "=== SEYAHAT ÖZET RAPORU ===\n\n";
-            oss << "Seyahat ID: " << trip.tripId << "\n";
-            oss << "Varış Noktası: " << trip.destination << "\n";
-            oss << "Başlangıç Tarihi: " << trip.startDate << "\n";
-            oss << "Bitiş Tarihi: " << trip.endDate << "\n";
-            oss << "Konaklama: " << trip.accommodation << "\n";
-            oss << "Ulaşım: " << trip.transportation << "\n";
-            oss << "\n=== GİDERLER ===\n";
-            
-            double totalExpenses = 0.0;
-            for (const auto& expense : expenses) {
-                oss << "- " << getCategoryString(expense.category) 
-                    << ": " << expense.amount << " " << expense.currency
-                    << " (" << expense.date << ")\n";
-                totalExpenses += expense.amount;
-            }
-            
-            oss << "\nToplam Gider: " << totalExpenses << "\n";
-            oss << "Bütçe: " << budget.totalBudget << "\n";
-            oss << "Kalan: " << (budget.totalBudget - totalExpenses) << "\n";
+  if (ExpenseManager::getExpenses(tripId, expenses) != ErrorCode::Success) {
+    return ErrorCode::InvalidInput;
+  }
 
-            report = oss.str();
-            return ErrorCode::Success;
-        }
+  Budget budget;
+  BudgetManager::getBudget(tripId, budget);
+  std::ostringstream oss;
+  oss << "=== SEYAHAT ÖZET RAPORU ===\n\n";
+  oss << "Seyahat ID: " << trip.tripId << "\n";
+  oss << "Varış Noktası: " << trip.destination << "\n";
+  oss << "Başlangıç Tarihi: " << trip.startDate << "\n";
+  oss << "Bitiş Tarihi: " << trip.endDate << "\n";
+  oss << "Konaklama: " << trip.accommodation << "\n";
+  oss << "Ulaşım: " << trip.transportation << "\n";
+  oss << "\n=== GİDERLER ===\n";
+  double totalExpenses = 0.0;
 
-        ErrorCode getReports(int32_t userId, std::vector<std::string>& reports) {
-            // TODO: Kullanıcıya ait tüm seyahatlerin raporlarını oluştur
-            reports.clear();
-            return ErrorCode::Success;
-        }
+  for (const auto &expense : expenses) {
+    oss << "- " << getCategoryString(expense.category)
+        << ": " << expense.amount << " " << expense.currency
+        << " (" << expense.date << ")\n";
+    totalExpenses += expense.amount;
+  }
 
-        ErrorCode saveReport(int32_t tripId, const char* filepath) {
-            std::string report;
-            if (generateReport(tripId, report) != ErrorCode::Success) {
-                return ErrorCode::InvalidInput;
-            }
+  oss << "\nToplam Gider: " << totalExpenses << "\n";
+  oss << "Bütçe: " << budget.totalBudget << "\n";
+  oss << "Kalan: " << (budget.totalBudget - totalExpenses) << "\n";
+  report = oss.str();
+  return ErrorCode::Success;
+}
 
-            std::ofstream file(filepath);
-            if (!file.is_open()) {
-                return ErrorCode::FileIO;
-            }
+ErrorCode getReports(int32_t userId, std::vector<std::string> &reports) {
+  // TODO: Kullanıcıya ait tüm seyahatlerin raporlarını oluştur
+  reports.clear();
+  return ErrorCode::Success;
+}
 
-            file << report;
-            file.close();
+ErrorCode saveReport(int32_t tripId, const char *filepath) {
+  std::string report;
 
-            return ErrorCode::Success;
-        }
-    }
+  if (generateReport(tripId, report) != ErrorCode::Success) {
+    return ErrorCode::InvalidInput;
+  }
+
+  std::ofstream file(filepath);
+
+  if (!file.is_open()) {
+    return ErrorCode::FileIO;
+  }
+
+  file << report;
+  file.close();
+  return ErrorCode::Success;
+}
+}
 
 } // namespace TravelExpense
-

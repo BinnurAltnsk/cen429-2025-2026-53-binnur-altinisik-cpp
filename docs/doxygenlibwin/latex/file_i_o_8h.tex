@@ -1,0 +1,57 @@
+\doxysection{src/travelexpense/header/file\+IO.h File Reference}
+\hypertarget{file_i_o_8h}{}\label{file_i_o_8h}\index{src/travelexpense/header/fileIO.h@{src/travelexpense/header/fileIO.h}}
+
+
+Seyahat Gideri Takibi -\/ Dosya I/O Yardımcı Fonksiyonlar.  
+
+
+{\ttfamily \#include \"{}export.\+h\"{}}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for file\+IO.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{file_i_o_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{file_i_o_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense}{Travel\+Expense}}
+\begin{DoxyCompactList}\small\item\em Ana namespace -\/ Seyahat Gideri Takibi uygulaması \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_file_i_o}{File\+IO}}
+\begin{DoxyCompactList}\small\item\em Dosya I/O yardımcı fonksiyonları \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_file_i_o}{Travel\+Expense\+::\+File\+IO}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_file_i_o_a5b48ea5d727f176d8ccc873b44bde6bd}{Travel\+Expense\+::\+File\+IO\+::ensure\+Data\+Directory}} ()
+\begin{DoxyCompactList}\small\item\em Veri dizinini oluştur (yoksa) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} int32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_file_i_o_a00cc394b17a375d8944fdeff726d2007}{Travel\+Expense\+::\+File\+IO\+::get\+Last\+Id}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Son ID\textquotesingle{}yi dosyadan al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_file_i_o_a62bef7a2f4e9800f9e1cd658b2b2736f}{Travel\+Expense\+::\+File\+IO\+::save\+Last\+Id}} (const char \texorpdfstring{$\ast$}{*}filename, int32\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Son ID\textquotesingle{}yi dosyaya kaydet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} int32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_file_i_o_ad66f05fcd39352e4f9a2aa8fdf32ce48}{Travel\+Expense\+::\+File\+IO\+::generate\+Id}} (const char \texorpdfstring{$\ast$}{*}entity\+Name)
+\begin{DoxyCompactList}\small\item\em Yeni ID oluştur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ Dosya I/O Yardımcı Fonksiyonlar. 
+
+Bu dosya, dosya işlemleri için yardımcı fonksiyon bildirimlerini içerir.
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}

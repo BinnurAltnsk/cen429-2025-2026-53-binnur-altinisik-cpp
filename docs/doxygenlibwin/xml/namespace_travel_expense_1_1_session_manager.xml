@@ -1,0 +1,691 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_travel_expense_1_1_session_manager" kind="namespace" language="C++">
+    <compoundname>TravelExpense::SessionManager</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a12a41739ca5b6def4d5c42ef155d951c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SessionManager::generateSessionKey</definition>
+        <argsstring>(uint8_t *sessionKey, size_t sessionKeyLen)</argsstring>
+        <name>generateSessionKey</name>
+        <qualifiedname>TravelExpense::SessionManager::generateSessionKey</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>sessionKey</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sessionKeyLen</declname>
+        </param>
+        <briefdescription>
+<para>Oturum anahtarı oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı oturum anahtarı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionKeyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oturum anahtarı uzunluğu (32) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="41" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="41" bodyend="52" declfile="src/travelexpense/header/sessionManager.h" declline="49" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a7434e31c9b23e2a214624a2f68932efe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SessionManager::encryptSessionKey</definition>
+        <argsstring>(const uint8_t *plainSessionKey, uint8_t *encryptedSessionKey, size_t &amp;encryptedLen)</argsstring>
+        <name>encryptSessionKey</name>
+        <qualifiedname>TravelExpense::SessionManager::encryptSessionKey</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>plainSessionKey</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>encryptedSessionKey</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>encryptedLen</declname>
+        </param>
+        <briefdescription>
+<para>Oturum anahtarını şifrele. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Oturum anahtarlarının şifrelenerek iletilmesi gereksinimini karşılar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plainSessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmemiş oturum anahtarı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encryptedSessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş oturum anahtarı çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encryptedLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="54" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="54" bodyend="92" declfile="src/travelexpense/header/sessionManager.h" declline="61" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a95882d531215f84b305d891fc5f9631d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SessionManager::decryptSessionKey</definition>
+        <argsstring>(const uint8_t *encryptedSessionKey, size_t encryptedLen, uint8_t *plainSessionKey)</argsstring>
+        <name>decryptSessionKey</name>
+        <qualifiedname>TravelExpense::SessionManager::decryptSessionKey</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>encryptedSessionKey</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>encryptedLen</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>plainSessionKey</declname>
+        </param>
+        <briefdescription>
+<para>Şifrelenmiş oturum anahtarını çöz. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>encryptedSessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş oturum anahtarı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encryptedLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plainSessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş oturum anahtarı çıktısı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="94" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="94" bodyend="120" declfile="src/travelexpense/header/sessionManager.h" declline="73" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1aa420877416fa8452b1d1468585770e96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SessionManager::getDeviceFingerprint</definition>
+        <argsstring>(char *fingerprint)</argsstring>
+        <name>getDeviceFingerprint</name>
+        <qualifiedname>TravelExpense::SessionManager::getDeviceFingerprint</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>fingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Cihaz fingerprint&apos;ini al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uygulamanın yalnızca belirli cihazlarda çalışması gereksinimini karşılar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cihaz fingerprint çıktısı (64 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="126" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="126" bodyend="193" declfile="src/travelexpense/header/sessionManager.h" declline="89" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a85a30162b30da070bf49cd2ee0108ab8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SessionManager::getApplicationVersion</definition>
+        <argsstring>(char *version, size_t versionLen)</argsstring>
+        <name>getApplicationVersion</name>
+        <qualifiedname>TravelExpense::SessionManager::getApplicationVersion</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>version</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>versionLen</declname>
+        </param>
+        <briefdescription>
+<para>Uygulama sürümünü al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>version</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sürüm string çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>versionLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maksimum uzunluk </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="195" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="195" bodyend="205" declfile="src/travelexpense/header/sessionManager.h" declline="98" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1ad6e58bd9ca5d725609dd33e56febf537" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SessionManager::validateDeviceAndVersion</definition>
+        <argsstring>(const char *deviceFingerprint, const char *appVersion)</argsstring>
+        <name>validateDeviceAndVersion</name>
+        <qualifiedname>TravelExpense::SessionManager::validateDeviceAndVersion</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>deviceFingerprint</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>appVersion</declname>
+        </param>
+        <briefdescription>
+<para>Cihaz ve sürüm kontrolü yap. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uygulamanın yalnızca belirli cihazlar ve sürümlerde çalışması gereksinimini karşılar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deviceFingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kontrol edilecek cihaz fingerprint&apos;i </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>appVersion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kontrol edilecek uygulama sürümü </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="207" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="207" bodyend="237" declfile="src/travelexpense/header/sessionManager.h" declline="109" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a98f8147a318c7a1b09f0a33cb45e370b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SessionManager::encryptPayload</definition>
+        <argsstring>(const void *plaintext, size_t plaintextLen, const uint8_t *sessionKey, void *ciphertext, size_t &amp;ciphertextLen)</argsstring>
+        <name>encryptPayload</name>
+        <qualifiedname>TravelExpense::SessionManager::encryptPayload</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>plaintext</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>plaintextLen</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>sessionKey</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ciphertext</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>ciphertextLen</declname>
+        </param>
+        <briefdescription>
+<para>Veriyi şifrele (Confidential Payload) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Taşınan verilerin şifrelenmesi gereksinimini karşılar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oturum anahtarı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="243" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="243" bodyend="274" declfile="src/travelexpense/header/sessionManager.h" declline="128" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a26e4f223ea8d2e55444a116613d7283c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SessionManager::decryptPayload</definition>
+        <argsstring>(const void *ciphertext, size_t ciphertextLen, const uint8_t *sessionKey, void *plaintext, size_t &amp;plaintextLen)</argsstring>
+        <name>decryptPayload</name>
+        <qualifiedname>TravelExpense::SessionManager::decryptPayload</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>ciphertext</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ciphertextLen</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>sessionKey</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>plaintext</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>plaintextLen</declname>
+        </param>
+        <briefdescription>
+<para>Şifrelenmiş veriyi çöz (Confidential Payload) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oturum anahtarı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri uzunluğu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="276" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="276" bodyend="296" declfile="src/travelexpense/header/sessionManager.h" declline="142" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a66d5424f95a73b886a56e3671491d2a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SessionManager::calculateHMAC</definition>
+        <argsstring>(const void *data, size_t dataLen, const uint8_t *sessionKey, char *hmac)</argsstring>
+        <name>calculateHMAC</name>
+        <qualifiedname>TravelExpense::SessionManager::calculateHMAC</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dataLen</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>sessionKey</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>hmac</declname>
+        </param>
+        <briefdescription>
+<para>Veri bütünlük kontrolü (HMAC) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Verilerin doğruluğu ve kaynağı kontrolü gereksinimini karşılar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kontrol edilecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oturum anahtarı (HMAC için) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hmac</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HMAC çıktısı (32 byte - 64 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="302" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="302" bodyend="315" declfile="src/travelexpense/header/sessionManager.h" declline="161" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1aceef3c52f919a1a4f68686d3985b0812" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SessionManager::verifyHMAC</definition>
+        <argsstring>(const void *data, size_t dataLen, const uint8_t *sessionKey, const char *expectedHMAC)</argsstring>
+        <name>verifyHMAC</name>
+        <qualifiedname>TravelExpense::SessionManager::verifyHMAC</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dataLen</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>sessionKey</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>expectedHMAC</declname>
+        </param>
+        <briefdescription>
+<para>HMAC doğrulama. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kontrol edilecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oturum anahtarı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>expectedHMAC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen HMAC değeri (64 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR_CHECKSUM_MISMATCH = geçersiz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="317" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="317" bodyend="337" declfile="src/travelexpense/header/sessionManager.h" declline="174" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1ad56f31d3d436c019b72a4e7e530c2270" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SessionManager::signData</definition>
+        <argsstring>(const void *data, size_t dataLen, char *signature)</argsstring>
+        <name>signData</name>
+        <qualifiedname>TravelExpense::SessionManager::signData</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dataLen</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>signature</declname>
+        </param>
+        <briefdescription>
+<para>Veri imzala. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sunucu tarafında dijital imza doğrulaması gereksinimini karşılar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İmzalanacak veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dijital imza çıktısı (64 byte - 128 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="343" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="343" bodyend="375" declfile="src/travelexpense/header/sessionManager.h" declline="192" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1aaf4139a793d646ebb66eac13338753b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::SessionManager::verifySignature</definition>
+        <argsstring>(const void *data, size_t dataLen, const char *signature)</argsstring>
+        <name>verifySignature</name>
+        <qualifiedname>TravelExpense::SessionManager::verifySignature</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dataLen</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>signature</declname>
+        </param>
+        <briefdescription>
+<para>Dijital imza doğrulama. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Doğrulanacak veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen dijital imza (128 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR_CHECKSUM_MISMATCH = geçersiz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="377" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="377" bodyend="396" declfile="src/travelexpense/header/sessionManager.h" declline="203" declcolumn="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/travelexpense/header/sessionManager.h" line="36" column="1"/>
+  </compounddef>
+</doxygen>

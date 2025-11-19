@@ -1,0 +1,74 @@
+\doxysection{safe\+\_\+string.\+h}
+\hypertarget{safe__string_8h_source}{}\label{safe__string_8h_source}\index{src/travelexpense/header/safe\_string.h@{src/travelexpense/header/safe\_string.h}}
+\mbox{\hyperlink{safe__string_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ SAFE\_STRING\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ SAFE\_STRING\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_travel_expense}{TravelExpense}}\ \{\ \textcolor{comment}{//\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00027\ \textcolor{comment}{}\textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_safe_string}{SafeString}}\ \{}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_safe_string_a5555a53d845f3644d0dfc17c0f097075}{safeCopy}}(\textcolor{keywordtype}{char}\ *dest,\ \textcolor{keywordtype}{size\_t}\ destSize,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *src)\ \{}
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordflow}{if}\ (!dest\ ||\ destSize\ ==\ 0)\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00042\ \ \ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#ifdef\ \_MSC\_VER}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordflow}{if}\ (strncpy\_s(dest,\ destSize,\ src\ ?\ src\ :\ \textcolor{stringliteral}{"{}"{}},\ \_TRUNCATE)\ !=\ 0)\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00048\ \ \ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordflow}{if}\ (!src)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ dest[0]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00055\ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ std::strncpy(dest,\ src,\ destSize\ -\/\ 1);}
+\DoxyCodeLine{00058\ \ \ dest[destSize\ -\/\ 1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00061\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_safe_string_a569736a8bdffe728575d3baf0a515712}{safeConcat}}(\textcolor{keywordtype}{char}\ *dest,\ \textcolor{keywordtype}{size\_t}\ destSize,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *src)\ \{}
+\DoxyCodeLine{00074\ \ \ \textcolor{keywordflow}{if}\ (!dest\ ||\ destSize\ ==\ 0)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00076\ \ \ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#ifdef\ \_MSC\_VER}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \textcolor{keywordflow}{if}\ (strncat\_s(dest,\ destSize,\ src\ ?\ src\ :\ \textcolor{stringliteral}{"{}"{}},\ \_TRUNCATE)\ !=\ 0)\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00082\ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \textcolor{keywordflow}{if}\ (!src)\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00088\ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \textcolor{keywordtype}{size\_t}\ destLen\ =\ std::strlen(dest);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \textcolor{keywordflow}{if}\ (destLen\ >=\ destSize\ -\/\ 1)\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00094\ \ \ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ std::strncat(dest,\ src,\ destSize\ -\/\ destLen\ -\/\ 1);}
+\DoxyCodeLine{00097\ \ \ dest[destSize\ -\/\ 1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00100\ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \}\ \textcolor{comment}{//\ namespace\ SafeString}}
+\DoxyCodeLine{00103\ \}\ \textcolor{comment}{//\ namespace\ TravelExpense\ //\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SAFE\_STRING\_H}}
+\DoxyCodeLine{00106\ }
+
+\end{DoxyCode}

@@ -1,9 +1,9 @@
 /**
  * @file travelexpenseapp.h
  * @brief Seyahat Gideri Takibi - Konsol Uygulaması Header Dosyası
- * 
+ *
  * Bu dosya, konsol menü sisteminin fonksiyon bildirimlerini içerir.
- * 
+ *
  * @author Binnur Altınışık
  * @date 2025
  */
@@ -19,98 +19,97 @@
  */
 namespace TravelExpenseApp {
 
-    // Import all types and namespaces from TravelExpense
-    using namespace TravelExpense;
-    
-    // Explicit type imports for better IntelliSense support
-    using TravelExpense::ErrorCode;
-    using TravelExpense::User;
-    using TravelExpense::Trip;
-    using TravelExpense::Expense;
-    using TravelExpense::Budget;
-    using TravelExpense::ExpenseCategory;
+// Import all types and namespaces from TravelExpense
+using namespace TravelExpense;
 
-    /**
-     * @brief Ana menüyü göster ve yönet
-     * @return int Çıkış kodu
-     */
-    int showMainMenu();
+// Explicit type imports for better IntelliSense support
+using TravelExpense::ErrorCode;
+using TravelExpense::User;
+using TravelExpense::Trip;
+using TravelExpense::Expense;
+using TravelExpense::Budget;
+using TravelExpense::ExpenseCategory;
 
-    /**
-     * @brief Kullanıcı işlemleri menüsü
-     */
-    void showUserMenu();
+/**
+ * @brief Ana menüyü göster ve yönet
+ * @return int Çıkış kodu
+ */
+int showMainMenu();
 
-    /**
-     * @brief Seyahat planlama menüsü
-     */
-    void showTripMenu();
+/**
+ * @brief Kullanıcı işlemleri menüsü
+ */
+void showUserMenu();
 
-    /**
-     * @brief Gider kaydı menüsü
-     */
-    void showExpenseMenu();
+/**
+ * @brief Seyahat planlama menüsü
+ */
+void showTripMenu();
 
-    /**
-     * @brief Bütçe yönetimi menüsü
-     */
-    void showBudgetMenu();
+/**
+ * @brief Gider kaydı menüsü
+ */
+void showExpenseMenu();
 
-    /**
-     * @brief Özet rapor menüsü
-     */
-    void showReportMenu();
+/**
+ * @brief Bütçe yönetimi menüsü
+ */
+void showBudgetMenu();
 
-    // ==================== Yardımcı Menü Fonksiyonları ====================
+/**
+ * @brief Özet rapor menüsü
+ */
+void showReportMenu();
 
-    /**
-     * @brief Ekranı temizle
-     */
-    void clearScreen();
+// ==================== Yardımcı Menü Fonksiyonları ====================
 
-    /**
-     * @brief Kullanıcıdan string input al
-     * @param prompt Prompt mesajı
-     * @param output Alınan string
-     * @param maxLength Maksimum uzunluk
-     * @return true Başarılı, false İptal
-     */
-    bool getStringInput(const char* prompt, char* output, size_t maxLength);
+/**
+ * @brief Ekranı temizle
+ */
+void clearScreen();
 
-    /**
-     * @brief Kullanıcıdan integer input al
-     * @param prompt Prompt mesajı
-     * @param output Alınan integer
-     * @return true Başarılı, false İptal
-     */
-    bool getIntInput(const char* prompt, int& output);
+/**
+ * @brief Kullanıcıdan string input al
+ * @param prompt Prompt mesajı
+ * @param output Alınan string
+ * @param maxLength Maksimum uzunluk
+ * @return true Başarılı, false İptal
+ */
+bool getStringInput(const char *prompt, char *output, size_t maxLength);
 
-    /**
-     * @brief Kullanıcıdan double input al
-     * @param prompt Prompt mesajı
-     * @param output Alınan double
-     * @return true Başarılı, false İptal
-     */
-    bool getDoubleInput(const char* prompt, double& output);
+/**
+ * @brief Kullanıcıdan integer input al
+ * @param prompt Prompt mesajı
+ * @param output Alınan integer
+ * @return true Başarılı, false İptal
+ */
+bool getIntInput(const char *prompt, int &output);
 
-    /**
-     * @brief Hata mesajını göster
-     * @param errorCode Hata kodu
-     */
-    void showError(ErrorCode errorCode);
+/**
+ * @brief Kullanıcıdan double input al
+ * @param prompt Prompt mesajı
+ * @param output Alınan double
+ * @return true Başarılı, false İptal
+ */
+bool getDoubleInput(const char *prompt, double &output);
 
-    /**
-     * @brief Başarı mesajını göster
-     * @param message Mesaj
-     */
-    void showSuccess(const char* message);
+/**
+ * @brief Hata mesajını göster
+ * @param errorCode Hata kodu
+ */
+void showError(ErrorCode errorCode);
 
-    /**
-     * @brief Devam etmek için beklet
-     */
-    void waitForContinue();
+/**
+ * @brief Başarı mesajını göster
+ * @param message Mesaj
+ */
+void showSuccess(const char *message);
+
+/**
+ * @brief Devam etmek için beklet
+ */
+void waitForContinue();
 
 } // namespace TravelExpenseApp
 
 #endif // TRAVELEXPENSEAPP_H
-

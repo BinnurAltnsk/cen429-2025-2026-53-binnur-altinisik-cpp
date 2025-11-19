@@ -1,0 +1,310 @@
+\doxysection{Travel\+Expense\+::Session\+Manager Namespace Reference}
+\hypertarget{namespace_travel_expense_1_1_session_manager}{}\label{namespace_travel_expense_1_1_session_manager}\index{TravelExpense::SessionManager@{TravelExpense::SessionManager}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_a12a41739ca5b6def4d5c42ef155d951c}{generate\+Session\+Key}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}session\+Key, size\+\_\+t session\+Key\+Len)
+\begin{DoxyCompactList}\small\item\em Oturum anahtarı oluştur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_a7434e31c9b23e2a214624a2f68932efe}{encrypt\+Session\+Key}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}plain\+Session\+Key, uint8\+\_\+t \texorpdfstring{$\ast$}{*}encrypted\+Session\+Key, size\+\_\+t \&encrypted\+Len)
+\begin{DoxyCompactList}\small\item\em Oturum anahtarını şifrele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_a95882d531215f84b305d891fc5f9631d}{decrypt\+Session\+Key}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}encrypted\+Session\+Key, size\+\_\+t encrypted\+Len, uint8\+\_\+t \texorpdfstring{$\ast$}{*}plain\+Session\+Key)
+\begin{DoxyCompactList}\small\item\em Şifrelenmiş oturum anahtarını çöz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_aa420877416fa8452b1d1468585770e96}{get\+Device\+Fingerprint}} (char \texorpdfstring{$\ast$}{*}fingerprint)
+\begin{DoxyCompactList}\small\item\em Cihaz fingerprint\textquotesingle{}ini al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_a85a30162b30da070bf49cd2ee0108ab8}{get\+Application\+Version}} (char \texorpdfstring{$\ast$}{*}version, size\+\_\+t version\+Len)
+\begin{DoxyCompactList}\small\item\em Uygulama sürümünü al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_ad6e58bd9ca5d725609dd33e56febf537}{validate\+Device\+And\+Version}} (const char \texorpdfstring{$\ast$}{*}device\+Fingerprint, const char \texorpdfstring{$\ast$}{*}app\+Version)
+\begin{DoxyCompactList}\small\item\em Cihaz ve sürüm kontrolü yap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_a98f8147a318c7a1b09f0a33cb45e370b}{encrypt\+Payload}} (const void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t plaintext\+Len, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}session\+Key, void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t \&ciphertext\+Len)
+\begin{DoxyCompactList}\small\item\em Veriyi şifrele (Confidential Payload) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_a26e4f223ea8d2e55444a116613d7283c}{decrypt\+Payload}} (const void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t ciphertext\+Len, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}session\+Key, void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t \&plaintext\+Len)
+\begin{DoxyCompactList}\small\item\em Şifrelenmiş veriyi çöz (Confidential Payload) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_a66d5424f95a73b886a56e3671491d2a6}{calculate\+HMAC}} (const void \texorpdfstring{$\ast$}{*}data, size\+\_\+t data\+Len, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}session\+Key, char \texorpdfstring{$\ast$}{*}hmac)
+\begin{DoxyCompactList}\small\item\em Veri bütünlük kontrolü (HMAC) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_aceef3c52f919a1a4f68686d3985b0812}{verify\+HMAC}} (const void \texorpdfstring{$\ast$}{*}data, size\+\_\+t data\+Len, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}session\+Key, const char \texorpdfstring{$\ast$}{*}expected\+HMAC)
+\begin{DoxyCompactList}\small\item\em HMAC doğrulama. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_ad56f31d3d436c019b72a4e7e530c2270}{sign\+Data}} (const void \texorpdfstring{$\ast$}{*}data, size\+\_\+t data\+Len, char \texorpdfstring{$\ast$}{*}signature)
+\begin{DoxyCompactList}\small\item\em Veri imzala. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager_aaf4139a793d646ebb66eac13338753b5}{verify\+Signature}} (const void \texorpdfstring{$\ast$}{*}data, size\+\_\+t data\+Len, const char \texorpdfstring{$\ast$}{*}signature)
+\begin{DoxyCompactList}\small\item\em Dijital imza doğrulama. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_1_1_session_manager_a66d5424f95a73b886a56e3671491d2a6}\label{namespace_travel_expense_1_1_session_manager_a66d5424f95a73b886a56e3671491d2a6} 
+\index{TravelExpense::SessionManager@{TravelExpense::SessionManager}!calculateHMAC@{calculateHMAC}}
+\index{calculateHMAC@{calculateHMAC}!TravelExpense::SessionManager@{TravelExpense::SessionManager}}
+\doxysubsubsection{\texorpdfstring{calculateHMAC()}{calculateHMAC()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Session\+Manager\+::calculate\+HMAC (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{size\+\_\+t}]{data\+Len,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{session\+Key,  }\item[{char \texorpdfstring{$\ast$}{*}}]{hmac }\end{DoxyParamCaption})}
+
+
+
+Veri bütünlük kontrolü (HMAC) 
+
+Verilerin doğruluğu ve kaynağı kontrolü gereksinimini karşılar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Kontrol edilecek veri \\
+\hline
+{\em data\+Len} & Veri uzunluğu \\
+\hline
+{\em session\+Key} & Oturum anahtarı (HMAC için) \\
+\hline
+{\em hmac} & HMAC çıktısı (32 byte -\/ 64 karakter hex string) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_session_manager_a26e4f223ea8d2e55444a116613d7283c}\label{namespace_travel_expense_1_1_session_manager_a26e4f223ea8d2e55444a116613d7283c} 
+\index{TravelExpense::SessionManager@{TravelExpense::SessionManager}!decryptPayload@{decryptPayload}}
+\index{decryptPayload@{decryptPayload}!TravelExpense::SessionManager@{TravelExpense::SessionManager}}
+\doxysubsubsection{\texorpdfstring{decryptPayload()}{decryptPayload()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Session\+Manager\+::decrypt\+Payload (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{ciphertext,  }\item[{size\+\_\+t}]{ciphertext\+Len,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{session\+Key,  }\item[{void \texorpdfstring{$\ast$}{*}}]{plaintext,  }\item[{size\+\_\+t \&}]{plaintext\+Len }\end{DoxyParamCaption})}
+
+
+
+Şifrelenmiş veriyi çöz (Confidential Payload) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ciphertext} & Şifrelenmiş veri \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu \\
+\hline
+{\em session\+Key} & Oturum anahtarı (32 byte) \\
+\hline
+{\em plaintext} & Şifre çözülmüş veri çıktısı \\
+\hline
+{\em plaintext\+Len} & Şifre çözülmüş veri uzunluğu (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_session_manager_a95882d531215f84b305d891fc5f9631d}\label{namespace_travel_expense_1_1_session_manager_a95882d531215f84b305d891fc5f9631d} 
+\index{TravelExpense::SessionManager@{TravelExpense::SessionManager}!decryptSessionKey@{decryptSessionKey}}
+\index{decryptSessionKey@{decryptSessionKey}!TravelExpense::SessionManager@{TravelExpense::SessionManager}}
+\doxysubsubsection{\texorpdfstring{decryptSessionKey()}{decryptSessionKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Session\+Manager\+::decrypt\+Session\+Key (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{encrypted\+Session\+Key,  }\item[{size\+\_\+t}]{encrypted\+Len,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{plain\+Session\+Key }\end{DoxyParamCaption})}
+
+
+
+Şifrelenmiş oturum anahtarını çöz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em encrypted\+Session\+Key} & Şifrelenmiş oturum anahtarı \\
+\hline
+{\em encrypted\+Len} & Şifrelenmiş veri uzunluğu \\
+\hline
+{\em plain\+Session\+Key} & Şifre çözülmüş oturum anahtarı çıktısı (32 byte) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_session_manager_a98f8147a318c7a1b09f0a33cb45e370b}\label{namespace_travel_expense_1_1_session_manager_a98f8147a318c7a1b09f0a33cb45e370b} 
+\index{TravelExpense::SessionManager@{TravelExpense::SessionManager}!encryptPayload@{encryptPayload}}
+\index{encryptPayload@{encryptPayload}!TravelExpense::SessionManager@{TravelExpense::SessionManager}}
+\doxysubsubsection{\texorpdfstring{encryptPayload()}{encryptPayload()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Session\+Manager\+::encrypt\+Payload (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{plaintext,  }\item[{size\+\_\+t}]{plaintext\+Len,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{session\+Key,  }\item[{void \texorpdfstring{$\ast$}{*}}]{ciphertext,  }\item[{size\+\_\+t \&}]{ciphertext\+Len }\end{DoxyParamCaption})}
+
+
+
+Veriyi şifrele (Confidential Payload) 
+
+Taşınan verilerin şifrelenmesi gereksinimini karşılar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plaintext} & Şifrelenecek veri \\
+\hline
+{\em plaintext\+Len} & Veri uzunluğu \\
+\hline
+{\em session\+Key} & Oturum anahtarı (32 byte) \\
+\hline
+{\em ciphertext} & Şifrelenmiş veri çıktısı \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_session_manager_a7434e31c9b23e2a214624a2f68932efe}\label{namespace_travel_expense_1_1_session_manager_a7434e31c9b23e2a214624a2f68932efe} 
+\index{TravelExpense::SessionManager@{TravelExpense::SessionManager}!encryptSessionKey@{encryptSessionKey}}
+\index{encryptSessionKey@{encryptSessionKey}!TravelExpense::SessionManager@{TravelExpense::SessionManager}}
+\doxysubsubsection{\texorpdfstring{encryptSessionKey()}{encryptSessionKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Session\+Manager\+::encrypt\+Session\+Key (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{plain\+Session\+Key,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{encrypted\+Session\+Key,  }\item[{size\+\_\+t \&}]{encrypted\+Len }\end{DoxyParamCaption})}
+
+
+
+Oturum anahtarını şifrele. 
+
+Oturum anahtarlarının şifrelenerek iletilmesi gereksinimini karşılar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plain\+Session\+Key} & Şifrelenmemiş oturum anahtarı (32 byte) \\
+\hline
+{\em encrypted\+Session\+Key} & Şifrelenmiş oturum anahtarı çıktısı \\
+\hline
+{\em encrypted\+Len} & Şifrelenmiş veri uzunluğu (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_session_manager_a12a41739ca5b6def4d5c42ef155d951c}\label{namespace_travel_expense_1_1_session_manager_a12a41739ca5b6def4d5c42ef155d951c} 
+\index{TravelExpense::SessionManager@{TravelExpense::SessionManager}!generateSessionKey@{generateSessionKey}}
+\index{generateSessionKey@{generateSessionKey}!TravelExpense::SessionManager@{TravelExpense::SessionManager}}
+\doxysubsubsection{\texorpdfstring{generateSessionKey()}{generateSessionKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Session\+Manager\+::generate\+Session\+Key (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{session\+Key,  }\item[{size\+\_\+t}]{session\+Key\+Len }\end{DoxyParamCaption})}
+
+
+
+Oturum anahtarı oluştur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em session\+Key} & Çıktı oturum anahtarı (32 byte) \\
+\hline
+{\em session\+Key\+Len} & Oturum anahtarı uzunluğu (32) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_session_manager_a85a30162b30da070bf49cd2ee0108ab8}\label{namespace_travel_expense_1_1_session_manager_a85a30162b30da070bf49cd2ee0108ab8} 
+\index{TravelExpense::SessionManager@{TravelExpense::SessionManager}!getApplicationVersion@{getApplicationVersion}}
+\index{getApplicationVersion@{getApplicationVersion}!TravelExpense::SessionManager@{TravelExpense::SessionManager}}
+\doxysubsubsection{\texorpdfstring{getApplicationVersion()}{getApplicationVersion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Session\+Manager\+::get\+Application\+Version (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{version,  }\item[{size\+\_\+t}]{version\+Len }\end{DoxyParamCaption})}
+
+
+
+Uygulama sürümünü al. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em version} & Sürüm string çıktısı \\
+\hline
+{\em version\+Len} & Maksimum uzunluk \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_session_manager_aa420877416fa8452b1d1468585770e96}\label{namespace_travel_expense_1_1_session_manager_aa420877416fa8452b1d1468585770e96} 
+\index{TravelExpense::SessionManager@{TravelExpense::SessionManager}!getDeviceFingerprint@{getDeviceFingerprint}}
+\index{getDeviceFingerprint@{getDeviceFingerprint}!TravelExpense::SessionManager@{TravelExpense::SessionManager}}
+\doxysubsubsection{\texorpdfstring{getDeviceFingerprint()}{getDeviceFingerprint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Session\+Manager\+::get\+Device\+Fingerprint (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{fingerprint }\end{DoxyParamCaption})}
+
+
+
+Cihaz fingerprint\textquotesingle{}ini al. 
+
+Uygulamanın yalnızca belirli cihazlarda çalışması gereksinimini karşılar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fingerprint} & Cihaz fingerprint çıktısı (64 karakter hex string) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_session_manager_ad56f31d3d436c019b72a4e7e530c2270}\label{namespace_travel_expense_1_1_session_manager_ad56f31d3d436c019b72a4e7e530c2270} 
+\index{TravelExpense::SessionManager@{TravelExpense::SessionManager}!signData@{signData}}
+\index{signData@{signData}!TravelExpense::SessionManager@{TravelExpense::SessionManager}}
+\doxysubsubsection{\texorpdfstring{signData()}{signData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Session\+Manager\+::sign\+Data (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{size\+\_\+t}]{data\+Len,  }\item[{char \texorpdfstring{$\ast$}{*}}]{signature }\end{DoxyParamCaption})}
+
+
+
+Veri imzala. 
+
+Sunucu tarafında dijital imza doğrulaması gereksinimini karşılar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & İmzalanacak veri \\
+\hline
+{\em data\+Len} & Veri uzunluğu \\
+\hline
+{\em signature} & Dijital imza çıktısı (64 byte -\/ 128 karakter hex string) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_session_manager_ad6e58bd9ca5d725609dd33e56febf537}\label{namespace_travel_expense_1_1_session_manager_ad6e58bd9ca5d725609dd33e56febf537} 
+\index{TravelExpense::SessionManager@{TravelExpense::SessionManager}!validateDeviceAndVersion@{validateDeviceAndVersion}}
+\index{validateDeviceAndVersion@{validateDeviceAndVersion}!TravelExpense::SessionManager@{TravelExpense::SessionManager}}
+\doxysubsubsection{\texorpdfstring{validateDeviceAndVersion()}{validateDeviceAndVersion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Session\+Manager\+::validate\+Device\+And\+Version (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{device\+Fingerprint,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{app\+Version }\end{DoxyParamCaption})}
+
+
+
+Cihaz ve sürüm kontrolü yap. 
+
+Uygulamanın yalnızca belirli cihazlar ve sürümlerde çalışması gereksinimini karşılar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Fingerprint} & Kontrol edilecek cihaz fingerprint\textquotesingle{}i \\
+\hline
+{\em app\+Version} & Kontrol edilecek uygulama sürümü \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_session_manager_aceef3c52f919a1a4f68686d3985b0812}\label{namespace_travel_expense_1_1_session_manager_aceef3c52f919a1a4f68686d3985b0812} 
+\index{TravelExpense::SessionManager@{TravelExpense::SessionManager}!verifyHMAC@{verifyHMAC}}
+\index{verifyHMAC@{verifyHMAC}!TravelExpense::SessionManager@{TravelExpense::SessionManager}}
+\doxysubsubsection{\texorpdfstring{verifyHMAC()}{verifyHMAC()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Session\+Manager\+::verify\+HMAC (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{size\+\_\+t}]{data\+Len,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{session\+Key,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{expected\+HMAC }\end{DoxyParamCaption})}
+
+
+
+HMAC doğrulama. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Kontrol edilecek veri \\
+\hline
+{\em data\+Len} & Veri uzunluğu \\
+\hline
+{\em session\+Key} & Oturum anahtarı \\
+\hline
+{\em expected\+HMAC} & Beklenen HMAC değeri (64 karakter hex string) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (SUCCESS = geçerli, ERROR\+\_\+\+CHECKSUM\+\_\+\+MISMATCH = geçersiz) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_session_manager_aaf4139a793d646ebb66eac13338753b5}\label{namespace_travel_expense_1_1_session_manager_aaf4139a793d646ebb66eac13338753b5} 
+\index{TravelExpense::SessionManager@{TravelExpense::SessionManager}!verifySignature@{verifySignature}}
+\index{verifySignature@{verifySignature}!TravelExpense::SessionManager@{TravelExpense::SessionManager}}
+\doxysubsubsection{\texorpdfstring{verifySignature()}{verifySignature()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Session\+Manager\+::verify\+Signature (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{size\+\_\+t}]{data\+Len,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{signature }\end{DoxyParamCaption})}
+
+
+
+Dijital imza doğrulama. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Doğrulanacak veri \\
+\hline
+{\em data\+Len} & Veri uzunluğu \\
+\hline
+{\em signature} & Beklenen dijital imza (128 karakter hex string) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (SUCCESS = geçerli, ERROR\+\_\+\+CHECKSUM\+\_\+\+MISMATCH = geçersiz) 
+\end{DoxyReturn}

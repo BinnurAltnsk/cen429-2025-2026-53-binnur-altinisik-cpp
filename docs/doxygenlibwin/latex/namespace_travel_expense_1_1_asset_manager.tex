@@ -1,0 +1,293 @@
+\doxysection{Travel\+Expense\+::Asset\+Manager Namespace Reference}
+\hypertarget{namespace_travel_expense_1_1_asset_manager}{}\label{namespace_travel_expense_1_1_asset_manager}\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}}
+\begin{DoxyCompactList}\small\item\em Varlık veri modeli. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036}{Asset\+Type}} \{ \newline
+\mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a92b88f40b6fded293e62bb292b687afe}{USER\+\_\+\+DATA}} = 0
+, \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036acc5f630cdb1d9a7493b64899f1103cb4}{TRIP\+\_\+\+DATA}} = 1
+, \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a4e73617e2a63787c8a4b4d705a1f1644}{EXPENSE\+\_\+\+DATA}} = 2
+, \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a7d3525c0a7a81d48ef14b7b668188554}{BUDGET\+\_\+\+DATA}} = 3
+, \newline
+\mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036ab5cbe81d2939ba7ec0e72e8cff758dab}{SESSION\+\_\+\+DATA}} = 4
+, \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a7f50cb1a4957ebc516d71e864068a308}{ENCRYPTION\+\_\+\+KEY}} = 5
+, \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036aec7e491fc5a65ca0d1dcf313a8a51134}{CONFIG\+\_\+\+DATA}} = 6
+ \}
+\begin{DoxyCompactList}\small\item\em Varlık tipleri. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0b}{Protection\+Scheme}} \{ \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0ba4ddb4b92d87973bd0fc314979deba833}{CONFIDENTIALITY}} = 0x01
+, \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0ba9922a31d0eb8cadab61858b5ca94e9df}{INTEGRITY}} = 0x02
+, \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0bac1f244be04c43841756fff0cdb74f994}{AUTHENTICATION}} = 0x04
+ \}
+\begin{DoxyCompactList}\small\item\em Varlık koruma şemaları \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a33ae1a53f9af6e03e81b1acb903c6958}{register\+Asset}} (const \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}} \&asset, int32\+\_\+t \&asset\+Id)
+\begin{DoxyCompactList}\small\item\em Varlık kaydet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a000f5700909ef864a26945183de16404}{get\+Asset}} (int32\+\_\+t asset\+Id, \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}} \&asset)
+\begin{DoxyCompactList}\small\item\em Varlık bilgilerini al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a35d1fbd75c391130eab2e700b9f8a75f}{update\+Asset}} (int32\+\_\+t asset\+Id, const \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}} \&asset)
+\begin{DoxyCompactList}\small\item\em Varlık bilgilerini güncelle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_abb26bb2442086fa911159baf2c80668f}{delete\+Asset}} (int32\+\_\+t asset\+Id)
+\begin{DoxyCompactList}\small\item\em Varlık sil (soft delete) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a8905f38d9bd74d60801d67a798d1c9de}{list\+Assets}} (std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}} $>$ \&assets)
+\begin{DoxyCompactList}\small\item\em Tüm varlıkları listele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_ae88b60bbe936e860fbb648a8fc024951}{list\+Assets\+By\+Type}} (\mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036}{Asset\+Type}} asset\+Type, std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}} $>$ \&assets)
+\begin{DoxyCompactList}\small\item\em Tipe göre varlıkları listele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_ad6039789a53809ffd63c8acc4dfeb17e}{set\+Protection\+Scheme}} (int32\+\_\+t asset\+Id, uint8\+\_\+t protection\+Scheme)
+\begin{DoxyCompactList}\small\item\em Varlık koruma şemasını ayarla. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_aa4e8c39db1d427c8fee2e3d6deb3c05f}{get\+Protection\+Scheme}} (int32\+\_\+t asset\+Id, uint8\+\_\+t \&protection\+Scheme)
+\begin{DoxyCompactList}\small\item\em Varlık koruma şemasını al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_ab6141a7865bafc003e40f228550b388c}{verify\+Protection\+Scheme}} (int32\+\_\+t asset\+Id, uint8\+\_\+t required\+Scheme)
+\begin{DoxyCompactList}\small\item\em Varlık koruma şeması doğrula. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036}\label{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036} 
+\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!AssetType@{AssetType}}
+\index{AssetType@{AssetType}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}
+\doxysubsubsection{\texorpdfstring{AssetType}{AssetType}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036}{Travel\+Expense\+::\+Asset\+Manager\+::\+Asset\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Varlık tipleri. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{USER\_DATA@{USER\_DATA}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!USER\_DATA@{USER\_DATA}}}\Hypertarget{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a92b88f40b6fded293e62bb292b687afe}\label{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a92b88f40b6fded293e62bb292b687afe} 
+USER\+\_\+\+DATA&Kullanıcı verileri. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRIP\_DATA@{TRIP\_DATA}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!TRIP\_DATA@{TRIP\_DATA}}}\Hypertarget{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036acc5f630cdb1d9a7493b64899f1103cb4}\label{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036acc5f630cdb1d9a7493b64899f1103cb4} 
+TRIP\+\_\+\+DATA&Seyahat verileri. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXPENSE\_DATA@{EXPENSE\_DATA}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!EXPENSE\_DATA@{EXPENSE\_DATA}}}\Hypertarget{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a4e73617e2a63787c8a4b4d705a1f1644}\label{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a4e73617e2a63787c8a4b4d705a1f1644} 
+EXPENSE\+\_\+\+DATA&Gider verileri. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BUDGET\_DATA@{BUDGET\_DATA}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!BUDGET\_DATA@{BUDGET\_DATA}}}\Hypertarget{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a7d3525c0a7a81d48ef14b7b668188554}\label{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a7d3525c0a7a81d48ef14b7b668188554} 
+BUDGET\+\_\+\+DATA&Bütçe verileri. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SESSION\_DATA@{SESSION\_DATA}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!SESSION\_DATA@{SESSION\_DATA}}}\Hypertarget{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036ab5cbe81d2939ba7ec0e72e8cff758dab}\label{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036ab5cbe81d2939ba7ec0e72e8cff758dab} 
+SESSION\+\_\+\+DATA&Oturum verileri. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENCRYPTION\_KEY@{ENCRYPTION\_KEY}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!ENCRYPTION\_KEY@{ENCRYPTION\_KEY}}}\Hypertarget{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a7f50cb1a4957ebc516d71e864068a308}\label{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036a7f50cb1a4957ebc516d71e864068a308} 
+ENCRYPTION\+\_\+\+KEY&Şifreleme anahtarları \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONFIG\_DATA@{CONFIG\_DATA}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!CONFIG\_DATA@{CONFIG\_DATA}}}\Hypertarget{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036aec7e491fc5a65ca0d1dcf313a8a51134}\label{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036aec7e491fc5a65ca0d1dcf313a8a51134} 
+CONFIG\+\_\+\+DATA&Yapılandırma verileri. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0b}\label{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0b} 
+\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!ProtectionScheme@{ProtectionScheme}}
+\index{ProtectionScheme@{ProtectionScheme}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}
+\doxysubsubsection{\texorpdfstring{ProtectionScheme}{ProtectionScheme}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0b}{Travel\+Expense\+::\+Asset\+Manager\+::\+Protection\+Scheme}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Varlık koruma şemaları 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONFIDENTIALITY@{CONFIDENTIALITY}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!CONFIDENTIALITY@{CONFIDENTIALITY}}}\Hypertarget{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0ba4ddb4b92d87973bd0fc314979deba833}\label{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0ba4ddb4b92d87973bd0fc314979deba833} 
+CONFIDENTIALITY&Gizlilik. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INTEGRITY@{INTEGRITY}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!INTEGRITY@{INTEGRITY}}}\Hypertarget{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0ba9922a31d0eb8cadab61858b5ca94e9df}\label{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0ba9922a31d0eb8cadab61858b5ca94e9df} 
+INTEGRITY&Bütünlük. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AUTHENTICATION@{AUTHENTICATION}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!AUTHENTICATION@{AUTHENTICATION}}}\Hypertarget{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0bac1f244be04c43841756fff0cdb74f994}\label{namespace_travel_expense_1_1_asset_manager_aced1c857447d9058ac4c5779fb771d0bac1f244be04c43841756fff0cdb74f994} 
+AUTHENTICATION&Kimlik Doğrulama. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_1_1_asset_manager_abb26bb2442086fa911159baf2c80668f}\label{namespace_travel_expense_1_1_asset_manager_abb26bb2442086fa911159baf2c80668f} 
+\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!deleteAsset@{deleteAsset}}
+\index{deleteAsset@{deleteAsset}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}
+\doxysubsubsection{\texorpdfstring{deleteAsset()}{deleteAsset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Asset\+Manager\+::delete\+Asset (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{asset\+Id }\end{DoxyParamCaption})}
+
+
+
+Varlık sil (soft delete) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+Id} & Varlık ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_asset_manager_a000f5700909ef864a26945183de16404}\label{namespace_travel_expense_1_1_asset_manager_a000f5700909ef864a26945183de16404} 
+\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!getAsset@{getAsset}}
+\index{getAsset@{getAsset}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}
+\doxysubsubsection{\texorpdfstring{getAsset()}{getAsset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Asset\+Manager\+::get\+Asset (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{asset\+Id,  }\item[{\mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}} \&}]{asset }\end{DoxyParamCaption})}
+
+
+
+Varlık bilgilerini al. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+Id} & Varlık ID \\
+\hline
+{\em asset} & Varlık bilgileri (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_asset_manager_aa4e8c39db1d427c8fee2e3d6deb3c05f}\label{namespace_travel_expense_1_1_asset_manager_aa4e8c39db1d427c8fee2e3d6deb3c05f} 
+\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!getProtectionScheme@{getProtectionScheme}}
+\index{getProtectionScheme@{getProtectionScheme}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}
+\doxysubsubsection{\texorpdfstring{getProtectionScheme()}{getProtectionScheme()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Asset\+Manager\+::get\+Protection\+Scheme (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{asset\+Id,  }\item[{uint8\+\_\+t \&}]{protection\+Scheme }\end{DoxyParamCaption})}
+
+
+
+Varlık koruma şemasını al. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+Id} & Varlık ID \\
+\hline
+{\em protection\+Scheme} & Koruma şeması (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_asset_manager_a8905f38d9bd74d60801d67a798d1c9de}\label{namespace_travel_expense_1_1_asset_manager_a8905f38d9bd74d60801d67a798d1c9de} 
+\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!listAssets@{listAssets}}
+\index{listAssets@{listAssets}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}
+\doxysubsubsection{\texorpdfstring{listAssets()}{listAssets()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Asset\+Manager\+::list\+Assets (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}} $>$ \&}]{assets }\end{DoxyParamCaption})}
+
+
+
+Tüm varlıkları listele. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em assets} & Varlık listesi (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_asset_manager_ae88b60bbe936e860fbb648a8fc024951}\label{namespace_travel_expense_1_1_asset_manager_ae88b60bbe936e860fbb648a8fc024951} 
+\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!listAssetsByType@{listAssetsByType}}
+\index{listAssetsByType@{listAssetsByType}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}
+\doxysubsubsection{\texorpdfstring{listAssetsByType()}{listAssetsByType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Asset\+Manager\+::list\+Assets\+By\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036}{Asset\+Type}}}]{asset\+Type,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}} $>$ \&}]{assets }\end{DoxyParamCaption})}
+
+
+
+Tipe göre varlıkları listele. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+Type} & Varlık tipi \\
+\hline
+{\em assets} & Varlık listesi (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_asset_manager_a33ae1a53f9af6e03e81b1acb903c6958}\label{namespace_travel_expense_1_1_asset_manager_a33ae1a53f9af6e03e81b1acb903c6958} 
+\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!registerAsset@{registerAsset}}
+\index{registerAsset@{registerAsset}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}
+\doxysubsubsection{\texorpdfstring{registerAsset()}{registerAsset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Asset\+Manager\+::register\+Asset (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}} \&}]{asset,  }\item[{int32\+\_\+t \&}]{asset\+Id }\end{DoxyParamCaption})}
+
+
+
+Varlık kaydet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset} & Varlık bilgileri \\
+\hline
+{\em asset\+Id} & Oluşturulan varlık ID\textquotesingle{}si (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_asset_manager_ad6039789a53809ffd63c8acc4dfeb17e}\label{namespace_travel_expense_1_1_asset_manager_ad6039789a53809ffd63c8acc4dfeb17e} 
+\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!setProtectionScheme@{setProtectionScheme}}
+\index{setProtectionScheme@{setProtectionScheme}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}
+\doxysubsubsection{\texorpdfstring{setProtectionScheme()}{setProtectionScheme()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Asset\+Manager\+::set\+Protection\+Scheme (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{asset\+Id,  }\item[{uint8\+\_\+t}]{protection\+Scheme }\end{DoxyParamCaption})}
+
+
+
+Varlık koruma şemasını ayarla. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+Id} & Varlık ID \\
+\hline
+{\em protection\+Scheme} & Koruma şeması (bit flags) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_asset_manager_a35d1fbd75c391130eab2e700b9f8a75f}\label{namespace_travel_expense_1_1_asset_manager_a35d1fbd75c391130eab2e700b9f8a75f} 
+\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!updateAsset@{updateAsset}}
+\index{updateAsset@{updateAsset}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}
+\doxysubsubsection{\texorpdfstring{updateAsset()}{updateAsset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Asset\+Manager\+::update\+Asset (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{asset\+Id,  }\item[{const \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}} \&}]{asset }\end{DoxyParamCaption})}
+
+
+
+Varlık bilgilerini güncelle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+Id} & Varlık ID \\
+\hline
+{\em asset} & Güncellenmiş varlık bilgileri \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_asset_manager_ab6141a7865bafc003e40f228550b388c}\label{namespace_travel_expense_1_1_asset_manager_ab6141a7865bafc003e40f228550b388c} 
+\index{TravelExpense::AssetManager@{TravelExpense::AssetManager}!verifyProtectionScheme@{verifyProtectionScheme}}
+\index{verifyProtectionScheme@{verifyProtectionScheme}!TravelExpense::AssetManager@{TravelExpense::AssetManager}}
+\doxysubsubsection{\texorpdfstring{verifyProtectionScheme()}{verifyProtectionScheme()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Asset\+Manager\+::verify\+Protection\+Scheme (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{asset\+Id,  }\item[{uint8\+\_\+t}]{required\+Scheme }\end{DoxyParamCaption})}
+
+
+
+Varlık koruma şeması doğrula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+Id} & Varlık ID \\
+\hline
+{\em required\+Scheme} & Gerekli koruma şeması \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Koruma şeması uygun, false Uygun değil 
+\end{DoxyReturn}

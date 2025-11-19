@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_file_i_o" kind="namespace" language="C++">
+    <compoundname>FileIO</compoundname>
+    <briefdescription>
+<para>Dosya I/O yardımcı fonksiyonları </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Dosya I/O yardımcı fonksiyonları modülü implementasyonu.</para>
+<para>Bu modül, dosya sistemi işlemleri ve veri dizini yönetimi için yardımcı fonksiyonlar sağlar. ID yönetimi ve veri dizini oluşturma işlemlerini yönetir. </para>
+    </detaileddescription>
+    <location file="src/travelexpense/header/fileIO.h" line="21" column="1"/>
+  </compounddef>
+</doxygen>

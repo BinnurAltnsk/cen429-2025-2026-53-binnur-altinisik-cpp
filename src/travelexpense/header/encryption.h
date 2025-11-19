@@ -1,9 +1,9 @@
 /**
  * @file encryption.h
  * @brief Seyahat Gideri Takibi - Şifreleme Fonksiyonları
- * 
+ *
  * Bu dosya, veri şifreleme ve hash fonksiyonlarının bildirimlerini içerir.
- * 
+ *
  * @author Binnur Altınışık
  * @date 2025
  */
@@ -17,297 +17,296 @@
 
 namespace TravelExpense { // LCOV_EXCL_LINE
 
-    /**
-     * @namespace Encryption
-     * @brief Şifreleme fonksiyonları modülü
-     * 
-     * Bu modül, veri şifreleme, hash hesaplama ve güvenli anahtar yönetimi
-     * fonksiyonlarını sağlar. SHA-256, AES-256, HMAC-SHA256, PBKDF2 ve
-     * diğer kriptografik algoritmaları destekler.
-     */
-    namespace Encryption {
-        /**
-         * @brief SHA-256 hash hesapla
-         * 
-         * RFC 6234 uyumlu tam SHA-256 hash implementasyonu.
-         * Girdi verisini 512-bit chunk'lara böler, her chunk'ı işler ve
-         * sonuç olarak 256-bit (32 byte) hash üretir.
-         * 
-         * @note Bu fonksiyon, kriptografik olarak güvenli SHA-256 hash hesaplar.
-         * Hash çıktısı, 64 karakter hex string formatında döndürülür.
-         * 
-         * @param input Hash'lenecek veri (nullptr ise false döner)
-         * @param inputLen Veri uzunluğu (byte, 0 ise false döner)
-         * @param output Hash çıktısı (64 karakter hex string + null terminator, nullptr ise false döner)
-         *                Output buffer en az 65 byte olmalıdır.
-         * @return true Başarılı, false Hata (null pointer, sıfır uzunluk vb.)
-         */
-        TRAVELEXPENSE_API bool sha256Hash(const void* input, size_t inputLen, char* output);
+/**
+ * @namespace Encryption
+ * @brief Şifreleme fonksiyonları modülü
+ *
+ * Bu modül, veri şifreleme, hash hesaplama ve güvenli anahtar yönetimi
+ * fonksiyonlarını sağlar. SHA-256, AES-256, HMAC-SHA256, PBKDF2 ve
+ * diğer kriptografik algoritmaları destekler.
+ */
+namespace Encryption {
+/**
+ * @brief SHA-256 hash hesapla
+ *
+ * RFC 6234 uyumlu tam SHA-256 hash implementasyonu.
+ * Girdi verisini 512-bit chunk'lara böler, her chunk'ı işler ve
+ * sonuç olarak 256-bit (32 byte) hash üretir.
+ *
+ * @note Bu fonksiyon, kriptografik olarak güvenli SHA-256 hash hesaplar.
+ * Hash çıktısı, 64 karakter hex string formatında döndürülür.
+ *
+ * @param input Hash'lenecek veri (nullptr ise false döner)
+ * @param inputLen Veri uzunluğu (byte, 0 ise false döner)
+ * @param output Hash çıktısı (64 karakter hex string + null terminator, nullptr ise false döner)
+ *                Output buffer en az 65 byte olmalıdır.
+ * @return true Başarılı, false Hata (null pointer, sıfır uzunluk vb.)
+ */
+TRAVELEXPENSE_API bool sha256Hash(const void *input, size_t inputLen, char *output);
 
-        /**
-         * @brief Salt oluştur (kriptografik olarak güvenli rastgele)
-         * 
-         * Kriptografik olarak güvenli rastgele sayı üreticisi kullanarak
-         * 32 byte (256 bit) salt oluşturur. Salt, şifre hash'leme işlemlerinde
-         * kullanılır ve rainbow table saldırılarına karşı koruma sağlar.
-         * 
-         * @note Bu fonksiyon, platform-specific güvenli rastgele sayı üreticisi kullanır
-         * (Windows: CryptGenRandom, Linux: /dev/urandom).
-         * Salt çıktısı, 64 karakter hex string formatında döndürülür.
-         * 
-         * @param salt Salt çıktısı (64 karakter hex string + null terminator, nullptr ise false döner)
-         *             Output buffer en az 65 byte olmalıdır.
-         * @return true Başarılı, false Hata (null pointer, rastgele sayı üretme hatası vb.)
-         */
-        TRAVELEXPENSE_API bool generateSalt(char* salt);
+/**
+ * @brief Salt oluştur (kriptografik olarak güvenli rastgele)
+ *
+ * Kriptografik olarak güvenli rastgele sayı üreticisi kullanarak
+ * 32 byte (256 bit) salt oluşturur. Salt, şifre hash'leme işlemlerinde
+ * kullanılır ve rainbow table saldırılarına karşı koruma sağlar.
+ *
+ * @note Bu fonksiyon, platform-specific güvenli rastgele sayı üreticisi kullanır
+ * (Windows: CryptGenRandom, Linux: /dev/urandom).
+ * Salt çıktısı, 64 karakter hex string formatında döndürülür.
+ *
+ * @param salt Salt çıktısı (64 karakter hex string + null terminator, nullptr ise false döner)
+ *             Output buffer en az 65 byte olmalıdır.
+ * @return true Başarılı, false Hata (null pointer, rastgele sayı üretme hatası vb.)
+ */
+TRAVELEXPENSE_API bool generateSalt(char *salt);
 
-        /**
-         * @brief Şifreyi hash'le (SHA-256 + Salt)
-         * 
-         * Belirtilen şifreyi salt ile birleştirerek SHA-256 hash'ler.
-         * Salt, şifre hash'leme işlemlerinde kullanılır ve aynı şifre için
-         * farklı hash'ler üretilmesini sağlar.
-         * 
-         * @note Bu fonksiyon, şifreyi salt ile birleştirir ve SHA-256 ile hash'ler.
-         * Format: SHA256(password + salt) veya SHA256(salt + password).
-         * Hash çıktısı, 64 karakter hex string formatında döndürülür.
-         * 
-         * @param password Şifre (nullptr ise false döner)
-         * @param salt Salt değeri (64 karakter hex string, nullptr ise false döner)
-         * @param hash Hash çıktısı (64 karakter hex string + null terminator, nullptr ise false döner)
-         *             Output buffer en az 65 byte olmalıdır.
-         * @return true Başarılı, false Hata (null pointer, geçersiz salt formatı vb.)
-         */
-        TRAVELEXPENSE_API bool hashPassword(const char* password, const char* salt, char* hash);
+/**
+ * @brief Şifreyi hash'le (SHA-256 + Salt)
+ *
+ * Belirtilen şifreyi salt ile birleştirerek SHA-256 hash'ler.
+ * Salt, şifre hash'leme işlemlerinde kullanılır ve aynı şifre için
+ * farklı hash'ler üretilmesini sağlar.
+ *
+ * @note Bu fonksiyon, şifreyi salt ile birleştirir ve SHA-256 ile hash'ler.
+ * Format: SHA256(password + salt) veya SHA256(salt + password).
+ * Hash çıktısı, 64 karakter hex string formatında döndürülür.
+ *
+ * @param password Şifre (nullptr ise false döner)
+ * @param salt Salt değeri (64 karakter hex string, nullptr ise false döner)
+ * @param hash Hash çıktısı (64 karakter hex string + null terminator, nullptr ise false döner)
+ *             Output buffer en az 65 byte olmalıdır.
+ * @return true Başarılı, false Hata (null pointer, geçersiz salt formatı vb.)
+ */
+TRAVELEXPENSE_API bool hashPassword(const char *password, const char *salt, char *hash);
 
-        /**
-         * @brief Şifre doğrulama (constant-time comparison)
-         * 
-         * Girilen şifreyi hash'ler ve saklanan hash ile karşılaştırır.
-         * Constant-time comparison kullanarak timing attack'lara karşı koruma sağlar.
-         * 
-         * @note Bu fonksiyon, şifreyi salt ile hash'ler ve storedHash ile karşılaştırır.
-         * Constant-time comparison kullanarak, şifre doğru/yanlış olmasına bakılmaksızın
-         * aynı sürede çalışır. Bu, timing attack'lara karşı koruma sağlar.
-         * 
-         * @param password Girilen şifre (nullptr ise false döner)
-         * @param salt Salt değeri (64 karakter hex string, nullptr ise false döner)
-         * @param storedHash Saklanan hash değeri (64 karakter hex string, nullptr ise false döner)
-         * @return true Şifre doğru, false Yanlış veya hata
-         */
-        TRAVELEXPENSE_API bool verifyPassword(const char* password, const char* salt, const char* storedHash);
+/**
+ * @brief Şifre doğrulama (constant-time comparison)
+ *
+ * Girilen şifreyi hash'ler ve saklanan hash ile karşılaştırır.
+ * Constant-time comparison kullanarak timing attack'lara karşı koruma sağlar.
+ *
+ * @note Bu fonksiyon, şifreyi salt ile hash'ler ve storedHash ile karşılaştırır.
+ * Constant-time comparison kullanarak, şifre doğru/yanlış olmasına bakılmaksızın
+ * aynı sürede çalışır. Bu, timing attack'lara karşı koruma sağlar.
+ *
+ * @param password Girilen şifre (nullptr ise false döner)
+ * @param salt Salt değeri (64 karakter hex string, nullptr ise false döner)
+ * @param storedHash Saklanan hash değeri (64 karakter hex string, nullptr ise false döner)
+ * @return true Şifre doğru, false Yanlış veya hata
+ */
+TRAVELEXPENSE_API bool verifyPassword(const char *password, const char *salt, const char *storedHash);
 
-        /**
-         * @brief AES-256 ile veri şifreleme (basit implementasyon - başlangıç)
-         * 
-         * @param plaintext Şifrelenecek veri
-         * @param plaintextLen Veri uzunluğu
-         * @param key Şifreleme anahtarı (32 byte)
-         * @param iv Initialization Vector (16 byte)
-         * @param ciphertext Şifrelenmiş veri çıktısı
-         * @param ciphertextLen Şifrelenmiş veri uzunluğu (çıktı)
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool encryptAES256(const void* plaintext, size_t plaintextLen,
-                                            const uint8_t* key, const uint8_t* iv,
-                                            void* ciphertext, size_t& ciphertextLen);
+/**
+ * @brief AES-256 ile veri şifreleme (basit implementasyon - başlangıç)
+ *
+ * @param plaintext Şifrelenecek veri
+ * @param plaintextLen Veri uzunluğu
+ * @param key Şifreleme anahtarı (32 byte)
+ * @param iv Initialization Vector (16 byte)
+ * @param ciphertext Şifrelenmiş veri çıktısı
+ * @param ciphertextLen Şifrelenmiş veri uzunluğu (çıktı)
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool encryptAES256(const void *plaintext, size_t plaintextLen,
+                                     const uint8_t *key, const uint8_t *iv,
+                                     void *ciphertext, size_t &ciphertextLen);
 
-        /**
-         * @brief AES-256 ile veri şifre çözme
-         * 
-         * @param ciphertext Şifrelenmiş veri
-         * @param ciphertextLen Şifrelenmiş veri uzunluğu
-         * @param key Şifreleme anahtarı (32 byte)
-         * @param iv Initialization Vector (16 byte)
-         * @param plaintext Şifre çözülmüş veri çıktısı
-         * @param plaintextLen Şifre çözülmüş veri uzunluğu (çıktı)
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool decryptAES256(const void* ciphertext, size_t ciphertextLen,
-                                            const uint8_t* key, const uint8_t* iv,
-                                            void* plaintext, size_t& plaintextLen);
+/**
+ * @brief AES-256 ile veri şifre çözme
+ *
+ * @param ciphertext Şifrelenmiş veri
+ * @param ciphertextLen Şifrelenmiş veri uzunluğu
+ * @param key Şifreleme anahtarı (32 byte)
+ * @param iv Initialization Vector (16 byte)
+ * @param plaintext Şifre çözülmüş veri çıktısı
+ * @param plaintextLen Şifre çözülmüş veri uzunluğu (çıktı)
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool decryptAES256(const void *ciphertext, size_t ciphertextLen,
+                                     const uint8_t *key, const uint8_t *iv,
+                                     void *plaintext, size_t &plaintextLen);
 
-        /**
-         * @brief HMAC-SHA256 hesapla (Message Authentication Code)
-         * 
-         * @param key HMAC anahtarı
-         * @param keyLen Anahtar uzunluğu
-         * @param message Mesaj
-         * @param messageLen Mesaj uzunluğu
-         * @param output HMAC çıktısı (32 byte - 64 karakter hex string)
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool hmacSHA256(const uint8_t* key, size_t keyLen,
-                                         const void* message, size_t messageLen,
-                                         char* output);
+/**
+ * @brief HMAC-SHA256 hesapla (Message Authentication Code)
+ *
+ * @param key HMAC anahtarı
+ * @param keyLen Anahtar uzunluğu
+ * @param message Mesaj
+ * @param messageLen Mesaj uzunluğu
+ * @param output HMAC çıktısı (32 byte - 64 karakter hex string)
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool hmacSHA256(const uint8_t *key, size_t keyLen,
+                                  const void *message, size_t messageLen,
+                                  char *output);
 
-        /**
-         * @brief PBKDF2 key derivation (Password-Based Key Derivation Function 2)
-         * 
-         * @param password Şifre
-         * @param passwordLen Şifre uzunluğu
-         * @param salt Salt değeri
-         * @param saltLen Salt uzunluğu
-         * @param iterations İterasyon sayısı (önerilen: 10000+)
-         * @param keyLen İstenen anahtar uzunluğu (byte)
-         * @param output Türetilen anahtar çıktısı
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool pbkdf2(const char* password, size_t passwordLen,
-                                     const uint8_t* salt, size_t saltLen,
-                                     uint32_t iterations, size_t keyLen,
-                                     uint8_t* output);
+/**
+ * @brief PBKDF2 key derivation (Password-Based Key Derivation Function 2)
+ *
+ * @param password Şifre
+ * @param passwordLen Şifre uzunluğu
+ * @param salt Salt değeri
+ * @param saltLen Salt uzunluğu
+ * @param iterations İterasyon sayısı (önerilen: 10000+)
+ * @param keyLen İstenen anahtar uzunluğu (byte)
+ * @param output Türetilen anahtar çıktısı
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool pbkdf2(const char *password, size_t passwordLen,
+                              const uint8_t *salt, size_t saltLen,
+                              uint32_t iterations, size_t keyLen,
+                              uint8_t *output);
 
-        /**
-         * @brief Güvenli rastgele byte dizisi oluştur
-         * 
-         * @param output Çıktı buffer'ı
-         * @param length İstenen uzunluk (byte)
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool generateRandomBytes(uint8_t* output, size_t length);
+/**
+ * @brief Güvenli rastgele byte dizisi oluştur
+ *
+ * @param output Çıktı buffer'ı
+ * @param length İstenen uzunluk (byte)
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool generateRandomBytes(uint8_t *output, size_t length);
 
-        /**
-         * @brief IV (Initialization Vector) oluştur (16 byte - AES block size)
-         * 
-         * @param iv IV çıktısı (16 byte)
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool generateIV(uint8_t* iv);
+/**
+ * @brief IV (Initialization Vector) oluştur (16 byte - AES block size)
+ *
+ * @param iv IV çıktısı (16 byte)
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool generateIV(uint8_t *iv);
 
-        /**
-         * @brief Constant-time string karşılaştırma (timing attack koruması)
-         * 
-         * @param a İlk string
-         * @param b İkinci string
-         * @param length Karşılaştırılacak uzunluk
-         * @return true Eşit, false Farklı
-         */
-        TRAVELEXPENSE_API bool constantTimeCompare(const char* a, const char* b, size_t length);
+/**
+ * @brief Constant-time string karşılaştırma (timing attack koruması)
+ *
+ * @param a İlk string
+ * @param b İkinci string
+ * @param length Karşılaştırılacak uzunluk
+ * @return true Eşit, false Farklı
+ */
+TRAVELEXPENSE_API bool constantTimeCompare(const char *a, const char *b, size_t length);
 
-        /**
-         * @brief Dosyayı AES-256-CBC ile şifrele
-         * 
-         * @param inputFile Giriş dosya yolu
-         * @param outputFile Çıkış dosya yolu
-         * @param key Şifreleme anahtarı (32 byte)
-         * @param iv IV (16 byte), nullptr ise otomatik oluşturulur
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool encryptFile(const char* inputFile, const char* outputFile,
-                                          const uint8_t* key, const uint8_t* iv = nullptr);
+/**
+ * @brief Dosyayı AES-256-CBC ile şifrele
+ *
+ * @param inputFile Giriş dosya yolu
+ * @param outputFile Çıkış dosya yolu
+ * @param key Şifreleme anahtarı (32 byte)
+ * @param iv IV (16 byte), nullptr ise otomatik oluşturulur
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool encryptFile(const char *inputFile, const char *outputFile,
+                                   const uint8_t *key, const uint8_t *iv = nullptr);
 
-        /**
-         * @brief Şifrelenmiş dosyayı çöz
-         * 
-         * @param inputFile Şifrelenmiş dosya yolu
-         * @param outputFile Çözülmüş dosya yolu
-         * @param key Şifreleme anahtarı (32 byte)
-         * @param iv IV (16 byte), nullptr ise dosyadan okunur
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool decryptFile(const char* inputFile, const char* outputFile,
-                                          const uint8_t* key, const uint8_t* iv = nullptr);
+/**
+ * @brief Şifrelenmiş dosyayı çöz
+ *
+ * @param inputFile Şifrelenmiş dosya yolu
+ * @param outputFile Çözülmüş dosya yolu
+ * @param key Şifreleme anahtarı (32 byte)
+ * @param iv IV (16 byte), nullptr ise dosyadan okunur
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool decryptFile(const char *inputFile, const char *outputFile,
+                                   const uint8_t *key, const uint8_t *iv = nullptr);
 
-        /**
-         * @brief Whitebox DES ile veri şifreleme
-         * 
-         * Whitebox kriptografi, anahtarın kod içine gömülü olduğu ve reverse engineering'i
-         * zorlaştıran bir tekniktir. Lookup table'lar kullanarak anahtar bilgisini maskeleyen
-         * bir implementasyondur.
-         * 
-         * @param plaintext Şifrelenecek veri
-         * @param plaintextLen Veri uzunluğu (8 byte'un katı olmalı)
-         * @param ciphertext Şifrelenmiş veri çıktısı
-         * @param ciphertextLen Şifrelenmiş veri uzunluğu (plaintextLen ile aynı)
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool encryptWhiteboxDES(const void* plaintext, size_t plaintextLen,
-                                                 void* ciphertext, size_t& ciphertextLen);
+/**
+ * @brief Whitebox DES ile veri şifreleme
+ *
+ * Whitebox kriptografi, anahtarın kod içine gömülü olduğu ve reverse engineering'i
+ * zorlaştıran bir tekniktir. Lookup table'lar kullanarak anahtar bilgisini maskeleyen
+ * bir implementasyondur.
+ *
+ * @param plaintext Şifrelenecek veri
+ * @param plaintextLen Veri uzunluğu (8 byte'un katı olmalı)
+ * @param ciphertext Şifrelenmiş veri çıktısı
+ * @param ciphertextLen Şifrelenmiş veri uzunluğu (plaintextLen ile aynı)
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool encryptWhiteboxDES(const void *plaintext, size_t plaintextLen,
+    void *ciphertext, size_t &ciphertextLen);
 
-        /**
-         * @brief Whitebox DES ile veri şifre çözme
-         * 
-         * @param ciphertext Şifrelenmiş veri
-         * @param ciphertextLen Şifrelenmiş veri uzunluğu (8 byte'un katı olmalı)
-         * @param plaintext Şifre çözülmüş veri çıktısı
-         * @param plaintextLen Şifre çözülmüş veri uzunluğu (ciphertextLen ile aynı)
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool decryptWhiteboxDES(const void* ciphertext, size_t ciphertextLen,
-                                                 void* plaintext, size_t& plaintextLen);
+/**
+ * @brief Whitebox DES ile veri şifre çözme
+ *
+ * @param ciphertext Şifrelenmiş veri
+ * @param ciphertextLen Şifrelenmiş veri uzunluğu (8 byte'un katı olmalı)
+ * @param plaintext Şifre çözülmüş veri çıktısı
+ * @param plaintextLen Şifre çözülmüş veri uzunluğu (ciphertextLen ile aynı)
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool decryptWhiteboxDES(const void *ciphertext, size_t ciphertextLen,
+    void *plaintext, size_t &plaintextLen);
 
-        /**
-         * @brief Dosyayı Whitebox DES ile şifrele
-         * 
-         * @param inputFile Giriş dosya yolu
-         * @param outputFile Çıkış dosya yolu
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool encryptFileWhiteboxDES(const char* inputFile, const char* outputFile);
+/**
+ * @brief Dosyayı Whitebox DES ile şifrele
+ *
+ * @param inputFile Giriş dosya yolu
+ * @param outputFile Çıkış dosya yolu
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool encryptFileWhiteboxDES(const char *inputFile, const char *outputFile);
 
-        /**
-         * @brief Whitebox DES ile şifrelenmiş dosyayı çöz
-         * 
-         * @param inputFile Şifrelenmiş dosya yolu
-         * @param outputFile Çözülmüş dosya yolu
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool decryptFileWhiteboxDES(const char* inputFile, const char* outputFile);
+/**
+ * @brief Whitebox DES ile şifrelenmiş dosyayı çöz
+ *
+ * @param inputFile Şifrelenmiş dosya yolu
+ * @param outputFile Çözülmüş dosya yolu
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool decryptFileWhiteboxDES(const char *inputFile, const char *outputFile);
 
-        // ============================================
-        // WHITEBOX AES IMPLEMENTATION
-        // ============================================
+// ============================================
+// WHITEBOX AES IMPLEMENTATION
+// ============================================
 
-        /**
-         * @brief Whitebox AES ile veri şifreleme
-         * 
-         * Whitebox kriptografi, anahtarın kod içine gömülü olduğu ve reverse engineering'i
-         * zorlaştıran bir tekniktir. Lookup table'lar kullanarak anahtar bilgisini maskeleyen
-         * bir implementasyondur. Bu implementasyon, embedded key ile çalışır ve key schedule
-         * whitening teknikleri kullanır.
-         * 
-         * @param plaintext Şifrelenecek veri
-         * @param plaintextLen Veri uzunluğu (16 byte'un katı olmalı)
-         * @param ciphertext Şifrelenmiş veri çıktısı
-         * @param ciphertextLen Şifrelenmiş veri uzunluğu (plaintextLen ile aynı)
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool encryptWhiteboxAES(const void* plaintext, size_t plaintextLen,
-                                                  void* ciphertext, size_t& ciphertextLen);
+/**
+ * @brief Whitebox AES ile veri şifreleme
+ *
+ * Whitebox kriptografi, anahtarın kod içine gömülü olduğu ve reverse engineering'i
+ * zorlaştıran bir tekniktir. Lookup table'lar kullanarak anahtar bilgisini maskeleyen
+ * bir implementasyondur. Bu implementasyon, embedded key ile çalışır ve key schedule
+ * whitening teknikleri kullanır.
+ *
+ * @param plaintext Şifrelenecek veri
+ * @param plaintextLen Veri uzunluğu (16 byte'un katı olmalı)
+ * @param ciphertext Şifrelenmiş veri çıktısı
+ * @param ciphertextLen Şifrelenmiş veri uzunluğu (plaintextLen ile aynı)
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool encryptWhiteboxAES(const void *plaintext, size_t plaintextLen,
+    void *ciphertext, size_t &ciphertextLen);
 
-        /**
-         * @brief Whitebox AES ile veri şifre çözme
-         * 
-         * @param ciphertext Şifrelenmiş veri
-         * @param ciphertextLen Şifrelenmiş veri uzunluğu (16 byte'un katı olmalı)
-         * @param plaintext Şifre çözülmüş veri çıktısı
-         * @param plaintextLen Şifre çözülmüş veri uzunluğu (ciphertextLen ile aynı)
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool decryptWhiteboxAES(const void* ciphertext, size_t ciphertextLen,
-                                                  void* plaintext, size_t& plaintextLen);
+/**
+ * @brief Whitebox AES ile veri şifre çözme
+ *
+ * @param ciphertext Şifrelenmiş veri
+ * @param ciphertextLen Şifrelenmiş veri uzunluğu (16 byte'un katı olmalı)
+ * @param plaintext Şifre çözülmüş veri çıktısı
+ * @param plaintextLen Şifre çözülmüş veri uzunluğu (ciphertextLen ile aynı)
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool decryptWhiteboxAES(const void *ciphertext, size_t ciphertextLen,
+    void *plaintext, size_t &plaintextLen);
 
-        /**
-         * @brief Dosyayı Whitebox AES ile şifrele
-         * 
-         * @param inputFile Giriş dosya yolu
-         * @param outputFile Çıkış dosya yolu
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool encryptFileWhiteboxAES(const char* inputFile, const char* outputFile);
+/**
+ * @brief Dosyayı Whitebox AES ile şifrele
+ *
+ * @param inputFile Giriş dosya yolu
+ * @param outputFile Çıkış dosya yolu
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool encryptFileWhiteboxAES(const char *inputFile, const char *outputFile);
 
-        /**
-         * @brief Whitebox AES ile şifrelenmiş dosyayı çöz
-         * 
-         * @param inputFile Şifrelenmiş dosya yolu
-         * @param outputFile Çözülmüş dosya yolu
-         * @return true Başarılı, false Hata
-         */
-        TRAVELEXPENSE_API bool decryptFileWhiteboxAES(const char* inputFile, const char* outputFile);
-    }
+/**
+ * @brief Whitebox AES ile şifrelenmiş dosyayı çöz
+ *
+ * @param inputFile Şifrelenmiş dosya yolu
+ * @param outputFile Çözülmüş dosya yolu
+ * @return true Başarılı, false Hata
+ */
+TRAVELEXPENSE_API bool decryptFileWhiteboxAES(const char *inputFile, const char *outputFile);
+}
 
 } // namespace TravelExpense // LCOV_EXCL_LINE
 
 #endif // ENCRYPTION_H
-

@@ -1,0 +1,514 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="budget_manager_8cpp" kind="file" language="C++">
+    <compoundname>budgetManager.cpp</compoundname>
+    <includes refid="budget_manager_8h" local="yes">../header/budgetManager.h</includes>
+    <includes refid="database_8h" local="yes">../header/database.h</includes>
+    <includes local="no">sqlite3.h</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">ctime</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>../header/budgetManager.h</label>
+        <link refid="budget_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>commonTypes.h</label>
+        <link refid="common_types_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>../header/database.h</label>
+        <link refid="database_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>error_codes.h</label>
+        <link refid="error__codes_8h"/>
+      </node>
+      <node id="8">
+        <label>export.h</label>
+        <link refid="export_8h"/>
+      </node>
+      <node id="1">
+        <label>src/travelexpense/src/budgetManager.cpp</label>
+        <link refid="budget_manager_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="6">
+        <label>cstring</label>
+      </node>
+      <node id="5">
+        <label>ctime</label>
+      </node>
+      <node id="10">
+        <label>sqlite3.h</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_budget_manager">TravelExpense::BudgetManager</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_budget_manager_1a87ed02030d083a4a76b3ba7212cbeaa7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::BudgetManager::setBudget</definition>
+        <argsstring>(int32_t tripId, double totalBudget, const double *categoryBudgets, int32_t &amp;budgetId)</argsstring>
+        <name>setBudget</name>
+        <qualifiedname>TravelExpense::BudgetManager::setBudget</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>tripId</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>totalBudget</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>categoryBudgets</declname>
+        </param>
+        <param>
+          <type>int32_t &amp;</type>
+          <declname>budgetId</declname>
+        </param>
+        <briefdescription>
+<para>Seyahat için bütçe belirle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen seyahat için toplam bütçe ve kategori bazlı bütçeleri ayarlar. Bütçe, veritabanına kaydedilir ve benzersiz bir budgetId ile döndürülür.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, seyahat için yeni bir bütçe kaydı oluşturur. Eğer seyahat için zaten bir bütçe varsa, yeni bütçe eski bütçeyi geçersiz kılmaz, ayrı bir kayıt olarak saklanır.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tripId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Seyahat ID (geçerli bir tripId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>totalBudget</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Toplam bütçe miktarı (TL cinsinden, 0&apos;dan büyük olmalı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>categoryBudgets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kategori bazlı bütçeler dizisi (4 eleman: Accommodation, Transportation, Food, Other) nullptr ise InvalidInput döner. Her kategori bütçesi 0 veya pozitif olmalı. Toplamı totalBudget&apos;ı aşmamalı (opsiyonel kontrol). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>budgetId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oluşturulan bütçenin benzersiz ID&apos;si (çıktı parametresi) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput, FileNotFound vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/budgetManager.cpp" line="19" column="11" bodyfile="src/travelexpense/src/budgetManager.cpp" bodystart="19" bodyend="71" declfile="src/travelexpense/header/budgetManager.h" declline="46" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_budget_manager_1aa06d0fd91539d4e3d978e62a00d67897" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::BudgetManager::getBudget</definition>
+        <argsstring>(int32_t tripId, Budget &amp;budget)</argsstring>
+        <name>getBudget</name>
+        <qualifiedname>TravelExpense::BudgetManager::getBudget</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>tripId</declname>
+        </param>
+        <param>
+          <type>Budget &amp;</type>
+          <declname>budget</declname>
+        </param>
+        <briefdescription>
+<para>Seyahat bütçesini görüntüle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen seyahat ID&apos;sine ait bütçe bilgilerini veritabanından alır ve budget parametresine doldurur. Bütçe bilgisi, toplam bütçe ve kategori bazlı bütçeleri içerir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, seyahat için kayıtlı en son bütçeyi döndürür. Eğer seyahat için bütçe bulunamazsa, FileNotFound hatası döner.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tripId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Seyahat ID (geçerli bir tripId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>budget</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bütçe bilgisi (çıktı parametresi, <ref refid="struct_travel_expense_1_1_budget" kindref="compound">Budget</ref> struct&apos;ı doldurulur) İçerik: totalBudget, categoryBudgets[4], budgetId, tripId vb. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/budgetManager.cpp" line="73" column="11" bodyfile="src/travelexpense/src/budgetManager.cpp" bodystart="73" bodyend="125" declfile="src/travelexpense/header/budgetManager.h" declline="64" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_budget_manager_1aa6d74518da8cb56fda03f783e7664c05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::BudgetManager::updateBudget</definition>
+        <argsstring>(int32_t budgetId, const Budget &amp;budget)</argsstring>
+        <name>updateBudget</name>
+        <qualifiedname>TravelExpense::BudgetManager::updateBudget</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>budgetId</declname>
+        </param>
+        <param>
+          <type>const Budget &amp;</type>
+          <declname>budget</declname>
+        </param>
+        <briefdescription>
+<para>Bütçeyi güncelle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen budgetId&apos;ye sahip bütçeyi, yeni bütçe bilgileriyle günceller. Toplam bütçe ve kategori bazlı bütçeler değiştirilebilir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, mevcut bütçe kaydını günceller. Eğer budgetId geçersizse veya bütçe bulunamazsa, FileNotFound hatası döner. Güncelleme işlemi, veritabanında mevcut kaydı değiştirir.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>budgetId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Güncellenecek bütçenin benzersiz ID&apos;si (geçerli bir budgetId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>budget</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Güncellenmiş bütçe bilgileri (const referans, <ref refid="struct_travel_expense_1_1_budget" kindref="compound">Budget</ref> struct&apos;ı) İçerik: totalBudget, categoryBudgets[4] vb. Tüm alanlar geçerli olmalı. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/budgetManager.cpp" line="127" column="11" bodyfile="src/travelexpense/src/budgetManager.cpp" bodystart="127" bodyend="182" declfile="src/travelexpense/header/budgetManager.h" declline="81" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_budget_manager_1a6635276a27a73233c16e25046e1476ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::BudgetManager::checkBudgetLimit</definition>
+        <argsstring>(int32_t tripId, ExpenseCategory category, double amount)</argsstring>
+        <name>checkBudgetLimit</name>
+        <qualifiedname>TravelExpense::BudgetManager::checkBudgetLimit</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>tripId</declname>
+        </param>
+        <param>
+          <type>ExpenseCategory</type>
+          <declname>category</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Bütçe limiti kontrolü </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen seyahat ve kategori için bütçe limitini kontrol eder. Mevcut harcamaları veritabanından alır ve yeni harcama miktarıyla toplamın kategori bütçesini aşıp aşmadığını kontrol eder.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, yeni bir gider eklenmeden önce bütçe kontrolü yapmak için kullanılır. Eğer seyahat için bütçe bulunamazsa, false döner (bütçe olmadığı için limit aşılmış kabul edilir).</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tripId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Seyahat ID (geçerli bir tripId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gider kategorisi (Accommodation, Transportation, Food, Other) Bu kategori için bütçe limiti kontrol edilir. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kontrol edilecek harcama miktarı (TL cinsinden, 0 veya pozitif olmalı) Bu miktar, mevcut harcamalara eklendiğinde limit aşılıyor mu kontrol edilir. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Bütçe limiti içinde (harcama yapılabilir), false Limit aşıldı (harcama yapılamaz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/budgetManager.cpp" line="184" column="6" bodyfile="src/travelexpense/src/budgetManager.cpp" bodystart="184" bodyend="198" declfile="src/travelexpense/header/budgetManager.h" declline="101" declcolumn="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Seyahat Gideri Takibi - Bütçe Yönetimi Implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Binnur Altınışık </para>
+</simplesect>
+<simplesect kind="date"><para>2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/budgetManager.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/database.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sqlite3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctime&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_budget_manager" kindref="compound">BudgetManager</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_budget_manager_1a87ed02030d083a4a76b3ba7212cbeaa7" kindref="member">setBudget</ref>(int32_t<sp/>tripId,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>totalBudget,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*categoryBudgets,<sp/>int32_t<sp/>&amp;budgetId)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tripId<sp/>&lt;=<sp/>0<sp/>||<sp/>totalBudget<sp/>&lt;=<sp/>0<sp/>||<sp/>!categoryBudgets)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SQLite<sp/>veritabanını<sp/>al</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>sqlite3<sp/>*db<sp/>=<sp/><ref refid="namespace_travel_expense_1_1_database_1a0f85378d912f28f14a19aba99432dcca" kindref="member">Database::getDatabase</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!db)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba2767828026039e8ba7b38973cbb701f2" kindref="member">ErrorCode::FileNotFound</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SQL<sp/>sorgusu<sp/>hazırla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sql<sp/>=<sp/>R</highlight><highlight class="stringliteral">&quot;(</highlight></codeline>
+<codeline lineno="34"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INSERT<sp/>INTO<sp/>budgets<sp/>(trip_id,<sp/>total_budget,<sp/>spent_amount,</highlight></codeline>
+<codeline lineno="35"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>category_budget_accommodation,<sp/>category_budget_transportation,</highlight></codeline>
+<codeline lineno="36"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>category_budget_food,<sp/>category_budget_entertainment,</highlight></codeline>
+<codeline lineno="37"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>category_spent_accommodation,<sp/>category_spent_transportation,</highlight></codeline>
+<codeline lineno="38"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>category_spent_food,<sp/>category_spent_entertainment,</highlight></codeline>
+<codeline lineno="39"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>created_at,<sp/>updated_at)</highlight></codeline>
+<codeline lineno="40"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VALUES<sp/>(?,<sp/>?,<sp/>0.0,<sp/>?,<sp/>?,<sp/>?,<sp/>?,<sp/>0.0,<sp/>0.0,<sp/>0.0,<sp/>0.0,<sp/>?,<sp/>?);</highlight></codeline>
+<codeline lineno="41"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)&quot;;</highlight></codeline>
+<codeline lineno="42"><highlight class="stringliteral"><sp/><sp/>sqlite3_stmt<sp/>*stmt<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>sqlite3_prepare_v2(db,<sp/>sql,<sp/>-1,<sp/>&amp;stmt,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>!=<sp/>SQLITE_OK)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba86bef3f9f8669a7395a877ff014aecd9" kindref="member">ErrorCode::FileIO</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Parametreleri<sp/>bağla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>time_t<sp/>now<sp/>=<sp/>time(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>sqlite3_bind_int(stmt,<sp/>1,<sp/>tripId);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>sqlite3_bind_double(stmt,<sp/>2,<sp/>totalBudget);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>sqlite3_bind_double(stmt,<sp/>3,<sp/>categoryBudgets[0]);<sp/></highlight><highlight class="comment">//<sp/>ACCOMMODATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>sqlite3_bind_double(stmt,<sp/>4,<sp/>categoryBudgets[1]);<sp/></highlight><highlight class="comment">//<sp/>TRANSPORTATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>sqlite3_bind_double(stmt,<sp/>5,<sp/>categoryBudgets[2]);<sp/></highlight><highlight class="comment">//<sp/>FOOD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>sqlite3_bind_double(stmt,<sp/>6,<sp/>categoryBudgets[3]);<sp/></highlight><highlight class="comment">//<sp/>ENTERTAINMENT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>sqlite3_bind_int64(stmt,<sp/>7,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">sqlite3_int64</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(now));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>sqlite3_bind_int64(stmt,<sp/>8,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">sqlite3_int64</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(now));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Sorguyu<sp/>çalıştır</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>rc<sp/>=<sp/>sqlite3_step(stmt);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>!=<sp/>SQLITE_DONE)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>sqlite3_finalize(stmt);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba86bef3f9f8669a7395a877ff014aecd9" kindref="member">ErrorCode::FileIO</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Oluşturulan<sp/>ID&apos;yi<sp/>al</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>budgetId<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">int32_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespace_travel_expense_1_1_database_1a2a2fd018c29919ea9a677f61dde3b4db" kindref="member">Database::getLastInsertRowId</ref>(db));</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>sqlite3_finalize(stmt);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_budget_manager_1aa06d0fd91539d4e3d978e62a00d67897" kindref="member">getBudget</ref>(int32_t<sp/>tripId,<sp/>Budget<sp/>&amp;budget)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SQLite<sp/>veritabanını<sp/>al</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>sqlite3<sp/>*db<sp/>=<sp/><ref refid="namespace_travel_expense_1_1_database_1a0f85378d912f28f14a19aba99432dcca" kindref="member">Database::getDatabase</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!db)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba2767828026039e8ba7b38973cbb701f2" kindref="member">ErrorCode::FileNotFound</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SQL<sp/>sorgusu<sp/>hazırla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sql<sp/>=<sp/>R</highlight><highlight class="stringliteral">&quot;(</highlight></codeline>
+<codeline lineno="83"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SELECT<sp/>budget_id,<sp/>trip_id,<sp/>total_budget,<sp/>spent_amount,</highlight></codeline>
+<codeline lineno="84"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>category_budget_accommodation,<sp/>category_budget_transportation,</highlight></codeline>
+<codeline lineno="85"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>category_budget_food,<sp/>category_budget_entertainment,</highlight></codeline>
+<codeline lineno="86"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>category_spent_accommodation,<sp/>category_spent_transportation,</highlight></codeline>
+<codeline lineno="87"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>category_spent_food,<sp/>category_spent_entertainment,</highlight></codeline>
+<codeline lineno="88"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>created_at,<sp/>updated_at</highlight></codeline>
+<codeline lineno="89"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FROM<sp/>budgets<sp/>WHERE<sp/>trip_id<sp/>=<sp/>?;</highlight></codeline>
+<codeline lineno="90"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)&quot;;</highlight></codeline>
+<codeline lineno="91"><highlight class="stringliteral"><sp/><sp/>sqlite3_stmt<sp/>*stmt<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>sqlite3_prepare_v2(db,<sp/>sql,<sp/>-1,<sp/>&amp;stmt,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>!=<sp/>SQLITE_OK)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba86bef3f9f8669a7395a877ff014aecd9" kindref="member">ErrorCode::FileIO</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Parametreleri<sp/>bağla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>sqlite3_bind_int(stmt,<sp/>1,<sp/>tripId);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Sorguyu<sp/>çalıştır</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>rc<sp/>=<sp/>sqlite3_step(stmt);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>!=<sp/>SQLITE_ROW)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>sqlite3_finalize(stmt);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Sonuçları<sp/>al</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>budget.budgetId<sp/>=<sp/>sqlite3_column_int(stmt,<sp/>0);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>budget.tripId<sp/>=<sp/>sqlite3_column_int(stmt,<sp/>1);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>budget.totalBudget<sp/>=<sp/>sqlite3_column_double(stmt,<sp/>2);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>budget.spentAmount<sp/>=<sp/>sqlite3_column_double(stmt,<sp/>3);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>budget.categoryBudgets[0]<sp/>=<sp/>sqlite3_column_double(stmt,<sp/>4);<sp/></highlight><highlight class="comment">//<sp/>ACCOMMODATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>budget.categoryBudgets[1]<sp/>=<sp/>sqlite3_column_double(stmt,<sp/>5);<sp/></highlight><highlight class="comment">//<sp/>TRANSPORTATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>budget.categoryBudgets[2]<sp/>=<sp/>sqlite3_column_double(stmt,<sp/>6);<sp/></highlight><highlight class="comment">//<sp/>FOOD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>budget.categoryBudgets[3]<sp/>=<sp/>sqlite3_column_double(stmt,<sp/>7);<sp/></highlight><highlight class="comment">//<sp/>ENTERTAINMENT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>budget.categorySpent[0]<sp/>=<sp/>sqlite3_column_double(stmt,<sp/>8);<sp/></highlight><highlight class="comment">//<sp/>ACCOMMODATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>budget.categorySpent[1]<sp/>=<sp/>sqlite3_column_double(stmt,<sp/>9);<sp/></highlight><highlight class="comment">//<sp/>TRANSPORTATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>budget.categorySpent[2]<sp/>=<sp/>sqlite3_column_double(stmt,<sp/>10);<sp/></highlight><highlight class="comment">//<sp/>FOOD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>budget.categorySpent[3]<sp/>=<sp/>sqlite3_column_double(stmt,<sp/>11);<sp/></highlight><highlight class="comment">//<sp/>ENTERTAINMENT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>budget.createdAt<sp/>=<sp/>sqlite3_column_int64(stmt,<sp/>12);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>budget.updatedAt<sp/>=<sp/>sqlite3_column_int64(stmt,<sp/>13);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>sqlite3_finalize(stmt);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_budget_manager_1aa6d74518da8cb56fda03f783e7664c05" kindref="member">updateBudget</ref>(int32_t<sp/>budgetId,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Budget<sp/>&amp;budget)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SQLite<sp/>veritabanını<sp/>al</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>sqlite3<sp/>*db<sp/>=<sp/><ref refid="namespace_travel_expense_1_1_database_1a0f85378d912f28f14a19aba99432dcca" kindref="member">Database::getDatabase</ref>();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!db)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba2767828026039e8ba7b38973cbb701f2" kindref="member">ErrorCode::FileNotFound</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SQL<sp/>sorgusu<sp/>hazırla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sql<sp/>=<sp/>R</highlight><highlight class="stringliteral">&quot;(</highlight></codeline>
+<codeline lineno="137"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UPDATE<sp/>budgets<sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SET<sp/>trip_id<sp/>=<sp/>?,<sp/>total_budget<sp/>=<sp/>?,<sp/>spent_amount<sp/>=<sp/>?,</highlight></codeline>
+<codeline lineno="139"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>category_budget_accommodation<sp/>=<sp/>?,<sp/>category_budget_transportation<sp/>=<sp/>?,</highlight></codeline>
+<codeline lineno="140"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>category_budget_food<sp/>=<sp/>?,<sp/>category_budget_entertainment<sp/>=<sp/>?,</highlight></codeline>
+<codeline lineno="141"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>category_spent_accommodation<sp/>=<sp/>?,<sp/>category_spent_transportation<sp/>=<sp/>?,</highlight></codeline>
+<codeline lineno="142"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>category_spent_food<sp/>=<sp/>?,<sp/>category_spent_entertainment<sp/>=<sp/>?,</highlight></codeline>
+<codeline lineno="143"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>updated_at<sp/>=<sp/>?</highlight></codeline>
+<codeline lineno="144"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WHERE<sp/>budget_id<sp/>=<sp/>?;</highlight></codeline>
+<codeline lineno="145"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)&quot;;</highlight></codeline>
+<codeline lineno="146"><highlight class="stringliteral"><sp/><sp/>sqlite3_stmt<sp/>*stmt<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>sqlite3_prepare_v2(db,<sp/>sql,<sp/>-1,<sp/>&amp;stmt,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>!=<sp/>SQLITE_OK)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba86bef3f9f8669a7395a877ff014aecd9" kindref="member">ErrorCode::FileIO</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Parametreleri<sp/>bağla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>time_t<sp/>now<sp/>=<sp/>time(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>sqlite3_bind_int(stmt,<sp/>1,<sp/>budget.tripId);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>sqlite3_bind_double(stmt,<sp/>2,<sp/>budget.totalBudget);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>sqlite3_bind_double(stmt,<sp/>3,<sp/>budget.spentAmount);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>sqlite3_bind_double(stmt,<sp/>4,<sp/>budget.categoryBudgets[0]);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>sqlite3_bind_double(stmt,<sp/>5,<sp/>budget.categoryBudgets[1]);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>sqlite3_bind_double(stmt,<sp/>6,<sp/>budget.categoryBudgets[2]);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>sqlite3_bind_double(stmt,<sp/>7,<sp/>budget.categoryBudgets[3]);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>sqlite3_bind_double(stmt,<sp/>8,<sp/>budget.categorySpent[0]);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>sqlite3_bind_double(stmt,<sp/>9,<sp/>budget.categorySpent[1]);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>sqlite3_bind_double(stmt,<sp/>10,<sp/>budget.categorySpent[2]);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>sqlite3_bind_double(stmt,<sp/>11,<sp/>budget.categorySpent[3]);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>sqlite3_bind_int64(stmt,<sp/>12,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">sqlite3_int64</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(now));</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>sqlite3_bind_int(stmt,<sp/>13,<sp/>budgetId);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Sorguyu<sp/>çalıştır</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>rc<sp/>=<sp/>sqlite3_step(stmt);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>sqlite3_finalize(stmt);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>!=<sp/>SQLITE_DONE)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba86bef3f9f8669a7395a877ff014aecd9" kindref="member">ErrorCode::FileIO</ref>;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Etkilenen<sp/>satır<sp/>sayısını<sp/>kontrol<sp/>et</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sqlite3_changes(db)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_budget_manager_1a6635276a27a73233c16e25046e1476ae" kindref="member">checkBudgetLimit</ref>(int32_t<sp/>tripId,<sp/><ref refid="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62" kindref="member">ExpenseCategory</ref><sp/>category,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>amount)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>Budget<sp/>budget;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespace_travel_expense_1_1_budget_manager_1aa06d0fd91539d4e3d978e62a00d67897" kindref="member">getBudget</ref>(tripId,<sp/>budget)<sp/>!=<sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Bütçe<sp/>bulunamazsa<sp/>izin<sp/>verilmez</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>categoryIndex<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(category);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(categoryIndex<sp/>&lt;<sp/>0<sp/>||<sp/>categoryIndex<sp/>&gt;=<sp/>4)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(budget.categorySpent[categoryIndex]<sp/>+<sp/>amount)<sp/>&lt;=<sp/>budget.categoryBudgets[categoryIndex];</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/travelexpense/src/budgetManager.cpp"/>
+  </compounddef>
+</doxygen>

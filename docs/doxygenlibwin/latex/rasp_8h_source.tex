@@ -1,0 +1,129 @@
+\doxysection{rasp.\+h}
+\hypertarget{rasp_8h_source}{}\label{rasp_8h_source}\index{src/travelexpense/header/rasp.h@{src/travelexpense/header/rasp.h}}
+\mbox{\hyperlink{rasp_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ RASP\_H}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ RASP\_H}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{export_8h}{export.h}}"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_travel_expense}{TravelExpense}}\ \{\ \textcolor{comment}{//\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_r_a_s_p}{RASP}}\ \{}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ CHECKSUM\ DOĞRULAMA\ -\/\ Checksum\ Verification}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00048\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a13447aefd17bbea8f1eb6bef277cdf88}{calculateCodeChecksum}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{size\_t}\ size,\ \textcolor{keywordtype}{char}\ *checksum);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00060\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a82253cae91dc52bb085b258bcfb97e30}{verifyCodeChecksum}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{size\_t}\ size,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expectedChecksum);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00071\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_acbfcef047f961a478c47dc464aa9f46d}{calculateFileChecksum}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filePath,\ \textcolor{keywordtype}{char}\ *checksum);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00082\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_acd000c0f527936b798be3dd63780a24c}{verifyFileChecksum}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filePath,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expectedChecksum);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00092\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a7c3387087453949ac1c1e5153b367802}{calculateSelfChecksum}}(\textcolor{keywordtype}{char}\ *checksum);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00102\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a7b85af9ddfe675010dffac4a7b2d504f}{verifySelfChecksum}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expectedChecksum);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00109\ \textcolor{keyword}{typedef}\ bool\ (*\mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a24b145da3df213c68dbecdfd2ccafece}{ChecksumCallback}})();}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00120\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_ac5a292bac3cec6b36cbdf2bb82bd6739}{startPeriodicChecksum}}(\mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a24b145da3df213c68dbecdfd2ccafece}{ChecksumCallback}}\ callback,\ uint32\_t\ intervalMs);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00127\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a0efff0dbecdada8159cf0b3cb36cb893}{stopPeriodicChecksum}}();}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00130\ \textcolor{comment}{//\ ANTI-\/DEBUG\ -\/\ Debugger\ Tespiti\ ve\ Önleme}}
+\DoxyCodeLine{00131\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00141\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a42e51c2e750e8a971132e58316af33a8}{isDebuggerPresent}}();}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00148\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a115d17e716e8d6131ae9190cf6f75481}{isRemoteDebuggerPresent}}();}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00155\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_ad46457b282a44cbfc4df1511162e72f6}{checkPtrace}}();}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00164\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a3cf00a3261b43ccc2887d8944bf91538}{detectDebuggerProcesses}}();}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00173\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_ab81bdd68990b24f747b0239a19038dd4}{performAntiDebugCheck}}();}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00182\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a74f8505c572d96dcb0173eccb597ebec}{handleDebuggerDetected}}(\textcolor{keywordtype}{bool}\ terminate);}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00185\ \textcolor{comment}{//\ TAMPER\ DETECTION\ -\/\ Müdahale\ Tespiti}}
+\DoxyCodeLine{00186\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00197\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_af2080f5a46b03d2100afe682a8c5a1df}{detectFileModification}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filePath,\ int64\_t\ expectedModTime);}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00208\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_afa98676df0c0a675722c54f6de81c2cb}{detectFileSizeChange}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filePath,\ int64\_t\ expectedSize);}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00218\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_af0dbce98e0f0de6d797874f15c74862b}{checkBinaryIntegrity}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expectedChecksum);}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00228\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a0b672b79a27062f943444a92aee6d4a6}{performTamperCheck}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expectedSelfChecksum);}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00237\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_ac872f8d88fb578ee6b155e6f99d6d817}{handleTamperDetected}}(\textcolor{keywordtype}{bool}\ terminate);}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00240\ \textcolor{comment}{//\ HOOK\ DETECTION\ -\/\ Hook\ Saldırı\ Tespiti}}
+\DoxyCodeLine{00241\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00251\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a699852f95cd6023b93e9e0bc36eba409}{detectHookAttack}}();}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00260\ \textcolor{comment}{//\ rasp.h}}
+\DoxyCodeLine{00261\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a40e64f7132b608c9b1c95e7d04a4dac4}{detectFunctionHook}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *functionAddress,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *functionName);}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00271\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_afe5deef33149e4803a01717e48e0a657}{checkCriticalFunctionHooks}}();}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00280\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a8ab6aa690901b55df23eeef328288b1f}{handleHookDetected}}(\textcolor{keywordtype}{bool}\ terminate);}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00283\ \textcolor{comment}{//\ CONTROL\ FLOW\ COUNTER\ -\/\ Kontrol\ Akışı\ Sayacı\ Kontrolü}}
+\DoxyCodeLine{00284\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00294\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a95baf316d5a99b62e53002ae0ab3a73c}{initializeControlFlowCounter}}(uint32\_t\ expectedValue);}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00303\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a28bf6cf8aad86c730a8f75c8d3f6123c}{incrementControlFlowCounter}}();}
+\DoxyCodeLine{00304\ }
+\DoxyCodeLine{00313\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a85af5ca5f027e162efd80ca365be1dc7}{verifyControlFlowCounter}}(uint32\_t\ expectedValue);}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00320\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ uint32\_t\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_aeda5dfedcf5123a3a0ee8bde523ab810}{getControlFlowCounter}}();}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00327\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_aba6628f357259ebe350b0a74414de245}{resetControlFlowCounter}}();}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00337\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_af842523d29168b17f6c00a0dae85d83e}{performControlFlowCheck}}(uint32\_t\ expectedValue);}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00339\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00340\ \textcolor{comment}{//\ UNSAFE\ DEVICE\ DETECTION\ -\/\ Güvensiz\ Cihaz\ Tespiti}}
+\DoxyCodeLine{00341\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00350\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a9a04315a1d132bf8292766acdda58530}{detectEmulator}}();}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00359\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a92dcba759d1b1409134c7839b2cbee78}{detectUnsafeDevice}}();}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00369\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_aff7e2174a761d6e7c7c342e485f25eed}{detectRootJailbreak}}();}
+\DoxyCodeLine{00370\ }
+\DoxyCodeLine{00371\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00372\ \textcolor{comment}{//\ RASP\ INITIALIZATION\ -\/\ RASP\ Başlatma\ ve\ Yönetimi}}
+\DoxyCodeLine{00373\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00385\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a5519cc5a11da4d8ec5e34cf7e9095767}{initializeRASP}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expectedSelfChecksum,\ \textcolor{keywordtype}{bool}\ enablePeriodicCheck,\ uint32\_t\ checkIntervalMs);}
+\DoxyCodeLine{00386\ }
+\DoxyCodeLine{00394\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a7591d62c4d3369e25dd690b12c1064f7}{shutdownRASP}}();}
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00403\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a90d0c9432cfd9f982a064735218dab22}{isRASPActive}}();}
+\DoxyCodeLine{00404\ }
+\DoxyCodeLine{00415\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a1051cd786797600c22d100557207ac37}{getRASPStatus}}(\textcolor{keywordtype}{bool}\ *debuggerDetected,\ \textcolor{keywordtype}{bool}\ *tamperDetected,\ \textcolor{keywordtype}{bool}\ *checksumValid);}
+\DoxyCodeLine{00416\ }
+\DoxyCodeLine{00417\ \}\ \textcolor{comment}{//\ namespace\ RASP}}
+\DoxyCodeLine{00418\ }
+\DoxyCodeLine{00419\ \}\ \textcolor{comment}{//\ namespace\ TravelExpense\ //\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00420\ }
+\DoxyCodeLine{00421\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ RASP\_H}}
+\DoxyCodeLine{00422\ }
+
+\end{DoxyCode}

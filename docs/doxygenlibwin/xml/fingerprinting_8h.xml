@@ -1,0 +1,498 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="fingerprinting_8h" kind="file" language="C++">
+    <compoundname>fingerprinting.h</compoundname>
+    <includes refid="common_types_8h" local="yes">commonTypes.h</includes>
+    <includes refid="export_8h" local="yes">export.h</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">cstddef</includes>
+    <includedby refid="travelexpense_8h" local="yes">src/travelexpense/header/travelexpense.h</includedby>
+    <includedby refid="fingerprinting_8cpp" local="yes">src/travelexpense/src/fingerprinting.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>commonTypes.h</label>
+        <link refid="common_types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>error_codes.h</label>
+        <link refid="error__codes_8h"/>
+      </node>
+      <node id="7">
+        <label>export.h</label>
+        <link refid="export_8h"/>
+      </node>
+      <node id="1">
+        <label>src/travelexpense/header/fingerprinting.h</label>
+        <link refid="fingerprinting_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>cstddef</label>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>cstring</label>
+      </node>
+      <node id="4">
+        <label>ctime</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/travelexpense/header/fingerprinting.h</label>
+        <link refid="fingerprinting_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/travelexpense/header/travelexpense.h</label>
+        <link refid="travelexpense_8h"/>
+      </node>
+      <node id="3">
+        <label>src/travelexpense/src/fingerprinting.cpp</label>
+        <link refid="fingerprinting_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
+    <innernamespace refid="namespace_fingerprinting">Fingerprinting</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_fingerprinting">TravelExpense::Fingerprinting</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1a28a42fb823573e94bfc33e9d17aaec15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::generateDeviceFingerprint</definition>
+        <argsstring>(char *fingerprint)</argsstring>
+        <name>generateDeviceFingerprint</name>
+        <qualifiedname>TravelExpense::Fingerprinting::generateDeviceFingerprint</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>fingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Cihaz fingerprint&apos;ini oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>MAC adresi, sistem bilgileri ve donanım özelliklerini kullanarak benzersiz bir cihaz fingerprint&apos;i oluşturur.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cihaz fingerprint çıktısı (64 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="45" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="45" bodyend="140" declfile="src/travelexpense/header/fingerprinting.h" declline="47" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1a191e063655ff8a03f4fb50febd6f59c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::verifyDeviceFingerprint</definition>
+        <argsstring>(const char *expectedFingerprint)</argsstring>
+        <name>verifyDeviceFingerprint</name>
+        <qualifiedname>TravelExpense::Fingerprinting::verifyDeviceFingerprint</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>expectedFingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Cihaz fingerprint&apos;ini doğrula. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Beklenen fingerprint ile mevcut cihaz fingerprint&apos;ini karşılaştırır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expectedFingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen cihaz fingerprint&apos;i </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="142" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="142" bodyend="166" declfile="src/travelexpense/header/fingerprinting.h" declline="57" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1ad3a5d90d7f0cc6eb6f61bc2212ebcafb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::generateApplicationFingerprint</definition>
+        <argsstring>(char *fingerprint)</argsstring>
+        <name>generateApplicationFingerprint</name>
+        <qualifiedname>TravelExpense::Fingerprinting::generateApplicationFingerprint</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>fingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Uygulama fingerprint&apos;ini oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Executable dosyasının hash&apos;ini, sürüm bilgisini, build zamanını ve diğer uygulama özelliklerini kullanarak benzersiz bir uygulama fingerprint&apos;i oluşturur.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uygulama fingerprint çıktısı (64 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="172" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="172" bodyend="213" declfile="src/travelexpense/header/fingerprinting.h" declline="73" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1ad1d7ddf7b4c19319abf133d25423a1b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::verifyApplicationFingerprint</definition>
+        <argsstring>(const char *expectedFingerprint)</argsstring>
+        <name>verifyApplicationFingerprint</name>
+        <qualifiedname>TravelExpense::Fingerprinting::verifyApplicationFingerprint</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>expectedFingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Uygulama fingerprint&apos;ini doğrula. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Beklenen fingerprint ile mevcut uygulama fingerprint&apos;ini karşılaştırır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expectedFingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen uygulama fingerprint&apos;i </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="215" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="215" bodyend="239" declfile="src/travelexpense/header/fingerprinting.h" declline="83" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1a74e595b94de77e3ff726e9ee8c431842" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::generateCombinedFingerprint</definition>
+        <argsstring>(char *fingerprint)</argsstring>
+        <name>generateCombinedFingerprint</name>
+        <qualifiedname>TravelExpense::Fingerprinting::generateCombinedFingerprint</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>fingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Birleşik fingerprint oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cihaz ve uygulama fingerprint&apos;lerini birleştirerek tek bir fingerprint oluşturur. Bu, cihaz-uygulama bağlantısı için kullanılabilir.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Birleşik fingerprint çıktısı (64 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="241" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="241" bodyend="274" declfile="src/travelexpense/header/fingerprinting.h" declline="94" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1a5bdef5dde8993c3b60f622d1f7ce4879" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::generateDynamicKey</definition>
+        <argsstring>(const char *fingerprint, uint8_t *key, size_t keyLen)</argsstring>
+        <name>generateDynamicKey</name>
+        <qualifiedname>TravelExpense::Fingerprinting::generateDynamicKey</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>fingerprint</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyLen</declname>
+        </param>
+        <briefdescription>
+<para>Dinamik anahtar oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cihaz ve uygulama fingerprint&apos;lerini kullanarak dinamik bir anahtar oluşturur. Bu anahtar, cihaz ve uygulama bazlı şifreleme için kullanılabilir.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cihaz veya uygulama fingerprint&apos;i </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dinamik anahtar çıktısı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar uzunluğu (32) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="280" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="280" bodyend="304" declfile="src/travelexpense/header/fingerprinting.h" declline="111" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1a0b557777926cc48a61ef92293ef512fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::generateDeviceBasedKey</definition>
+        <argsstring>(uint8_t *key, size_t keyLen)</argsstring>
+        <name>generateDeviceBasedKey</name>
+        <qualifiedname>TravelExpense::Fingerprinting::generateDeviceBasedKey</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyLen</declname>
+        </param>
+        <briefdescription>
+<para>Cihaz bazlı anahtar oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cihaz fingerprint&apos;ini kullanarak dinamik bir anahtar oluşturur.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dinamik anahtar çıktısı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar uzunluğu (32) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="306" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="306" bodyend="320" declfile="src/travelexpense/header/fingerprinting.h" declline="123" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1acb1654b3c7d1bfee4884fccb3c96e092" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::generateApplicationBasedKey</definition>
+        <argsstring>(uint8_t *key, size_t keyLen)</argsstring>
+        <name>generateApplicationBasedKey</name>
+        <qualifiedname>TravelExpense::Fingerprinting::generateApplicationBasedKey</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyLen</declname>
+        </param>
+        <briefdescription>
+<para>Uygulama bazlı anahtar oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uygulama fingerprint&apos;ini kullanarak dinamik bir anahtar oluşturur.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dinamik anahtar çıktısı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar uzunluğu (32) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="322" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="322" bodyend="336" declfile="src/travelexpense/header/fingerprinting.h" declline="134" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1a60ea4c07ed4974e73e33c8ae00257aa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::generateCombinedKey</definition>
+        <argsstring>(uint8_t *key, size_t keyLen)</argsstring>
+        <name>generateCombinedKey</name>
+        <qualifiedname>TravelExpense::Fingerprinting::generateCombinedKey</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyLen</declname>
+        </param>
+        <briefdescription>
+<para>Birleşik anahtar oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cihaz ve uygulama fingerprint&apos;lerini birleştirerek dinamik bir anahtar oluşturur. Bu anahtar, cihaz-uygulama bağlantısı için şifreleme anahtarı olarak kullanılabilir.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Birleşik dinamik anahtar çıktısı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar uzunluğu (32) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="338" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="338" bodyend="352" declfile="src/travelexpense/header/fingerprinting.h" declline="146" declcolumn="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Seyahat Gideri Takibi - Cihaz ve Uygulama <ref refid="namespace_fingerprinting" kindref="compound">Fingerprinting</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu dosya, Dinamik Varlıkların Korunması gereksinimlerini karşılar:<itemizedlist>
+<listitem><para>Cihaz fingerprint oluşturma</para>
+</listitem><listitem><para>Uygulama fingerprint oluşturma</para>
+</listitem><listitem><para>Dinamik anahtar yönetimi</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="author"><para>Binnur Altınışık </para>
+</simplesect>
+<simplesect kind="date"><para>2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FINGERPRINTING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FINGERPRINTING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_types_8h" kindref="compound">commonTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="export_8h" kindref="compound">export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{<sp/></highlight><highlight class="comment">//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="namespace_travel_expense_1_1_fingerprinting" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_fingerprinting" kindref="compound">Fingerprinting</ref><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CİHAZ<sp/>FİNGERPRİNTİNG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_fingerprinting_1a28a42fb823573e94bfc33e9d17aaec15" kindref="member">generateDeviceFingerprint</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fingerprint);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_fingerprinting_1a191e063655ff8a03f4fb50febd6f59c8" kindref="member">verifyDeviceFingerprint</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*expectedFingerprint);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/>UYGULAMA<sp/>FİNGERPRİNTİNG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_fingerprinting_1ad3a5d90d7f0cc6eb6f61bc2212ebcafb" kindref="member">generateApplicationFingerprint</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fingerprint);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_fingerprinting_1ad1d7ddf7b4c19319abf133d25423a1b2" kindref="member">verifyApplicationFingerprint</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*expectedFingerprint);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_fingerprinting_1a74e595b94de77e3ff726e9ee8c431842" kindref="member">generateCombinedFingerprint</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fingerprint);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DİNAMİK<sp/>ANAHTAR<sp/>YÖNETİMİ</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_fingerprinting_1a5bdef5dde8993c3b60f622d1f7ce4879" kindref="member">generateDynamicKey</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fingerprint,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*key,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyLen);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_fingerprinting_1a0b557777926cc48a61ef92293ef512fa" kindref="member">generateDeviceBasedKey</ref>(uint8_t<sp/>*key,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyLen);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_fingerprinting_1acb1654b3c7d1bfee4884fccb3c96e092" kindref="member">generateApplicationBasedKey</ref>(uint8_t<sp/>*key,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyLen);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_fingerprinting_1a60ea4c07ed4974e73e33c8ae00257aa0" kindref="member">generateCombinedKey</ref>(uint8_t<sp/>*key,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyLen);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Fingerprinting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>FINGERPRINTING_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/travelexpense/header/fingerprinting.h"/>
+  </compounddef>
+</doxygen>

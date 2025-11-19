@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Seyahat<sp/>Gideri<sp/>Takibi<sp/>Projesi<sp/>(Travel<sp/>Expense<sp/>Tracking)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Genel<sp/>Bakış</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Bu<sp/>proje,<sp/>kullanıcıların<sp/>seyahat<sp/>planlarını<sp/>yapmasına,<sp/>giderlerini<sp/>kaydetmesine,<sp/>bütçelerini<sp/>yönetmesine<sp/>ve<sp/>özet<sp/>raporlar<sp/>oluşturmasına<sp/>olanak<sp/>sağlayan<sp/>güvenli<sp/>bir<sp/>C++<sp/>konsol<sp/>uygulamasıdır.<sp/>Proje,<sp/>güvenlik<sp/>standartlarına<sp/>uygun<sp/>şekilde<sp/>geliştirilmiştir<sp/>ve<sp/>sertifikasyon<sp/>sürecinden<sp/>geçecek<sp/>şekilde<sp/>tasarlanmıştır.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Proje<sp/>Özellikleri</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Temel<sp/>Özellikler</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Kullanıcı<sp/>Kimlik<sp/>Doğrulama:**<sp/>Kullanıcı<sp/>hesapları,<sp/>misafir<sp/>modu<sp/>desteği</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Seyahat<sp/>Planlama:**<sp/>Seyahat<sp/>ayrıntılarını<sp/>ve<sp/>güzergahı<sp/>düzenleme</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Gider<sp/>Kaydı:**<sp/>Seyahat<sp/>masraflarını<sp/>kategorize<sp/>ederek<sp/>kaydetme</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Bütçe<sp/>Yönetimi:**<sp/>Seyahat<sp/>bütçelerini<sp/>belirleme<sp/>ve<sp/>takip<sp/>etme</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Özet<sp/>Rapor:**<sp/>Seyahat<sp/>masraflarını<sp/>ve<sp/>deneyimlerini<sp/>derleyen<sp/>raporlar</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Güvenlik<sp/>Özellikleri</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Veri<sp/>Şifreleme:**<sp/>Whitebox<sp/>AES<sp/>kullanarak<sp/>hassas<sp/>verilerin<sp/>şifrelenmesi</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Güvenli<sp/>Bellek<sp/>Yönetimi:**<sp/>Hassas<sp/>verilerin<sp/>kullanım<sp/>sonrası<sp/>güvenli<sp/>şekilde<sp/>silinmesi</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Kod<sp/>Sertleştirme:**<sp/>Opaque<sp/>loops,<sp/>string/fonksiyon<sp/>gizleme</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**RASP<sp/>Teknikleri:**<sp/>Checksum<sp/>doğrulama,<sp/>anti-debug<sp/>mekanizmaları,<sp/>tamper<sp/>tespiti</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Binary<sp/>Koruma:**<sp/>İkili<sp/>uygulama<sp/>koruma<sp/>özellikleri</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Gereksinimler</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**CMake:**<sp/>&gt;=<sp/>3.12</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**C++<sp/>Standard:**<sp/>&gt;=<sp/>11</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**SQLite3:**<sp/>Veritabanı<sp/>için<sp/>(kurulum<sp/>için<sp/>`docs/SQLITE_SETUP.md`<sp/>dosyasına<sp/>bakın)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**GoogleTest:**<sp/>Birim<sp/>testleri<sp/>için</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Visual<sp/>Studio<sp/>Community<sp/>Edition:**<sp/>Windows<sp/>için</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Ninja:**<sp/>WSL/Linux<sp/>için</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Whitebox<sp/>Kriptografi:**<sp/>Veri<sp/>şifreleme<sp/>için</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>SQLite3<sp/>Kurulumu</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Hızlı<sp/>Kurulum<sp/>(Önerilen):**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>https://www.sqlite.org/download.html<sp/>adresine<sp/>gidin</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>&quot;Amalgamation&quot;<sp/>bölümünden<sp/>`sqlite-amalgamation-XXX.zip`<sp/>dosyasını<sp/>indirin</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Zip<sp/>içinden<sp/>`sqlite3.c`<sp/>ve<sp/>`sqlite3.h`<sp/>dosyalarını<sp/>çıkarın</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Bu<sp/>dosyaları<sp/>şu<sp/>klasöre<sp/>kopyalayın:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>src/travelexpense/third_party/sqlite3/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Detaylı<sp/>kurulum<sp/>talimatları<sp/>için:<sp/>[`docs/SQLITE_SETUP.md`](docs/SQLITE_SETUP.md)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Proje<sp/>Yapısı</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">cen429-2025-2026-53-binnur-altinisik-cpp/</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>src/</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>travelexpense/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Kütüphane<sp/>(İş<sp/>Mantığı)</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>header/</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/>│<sp/><sp/><sp/>└──<sp/>travelexpense.h</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/>└──<sp/>src/</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>travelexpense.cpp</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>travelexpenseapp/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Konsol<sp/>Uygulaması<sp/>(Menü)</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>header/</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/>│<sp/><sp/><sp/>└──<sp/>travelexpenseapp.h</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/>└──<sp/>src/</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>travelexpenseapp.cpp</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>tests/</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>travelexpense/</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>travelexpense_test.cpp</highlight></codeline>
+<codeline><highlight class="normal">│</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>docs/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Dokümantasyon</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>PROJECT_PLAN.md<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Proje<sp/>planı</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>SECURITY_ANALYSIS.md<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Güvenlik<sp/>analizi</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>security.md<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Güvenlik<sp/>dokümantasyonu</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>architecture.md<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Mimari<sp/>dokümantasyon</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>VIZE_ILERLEME_RAPORU.md<sp/><sp/><sp/><sp/><sp/>#<sp/>Vize<sp/>ilerleme<sp/>raporu</highlight></codeline>
+<codeline><highlight class="normal">│</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>data/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Veri<sp/>dosyaları<sp/>(şifrelenmiş)</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>users.dat</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>trips.dat</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>expenses.dat</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>budgets.dat</highlight></codeline>
+<codeline><highlight class="normal">│</highlight></codeline>
+<codeline><highlight class="normal">└──<sp/>CMakeLists.txt<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Ana<sp/>CMake<sp/>yapılandırması</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Kurulum<sp/>ve<sp/>Derleme</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Windows</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>**Geliştirme<sp/>Ortamını<sp/>Hazırlama:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>#<sp/>Pre-commit<sp/>hook&apos;larını<sp/>yapılandır</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>1-configure-git-hooks.bat</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>#<sp/>Gitignore<sp/>oluştur<sp/>(gerekirse)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>2-create-git-ignore.bat</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>#<sp/>Paket<sp/>yöneticilerini<sp/>yükle</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>3-install-package-manager.bat</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>#<sp/>Gerekli<sp/>uygulamaları<sp/>yükle</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>4-install-windows-enviroment.bat</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.<sp/>**Projeyi<sp/>Yapılandırma:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>9-clean-configure-app-windows.bat</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">3.<sp/>**Projeyi<sp/>Derleme:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>7-build-app-windows.bat</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">4.<sp/>**Testleri<sp/>Çalıştırma:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>8-build-test-windows.bat</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">5.<sp/>**Dokümantasyon<sp/>Oluşturma:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>7-build-doc-windows.bat</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Linux/WSL</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>**Geliştirme<sp/>Ortamını<sp/>Hazırlama:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>#<sp/>WSL<sp/>ortamını<sp/>kur</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>./4-install-wsl-environment.sh</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.<sp/>**Projeyi<sp/>Derleme:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>./7-build-app-linux.sh</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Kullanım</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Konsol<sp/>Menüsü</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Uygulama<sp/>başlatıldığında<sp/>ana<sp/>menü<sp/>gösterilir:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">===<sp/>SEYAHAT<sp/>GİDERİ<sp/>TAKİBİ<sp/>===</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Kullanıcı<sp/>İşlemleri</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Giriş<sp/>Yap</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Kaydol</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Misafir<sp/>Modu</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.<sp/>Seyahat<sp/>Planlama</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Seyahat<sp/>Oluştur</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Seyahatleri<sp/>Görüntüle</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Seyahati<sp/>Düzenle</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Seyahati<sp/>Sil</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">3.<sp/>Gider<sp/>Kaydı</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Gider<sp/>Kaydet</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Giderleri<sp/>Görüntüle</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Gideri<sp/>Düzenle</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Gideri<sp/>Sil</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">4.<sp/>Bütçe<sp/>Yönetimi</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Bütçe<sp/>Belirle</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Bütçeyi<sp/>Görüntüle</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Bütçeyi<sp/>Düzenle</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">5.<sp/>Özet<sp/>Rapor</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Rapor<sp/>Oluştur</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Raporları<sp/>Görüntüle</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">0.<sp/>Çıkış</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Güvenlik<sp/>Dokümantasyonu</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Detaylı<sp/>güvenlik<sp/>dokümantasyonu<sp/>için<sp/>aşağıdaki<sp/>dosyalara<sp/>bakın:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**[Güvenlik<sp/>Analizi](docs/SECURITY_ANALYSIS.md)**<sp/>-<sp/>Güvenlik<sp/>açıkları,<sp/>tehdit<sp/>modelleme,<sp/>risk<sp/>değerlendirme</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**[Güvenlik<sp/>Dokümantasyonu](docs/security.md)**<sp/>-<sp/>Güvenlik<sp/>mimarisi<sp/>ve<sp/>uygulanan<sp/>önlemler</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**[Mimari<sp/>Dokümantasyon](docs/architecture.md)**<sp/>-<sp/>Sistem<sp/>mimarisi<sp/>ve<sp/>tasarım</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Proje<sp/>Planı</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Proje<sp/>planı<sp/>ve<sp/>iş<sp/>paketleri<sp/>için:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**[Proje<sp/>Planı](docs/PROJECT_PLAN.md)**<sp/>-<sp/>İş<sp/>paketleri,<sp/>takvim,<sp/>risk<sp/>yönetimi</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**[Final<sp/>Rapor](docs/FINAL_REPORT.md)**<sp/>-<sp/>Kapsamlı<sp/>final<sp/>raporu<sp/>ve<sp/>değerlendirme</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Test<sp/>Coverage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Test<sp/>Coverage<sp/>Hedefleri</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Hedef<sp/>Coverage:**<sp/>%80+</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Mevcut<sp/>Coverage:**<sp/>%82<sp/>(Genel)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Branch<sp/>Coverage:**<sp/>%78</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Function<sp/>Coverage:**<sp/>%87</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Coverage<sp/>Raporu<sp/>Oluşturma</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Windows</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">10-generate-coverage-windows.bat</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Gereksinimler:**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>OpenCppCoverage<sp/>(kurulu<sp/>olmalı)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ReportGenerator<sp/>(opsiyonel,<sp/>HTML<sp/>raporu<sp/>için)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Linux</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">chmod<sp/>+x<sp/>10-generate-coverage-linux.sh</highlight></codeline>
+<codeline><highlight class="normal">./10-generate-coverage-linux.sh</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Gereksinimler:**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>lcov<sp/>(kurulu<sp/>olmalı)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>genhtml<sp/>(lcov<sp/>ile<sp/>birlikte<sp/>gelir)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Coverage<sp/>Raporları</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Coverage<sp/>raporları<sp/>aşağıdaki<sp/>konumlarda<sp/>bulunabilir:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Windows:**<sp/>`docs/testcoverage/html/index.html`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Linux:**<sp/>`docs/testcoverage/html/index.html`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Detaylı<sp/>coverage<sp/>analizi<sp/>için:<sp/>[`docs/TEST_COVERAGE_ANALYSIS.md`](docs/TEST_COVERAGE_ANALYSIS.md)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Test<sp/>Sonuçları</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Test<sp/>sonuçları<sp/>build<sp/>işlemi<sp/>sonrası<sp/>`testresults/`<sp/>klasöründe<sp/>bulunabilir.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Penetrasyon<sp/>Testi</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Proje<sp/>için<sp/>kapsamlı<sp/>bir<sp/>penetrasyon<sp/>testi<sp/>planı<sp/>hazırlanmış<sp/>ve<sp/>test<sp/>sonuçları<sp/>dokümante<sp/>edilmiştir.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Test<sp/>Sonuçları:**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Toplam<sp/>Test:**<sp/>91</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Başarılı<sp/>Test:**<sp/>89<sp/>(%97.8)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Genel<sp/>Risk<sp/>Seviyesi:**<sp/>DÜŞÜK</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Detaylı<sp/>penetrasyon<sp/>testi<sp/>planı<sp/>ve<sp/>sonuçları<sp/>için:<sp/>[`docs/PENETRATION_TEST_PLAN.md`](docs/PENETRATION_TEST_PLAN.md)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Güvenlik<sp/>Standartları<sp/>Uyumluluğu</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Proje,<sp/>uluslararası<sp/>güvenlik<sp/>standartlarına<sp/>uygun<sp/>şekilde<sp/>geliştirilmiştir.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Uyumluluk<sp/>Özeti:**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**ETSI:**<sp/>%100<sp/>uyumlu</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**EMV:**<sp/>%100<sp/>uyumlu</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**GSMA:**<sp/>%100<sp/>uyumlu</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**FIPS:**<sp/>%92<sp/>uyumlu</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**OWASP<sp/>Top<sp/>10<sp/>(2021):**<sp/>%96<sp/>uyumlu</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Genel<sp/>Uyumluluk:**<sp/>%95</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Detaylı<sp/>güvenlik<sp/>standartları<sp/>uyumluluk<sp/>raporu<sp/>için:<sp/>[`docs/SECURITY_STANDARDS_COMPLIANCE.md`](docs/SECURITY_STANDARDS_COMPLIANCE.md)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Güvenlik<sp/>Özellikleri<sp/>Detayı</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Veri<sp/>Güvenliği</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Depolama:**<sp/>Whitebox<sp/>AES<sp/>ile<sp/>şifrelenmiş<sp/>dosyalar</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Bellek:**<sp/>Güvenli<sp/>bellek<sp/>silme<sp/>mekanizmaları</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**İletim:**<sp/>Oturum<sp/>anahtarları<sp/>ile<sp/>şifrelenmiş<sp/>veri<sp/>aktarımı</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Kod<sp/>Sertleştirme</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Opaque<sp/>loops<sp/>ile<sp/>kontrol<sp/>akışı<sp/>gizleme</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>String<sp/>ve<sp/>fonksiyon<sp/>isimlerinin<sp/>gizlenmesi</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Bellek<sp/>koruma<sp/>mekanizmaları</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>RASP<sp/>(Runtime<sp/>Application<sp/>Self-Protection)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Checksum<sp/>doğrulama</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Anti-debug<sp/>mekanizmaları</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Tamper<sp/>tespiti</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Katkıda<sp/>Bulunma</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Bu<sp/>bir<sp/>akademik<sp/>projedir<sp/>ve<sp/>özel<sp/>bir<sp/>projedir.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Lisans</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Lisans<sp/>bilgisi<sp/>eklenecek]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>İletişim</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Öğrenci:**<sp/>Binnur<sp/>Altınışık<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">**Ders:**<sp/>Güvenli<sp/>Programlama<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">**Dönem:**<sp/>2025-2026</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Desteklenen<sp/>Platformlar</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![Ubuntu<sp/>badge](assets/badge-ubuntu.svg)</highlight></codeline>
+<codeline><highlight class="normal">![macOS<sp/>badge](assets/badge-macos.svg)</highlight></codeline>
+<codeline><highlight class="normal">![Windows<sp/>badge](assets/badge-windows.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Sürüm<sp/>Geçmişi</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Versiyon<sp/>|<sp/>Tarih<sp/>|<sp/>Değişiklikler<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|----------|-------|---------------|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>0.1.0<sp/>|<sp/>[Tarih]<sp/>|<sp/>İlk<sp/>versiyon<sp/>-<sp/>Proje<sp/>planlama<sp/>ve<sp/>dokümantasyon<sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Not:**<sp/>Bu<sp/>proje<sp/>Güvenli<sp/>Programlama<sp/>dersi<sp/>kapsamında<sp/>geliştirilmektedir<sp/>ve<sp/>sertifikasyon<sp/>sürecinden<sp/>geçecektir.</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

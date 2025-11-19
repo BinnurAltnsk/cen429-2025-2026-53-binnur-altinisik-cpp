@@ -1,0 +1,32 @@
+\doxysection{trip\+Manager.\+h}
+\hypertarget{trip_manager_8h_source}{}\label{trip_manager_8h_source}\index{src/travelexpense/header/tripManager.h@{src/travelexpense/header/tripManager.h}}
+\mbox{\hyperlink{trip_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ TRIP\_MANAGER\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ TRIP\_MANAGER\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{common_types_8h}{commonTypes.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{export_8h}{export.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_travel_expense}{TravelExpense}}\ \{\ \textcolor{comment}{//\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_trip_manager}{TripManager}}\ \{}
+\DoxyCodeLine{00045\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager_ac7be4bff03b19399d7aa30b2d8a86c94}{createTrip}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}}\ \&trip,\ int32\_t\ \&tripId);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00061\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager_a8b213c27d6c49d746400185703232b7e}{getTrips}}(int32\_t\ userId,\ std::vector<Trip>\ \&trips);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00078\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager_a39bc3ac908aab3ead121a77c6f290ea0}{updateTrip}}(int32\_t\ tripId,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}}\ \&trip);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00092\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager_a6686b59f40b7a211db40096af483de6c}{deleteTrip}}(int32\_t\ tripId);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00108\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager_a6e49251e6e2091a7a6db0b84cf64cacb}{getTrip}}(int32\_t\ tripId,\ \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}}\ \&trip);}
+\DoxyCodeLine{00109\ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \}\ \textcolor{comment}{//\ namespace\ TravelExpense\ //\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TRIP\_MANAGER\_H}}
+\DoxyCodeLine{00114\ }
+
+\end{DoxyCode}

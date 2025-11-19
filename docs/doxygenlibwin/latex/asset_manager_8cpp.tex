@@ -1,0 +1,62 @@
+\doxysection{src/travelexpense/src/asset\+Manager.cpp File Reference}
+\hypertarget{asset_manager_8cpp}{}\label{asset_manager_8cpp}\index{src/travelexpense/src/assetManager.cpp@{src/travelexpense/src/assetManager.cpp}}
+
+
+Seyahat Gideri Takibi -\/ Varlık Yönetimi Implementation.  
+
+
+{\ttfamily \#include \"{}../header/asset\+Manager.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/database.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/safe\+\_\+string.\+h\"{}}\newline
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for asset\+Manager.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{asset_manager_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense}{Travel\+Expense}}
+\begin{DoxyCompactList}\small\item\em Ana namespace -\/ Seyahat Gideri Takibi uygulaması \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager}{Travel\+Expense\+::\+Asset\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a33ae1a53f9af6e03e81b1acb903c6958}{Travel\+Expense\+::\+Asset\+Manager\+::register\+Asset}} (const \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}} \&asset, int32\+\_\+t \&asset\+Id)
+\begin{DoxyCompactList}\small\item\em Varlık kaydet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a000f5700909ef864a26945183de16404}{Travel\+Expense\+::\+Asset\+Manager\+::get\+Asset}} (int32\+\_\+t asset\+Id, \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}} \&asset)
+\begin{DoxyCompactList}\small\item\em Varlık bilgilerini al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a35d1fbd75c391130eab2e700b9f8a75f}{Travel\+Expense\+::\+Asset\+Manager\+::update\+Asset}} (int32\+\_\+t asset\+Id, const \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}} \&asset)
+\begin{DoxyCompactList}\small\item\em Varlık bilgilerini güncelle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_abb26bb2442086fa911159baf2c80668f}{Travel\+Expense\+::\+Asset\+Manager\+::delete\+Asset}} (int32\+\_\+t asset\+Id)
+\begin{DoxyCompactList}\small\item\em Varlık sil (soft delete) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a8905f38d9bd74d60801d67a798d1c9de}{Travel\+Expense\+::\+Asset\+Manager\+::list\+Assets}} (std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}} $>$ \&assets)
+\begin{DoxyCompactList}\small\item\em Tüm varlıkları listele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_ae88b60bbe936e860fbb648a8fc024951}{Travel\+Expense\+::\+Asset\+Manager\+::list\+Assets\+By\+Type}} (\mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_a80868bce24855c8dc089231ee9fd6036}{Asset\+Type}} asset\+Type, std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_asset_manager_1_1_asset}{Asset}} $>$ \&assets)
+\begin{DoxyCompactList}\small\item\em Tipe göre varlıkları listele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_ad6039789a53809ffd63c8acc4dfeb17e}{Travel\+Expense\+::\+Asset\+Manager\+::set\+Protection\+Scheme}} (int32\+\_\+t asset\+Id, uint8\+\_\+t protection\+Scheme)
+\begin{DoxyCompactList}\small\item\em Varlık koruma şemasını ayarla. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_aa4e8c39db1d427c8fee2e3d6deb3c05f}{Travel\+Expense\+::\+Asset\+Manager\+::get\+Protection\+Scheme}} (int32\+\_\+t asset\+Id, uint8\+\_\+t \&protection\+Scheme)
+\begin{DoxyCompactList}\small\item\em Varlık koruma şemasını al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager_ab6141a7865bafc003e40f228550b388c}{Travel\+Expense\+::\+Asset\+Manager\+::verify\+Protection\+Scheme}} (int32\+\_\+t asset\+Id, uint8\+\_\+t required\+Scheme)
+\begin{DoxyCompactList}\small\item\em Varlık koruma şeması doğrula. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ Varlık Yönetimi Implementation. 
+
+Bu dosya, Varlık Yönetimi gereksinimlerinin implementasyonlarını içerir.
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}

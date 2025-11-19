@@ -1,0 +1,431 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="common_types_8h" kind="file" language="C++">
+    <compoundname>commonTypes.h</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">ctime</includes>
+    <includes local="no">cstring</includes>
+    <includes refid="error__codes_8h" local="yes">error_codes.h</includes>
+    <includedby refid="asset_manager_8h" local="yes">src/travelexpense/header/assetManager.h</includedby>
+    <includedby refid="budget_manager_8h" local="yes">src/travelexpense/header/budgetManager.h</includedby>
+    <includedby refid="database_8h" local="yes">src/travelexpense/header/database.h</includedby>
+    <includedby refid="expense_manager_8h" local="yes">src/travelexpense/header/expenseManager.h</includedby>
+    <includedby refid="fingerprinting_8h" local="yes">src/travelexpense/header/fingerprinting.h</includedby>
+    <includedby refid="helpers_8h" local="yes">src/travelexpense/header/helpers.h</includedby>
+    <includedby refid="migration_8h" local="yes">src/travelexpense/header/migration.h</includedby>
+    <includedby refid="report_generator_8h" local="yes">src/travelexpense/header/reportGenerator.h</includedby>
+    <includedby refid="session_manager_8h" local="yes">src/travelexpense/header/sessionManager.h</includedby>
+    <includedby refid="softhsm_8h" local="yes">src/travelexpense/header/softhsm.h</includedby>
+    <includedby refid="tls_8h" local="yes">src/travelexpense/header/tls.h</includedby>
+    <includedby refid="travelexpense_8h" local="yes">src/travelexpense/header/travelexpense.h</includedby>
+    <includedby refid="trip_manager_8h" local="yes">src/travelexpense/header/tripManager.h</includedby>
+    <includedby refid="user_auth_8h" local="yes">src/travelexpense/header/userAuth.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/travelexpense/header/commonTypes.h</label>
+        <link refid="common_types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>error_codes.h</label>
+        <link refid="error__codes_8h"/>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="4">
+        <label>cstring</label>
+      </node>
+      <node id="3">
+        <label>ctime</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/travelexpense/header/assetManager.h</label>
+        <link refid="asset_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/travelexpense/header/budgetManager.h</label>
+        <link refid="budget_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/travelexpense/header/commonTypes.h</label>
+        <link refid="common_types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/travelexpense/header/database.h</label>
+        <link refid="database_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>src/travelexpense/header/expenseManager.h</label>
+        <link refid="expense_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>src/travelexpense/header/fingerprinting.h</label>
+        <link refid="fingerprinting_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>src/travelexpense/header/helpers.h</label>
+        <link refid="helpers_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>src/travelexpense/header/migration.h</label>
+        <link refid="migration_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>src/travelexpense/header/reportGenerator.h</label>
+        <link refid="report_generator_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>src/travelexpense/header/sessionManager.h</label>
+        <link refid="session_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>src/travelexpense/header/softhsm.h</label>
+        <link refid="softhsm_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>src/travelexpense/header/tls.h</label>
+        <link refid="tls_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/travelexpense/header/travelexpense.h</label>
+        <link refid="travelexpense_8h"/>
+      </node>
+      <node id="27">
+        <label>src/travelexpense/header/tripManager.h</label>
+        <link refid="trip_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>src/travelexpense/header/userAuth.h</label>
+        <link refid="user_auth_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/travelexpense/src/assetManager.cpp</label>
+        <link refid="asset_manager_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/travelexpense/src/budgetManager.cpp</label>
+        <link refid="budget_manager_8cpp"/>
+      </node>
+      <node id="9">
+        <label>src/travelexpense/src/database.cpp</label>
+        <link refid="database_8cpp"/>
+      </node>
+      <node id="10">
+        <label>src/travelexpense/src/expenseManager.cpp</label>
+        <link refid="expense_manager_8cpp"/>
+      </node>
+      <node id="16">
+        <label>src/travelexpense/src/fingerprinting.cpp</label>
+        <link refid="fingerprinting_8cpp"/>
+      </node>
+      <node id="18">
+        <label>src/travelexpense/src/helpers.cpp</label>
+        <link refid="helpers_8cpp"/>
+      </node>
+      <node id="11">
+        <label>src/travelexpense/src/migration.cpp</label>
+        <link refid="migration_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/travelexpense/src/reportGenerator.cpp</label>
+        <link refid="report_generator_8cpp"/>
+      </node>
+      <node id="22">
+        <label>src/travelexpense/src/sessionManager.cpp</label>
+        <link refid="session_manager_8cpp"/>
+      </node>
+      <node id="24">
+        <label>src/travelexpense/src/softhsm.cpp</label>
+        <link refid="softhsm_8cpp"/>
+      </node>
+      <node id="26">
+        <label>src/travelexpense/src/tls.cpp</label>
+        <link refid="tls_8cpp"/>
+      </node>
+      <node id="12">
+        <label>src/travelexpense/src/tripManager.cpp</label>
+        <link refid="trip_manager_8cpp"/>
+      </node>
+      <node id="13">
+        <label>src/travelexpense/src/userAuth.cpp</label>
+        <link refid="user_auth_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_travel_expense_1_1_user" prot="public">TravelExpense::User</innerclass>
+    <innerclass refid="struct_travel_expense_1_1_trip" prot="public">TravelExpense::Trip</innerclass>
+    <innerclass refid="struct_travel_expense_1_1_expense" prot="public">TravelExpense::Expense</innerclass>
+    <innerclass refid="struct_travel_expense_1_1_budget" prot="public">TravelExpense::Budget</innerclass>
+    <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ExpenseCategory</name>
+        <qualifiedname>TravelExpense::ExpenseCategory</qualifiedname>
+        <enumvalue id="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62aedd22f15b1b8b701b7d2c7d8114bc638" prot="public">
+          <name>ACCOMMODATION</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Konaklama. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62acf76afe165258d38e1ef8683601cb5b6" prot="public">
+          <name>TRANSPORTATION</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Ulaşım. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62acc9284597026dcc021735c0970ca0c93" prot="public">
+          <name>FOOD</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Yemek. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62a30745c1ec37b7320355b5b1750b98f84" prot="public">
+          <name>ENTERTAINMENT</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>Eğlence. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Gider kategorileri. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="87" column="1" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="87" bodyend="92"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Seyahat Gideri Takibi - Ortak Veri Tipleri ve Modelleri. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu dosya, seyahat gideri takibi uygulamasının ortak veri modellerini, enum&apos;ları ve temel tipleri içerir.</para>
+<para><simplesect kind="author"><para>Binnur Altınışık </para>
+</simplesect>
+<simplesect kind="date"><para>2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>COMMON_TYPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COMMON_TYPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctime&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="error__codes_8h" kindref="compound">error_codes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{<sp/></highlight><highlight class="comment">//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="struct_travel_expense_1_1_user" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_travel_expense_1_1_user" kindref="compound">User</ref><sp/>{</highlight></codeline>
+<codeline lineno="31" refid="struct_travel_expense_1_1_user_1a4cec5fe99724491f8257d41396940c70" refkind="member"><highlight class="normal"><sp/><sp/>int32_t<sp/><ref refid="struct_travel_expense_1_1_user_1a4cec5fe99724491f8257d41396940c70" kindref="member">userId</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="struct_travel_expense_1_1_user_1a7f54291ba35d532e5938771f83e061de" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_user_1a7f54291ba35d532e5938771f83e061de" kindref="member">username</ref>[50];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33" refid="struct_travel_expense_1_1_user_1af81ef00d0811c65e427d2ff19780ba05" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_user_1af81ef00d0811c65e427d2ff19780ba05" kindref="member">passwordHash</ref>[64];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="struct_travel_expense_1_1_user_1a06181fd6756249e6e4d537c6378691dd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_user_1a06181fd6756249e6e4d537c6378691dd" kindref="member">salt</ref>[32];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="struct_travel_expense_1_1_user_1a320d17e6980555c332bb5269e5cb5938" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_user_1a320d17e6980555c332bb5269e5cb5938" kindref="member">isGuest</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="struct_travel_expense_1_1_user_1a3304e0e4fdd2d60ad4d9a2a530c08d51" refkind="member"><highlight class="normal"><sp/><sp/>time_t<sp/><ref refid="struct_travel_expense_1_1_user_1a3304e0e4fdd2d60ad4d9a2a530c08d51" kindref="member">createdAt</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="struct_travel_expense_1_1_user_1afdd67cdd7df39e0ea95f92742eb6c6fd" refkind="member"><highlight class="normal"><sp/><sp/>time_t<sp/><ref refid="struct_travel_expense_1_1_user_1afdd67cdd7df39e0ea95f92742eb6c6fd" kindref="member">lastLogin</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="struct_travel_expense_1_1_user_1a3602bdcbdd2ea037db5c536f1de39a47" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="struct_travel_expense_1_1_user_1a3602bdcbdd2ea037db5c536f1de39a47" kindref="member">User</ref>()<sp/>:<sp/><ref refid="struct_travel_expense_1_1_user_1a4cec5fe99724491f8257d41396940c70" kindref="member">userId</ref>(0),<sp/><ref refid="struct_travel_expense_1_1_user_1a320d17e6980555c332bb5269e5cb5938" kindref="member">isGuest</ref>(false),<sp/><ref refid="struct_travel_expense_1_1_user_1a3304e0e4fdd2d60ad4d9a2a530c08d51" kindref="member">createdAt</ref>(0),<sp/><ref refid="struct_travel_expense_1_1_user_1afdd67cdd7df39e0ea95f92742eb6c6fd" kindref="member">lastLogin</ref>(0)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(<ref refid="struct_travel_expense_1_1_user_1a7f54291ba35d532e5938771f83e061de" kindref="member">username</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_travel_expense_1_1_user_1a7f54291ba35d532e5938771f83e061de" kindref="member">username</ref>));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(<ref refid="struct_travel_expense_1_1_user_1af81ef00d0811c65e427d2ff19780ba05" kindref="member">passwordHash</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_travel_expense_1_1_user_1af81ef00d0811c65e427d2ff19780ba05" kindref="member">passwordHash</ref>));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(<ref refid="struct_travel_expense_1_1_user_1a06181fd6756249e6e4d537c6378691dd" kindref="member">salt</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_travel_expense_1_1_user_1a06181fd6756249e6e4d537c6378691dd" kindref="member">salt</ref>));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="struct_travel_expense_1_1_trip" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_travel_expense_1_1_trip" kindref="compound">Trip</ref><sp/>{</highlight></codeline>
+<codeline lineno="56" refid="struct_travel_expense_1_1_trip_1aa46fcc235f25f50cfef9aebbc6040ade" refkind="member"><highlight class="normal"><sp/><sp/>int32_t<sp/><ref refid="struct_travel_expense_1_1_trip_1aa46fcc235f25f50cfef9aebbc6040ade" kindref="member">tripId</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="struct_travel_expense_1_1_trip_1a3e331ff4035a3269150c8d99f08c874a" refkind="member"><highlight class="normal"><sp/><sp/>int32_t<sp/><ref refid="struct_travel_expense_1_1_trip_1a3e331ff4035a3269150c8d99f08c874a" kindref="member">userId</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="struct_travel_expense_1_1_trip_1afd98a09bdb753d91200b64d78d6704c1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_trip_1afd98a09bdb753d91200b64d78d6704c1" kindref="member">destination</ref>[100];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="struct_travel_expense_1_1_trip_1ac5a834a054677985faf4b7330b9689ac" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_trip_1ac5a834a054677985faf4b7330b9689ac" kindref="member">startDate</ref>[11];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="struct_travel_expense_1_1_trip_1a324df3d5c655543161f59c78f88a1666" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_trip_1a324df3d5c655543161f59c78f88a1666" kindref="member">endDate</ref>[11];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="struct_travel_expense_1_1_trip_1abd14f42c5baec4e98e017a798f16eeb9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_trip_1abd14f42c5baec4e98e017a798f16eeb9" kindref="member">accommodation</ref>[200];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="struct_travel_expense_1_1_trip_1ab669c2d5e68f7546b7c8696f4a85e53d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_trip_1ab669c2d5e68f7546b7c8696f4a85e53d" kindref="member">transportation</ref>[100];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63" refid="struct_travel_expense_1_1_trip_1aef741342c3407345bd9dc3b5beb56eb9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_trip_1aef741342c3407345bd9dc3b5beb56eb9" kindref="member">budget</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="struct_travel_expense_1_1_trip_1a91fa6e04133accc77988ee4ecf19cc77" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_trip_1a91fa6e04133accc77988ee4ecf19cc77" kindref="member">totalExpenses</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="struct_travel_expense_1_1_trip_1aa8a9d62c7db7af79c25136386a9bee70" refkind="member"><highlight class="normal"><sp/><sp/>time_t<sp/><ref refid="struct_travel_expense_1_1_trip_1aa8a9d62c7db7af79c25136386a9bee70" kindref="member">createdAt</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="struct_travel_expense_1_1_trip_1a28f9028c8257a3ad54038e18ab0422d0" refkind="member"><highlight class="normal"><sp/><sp/>time_t<sp/><ref refid="struct_travel_expense_1_1_trip_1a28f9028c8257a3ad54038e18ab0422d0" kindref="member">updatedAt</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="struct_travel_expense_1_1_trip_1a2b0e5496b4460de325004462b1c94133" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="struct_travel_expense_1_1_trip_1a2b0e5496b4460de325004462b1c94133" kindref="member">Trip</ref>()<sp/>:<sp/><ref refid="struct_travel_expense_1_1_trip_1aa46fcc235f25f50cfef9aebbc6040ade" kindref="member">tripId</ref>(0),<sp/><ref refid="struct_travel_expense_1_1_trip_1a3e331ff4035a3269150c8d99f08c874a" kindref="member">userId</ref>(0),<sp/><ref refid="struct_travel_expense_1_1_trip_1aef741342c3407345bd9dc3b5beb56eb9" kindref="member">budget</ref>(0.0),<sp/><ref refid="struct_travel_expense_1_1_trip_1a91fa6e04133accc77988ee4ecf19cc77" kindref="member">totalExpenses</ref>(0.0),</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_travel_expense_1_1_trip_1aa8a9d62c7db7af79c25136386a9bee70" kindref="member">createdAt</ref>(0),<sp/><ref refid="struct_travel_expense_1_1_trip_1a28f9028c8257a3ad54038e18ab0422d0" kindref="member">updatedAt</ref>(0)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(<ref refid="struct_travel_expense_1_1_trip_1afd98a09bdb753d91200b64d78d6704c1" kindref="member">destination</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_travel_expense_1_1_trip_1afd98a09bdb753d91200b64d78d6704c1" kindref="member">destination</ref>));</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(<ref refid="struct_travel_expense_1_1_trip_1ac5a834a054677985faf4b7330b9689ac" kindref="member">startDate</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_travel_expense_1_1_trip_1ac5a834a054677985faf4b7330b9689ac" kindref="member">startDate</ref>));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(<ref refid="struct_travel_expense_1_1_trip_1a324df3d5c655543161f59c78f88a1666" kindref="member">endDate</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_travel_expense_1_1_trip_1a324df3d5c655543161f59c78f88a1666" kindref="member">endDate</ref>));</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(<ref refid="struct_travel_expense_1_1_trip_1abd14f42c5baec4e98e017a798f16eeb9" kindref="member">accommodation</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_travel_expense_1_1_trip_1abd14f42c5baec4e98e017a798f16eeb9" kindref="member">accommodation</ref>));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(<ref refid="struct_travel_expense_1_1_trip_1ab669c2d5e68f7546b7c8696f4a85e53d" kindref="member">transportation</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_travel_expense_1_1_trip_1ab669c2d5e68f7546b7c8696f4a85e53d" kindref="member">transportation</ref>));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62" kindref="member">ExpenseCategory</ref><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62aedd22f15b1b8b701b7d2c7d8114bc638" kindref="member">ACCOMMODATION</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62acf76afe165258d38e1ef8683601cb5b6" kindref="member">TRANSPORTATION</ref><sp/>=<sp/>1,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62acc9284597026dcc021735c0970ca0c93" kindref="member">FOOD</ref><sp/>=<sp/>2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62a30745c1ec37b7320355b5b1750b98f84" kindref="member">ENTERTAINMENT</ref><sp/>=<sp/>3<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="struct_travel_expense_1_1_expense" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_travel_expense_1_1_expense" kindref="compound">Expense</ref><sp/>{</highlight></codeline>
+<codeline lineno="99" refid="struct_travel_expense_1_1_expense_1a8b8d0d8ab050ba52969213b047f9f503" refkind="member"><highlight class="normal"><sp/><sp/>int32_t<sp/><ref refid="struct_travel_expense_1_1_expense_1a8b8d0d8ab050ba52969213b047f9f503" kindref="member">expenseId</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100" refid="struct_travel_expense_1_1_expense_1a5e2b7f2582ecff9f3e7c20b441b1428e" refkind="member"><highlight class="normal"><sp/><sp/>int32_t<sp/><ref refid="struct_travel_expense_1_1_expense_1a5e2b7f2582ecff9f3e7c20b441b1428e" kindref="member">tripId</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101" refid="struct_travel_expense_1_1_expense_1a9cfd21fc4f2d632e4c92e229ed9a5076" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62" kindref="member">ExpenseCategory</ref><sp/><ref refid="struct_travel_expense_1_1_expense_1a9cfd21fc4f2d632e4c92e229ed9a5076" kindref="member">category</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="102" refid="struct_travel_expense_1_1_expense_1a9befa852d17625a297af572e6e48239c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_expense_1a9befa852d17625a297af572e6e48239c" kindref="member">amount</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103" refid="struct_travel_expense_1_1_expense_1ab773ece2064231345a2684dadae3cfbd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_expense_1ab773ece2064231345a2684dadae3cfbd" kindref="member">currency</ref>[4];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104" refid="struct_travel_expense_1_1_expense_1ab5b36883541b77fb18feec3cf9602623" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_expense_1ab5b36883541b77fb18feec3cf9602623" kindref="member">date</ref>[11];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105" refid="struct_travel_expense_1_1_expense_1a6ead31c5484d9ddc9d6d419536c8821e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_expense_1a6ead31c5484d9ddc9d6d419536c8821e" kindref="member">paymentMethod</ref>[50];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106" refid="struct_travel_expense_1_1_expense_1a0b62d0af8229f9b9d743909fb4d66b87" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_expense_1a0b62d0af8229f9b9d743909fb4d66b87" kindref="member">description</ref>[200];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107" refid="struct_travel_expense_1_1_expense_1ab41221d87f44f7e4c358f4fb629f91b0" refkind="member"><highlight class="normal"><sp/><sp/>time_t<sp/><ref refid="struct_travel_expense_1_1_expense_1ab41221d87f44f7e4c358f4fb629f91b0" kindref="member">createdAt</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114" refid="struct_travel_expense_1_1_expense_1a22e75d7cb8a8fa7c7e4bdbf18b773930" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="struct_travel_expense_1_1_expense_1a22e75d7cb8a8fa7c7e4bdbf18b773930" kindref="member">Expense</ref>()<sp/>:<sp/><ref refid="struct_travel_expense_1_1_expense_1a8b8d0d8ab050ba52969213b047f9f503" kindref="member">expenseId</ref>(0),<sp/><ref refid="struct_travel_expense_1_1_expense_1a5e2b7f2582ecff9f3e7c20b441b1428e" kindref="member">tripId</ref>(0),<sp/><ref refid="struct_travel_expense_1_1_expense_1a9cfd21fc4f2d632e4c92e229ed9a5076" kindref="member">category</ref>(<ref refid="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62" kindref="member">ExpenseCategory</ref>::<ref refid="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62aedd22f15b1b8b701b7d2c7d8114bc638" kindref="member">ACCOMMODATION</ref>),</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_travel_expense_1_1_expense_1a9befa852d17625a297af572e6e48239c" kindref="member">amount</ref>(0.0),<sp/><ref refid="struct_travel_expense_1_1_expense_1ab41221d87f44f7e4c358f4fb629f91b0" kindref="member">createdAt</ref>(0)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(<ref refid="struct_travel_expense_1_1_expense_1ab773ece2064231345a2684dadae3cfbd" kindref="member">currency</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_travel_expense_1_1_expense_1ab773ece2064231345a2684dadae3cfbd" kindref="member">currency</ref>));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(<ref refid="struct_travel_expense_1_1_expense_1ab5b36883541b77fb18feec3cf9602623" kindref="member">date</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_travel_expense_1_1_expense_1ab5b36883541b77fb18feec3cf9602623" kindref="member">date</ref>));</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(<ref refid="struct_travel_expense_1_1_expense_1a6ead31c5484d9ddc9d6d419536c8821e" kindref="member">paymentMethod</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_travel_expense_1_1_expense_1a6ead31c5484d9ddc9d6d419536c8821e" kindref="member">paymentMethod</ref>));</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(<ref refid="struct_travel_expense_1_1_expense_1a0b62d0af8229f9b9d743909fb4d66b87" kindref="member">description</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_travel_expense_1_1_expense_1a0b62d0af8229f9b9d743909fb4d66b87" kindref="member">description</ref>));</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="struct_travel_expense_1_1_budget" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_travel_expense_1_1_budget" kindref="compound">Budget</ref><sp/>{</highlight></codeline>
+<codeline lineno="128" refid="struct_travel_expense_1_1_budget_1a767da4abb6223ee5ade59c404cbb5d09" refkind="member"><highlight class="normal"><sp/><sp/>int32_t<sp/><ref refid="struct_travel_expense_1_1_budget_1a767da4abb6223ee5ade59c404cbb5d09" kindref="member">budgetId</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129" refid="struct_travel_expense_1_1_budget_1a53ae78e859633faf63db41dc520532c9" refkind="member"><highlight class="normal"><sp/><sp/>int32_t<sp/><ref refid="struct_travel_expense_1_1_budget_1a53ae78e859633faf63db41dc520532c9" kindref="member">tripId</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130" refid="struct_travel_expense_1_1_budget_1af1d95a16d19b023a624e9fc722e60549" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_budget_1af1d95a16d19b023a624e9fc722e60549" kindref="member">totalBudget</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131" refid="struct_travel_expense_1_1_budget_1a86d7bf63fbddde80afc5af3b199245e2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_budget_1a86d7bf63fbddde80afc5af3b199245e2" kindref="member">spentAmount</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="132" refid="struct_travel_expense_1_1_budget_1a26aa3029683674b7114248c7f1bf4fc9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_budget_1a26aa3029683674b7114248c7f1bf4fc9" kindref="member">categoryBudgets</ref>[4];<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133" refid="struct_travel_expense_1_1_budget_1a753452857928b1d572bea18be83ebc4c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_budget_1a753452857928b1d572bea18be83ebc4c" kindref="member">categorySpent</ref>[4];<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="134" refid="struct_travel_expense_1_1_budget_1a205d86211043bbbaa313a5d4e129d869" refkind="member"><highlight class="normal"><sp/><sp/>time_t<sp/><ref refid="struct_travel_expense_1_1_budget_1a205d86211043bbbaa313a5d4e129d869" kindref="member">createdAt</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135" refid="struct_travel_expense_1_1_budget_1ab9bd8b9ca6b45f9a89c487ee5c914254" refkind="member"><highlight class="normal"><sp/><sp/>time_t<sp/><ref refid="struct_travel_expense_1_1_budget_1ab9bd8b9ca6b45f9a89c487ee5c914254" kindref="member">updatedAt</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142" refid="struct_travel_expense_1_1_budget_1a16518e438fdc159f7a000352ab111f52" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="struct_travel_expense_1_1_budget_1a16518e438fdc159f7a000352ab111f52" kindref="member">Budget</ref>()<sp/>:<sp/><ref refid="struct_travel_expense_1_1_budget_1a767da4abb6223ee5ade59c404cbb5d09" kindref="member">budgetId</ref>(0),<sp/><ref refid="struct_travel_expense_1_1_budget_1a53ae78e859633faf63db41dc520532c9" kindref="member">tripId</ref>(0),<sp/><ref refid="struct_travel_expense_1_1_budget_1af1d95a16d19b023a624e9fc722e60549" kindref="member">totalBudget</ref>(0.0),<sp/><ref refid="struct_travel_expense_1_1_budget_1a86d7bf63fbddde80afc5af3b199245e2" kindref="member">spentAmount</ref>(0.0),</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_travel_expense_1_1_budget_1a205d86211043bbbaa313a5d4e129d869" kindref="member">createdAt</ref>(0),<sp/><ref refid="struct_travel_expense_1_1_budget_1ab9bd8b9ca6b45f9a89c487ee5c914254" kindref="member">updatedAt</ref>(0)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(<ref refid="struct_travel_expense_1_1_budget_1a26aa3029683674b7114248c7f1bf4fc9" kindref="member">categoryBudgets</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_travel_expense_1_1_budget_1a26aa3029683674b7114248c7f1bf4fc9" kindref="member">categoryBudgets</ref>));</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(<ref refid="struct_travel_expense_1_1_budget_1a753452857928b1d572bea18be83ebc4c" kindref="member">categorySpent</ref>,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_travel_expense_1_1_budget_1a753452857928b1d572bea18be83ebc4c" kindref="member">categorySpent</ref>));</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>COMMON_TYPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/travelexpense/header/commonTypes.h"/>
+  </compounddef>
+</doxygen>

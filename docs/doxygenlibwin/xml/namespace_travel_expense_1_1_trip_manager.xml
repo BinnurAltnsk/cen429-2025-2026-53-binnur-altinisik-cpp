@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_travel_expense_1_1_trip_manager" kind="namespace" language="C++">
+    <compoundname>TravelExpense::TripManager</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_trip_manager_1ac7be4bff03b19399d7aa30b2d8a86c94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::TripManager::createTrip</definition>
+        <argsstring>(const Trip &amp;trip, int32_t &amp;tripId)</argsstring>
+        <name>createTrip</name>
+        <qualifiedname>TravelExpense::TripManager::createTrip</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_travel_expense_1_1_trip" kindref="compound">Trip</ref> &amp;</type>
+          <declname>trip</declname>
+        </param>
+        <param>
+          <type>int32_t &amp;</type>
+          <declname>tripId</declname>
+        </param>
+        <briefdescription>
+<para>Yeni seyahat oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen seyahat bilgilerini veritabanına kaydeder ve benzersiz bir tripId oluşturur. Seyahat, kullanıcı ID&apos;si, başlangıç/bitiş tarihi, destinasyon ve açıklama bilgilerini içerir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, yeni bir seyahat kaydı oluşturur. Seyahat ID otomatik olarak oluşturulur ve tripId parametresine yazılır.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Seyahat bilgileri (const referans, <ref refid="struct_travel_expense_1_1_trip" kindref="compound">Trip</ref> struct&apos;ı) İçerik: userId, startDate, endDate, destination, description vb. Tüm alanlar geçerli olmalı (userId &gt; 0, tarih geçerliliği vb.). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tripId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oluşturulan seyahatin benzersiz ID&apos;si (çıktı parametresi) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput, FileNotFound vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tripManager.cpp" line="20" column="11" bodyfile="src/travelexpense/src/tripManager.cpp" bodystart="20" bodyend="70" declfile="src/travelexpense/header/tripManager.h" declline="45" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_trip_manager_1a8b213c27d6c49d746400185703232b7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::TripManager::getTrips</definition>
+        <argsstring>(int32_t userId, std::vector&lt; Trip &gt; &amp;trips)</argsstring>
+        <name>getTrips</name>
+        <qualifiedname>TravelExpense::TripManager::getTrips</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>userId</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_travel_expense_1_1_trip" kindref="compound">Trip</ref> &gt; &amp;</type>
+          <declname>trips</declname>
+        </param>
+        <briefdescription>
+<para>Kullanıcıya ait seyahatleri listele. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen kullanıcı ID&apos;sine ait tüm seyahatleri veritabanından alır ve trips vektörüne doldurur. Seyahatler tarih sırasına göre sıralanabilir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, trips vektörünü temizler ve yeni seyahatlerle doldurur. Eğer kullanıcı için seyahat bulunamazsa, trips vektörü boş kalır.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>userId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kullanıcı ID (geçerli bir userId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trips</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Seyahat listesi (çıktı parametresi, std::vector&lt;Trip&gt;) Fonksiyon çağrıldığında temizlenir ve yeni seyahatlerle doldurulur. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tripManager.cpp" line="72" column="11" bodyfile="src/travelexpense/src/tripManager.cpp" bodystart="72" bodyend="122" declfile="src/travelexpense/header/tripManager.h" declline="61" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_trip_manager_1a39bc3ac908aab3ead121a77c6f290ea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::TripManager::updateTrip</definition>
+        <argsstring>(int32_t tripId, const Trip &amp;trip)</argsstring>
+        <name>updateTrip</name>
+        <qualifiedname>TravelExpense::TripManager::updateTrip</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>tripId</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_travel_expense_1_1_trip" kindref="compound">Trip</ref> &amp;</type>
+          <declname>trip</declname>
+        </param>
+        <briefdescription>
+<para>Seyahat bilgisini güncelle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen tripId&apos;ye sahip seyahati, yeni seyahat bilgileriyle günceller. Tarih, destinasyon ve açıklama gibi alanlar değiştirilebilir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, mevcut seyahat kaydını günceller. Eğer tripId geçersizse veya seyahat bulunamazsa, FileNotFound hatası döner.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tripId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Güncellenecek seyahatin benzersiz ID&apos;si (geçerli bir tripId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Güncellenmiş seyahat bilgileri (const referans, <ref refid="struct_travel_expense_1_1_trip" kindref="compound">Trip</ref> struct&apos;ı) İçerik: userId, startDate, endDate, destination, description vb. Tüm alanlar geçerli olmalı. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tripManager.cpp" line="124" column="11" bodyfile="src/travelexpense/src/tripManager.cpp" bodystart="124" bodyend="173" declfile="src/travelexpense/header/tripManager.h" declline="78" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_trip_manager_1a6686b59f40b7a211db40096af483de6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::TripManager::deleteTrip</definition>
+        <argsstring>(int32_t tripId)</argsstring>
+        <name>deleteTrip</name>
+        <qualifiedname>TravelExpense::TripManager::deleteTrip</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>tripId</declname>
+        </param>
+        <briefdescription>
+<para>Seyahati sil. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen tripId&apos;ye sahip seyahati veritabanından kalıcı olarak siler. Seyahate ait giderler de silinebilir (cascade delete).</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, seyahati kalıcı olarak siler. Silinen seyahat geri getirilemez. Eğer tripId geçersizse veya seyahat bulunamazsa, FileNotFound hatası döner.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tripId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Silinecek seyahatin benzersiz ID&apos;si (geçerli bir tripId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tripManager.cpp" line="175" column="11" bodyfile="src/travelexpense/src/tripManager.cpp" bodystart="175" bodyend="208" declfile="src/travelexpense/header/tripManager.h" declline="92" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_trip_manager_1a6e49251e6e2091a7a6db0b84cf64cacb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::TripManager::getTrip</definition>
+        <argsstring>(int32_t tripId, Trip &amp;trip)</argsstring>
+        <name>getTrip</name>
+        <qualifiedname>TravelExpense::TripManager::getTrip</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>tripId</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_trip" kindref="compound">Trip</ref> &amp;</type>
+          <declname>trip</declname>
+        </param>
+        <briefdescription>
+<para>Seyahat detayını al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen tripId&apos;ye sahip seyahatin detaylı bilgilerini veritabanından alır ve trip parametresine doldurur.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, tek bir seyahatin detaylarını getirir. Eğer seyahat bulunamazsa, FileNotFound hatası döner.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tripId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Seyahat ID (geçerli bir tripId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Seyahat bilgisi (çıktı parametresi, <ref refid="struct_travel_expense_1_1_trip" kindref="compound">Trip</ref> struct&apos;ı) İçerik: tripId, userId, startDate, endDate, destination, description vb. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tripManager.cpp" line="210" column="11" bodyfile="src/travelexpense/src/tripManager.cpp" bodystart="210" bodyend="261" declfile="src/travelexpense/header/tripManager.h" declline="108" declcolumn="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/travelexpense/header/tripManager.h" line="28" column="1"/>
+  </compounddef>
+</doxygen>

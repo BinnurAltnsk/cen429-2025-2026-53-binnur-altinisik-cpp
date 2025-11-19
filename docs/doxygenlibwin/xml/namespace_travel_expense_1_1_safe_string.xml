@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_travel_expense_1_1_safe_string" kind="namespace" language="C++">
+    <compoundname>TravelExpense::SafeString</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_safe_string_1a5555a53d845f3644d0dfc17c0f097075" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TravelExpense::SafeString::safeCopy</definition>
+        <argsstring>(char *dest, size_t destSize, const char *src)</argsstring>
+        <name>safeCopy</name>
+        <qualifiedname>TravelExpense::SafeString::safeCopy</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>destSize</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Güvenli string kopyalama. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>MSVC&apos;de strncpy_s kullanır, diğer platformlarda strncpy + null terminator.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hedef buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hedef buffer boyutu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kaynak string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/safe_string.h" line="39" column="13" bodyfile="src/travelexpense/header/safe_string.h" bodystart="39" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_safe_string_1a569736a8bdffe728575d3baf0a515712" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TravelExpense::SafeString::safeConcat</definition>
+        <argsstring>(char *dest, size_t destSize, const char *src)</argsstring>
+        <name>safeConcat</name>
+        <qualifiedname>TravelExpense::SafeString::safeConcat</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>destSize</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Güvenli string birleştirme. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>MSVC&apos;de strncat_s kullanır, diğer platformlarda strncat.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hedef buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hedef buffer boyutu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Eklenecek string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/safe_string.h" line="73" column="13" bodyfile="src/travelexpense/header/safe_string.h" bodystart="73" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/travelexpense/header/safe_string.h" line="27" column="1"/>
+  </compounddef>
+</doxygen>

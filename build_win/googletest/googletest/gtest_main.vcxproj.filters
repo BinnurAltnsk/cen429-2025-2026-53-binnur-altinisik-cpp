@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\tests\googletest\googletest\src\gtest_main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\tests\googletest\googletest\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{1DE1A7CA-030A-32B1-B3D5-579141727C54}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

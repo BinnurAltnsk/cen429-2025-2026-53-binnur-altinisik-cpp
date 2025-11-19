@@ -1,0 +1,396 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="database_8h" kind="file" language="C++">
+    <compoundname>database.h</compoundname>
+    <includes refid="common_types_8h" local="yes">commonTypes.h</includes>
+    <includes refid="export_8h" local="yes">export.h</includes>
+    <includes local="no">sqlite3.h</includes>
+    <includes local="no">string</includes>
+    <includedby refid="travelexpense_8h" local="yes">src/travelexpense/header/travelexpense.h</includedby>
+    <includedby refid="asset_manager_8cpp" local="yes">src/travelexpense/src/assetManager.cpp</includedby>
+    <includedby refid="budget_manager_8cpp" local="yes">src/travelexpense/src/budgetManager.cpp</includedby>
+    <includedby refid="database_8cpp" local="yes">src/travelexpense/src/database.cpp</includedby>
+    <includedby refid="expense_manager_8cpp" local="yes">src/travelexpense/src/expenseManager.cpp</includedby>
+    <includedby refid="migration_8cpp" local="yes">src/travelexpense/src/migration.cpp</includedby>
+    <includedby refid="trip_manager_8cpp" local="yes">src/travelexpense/src/tripManager.cpp</includedby>
+    <includedby refid="user_auth_8cpp" local="yes">src/travelexpense/src/userAuth.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>commonTypes.h</label>
+        <link refid="common_types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/travelexpense/header/database.h</label>
+        <link refid="database_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>error_codes.h</label>
+        <link refid="error__codes_8h"/>
+      </node>
+      <node id="7">
+        <label>export.h</label>
+        <link refid="export_8h"/>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>cstring</label>
+      </node>
+      <node id="4">
+        <label>ctime</label>
+      </node>
+      <node id="8">
+        <label>sqlite3.h</label>
+      </node>
+      <node id="9">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/travelexpense/header/database.h</label>
+        <link refid="database_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/travelexpense/header/travelexpense.h</label>
+        <link refid="travelexpense_8h"/>
+      </node>
+      <node id="3">
+        <label>src/travelexpense/src/assetManager.cpp</label>
+        <link refid="asset_manager_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/travelexpense/src/budgetManager.cpp</label>
+        <link refid="budget_manager_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/travelexpense/src/database.cpp</label>
+        <link refid="database_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/travelexpense/src/expenseManager.cpp</label>
+        <link refid="expense_manager_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/travelexpense/src/migration.cpp</label>
+        <link refid="migration_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/travelexpense/src/tripManager.cpp</label>
+        <link refid="trip_manager_8cpp"/>
+      </node>
+      <node id="9">
+        <label>src/travelexpense/src/userAuth.cpp</label>
+        <link refid="user_auth_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
+    <innernamespace refid="namespace_database">Database</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_database">TravelExpense::Database</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_database_1ae9f9e2befdc1734e0096e402864e98e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> sqlite3 *</type>
+        <definition>sqlite3 * TravelExpense::Database::initializeDatabase</definition>
+        <argsstring>(const char *dbPath=nullptr)</argsstring>
+        <name>initializeDatabase</name>
+        <qualifiedname>TravelExpense::Database::initializeDatabase</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>dbPath</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Veritabanı bağlantısını başlat. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>SQLite veritabanı dosyasına bağlantı açar. Dosya yoksa oluşturur. Veritabanı dosyası, belirtilen yolda oluşturulur veya açılır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, veritabanı dosyasının bulunduğu dizini oluşturmaz. Dizin önceden oluşturulmuş olmalıdır. Eğer dizin yoksa, hata döner.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dbPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veritabanı dosya yolu (nullptr ise &quot;data/travelexpense.db&quot; kullanılır) Dosya yolu geçerli olmalı ve dizin mevcut olmalı. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>sqlite3* Veritabanı handle&apos;ı, nullptr ise hata (dosya açılamadı, izin hatası vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/database.cpp" line="80" column="9" bodyfile="src/travelexpense/src/database.cpp" bodystart="80" bodyend="105" declfile="src/travelexpense/header/database.h" declline="45" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_database_1a2af129a13996d54e28626bb31ea628dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::Database::closeDatabase</definition>
+        <argsstring>(sqlite3 *db)</argsstring>
+        <name>closeDatabase</name>
+        <qualifiedname>TravelExpense::Database::closeDatabase</qualifiedname>
+        <param>
+          <type>sqlite3 *</type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+<para>Veritabanı bağlantısını kapat. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Açık olan SQLite veritabanı bağlantısını kapatır ve kaynakları temizler. Tüm prepared statement&apos;lar ve transaction&apos;lar kapatılır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, nullptr handle&apos;ı geçerli kabul eder ve Success döner. Bağlantı kapatıldıktan sonra, handle geçersiz hale gelir.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>db</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veritabanı handle&apos;ı (nullptr ise hiçbir işlem yapılmaz) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, <ref refid="namespace_travel_expense_1_1_file_i_o" kindref="compound">FileIO</ref> vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/database.cpp" line="107" column="11" bodyfile="src/travelexpense/src/database.cpp" bodystart="107" bodyend="119" declfile="src/travelexpense/header/database.h" declline="59" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_database_1a99d005e75737c809467eaa2bc6a50618" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::Database::createTables</definition>
+        <argsstring>(sqlite3 *db)</argsstring>
+        <name>createTables</name>
+        <qualifiedname>TravelExpense::Database::createTables</qualifiedname>
+        <param>
+          <type>sqlite3 *</type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+<para>Veritabanı tablolarını oluştur (migration) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Veritabanında gerekli tabloları oluşturur (users, trips, expenses, budgets). Tablolar zaten varsa hata vermez (IF NOT EXISTS kullanılır).</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, veritabanı şemasını initialize eder. Her tablo için CREATE TABLE IF NOT EXISTS komutu çalıştırılır.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>db</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veritabanı handle&apos;ı (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput, <ref refid="namespace_travel_expense_1_1_file_i_o" kindref="compound">FileIO</ref> vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/database.cpp" line="121" column="11" bodyfile="src/travelexpense/src/database.cpp" bodystart="121" bodyend="279" declfile="src/travelexpense/header/database.h" declline="73" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_database_1a0f85378d912f28f14a19aba99432dcca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> sqlite3 *</type>
+        <definition>sqlite3 * TravelExpense::Database::getDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>getDatabase</name>
+        <qualifiedname>TravelExpense::Database::getDatabase</qualifiedname>
+        <briefdescription>
+<para>Veritabanı handle&apos;ını al (singleton pattern) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mevcut veritabanı bağlantısını döndürür. Eğer bağlantı yoksa yeni bir bağlantı oluşturur (<ref refid="namespace_travel_expense_1_1_database_1ae9f9e2befdc1734e0096e402864e98e7" kindref="member">initializeDatabase()</ref> çağrılır).</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, singleton pattern kullanarak tek bir veritabanı bağlantısı yönetir. İlk çağrıda bağlantı oluşturulur.</para>
+</simplesect>
+<simplesect kind="return"><para>sqlite3* Veritabanı handle&apos;ı (nullptr ise bağlantı oluşturulamadı) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/database.cpp" line="281" column="9" bodyfile="src/travelexpense/src/database.cpp" bodystart="281" bodyend="291" declfile="src/travelexpense/header/database.h" declline="86" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_database_1af40f61d51e24a23410e02d43bde19b52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::Database::resetDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>resetDatabase</name>
+        <qualifiedname>TravelExpense::Database::resetDatabase</qualifiedname>
+        <briefdescription>
+<para>Veritabanı bağlantısını sıfırla (yeniden bağlan) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mevcut bağlantıyı kapatır ve yeni bir bağlantı açar. Singleton pattern&apos;deki bağlantıyı yeniden başlatır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, veritabanı bağlantısını yeniden başlatmak için kullanılır. Tüm açık transaction&apos;lar ve prepared statement&apos;lar kapatılır.</para>
+</simplesect>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, <ref refid="namespace_travel_expense_1_1_file_i_o" kindref="compound">FileIO</ref>, FileNotFound vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/database.cpp" line="293" column="11" bodyfile="src/travelexpense/src/database.cpp" bodystart="293" bodyend="306" declfile="src/travelexpense/header/database.h" declline="99" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_database_1aff8adb5540160c816b2cf5c81bd12766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::Database::executeQuery</definition>
+        <argsstring>(sqlite3 *db, const char *sql)</argsstring>
+        <name>executeQuery</name>
+        <qualifiedname>TravelExpense::Database::executeQuery</qualifiedname>
+        <param>
+          <type>sqlite3 *</type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>sql</declname>
+        </param>
+        <briefdescription>
+<para>SQL sorgusu çalıştır (basit) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Basit SQL sorgularını (INSERT, UPDATE, DELETE gibi) çalıştırır. Sonuç döndürmeyen sorgular için kullanılır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, sqlite3_exec() kullanarak sorguyu çalıştırır. SELECT sorguları için kullanılmaz (sonuç döndürmez). Prepared statement kullanmak daha güvenlidir.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>db</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veritabanı handle&apos;ı (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sql</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SQL sorgusu (nullptr ise InvalidInput döner, null-terminated string olmalı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput, <ref refid="namespace_travel_expense_1_1_file_i_o" kindref="compound">FileIO</ref> vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/database.cpp" line="308" column="11" bodyfile="src/travelexpense/src/database.cpp" bodystart="308" bodyend="325" declfile="src/travelexpense/header/database.h" declline="115" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_database_1a2a2fd018c29919ea9a677f61dde3b4db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> int64_t</type>
+        <definition>int64_t TravelExpense::Database::getLastInsertRowId</definition>
+        <argsstring>(sqlite3 *db)</argsstring>
+        <name>getLastInsertRowId</name>
+        <qualifiedname>TravelExpense::Database::getLastInsertRowId</qualifiedname>
+        <param>
+          <type>sqlite3 *</type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+<para>Son eklenen satırın ID&apos;sini al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Son INSERT işleminde eklenen satırın auto-increment ID&apos;sini döndürür. SQLite&apos;in last_insert_rowid() fonksiyonunu kullanır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, son INSERT işleminden sonra çağrılmalıdır. Eğer INSERT işlemi yapılmadıysa veya hata varsa, 0 döner.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>db</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veritabanı handle&apos;ı (nullptr ise 0 döner) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int64_t Son eklenen satır ID&apos;si, 0 ise hata veya satır eklenmemiş </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/database.cpp" line="327" column="9" bodyfile="src/travelexpense/src/database.cpp" bodystart="327" bodyend="333" declfile="src/travelexpense/header/database.h" declline="129" declcolumn="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Seyahat Gideri Takibi - SQLite Veritabanı Yönetimi. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu dosya, SQLite veritabanı bağlantı ve yönetim fonksiyonlarının bildirimlerini içerir.</para>
+<para><simplesect kind="author"><para>Binnur Altınışık </para>
+</simplesect>
+<simplesect kind="date"><para>2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DATABASE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DATABASE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_types_8h" kindref="compound">commonTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="export_8h" kindref="compound">export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sqlite3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{<sp/></highlight><highlight class="comment">//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="namespace_travel_expense_1_1_database" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_database" kindref="compound">Database</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>sqlite3<sp/>*<ref refid="namespace_travel_expense_1_1_database_1ae9f9e2befdc1734e0096e402864e98e7" kindref="member">initializeDatabase</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dbPath<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_database_1a2af129a13996d54e28626bb31ea628dd" kindref="member">closeDatabase</ref>(sqlite3<sp/>*db);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_database_1a99d005e75737c809467eaa2bc6a50618" kindref="member">createTables</ref>(sqlite3<sp/>*db);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>sqlite3<sp/>*<ref refid="namespace_travel_expense_1_1_database_1a0f85378d912f28f14a19aba99432dcca" kindref="member">getDatabase</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_database_1af40f61d51e24a23410e02d43bde19b52" kindref="member">resetDatabase</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_database_1aff8adb5540160c816b2cf5c81bd12766" kindref="member">executeQuery</ref>(sqlite3<sp/>*db,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sql);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>int64_t<sp/><ref refid="namespace_travel_expense_1_1_database_1a2a2fd018c29919ea9a677f61dde3b4db" kindref="member">getLastInsertRowId</ref>(sqlite3<sp/>*db);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DATABASE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/travelexpense/header/database.h"/>
+  </compounddef>
+</doxygen>

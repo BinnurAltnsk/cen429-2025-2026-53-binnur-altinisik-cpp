@@ -1,0 +1,64 @@
+\doxysection{src/travelexpense/header/database.h File Reference}
+\hypertarget{database_8h}{}\label{database_8h}\index{src/travelexpense/header/database.h@{src/travelexpense/header/database.h}}
+
+
+Seyahat Gideri Takibi -\/ SQLite Veritabanı Yönetimi.  
+
+
+{\ttfamily \#include \"{}common\+Types.\+h\"{}}\newline
+{\ttfamily \#include \"{}export.\+h\"{}}\newline
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for database.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense}{Travel\+Expense}}
+\begin{DoxyCompactList}\small\item\em Ana namespace -\/ Seyahat Gideri Takibi uygulaması \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_database}{Database}}
+\begin{DoxyCompactList}\small\item\em SQLite veritabanı yönetimi modülü \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_database}{Travel\+Expense\+::\+Database}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} sqlite3 \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_travel_expense_1_1_database_ae9f9e2befdc1734e0096e402864e98e7}{Travel\+Expense\+::\+Database\+::initialize\+Database}} (const char \texorpdfstring{$\ast$}{*}db\+Path=nullptr)
+\begin{DoxyCompactList}\small\item\em Veritabanı bağlantısını başlat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_database_a2af129a13996d54e28626bb31ea628dd}{Travel\+Expense\+::\+Database\+::close\+Database}} (sqlite3 \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Veritabanı bağlantısını kapat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_database_a99d005e75737c809467eaa2bc6a50618}{Travel\+Expense\+::\+Database\+::create\+Tables}} (sqlite3 \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Veritabanı tablolarını oluştur (migration) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} sqlite3 \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_travel_expense_1_1_database_a0f85378d912f28f14a19aba99432dcca}{Travel\+Expense\+::\+Database\+::get\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Veritabanı handle\textquotesingle{}ını al (singleton pattern) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_database_af40f61d51e24a23410e02d43bde19b52}{Travel\+Expense\+::\+Database\+::reset\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Veritabanı bağlantısını sıfırla (yeniden bağlan) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_database_aff8adb5540160c816b2cf5c81bd12766}{Travel\+Expense\+::\+Database\+::execute\+Query}} (sqlite3 \texorpdfstring{$\ast$}{*}db, const char \texorpdfstring{$\ast$}{*}sql)
+\begin{DoxyCompactList}\small\item\em SQL sorgusu çalıştır (basit) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} int64\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_database_a2a2fd018c29919ea9a677f61dde3b4db}{Travel\+Expense\+::\+Database\+::get\+Last\+Insert\+Row\+Id}} (sqlite3 \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Son eklenen satırın ID\textquotesingle{}sini al. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ SQLite Veritabanı Yönetimi. 
+
+Bu dosya, SQLite veritabanı bağlantı ve yönetim fonksiyonlarının bildirimlerini içerir.
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}

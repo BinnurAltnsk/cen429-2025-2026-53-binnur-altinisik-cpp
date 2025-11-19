@@ -1,0 +1,866 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="session_manager_8h" kind="file" language="C++">
+    <compoundname>sessionManager.h</compoundname>
+    <includes refid="common_types_8h" local="yes">commonTypes.h</includes>
+    <includes refid="export_8h" local="yes">export.h</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">cstddef</includes>
+    <includedby refid="travelexpense_8h" local="yes">src/travelexpense/header/travelexpense.h</includedby>
+    <includedby refid="fingerprinting_8cpp" local="yes">src/travelexpense/src/fingerprinting.cpp</includedby>
+    <includedby refid="session_manager_8cpp" local="yes">src/travelexpense/src/sessionManager.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>commonTypes.h</label>
+        <link refid="common_types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>error_codes.h</label>
+        <link refid="error__codes_8h"/>
+      </node>
+      <node id="7">
+        <label>export.h</label>
+        <link refid="export_8h"/>
+      </node>
+      <node id="1">
+        <label>src/travelexpense/header/sessionManager.h</label>
+        <link refid="session_manager_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>cstddef</label>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>cstring</label>
+      </node>
+      <node id="4">
+        <label>ctime</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/travelexpense/header/sessionManager.h</label>
+        <link refid="session_manager_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/travelexpense/header/travelexpense.h</label>
+        <link refid="travelexpense_8h"/>
+      </node>
+      <node id="3">
+        <label>src/travelexpense/src/fingerprinting.cpp</label>
+        <link refid="fingerprinting_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/travelexpense/src/sessionManager.cpp</label>
+        <link refid="session_manager_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
+    <innernamespace refid="namespace_session_manager">SessionManager</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_session_manager">TravelExpense::SessionManager</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a12a41739ca5b6def4d5c42ef155d951c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::SessionManager::generateSessionKey</definition>
+        <argsstring>(uint8_t *sessionKey, size_t sessionKeyLen)</argsstring>
+        <name>generateSessionKey</name>
+        <qualifiedname>TravelExpense::SessionManager::generateSessionKey</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>sessionKey</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sessionKeyLen</declname>
+        </param>
+        <briefdescription>
+<para>Oturum anahtarı oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı oturum anahtarı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionKeyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oturum anahtarı uzunluğu (32) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="41" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="41" bodyend="52" declfile="src/travelexpense/header/sessionManager.h" declline="49" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a7434e31c9b23e2a214624a2f68932efe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::SessionManager::encryptSessionKey</definition>
+        <argsstring>(const uint8_t *plainSessionKey, uint8_t *encryptedSessionKey, size_t &amp;encryptedLen)</argsstring>
+        <name>encryptSessionKey</name>
+        <qualifiedname>TravelExpense::SessionManager::encryptSessionKey</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>plainSessionKey</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>encryptedSessionKey</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>encryptedLen</declname>
+        </param>
+        <briefdescription>
+<para>Oturum anahtarını şifrele. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Oturum anahtarlarının şifrelenerek iletilmesi gereksinimini karşılar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plainSessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmemiş oturum anahtarı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encryptedSessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş oturum anahtarı çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encryptedLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="54" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="54" bodyend="92" declfile="src/travelexpense/header/sessionManager.h" declline="61" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a95882d531215f84b305d891fc5f9631d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::SessionManager::decryptSessionKey</definition>
+        <argsstring>(const uint8_t *encryptedSessionKey, size_t encryptedLen, uint8_t *plainSessionKey)</argsstring>
+        <name>decryptSessionKey</name>
+        <qualifiedname>TravelExpense::SessionManager::decryptSessionKey</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>encryptedSessionKey</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>encryptedLen</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>plainSessionKey</declname>
+        </param>
+        <briefdescription>
+<para>Şifrelenmiş oturum anahtarını çöz. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>encryptedSessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş oturum anahtarı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>encryptedLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plainSessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş oturum anahtarı çıktısı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="94" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="94" bodyend="120" declfile="src/travelexpense/header/sessionManager.h" declline="73" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1aa420877416fa8452b1d1468585770e96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::SessionManager::getDeviceFingerprint</definition>
+        <argsstring>(char *fingerprint)</argsstring>
+        <name>getDeviceFingerprint</name>
+        <qualifiedname>TravelExpense::SessionManager::getDeviceFingerprint</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>fingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Cihaz fingerprint&apos;ini al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uygulamanın yalnızca belirli cihazlarda çalışması gereksinimini karşılar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cihaz fingerprint çıktısı (64 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="126" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="126" bodyend="193" declfile="src/travelexpense/header/sessionManager.h" declline="89" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a85a30162b30da070bf49cd2ee0108ab8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::SessionManager::getApplicationVersion</definition>
+        <argsstring>(char *version, size_t versionLen)</argsstring>
+        <name>getApplicationVersion</name>
+        <qualifiedname>TravelExpense::SessionManager::getApplicationVersion</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>version</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>versionLen</declname>
+        </param>
+        <briefdescription>
+<para>Uygulama sürümünü al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>version</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sürüm string çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>versionLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maksimum uzunluk </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="195" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="195" bodyend="205" declfile="src/travelexpense/header/sessionManager.h" declline="98" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1ad6e58bd9ca5d725609dd33e56febf537" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::SessionManager::validateDeviceAndVersion</definition>
+        <argsstring>(const char *deviceFingerprint, const char *appVersion)</argsstring>
+        <name>validateDeviceAndVersion</name>
+        <qualifiedname>TravelExpense::SessionManager::validateDeviceAndVersion</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>deviceFingerprint</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>appVersion</declname>
+        </param>
+        <briefdescription>
+<para>Cihaz ve sürüm kontrolü yap. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uygulamanın yalnızca belirli cihazlar ve sürümlerde çalışması gereksinimini karşılar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deviceFingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kontrol edilecek cihaz fingerprint&apos;i </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>appVersion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kontrol edilecek uygulama sürümü </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="207" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="207" bodyend="237" declfile="src/travelexpense/header/sessionManager.h" declline="109" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a98f8147a318c7a1b09f0a33cb45e370b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::SessionManager::encryptPayload</definition>
+        <argsstring>(const void *plaintext, size_t plaintextLen, const uint8_t *sessionKey, void *ciphertext, size_t &amp;ciphertextLen)</argsstring>
+        <name>encryptPayload</name>
+        <qualifiedname>TravelExpense::SessionManager::encryptPayload</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>plaintext</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>plaintextLen</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>sessionKey</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ciphertext</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>ciphertextLen</declname>
+        </param>
+        <briefdescription>
+<para>Veriyi şifrele (Confidential Payload) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Taşınan verilerin şifrelenmesi gereksinimini karşılar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oturum anahtarı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="243" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="243" bodyend="274" declfile="src/travelexpense/header/sessionManager.h" declline="128" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a26e4f223ea8d2e55444a116613d7283c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::SessionManager::decryptPayload</definition>
+        <argsstring>(const void *ciphertext, size_t ciphertextLen, const uint8_t *sessionKey, void *plaintext, size_t &amp;plaintextLen)</argsstring>
+        <name>decryptPayload</name>
+        <qualifiedname>TravelExpense::SessionManager::decryptPayload</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>ciphertext</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ciphertextLen</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>sessionKey</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>plaintext</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>plaintextLen</declname>
+        </param>
+        <briefdescription>
+<para>Şifrelenmiş veriyi çöz (Confidential Payload) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oturum anahtarı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri uzunluğu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="276" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="276" bodyend="296" declfile="src/travelexpense/header/sessionManager.h" declline="142" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a66d5424f95a73b886a56e3671491d2a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::SessionManager::calculateHMAC</definition>
+        <argsstring>(const void *data, size_t dataLen, const uint8_t *sessionKey, char *hmac)</argsstring>
+        <name>calculateHMAC</name>
+        <qualifiedname>TravelExpense::SessionManager::calculateHMAC</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dataLen</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>sessionKey</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>hmac</declname>
+        </param>
+        <briefdescription>
+<para>Veri bütünlük kontrolü (HMAC) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Verilerin doğruluğu ve kaynağı kontrolü gereksinimini karşılar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kontrol edilecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oturum anahtarı (HMAC için) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hmac</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HMAC çıktısı (32 byte - 64 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="302" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="302" bodyend="315" declfile="src/travelexpense/header/sessionManager.h" declline="161" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1aceef3c52f919a1a4f68686d3985b0812" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::SessionManager::verifyHMAC</definition>
+        <argsstring>(const void *data, size_t dataLen, const uint8_t *sessionKey, const char *expectedHMAC)</argsstring>
+        <name>verifyHMAC</name>
+        <qualifiedname>TravelExpense::SessionManager::verifyHMAC</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dataLen</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>sessionKey</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>expectedHMAC</declname>
+        </param>
+        <briefdescription>
+<para>HMAC doğrulama. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kontrol edilecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oturum anahtarı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>expectedHMAC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen HMAC değeri (64 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR_CHECKSUM_MISMATCH = geçersiz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="317" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="317" bodyend="337" declfile="src/travelexpense/header/sessionManager.h" declline="174" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1ad56f31d3d436c019b72a4e7e530c2270" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::SessionManager::signData</definition>
+        <argsstring>(const void *data, size_t dataLen, char *signature)</argsstring>
+        <name>signData</name>
+        <qualifiedname>TravelExpense::SessionManager::signData</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dataLen</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>signature</declname>
+        </param>
+        <briefdescription>
+<para>Veri imzala. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sunucu tarafında dijital imza doğrulaması gereksinimini karşılar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İmzalanacak veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dijital imza çıktısı (64 byte - 128 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="343" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="343" bodyend="375" declfile="src/travelexpense/header/sessionManager.h" declline="192" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1aaf4139a793d646ebb66eac13338753b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::SessionManager::verifySignature</definition>
+        <argsstring>(const void *data, size_t dataLen, const char *signature)</argsstring>
+        <name>verifySignature</name>
+        <qualifiedname>TravelExpense::SessionManager::verifySignature</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dataLen</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>signature</declname>
+        </param>
+        <briefdescription>
+<para>Dijital imza doğrulama. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Doğrulanacak veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen dijital imza (128 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR_CHECKSUM_MISMATCH = geçersiz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/sessionManager.cpp" line="377" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="377" bodyend="396" declfile="src/travelexpense/header/sessionManager.h" declline="203" declcolumn="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Seyahat Gideri Takibi - Oturum Yönetimi ve İletim Güvenliği. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu dosya, İletim Sırasındaki Veri Güvenliği gereksinimlerini karşılar:<itemizedlist>
+<listitem><para>Oturum Anahtarı: Şifrelenmiş oturum anahtarları kullanılması</para>
+</listitem><listitem><para>Cihaz Bağlantısı ve Sürüm Bağlantısı: Belirli cihazlar ve sürümlerde çalışma</para>
+</listitem><listitem><para>Gizli Veri (Confidential Payload): Taşınan verilerin şifrelenmesi</para>
+</listitem><listitem><para>Bütünlük Kontrolü ve Kimlik Doğrulama: Verilerin doğruluğu ve kaynağı</para>
+</listitem><listitem><para>Sunucu Doğrulama Kodu: Dijital imza doğrulaması</para>
+</listitem><listitem><para>Oturum Anahtarı Şifreleme: Oturum anahtarlarının şifrelenerek iletilmesi</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="author"><para>Binnur Altınışık </para>
+</simplesect>
+<simplesect kind="date"><para>2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SESSION_MANAGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SESSION_MANAGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_types_8h" kindref="compound">commonTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="export_8h" kindref="compound">export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{<sp/></highlight><highlight class="comment">//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="namespace_travel_expense_1_1_session_manager" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_session_manager" kindref="compound">SessionManager</ref><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>OTURUM<sp/>ANAHTARI<sp/>YÖNETİMİ</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_session_manager_1a12a41739ca5b6def4d5c42ef155d951c" kindref="member">generateSessionKey</ref>(uint8_t<sp/>*sessionKey,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sessionKeyLen);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_session_manager_1a7434e31c9b23e2a214624a2f68932efe" kindref="member">encryptSessionKey</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*plainSessionKey,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*encryptedSessionKey,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;encryptedLen);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_session_manager_1a95882d531215f84b305d891fc5f9631d" kindref="member">decryptSessionKey</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*encryptedSessionKey,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>encryptedLen,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*plainSessionKey);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CİHAZ<sp/>BAĞLANTISI<sp/>VE<sp/>SÜRÜM<sp/>KONTROLÜ</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_session_manager_1aa420877416fa8452b1d1468585770e96" kindref="member">getDeviceFingerprint</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fingerprint);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_session_manager_1a85a30162b30da070bf49cd2ee0108ab8" kindref="member">getApplicationVersion</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*version,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>versionLen);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_session_manager_1ad6e58bd9ca5d725609dd33e56febf537" kindref="member">validateDeviceAndVersion</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*deviceFingerprint,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*appVersion);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GİZLİ<sp/>VERİ<sp/>(CONFIDENTIAL<sp/>PAYLOAD)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_session_manager_1a98f8147a318c7a1b09f0a33cb45e370b" kindref="member">encryptPayload</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*plaintext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>plaintextLen,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*sessionKey,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ciphertext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;ciphertextLen);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_session_manager_1a26e4f223ea8d2e55444a116613d7283c" kindref="member">decryptPayload</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ciphertext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ciphertextLen,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*sessionKey,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*plaintext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;plaintextLen);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">//<sp/>BÜTÜNLÜK<sp/>KONTROLÜ<sp/>VE<sp/>KİMLİK<sp/>DOĞRULAMA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_session_manager_1a66d5424f95a73b886a56e3671491d2a6" kindref="member">calculateHMAC</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dataLen,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*sessionKey,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hmac);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_session_manager_1aceef3c52f919a1a4f68686d3985b0812" kindref="member">verifyHMAC</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dataLen,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*sessionKey,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*expectedHMAC);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SUNUCU<sp/>DOĞRULAMA<sp/>KODU<sp/>(DİJİTAL<sp/>İMZA)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_session_manager_1ad56f31d3d436c019b72a4e7e530c2270" kindref="member">signData</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dataLen,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*signature);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_session_manager_1aaf4139a793d646ebb66eac13338753b5" kindref="member">verifySignature</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dataLen,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*signature);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>SessionManager</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>SESSION_MANAGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/travelexpense/header/sessionManager.h"/>
+  </compounddef>
+</doxygen>

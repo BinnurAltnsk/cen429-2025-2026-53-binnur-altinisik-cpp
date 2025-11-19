@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="export_8h" kind="file" language="C++">
+    <compoundname>export.h</compoundname>
+    <includedby refid="asset_manager_8h" local="yes">src/travelexpense/header/assetManager.h</includedby>
+    <includedby refid="budget_manager_8h" local="yes">src/travelexpense/header/budgetManager.h</includedby>
+    <includedby refid="codehardening_8h" local="yes">src/travelexpense/header/codehardening.h</includedby>
+    <includedby refid="database_8h" local="yes">src/travelexpense/header/database.h</includedby>
+    <includedby refid="encryption_8h" local="yes">src/travelexpense/header/encryption.h</includedby>
+    <includedby refid="expense_manager_8h" local="yes">src/travelexpense/header/expenseManager.h</includedby>
+    <includedby refid="file_i_o_8h" local="yes">src/travelexpense/header/fileIO.h</includedby>
+    <includedby refid="fingerprinting_8h" local="yes">src/travelexpense/header/fingerprinting.h</includedby>
+    <includedby refid="migration_8h" local="yes">src/travelexpense/header/migration.h</includedby>
+    <includedby refid="rasp_8h" local="yes">src/travelexpense/header/rasp.h</includedby>
+    <includedby refid="report_generator_8h" local="yes">src/travelexpense/header/reportGenerator.h</includedby>
+    <includedby refid="security_8h" local="yes">src/travelexpense/header/security.h</includedby>
+    <includedby refid="session_manager_8h" local="yes">src/travelexpense/header/sessionManager.h</includedby>
+    <includedby refid="softhsm_8h" local="yes">src/travelexpense/header/softhsm.h</includedby>
+    <includedby refid="tls_8h" local="yes">src/travelexpense/header/tls.h</includedby>
+    <includedby refid="trip_manager_8h" local="yes">src/travelexpense/header/tripManager.h</includedby>
+    <includedby refid="user_auth_8h" local="yes">src/travelexpense/header/userAuth.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/travelexpense/header/assetManager.h</label>
+        <link refid="asset_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/travelexpense/header/budgetManager.h</label>
+        <link refid="budget_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/travelexpense/header/codehardening.h</label>
+        <link refid="codehardening_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>src/travelexpense/header/database.h</label>
+        <link refid="database_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>src/travelexpense/header/encryption.h</label>
+        <link refid="encryption_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>src/travelexpense/header/expenseManager.h</label>
+        <link refid="expense_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/travelexpense/header/export.h</label>
+        <link refid="export_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>src/travelexpense/header/fileIO.h</label>
+        <link refid="file_i_o_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>src/travelexpense/header/fingerprinting.h</label>
+        <link refid="fingerprinting_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>src/travelexpense/header/migration.h</label>
+        <link refid="migration_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>src/travelexpense/header/rasp.h</label>
+        <link refid="rasp_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>src/travelexpense/header/reportGenerator.h</label>
+        <link refid="report_generator_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>src/travelexpense/header/security.h</label>
+        <link refid="security_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>src/travelexpense/header/sessionManager.h</label>
+        <link refid="session_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>src/travelexpense/header/softhsm.h</label>
+        <link refid="softhsm_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>src/travelexpense/header/tls.h</label>
+        <link refid="tls_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/travelexpense/header/travelexpense.h</label>
+        <link refid="travelexpense_8h"/>
+      </node>
+      <node id="35">
+        <label>src/travelexpense/header/tripManager.h</label>
+        <link refid="trip_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>src/travelexpense/header/userAuth.h</label>
+        <link refid="user_auth_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/travelexpense/src/assetManager.cpp</label>
+        <link refid="asset_manager_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/travelexpense/src/budgetManager.cpp</label>
+        <link refid="budget_manager_8cpp"/>
+      </node>
+      <node id="9">
+        <label>src/travelexpense/src/codehardening.cpp</label>
+        <link refid="codehardening_8cpp"/>
+      </node>
+      <node id="11">
+        <label>src/travelexpense/src/database.cpp</label>
+        <link refid="database_8cpp"/>
+      </node>
+      <node id="17">
+        <label>src/travelexpense/src/encryption.cpp</label>
+        <link refid="encryption_8cpp"/>
+      </node>
+      <node id="12">
+        <label>src/travelexpense/src/expenseManager.cpp</label>
+        <link refid="expense_manager_8cpp"/>
+      </node>
+      <node id="24">
+        <label>src/travelexpense/src/fileIO.cpp</label>
+        <link refid="file_i_o_8cpp"/>
+      </node>
+      <node id="18">
+        <label>src/travelexpense/src/fingerprinting.cpp</label>
+        <link refid="fingerprinting_8cpp"/>
+      </node>
+      <node id="13">
+        <label>src/travelexpense/src/migration.cpp</label>
+        <link refid="migration_8cpp"/>
+      </node>
+      <node id="19">
+        <label>src/travelexpense/src/rasp.cpp</label>
+        <link refid="rasp_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/travelexpense/src/reportGenerator.cpp</label>
+        <link refid="report_generator_8cpp"/>
+      </node>
+      <node id="30">
+        <label>src/travelexpense/src/security.cpp</label>
+        <link refid="security_8cpp"/>
+      </node>
+      <node id="20">
+        <label>src/travelexpense/src/sessionManager.cpp</label>
+        <link refid="session_manager_8cpp"/>
+      </node>
+      <node id="33">
+        <label>src/travelexpense/src/softhsm.cpp</label>
+        <link refid="softhsm_8cpp"/>
+      </node>
+      <node id="21">
+        <label>src/travelexpense/src/tls.cpp</label>
+        <link refid="tls_8cpp"/>
+      </node>
+      <node id="14">
+        <label>src/travelexpense/src/tripManager.cpp</label>
+        <link refid="trip_manager_8cpp"/>
+      </node>
+      <node id="15">
+        <label>src/travelexpense/src/userAuth.cpp</label>
+        <link refid="user_auth_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" prot="public" static="no">
+        <name>TRAVELEXPENSE_API</name>
+        <briefdescription>
+<para>Linux/Unix shared library - SO kullanıldığında kullanılır. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/export.h" line="30" column="13" bodyfile="src/travelexpense/header/export.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="export_8h_1ab7e5ee0cfe82490598f5a3f6752d9894" prot="public" static="no">
+        <name>TRAVELEXPENSE_INTERNAL</name>
+        <briefdescription>
+<para>Internal fonksiyonlar için export gerekmiyorsa kullanılır. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bu macro, sadece library içinde kullanılan fonksiyonlar için kullanılır. Dışarıdan erişilemez ve export edilmez. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/export.h" line="40" column="9" bodyfile="src/travelexpense/header/export.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Seyahat Gideri Takibi - DLL Export/Import Macros. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu dosya, Windows ve Linux platformlarında DLL/SO export/import için gerekli macro tanımlamalarını içerir.</para>
+<para><simplesect kind="author"><para>Binnur Altınışık </para>
+</simplesect>
+<simplesect kind="date"><para>2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EXPORT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPORT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifdef<sp/>TRAVELEXPENSE_LIB_EXPORTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>TRAVELEXPENSE_API<sp/>__declspec(dllexport)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>TRAVELEXPENSE_API<sp/>__declspec(dllimport)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Linux/Unix<sp/>için<sp/>visibility<sp/>attribute</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifdef<sp/>TRAVELEXPENSE_LIB_EXPORTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>TRAVELEXPENSE_API<sp/>__attribute__((visibility(&quot;default&quot;</highlight><highlight class="normal">)))</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>TRAVELEXPENSE_API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="export_8h_1ab7e5ee0cfe82490598f5a3f6752d9894" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRAVELEXPENSE_INTERNAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>EXPORT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/travelexpense/header/export.h"/>
+  </compounddef>
+</doxygen>

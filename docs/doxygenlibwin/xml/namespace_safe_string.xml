@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_safe_string" kind="namespace" language="C++">
+    <compoundname>SafeString</compoundname>
+    <briefdescription>
+<para>Güvenli string işlemleri modülü </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu modül, platform-bağımsız güvenli string işlemleri sağlar. MSVC&apos;de strncpy_s gibi güvenli fonksiyonlar kullanır, diğer platformlarda standart fonksiyonlar + null terminator kontrolü yapar. MSVC C4996 uyarılarını önler. </para>
+    </detaileddescription>
+    <location file="src/travelexpense/header/safe_string.h" line="19" column="1"/>
+  </compounddef>
+</doxygen>

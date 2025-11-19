@@ -1,0 +1,89 @@
+\doxysection{Travel\+Expense\+::Report\+Generator Namespace Reference}
+\hypertarget{namespace_travel_expense_1_1_report_generator}{}\label{namespace_travel_expense_1_1_report_generator}\index{TravelExpense::ReportGenerator@{TravelExpense::ReportGenerator}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_report_generator_a11092ae6775867e46e8394b8dc9df738}{generate\+Report}} (int32\+\_\+t trip\+Id, std\+::string \&report)
+\begin{DoxyCompactList}\small\item\em Seyahat için özet rapor oluştur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_report_generator_a148c9b2e6caba9a6bb8cafada8ac6058}{get\+Reports}} (int32\+\_\+t user\+Id, std\+::vector$<$ std\+::string $>$ \&reports)
+\begin{DoxyCompactList}\small\item\em Kullanıcıya ait raporları listele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_report_generator_a01211ec6473b3250e051bf1a41e96d60}{save\+Report}} (int32\+\_\+t trip\+Id, const char \texorpdfstring{$\ast$}{*}filepath)
+\begin{DoxyCompactList}\small\item\em Raporu dosyaya kaydet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_1_1_report_generator_a11092ae6775867e46e8394b8dc9df738}\label{namespace_travel_expense_1_1_report_generator_a11092ae6775867e46e8394b8dc9df738} 
+\index{TravelExpense::ReportGenerator@{TravelExpense::ReportGenerator}!generateReport@{generateReport}}
+\index{generateReport@{generateReport}!TravelExpense::ReportGenerator@{TravelExpense::ReportGenerator}}
+\doxysubsubsection{\texorpdfstring{generateReport()}{generateReport()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Report\+Generator\+::generate\+Report (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{trip\+Id,  }\item[{std\+::string \&}]{report }\end{DoxyParamCaption})}
+
+
+
+Seyahat için özet rapor oluştur. 
+
+Belirtilen seyahat ID\textquotesingle{}sine ait giderler ve bütçe bilgilerini kullanarak özet rapor oluşturur. Rapor, toplam harcama, kategori bazlı harcamalar, bütçe durumu ve gider listesi gibi bilgileri içerir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, raporu string formatında oluşturur. Rapor formatı\+: JSON, XML veya plain text olabilir.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em trip\+Id} & Seyahat ID (geçerli bir trip\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+{\em report} & Oluşturulan rapor (çıktı parametresi, std\+::string) Rapor içeriği\+: seyahat bilgileri, gider özeti, bütçe durumu vb. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, File\+Not\+Found, Invalid\+Input vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_report_generator_a148c9b2e6caba9a6bb8cafada8ac6058}\label{namespace_travel_expense_1_1_report_generator_a148c9b2e6caba9a6bb8cafada8ac6058} 
+\index{TravelExpense::ReportGenerator@{TravelExpense::ReportGenerator}!getReports@{getReports}}
+\index{getReports@{getReports}!TravelExpense::ReportGenerator@{TravelExpense::ReportGenerator}}
+\doxysubsubsection{\texorpdfstring{getReports()}{getReports()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Report\+Generator\+::get\+Reports (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{user\+Id,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{reports }\end{DoxyParamCaption})}
+
+
+
+Kullanıcıya ait raporları listele. 
+
+Belirtilen kullanıcı ID\textquotesingle{}sine ait tüm seyahat raporlarını listeler. Raporlar, seyahat ID\textquotesingle{}sine göre sıralanabilir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, reports vektörünü temizler ve yeni raporlarla doldurur. Eğer kullanıcı için rapor bulunamazsa, reports vektörü boş kalır.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & Kullanıcı ID (geçerli bir user\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+{\em reports} & Rapor listesi (çıktı parametresi, std\+::vector$<$std\+::string$>$) Her öğe bir seyahat raporunu temsil eder. Fonksiyon çağrıldığında temizlenir ve yeni raporlarla doldurulur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, File\+Not\+Found, Invalid\+Input vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_report_generator_a01211ec6473b3250e051bf1a41e96d60}\label{namespace_travel_expense_1_1_report_generator_a01211ec6473b3250e051bf1a41e96d60} 
+\index{TravelExpense::ReportGenerator@{TravelExpense::ReportGenerator}!saveReport@{saveReport}}
+\index{saveReport@{saveReport}!TravelExpense::ReportGenerator@{TravelExpense::ReportGenerator}}
+\doxysubsubsection{\texorpdfstring{saveReport()}{saveReport()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Report\+Generator\+::save\+Report (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{trip\+Id,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{filepath }\end{DoxyParamCaption})}
+
+
+
+Raporu dosyaya kaydet. 
+
+Belirtilen seyahat için oluşturulan raporu dosyaya kaydeder. Dosya yoksa oluşturulur, varsa üzerine yazılır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, \doxylink{namespace_travel_expense_1_1_report_generator_a11092ae6775867e46e8394b8dc9df738}{generate\+Report()} ile oluşturulan raporu dosyaya yazar. Dosya formatı\+: .txt, .json veya .xml olabilir.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em trip\+Id} & Seyahat ID (geçerli bir trip\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+{\em filepath} & Dosya yolu (nullptr ise Invalid\+Input döner) Dosya yolu geçerli ve yazılabilir olmalı. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, \doxylink{namespace_travel_expense_1_1_file_i_o}{File\+IO}, Invalid\+Input vb.) 
+\end{DoxyReturn}

@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ED716518-50DA-3617-B3F7-0771EDC26A2D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>travelexpense</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\build_win\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">travelexpense.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">travelexpense</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\build_win\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">travelexpense.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">travelexpense</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header;C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\third_party\pkcs11;C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\third_party\sqlite3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /FS /FS /FS</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_WIN32_WINNT=0x0601;TRAVELEXPENSE_LIB_EXPORTS;ENABLE_TRAVELEXPENSE_LOGGER;MSVC_ENV;CMAKE_INTDIR="Debug";travelexpense_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_WIN32_WINNT=0x0601;TRAVELEXPENSE_LIB_EXPORTS;ENABLE_TRAVELEXPENSE_LOGGER;MSVC_ENV;CMAKE_INTDIR=\"Debug\";travelexpense_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header;C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\third_party\pkcs11;C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\third_party\sqlite3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header;C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\third_party\pkcs11;C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\third_party\sqlite3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreLinkEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Auto build dll exports</Message>
+      <Command>setlocal
+cd C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\build_win\src\travelexpense
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Strawberry\c\bin\cmake.exe -E __create_def C:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/build_win/src/travelexpense/travelexpense.dir/Debug/exports.def C:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/build_win/src/travelexpense/travelexpense.dir/Debug//objects.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;psapi.lib;advapi32.lib;iphlpapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/build_win/src/travelexpense/Debug/travelexpense.lib</ImportLibrary>
+      <ModuleDefinitionFile>C:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/build_win/src/travelexpense/travelexpense.dir/Debug/exports.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>C:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/build_win/build/Debug/travelexpense.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header;C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\third_party\pkcs11;C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\third_party\sqlite3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /FS /FS /FS</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0601;TRAVELEXPENSE_LIB_EXPORTS;ENABLE_TRAVELEXPENSE_LOGGER;MSVC_ENV;CMAKE_INTDIR="Release";travelexpense_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0601;TRAVELEXPENSE_LIB_EXPORTS;ENABLE_TRAVELEXPENSE_LOGGER;MSVC_ENV;CMAKE_INTDIR=\"Release\";travelexpense_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header;C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\third_party\pkcs11;C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\third_party\sqlite3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header;C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\third_party\pkcs11;C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\third_party\sqlite3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreLinkEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Auto build dll exports</Message>
+      <Command>setlocal
+cd C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\build_win\src\travelexpense
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Strawberry\c\bin\cmake.exe -E __create_def C:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/build_win/src/travelexpense/travelexpense.dir/Release/exports.def C:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/build_win/src/travelexpense/travelexpense.dir/Release//objects.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;psapi.lib;advapi32.lib;iphlpapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/build_win/src/travelexpense/Release/travelexpense.lib</ImportLibrary>
+      <ModuleDefinitionFile>C:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/build_win/src/travelexpense/travelexpense.dir/Release/exports.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>C:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/build_win/build/Release/travelexpense.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/src/travelexpense/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Strawberry\c\bin\cmake.exe -SC:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp -BC:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/build_win --check-stamp-file C:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/build_win/src/travelexpense/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\build_win\src\travelexpense\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/src/travelexpense/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Strawberry\c\bin\cmake.exe -SC:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp -BC:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/build_win --check-stamp-file C:/Users/x_user/Desktop/cen429-2025-2026-53-binnur-altinisik-cpp/build_win/src/travelexpense/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\build_win\src\travelexpense\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\assetManager.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\budgetManager.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\codehardening.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\commonTypes.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\database.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\encryption.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\error_codes.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\expenseManager.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\export.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\fileIO.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\fingerprinting.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\helpers.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\migration.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\rasp.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\reportGenerator.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\safe_string.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\security.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\sessionManager.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\softhsm.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\tls.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\travelexpense.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\tripManager.h" />
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\userAuth.h" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\assetManager.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\budgetManager.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\codehardening.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\database.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\encryption.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\expenseManager.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\fileIO.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\fingerprinting.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\helpers.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\migration.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\rasp.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\reportGenerator.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\security.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\sessionManager.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\softhsm.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\tls.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\travelexpense.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\tripManager.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\userAuth.cpp" />
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\third_party\sqlite3\sqlite3.c">
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ScanSourceforModuleDependencies>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ScanSourceforModuleDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ScanSourceforModuleDependencies>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\build_win\ZERO_CHECK.vcxproj">
+      <Project>{70A62B6E-AB62-33A2-B10D-2920B2425A4B}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

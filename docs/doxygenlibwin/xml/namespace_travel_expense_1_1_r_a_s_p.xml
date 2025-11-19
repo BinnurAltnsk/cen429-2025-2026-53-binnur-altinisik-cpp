@@ -1,0 +1,1323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_travel_expense_1_1_r_a_s_p" kind="namespace" language="C++">
+    <compoundname>TravelExpense::RASP</compoundname>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespace_travel_expense_1_1_r_a_s_p_1a24b145da3df213c68dbecdfd2ccafece" prot="public" static="no">
+        <type>bool(*</type>
+        <definition>typedef bool(* TravelExpense::RASP::ChecksumCallback) ()</definition>
+        <argsstring>)()</argsstring>
+        <name>ChecksumCallback</name>
+        <qualifiedname>TravelExpense::RASP::ChecksumCallback</qualifiedname>
+        <briefdescription>
+<para>Runtime checksum doğrulama callback fonksiyon tipi. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true Checksum geçerli, false Checksum uyuşmuyor </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/rasp.h" line="109" column="9" bodyfile="src/travelexpense/header/rasp.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_r_a_s_p_1a7dc79c571124ed9a9dfbfe87ba610b0b" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>TravelExpense::RASP::g_expectedSelfChecksum</definition>
+        <argsstring>[65]</argsstring>
+        <name>g_expectedSelfChecksum</name>
+        <qualifiedname>TravelExpense::RASP::g_expectedSelfChecksum</qualifiedname>
+        <initializer>= { 0 }</initializer>
+        <briefdescription>
+<para>Beklenen self-checksum değeri (SHA-256 hex string) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bu değişken, uygulamanın beklenen self-checksum değerini tutar. SHA-256 hash değeri, 64 karakter hex string formatında saklanır (+ null terminator). Bu değer, uygulamanın kod bütünlüğünü kontrol etmek için kullanılır.</para>
+<para><simplesect kind="note"><para>setExpectedSelfChecksum() ile ayarlanır. </para>
+</simplesect>
+<simplesect kind="see"><para>setExpectedSelfChecksum Beklenen self-checksum değeri ayarlama </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="namespace_travel_expense_1_1_r_a_s_p_1a7b85af9ddfe675010dffac4a7b2d504f" kindref="member">verifySelfChecksum</ref> Self-checksum doğrulama </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="207" column="13" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_r_a_s_p_1a2fd0dd18bf241394231ab86d91e032db" prot="public" static="yes" mutable="no">
+        <type>std::vector&lt; void * &gt;</type>
+        <definition>std::vector&lt;void *&gt; TravelExpense::RASP::g_criticalFunctions</definition>
+        <argsstring></argsstring>
+        <name>g_criticalFunctions</name>
+        <qualifiedname>TravelExpense::RASP::g_criticalFunctions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="770" column="20" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="770" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a13447aefd17bbea8f1eb6bef277cdf88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::calculateCodeChecksum</definition>
+        <argsstring>(const void *data, size_t size, char *checksum)</argsstring>
+        <name>calculateCodeChecksum</name>
+        <qualifiedname>TravelExpense::RASP::calculateCodeChecksum</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>checksum</declname>
+        </param>
+        <briefdescription>
+<para>Kod bloğu checksum hesapla. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen bellek bölgesinin SHA-256 hash&apos;ini hesaplar</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kod bloğu başlangıç adresi </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kod bloğu boyutu (byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>checksum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı checksum buffer&apos;ı (en az 65 byte olmalı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="213" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="213" bodyend="220" declfile="src/travelexpense/header/rasp.h" declline="48" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a82253cae91dc52bb085b258bcfb97e30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::verifyCodeChecksum</definition>
+        <argsstring>(const void *data, size_t size, const char *expectedChecksum)</argsstring>
+        <name>verifyCodeChecksum</name>
+        <qualifiedname>TravelExpense::RASP::verifyCodeChecksum</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>expectedChecksum</declname>
+        </param>
+        <briefdescription>
+<para>Kod bloğu checksum doğrula. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mevcut checksum ile beklenen checksum&apos;u karşılaştırır</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kod bloğu başlangıç adresi </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kod bloğu boyutu (byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>expectedChecksum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen checksum (SHA-256 hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Checksum geçerli, false Checksum uyuşmuyor veya hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="222" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="222" bodyend="236" declfile="src/travelexpense/header/rasp.h" declline="60" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1acbfcef047f961a478c47dc464aa9f46d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::calculateFileChecksum</definition>
+        <argsstring>(const char *filePath, char *checksum)</argsstring>
+        <name>calculateFileChecksum</name>
+        <qualifiedname>TravelExpense::RASP::calculateFileChecksum</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>checksum</declname>
+        </param>
+        <briefdescription>
+<para>Dosya checksum hesapla. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Dosyanın SHA-256 hash&apos;ini hesaplar</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>checksum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı checksum buffer&apos;ı (en az 65 byte olmalı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="238" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="238" bodyend="263" declfile="src/travelexpense/header/rasp.h" declline="71" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1acd000c0f527936b798be3dd63780a24c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::verifyFileChecksum</definition>
+        <argsstring>(const char *filePath, const char *expectedChecksum)</argsstring>
+        <name>verifyFileChecksum</name>
+        <qualifiedname>TravelExpense::RASP::verifyFileChecksum</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>expectedChecksum</declname>
+        </param>
+        <briefdescription>
+<para>Dosya checksum doğrula. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mevcut dosya checksum&apos;u ile beklenen checksum&apos;u karşılaştırır</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>expectedChecksum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen checksum (SHA-256 hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Checksum geçerli, false Checksum uyuşmuyor veya hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="265" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="265" bodyend="279" declfile="src/travelexpense/header/rasp.h" declline="82" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a7c3387087453949ac1c1e5153b367802" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::calculateSelfChecksum</definition>
+        <argsstring>(char *checksum)</argsstring>
+        <name>calculateSelfChecksum</name>
+        <qualifiedname>TravelExpense::RASP::calculateSelfChecksum</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>checksum</declname>
+        </param>
+        <briefdescription>
+<para>Kendi binary&apos;sinin checksum&apos;unu hesapla. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Çalışan uygulamanın binary dosyasının checksum&apos;unu hesaplar</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>checksum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı checksum buffer&apos;ı (en az 65 byte olmalı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="281" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="281" bodyend="307" declfile="src/travelexpense/header/rasp.h" declline="92" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a7b85af9ddfe675010dffac4a7b2d504f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::verifySelfChecksum</definition>
+        <argsstring>(const char *expectedChecksum)</argsstring>
+        <name>verifySelfChecksum</name>
+        <qualifiedname>TravelExpense::RASP::verifySelfChecksum</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>expectedChecksum</declname>
+        </param>
+        <briefdescription>
+<para>Kendi binary&apos;sinin checksum&apos;unu doğrula. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Çalışan uygulamanın binary dosyasının checksum&apos;unu kontrol eder</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expectedChecksum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen checksum (SHA-256 hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Checksum geçerli, false Checksum uyuşmuyor veya hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="309" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="309" bodyend="323" declfile="src/travelexpense/header/rasp.h" declline="102" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1ac5a292bac3cec6b36cbdf2bb82bd6739" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::startPeriodicChecksum</definition>
+        <argsstring>(ChecksumCallback callback, uint32_t intervalMs)</argsstring>
+        <name>startPeriodicChecksum</name>
+        <qualifiedname>TravelExpense::RASP::startPeriodicChecksum</qualifiedname>
+        <param>
+          <type><ref refid="namespace_travel_expense_1_1_r_a_s_p_1a24b145da3df213c68dbecdfd2ccafece" kindref="member">ChecksumCallback</ref></type>
+          <declname>callback</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>intervalMs</declname>
+        </param>
+        <briefdescription>
+<para>Periyodik checksum kontrolünü başlat. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirli aralıklarla checksum kontrolü yapar</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checksum doğrulama callback fonksiyonu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>intervalMs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kontrol aralığı (milisaniye) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="340" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="340" bodyend="356" declfile="src/travelexpense/header/rasp.h" declline="120" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a0efff0dbecdada8159cf0b3cb36cb893" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::stopPeriodicChecksum</definition>
+        <argsstring>()</argsstring>
+        <name>stopPeriodicChecksum</name>
+        <qualifiedname>TravelExpense::RASP::stopPeriodicChecksum</qualifiedname>
+        <briefdescription>
+<para>Periyodik checksum kontrolünü durdur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="358" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="358" bodyend="378" declfile="src/travelexpense/header/rasp.h" declline="127" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a42e51c2e750e8a971132e58316af33a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::isDebuggerPresent</definition>
+        <argsstring>()</argsstring>
+        <name>isDebuggerPresent</name>
+        <qualifiedname>TravelExpense::RASP::isDebuggerPresent</qualifiedname>
+        <briefdescription>
+<para>Debugger tespit edildi mi? </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Windows: IsDebuggerPresent() ve CheckRemoteDebuggerPresent() Linux: ptrace() kontrolü</para>
+<para><simplesect kind="return"><para>true Debugger tespit edildi, false Debugger yok </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="384" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="384" bodyend="392" declfile="src/travelexpense/header/rasp.h" declline="141" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a115d17e716e8d6131ae9190cf6f75481" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::isRemoteDebuggerPresent</definition>
+        <argsstring>()</argsstring>
+        <name>isRemoteDebuggerPresent</name>
+        <qualifiedname>TravelExpense::RASP::isRemoteDebuggerPresent</qualifiedname>
+        <briefdescription>
+<para>Remote debugger tespit edildi mi? (Sadece Windows) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true Remote debugger tespit edildi, false Remote debugger yok veya hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="394" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="394" bodyend="410" declfile="src/travelexpense/header/rasp.h" declline="148" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1ad46457b282a44cbfc4df1511162e72f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::checkPtrace</definition>
+        <argsstring>()</argsstring>
+        <name>checkPtrace</name>
+        <qualifiedname>TravelExpense::RASP::checkPtrace</qualifiedname>
+        <briefdescription>
+<para>ptrace anti-debug kontrolü (Sadece Linux) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true ptrace başarılı (debugger yok), false ptrace başarısız (debugger var) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="412" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="412" bodyend="443" declfile="src/travelexpense/header/rasp.h" declline="155" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a3cf00a3261b43ccc2887d8944bf91538" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::detectDebuggerProcesses</definition>
+        <argsstring>()</argsstring>
+        <name>detectDebuggerProcesses</name>
+        <qualifiedname>TravelExpense::RASP::detectDebuggerProcesses</qualifiedname>
+        <briefdescription>
+<para>Debugger process listesini kontrol et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sistemde bilinen debugger process&apos;lerini tespit eder</para>
+<para><simplesect kind="return"><para>true Debugger process tespit edildi, false Debugger process yok </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="445" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="445" bodyend="604" declfile="src/travelexpense/header/rasp.h" declline="164" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1ab81bdd68990b24f747b0239a19038dd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::performAntiDebugCheck</definition>
+        <argsstring>()</argsstring>
+        <name>performAntiDebugCheck</name>
+        <qualifiedname>TravelExpense::RASP::performAntiDebugCheck</qualifiedname>
+        <briefdescription>
+<para>Tüm anti-debug kontrollerini çalıştır. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tüm anti-debug mekanizmalarını sırayla çalıştırır</para>
+<para><simplesect kind="return"><para>true Debugger tespit edildi, false Debugger yok </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="606" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="606" bodyend="629" declfile="src/travelexpense/header/rasp.h" declline="173" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a74f8505c572d96dcb0173eccb597ebec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void</type>
+        <definition>void TravelExpense::RASP::handleDebuggerDetected</definition>
+        <argsstring>(bool terminate)</argsstring>
+        <name>handleDebuggerDetected</name>
+        <qualifiedname>TravelExpense::RASP::handleDebuggerDetected</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>terminate</declname>
+        </param>
+        <briefdescription>
+<para>Anti-debug tespiti durumunda tepki ver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Debugger tespit edildiğinde uygulamayı kapatır veya başka bir tepki verir</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>terminate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uygulamayı sonlandır mı? (true: sonlandır, false: sadece log) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="631" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="631" bodyend="643" declfile="src/travelexpense/header/rasp.h" declline="182" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1af2080f5a46b03d2100afe682a8c5a1df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::detectFileModification</definition>
+        <argsstring>(const char *filePath, int64_t expectedModTime)</argsstring>
+        <name>detectFileModification</name>
+        <qualifiedname>TravelExpense::RASP::detectFileModification</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>expectedModTime</declname>
+        </param>
+        <briefdescription>
+<para>Dosya değişikliği tespit et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Dosyanın son değiştirilme zamanını kontrol eder</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>expectedModTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen son değiştirilme zamanı (Unix timestamp) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Dosya değiştirilmiş, false Dosya değiştirilmemiş veya hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="649" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="649" bodyend="687" declfile="src/travelexpense/header/rasp.h" declline="197" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1afa98676df0c0a675722c54f6de81c2cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::detectFileSizeChange</definition>
+        <argsstring>(const char *filePath, int64_t expectedSize)</argsstring>
+        <name>detectFileSizeChange</name>
+        <qualifiedname>TravelExpense::RASP::detectFileSizeChange</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>expectedSize</declname>
+        </param>
+        <briefdescription>
+<para>Dosya boyutu değişikliği tespit et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Dosyanın boyutunu kontrol eder</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>expectedSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen dosya boyutu (byte) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Dosya boyutu değişmiş, false Dosya boyutu aynı veya hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="689" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="689" bodyend="722" declfile="src/travelexpense/header/rasp.h" declline="208" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1af0dbce98e0f0de6d797874f15c74862b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::checkBinaryIntegrity</definition>
+        <argsstring>(const char *expectedChecksum)</argsstring>
+        <name>checkBinaryIntegrity</name>
+        <qualifiedname>TravelExpense::RASP::checkBinaryIntegrity</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>expectedChecksum</declname>
+        </param>
+        <briefdescription>
+<para>Binary integrity kontrolü </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Binary dosyasının checksum&apos;unu kontrol eder</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expectedChecksum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen checksum (SHA-256 hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Binary değiştirilmemiş, false Binary değiştirilmiş veya hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="724" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="724" bodyend="731" declfile="src/travelexpense/header/rasp.h" declline="218" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a0b672b79a27062f943444a92aee6d4a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::performTamperCheck</definition>
+        <argsstring>(const char *expectedSelfChecksum)</argsstring>
+        <name>performTamperCheck</name>
+        <qualifiedname>TravelExpense::RASP::performTamperCheck</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>expectedSelfChecksum</declname>
+        </param>
+        <briefdescription>
+<para>Tüm tamper detection kontrollerini çalıştır. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tüm tamper detection mekanizmalarını sırayla çalıştırır</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expectedSelfChecksum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen self checksum (SHA-256 hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Müdahale tespit edildi, false Müdahale yok </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="733" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="733" bodyend="749" declfile="src/travelexpense/header/rasp.h" declline="228" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1ac872f8d88fb578ee6b155e6f99d6d817" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void</type>
+        <definition>void TravelExpense::RASP::handleTamperDetected</definition>
+        <argsstring>(bool terminate)</argsstring>
+        <name>handleTamperDetected</name>
+        <qualifiedname>TravelExpense::RASP::handleTamperDetected</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>terminate</declname>
+        </param>
+        <briefdescription>
+<para>Tamper tespiti durumunda tepki ver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Müdahale tespit edildiğinde uygulamayı kapatır veya başka bir tepki verir</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>terminate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uygulamayı sonlandır mı? (true: sonlandır, false: sadece log) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="751" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="751" bodyend="763" declfile="src/travelexpense/header/rasp.h" declline="237" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a699852f95cd6023b93e9e0bc36eba409" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::detectHookAttack</definition>
+        <argsstring>()</argsstring>
+        <name>detectHookAttack</name>
+        <qualifiedname>TravelExpense::RASP::detectHookAttack</qualifiedname>
+        <briefdescription>
+<para>Hook saldırısı tespit et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sistem fonksiyonlarının hook&apos;lanıp hook&apos;lanmadığını kontrol eder. Windows ve Linux&apos;ta farklı teknikler kullanır.</para>
+<para><simplesect kind="return"><para>true Hook tespit edildi, false Hook yok </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="772" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="772" bodyend="775" declfile="src/travelexpense/header/rasp.h" declline="251" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a40e64f7132b608c9b1c95e7d04a4dac4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::detectFunctionHook</definition>
+        <argsstring>(const void *functionAddress, const char *functionName)</argsstring>
+        <name>detectFunctionHook</name>
+        <qualifiedname>TravelExpense::RASP::detectFunctionHook</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>functionAddress</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>functionName</declname>
+        </param>
+        <briefdescription>
+<para>Belirli bir fonksiyonun hook&apos;lanıp hook&apos;lanmadığını kontrol et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>functionAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fonksiyon adresi </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>functionName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fonksiyon adı (debug için) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Hook tespit edildi, false Hook yok </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="776" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="776" bodyend="808" declfile="src/travelexpense/header/rasp.h" declline="261" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1afe5deef33149e4803a01717e48e0a657" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::checkCriticalFunctionHooks</definition>
+        <argsstring>()</argsstring>
+        <name>checkCriticalFunctionHooks</name>
+        <qualifiedname>TravelExpense::RASP::checkCriticalFunctionHooks</qualifiedname>
+        <briefdescription>
+<para>Kritik fonksiyonların hook kontrolünü yap. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uygulamanın kritik fonksiyonlarının hook&apos;lanıp hook&apos;lanmadığını kontrol eder</para>
+<para><simplesect kind="return"><para>true Hook tespit edildi, false Hook yok </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="810" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="810" bodyend="861" declfile="src/travelexpense/header/rasp.h" declline="271" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a8ab6aa690901b55df23eeef328288b1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void</type>
+        <definition>void TravelExpense::RASP::handleHookDetected</definition>
+        <argsstring>(bool terminate)</argsstring>
+        <name>handleHookDetected</name>
+        <qualifiedname>TravelExpense::RASP::handleHookDetected</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>terminate</declname>
+        </param>
+        <briefdescription>
+<para>Hook tespiti durumunda tepki ver. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Hook tespit edildiğinde uygulamayı kapatır veya başka bir tepki verir</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>terminate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uygulamayı sonlandır mı? (true: sonlandır, false: sadece log) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="863" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="863" bodyend="875" declfile="src/travelexpense/header/rasp.h" declline="280" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a95baf316d5a99b62e53002ae0ab3a73c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::initializeControlFlowCounter</definition>
+        <argsstring>(uint32_t expectedValue)</argsstring>
+        <name>initializeControlFlowCounter</name>
+        <qualifiedname>TravelExpense::RASP::initializeControlFlowCounter</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>expectedValue</declname>
+        </param>
+        <briefdescription>
+<para>Kontrol akışı sayacını başlat. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Kontrol akışı bütünlüğünü sağlamak için sayaç başlatır</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expectedValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen sayaç değeri </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="886" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="886" bodyend="891" declfile="src/travelexpense/header/rasp.h" declline="294" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a28bf6cf8aad86c730a8f75c8d3f6123c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::incrementControlFlowCounter</definition>
+        <argsstring>()</argsstring>
+        <name>incrementControlFlowCounter</name>
+        <qualifiedname>TravelExpense::RASP::incrementControlFlowCounter</qualifiedname>
+        <briefdescription>
+<para>Kontrol akışı sayacını artır. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Her kritik kontrol akışı noktasında çağrılmalıdır</para>
+<para><simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="893" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="893" bodyend="901" declfile="src/travelexpense/header/rasp.h" declline="303" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a85af5ca5f027e162efd80ca365be1dc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::verifyControlFlowCounter</definition>
+        <argsstring>(uint32_t expectedValue)</argsstring>
+        <name>verifyControlFlowCounter</name>
+        <qualifiedname>TravelExpense::RASP::verifyControlFlowCounter</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>expectedValue</declname>
+        </param>
+        <briefdescription>
+<para>Kontrol akışı sayacını doğrula. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mevcut sayaç değerinin beklenen değerle uyumlu olup olmadığını kontrol eder</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expectedValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen sayaç değeri </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Sayaç geçerli, false Sayaç geçersiz (müdahale tespit edildi) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="903" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="903" bodyend="920" declfile="src/travelexpense/header/rasp.h" declline="313" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1aeda5dfedcf5123a3a0ee8bde523ab810" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
+        <definition>uint32_t TravelExpense::RASP::getControlFlowCounter</definition>
+        <argsstring>()</argsstring>
+        <name>getControlFlowCounter</name>
+        <qualifiedname>TravelExpense::RASP::getControlFlowCounter</qualifiedname>
+        <briefdescription>
+<para>Kontrol akışı sayacını al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Mevcut sayaç değeri </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="922" column="10" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="922" bodyend="924" declfile="src/travelexpense/header/rasp.h" declline="320" declcolumn="28"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1aba6628f357259ebe350b0a74414de245" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::resetControlFlowCounter</definition>
+        <argsstring>()</argsstring>
+        <name>resetControlFlowCounter</name>
+        <qualifiedname>TravelExpense::RASP::resetControlFlowCounter</qualifiedname>
+        <briefdescription>
+<para>Kontrol akışı sayacını sıfırla. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="926" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="926" bodyend="933" declfile="src/travelexpense/header/rasp.h" declline="327" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1af842523d29168b17f6c00a0dae85d83e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::performControlFlowCheck</definition>
+        <argsstring>(uint32_t expectedValue)</argsstring>
+        <name>performControlFlowCheck</name>
+        <qualifiedname>TravelExpense::RASP::performControlFlowCheck</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>expectedValue</declname>
+        </param>
+        <briefdescription>
+<para>Kontrol akışı bütünlük kontrolü yap. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tüm kontrol akışı mekanizmalarını kontrol eder</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expectedValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen sayaç değeri </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Kontrol akışı geçerli, false Müdahale tespit edildi </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="935" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="935" bodyend="947" declfile="src/travelexpense/header/rasp.h" declline="337" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a9a04315a1d132bf8292766acdda58530" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::detectEmulator</definition>
+        <argsstring>()</argsstring>
+        <name>detectEmulator</name>
+        <qualifiedname>TravelExpense::RASP::detectEmulator</qualifiedname>
+        <briefdescription>
+<para>Emulator tespit et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sistem özelliklerini kontrol ederek emulator kullanımını tespit eder</para>
+<para><simplesect kind="return"><para>true Emulator tespit edildi, false Emulator yok </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="953" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="953" bodyend="1068" declfile="src/travelexpense/header/rasp.h" declline="350" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a92dcba759d1b1409134c7839b2cbee78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::detectUnsafeDevice</definition>
+        <argsstring>()</argsstring>
+        <name>detectUnsafeDevice</name>
+        <qualifiedname>TravelExpense::RASP::detectUnsafeDevice</qualifiedname>
+        <briefdescription>
+<para>Güvensiz cihaz tespit et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Emulator, root/jailbreak ve diğer güvensiz cihaz durumlarını kontrol eder</para>
+<para><simplesect kind="return"><para>true Güvensiz cihaz tespit edildi, false Cihaz güvenli </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="1091" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="1091" bodyend="1103" declfile="src/travelexpense/header/rasp.h" declline="359" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1aff7e2174a761d6e7c7c342e485f25eed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::detectRootJailbreak</definition>
+        <argsstring>()</argsstring>
+        <name>detectRootJailbreak</name>
+        <qualifiedname>TravelExpense::RASP::detectRootJailbreak</qualifiedname>
+        <briefdescription>
+<para>Root/Jailbreak tespit et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Windows: Administrator privileges kontrolü Linux: Root access kontrolü</para>
+<para><simplesect kind="return"><para>true Root/Jailbreak tespit edildi, false Normal kullanıcı </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="1070" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="1070" bodyend="1089" declfile="src/travelexpense/header/rasp.h" declline="369" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a5519cc5a11da4d8ec5e34cf7e9095767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::initializeRASP</definition>
+        <argsstring>(const char *expectedSelfChecksum, bool enablePeriodicCheck, uint32_t checkIntervalMs)</argsstring>
+        <name>initializeRASP</name>
+        <qualifiedname>TravelExpense::RASP::initializeRASP</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>expectedSelfChecksum</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enablePeriodicCheck</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>checkIntervalMs</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_r_a_s_p" kindref="compound">RASP</ref> sistemini başlat. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tüm <ref refid="namespace_travel_expense_1_1_r_a_s_p" kindref="compound">RASP</ref> mekanizmalarını başlatır</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expectedSelfChecksum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen self checksum (SHA-256 hex string) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enablePeriodicCheck</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Periyodik checksum kontrolü aktif mi? </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>checkIntervalMs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Periyodik kontrol aralığı (milisaniye) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="1109" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="1109" bodyend="1142" declfile="src/travelexpense/header/rasp.h" declline="385" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a7591d62c4d3369e25dd690b12c1064f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::shutdownRASP</definition>
+        <argsstring>()</argsstring>
+        <name>shutdownRASP</name>
+        <qualifiedname>TravelExpense::RASP::shutdownRASP</qualifiedname>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_r_a_s_p" kindref="compound">RASP</ref> sistemini kapat. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tüm <ref refid="namespace_travel_expense_1_1_r_a_s_p" kindref="compound">RASP</ref> mekanizmalarını durdurur</para>
+<para><simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="1144" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="1144" bodyend="1149" declfile="src/travelexpense/header/rasp.h" declline="394" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a90d0c9432cfd9f982a064735218dab22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::isRASPActive</definition>
+        <argsstring>()</argsstring>
+        <name>isRASPActive</name>
+        <qualifiedname>TravelExpense::RASP::isRASPActive</qualifiedname>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_r_a_s_p" kindref="compound">RASP</ref> durumunu kontrol et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="namespace_travel_expense_1_1_r_a_s_p" kindref="compound">RASP</ref> sisteminin çalışıp çalışmadığını kontrol eder</para>
+<para><simplesect kind="return"><para>true <ref refid="namespace_travel_expense_1_1_r_a_s_p" kindref="compound">RASP</ref> aktif, false <ref refid="namespace_travel_expense_1_1_r_a_s_p" kindref="compound">RASP</ref> pasif veya hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="1151" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="1151" bodyend="1153" declfile="src/travelexpense/header/rasp.h" declline="403" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a1051cd786797600c22d100557207ac37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::RASP::getRASPStatus</definition>
+        <argsstring>(bool *debuggerDetected, bool *tamperDetected, bool *checksumValid)</argsstring>
+        <name>getRASPStatus</name>
+        <qualifiedname>TravelExpense::RASP::getRASPStatus</qualifiedname>
+        <param>
+          <type>bool *</type>
+          <declname>debuggerDetected</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>tamperDetected</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>checksumValid</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_r_a_s_p" kindref="compound">RASP</ref> durumunu al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="namespace_travel_expense_1_1_r_a_s_p" kindref="compound">RASP</ref> sisteminin detaylı durumunu döndürür</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>debuggerDetected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Debugger tespit edildi mi? (çıktı parametresi) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tamperDetected</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Müdahale tespit edildi mi? (çıktı parametresi) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>checksumValid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checksum geçerli mi? (çıktı parametresi) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="1155" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="1155" bodyend="1167" declfile="src/travelexpense/header/rasp.h" declline="415" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a69aab7fc42c2f89170695f4daa2f99de" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>static std::atomic&lt; bool &gt; TravelExpense::RASP::g_raspActive</definition>
+        <argsstring>(false)</argsstring>
+        <name>g_raspActive</name>
+        <qualifiedname>TravelExpense::RASP::g_raspActive</qualifiedname>
+        <param>
+          <type>false</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="136" column="20" declfile="src/travelexpense/src/rasp.cpp" declline="136" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a9c03d13a00c2b472189ec95753425f1d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>static std::atomic&lt; bool &gt; TravelExpense::RASP::g_periodicCheckActive</definition>
+        <argsstring>(false)</argsstring>
+        <name>g_periodicCheckActive</name>
+        <qualifiedname>TravelExpense::RASP::g_periodicCheckActive</qualifiedname>
+        <param>
+          <type>false</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="150" column="20" declfile="src/travelexpense/src/rasp.cpp" declline="150" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1ac2cbc261fa730f30edb23e50bac6830a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::thread *</type>
+        <definition>static std::thread * TravelExpense::RASP::g_periodicCheckThread</definition>
+        <argsstring>(nullptr)</argsstring>
+        <name>g_periodicCheckThread</name>
+        <qualifiedname>TravelExpense::RASP::g_periodicCheckThread</qualifiedname>
+        <param>
+          <type>nullptr</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="164" column="20" declfile="src/travelexpense/src/rasp.cpp" declline="164" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a049111747c07e10962e4c5bf428f89ca" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespace_travel_expense_1_1_r_a_s_p_1a24b145da3df213c68dbecdfd2ccafece" kindref="member">ChecksumCallback</ref></type>
+        <definition>static ChecksumCallback TravelExpense::RASP::g_checksumCallback</definition>
+        <argsstring>(nullptr)</argsstring>
+        <name>g_checksumCallback</name>
+        <qualifiedname>TravelExpense::RASP::g_checksumCallback</qualifiedname>
+        <param>
+          <type>nullptr</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="179" column="25" declfile="src/travelexpense/src/rasp.cpp" declline="179" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1ab4b73a7ee1d83dd02a0a5099f75e5582" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t TravelExpense::RASP::g_checkIntervalMs</definition>
+        <argsstring>(0)</argsstring>
+        <name>g_checkIntervalMs</name>
+        <qualifiedname>TravelExpense::RASP::g_checkIntervalMs</qualifiedname>
+        <param>
+          <type>0</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="193" column="17" declfile="src/travelexpense/src/rasp.cpp" declline="193" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a86038323d7fc71ba8a5b18cf59e79380" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void TravelExpense::RASP::periodicChecksumThread</definition>
+        <argsstring>()</argsstring>
+        <name>periodicChecksumThread</name>
+        <qualifiedname>TravelExpense::RASP::periodicChecksumThread</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="326" column="13" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="326" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a8b31155aa94183e697e289ee046a98f1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::atomic&lt; uint32_t &gt;</type>
+        <definition>static std::atomic&lt; uint32_t &gt; TravelExpense::RASP::g_controlFlowCounter</definition>
+        <argsstring>(0)</argsstring>
+        <name>g_controlFlowCounter</name>
+        <qualifiedname>TravelExpense::RASP::g_controlFlowCounter</qualifiedname>
+        <param>
+          <type>0</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="882" column="20" declfile="src/travelexpense/src/rasp.cpp" declline="882" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1ab39794ce00de3e6f7e9754b9add26960" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>static std::atomic&lt; bool &gt; TravelExpense::RASP::g_controlFlowInitialized</definition>
+        <argsstring>(false)</argsstring>
+        <name>g_controlFlowInitialized</name>
+        <qualifiedname>TravelExpense::RASP::g_controlFlowInitialized</qualifiedname>
+        <param>
+          <type>false</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="883" column="20" declfile="src/travelexpense/src/rasp.cpp" declline="883" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a8fbfd7df013e63d12d32d2e543526bd9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t TravelExpense::RASP::g_expectedControlFlowValue</definition>
+        <argsstring>(0)</argsstring>
+        <name>g_expectedControlFlowValue</name>
+        <qualifiedname>TravelExpense::RASP::g_expectedControlFlowValue</qualifiedname>
+        <param>
+          <type>0</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/rasp.cpp" line="884" column="17" declfile="src/travelexpense/src/rasp.cpp" declline="884" declcolumn="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/travelexpense/header/rasp.h" line="32" column="1"/>
+  </compounddef>
+</doxygen>

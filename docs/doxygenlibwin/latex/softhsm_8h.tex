@@ -1,0 +1,103 @@
+\doxysection{src/travelexpense/header/softhsm.h File Reference}
+\hypertarget{softhsm_8h}{}\label{softhsm_8h}\index{src/travelexpense/header/softhsm.h@{src/travelexpense/header/softhsm.h}}
+
+
+Seyahat Gideri Takibi -\/ \doxylink{namespace_soft_h_s_m}{Soft\+HSM} (PKCS\#11) Entegrasyonu.  
+
+
+{\ttfamily \#include \"{}common\+Types.\+h\"{}}\newline
+{\ttfamily \#include \"{}export.\+h\"{}}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cstddef$>$}\newline
+Include dependency graph for softhsm.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{softhsm_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{softhsm_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense}{Travel\+Expense}}
+\begin{DoxyCompactList}\small\item\em Ana namespace -\/ Seyahat Gideri Takibi uygulaması \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_soft_h_s_m}{Soft\+HSM}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_soft_h_s_m}{Soft\+HSM} (PKCS\#11) kriptografik işlemler modülü \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m}{Travel\+Expense\+::\+Soft\+HSM}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24a}{Travel\+Expense\+::\+Soft\+HSM\+::\+Init\+Status}} \{ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aa02de9649e258d1dd94056e676061e969}{Travel\+Expense\+::\+Soft\+HSM\+::\+NOT\+\_\+\+INITIALIZED}} = 0
+, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aadee5f03c2c4e73657824e028494b18c0}{Travel\+Expense\+::\+Soft\+HSM\+::\+INITIALIZED}} = 1
+, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aabb1ca97ec761fc37101737ba0aa2e7c5}{Travel\+Expense\+::\+Soft\+HSM\+::\+ERROR}} = -\/1
+ \}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_soft_h_s_m}{Soft\+HSM} başlatma durumu. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021a}{Travel\+Expense\+::\+Soft\+HSM\+::\+Key\+Type}} \{ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021aa78a61f5f64f7ea0d31a7cc487d2b14e8}{Travel\+Expense\+::\+Soft\+HSM\+::\+AES\+\_\+256}} = 0
+, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021aa5b3bf47dace955c9874047820a78d5b8}{Travel\+Expense\+::\+Soft\+HSM\+::\+RSA\+\_\+2048}} = 1
+, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021aac5e459c10e5e8348c719df2702c3abe6}{Travel\+Expense\+::\+Soft\+HSM\+::\+EC\+\_\+\+P256}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Key tipi. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42}{Travel\+Expense\+::\+Soft\+HSM\+::\+Key\+Usage}} \{ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42a52db93ea6808e2184bfb7a4c8a3c0151}{Travel\+Expense\+::\+Soft\+HSM\+::\+ENCRYPT\+\_\+\+DECRYPT}} = 0
+, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42a6540894fc3bdc9f2597e6d1d4ea0e190}{Travel\+Expense\+::\+Soft\+HSM\+::\+SIGN\+\_\+\+VERIFY}} = 1
+, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42a7464a3e54ec3ca720fa0d199d59426a4}{Travel\+Expense\+::\+Soft\+HSM\+::\+WRAP\+\_\+\+UNWRAP}} = 2
+, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42abc63603c862fa6bdbb49fae1611c572c}{Travel\+Expense\+::\+Soft\+HSM\+::\+DERIVE}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Key kullanım amaçları \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_af71b3824984e7e34e84fc5c0a606b418}{Travel\+Expense\+::\+Soft\+HSM\+::initialize}} (const char \texorpdfstring{$\ast$}{*}library\+Path=nullptr, const char \texorpdfstring{$\ast$}{*}token\+Label=nullptr, const char \texorpdfstring{$\ast$}{*}pin=nullptr)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM}\textquotesingle{}yi başlat ve PKCS\#11 kütüphanesini yükle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aa08cccf8f5db8d63231a3b706351b212}{Travel\+Expense\+::\+Soft\+HSM\+::shutdown}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM}\textquotesingle{}yi kapat ve kaynakları temizle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24a}{Init\+Status}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a0fa272e6522244baa0af55f77332e6f5}{Travel\+Expense\+::\+Soft\+HSM\+::get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM} başlatma durumunu kontrol et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a0d330cfb5deff1a7731392c78c8a4757}{Travel\+Expense\+::\+Soft\+HSM\+::create\+Token}} (const char \texorpdfstring{$\ast$}{*}label, const char \texorpdfstring{$\ast$}{*}pin, const char \texorpdfstring{$\ast$}{*}so\+Pin)
+\begin{DoxyCompactList}\small\item\em Token oluştur (eğer yoksa) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a1dd53afa782d6054163658a225a3e3bf}{Travel\+Expense\+::\+Soft\+HSM\+::open\+Token}} (const char \texorpdfstring{$\ast$}{*}label, const char \texorpdfstring{$\ast$}{*}pin)
+\begin{DoxyCompactList}\small\item\em Token aç (oturum başlat) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a355d45677c9adebfb9afa591275bb8d4}{Travel\+Expense\+::\+Soft\+HSM\+::close\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Token\textquotesingle{}ı kapat (oturum kapat) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a100a3043a4e2c9d8cd6922248a46f335}{Travel\+Expense\+::\+Soft\+HSM\+::generate\+Key}} (\mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021a}{Key\+Type}} key\+Type, \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42}{Key\+Usage}} key\+Usage, const char \texorpdfstring{$\ast$}{*}key\+Label, uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t \&key\+Id\+Len)
+\begin{DoxyCompactList}\small\item\em Anahtar oluştur (generate key) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a04b9cc48d95cd483ab84818c43ed967d}{Travel\+Expense\+::\+Soft\+HSM\+::import\+Key}} (\mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021a}{Key\+Type}} key\+Type, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Data, size\+\_\+t key\+Data\+Len, const char \texorpdfstring{$\ast$}{*}key\+Label, uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t \&key\+Id\+Len)
+\begin{DoxyCompactList}\small\item\em Anahtarı içe aktar (import key) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_af8527db38f2e8d22d54baf72e43315cf}{Travel\+Expense\+::\+Soft\+HSM\+::find\+Key}} (const char \texorpdfstring{$\ast$}{*}key\+Label, uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t \&key\+Id\+Len)
+\begin{DoxyCompactList}\small\item\em Anahtarı bul (find key by label) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aa4b7ad5db79291a92b339855944a4208}{Travel\+Expense\+::\+Soft\+HSM\+::delete\+Key}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t key\+Id\+Len)
+\begin{DoxyCompactList}\small\item\em Anahtarı sil. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aa76da1d2f45b48a32039219d89930d6b}{Travel\+Expense\+::\+Soft\+HSM\+::encrypt}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t key\+Id\+Len, const void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t plaintext\+Len, void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t \&ciphertext\+Len, uint8\+\_\+t \texorpdfstring{$\ast$}{*}iv=nullptr)
+\begin{DoxyCompactList}\small\item\em Veriyi şifrele (encrypt using HSM key) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_af50d97c17003e1b54df285fbf5fa76b9}{Travel\+Expense\+::\+Soft\+HSM\+::decrypt}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t key\+Id\+Len, const void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t ciphertext\+Len, void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t \&plaintext\+Len, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}iv=nullptr)
+\begin{DoxyCompactList}\small\item\em Veriyi şifre çöz (decrypt using HSM key) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ac14ac62bb1ee91f10908af2ba8f7a832}{Travel\+Expense\+::\+Soft\+HSM\+::sign}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t key\+Id\+Len, const void \texorpdfstring{$\ast$}{*}data, size\+\_\+t data\+Len, void \texorpdfstring{$\ast$}{*}signature, size\+\_\+t \&signature\+Len)
+\begin{DoxyCompactList}\small\item\em Veriyi imzala (sign data) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a6e1b43ac34b60670eafe4cb1c347335a}{Travel\+Expense\+::\+Soft\+HSM\+::verify}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key\+Id, size\+\_\+t key\+Id\+Len, const void \texorpdfstring{$\ast$}{*}data, size\+\_\+t data\+Len, const void \texorpdfstring{$\ast$}{*}signature, size\+\_\+t signature\+Len)
+\begin{DoxyCompactList}\small\item\em İmzayı doğrula (verify signature) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ac132d386ec4642b70cbfc87db1dd84f3}{Travel\+Expense\+::\+Soft\+HSM\+::generate\+Random}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}output, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Rastgele veri üret (HSM\textquotesingle{}den güvenli random) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a627d80f41250c6562b1cd91521787245}{Travel\+Expense\+::\+Soft\+HSM\+::list\+Tokens}} (char labels\mbox{[}$\,$\mbox{]}\mbox{[}64\mbox{]}, size\+\_\+t \&count)
+\begin{DoxyCompactList}\small\item\em Mevcut token\textquotesingle{}ları listele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ae037de28b34ae8a110a65f222e52ac06}{Travel\+Expense\+::\+Soft\+HSM\+::list\+Keys}} (char labels\mbox{[}$\,$\mbox{]}\mbox{[}64\mbox{]}, size\+\_\+t \&count)
+\begin{DoxyCompactList}\small\item\em Mevcut anahtarları listele. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ \doxylink{namespace_soft_h_s_m}{Soft\+HSM} (PKCS\#11) Entegrasyonu. 
+
+Bu dosya, \doxylink{namespace_soft_h_s_m}{Soft\+HSM} kullanarak PKCS\#11 standardı üzerinden kriptografik işlemler yapmak için gerekli fonksiyonların bildirimlerini içerir.
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}

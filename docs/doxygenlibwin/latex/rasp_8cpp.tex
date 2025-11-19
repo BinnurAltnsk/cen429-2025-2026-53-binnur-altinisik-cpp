@@ -1,0 +1,137 @@
+\doxysection{src/travelexpense/src/rasp.cpp File Reference}
+\hypertarget{rasp_8cpp}{}\label{rasp_8cpp}\index{src/travelexpense/src/rasp.cpp@{src/travelexpense/src/rasp.cpp}}
+
+
+Seyahat Gideri Takibi -\/ \doxylink{namespace_r_a_s_p}{RASP} (Runtime Application Self-\/\+Protection) Fonksiyonları  
+
+
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/ptrace.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$dirent.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include \"{}rasp.\+h\"{}}\newline
+{\ttfamily \#include \"{}encryption.\+h\"{}}\newline
+{\ttfamily \#include \"{}safe\+\_\+string.\+h\"{}}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+Include dependency graph for rasp.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rasp_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense}{Travel\+Expense}}
+\begin{DoxyCompactList}\small\item\em Ana namespace -\/ Seyahat Gideri Takibi uygulaması \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_r_a_s_p}{RASP}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_r_a_s_p}{RASP} (Runtime Application Self-\/\+Protection) teknikleri modülü \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p}{Travel\+Expense\+::\+RASP}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a13447aefd17bbea8f1eb6bef277cdf88}{Travel\+Expense\+::\+RASP\+::calculate\+Code\+Checksum}} (const void \texorpdfstring{$\ast$}{*}data, size\+\_\+t size, char \texorpdfstring{$\ast$}{*}checksum)
+\begin{DoxyCompactList}\small\item\em Kod bloğu checksum hesapla. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a82253cae91dc52bb085b258bcfb97e30}{Travel\+Expense\+::\+RASP\+::verify\+Code\+Checksum}} (const void \texorpdfstring{$\ast$}{*}data, size\+\_\+t size, const char \texorpdfstring{$\ast$}{*}expected\+Checksum)
+\begin{DoxyCompactList}\small\item\em Kod bloğu checksum doğrula. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_acbfcef047f961a478c47dc464aa9f46d}{Travel\+Expense\+::\+RASP\+::calculate\+File\+Checksum}} (const char \texorpdfstring{$\ast$}{*}file\+Path, char \texorpdfstring{$\ast$}{*}checksum)
+\begin{DoxyCompactList}\small\item\em Dosya checksum hesapla. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_acd000c0f527936b798be3dd63780a24c}{Travel\+Expense\+::\+RASP\+::verify\+File\+Checksum}} (const char \texorpdfstring{$\ast$}{*}file\+Path, const char \texorpdfstring{$\ast$}{*}expected\+Checksum)
+\begin{DoxyCompactList}\small\item\em Dosya checksum doğrula. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a7c3387087453949ac1c1e5153b367802}{Travel\+Expense\+::\+RASP\+::calculate\+Self\+Checksum}} (char \texorpdfstring{$\ast$}{*}checksum)
+\begin{DoxyCompactList}\small\item\em Kendi binary\textquotesingle{}sinin checksum\textquotesingle{}unu hesapla. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a7b85af9ddfe675010dffac4a7b2d504f}{Travel\+Expense\+::\+RASP\+::verify\+Self\+Checksum}} (const char \texorpdfstring{$\ast$}{*}expected\+Checksum)
+\begin{DoxyCompactList}\small\item\em Kendi binary\textquotesingle{}sinin checksum\textquotesingle{}unu doğrula. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_ac5a292bac3cec6b36cbdf2bb82bd6739}{Travel\+Expense\+::\+RASP\+::start\+Periodic\+Checksum}} (\mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a24b145da3df213c68dbecdfd2ccafece}{Checksum\+Callback}} callback, uint32\+\_\+t interval\+Ms)
+\begin{DoxyCompactList}\small\item\em Periyodik checksum kontrolünü başlat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a0efff0dbecdada8159cf0b3cb36cb893}{Travel\+Expense\+::\+RASP\+::stop\+Periodic\+Checksum}} ()
+\begin{DoxyCompactList}\small\item\em Periyodik checksum kontrolünü durdur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a42e51c2e750e8a971132e58316af33a8}{Travel\+Expense\+::\+RASP\+::is\+Debugger\+Present}} ()
+\begin{DoxyCompactList}\small\item\em Debugger tespit edildi mi? \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a115d17e716e8d6131ae9190cf6f75481}{Travel\+Expense\+::\+RASP\+::is\+Remote\+Debugger\+Present}} ()
+\begin{DoxyCompactList}\small\item\em Remote debugger tespit edildi mi? (Sadece Windows) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_ad46457b282a44cbfc4df1511162e72f6}{Travel\+Expense\+::\+RASP\+::check\+Ptrace}} ()
+\begin{DoxyCompactList}\small\item\em ptrace anti-\/debug kontrolü (Sadece Linux) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a3cf00a3261b43ccc2887d8944bf91538}{Travel\+Expense\+::\+RASP\+::detect\+Debugger\+Processes}} ()
+\begin{DoxyCompactList}\small\item\em Debugger process listesini kontrol et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_ab81bdd68990b24f747b0239a19038dd4}{Travel\+Expense\+::\+RASP\+::perform\+Anti\+Debug\+Check}} ()
+\begin{DoxyCompactList}\small\item\em Tüm anti-\/debug kontrollerini çalıştır. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} void \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a74f8505c572d96dcb0173eccb597ebec}{Travel\+Expense\+::\+RASP\+::handle\+Debugger\+Detected}} (bool terminate)
+\begin{DoxyCompactList}\small\item\em Anti-\/debug tespiti durumunda tepki ver. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_af2080f5a46b03d2100afe682a8c5a1df}{Travel\+Expense\+::\+RASP\+::detect\+File\+Modification}} (const char \texorpdfstring{$\ast$}{*}file\+Path, int64\+\_\+t expected\+Mod\+Time)
+\begin{DoxyCompactList}\small\item\em Dosya değişikliği tespit et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_afa98676df0c0a675722c54f6de81c2cb}{Travel\+Expense\+::\+RASP\+::detect\+File\+Size\+Change}} (const char \texorpdfstring{$\ast$}{*}file\+Path, int64\+\_\+t expected\+Size)
+\begin{DoxyCompactList}\small\item\em Dosya boyutu değişikliği tespit et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_af0dbce98e0f0de6d797874f15c74862b}{Travel\+Expense\+::\+RASP\+::check\+Binary\+Integrity}} (const char \texorpdfstring{$\ast$}{*}expected\+Checksum)
+\begin{DoxyCompactList}\small\item\em Binary integrity kontrolü \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a0b672b79a27062f943444a92aee6d4a6}{Travel\+Expense\+::\+RASP\+::perform\+Tamper\+Check}} (const char \texorpdfstring{$\ast$}{*}expected\+Self\+Checksum)
+\begin{DoxyCompactList}\small\item\em Tüm tamper detection kontrollerini çalıştır. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} void \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_ac872f8d88fb578ee6b155e6f99d6d817}{Travel\+Expense\+::\+RASP\+::handle\+Tamper\+Detected}} (bool terminate)
+\begin{DoxyCompactList}\small\item\em Tamper tespiti durumunda tepki ver. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a699852f95cd6023b93e9e0bc36eba409}{Travel\+Expense\+::\+RASP\+::detect\+Hook\+Attack}} ()
+\begin{DoxyCompactList}\small\item\em Hook saldırısı tespit et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a40e64f7132b608c9b1c95e7d04a4dac4}{Travel\+Expense\+::\+RASP\+::detect\+Function\+Hook}} (const void \texorpdfstring{$\ast$}{*}function\+Address, const char \texorpdfstring{$\ast$}{*}function\+Name)
+\begin{DoxyCompactList}\small\item\em Belirli bir fonksiyonun hook\textquotesingle{}lanıp hook\textquotesingle{}lanmadığını kontrol et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_afe5deef33149e4803a01717e48e0a657}{Travel\+Expense\+::\+RASP\+::check\+Critical\+Function\+Hooks}} ()
+\begin{DoxyCompactList}\small\item\em Kritik fonksiyonların hook kontrolünü yap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} void \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a8ab6aa690901b55df23eeef328288b1f}{Travel\+Expense\+::\+RASP\+::handle\+Hook\+Detected}} (bool terminate)
+\begin{DoxyCompactList}\small\item\em Hook tespiti durumunda tepki ver. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a95baf316d5a99b62e53002ae0ab3a73c}{Travel\+Expense\+::\+RASP\+::initialize\+Control\+Flow\+Counter}} (uint32\+\_\+t expected\+Value)
+\begin{DoxyCompactList}\small\item\em Kontrol akışı sayacını başlat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a28bf6cf8aad86c730a8f75c8d3f6123c}{Travel\+Expense\+::\+RASP\+::increment\+Control\+Flow\+Counter}} ()
+\begin{DoxyCompactList}\small\item\em Kontrol akışı sayacını artır. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a85af5ca5f027e162efd80ca365be1dc7}{Travel\+Expense\+::\+RASP\+::verify\+Control\+Flow\+Counter}} (uint32\+\_\+t expected\+Value)
+\begin{DoxyCompactList}\small\item\em Kontrol akışı sayacını doğrula. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_aeda5dfedcf5123a3a0ee8bde523ab810}{Travel\+Expense\+::\+RASP\+::get\+Control\+Flow\+Counter}} ()
+\begin{DoxyCompactList}\small\item\em Kontrol akışı sayacını al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_aba6628f357259ebe350b0a74414de245}{Travel\+Expense\+::\+RASP\+::reset\+Control\+Flow\+Counter}} ()
+\begin{DoxyCompactList}\small\item\em Kontrol akışı sayacını sıfırla. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_af842523d29168b17f6c00a0dae85d83e}{Travel\+Expense\+::\+RASP\+::perform\+Control\+Flow\+Check}} (uint32\+\_\+t expected\+Value)
+\begin{DoxyCompactList}\small\item\em Kontrol akışı bütünlük kontrolü yap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a9a04315a1d132bf8292766acdda58530}{Travel\+Expense\+::\+RASP\+::detect\+Emulator}} ()
+\begin{DoxyCompactList}\small\item\em Emulator tespit et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_aff7e2174a761d6e7c7c342e485f25eed}{Travel\+Expense\+::\+RASP\+::detect\+Root\+Jailbreak}} ()
+\begin{DoxyCompactList}\small\item\em Root/\+Jailbreak tespit et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a92dcba759d1b1409134c7839b2cbee78}{Travel\+Expense\+::\+RASP\+::detect\+Unsafe\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Güvensiz cihaz tespit et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a5519cc5a11da4d8ec5e34cf7e9095767}{Travel\+Expense\+::\+RASP\+::initialize\+RASP}} (const char \texorpdfstring{$\ast$}{*}expected\+Self\+Checksum, bool enable\+Periodic\+Check, uint32\+\_\+t check\+Interval\+Ms)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} sistemini başlat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a7591d62c4d3369e25dd690b12c1064f7}{Travel\+Expense\+::\+RASP\+::shutdown\+RASP}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} sistemini kapat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a90d0c9432cfd9f982a064735218dab22}{Travel\+Expense\+::\+RASP\+::is\+RASPActive}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} durumunu kontrol et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a1051cd786797600c22d100557207ac37}{Travel\+Expense\+::\+RASP\+::get\+RASPStatus}} (bool \texorpdfstring{$\ast$}{*}debugger\+Detected, bool \texorpdfstring{$\ast$}{*}tamper\+Detected, bool \texorpdfstring{$\ast$}{*}checksum\+Valid)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} durumunu al. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ \doxylink{namespace_r_a_s_p}{RASP} (Runtime Application Self-\/\+Protection) Fonksiyonları 
+
+Bu dosya, \doxylink{namespace_r_a_s_p}{RASP} tekniklerinin implementasyonunu içerir\+:
+\begin{DoxyItemize}
+\item Checksum doğrulama (Kod bloğu ve dosya integrity check)
+\item Anti-\/debug mekanizmaları (Debugger tespiti ve önleme)
+\item Tamper tespiti (Dosya değişiklik algılama ve müdahale tespiti)
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}

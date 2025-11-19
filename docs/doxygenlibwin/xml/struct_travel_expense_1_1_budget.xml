@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_travel_expense_1_1_budget" kind="struct" language="C++" prot="public">
+    <compoundname>TravelExpense::Budget</compoundname>
+    <includes refid="common_types_8h" local="no">commonTypes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_travel_expense_1_1_budget_1a767da4abb6223ee5ade59c404cbb5d09" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t TravelExpense::Budget::budgetId</definition>
+        <argsstring></argsstring>
+        <name>budgetId</name>
+        <qualifiedname>TravelExpense::Budget::budgetId</qualifiedname>
+        <briefdescription>
+<para>Bütçe kimliği. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="128" column="11" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_budget_1a53ae78e859633faf63db41dc520532c9" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t TravelExpense::Budget::tripId</definition>
+        <argsstring></argsstring>
+        <name>tripId</name>
+        <qualifiedname>TravelExpense::Budget::tripId</qualifiedname>
+        <briefdescription>
+<para>Seyahat kimliği. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="129" column="11" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_budget_1af1d95a16d19b023a624e9fc722e60549" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TravelExpense::Budget::totalBudget</definition>
+        <argsstring></argsstring>
+        <name>totalBudget</name>
+        <qualifiedname>TravelExpense::Budget::totalBudget</qualifiedname>
+        <briefdescription>
+<para>Toplam bütçe. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="130" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_budget_1a86d7bf63fbddde80afc5af3b199245e2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TravelExpense::Budget::spentAmount</definition>
+        <argsstring></argsstring>
+        <name>spentAmount</name>
+        <qualifiedname>TravelExpense::Budget::spentAmount</qualifiedname>
+        <briefdescription>
+<para>Harcanan tutar. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="131" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_budget_1a26aa3029683674b7114248c7f1bf4fc9" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TravelExpense::Budget::categoryBudgets[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>categoryBudgets</name>
+        <qualifiedname>TravelExpense::Budget::categoryBudgets</qualifiedname>
+        <briefdescription>
+<para>Kategori bütçeleri [Konaklama, Ulaşım, Yemek, Eğlence]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="132" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_budget_1a753452857928b1d572bea18be83ebc4c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TravelExpense::Budget::categorySpent[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>categorySpent</name>
+        <qualifiedname>TravelExpense::Budget::categorySpent</qualifiedname>
+        <briefdescription>
+<para>Kategori harcamaları [Konaklama, Ulaşım, Yemek, Eğlence]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="133" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_budget_1a205d86211043bbbaa313a5d4e129d869" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t TravelExpense::Budget::createdAt</definition>
+        <argsstring></argsstring>
+        <name>createdAt</name>
+        <qualifiedname>TravelExpense::Budget::createdAt</qualifiedname>
+        <briefdescription>
+<para>Oluşturulma zamanı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="134" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_budget_1ab9bd8b9ca6b45f9a89c487ee5c914254" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t TravelExpense::Budget::updatedAt</definition>
+        <argsstring></argsstring>
+        <name>updatedAt</name>
+        <qualifiedname>TravelExpense::Budget::updatedAt</qualifiedname>
+        <briefdescription>
+<para>Güncellenme zamanı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="135" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_travel_expense_1_1_budget_1a16518e438fdc159f7a000352ab111f52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TravelExpense::Budget::Budget</definition>
+        <argsstring>()</argsstring>
+        <name>Budget</name>
+        <qualifiedname>TravelExpense::Budget::Budget</qualifiedname>
+        <briefdescription>
+<para><ref refid="struct_travel_expense_1_1_budget" kindref="compound">Budget</ref> constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Varsayılan değerlerle yeni bir <ref refid="struct_travel_expense_1_1_budget" kindref="compound">Budget</ref> oluşturur. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="142" column="3" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="142" bodyend="146"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Bütçe veri modeli. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>TravelExpense::Budget</label>
+        <link refid="struct_travel_expense_1_1_budget"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/travelexpense/header/commonTypes.h" line="127" column="1" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="127" bodyend="147"/>
+    <listofallmembers>
+      <member refid="struct_travel_expense_1_1_budget_1a16518e438fdc159f7a000352ab111f52" prot="public" virt="non-virtual"><scope>TravelExpense::Budget</scope><name>Budget</name></member>
+      <member refid="struct_travel_expense_1_1_budget_1a767da4abb6223ee5ade59c404cbb5d09" prot="public" virt="non-virtual"><scope>TravelExpense::Budget</scope><name>budgetId</name></member>
+      <member refid="struct_travel_expense_1_1_budget_1a26aa3029683674b7114248c7f1bf4fc9" prot="public" virt="non-virtual"><scope>TravelExpense::Budget</scope><name>categoryBudgets</name></member>
+      <member refid="struct_travel_expense_1_1_budget_1a753452857928b1d572bea18be83ebc4c" prot="public" virt="non-virtual"><scope>TravelExpense::Budget</scope><name>categorySpent</name></member>
+      <member refid="struct_travel_expense_1_1_budget_1a205d86211043bbbaa313a5d4e129d869" prot="public" virt="non-virtual"><scope>TravelExpense::Budget</scope><name>createdAt</name></member>
+      <member refid="struct_travel_expense_1_1_budget_1a86d7bf63fbddde80afc5af3b199245e2" prot="public" virt="non-virtual"><scope>TravelExpense::Budget</scope><name>spentAmount</name></member>
+      <member refid="struct_travel_expense_1_1_budget_1af1d95a16d19b023a624e9fc722e60549" prot="public" virt="non-virtual"><scope>TravelExpense::Budget</scope><name>totalBudget</name></member>
+      <member refid="struct_travel_expense_1_1_budget_1a53ae78e859633faf63db41dc520532c9" prot="public" virt="non-virtual"><scope>TravelExpense::Budget</scope><name>tripId</name></member>
+      <member refid="struct_travel_expense_1_1_budget_1ab9bd8b9ca6b45f9a89c487ee5c914254" prot="public" virt="non-virtual"><scope>TravelExpense::Budget</scope><name>updatedAt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

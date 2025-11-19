@@ -1,0 +1,48 @@
+\doxysection{src/travelexpense/src/budget\+Manager.cpp File Reference}
+\hypertarget{budget_manager_8cpp}{}\label{budget_manager_8cpp}\index{src/travelexpense/src/budgetManager.cpp@{src/travelexpense/src/budgetManager.cpp}}
+
+
+Seyahat Gideri Takibi -\/ Bütçe Yönetimi Implementation.  
+
+
+{\ttfamily \#include \"{}../header/budget\+Manager.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/database.\+h\"{}}\newline
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+Include dependency graph for budget\+Manager.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{budget_manager_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense}{Travel\+Expense}}
+\begin{DoxyCompactList}\small\item\em Ana namespace -\/ Seyahat Gideri Takibi uygulaması \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_budget_manager}{Travel\+Expense\+::\+Budget\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_budget_manager_a87ed02030d083a4a76b3ba7212cbeaa7}{Travel\+Expense\+::\+Budget\+Manager\+::set\+Budget}} (int32\+\_\+t trip\+Id, double total\+Budget, const double \texorpdfstring{$\ast$}{*}category\+Budgets, int32\+\_\+t \&budget\+Id)
+\begin{DoxyCompactList}\small\item\em Seyahat için bütçe belirle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_budget_manager_aa06d0fd91539d4e3d978e62a00d67897}{Travel\+Expense\+::\+Budget\+Manager\+::get\+Budget}} (int32\+\_\+t trip\+Id, \mbox{\hyperlink{struct_travel_expense_1_1_budget}{Budget}} \&budget)
+\begin{DoxyCompactList}\small\item\em Seyahat bütçesini görüntüle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_budget_manager_aa6d74518da8cb56fda03f783e7664c05}{Travel\+Expense\+::\+Budget\+Manager\+::update\+Budget}} (int32\+\_\+t budget\+Id, const \mbox{\hyperlink{struct_travel_expense_1_1_budget}{Budget}} \&budget)
+\begin{DoxyCompactList}\small\item\em Bütçeyi güncelle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_budget_manager_a6635276a27a73233c16e25046e1476ae}{Travel\+Expense\+::\+Budget\+Manager\+::check\+Budget\+Limit}} (int32\+\_\+t trip\+Id, \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62}{Expense\+Category}} category, double amount)
+\begin{DoxyCompactList}\small\item\em Bütçe limiti kontrolü \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ Bütçe Yönetimi Implementation. 
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}

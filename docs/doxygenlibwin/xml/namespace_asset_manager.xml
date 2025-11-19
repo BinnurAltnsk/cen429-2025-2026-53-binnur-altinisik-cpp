@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_asset_manager" kind="namespace" language="C++">
+    <compoundname>AssetManager</compoundname>
+    <briefdescription>
+<para>Varlık yönetimi modülü </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu modül, uygulamadaki varlıkların (veriler, anahtarlar, konfigürasyonlar) kayıt, güncelleme, silme ve listeleme işlemlerini yönetir. Her varlık için ad, açıklama, konum, kaynak, boyut, koruma şeması gibi özellikler takip edilir. Varlık yönetimi gereksinimlerini karşılar. </para>
+    </detaileddescription>
+    <location file="src/travelexpense/header/assetManager.h" line="35" column="1"/>
+  </compounddef>
+</doxygen>

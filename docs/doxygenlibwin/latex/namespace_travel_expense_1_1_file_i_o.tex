@@ -1,0 +1,105 @@
+\doxysection{Travel\+Expense\+::File\+IO Namespace Reference}
+\hypertarget{namespace_travel_expense_1_1_file_i_o}{}\label{namespace_travel_expense_1_1_file_i_o}\index{TravelExpense::FileIO@{TravelExpense::FileIO}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_file_i_o_a5b48ea5d727f176d8ccc873b44bde6bd}{ensure\+Data\+Directory}} ()
+\begin{DoxyCompactList}\small\item\em Veri dizinini oluştur (yoksa) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} int32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_file_i_o_a00cc394b17a375d8944fdeff726d2007}{get\+Last\+Id}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Son ID\textquotesingle{}yi dosyadan al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_file_i_o_a62bef7a2f4e9800f9e1cd658b2b2736f}{save\+Last\+Id}} (const char \texorpdfstring{$\ast$}{*}filename, int32\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Son ID\textquotesingle{}yi dosyaya kaydet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} int32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_file_i_o_ad66f05fcd39352e4f9a2aa8fdf32ce48}{generate\+Id}} (const char \texorpdfstring{$\ast$}{*}entity\+Name)
+\begin{DoxyCompactList}\small\item\em Yeni ID oluştur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_1_1_file_i_o_a5b48ea5d727f176d8ccc873b44bde6bd}\label{namespace_travel_expense_1_1_file_i_o_a5b48ea5d727f176d8ccc873b44bde6bd} 
+\index{TravelExpense::FileIO@{TravelExpense::FileIO}!ensureDataDirectory@{ensureDataDirectory}}
+\index{ensureDataDirectory@{ensureDataDirectory}!TravelExpense::FileIO@{TravelExpense::FileIO}}
+\doxysubsubsection{\texorpdfstring{ensureDataDirectory()}{ensureDataDirectory()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+File\+IO\+::ensure\+Data\+Directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Veri dizinini oluştur (yoksa) 
+
+Uygulama veri dizinini (varsayılan\+: \"{}data\"{}) oluşturur. Eğer dizin zaten varsa, hiçbir işlem yapmaz.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, uygulama başlatıldığında çağrılmalıdır. Dizin oluşturulamazsa (örneğin izin hatası), false döner.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+true Başarılı (dizin oluşturuldu veya zaten var), false Hata (izin hatası vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_file_i_o_ad66f05fcd39352e4f9a2aa8fdf32ce48}\label{namespace_travel_expense_1_1_file_i_o_ad66f05fcd39352e4f9a2aa8fdf32ce48} 
+\index{TravelExpense::FileIO@{TravelExpense::FileIO}!generateId@{generateId}}
+\index{generateId@{generateId}!TravelExpense::FileIO@{TravelExpense::FileIO}}
+\doxysubsubsection{\texorpdfstring{generateId()}{generateId()}}
+{\footnotesize\ttfamily int32\+\_\+t Travel\+Expense\+::\+File\+IO\+::generate\+Id (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{entity\+Name }\end{DoxyParamCaption})}
+
+
+
+Yeni ID oluştur. 
+
+Belirtilen entity için yeni bir benzersiz ID oluşturur. Son ID\textquotesingle{}yi dosyadan okur, 1 artırır, dosyaya kaydeder ve döndürür.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, atomik ID oluşturma sağlar. Eğer dosya yoksa, 1 ile başlar.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em entity\+Name} & Entity adı (user, trip, expense, budget) nullptr ise 0 döner. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int32\+\_\+t Yeni ID (1\textquotesingle{}den başlar, her çağrıda 1 artar), 0 ise hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_file_i_o_a00cc394b17a375d8944fdeff726d2007}\label{namespace_travel_expense_1_1_file_i_o_a00cc394b17a375d8944fdeff726d2007} 
+\index{TravelExpense::FileIO@{TravelExpense::FileIO}!getLastId@{getLastId}}
+\index{getLastId@{getLastId}!TravelExpense::FileIO@{TravelExpense::FileIO}}
+\doxysubsubsection{\texorpdfstring{getLastId()}{getLastId()}}
+{\footnotesize\ttfamily int32\+\_\+t Travel\+Expense\+::\+File\+IO\+::get\+Last\+Id (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+
+
+Son ID\textquotesingle{}yi dosyadan al. 
+
+Belirtilen entity için son kullanılan ID\textquotesingle{}yi dosyadan okur. Dosya yoksa veya okuma hatası varsa 0 döner.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, entity ID\textquotesingle{}lerini takip etmek için kullanılır. Dosya formatı\+: ASCII sayı olarak saklanır.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Entity adı (user, trip, expense, budget) Dosya yolu\+: \"{}data/\{filename\}\+\_\+id.\+txt\"{} formatında nullptr ise 0 döner. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int32\+\_\+t Son ID, 0 ise dosya yok veya okuma hatası 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_file_i_o_a62bef7a2f4e9800f9e1cd658b2b2736f}\label{namespace_travel_expense_1_1_file_i_o_a62bef7a2f4e9800f9e1cd658b2b2736f} 
+\index{TravelExpense::FileIO@{TravelExpense::FileIO}!saveLastId@{saveLastId}}
+\index{saveLastId@{saveLastId}!TravelExpense::FileIO@{TravelExpense::FileIO}}
+\doxysubsubsection{\texorpdfstring{saveLastId()}{saveLastId()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+File\+IO\+::save\+Last\+Id (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{int32\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+
+
+Son ID\textquotesingle{}yi dosyaya kaydet. 
+
+Belirtilen entity için son kullanılan ID\textquotesingle{}yi dosyaya yazar. Dosya yoksa oluşturulur, varsa güncellenir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, ID tracking için kullanılır. Dosya formatı\+: ASCII sayı olarak saklanır.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Entity adı (user, trip, expense, budget) Dosya yolu\+: \"{}data/\{filename\}\+\_\+id.\+txt\"{} formatında nullptr ise false döner. \\
+\hline
+{\em id} & Kaydedilecek ID (0\textquotesingle{}dan büyük olmalı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (dosya yazma hatası, izin hatası vb.) 
+\end{DoxyReturn}

@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="user_auth_8h" kind="file" language="C++">
+    <compoundname>userAuth.h</compoundname>
+    <includes refid="common_types_8h" local="yes">commonTypes.h</includes>
+    <includes refid="export_8h" local="yes">export.h</includes>
+    <includedby refid="travelexpense_8h" local="yes">src/travelexpense/header/travelexpense.h</includedby>
+    <includedby refid="user_auth_8cpp" local="yes">src/travelexpense/src/userAuth.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>commonTypes.h</label>
+        <link refid="common_types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>error_codes.h</label>
+        <link refid="error__codes_8h"/>
+      </node>
+      <node id="7">
+        <label>export.h</label>
+        <link refid="export_8h"/>
+      </node>
+      <node id="1">
+        <label>src/travelexpense/header/userAuth.h</label>
+        <link refid="user_auth_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>cstring</label>
+      </node>
+      <node id="4">
+        <label>ctime</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/travelexpense/header/travelexpense.h</label>
+        <link refid="travelexpense_8h"/>
+      </node>
+      <node id="1">
+        <label>src/travelexpense/header/userAuth.h</label>
+        <link refid="user_auth_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/travelexpense/src/userAuth.cpp</label>
+        <link refid="user_auth_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
+    <innernamespace refid="namespace_user_auth">UserAuth</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_user_auth">TravelExpense::UserAuth</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a63e9c88135b8d5f2911f99ce322d1a50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::UserAuth::registerUser</definition>
+        <argsstring>(const char *username, const char *password)</argsstring>
+        <name>registerUser</name>
+        <qualifiedname>TravelExpense::UserAuth::registerUser</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+<para>Kullanıcı kaydı </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Yeni bir kullanıcı kaydı oluşturur. Şifre hash&apos;lenir ve salt ile birlikte veritabanına kaydedilir. Kullanıcı adı benzersiz olmalıdır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, şifreyi SHA-256 ile hash&apos;ler ve salt ekler. Eğer kullanıcı adı zaten varsa, InvalidInput hatası döner.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kullanıcı adı (nullptr ise InvalidInput döner, benzersiz olmalı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre (nullptr ise InvalidInput döner, minimum uzunluk kontrolü yapılabilir) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput, FileNotFound vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/userAuth.cpp" line="25" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="25" bodyend="113" declfile="src/travelexpense/header/userAuth.h" declline="41" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a8f83e74a4b8d2833cb23051e7661c0f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::UserAuth::loginUser</definition>
+        <argsstring>(const char *username, const char *password)</argsstring>
+        <name>loginUser</name>
+        <qualifiedname>TravelExpense::UserAuth::loginUser</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+<para>Kullanıcı girişi. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen kullanıcı adı ve şifre ile giriş yapar. Şifre hash&apos;i doğrulanır ve doğruysa kullanıcı oturumu başlatılır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, şifreyi hash&apos;ler ve veritabanındaki hash ile karşılaştırır. Constant-time comparison kullanarak timing attack&apos;lara karşı koruma sağlar. Başarılı giriş sonrası, <ref refid="namespace_travel_expense_1_1_user_auth_1a4ebfa893e3a0e71ccaac4869f6395785" kindref="member">getCurrentUser()</ref> ile kullanıcı bilgisi alınabilir.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kullanıcı adı (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput, InvalidUser vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/userAuth.cpp" line="115" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="115" bodyend="234" declfile="src/travelexpense/header/userAuth.h" declline="57" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a8777e8f207ceeaedc2eb75753756b1f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::UserAuth::enableGuestMode</definition>
+        <argsstring>()</argsstring>
+        <name>enableGuestMode</name>
+        <qualifiedname>TravelExpense::UserAuth::enableGuestMode</qualifiedname>
+        <briefdescription>
+<para>Misafir modunu etkinleştir. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Misafir kullanıcı modunu etkinleştirir. Misafir modunda, kullanıcı kaydı veya girişi gerekmez, ancak bazı özellikler sınırlı olabilir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, geçici bir misafir kullanıcısı oluşturur. Misafir modu, oturum sonlandığında veya <ref refid="namespace_travel_expense_1_1_user_auth_1ad71c3866e8f46267153654e60014d99f" kindref="member">logoutUser()</ref> çağrıldığında sonlanır.</para>
+</simplesect>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/userAuth.cpp" line="236" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="236" bodyend="247" declfile="src/travelexpense/header/userAuth.h" declline="70" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1ad71c3866e8f46267153654e60014d99f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void</type>
+        <definition>void TravelExpense::UserAuth::logoutUser</definition>
+        <argsstring>()</argsstring>
+        <name>logoutUser</name>
+        <qualifiedname>TravelExpense::UserAuth::logoutUser</qualifiedname>
+        <briefdescription>
+<para>Kullanıcı çıkışı </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mevcut kullanıcı oturumunu sonlandırır. Kullanıcı bilgileri temizlenir ve <ref refid="namespace_travel_expense_1_1_user_auth_1a4ebfa893e3a0e71ccaac4869f6395785" kindref="member">getCurrentUser()</ref> nullptr döner.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, misafir modu dahil tüm oturumları sonlandırır. Oturum sonlandıktan sonra, yeni giriş veya misafir modu gerekir. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/userAuth.cpp" line="249" column="6" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="249" bodyend="254" declfile="src/travelexpense/header/userAuth.h" declline="81" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a4ebfa893e3a0e71ccaac4869f6395785" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> User *</type>
+        <definition>User * TravelExpense::UserAuth::getCurrentUser</definition>
+        <argsstring>()</argsstring>
+        <name>getCurrentUser</name>
+        <qualifiedname>TravelExpense::UserAuth::getCurrentUser</qualifiedname>
+        <briefdescription>
+<para>Mevcut kullanıcı bilgisini al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Aktif oturumdaki kullanıcı bilgisini döndürür. Eğer oturum yoksa (giriş yapılmamış veya <ref refid="namespace_travel_expense_1_1_user_auth_1ad71c3866e8f46267153654e60014d99f" kindref="member">logoutUser()</ref> çağrılmış), nullptr döner.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, <ref refid="namespace_travel_expense_1_1_user_auth_1a4ebfa893e3a0e71ccaac4869f6395785" kindref="member">getCurrentUser()</ref> ile alınan pointer, <ref refid="namespace_travel_expense_1_1_user_auth_1ad71c3866e8f46267153654e60014d99f" kindref="member">logoutUser()</ref> çağrılana kadar geçerlidir. Pointer&apos;ı saklamak güvenli değildir.</para>
+</simplesect>
+<simplesect kind="return"><para>User* Mevcut kullanıcı pointer&apos;ı (nullptr ise giriş yapılmamış veya oturum sonlandırılmış) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/userAuth.cpp" line="256" column="6" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="256" bodyend="258" declfile="src/travelexpense/header/userAuth.h" declline="94" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a0a20e8d4744950670b6f19c9888e74f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::UserAuth::getUserById</definition>
+        <argsstring>(int32_t userId, User &amp;user)</argsstring>
+        <name>getUserById</name>
+        <qualifiedname>TravelExpense::UserAuth::getUserById</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>userId</declname>
+        </param>
+        <param>
+          <type>User &amp;</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+<para>Kullanıcı ID&apos;ye göre kullanıcı bilgisini al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen userId&apos;ye sahip kullanıcının bilgilerini veritabanından alır ve user parametresine doldurur.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, kullanıcı ID&apos;sine göre kullanıcı bilgilerini getirir. Eğer kullanıcı bulunamazsa, FileNotFound hatası döner.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>userId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kullanıcı ID (geçerli bir userId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kullanıcı bilgisinin yazılacağı struct (çıktı parametresi, <ref refid="struct_travel_expense_1_1_user" kindref="compound">User</ref> struct&apos;ı) İçerik: userId, username, email, registrationDate vb. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/userAuth.cpp" line="260" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="260" bodyend="303" declfile="src/travelexpense/header/userAuth.h" declline="110" declcolumn="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Seyahat Gideri Takibi - Kullanıcı Kimlik Doğrulama Modülü </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu dosya, kullanıcı kimlik doğrulama işlemlerinin fonksiyon bildirimlerini içerir.</para>
+<para><simplesect kind="author"><para>Binnur Altınışık </para>
+</simplesect>
+<simplesect kind="date"><para>2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>USER_AUTH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USER_AUTH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_types_8h" kindref="compound">commonTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="export_8h" kindref="compound">export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{<sp/></highlight><highlight class="comment">//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="namespace_travel_expense_1_1_user_auth" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_user_auth" kindref="compound">UserAuth</ref><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_user_auth_1a63e9c88135b8d5f2911f99ce322d1a50" kindref="member">registerUser</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*username,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*password);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_user_auth_1a8f83e74a4b8d2833cb23051e7661c0f0" kindref="member">loginUser</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*username,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*password);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_user_auth_1a8777e8f207ceeaedc2eb75753756b1f1" kindref="member">enableGuestMode</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_user_auth_1ad71c3866e8f46267153654e60014d99f" kindref="member">logoutUser</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="struct_travel_expense_1_1_user" kindref="compound">User</ref><sp/>*<ref refid="namespace_travel_expense_1_1_user_auth_1a4ebfa893e3a0e71ccaac4869f6395785" kindref="member">getCurrentUser</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_user_auth_1a0a20e8d4744950670b6f19c9888e74f6" kindref="member">getUserById</ref>(int32_t<sp/>userId,<sp/><ref refid="struct_travel_expense_1_1_user" kindref="compound">User</ref><sp/>&amp;user);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>USER_AUTH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/travelexpense/header/userAuth.h"/>
+  </compounddef>
+</doxygen>

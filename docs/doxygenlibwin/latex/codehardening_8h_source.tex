@@ -1,0 +1,101 @@
+\doxysection{codehardening.\+h}
+\hypertarget{codehardening_8h_source}{}\label{codehardening_8h_source}\index{src/travelexpense/header/codehardening.h@{src/travelexpense/header/codehardening.h}}
+\mbox{\hyperlink{codehardening_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ CODEHARDENING\_H}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ CODEHARDENING\_H}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{export_8h}{export.h}}"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_travel_expense}{TravelExpense}}\ \{\ \textcolor{comment}{//\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_code_hardening}{CodeHardening}}\ \{}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ OPAQUE\ LOOPS\ -\/\ Kontrol\ Akışı\ Gizleme}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00048\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ uint32\_t\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a828ac59ea8c553d8583d1b749290e2d0}{createOpaqueCounter}}(uint32\_t\ base,\ uint32\_t\ offset);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00059\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a672620a323d70b733e20e41740975228}{checkOpaqueLoopCondition}}(uint32\_t\ current,\ uint32\_t\ limit);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00070\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ uint32\_t\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_af5e0a7847c70ae9cd622ea48f577178e}{opaqueIncrement}}(uint32\_t\ value,\ uint32\_t\ increment);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00081\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ uint32\_t\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a9551c47b4bd98f91527ac23186dd8709}{opaqueDecrement}}(uint32\_t\ value,\ uint32\_t\ decrement);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00084\ \textcolor{comment}{//\ STRING\ OBFUSCATION\ -\/\ String\ Gizleme}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00098\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ uint8\_t\ *\mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_aa9916facd38ff180b62777399ef07237}{obfuscateString}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *input,\ \textcolor{keywordtype}{size\_t}\ inputLen,\ uint8\_t\ key,\ \textcolor{keywordtype}{size\_t}\ \&outputLen);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00111\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a9c5a5827aef07f92d0e050851e200e67}{deobfuscateString}}(\textcolor{keyword}{const}\ uint8\_t\ *obfuscated,\ \textcolor{keywordtype}{size\_t}\ obfuscatedLen,\ uint8\_t\ key,\ \textcolor{keywordtype}{size\_t}\ \&outputLen);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00125\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_aaf489f94aa6a167ad49358d38d7dd4b9}{getObfuscatedString}}(\textcolor{keyword}{const}\ uint8\_t\ *obfuscated,\ \textcolor{keywordtype}{size\_t}\ obfuscatedLen,\ uint8\_t\ key,\ \textcolor{keywordtype}{char}\ *output,\ \textcolor{keywordtype}{size\_t}\ outputSize);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00135\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_ad24cfcb00108f4eb544c0a32bc4776a3}{secureClearObfuscatedString}}(uint8\_t\ *obfuscated,\ \textcolor{keywordtype}{size\_t}\ obfuscatedLen);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00138\ \textcolor{comment}{//\ FUNCTION\ HIDING\ -\/\ Fonksiyon\ Gizleme}}
+\DoxyCodeLine{00139\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00147\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_addad1bb570357bf02f353333473cb2eb}{obfuscateFunctionPointer}}(\textcolor{keywordtype}{void}\ *funcPtr);}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00155\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_acfece1523d826b4d4452b58b6710d301}{deobfuscateFunctionPointer}}(\textcolor{keywordtype}{void}\ *obfuscated);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00158\ \textcolor{comment}{//\ OPAQUE\ BOOLEAN\ -\/\ Opaque\ Boolean\ Değişkenleri}}
+\DoxyCodeLine{00159\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00167\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ uint32\_t\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_aaa9a69c131469aef9cfcc1c35994481d}{createOpaqueBoolean}}(\textcolor{keywordtype}{bool}\ value);}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00175\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_ae23f659a4a6eac9d1fbd948ac1037390}{getOpaqueBoolean}}(uint32\_t\ opaqueFlag);}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00184\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a52652759091af100bc0ae95b5a135546}{compareOpaqueFlags}}(uint32\_t\ flag1,\ uint32\_t\ flag2);}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00195\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ uint32\_t\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a218fad6204a74fc60eb80eb5b74e8007}{combineOpaqueFlags}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ *values,\ \textcolor{keywordtype}{size\_t}\ count);}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00204\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a77d09f0238262836f4856105cd98c62f}{getOpaqueFlagAt}}(uint32\_t\ combinedFlag,\ \textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00207\ \textcolor{comment}{//\ HELPER\ FUNCTIONS\ -\/\ Yardımcı\ Fonksiyonlar}}
+\DoxyCodeLine{00208\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00219\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ uint32\_t\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a75bc7146f1565519f5f2cb01ae836e8a}{opaqueXOR}}(uint32\_t\ a,\ uint32\_t\ b);}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00228\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ uint32\_t\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_aa135cd231714ad26ccd8a574d82195b7}{opaqueAND}}(uint32\_t\ a,\ uint32\_t\ b);}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00237\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ uint32\_t\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a54e6de63e3cd3464bbc4030b7930cb6f}{opaqueOR}}(uint32\_t\ a,\ uint32\_t\ b);}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00245\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ uint32\_t\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a204fadf1cee37c67cdaf94cd972a57d6}{opaqueNOT}}(uint32\_t\ a);}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \}\ \textcolor{comment}{//\ namespace\ CodeHardening}}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \}\ \textcolor{comment}{//\ namespace\ TravelExpense\ //\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00252\ \textcolor{comment}{//\ MACROS\ -\/\ Fonksiyon\ Gizleme\ Makroları}}
+\DoxyCodeLine{00253\ \textcolor{comment}{//\ ============================================================================}}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00261\ \textcolor{preprocessor}{\#define\ OBFUSCATE\_FUNC\_NAME(name)\ \(\backslash\)}}
+\DoxyCodeLine{00262\ \textcolor{preprocessor}{\ \ TravelExpense::CodeHardening::obfuscateFunctionPointer(reinterpret\_cast<void*>(name))}}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00270\ \textcolor{preprocessor}{\#define\ CALL\_OBFUSCATED\_FUNC(retType,\ obfPtr,\ ...)\ \(\backslash\)}}
+\DoxyCodeLine{00271\ \textcolor{preprocessor}{\ \ (reinterpret\_cast<retType(*)>(TravelExpense::CodeHardening::deobfuscateFunctionPointer(obfPtr)))(\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00279\ \textcolor{preprocessor}{\#define\ OPAQUE\_LOOP(var,\ limit,\ increment)\ \(\backslash\)}}
+\DoxyCodeLine{00280\ \textcolor{preprocessor}{\ \ for\ (uint32\_t\ var\ =\ TravelExpense::CodeHardening::createOpaqueCounter(0,\ increment);\ \(\backslash\)}}
+\DoxyCodeLine{00281\ \textcolor{preprocessor}{\ \ \ \ \ \ \ TravelExpense::CodeHardening::checkOpaqueLoopCondition(var,\ limit);\ \(\backslash\)}}
+\DoxyCodeLine{00282\ \textcolor{preprocessor}{\ \ \ \ \ \ \ var\ =\ TravelExpense::CodeHardening::opaqueIncrement(var,\ increment))}}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00293\ \textcolor{preprocessor}{\#define\ OBFUSCATED\_STRING(obf,\ obfLen,\ key,\ buf,\ bufSize)\ \(\backslash\)}}
+\DoxyCodeLine{00294\ \textcolor{preprocessor}{\ \ TravelExpense::CodeHardening::getObfuscatedString(obf,\ obfLen,\ key,\ buf,\ bufSize)}}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CODEHARDENING\_H}}
+\DoxyCodeLine{00297\ }
+
+\end{DoxyCode}

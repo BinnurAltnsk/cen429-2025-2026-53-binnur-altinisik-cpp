@@ -1,0 +1,59 @@
+\doxysection{src/travelexpense/header/expense\+Manager.h File Reference}
+\hypertarget{expense_manager_8h}{}\label{expense_manager_8h}\index{src/travelexpense/header/expenseManager.h@{src/travelexpense/header/expenseManager.h}}
+
+
+Seyahat Gideri Takibi -\/ Gider Yönetimi Modülü  
+
+
+{\ttfamily \#include \"{}common\+Types.\+h\"{}}\newline
+{\ttfamily \#include \"{}export.\+h\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for expense\+Manager.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{expense_manager_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{expense_manager_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense}{Travel\+Expense}}
+\begin{DoxyCompactList}\small\item\em Ana namespace -\/ Seyahat Gideri Takibi uygulaması \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_expense_manager}{Expense\+Manager}}
+\begin{DoxyCompactList}\small\item\em Gider yönetimi modülü \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_expense_manager}{Travel\+Expense\+::\+Expense\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_expense_manager_acfa22e551ca4dd536dc6307b49c3b41d}{Travel\+Expense\+::\+Expense\+Manager\+::log\+Expense}} (const \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} \&expense, int32\+\_\+t \&expense\+Id)
+\begin{DoxyCompactList}\small\item\em Yeni gider kaydet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_expense_manager_a0300bc40e04d73db76bb14857a2bae35}{Travel\+Expense\+::\+Expense\+Manager\+::get\+Expenses}} (int32\+\_\+t trip\+Id, std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} $>$ \&expenses)
+\begin{DoxyCompactList}\small\item\em Seyahate ait giderleri listele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_expense_manager_a299a02f1b9bbb93d906b93c1cf0e6d00}{Travel\+Expense\+::\+Expense\+Manager\+::update\+Expense}} (int32\+\_\+t expense\+Id, const \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} \&expense)
+\begin{DoxyCompactList}\small\item\em Gider bilgisini güncelle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_expense_manager_ac0f66a51dd97d9257947357b1e1483bf}{Travel\+Expense\+::\+Expense\+Manager\+::delete\+Expense}} (int32\+\_\+t expense\+Id)
+\begin{DoxyCompactList}\small\item\em Gideri sil. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_expense_manager_ad3c6bb22de70782f9107931693bbe039}{Travel\+Expense\+::\+Expense\+Manager\+::get\+Expense}} (int32\+\_\+t expense\+Id, \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} \&expense)
+\begin{DoxyCompactList}\small\item\em Gider detayını al. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ Gider Yönetimi Modülü 
+
+Bu dosya, gider yönetimi işlemlerinin fonksiyon bildirimlerini içerir.
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}

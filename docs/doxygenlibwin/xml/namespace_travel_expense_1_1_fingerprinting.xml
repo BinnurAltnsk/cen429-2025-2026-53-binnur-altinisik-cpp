@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_travel_expense_1_1_fingerprinting" kind="namespace" language="C++">
+    <compoundname>TravelExpense::Fingerprinting</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1a28a42fb823573e94bfc33e9d17aaec15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::generateDeviceFingerprint</definition>
+        <argsstring>(char *fingerprint)</argsstring>
+        <name>generateDeviceFingerprint</name>
+        <qualifiedname>TravelExpense::Fingerprinting::generateDeviceFingerprint</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>fingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Cihaz fingerprint&apos;ini oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>MAC adresi, sistem bilgileri ve donanım özelliklerini kullanarak benzersiz bir cihaz fingerprint&apos;i oluşturur.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cihaz fingerprint çıktısı (64 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="45" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="45" bodyend="140" declfile="src/travelexpense/header/fingerprinting.h" declline="47" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1a191e063655ff8a03f4fb50febd6f59c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::verifyDeviceFingerprint</definition>
+        <argsstring>(const char *expectedFingerprint)</argsstring>
+        <name>verifyDeviceFingerprint</name>
+        <qualifiedname>TravelExpense::Fingerprinting::verifyDeviceFingerprint</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>expectedFingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Cihaz fingerprint&apos;ini doğrula. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Beklenen fingerprint ile mevcut cihaz fingerprint&apos;ini karşılaştırır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expectedFingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen cihaz fingerprint&apos;i </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="142" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="142" bodyend="166" declfile="src/travelexpense/header/fingerprinting.h" declline="57" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1ad3a5d90d7f0cc6eb6f61bc2212ebcafb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::generateApplicationFingerprint</definition>
+        <argsstring>(char *fingerprint)</argsstring>
+        <name>generateApplicationFingerprint</name>
+        <qualifiedname>TravelExpense::Fingerprinting::generateApplicationFingerprint</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>fingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Uygulama fingerprint&apos;ini oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Executable dosyasının hash&apos;ini, sürüm bilgisini, build zamanını ve diğer uygulama özelliklerini kullanarak benzersiz bir uygulama fingerprint&apos;i oluşturur.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uygulama fingerprint çıktısı (64 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="172" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="172" bodyend="213" declfile="src/travelexpense/header/fingerprinting.h" declline="73" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1ad1d7ddf7b4c19319abf133d25423a1b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::verifyApplicationFingerprint</definition>
+        <argsstring>(const char *expectedFingerprint)</argsstring>
+        <name>verifyApplicationFingerprint</name>
+        <qualifiedname>TravelExpense::Fingerprinting::verifyApplicationFingerprint</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>expectedFingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Uygulama fingerprint&apos;ini doğrula. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Beklenen fingerprint ile mevcut uygulama fingerprint&apos;ini karşılaştırır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expectedFingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beklenen uygulama fingerprint&apos;i </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="215" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="215" bodyend="239" declfile="src/travelexpense/header/fingerprinting.h" declline="83" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1a74e595b94de77e3ff726e9ee8c431842" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::generateCombinedFingerprint</definition>
+        <argsstring>(char *fingerprint)</argsstring>
+        <name>generateCombinedFingerprint</name>
+        <qualifiedname>TravelExpense::Fingerprinting::generateCombinedFingerprint</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>fingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Birleşik fingerprint oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cihaz ve uygulama fingerprint&apos;lerini birleştirerek tek bir fingerprint oluşturur. Bu, cihaz-uygulama bağlantısı için kullanılabilir.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Birleşik fingerprint çıktısı (64 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="241" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="241" bodyend="274" declfile="src/travelexpense/header/fingerprinting.h" declline="94" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1a5bdef5dde8993c3b60f622d1f7ce4879" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::generateDynamicKey</definition>
+        <argsstring>(const char *fingerprint, uint8_t *key, size_t keyLen)</argsstring>
+        <name>generateDynamicKey</name>
+        <qualifiedname>TravelExpense::Fingerprinting::generateDynamicKey</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>fingerprint</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyLen</declname>
+        </param>
+        <briefdescription>
+<para>Dinamik anahtar oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cihaz ve uygulama fingerprint&apos;lerini kullanarak dinamik bir anahtar oluşturur. Bu anahtar, cihaz ve uygulama bazlı şifreleme için kullanılabilir.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cihaz veya uygulama fingerprint&apos;i </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dinamik anahtar çıktısı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar uzunluğu (32) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="280" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="280" bodyend="304" declfile="src/travelexpense/header/fingerprinting.h" declline="111" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1a0b557777926cc48a61ef92293ef512fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::generateDeviceBasedKey</definition>
+        <argsstring>(uint8_t *key, size_t keyLen)</argsstring>
+        <name>generateDeviceBasedKey</name>
+        <qualifiedname>TravelExpense::Fingerprinting::generateDeviceBasedKey</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyLen</declname>
+        </param>
+        <briefdescription>
+<para>Cihaz bazlı anahtar oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cihaz fingerprint&apos;ini kullanarak dinamik bir anahtar oluşturur.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dinamik anahtar çıktısı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar uzunluğu (32) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="306" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="306" bodyend="320" declfile="src/travelexpense/header/fingerprinting.h" declline="123" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1acb1654b3c7d1bfee4884fccb3c96e092" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::generateApplicationBasedKey</definition>
+        <argsstring>(uint8_t *key, size_t keyLen)</argsstring>
+        <name>generateApplicationBasedKey</name>
+        <qualifiedname>TravelExpense::Fingerprinting::generateApplicationBasedKey</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyLen</declname>
+        </param>
+        <briefdescription>
+<para>Uygulama bazlı anahtar oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uygulama fingerprint&apos;ini kullanarak dinamik bir anahtar oluşturur.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dinamik anahtar çıktısı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar uzunluğu (32) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="322" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="322" bodyend="336" declfile="src/travelexpense/header/fingerprinting.h" declline="134" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1a60ea4c07ed4974e73e33c8ae00257aa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::Fingerprinting::generateCombinedKey</definition>
+        <argsstring>(uint8_t *key, size_t keyLen)</argsstring>
+        <name>generateCombinedKey</name>
+        <qualifiedname>TravelExpense::Fingerprinting::generateCombinedKey</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyLen</declname>
+        </param>
+        <briefdescription>
+<para>Birleşik anahtar oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Cihaz ve uygulama fingerprint&apos;lerini birleştirerek dinamik bir anahtar oluşturur. Bu anahtar, cihaz-uygulama bağlantısı için şifreleme anahtarı olarak kullanılabilir.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Birleşik dinamik anahtar çıktısı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar uzunluğu (32) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fingerprinting.cpp" line="338" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="338" bodyend="352" declfile="src/travelexpense/header/fingerprinting.h" declline="146" declcolumn="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/travelexpense/header/fingerprinting.h" line="32" column="1"/>
+  </compounddef>
+</doxygen>

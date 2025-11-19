@@ -1,0 +1,91 @@
+\doxysection{src/travelexpense/src/encryption.cpp File Reference}
+\hypertarget{encryption_8cpp}{}\label{encryption_8cpp}\index{src/travelexpense/src/encryption.cpp@{src/travelexpense/src/encryption.cpp}}
+
+
+Seyahat Gideri Takibi -\/ Şifreleme Fonksiyonları Implementation.  
+
+
+{\ttfamily \#include \"{}../header/encryption.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/safe\+\_\+string.\+h\"{}}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+Include dependency graph for encryption.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{encryption_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense}{Travel\+Expense}}
+\begin{DoxyCompactList}\small\item\em Ana namespace -\/ Seyahat Gideri Takibi uygulaması \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_encryption}{Travel\+Expense\+::\+Encryption}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_adfcb32aabe9079b29064bb520f474e43}{Travel\+Expense\+::\+Encryption\+::sha256\+Hash}} (const void \texorpdfstring{$\ast$}{*}input, size\+\_\+t input\+Len, char \texorpdfstring{$\ast$}{*}output)
+\begin{DoxyCompactList}\small\item\em SHA-\/256 hash hesapla. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_aba07992223a35358d74456b63764eb4d}{Travel\+Expense\+::\+Encryption\+::generate\+Salt}} (char \texorpdfstring{$\ast$}{*}salt)
+\begin{DoxyCompactList}\small\item\em Salt oluştur (kriptografik olarak güvenli rastgele) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a218390c34597e2a8896f6f3c4ba1672e}{Travel\+Expense\+::\+Encryption\+::hash\+Password}} (const char \texorpdfstring{$\ast$}{*}password, const char \texorpdfstring{$\ast$}{*}salt, char \texorpdfstring{$\ast$}{*}hash)
+\begin{DoxyCompactList}\small\item\em Şifreyi hash\textquotesingle{}le (SHA-\/256 + Salt) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a4860c004d6b6d05f4723dfc0c90f35cd}{Travel\+Expense\+::\+Encryption\+::verify\+Password}} (const char \texorpdfstring{$\ast$}{*}password, const char \texorpdfstring{$\ast$}{*}salt, const char \texorpdfstring{$\ast$}{*}stored\+Hash)
+\begin{DoxyCompactList}\small\item\em Şifre doğrulama (constant-\/time comparison) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_aba26f33ed7139866139f516576826c8d}{Travel\+Expense\+::\+Encryption\+::encrypt\+AES256}} (const void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t plaintext\+Len, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}iv, void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t \&ciphertext\+Len)
+\begin{DoxyCompactList}\small\item\em AES-\/256 ile veri şifreleme (basit implementasyon -\/ başlangıç) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a8b06d829778298f0975c1b85ed746270}{Travel\+Expense\+::\+Encryption\+::decrypt\+AES256}} (const void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t ciphertext\+Len, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}iv, void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t \&plaintext\+Len)
+\begin{DoxyCompactList}\small\item\em AES-\/256 ile veri şifre çözme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a9556af2bcbc41232a11630b9de1d36d0}{Travel\+Expense\+::\+Encryption\+::hmac\+SHA256}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key, size\+\_\+t key\+Len, const void \texorpdfstring{$\ast$}{*}message, size\+\_\+t message\+Len, char \texorpdfstring{$\ast$}{*}output)
+\begin{DoxyCompactList}\small\item\em HMAC-\/\+SHA256 hesapla (Message Authentication Code) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a53f29cf73c5a46e8ff3c3344408bcefa}{Travel\+Expense\+::\+Encryption\+::pbkdf2}} (const char \texorpdfstring{$\ast$}{*}password, size\+\_\+t password\+Len, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}salt, size\+\_\+t salt\+Len, uint32\+\_\+t iterations, size\+\_\+t key\+Len, uint8\+\_\+t \texorpdfstring{$\ast$}{*}output)
+\begin{DoxyCompactList}\small\item\em PBKDF2 key derivation (Password-\/\+Based Key Derivation Function 2) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_aab13cbee61c87e29e4f07badb68ee006}{Travel\+Expense\+::\+Encryption\+::generate\+Random\+Bytes}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}output, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Güvenli rastgele byte dizisi oluştur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_af19dc3b309d69a616590466cd620921c}{Travel\+Expense\+::\+Encryption\+::generate\+IV}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}iv)
+\begin{DoxyCompactList}\small\item\em IV (Initialization Vector) oluştur (16 byte -\/ AES block size) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a1bc8df3a6e90bff77d7c9eb843036ba5}{Travel\+Expense\+::\+Encryption\+::constant\+Time\+Compare}} (const char \texorpdfstring{$\ast$}{*}a, const char \texorpdfstring{$\ast$}{*}b, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Constant-\/time string karşılaştırma (timing attack koruması) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a0195e1357626a5075951ae990e99ca8d}{Travel\+Expense\+::\+Encryption\+::encrypt\+File}} (const char \texorpdfstring{$\ast$}{*}input\+File, const char \texorpdfstring{$\ast$}{*}output\+File, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}iv=nullptr)
+\begin{DoxyCompactList}\small\item\em Dosyayı AES-\/256-\/\+CBC ile şifrele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a7d0d5da1d2c1edf0044d80f025c889b4}{Travel\+Expense\+::\+Encryption\+::decrypt\+File}} (const char \texorpdfstring{$\ast$}{*}input\+File, const char \texorpdfstring{$\ast$}{*}output\+File, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}iv=nullptr)
+\begin{DoxyCompactList}\small\item\em Şifrelenmiş dosyayı çöz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a90b1f8daf4e4e6a110cce5aa4a1a135f}{Travel\+Expense\+::\+Encryption\+::encrypt\+Whitebox\+DES}} (const void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t plaintext\+Len, void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t \&ciphertext\+Len)
+\begin{DoxyCompactList}\small\item\em Whitebox DES ile veri şifreleme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a894ef88976e4ddeccc27e33506180f6f}{Travel\+Expense\+::\+Encryption\+::decrypt\+Whitebox\+DES}} (const void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t ciphertext\+Len, void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t \&plaintext\+Len)
+\begin{DoxyCompactList}\small\item\em Whitebox DES ile veri şifre çözme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a531df9d656f8e6e5b539c2db02ff09b0}{Travel\+Expense\+::\+Encryption\+::encrypt\+File\+Whitebox\+DES}} (const char \texorpdfstring{$\ast$}{*}input\+File, const char \texorpdfstring{$\ast$}{*}output\+File)
+\begin{DoxyCompactList}\small\item\em Dosyayı Whitebox DES ile şifrele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a34495d70a42f169639fe1d6d51f4fa79}{Travel\+Expense\+::\+Encryption\+::decrypt\+File\+Whitebox\+DES}} (const char \texorpdfstring{$\ast$}{*}input\+File, const char \texorpdfstring{$\ast$}{*}output\+File)
+\begin{DoxyCompactList}\small\item\em Whitebox DES ile şifrelenmiş dosyayı çöz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_ac04f3733c0d1a05113a11221e344e0e7}{Travel\+Expense\+::\+Encryption\+::encrypt\+Whitebox\+AES}} (const void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t plaintext\+Len, void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t \&ciphertext\+Len)
+\begin{DoxyCompactList}\small\item\em Whitebox AES ile veri şifreleme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a539e19ad6f2560392c8a73000fb71e21}{Travel\+Expense\+::\+Encryption\+::decrypt\+Whitebox\+AES}} (const void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t ciphertext\+Len, void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t \&plaintext\+Len)
+\begin{DoxyCompactList}\small\item\em Whitebox AES ile veri şifre çözme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_ad2ec9054ce42bc1b7376ed47caf91e56}{Travel\+Expense\+::\+Encryption\+::encrypt\+File\+Whitebox\+AES}} (const char \texorpdfstring{$\ast$}{*}input\+File, const char \texorpdfstring{$\ast$}{*}output\+File)
+\begin{DoxyCompactList}\small\item\em Dosyayı Whitebox AES ile şifrele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_ae7b964b2a339d09c81020de250276b43}{Travel\+Expense\+::\+Encryption\+::decrypt\+File\+Whitebox\+AES}} (const char \texorpdfstring{$\ast$}{*}input\+File, const char \texorpdfstring{$\ast$}{*}output\+File)
+\begin{DoxyCompactList}\small\item\em Whitebox AES ile şifrelenmiş dosyayı çöz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ Şifreleme Fonksiyonları Implementation. 
+
+Bu dosya, tam özellikli SHA-\/256 hash, AES-\/256-\/\+CBC şifreleme, HMAC-\/\+SHA256, PBKDF2 key derivation ve diğer güvenlik fonksiyonlarının implementasyonlarını içerir.
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}

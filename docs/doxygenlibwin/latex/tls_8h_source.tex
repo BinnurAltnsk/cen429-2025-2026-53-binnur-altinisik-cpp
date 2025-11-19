@@ -1,0 +1,89 @@
+\doxysection{tls.\+h}
+\hypertarget{tls_8h_source}{}\label{tls_8h_source}\index{src/travelexpense/header/tls.h@{src/travelexpense/header/tls.h}}
+\mbox{\hyperlink{tls_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ TLS\_H}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ TLS\_H}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{common_types_8h}{commonTypes.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{export_8h}{export.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_travel_expense}{TravelExpense}}\ \{\ \textcolor{comment}{//\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_t_l_s}{TLS}}\ \{}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ SSL/TLS\ BAĞLANTI\ YÖNETİMİ}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}}\ \{}
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a03cbedda9059a1a399a9590581d70cf5}{sslContext}};}
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a7d916e9bcf4e7221fe1835efd01c9893}{sslConnection}};}
+\DoxyCodeLine{00049\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a195268e4ab901bb69a2a2c6ec69bf4bc}{isInitialized}};}
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_ad9e5bf2bd00930fa875d2092ace10065}{isConnected}};}
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a92d6e50864d85ef5ac229282ca3e567c}{serverHostname}}[256];}
+\DoxyCodeLine{00055\ \ \ uint16\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_adb3077ae341f641b97e5e9e18170a203}{serverPort}};}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00064\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{TravelExpense::ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a1f4b0ad3a0bf0c1ee5ab94b4cc50e026}{initializeTLSContext}}(\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}}\ *ctx);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00072\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{TravelExpense::ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a6033407b89e93d95ee934725ec8d0473}{cleanupTLSContext}}(\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}}\ *ctx);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00082\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{TravelExpense::ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a6cf999cc3f7623c8381b586c9c338a8b}{connectTLS}}(\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}}\ *ctx,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *hostname,\ uint16\_t\ port);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00090\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{TravelExpense::ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a98d4f54141bfa0bda8cb66567d232e21}{disconnectTLS}}(\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}}\ *ctx);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00101\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{TravelExpense::ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_aea3adfe31d55f246cc04f0d5355608a8}{sendTLS}}(\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}}\ *ctx,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{size\_t}\ dataLen,\ \textcolor{keywordtype}{size\_t}\ \&bytesSent);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00112\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{TravelExpense::ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a3df401b12f4a6007d35adb739e4e52b4}{receiveTLS}}(\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}}\ *ctx,\ \textcolor{keywordtype}{void}\ *buffer,\ \textcolor{keywordtype}{size\_t}\ bufferLen,\ \textcolor{keywordtype}{size\_t}\ \&bytesReceived);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00115\ \textcolor{comment}{//\ CERTIFICATE\ PINNING}}
+\DoxyCodeLine{00116\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00127\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin}{CertificatePin}}\ \{}
+\DoxyCodeLine{00129\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_aa6ab5f33c9d6eb212f691ff5a2918266}{hostname}}[256];}
+\DoxyCodeLine{00131\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_ae6beb42cddbf78ba417898fee109fcb5}{fingerprint}}[65];}
+\DoxyCodeLine{00133\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_aec0c308348644af9c92beaa672f06d23}{publicKeyHash}}[65];}
+\DoxyCodeLine{00135\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_a143d1a034bc36ccc2e8ac270e466cc21}{pinCertificate}};}
+\DoxyCodeLine{00137\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_ac4b30c9d1432b91805a5129f65497c15}{pinPublicKey}};}
+\DoxyCodeLine{00138\ \};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00146\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{TravelExpense::ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a2bbc4fef6bf456551a761d3891672098}{registerCertificatePin}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin}{CertificatePin}}\ *pin);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00157\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{TravelExpense::ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a0164fd8bb76e186edd32156957f30c67}{verifyCertificatePin}}(\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}}\ *ctx,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *hostname);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00166\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{TravelExpense::ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_aee9c0722df199d9ce6a08ae0099f7658}{getCertificateFingerprint}}(\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}}\ *ctx,\ \textcolor{keywordtype}{char}\ *fingerprint);}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00175\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{TravelExpense::ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a0bc182873d8e7010c15d2356d92bbabd}{getCertificatePublicKeyHash}}(\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}}\ *ctx,\ \textcolor{keywordtype}{char}\ *publicKeyHash);}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00178\ \textcolor{comment}{//\ MUTUAL\ AUTHENTICATION}}
+\DoxyCodeLine{00179\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00192\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{TravelExpense::ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_af3eee0c7c6f7d4d47aa903007191e8ba}{loadClientCertificate}}(\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}}\ *ctx,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *certPath,}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *keyPath,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *keyPassword);}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00204\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{TravelExpense::ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_ab6f8f820ccd83d1e6062de39cc1d7386}{setCAPath}}(\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}}\ *ctx,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *caPath);}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00214\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{TravelExpense::ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a7ec0910cdb0e632435dae6af7f06b345}{verifyServerCertificate}}(\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}}\ *ctx);}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00217\ \textcolor{comment}{//\ YARDIMCI\ FONKSİYONLAR}}
+\DoxyCodeLine{00218\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00229\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{TravelExpense::ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_ac17ef09e926723c9e4c55d10b7cf186c}{calculateCertificateFingerprint}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *certPath,\ \textcolor{keywordtype}{char}\ *fingerprint);}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00239\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{TravelExpense::ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a6016f41b99ba6f5ffa92ae72bad03b15}{getTLSErrorMessage}}(\mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ errorCode,\ \textcolor{keywordtype}{char}\ *message,\ \textcolor{keywordtype}{size\_t}\ messageLen);}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \}\ \textcolor{comment}{//\ namespace\ TLS}}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \}\ \textcolor{comment}{//\ namespace\ TravelExpense\ //\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TLS\_H}}
+\DoxyCodeLine{00246\ }
+
+\end{DoxyCode}

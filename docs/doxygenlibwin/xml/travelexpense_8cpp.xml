@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="travelexpense_8cpp" kind="file" language="C++">
+    <compoundname>travelexpense.cpp</compoundname>
+    <briefdescription>
+<para>Seyahat Gideri Takibi - Ana Kütüphane (Bu dosya artık boş, tüm modüller ayrı dosyalara taşındı) </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu dosya sadece geriye dönük uyumluluk için bırakılmıştır. Tüm fonksiyonlar modüler dosyalara taşınmıştır:<itemizedlist>
+<listitem><para><ref refid="user_auth_8cpp" kindref="compound">userAuth.cpp</ref></para>
+</listitem><listitem><para><ref refid="trip_manager_8cpp" kindref="compound">tripManager.cpp</ref></para>
+</listitem><listitem><para><ref refid="expense_manager_8cpp" kindref="compound">expenseManager.cpp</ref></para>
+</listitem><listitem><para><ref refid="budget_manager_8cpp" kindref="compound">budgetManager.cpp</ref></para>
+</listitem><listitem><para><ref refid="report_generator_8cpp" kindref="compound">reportGenerator.cpp</ref></para>
+</listitem><listitem><para><ref refid="helpers_8cpp" kindref="compound">helpers.cpp</ref></para>
+</listitem><listitem><para><ref refid="file_i_o_8cpp" kindref="compound">fileIO.cpp</ref></para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="author"><para>Binnur Altınışık </para>
+</simplesect>
+<simplesect kind="date"><para>2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Bu<sp/>dosya<sp/>artık<sp/>boş<sp/>-<sp/>tüm<sp/>implementasyonlar<sp/>modüler<sp/>dosyalara<sp/>taşınmıştır</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/travelexpense/src/travelexpense.cpp"/>
+  </compounddef>
+</doxygen>

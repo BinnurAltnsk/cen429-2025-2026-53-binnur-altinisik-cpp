@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="file_i_o_8h" kind="file" language="C++">
+    <compoundname>fileIO.h</compoundname>
+    <includes refid="export_8h" local="yes">export.h</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">string</includes>
+    <includedby refid="travelexpense_8h" local="yes">src/travelexpense/header/travelexpense.h</includedby>
+    <includedby refid="database_8cpp" local="yes">src/travelexpense/src/database.cpp</includedby>
+    <includedby refid="file_i_o_8cpp" local="yes">src/travelexpense/src/fileIO.cpp</includedby>
+    <includedby refid="migration_8cpp" local="yes">src/travelexpense/src/migration.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>export.h</label>
+        <link refid="export_8h"/>
+      </node>
+      <node id="1">
+        <label>src/travelexpense/header/fileIO.h</label>
+        <link refid="file_i_o_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/travelexpense/header/fileIO.h</label>
+        <link refid="file_i_o_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/travelexpense/header/travelexpense.h</label>
+        <link refid="travelexpense_8h"/>
+      </node>
+      <node id="3">
+        <label>src/travelexpense/src/database.cpp</label>
+        <link refid="database_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/travelexpense/src/fileIO.cpp</label>
+        <link refid="file_i_o_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/travelexpense/src/migration.cpp</label>
+        <link refid="migration_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
+    <innernamespace refid="namespace_file_i_o">FileIO</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_file_i_o">TravelExpense::FileIO</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_file_i_o_1a5b48ea5d727f176d8ccc873b44bde6bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::FileIO::ensureDataDirectory</definition>
+        <argsstring>()</argsstring>
+        <name>ensureDataDirectory</name>
+        <qualifiedname>TravelExpense::FileIO::ensureDataDirectory</qualifiedname>
+        <briefdescription>
+<para>Veri dizinini oluştur (yoksa) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Uygulama veri dizinini (varsayılan: &quot;data&quot;) oluşturur. Eğer dizin zaten varsa, hiçbir işlem yapmaz.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, uygulama başlatıldığında çağrılmalıdır. Dizin oluşturulamazsa (örneğin izin hatası), false döner.</para>
+</simplesect>
+<simplesect kind="return"><para>true Başarılı (dizin oluşturuldu veya zaten var), false Hata (izin hatası vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fileIO.cpp" line="68" column="6" bodyfile="src/travelexpense/src/fileIO.cpp" bodystart="68" bodyend="85" declfile="src/travelexpense/header/fileIO.h" declline="40" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_file_i_o_1a00cc394b17a375d8944fdeff726d2007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> int32_t</type>
+        <definition>int32_t TravelExpense::FileIO::getLastId</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>getLastId</name>
+        <qualifiedname>TravelExpense::FileIO::getLastId</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Son ID&apos;yi dosyadan al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen entity için son kullanılan ID&apos;yi dosyadan okur. Dosya yoksa veya okuma hatası varsa 0 döner.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, entity ID&apos;lerini takip etmek için kullanılır. Dosya formatı: ASCII sayı olarak saklanır.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entity adı (user, trip, expense, budget) Dosya yolu: &quot;data/{filename}_id.txt&quot; formatında nullptr ise 0 döner. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int32_t Son ID, 0 ise dosya yok veya okuma hatası </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fileIO.cpp" line="87" column="9" bodyfile="src/travelexpense/src/fileIO.cpp" bodystart="87" bodyend="99" declfile="src/travelexpense/header/fileIO.h" declline="56" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_file_i_o_1a62bef7a2f4e9800f9e1cd658b2b2736f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::FileIO::saveLastId</definition>
+        <argsstring>(const char *filename, int32_t id)</argsstring>
+        <name>saveLastId</name>
+        <qualifiedname>TravelExpense::FileIO::saveLastId</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Son ID&apos;yi dosyaya kaydet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen entity için son kullanılan ID&apos;yi dosyaya yazar. Dosya yoksa oluşturulur, varsa güncellenir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, ID tracking için kullanılır. Dosya formatı: ASCII sayı olarak saklanır.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entity adı (user, trip, expense, budget) Dosya yolu: &quot;data/{filename}_id.txt&quot; formatında nullptr ise false döner. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kaydedilecek ID (0&apos;dan büyük olmalı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (dosya yazma hatası, izin hatası vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fileIO.cpp" line="101" column="6" bodyfile="src/travelexpense/src/fileIO.cpp" bodystart="101" bodyend="113" declfile="src/travelexpense/header/fileIO.h" declline="73" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_file_i_o_1ad66f05fcd39352e4f9a2aa8fdf32ce48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> int32_t</type>
+        <definition>int32_t TravelExpense::FileIO::generateId</definition>
+        <argsstring>(const char *entityName)</argsstring>
+        <name>generateId</name>
+        <qualifiedname>TravelExpense::FileIO::generateId</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>entityName</declname>
+        </param>
+        <briefdescription>
+<para>Yeni ID oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen entity için yeni bir benzersiz ID oluşturur. Son ID&apos;yi dosyadan okur, 1 artırır, dosyaya kaydeder ve döndürür.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, atomik ID oluşturma sağlar. Eğer dosya yoksa, 1 ile başlar.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entityName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entity adı (user, trip, expense, budget) nullptr ise 0 döner. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int32_t Yeni ID (1&apos;den başlar, her çağrıda 1 artar), 0 ise hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/fileIO.cpp" line="115" column="9" bodyfile="src/travelexpense/src/fileIO.cpp" bodystart="115" bodyend="120" declfile="src/travelexpense/header/fileIO.h" declline="88" declcolumn="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Seyahat Gideri Takibi - Dosya I/O Yardımcı Fonksiyonlar. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu dosya, dosya işlemleri için yardımcı fonksiyon bildirimlerini içerir.</para>
+<para><simplesect kind="author"><para>Binnur Altınışık </para>
+</simplesect>
+<simplesect kind="date"><para>2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FILE_IO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FILE_IO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="export_8h" kindref="compound">export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{<sp/></highlight><highlight class="comment">//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="namespace_travel_expense_1_1_file_i_o" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_file_i_o" kindref="compound">FileIO</ref><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_file_i_o_1a5b48ea5d727f176d8ccc873b44bde6bd" kindref="member">ensureDataDirectory</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>int32_t<sp/><ref refid="namespace_travel_expense_1_1_file_i_o_1a00cc394b17a375d8944fdeff726d2007" kindref="member">getLastId</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_file_i_o_1a62bef7a2f4e9800f9e1cd658b2b2736f" kindref="member">saveLastId</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename,<sp/>int32_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/>int32_t<sp/><ref refid="namespace_travel_expense_1_1_file_i_o_1ad66f05fcd39352e4f9a2aa8fdf32ce48" kindref="member">generateId</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*entityName);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>FILE_IO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/travelexpense/header/fileIO.h"/>
+  </compounddef>
+</doxygen>

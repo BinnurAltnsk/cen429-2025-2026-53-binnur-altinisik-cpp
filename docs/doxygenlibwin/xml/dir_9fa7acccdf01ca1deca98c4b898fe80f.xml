@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_9fa7acccdf01ca1deca98c4b898fe80f" kind="dir">
+    <compoundname>src/travelexpense/src</compoundname>
+    <innerfile refid="asset_manager_8cpp">assetManager.cpp</innerfile>
+    <innerfile refid="budget_manager_8cpp">budgetManager.cpp</innerfile>
+    <innerfile refid="codehardening_8cpp">codehardening.cpp</innerfile>
+    <innerfile refid="database_8cpp">database.cpp</innerfile>
+    <innerfile refid="encryption_8cpp">encryption.cpp</innerfile>
+    <innerfile refid="expense_manager_8cpp">expenseManager.cpp</innerfile>
+    <innerfile refid="file_i_o_8cpp">fileIO.cpp</innerfile>
+    <innerfile refid="fingerprinting_8cpp">fingerprinting.cpp</innerfile>
+    <innerfile refid="helpers_8cpp">helpers.cpp</innerfile>
+    <innerfile refid="migration_8cpp">migration.cpp</innerfile>
+    <innerfile refid="rasp_8cpp">rasp.cpp</innerfile>
+    <innerfile refid="report_generator_8cpp">reportGenerator.cpp</innerfile>
+    <innerfile refid="security_8cpp">security.cpp</innerfile>
+    <innerfile refid="session_manager_8cpp">sessionManager.cpp</innerfile>
+    <innerfile refid="softhsm_8cpp">softhsm.cpp</innerfile>
+    <innerfile refid="tls_8cpp">tls.cpp</innerfile>
+    <innerfile refid="travelexpense_8cpp">travelexpense.cpp</innerfile>
+    <innerfile refid="trip_manager_8cpp">tripManager.cpp</innerfile>
+    <innerfile refid="user_auth_8cpp">userAuth.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/travelexpense/src/"/>
+  </compounddef>
+</doxygen>

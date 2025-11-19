@@ -1,0 +1,51 @@
+\doxysection{src/travelexpense/src/trip\+Manager.cpp File Reference}
+\hypertarget{trip_manager_8cpp}{}\label{trip_manager_8cpp}\index{src/travelexpense/src/tripManager.cpp@{src/travelexpense/src/tripManager.cpp}}
+
+
+Seyahat Gideri Takibi -\/ Seyahat Yönetimi Implementation.  
+
+
+{\ttfamily \#include \"{}../header/trip\+Manager.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/database.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/safe\+\_\+string.\+h\"{}}\newline
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+Include dependency graph for trip\+Manager.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{trip_manager_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense}{Travel\+Expense}}
+\begin{DoxyCompactList}\small\item\em Ana namespace -\/ Seyahat Gideri Takibi uygulaması \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager}{Travel\+Expense\+::\+Trip\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager_ac7be4bff03b19399d7aa30b2d8a86c94}{Travel\+Expense\+::\+Trip\+Manager\+::create\+Trip}} (const \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} \&trip, int32\+\_\+t \&trip\+Id)
+\begin{DoxyCompactList}\small\item\em Yeni seyahat oluştur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager_a8b213c27d6c49d746400185703232b7e}{Travel\+Expense\+::\+Trip\+Manager\+::get\+Trips}} (int32\+\_\+t user\+Id, std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} $>$ \&trips)
+\begin{DoxyCompactList}\small\item\em Kullanıcıya ait seyahatleri listele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager_a39bc3ac908aab3ead121a77c6f290ea0}{Travel\+Expense\+::\+Trip\+Manager\+::update\+Trip}} (int32\+\_\+t trip\+Id, const \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} \&trip)
+\begin{DoxyCompactList}\small\item\em Seyahat bilgisini güncelle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager_a6686b59f40b7a211db40096af483de6c}{Travel\+Expense\+::\+Trip\+Manager\+::delete\+Trip}} (int32\+\_\+t trip\+Id)
+\begin{DoxyCompactList}\small\item\em Seyahati sil. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager_a6e49251e6e2091a7a6db0b84cf64cacb}{Travel\+Expense\+::\+Trip\+Manager\+::get\+Trip}} (int32\+\_\+t trip\+Id, \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}} \&trip)
+\begin{DoxyCompactList}\small\item\em Seyahat detayını al. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ Seyahat Yönetimi Implementation. 
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}

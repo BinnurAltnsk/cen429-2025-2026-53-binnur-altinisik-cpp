@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\tests\travelexpense\travelexpense_test.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\tests\travelexpense\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{54E3E583-A46C-373B-95A0-13BD97D125BA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

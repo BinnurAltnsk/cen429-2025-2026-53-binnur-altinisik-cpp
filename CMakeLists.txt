@@ -50,8 +50,14 @@ option(ENABLE_TESTS "Enable All Tests" ON)
 
 
 # Configure logs
-
-add_compile_definitions(ENABLE_TRAVELEXPENSE_LOGGER)
+# Release build'de loglama kapatılır (güvenlik için)
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    # Release build'de loglama kapalı
+    # add_compile_definitions(ENABLE_TRAVELEXPENSE_LOGGER)
+else()
+    # Debug build'de loglama açık
+    add_compile_definitions(ENABLE_TRAVELEXPENSE_LOGGER)
+endif()
 
 # Set the output directories for Debug and Release configurations
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_BINARY_DIR}/build/Debug)

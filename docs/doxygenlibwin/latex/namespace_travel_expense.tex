@@ -1,0 +1,231 @@
+\doxysection{Travel\+Expense Namespace Reference}
+\hypertarget{namespace_travel_expense}{}\label{namespace_travel_expense}\index{TravelExpense@{TravelExpense}}
+
+
+Ana namespace -\/ Seyahat Gideri Takibi uygulaması  
+
+
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_asset_manager}{Asset\+Manager}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_budget_manager}{Budget\+Manager}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening}{Code\+Hardening}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_database}{Database}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_encryption}{Encryption}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_expense_manager}{Expense\+Manager}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_file_i_o}{File\+IO}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting}{Fingerprinting}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_migration}{Migration}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p}{RASP}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_report_generator}{Report\+Generator}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_safe_string}{Safe\+String}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_security}{Security}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_session_manager}{Session\+Manager}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m}{Soft\+HSM}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s}{TLS}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_trip_manager}{Trip\+Manager}}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_user_auth}{User\+Auth}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_travel_expense_1_1_budget}{Budget}}
+\begin{DoxyCompactList}\small\item\em Bütçe veri modeli. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}}
+\begin{DoxyCompactList}\small\item\em Gider veri modeli. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_travel_expense_1_1_trip}{Trip}}
+\begin{DoxyCompactList}\small\item\em Seyahat veri modeli. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_travel_expense_1_1_user}{User}}
+\begin{DoxyCompactList}\small\item\em Kullanıcı veri modeli. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62}{Expense\+Category}} \{ \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62aedd22f15b1b8b701b7d2c7d8114bc638}{ACCOMMODATION}} = 0
+, \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62acf76afe165258d38e1ef8683601cb5b6}{TRANSPORTATION}} = 1
+, \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62acc9284597026dcc021735c0970ca0c93}{FOOD}} = 2
+, \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62a30745c1ec37b7320355b5b1750b98f84}{ENTERTAINMENT}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Gider kategorileri. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \{ \newline
+\mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38}{Success}} = 0
+, \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba2767828026039e8ba7b38973cbb701f2}{File\+Not\+Found}} = 1
+, \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dabad1fc762e8f39e812667213e92037bc08}{Decryption\+Failed}} = 2
+, \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba23cd86e43512932a4bc975552c8d17fd}{Checksum\+Mismatch}} = 3
+, \newline
+\mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dababe4679ad0ec4fefd37bc5b23679d0e7d}{Invalid\+User}} = 4
+, \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba96bf1c44545e98afb4a0147f8ea37e45}{Budget\+Exceeded}} = 5
+, \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043}{Invalid\+Input}} = 6
+, \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba6a10b4834f9cabcc57ddbf0ee05eeb47}{Memory\+Allocation}} = 7
+, \newline
+\mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba86bef3f9f8669a7395a877ff014aecd9}{File\+IO}} = 8
+, \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dabaf8bf95b659f617159eb42c2099352a26}{Encryption\+Failed}} = 9
+, \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dabaaf98071f760be899f4fcf1d53a29ba17}{Connection\+Failed}} = 10
+, \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dabaf49c172e5177f15fafb78d0baade4ee5}{Security\+Failed}} = 11
+, \newline
+\mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba88183b946cc5f0e8c96b2e66e1c74a7e}{Unknown}} = 99
+ \}
+\begin{DoxyCompactList}\small\item\em Hata kodları enum\textquotesingle{}u. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_travel_expense_ae772eeb5adb7c53bcb85f66d7b4e5580}{get\+Category\+String}} (\mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62}{Expense\+Category}} category)
+\begin{DoxyCompactList}\small\item\em Kategori string\textquotesingle{}ini al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62}{Expense\+Category}} \mbox{\hyperlink{namespace_travel_expense_a6d05a96a536569e40ed4584b4d4aaa70}{get\+Category\+From\+String}} (const char \texorpdfstring{$\ast$}{*}category\+Str)
+\begin{DoxyCompactList}\small\item\em String\textquotesingle{}i kategori enum\textquotesingle{}una ├ğevir. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ana namespace -\/ Seyahat Gideri Takibi uygulaması 
+
+Seyahat Gideri Takibi uygulaması ana namespace\textquotesingle{}i. 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}\label{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab} 
+\index{TravelExpense@{TravelExpense}!ErrorCode@{ErrorCode}}
+\index{ErrorCode@{ErrorCode}!TravelExpense@{TravelExpense}}
+\doxysubsubsection{\texorpdfstring{ErrorCode}{ErrorCode}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Hata kodları enum\textquotesingle{}u. 
+
+Uygulama genelinde kullanılan merkezi hata kodları enum\textquotesingle{}u. Tüm modüller bu enum\textquotesingle{}u kullanarak hata durumlarını bildirir. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Success@{Success}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!Success@{Success}}}\Hypertarget{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38}\label{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38} 
+Success&İşlem başarıyla tamamlandı \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FileNotFound@{FileNotFound}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!FileNotFound@{FileNotFound}}}\Hypertarget{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba2767828026039e8ba7b38973cbb701f2}\label{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba2767828026039e8ba7b38973cbb701f2} 
+File\+Not\+Found&Dosya bulunamadı \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DecryptionFailed@{DecryptionFailed}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!DecryptionFailed@{DecryptionFailed}}}\Hypertarget{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dabad1fc762e8f39e812667213e92037bc08}\label{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dabad1fc762e8f39e812667213e92037bc08} 
+Decryption\+Failed&Şifre çözme işlemi başarısız. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ChecksumMismatch@{ChecksumMismatch}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!ChecksumMismatch@{ChecksumMismatch}}}\Hypertarget{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba23cd86e43512932a4bc975552c8d17fd}\label{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba23cd86e43512932a4bc975552c8d17fd} 
+Checksum\+Mismatch&Checksum uyuşmazlığı \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InvalidUser@{InvalidUser}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!InvalidUser@{InvalidUser}}}\Hypertarget{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dababe4679ad0ec4fefd37bc5b23679d0e7d}\label{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dababe4679ad0ec4fefd37bc5b23679d0e7d} 
+Invalid\+User&Geçersiz kullanıcı \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BudgetExceeded@{BudgetExceeded}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!BudgetExceeded@{BudgetExceeded}}}\Hypertarget{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba96bf1c44545e98afb4a0147f8ea37e45}\label{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba96bf1c44545e98afb4a0147f8ea37e45} 
+Budget\+Exceeded&Bütçe aşıldı \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InvalidInput@{InvalidInput}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!InvalidInput@{InvalidInput}}}\Hypertarget{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043}\label{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043} 
+Invalid\+Input&Geçersiz girdi. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MemoryAllocation@{MemoryAllocation}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!MemoryAllocation@{MemoryAllocation}}}\Hypertarget{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba6a10b4834f9cabcc57ddbf0ee05eeb47}\label{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba6a10b4834f9cabcc57ddbf0ee05eeb47} 
+Memory\+Allocation&Bellek tahsis hatası \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FileIO@{FileIO}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!FileIO@{FileIO}}}\Hypertarget{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba86bef3f9f8669a7395a877ff014aecd9}\label{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba86bef3f9f8669a7395a877ff014aecd9} 
+File\+IO&Dosya giriş/çıkış hatası \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EncryptionFailed@{EncryptionFailed}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!EncryptionFailed@{EncryptionFailed}}}\Hypertarget{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dabaf8bf95b659f617159eb42c2099352a26}\label{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dabaf8bf95b659f617159eb42c2099352a26} 
+Encryption\+Failed&Şifreleme işlemi başarısız. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ConnectionFailed@{ConnectionFailed}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!ConnectionFailed@{ConnectionFailed}}}\Hypertarget{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dabaaf98071f760be899f4fcf1d53a29ba17}\label{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dabaaf98071f760be899f4fcf1d53a29ba17} 
+Connection\+Failed&Bağlantı hatası \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SecurityFailed@{SecurityFailed}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!SecurityFailed@{SecurityFailed}}}\Hypertarget{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dabaf49c172e5177f15fafb78d0baade4ee5}\label{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dabaf49c172e5177f15fafb78d0baade4ee5} 
+Security\+Failed&Güvenlik kontrolü başarısız. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unknown@{Unknown}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!Unknown@{Unknown}}}\Hypertarget{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba88183b946cc5f0e8c96b2e66e1c74a7e}\label{namespace_travel_expense_a3bda90e999d060d311aeaafaca383daba88183b946cc5f0e8c96b2e66e1c74a7e} 
+Unknown&Bilinmeyen hata. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62}\label{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62} 
+\index{TravelExpense@{TravelExpense}!ExpenseCategory@{ExpenseCategory}}
+\index{ExpenseCategory@{ExpenseCategory}!TravelExpense@{TravelExpense}}
+\doxysubsubsection{\texorpdfstring{ExpenseCategory}{ExpenseCategory}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62}{Travel\+Expense\+::\+Expense\+Category}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Gider kategorileri. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ACCOMMODATION@{ACCOMMODATION}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!ACCOMMODATION@{ACCOMMODATION}}}\Hypertarget{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62aedd22f15b1b8b701b7d2c7d8114bc638}\label{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62aedd22f15b1b8b701b7d2c7d8114bc638} 
+ACCOMMODATION&Konaklama. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSPORTATION@{TRANSPORTATION}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!TRANSPORTATION@{TRANSPORTATION}}}\Hypertarget{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62acf76afe165258d38e1ef8683601cb5b6}\label{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62acf76afe165258d38e1ef8683601cb5b6} 
+TRANSPORTATION&Ulaşım. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FOOD@{FOOD}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!FOOD@{FOOD}}}\Hypertarget{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62acc9284597026dcc021735c0970ca0c93}\label{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62acc9284597026dcc021735c0970ca0c93} 
+FOOD&Yemek. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENTERTAINMENT@{ENTERTAINMENT}!TravelExpense@{TravelExpense}}\index{TravelExpense@{TravelExpense}!ENTERTAINMENT@{ENTERTAINMENT}}}\Hypertarget{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62a30745c1ec37b7320355b5b1750b98f84}\label{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62a30745c1ec37b7320355b5b1750b98f84} 
+ENTERTAINMENT&Eğlence. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_a6d05a96a536569e40ed4584b4d4aaa70}\label{namespace_travel_expense_a6d05a96a536569e40ed4584b4d4aaa70} 
+\index{TravelExpense@{TravelExpense}!getCategoryFromString@{getCategoryFromString}}
+\index{getCategoryFromString@{getCategoryFromString}!TravelExpense@{TravelExpense}}
+\doxysubsubsection{\texorpdfstring{getCategoryFromString()}{getCategoryFromString()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62}{Expense\+Category}} Travel\+Expense\+::get\+Category\+From\+String (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{category\+Str }\end{DoxyParamCaption})}
+
+
+
+String\textquotesingle{}i kategori enum\textquotesingle{}una ├ğevir. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category\+Str} & Kategori string\textquotesingle{}i \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Expense\+Category Kategori enum\textquotesingle{}u 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_ae772eeb5adb7c53bcb85f66d7b4e5580}\label{namespace_travel_expense_ae772eeb5adb7c53bcb85f66d7b4e5580} 
+\index{TravelExpense@{TravelExpense}!getCategoryString@{getCategoryString}}
+\index{getCategoryString@{getCategoryString}!TravelExpense@{TravelExpense}}
+\doxysubsubsection{\texorpdfstring{getCategoryString()}{getCategoryString()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} Travel\+Expense\+::get\+Category\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62}{Expense\+Category}}}]{category }\end{DoxyParamCaption})}
+
+
+
+Kategori string\textquotesingle{}ini al. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category} & Gider kategorisi \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const char\texorpdfstring{$\ast$}{*} Kategori ad─▒ 
+\end{DoxyReturn}

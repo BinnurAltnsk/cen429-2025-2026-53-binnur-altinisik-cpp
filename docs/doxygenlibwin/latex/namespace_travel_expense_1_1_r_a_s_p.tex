@@ -1,0 +1,748 @@
+\doxysection{Travel\+Expense\+::RASP Namespace Reference}
+\hypertarget{namespace_travel_expense_1_1_r_a_s_p}{}\label{namespace_travel_expense_1_1_r_a_s_p}\index{TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef bool(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a24b145da3df213c68dbecdfd2ccafece}{Checksum\+Callback}}) ()
+\begin{DoxyCompactList}\small\item\em Runtime checksum doğrulama callback fonksiyon tipi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a13447aefd17bbea8f1eb6bef277cdf88}{calculate\+Code\+Checksum}} (const void \texorpdfstring{$\ast$}{*}data, size\+\_\+t size, char \texorpdfstring{$\ast$}{*}checksum)
+\begin{DoxyCompactList}\small\item\em Kod bloğu checksum hesapla. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a82253cae91dc52bb085b258bcfb97e30}{verify\+Code\+Checksum}} (const void \texorpdfstring{$\ast$}{*}data, size\+\_\+t size, const char \texorpdfstring{$\ast$}{*}expected\+Checksum)
+\begin{DoxyCompactList}\small\item\em Kod bloğu checksum doğrula. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_acbfcef047f961a478c47dc464aa9f46d}{calculate\+File\+Checksum}} (const char \texorpdfstring{$\ast$}{*}file\+Path, char \texorpdfstring{$\ast$}{*}checksum)
+\begin{DoxyCompactList}\small\item\em Dosya checksum hesapla. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_acd000c0f527936b798be3dd63780a24c}{verify\+File\+Checksum}} (const char \texorpdfstring{$\ast$}{*}file\+Path, const char \texorpdfstring{$\ast$}{*}expected\+Checksum)
+\begin{DoxyCompactList}\small\item\em Dosya checksum doğrula. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a7c3387087453949ac1c1e5153b367802}{calculate\+Self\+Checksum}} (char \texorpdfstring{$\ast$}{*}checksum)
+\begin{DoxyCompactList}\small\item\em Kendi binary\textquotesingle{}sinin checksum\textquotesingle{}unu hesapla. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a7b85af9ddfe675010dffac4a7b2d504f}{verify\+Self\+Checksum}} (const char \texorpdfstring{$\ast$}{*}expected\+Checksum)
+\begin{DoxyCompactList}\small\item\em Kendi binary\textquotesingle{}sinin checksum\textquotesingle{}unu doğrula. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_ac5a292bac3cec6b36cbdf2bb82bd6739}{start\+Periodic\+Checksum}} (\mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a24b145da3df213c68dbecdfd2ccafece}{Checksum\+Callback}} callback, uint32\+\_\+t interval\+Ms)
+\begin{DoxyCompactList}\small\item\em Periyodik checksum kontrolünü başlat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a0efff0dbecdada8159cf0b3cb36cb893}{stop\+Periodic\+Checksum}} ()
+\begin{DoxyCompactList}\small\item\em Periyodik checksum kontrolünü durdur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a42e51c2e750e8a971132e58316af33a8}{is\+Debugger\+Present}} ()
+\begin{DoxyCompactList}\small\item\em Debugger tespit edildi mi? \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a115d17e716e8d6131ae9190cf6f75481}{is\+Remote\+Debugger\+Present}} ()
+\begin{DoxyCompactList}\small\item\em Remote debugger tespit edildi mi? (Sadece Windows) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_ad46457b282a44cbfc4df1511162e72f6}{check\+Ptrace}} ()
+\begin{DoxyCompactList}\small\item\em ptrace anti-\/debug kontrolü (Sadece Linux) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a3cf00a3261b43ccc2887d8944bf91538}{detect\+Debugger\+Processes}} ()
+\begin{DoxyCompactList}\small\item\em Debugger process listesini kontrol et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_ab81bdd68990b24f747b0239a19038dd4}{perform\+Anti\+Debug\+Check}} ()
+\begin{DoxyCompactList}\small\item\em Tüm anti-\/debug kontrollerini çalıştır. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} void \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a74f8505c572d96dcb0173eccb597ebec}{handle\+Debugger\+Detected}} (bool terminate)
+\begin{DoxyCompactList}\small\item\em Anti-\/debug tespiti durumunda tepki ver. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_af2080f5a46b03d2100afe682a8c5a1df}{detect\+File\+Modification}} (const char \texorpdfstring{$\ast$}{*}file\+Path, int64\+\_\+t expected\+Mod\+Time)
+\begin{DoxyCompactList}\small\item\em Dosya değişikliği tespit et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_afa98676df0c0a675722c54f6de81c2cb}{detect\+File\+Size\+Change}} (const char \texorpdfstring{$\ast$}{*}file\+Path, int64\+\_\+t expected\+Size)
+\begin{DoxyCompactList}\small\item\em Dosya boyutu değişikliği tespit et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_af0dbce98e0f0de6d797874f15c74862b}{check\+Binary\+Integrity}} (const char \texorpdfstring{$\ast$}{*}expected\+Checksum)
+\begin{DoxyCompactList}\small\item\em Binary integrity kontrolü \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a0b672b79a27062f943444a92aee6d4a6}{perform\+Tamper\+Check}} (const char \texorpdfstring{$\ast$}{*}expected\+Self\+Checksum)
+\begin{DoxyCompactList}\small\item\em Tüm tamper detection kontrollerini çalıştır. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} void \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_ac872f8d88fb578ee6b155e6f99d6d817}{handle\+Tamper\+Detected}} (bool terminate)
+\begin{DoxyCompactList}\small\item\em Tamper tespiti durumunda tepki ver. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a699852f95cd6023b93e9e0bc36eba409}{detect\+Hook\+Attack}} ()
+\begin{DoxyCompactList}\small\item\em Hook saldırısı tespit et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a40e64f7132b608c9b1c95e7d04a4dac4}{detect\+Function\+Hook}} (const void \texorpdfstring{$\ast$}{*}function\+Address, const char \texorpdfstring{$\ast$}{*}function\+Name)
+\begin{DoxyCompactList}\small\item\em Belirli bir fonksiyonun hook\textquotesingle{}lanıp hook\textquotesingle{}lanmadığını kontrol et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_afe5deef33149e4803a01717e48e0a657}{check\+Critical\+Function\+Hooks}} ()
+\begin{DoxyCompactList}\small\item\em Kritik fonksiyonların hook kontrolünü yap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} void \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a8ab6aa690901b55df23eeef328288b1f}{handle\+Hook\+Detected}} (bool terminate)
+\begin{DoxyCompactList}\small\item\em Hook tespiti durumunda tepki ver. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a95baf316d5a99b62e53002ae0ab3a73c}{initialize\+Control\+Flow\+Counter}} (uint32\+\_\+t expected\+Value)
+\begin{DoxyCompactList}\small\item\em Kontrol akışı sayacını başlat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a28bf6cf8aad86c730a8f75c8d3f6123c}{increment\+Control\+Flow\+Counter}} ()
+\begin{DoxyCompactList}\small\item\em Kontrol akışı sayacını artır. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a85af5ca5f027e162efd80ca365be1dc7}{verify\+Control\+Flow\+Counter}} (uint32\+\_\+t expected\+Value)
+\begin{DoxyCompactList}\small\item\em Kontrol akışı sayacını doğrula. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_aeda5dfedcf5123a3a0ee8bde523ab810}{get\+Control\+Flow\+Counter}} ()
+\begin{DoxyCompactList}\small\item\em Kontrol akışı sayacını al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_aba6628f357259ebe350b0a74414de245}{reset\+Control\+Flow\+Counter}} ()
+\begin{DoxyCompactList}\small\item\em Kontrol akışı sayacını sıfırla. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_af842523d29168b17f6c00a0dae85d83e}{perform\+Control\+Flow\+Check}} (uint32\+\_\+t expected\+Value)
+\begin{DoxyCompactList}\small\item\em Kontrol akışı bütünlük kontrolü yap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a9a04315a1d132bf8292766acdda58530}{detect\+Emulator}} ()
+\begin{DoxyCompactList}\small\item\em Emulator tespit et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a92dcba759d1b1409134c7839b2cbee78}{detect\+Unsafe\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Güvensiz cihaz tespit et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_aff7e2174a761d6e7c7c342e485f25eed}{detect\+Root\+Jailbreak}} ()
+\begin{DoxyCompactList}\small\item\em Root/\+Jailbreak tespit et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a5519cc5a11da4d8ec5e34cf7e9095767}{initialize\+RASP}} (const char \texorpdfstring{$\ast$}{*}expected\+Self\+Checksum, bool enable\+Periodic\+Check, uint32\+\_\+t check\+Interval\+Ms)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} sistemini başlat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a7591d62c4d3369e25dd690b12c1064f7}{shutdown\+RASP}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} sistemini kapat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a90d0c9432cfd9f982a064735218dab22}{is\+RASPActive}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} durumunu kontrol et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a1051cd786797600c22d100557207ac37}{get\+RASPStatus}} (bool \texorpdfstring{$\ast$}{*}debugger\+Detected, bool \texorpdfstring{$\ast$}{*}tamper\+Detected, bool \texorpdfstring{$\ast$}{*}checksum\+Valid)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} durumunu al. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a24b145da3df213c68dbecdfd2ccafece}\label{namespace_travel_expense_1_1_r_a_s_p_a24b145da3df213c68dbecdfd2ccafece} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!ChecksumCallback@{ChecksumCallback}}
+\index{ChecksumCallback@{ChecksumCallback}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{ChecksumCallback}{ChecksumCallback}}
+{\footnotesize\ttfamily typedef bool(\texorpdfstring{$\ast$}{*} Travel\+Expense\+::\+RASP\+::\+Checksum\+Callback) ()}
+
+
+
+Runtime checksum doğrulama callback fonksiyon tipi. 
+
+\begin{DoxyReturn}{Returns}
+true Checksum geçerli, false Checksum uyuşmuyor 
+\end{DoxyReturn}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a13447aefd17bbea8f1eb6bef277cdf88}\label{namespace_travel_expense_1_1_r_a_s_p_a13447aefd17bbea8f1eb6bef277cdf88} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!calculateCodeChecksum@{calculateCodeChecksum}}
+\index{calculateCodeChecksum@{calculateCodeChecksum}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{calculateCodeChecksum()}{calculateCodeChecksum()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::calculate\+Code\+Checksum (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{size\+\_\+t}]{size,  }\item[{char \texorpdfstring{$\ast$}{*}}]{checksum }\end{DoxyParamCaption})}
+
+
+
+Kod bloğu checksum hesapla. 
+
+Belirtilen bellek bölgesinin SHA-\/256 hash\textquotesingle{}ini hesaplar
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Kod bloğu başlangıç adresi \\
+\hline
+{\em size} & Kod bloğu boyutu (byte) \\
+\hline
+{\em checksum} & Çıktı checksum buffer\textquotesingle{}ı (en az 65 byte olmalı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_acbfcef047f961a478c47dc464aa9f46d}\label{namespace_travel_expense_1_1_r_a_s_p_acbfcef047f961a478c47dc464aa9f46d} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!calculateFileChecksum@{calculateFileChecksum}}
+\index{calculateFileChecksum@{calculateFileChecksum}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{calculateFileChecksum()}{calculateFileChecksum()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::calculate\+File\+Checksum (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+Path,  }\item[{char \texorpdfstring{$\ast$}{*}}]{checksum }\end{DoxyParamCaption})}
+
+
+
+Dosya checksum hesapla. 
+
+Dosyanın SHA-\/256 hash\textquotesingle{}ini hesaplar
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Dosya yolu \\
+\hline
+{\em checksum} & Çıktı checksum buffer\textquotesingle{}ı (en az 65 byte olmalı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a7c3387087453949ac1c1e5153b367802}\label{namespace_travel_expense_1_1_r_a_s_p_a7c3387087453949ac1c1e5153b367802} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!calculateSelfChecksum@{calculateSelfChecksum}}
+\index{calculateSelfChecksum@{calculateSelfChecksum}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{calculateSelfChecksum()}{calculateSelfChecksum()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::calculate\+Self\+Checksum (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{checksum }\end{DoxyParamCaption})}
+
+
+
+Kendi binary\textquotesingle{}sinin checksum\textquotesingle{}unu hesapla. 
+
+Çalışan uygulamanın binary dosyasının checksum\textquotesingle{}unu hesaplar
+
+
+\begin{DoxyParams}{Parameters}
+{\em checksum} & Çıktı checksum buffer\textquotesingle{}ı (en az 65 byte olmalı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_af0dbce98e0f0de6d797874f15c74862b}\label{namespace_travel_expense_1_1_r_a_s_p_af0dbce98e0f0de6d797874f15c74862b} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!checkBinaryIntegrity@{checkBinaryIntegrity}}
+\index{checkBinaryIntegrity@{checkBinaryIntegrity}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{checkBinaryIntegrity()}{checkBinaryIntegrity()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::check\+Binary\+Integrity (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{expected\+Checksum }\end{DoxyParamCaption})}
+
+
+
+Binary integrity kontrolü 
+
+Binary dosyasının checksum\textquotesingle{}unu kontrol eder
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected\+Checksum} & Beklenen checksum (SHA-\/256 hex string) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Binary değiştirilmemiş, false Binary değiştirilmiş veya hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_afe5deef33149e4803a01717e48e0a657}\label{namespace_travel_expense_1_1_r_a_s_p_afe5deef33149e4803a01717e48e0a657} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!checkCriticalFunctionHooks@{checkCriticalFunctionHooks}}
+\index{checkCriticalFunctionHooks@{checkCriticalFunctionHooks}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{checkCriticalFunctionHooks()}{checkCriticalFunctionHooks()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::check\+Critical\+Function\+Hooks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Kritik fonksiyonların hook kontrolünü yap. 
+
+Uygulamanın kritik fonksiyonlarının hook\textquotesingle{}lanıp hook\textquotesingle{}lanmadığını kontrol eder
+
+\begin{DoxyReturn}{Returns}
+true Hook tespit edildi, false Hook yok 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_ad46457b282a44cbfc4df1511162e72f6}\label{namespace_travel_expense_1_1_r_a_s_p_ad46457b282a44cbfc4df1511162e72f6} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!checkPtrace@{checkPtrace}}
+\index{checkPtrace@{checkPtrace}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{checkPtrace()}{checkPtrace()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::check\+Ptrace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ptrace anti-\/debug kontrolü (Sadece Linux) 
+
+\begin{DoxyReturn}{Returns}
+true ptrace başarılı (debugger yok), false ptrace başarısız (debugger var) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a3cf00a3261b43ccc2887d8944bf91538}\label{namespace_travel_expense_1_1_r_a_s_p_a3cf00a3261b43ccc2887d8944bf91538} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!detectDebuggerProcesses@{detectDebuggerProcesses}}
+\index{detectDebuggerProcesses@{detectDebuggerProcesses}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{detectDebuggerProcesses()}{detectDebuggerProcesses()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::detect\+Debugger\+Processes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Debugger process listesini kontrol et. 
+
+Sistemde bilinen debugger process\textquotesingle{}lerini tespit eder
+
+\begin{DoxyReturn}{Returns}
+true Debugger process tespit edildi, false Debugger process yok 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a9a04315a1d132bf8292766acdda58530}\label{namespace_travel_expense_1_1_r_a_s_p_a9a04315a1d132bf8292766acdda58530} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!detectEmulator@{detectEmulator}}
+\index{detectEmulator@{detectEmulator}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{detectEmulator()}{detectEmulator()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::detect\+Emulator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Emulator tespit et. 
+
+Sistem özelliklerini kontrol ederek emulator kullanımını tespit eder
+
+\begin{DoxyReturn}{Returns}
+true Emulator tespit edildi, false Emulator yok 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_af2080f5a46b03d2100afe682a8c5a1df}\label{namespace_travel_expense_1_1_r_a_s_p_af2080f5a46b03d2100afe682a8c5a1df} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!detectFileModification@{detectFileModification}}
+\index{detectFileModification@{detectFileModification}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{detectFileModification()}{detectFileModification()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::detect\+File\+Modification (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+Path,  }\item[{int64\+\_\+t}]{expected\+Mod\+Time }\end{DoxyParamCaption})}
+
+
+
+Dosya değişikliği tespit et. 
+
+Dosyanın son değiştirilme zamanını kontrol eder
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Dosya yolu \\
+\hline
+{\em expected\+Mod\+Time} & Beklenen son değiştirilme zamanı (Unix timestamp) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Dosya değiştirilmiş, false Dosya değiştirilmemiş veya hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_afa98676df0c0a675722c54f6de81c2cb}\label{namespace_travel_expense_1_1_r_a_s_p_afa98676df0c0a675722c54f6de81c2cb} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!detectFileSizeChange@{detectFileSizeChange}}
+\index{detectFileSizeChange@{detectFileSizeChange}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{detectFileSizeChange()}{detectFileSizeChange()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::detect\+File\+Size\+Change (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+Path,  }\item[{int64\+\_\+t}]{expected\+Size }\end{DoxyParamCaption})}
+
+
+
+Dosya boyutu değişikliği tespit et. 
+
+Dosyanın boyutunu kontrol eder
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Dosya yolu \\
+\hline
+{\em expected\+Size} & Beklenen dosya boyutu (byte) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Dosya boyutu değişmiş, false Dosya boyutu aynı veya hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a40e64f7132b608c9b1c95e7d04a4dac4}\label{namespace_travel_expense_1_1_r_a_s_p_a40e64f7132b608c9b1c95e7d04a4dac4} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!detectFunctionHook@{detectFunctionHook}}
+\index{detectFunctionHook@{detectFunctionHook}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{detectFunctionHook()}{detectFunctionHook()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::detect\+Function\+Hook (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{function\+Address,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{function\+Name }\end{DoxyParamCaption})}
+
+
+
+Belirli bir fonksiyonun hook\textquotesingle{}lanıp hook\textquotesingle{}lanmadığını kontrol et. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em function\+Address} & Fonksiyon adresi \\
+\hline
+{\em function\+Name} & Fonksiyon adı (debug için) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Hook tespit edildi, false Hook yok 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a699852f95cd6023b93e9e0bc36eba409}\label{namespace_travel_expense_1_1_r_a_s_p_a699852f95cd6023b93e9e0bc36eba409} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!detectHookAttack@{detectHookAttack}}
+\index{detectHookAttack@{detectHookAttack}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{detectHookAttack()}{detectHookAttack()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::detect\+Hook\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Hook saldırısı tespit et. 
+
+Sistem fonksiyonlarının hook\textquotesingle{}lanıp hook\textquotesingle{}lanmadığını kontrol eder. Windows ve Linux\textquotesingle{}ta farklı teknikler kullanır.
+
+\begin{DoxyReturn}{Returns}
+true Hook tespit edildi, false Hook yok 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_aff7e2174a761d6e7c7c342e485f25eed}\label{namespace_travel_expense_1_1_r_a_s_p_aff7e2174a761d6e7c7c342e485f25eed} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!detectRootJailbreak@{detectRootJailbreak}}
+\index{detectRootJailbreak@{detectRootJailbreak}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{detectRootJailbreak()}{detectRootJailbreak()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::detect\+Root\+Jailbreak (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Root/\+Jailbreak tespit et. 
+
+Windows\+: Administrator privileges kontrolü Linux\+: Root access kontrolü
+
+\begin{DoxyReturn}{Returns}
+true Root/\+Jailbreak tespit edildi, false Normal kullanıcı 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a92dcba759d1b1409134c7839b2cbee78}\label{namespace_travel_expense_1_1_r_a_s_p_a92dcba759d1b1409134c7839b2cbee78} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!detectUnsafeDevice@{detectUnsafeDevice}}
+\index{detectUnsafeDevice@{detectUnsafeDevice}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{detectUnsafeDevice()}{detectUnsafeDevice()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::detect\+Unsafe\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Güvensiz cihaz tespit et. 
+
+Emulator, root/jailbreak ve diğer güvensiz cihaz durumlarını kontrol eder
+
+\begin{DoxyReturn}{Returns}
+true Güvensiz cihaz tespit edildi, false Cihaz güvenli 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_aeda5dfedcf5123a3a0ee8bde523ab810}\label{namespace_travel_expense_1_1_r_a_s_p_aeda5dfedcf5123a3a0ee8bde523ab810} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!getControlFlowCounter@{getControlFlowCounter}}
+\index{getControlFlowCounter@{getControlFlowCounter}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{getControlFlowCounter()}{getControlFlowCounter()}}
+{\footnotesize\ttfamily uint32\+\_\+t Travel\+Expense\+::\+RASP\+::get\+Control\+Flow\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Kontrol akışı sayacını al. 
+
+\begin{DoxyReturn}{Returns}
+Mevcut sayaç değeri 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a1051cd786797600c22d100557207ac37}\label{namespace_travel_expense_1_1_r_a_s_p_a1051cd786797600c22d100557207ac37} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!getRASPStatus@{getRASPStatus}}
+\index{getRASPStatus@{getRASPStatus}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{getRASPStatus()}{getRASPStatus()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::get\+RASPStatus (\begin{DoxyParamCaption}\item[{bool \texorpdfstring{$\ast$}{*}}]{debugger\+Detected,  }\item[{bool \texorpdfstring{$\ast$}{*}}]{tamper\+Detected,  }\item[{bool \texorpdfstring{$\ast$}{*}}]{checksum\+Valid }\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} durumunu al. 
+
+\doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} sisteminin detaylı durumunu döndürür
+
+
+\begin{DoxyParams}{Parameters}
+{\em debugger\+Detected} & Debugger tespit edildi mi? (çıktı parametresi) \\
+\hline
+{\em tamper\+Detected} & Müdahale tespit edildi mi? (çıktı parametresi) \\
+\hline
+{\em checksum\+Valid} & Checksum geçerli mi? (çıktı parametresi) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a74f8505c572d96dcb0173eccb597ebec}\label{namespace_travel_expense_1_1_r_a_s_p_a74f8505c572d96dcb0173eccb597ebec} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!handleDebuggerDetected@{handleDebuggerDetected}}
+\index{handleDebuggerDetected@{handleDebuggerDetected}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{handleDebuggerDetected()}{handleDebuggerDetected()}}
+{\footnotesize\ttfamily void Travel\+Expense\+::\+RASP\+::handle\+Debugger\+Detected (\begin{DoxyParamCaption}\item[{bool}]{terminate }\end{DoxyParamCaption})}
+
+
+
+Anti-\/debug tespiti durumunda tepki ver. 
+
+Debugger tespit edildiğinde uygulamayı kapatır veya başka bir tepki verir
+
+
+\begin{DoxyParams}{Parameters}
+{\em terminate} & Uygulamayı sonlandır mı? (true\+: sonlandır, false\+: sadece log) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a8ab6aa690901b55df23eeef328288b1f}\label{namespace_travel_expense_1_1_r_a_s_p_a8ab6aa690901b55df23eeef328288b1f} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!handleHookDetected@{handleHookDetected}}
+\index{handleHookDetected@{handleHookDetected}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{handleHookDetected()}{handleHookDetected()}}
+{\footnotesize\ttfamily void Travel\+Expense\+::\+RASP\+::handle\+Hook\+Detected (\begin{DoxyParamCaption}\item[{bool}]{terminate }\end{DoxyParamCaption})}
+
+
+
+Hook tespiti durumunda tepki ver. 
+
+Hook tespit edildiğinde uygulamayı kapatır veya başka bir tepki verir
+
+
+\begin{DoxyParams}{Parameters}
+{\em terminate} & Uygulamayı sonlandır mı? (true\+: sonlandır, false\+: sadece log) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_ac872f8d88fb578ee6b155e6f99d6d817}\label{namespace_travel_expense_1_1_r_a_s_p_ac872f8d88fb578ee6b155e6f99d6d817} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!handleTamperDetected@{handleTamperDetected}}
+\index{handleTamperDetected@{handleTamperDetected}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{handleTamperDetected()}{handleTamperDetected()}}
+{\footnotesize\ttfamily void Travel\+Expense\+::\+RASP\+::handle\+Tamper\+Detected (\begin{DoxyParamCaption}\item[{bool}]{terminate }\end{DoxyParamCaption})}
+
+
+
+Tamper tespiti durumunda tepki ver. 
+
+Müdahale tespit edildiğinde uygulamayı kapatır veya başka bir tepki verir
+
+
+\begin{DoxyParams}{Parameters}
+{\em terminate} & Uygulamayı sonlandır mı? (true\+: sonlandır, false\+: sadece log) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a28bf6cf8aad86c730a8f75c8d3f6123c}\label{namespace_travel_expense_1_1_r_a_s_p_a28bf6cf8aad86c730a8f75c8d3f6123c} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!incrementControlFlowCounter@{incrementControlFlowCounter}}
+\index{incrementControlFlowCounter@{incrementControlFlowCounter}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{incrementControlFlowCounter()}{incrementControlFlowCounter()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::increment\+Control\+Flow\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Kontrol akışı sayacını artır. 
+
+Her kritik kontrol akışı noktasında çağrılmalıdır
+
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a95baf316d5a99b62e53002ae0ab3a73c}\label{namespace_travel_expense_1_1_r_a_s_p_a95baf316d5a99b62e53002ae0ab3a73c} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!initializeControlFlowCounter@{initializeControlFlowCounter}}
+\index{initializeControlFlowCounter@{initializeControlFlowCounter}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{initializeControlFlowCounter()}{initializeControlFlowCounter()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::initialize\+Control\+Flow\+Counter (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{expected\+Value }\end{DoxyParamCaption})}
+
+
+
+Kontrol akışı sayacını başlat. 
+
+Kontrol akışı bütünlüğünü sağlamak için sayaç başlatır
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected\+Value} & Beklenen sayaç değeri \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a5519cc5a11da4d8ec5e34cf7e9095767}\label{namespace_travel_expense_1_1_r_a_s_p_a5519cc5a11da4d8ec5e34cf7e9095767} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!initializeRASP@{initializeRASP}}
+\index{initializeRASP@{initializeRASP}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{initializeRASP()}{initializeRASP()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::initialize\+RASP (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{expected\+Self\+Checksum,  }\item[{bool}]{enable\+Periodic\+Check,  }\item[{uint32\+\_\+t}]{check\+Interval\+Ms }\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} sistemini başlat. 
+
+Tüm \doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} mekanizmalarını başlatır
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected\+Self\+Checksum} & Beklenen self checksum (SHA-\/256 hex string) \\
+\hline
+{\em enable\+Periodic\+Check} & Periyodik checksum kontrolü aktif mi? \\
+\hline
+{\em check\+Interval\+Ms} & Periyodik kontrol aralığı (milisaniye) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a42e51c2e750e8a971132e58316af33a8}\label{namespace_travel_expense_1_1_r_a_s_p_a42e51c2e750e8a971132e58316af33a8} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!isDebuggerPresent@{isDebuggerPresent}}
+\index{isDebuggerPresent@{isDebuggerPresent}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{isDebuggerPresent()}{isDebuggerPresent()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::is\+Debugger\+Present (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Debugger tespit edildi mi? 
+
+Windows\+: Is\+Debugger\+Present() ve Check\+Remote\+Debugger\+Present() Linux\+: ptrace() kontrolü
+
+\begin{DoxyReturn}{Returns}
+true Debugger tespit edildi, false Debugger yok 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a90d0c9432cfd9f982a064735218dab22}\label{namespace_travel_expense_1_1_r_a_s_p_a90d0c9432cfd9f982a064735218dab22} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!isRASPActive@{isRASPActive}}
+\index{isRASPActive@{isRASPActive}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{isRASPActive()}{isRASPActive()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::is\+RASPActive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} durumunu kontrol et. 
+
+\doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} sisteminin çalışıp çalışmadığını kontrol eder
+
+\begin{DoxyReturn}{Returns}
+true \doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} aktif, false \doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} pasif veya hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a115d17e716e8d6131ae9190cf6f75481}\label{namespace_travel_expense_1_1_r_a_s_p_a115d17e716e8d6131ae9190cf6f75481} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!isRemoteDebuggerPresent@{isRemoteDebuggerPresent}}
+\index{isRemoteDebuggerPresent@{isRemoteDebuggerPresent}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{isRemoteDebuggerPresent()}{isRemoteDebuggerPresent()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::is\+Remote\+Debugger\+Present (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remote debugger tespit edildi mi? (Sadece Windows) 
+
+\begin{DoxyReturn}{Returns}
+true Remote debugger tespit edildi, false Remote debugger yok veya hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_ab81bdd68990b24f747b0239a19038dd4}\label{namespace_travel_expense_1_1_r_a_s_p_ab81bdd68990b24f747b0239a19038dd4} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!performAntiDebugCheck@{performAntiDebugCheck}}
+\index{performAntiDebugCheck@{performAntiDebugCheck}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{performAntiDebugCheck()}{performAntiDebugCheck()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::perform\+Anti\+Debug\+Check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tüm anti-\/debug kontrollerini çalıştır. 
+
+Tüm anti-\/debug mekanizmalarını sırayla çalıştırır
+
+\begin{DoxyReturn}{Returns}
+true Debugger tespit edildi, false Debugger yok 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_af842523d29168b17f6c00a0dae85d83e}\label{namespace_travel_expense_1_1_r_a_s_p_af842523d29168b17f6c00a0dae85d83e} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!performControlFlowCheck@{performControlFlowCheck}}
+\index{performControlFlowCheck@{performControlFlowCheck}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{performControlFlowCheck()}{performControlFlowCheck()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::perform\+Control\+Flow\+Check (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{expected\+Value }\end{DoxyParamCaption})}
+
+
+
+Kontrol akışı bütünlük kontrolü yap. 
+
+Tüm kontrol akışı mekanizmalarını kontrol eder
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected\+Value} & Beklenen sayaç değeri \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Kontrol akışı geçerli, false Müdahale tespit edildi 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a0b672b79a27062f943444a92aee6d4a6}\label{namespace_travel_expense_1_1_r_a_s_p_a0b672b79a27062f943444a92aee6d4a6} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!performTamperCheck@{performTamperCheck}}
+\index{performTamperCheck@{performTamperCheck}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{performTamperCheck()}{performTamperCheck()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::perform\+Tamper\+Check (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{expected\+Self\+Checksum }\end{DoxyParamCaption})}
+
+
+
+Tüm tamper detection kontrollerini çalıştır. 
+
+Tüm tamper detection mekanizmalarını sırayla çalıştırır
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected\+Self\+Checksum} & Beklenen self checksum (SHA-\/256 hex string) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Müdahale tespit edildi, false Müdahale yok 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_aba6628f357259ebe350b0a74414de245}\label{namespace_travel_expense_1_1_r_a_s_p_aba6628f357259ebe350b0a74414de245} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!resetControlFlowCounter@{resetControlFlowCounter}}
+\index{resetControlFlowCounter@{resetControlFlowCounter}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{resetControlFlowCounter()}{resetControlFlowCounter()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::reset\+Control\+Flow\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Kontrol akışı sayacını sıfırla. 
+
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a7591d62c4d3369e25dd690b12c1064f7}\label{namespace_travel_expense_1_1_r_a_s_p_a7591d62c4d3369e25dd690b12c1064f7} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!shutdownRASP@{shutdownRASP}}
+\index{shutdownRASP@{shutdownRASP}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{shutdownRASP()}{shutdownRASP()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::shutdown\+RASP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} sistemini kapat. 
+
+Tüm \doxylink{namespace_travel_expense_1_1_r_a_s_p}{RASP} mekanizmalarını durdurur
+
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_ac5a292bac3cec6b36cbdf2bb82bd6739}\label{namespace_travel_expense_1_1_r_a_s_p_ac5a292bac3cec6b36cbdf2bb82bd6739} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!startPeriodicChecksum@{startPeriodicChecksum}}
+\index{startPeriodicChecksum@{startPeriodicChecksum}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{startPeriodicChecksum()}{startPeriodicChecksum()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::start\+Periodic\+Checksum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_travel_expense_1_1_r_a_s_p_a24b145da3df213c68dbecdfd2ccafece}{Checksum\+Callback}}}]{callback,  }\item[{uint32\+\_\+t}]{interval\+Ms }\end{DoxyParamCaption})}
+
+
+
+Periyodik checksum kontrolünü başlat. 
+
+Belirli aralıklarla checksum kontrolü yapar
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Checksum doğrulama callback fonksiyonu \\
+\hline
+{\em interval\+Ms} & Kontrol aralığı (milisaniye) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a0efff0dbecdada8159cf0b3cb36cb893}\label{namespace_travel_expense_1_1_r_a_s_p_a0efff0dbecdada8159cf0b3cb36cb893} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!stopPeriodicChecksum@{stopPeriodicChecksum}}
+\index{stopPeriodicChecksum@{stopPeriodicChecksum}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{stopPeriodicChecksum()}{stopPeriodicChecksum()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::stop\+Periodic\+Checksum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Periyodik checksum kontrolünü durdur. 
+
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a82253cae91dc52bb085b258bcfb97e30}\label{namespace_travel_expense_1_1_r_a_s_p_a82253cae91dc52bb085b258bcfb97e30} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!verifyCodeChecksum@{verifyCodeChecksum}}
+\index{verifyCodeChecksum@{verifyCodeChecksum}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{verifyCodeChecksum()}{verifyCodeChecksum()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::verify\+Code\+Checksum (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{size\+\_\+t}]{size,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{expected\+Checksum }\end{DoxyParamCaption})}
+
+
+
+Kod bloğu checksum doğrula. 
+
+Mevcut checksum ile beklenen checksum\textquotesingle{}u karşılaştırır
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Kod bloğu başlangıç adresi \\
+\hline
+{\em size} & Kod bloğu boyutu (byte) \\
+\hline
+{\em expected\+Checksum} & Beklenen checksum (SHA-\/256 hex string) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Checksum geçerli, false Checksum uyuşmuyor veya hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a85af5ca5f027e162efd80ca365be1dc7}\label{namespace_travel_expense_1_1_r_a_s_p_a85af5ca5f027e162efd80ca365be1dc7} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!verifyControlFlowCounter@{verifyControlFlowCounter}}
+\index{verifyControlFlowCounter@{verifyControlFlowCounter}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{verifyControlFlowCounter()}{verifyControlFlowCounter()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::verify\+Control\+Flow\+Counter (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{expected\+Value }\end{DoxyParamCaption})}
+
+
+
+Kontrol akışı sayacını doğrula. 
+
+Mevcut sayaç değerinin beklenen değerle uyumlu olup olmadığını kontrol eder
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected\+Value} & Beklenen sayaç değeri \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Sayaç geçerli, false Sayaç geçersiz (müdahale tespit edildi) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_acd000c0f527936b798be3dd63780a24c}\label{namespace_travel_expense_1_1_r_a_s_p_acd000c0f527936b798be3dd63780a24c} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!verifyFileChecksum@{verifyFileChecksum}}
+\index{verifyFileChecksum@{verifyFileChecksum}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{verifyFileChecksum()}{verifyFileChecksum()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::verify\+File\+Checksum (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+Path,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{expected\+Checksum }\end{DoxyParamCaption})}
+
+
+
+Dosya checksum doğrula. 
+
+Mevcut dosya checksum\textquotesingle{}u ile beklenen checksum\textquotesingle{}u karşılaştırır
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Dosya yolu \\
+\hline
+{\em expected\+Checksum} & Beklenen checksum (SHA-\/256 hex string) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Checksum geçerli, false Checksum uyuşmuyor veya hata 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_r_a_s_p_a7b85af9ddfe675010dffac4a7b2d504f}\label{namespace_travel_expense_1_1_r_a_s_p_a7b85af9ddfe675010dffac4a7b2d504f} 
+\index{TravelExpense::RASP@{TravelExpense::RASP}!verifySelfChecksum@{verifySelfChecksum}}
+\index{verifySelfChecksum@{verifySelfChecksum}!TravelExpense::RASP@{TravelExpense::RASP}}
+\doxysubsubsection{\texorpdfstring{verifySelfChecksum()}{verifySelfChecksum()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+RASP\+::verify\+Self\+Checksum (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{expected\+Checksum }\end{DoxyParamCaption})}
+
+
+
+Kendi binary\textquotesingle{}sinin checksum\textquotesingle{}unu doğrula. 
+
+Çalışan uygulamanın binary dosyasının checksum\textquotesingle{}unu kontrol eder
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected\+Checksum} & Beklenen checksum (SHA-\/256 hex string) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Checksum geçerli, false Checksum uyuşmuyor veya hata 
+\end{DoxyReturn}

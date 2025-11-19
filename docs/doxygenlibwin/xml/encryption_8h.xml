@@ -1,0 +1,2165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="encryption_8h" kind="file" language="C++">
+    <compoundname>encryption.h</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">cstddef</includes>
+    <includes refid="export_8h" local="yes">export.h</includes>
+    <includedby refid="travelexpense_8h" local="yes">src/travelexpense/header/travelexpense.h</includedby>
+    <includedby refid="encryption_8cpp" local="yes">src/travelexpense/src/encryption.cpp</includedby>
+    <includedby refid="fingerprinting_8cpp" local="yes">src/travelexpense/src/fingerprinting.cpp</includedby>
+    <includedby refid="rasp_8cpp" local="yes">src/travelexpense/src/rasp.cpp</includedby>
+    <includedby refid="session_manager_8cpp" local="yes">src/travelexpense/src/sessionManager.cpp</includedby>
+    <includedby refid="tls_8cpp" local="yes">src/travelexpense/src/tls.cpp</includedby>
+    <includedby refid="user_auth_8cpp" local="yes">src/travelexpense/src/userAuth.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/travelexpense/header/encryption.h</label>
+        <link refid="encryption_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>export.h</label>
+        <link refid="export_8h"/>
+      </node>
+      <node id="3">
+        <label>cstddef</label>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/travelexpense/header/encryption.h</label>
+        <link refid="encryption_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/travelexpense/header/travelexpense.h</label>
+        <link refid="travelexpense_8h"/>
+      </node>
+      <node id="3">
+        <label>src/travelexpense/src/encryption.cpp</label>
+        <link refid="encryption_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/travelexpense/src/fingerprinting.cpp</label>
+        <link refid="fingerprinting_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/travelexpense/src/rasp.cpp</label>
+        <link refid="rasp_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/travelexpense/src/sessionManager.cpp</label>
+        <link refid="session_manager_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/travelexpense/src/tls.cpp</label>
+        <link refid="tls_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/travelexpense/src/userAuth.cpp</label>
+        <link refid="user_auth_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
+    <innernamespace refid="namespace_encryption">Encryption</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_encryption">TravelExpense::Encryption</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1adfcb32aabe9079b29064bb520f474e43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::sha256Hash</definition>
+        <argsstring>(const void *input, size_t inputLen, char *output)</argsstring>
+        <name>sha256Hash</name>
+        <qualifiedname>TravelExpense::Encryption::sha256Hash</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>inputLen</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>SHA-256 hash hesapla. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>SHA-256 hash hesapla (gerçek implementasyon)</para>
+<para>RFC 6234 uyumlu tam SHA-256 hash implementasyonu. Girdi verisini 512-bit chunk&apos;lara böler, her chunk&apos;ı işler ve sonuç olarak 256-bit (32 byte) hash üretir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, kriptografik olarak güvenli SHA-256 hash hesaplar. Hash çıktısı, 64 karakter hex string formatında döndürülür.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash&apos;lenecek veri (nullptr ise false döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inputLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu (byte, 0 ise false döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash çıktısı (64 karakter hex string + null terminator, nullptr ise false döner) Output buffer en az 65 byte olmalıdır. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer, sıfır uzunluk vb.)</para>
+</simplesect>
+</para>
+<para>RFC 6234 uyumlu tam SHA-256 hash implementasyonu. Girdi verisini 512-bit chunk&apos;lara böler, her chunk&apos;ı işler ve sonuç olarak 256-bit (32 byte) hash üretir.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash&apos;lenecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inputLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu (byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash çıktısı (64 karakter hex string + null terminator) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer veya sıfır uzunluk) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="207" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="207" bodyend="283" declfile="src/travelexpense/header/encryption.h" declline="45" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1aba07992223a35358d74456b63764eb4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::generateSalt</definition>
+        <argsstring>(char *salt)</argsstring>
+        <name>generateSalt</name>
+        <qualifiedname>TravelExpense::Encryption::generateSalt</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>salt</declname>
+        </param>
+        <briefdescription>
+<para>Salt oluştur (kriptografik olarak güvenli rastgele) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Salt oluştur (rastgele)</para>
+<para>Kriptografik olarak güvenli rastgele sayı üreticisi kullanarak 32 byte (256 bit) salt oluşturur. Salt, şifre hash&apos;leme işlemlerinde kullanılır ve rainbow table saldırılarına karşı koruma sağlar.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, platform-specific güvenli rastgele sayı üreticisi kullanır (Windows: CryptGenRandom, Linux: /dev/urandom). Salt çıktısı, 64 karakter hex string formatında döndürülür.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>salt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Salt çıktısı (64 karakter hex string + null terminator, nullptr ise false döner) Output buffer en az 65 byte olmalıdır. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer, rastgele sayı üretme hatası vb.)</para>
+</simplesect>
+</para>
+<para>Güvenli rastgele sayı üreticisi kullanarak 16 byte (32 karakter hex string) salt değeri oluşturur. Bu salt, şifre hash&apos;leme işlemlerinde kullanılır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>salt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Salt çıktısı (33 byte buffer: 32 karakter hex + null terminator) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer veya rastgele sayı üretilemedi) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="294" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="294" bodyend="317" declfile="src/travelexpense/header/encryption.h" declline="62" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a218390c34597e2a8896f6f3c4ba1672e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::hashPassword</definition>
+        <argsstring>(const char *password, const char *salt, char *hash)</argsstring>
+        <name>hashPassword</name>
+        <qualifiedname>TravelExpense::Encryption::hashPassword</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>salt</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>hash</declname>
+        </param>
+        <briefdescription>
+<para>Şifreyi hash&apos;le (SHA-256 + Salt) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen şifreyi salt ile birleştirerek SHA-256 hash&apos;ler. Salt, şifre hash&apos;leme işlemlerinde kullanılır ve aynı şifre için farklı hash&apos;ler üretilmesini sağlar.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, şifreyi salt ile birleştirir ve SHA-256 ile hash&apos;ler. Format: SHA256(password + salt) veya SHA256(salt + password). Hash çıktısı, 64 karakter hex string formatında döndürülür.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre (nullptr ise false döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>salt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Salt değeri (64 karakter hex string, nullptr ise false döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash çıktısı (64 karakter hex string + null terminator, nullptr ise false döner) Output buffer en az 65 byte olmalıdır. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer, geçersiz salt formatı vb.)</para>
+</simplesect>
+</para>
+<para>Şifreyi salt ile birleştirip SHA-256 hash&apos;ini hesaplar. Format: SHA256(password + salt)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre (plaintext) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>salt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Salt değeri (32 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash çıktısı (64 karakter hex string + null terminator) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer veya hash hesaplanamadı) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="330" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="330" bodyend="348" declfile="src/travelexpense/header/encryption.h" declline="81" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a4860c004d6b6d05f4723dfc0c90f35cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::verifyPassword</definition>
+        <argsstring>(const char *password, const char *salt, const char *storedHash)</argsstring>
+        <name>verifyPassword</name>
+        <qualifiedname>TravelExpense::Encryption::verifyPassword</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>salt</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>storedHash</declname>
+        </param>
+        <briefdescription>
+<para>Şifre doğrulama (constant-time comparison) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Şifre doğrulama.</para>
+<para>Girilen şifreyi hash&apos;ler ve saklanan hash ile karşılaştırır. Constant-time comparison kullanarak timing attack&apos;lara karşı koruma sağlar.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, şifreyi salt ile hash&apos;ler ve storedHash ile karşılaştırır. Constant-time comparison kullanarak, şifre doğru/yanlış olmasına bakılmaksızın aynı sürede çalışır. Bu, timing attack&apos;lara karşı koruma sağlar.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Girilen şifre (nullptr ise false döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>salt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Salt değeri (64 karakter hex string, nullptr ise false döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>storedHash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Saklanan hash değeri (64 karakter hex string, nullptr ise false döner) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Şifre doğru, false Yanlış veya hata</para>
+</simplesect>
+</para>
+<para>Girilen şifreyi salt ile hash&apos;leyip saklanan hash ile karşılaştırır. Constant-time comparison kullanarak timing attack&apos;lara karşı koruma sağlar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Girilen şifre (plaintext) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>salt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Salt değeri (32 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>storedHash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Saklanan hash değeri (64 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Şifre doğru, false Şifre yanlış veya hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="361" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="361" bodyend="382" declfile="src/travelexpense/header/encryption.h" declline="98" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1aba26f33ed7139866139f516576826c8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::encryptAES256</definition>
+        <argsstring>(const void *plaintext, size_t plaintextLen, const uint8_t *key, const uint8_t *iv, void *ciphertext, size_t &amp;ciphertextLen)</argsstring>
+        <name>encryptAES256</name>
+        <qualifiedname>TravelExpense::Encryption::encryptAES256</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>plaintext</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>plaintextLen</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>iv</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ciphertext</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>ciphertextLen</declname>
+        </param>
+        <briefdescription>
+<para>AES-256 ile veri şifreleme (basit implementasyon - başlangıç) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>AES-256-CBC şifreleme (gerçek implementasyon)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifreleme anahtarı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialization Vector (16 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>AES-256 algoritması ile CBC (Cipher Block Chaining) modunda şifreleme yapar. PKCS7 padding kullanır ve her blok önceki şifrelenmiş blok ile XOR&apos;lanır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu (byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifreleme anahtarı (32 byte - AES-256) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialization Vector (16 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (çıktı, padding dahil) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer, sıfır uzunluk vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="557" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="557" bodyend="595" declfile="src/travelexpense/header/encryption.h" declline="111" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a8b06d829778298f0975c1b85ed746270" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::decryptAES256</definition>
+        <argsstring>(const void *ciphertext, size_t ciphertextLen, const uint8_t *key, const uint8_t *iv, void *plaintext, size_t &amp;plaintextLen)</argsstring>
+        <name>decryptAES256</name>
+        <qualifiedname>TravelExpense::Encryption::decryptAES256</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>ciphertext</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ciphertextLen</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>iv</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>plaintext</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>plaintextLen</declname>
+        </param>
+        <briefdescription>
+<para>AES-256 ile veri şifre çözme. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>AES-256-CBC şifre çözme.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifreleme anahtarı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialization Vector (16 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri uzunluğu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>AES-256 algoritması ile CBC modunda şifre çözme yapar. PKCS7 padding&apos;i kaldırır ve her blok önceki şifrelenmiş blok ile XOR&apos;lanır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (byte, 16&apos;nın katı olmalı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifreleme anahtarı (32 byte - AES-256) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialization Vector (16 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri uzunluğu (çıktı, padding olmadan) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer, geçersiz uzunluk, padding hatası) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="638" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="638" bodyend="679" declfile="src/travelexpense/header/encryption.h" declline="126" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a9556af2bcbc41232a11630b9de1d36d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::hmacSHA256</definition>
+        <argsstring>(const uint8_t *key, size_t keyLen, const void *message, size_t messageLen, char *output)</argsstring>
+        <name>hmacSHA256</name>
+        <qualifiedname>TravelExpense::Encryption::hmacSHA256</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyLen</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>messageLen</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>HMAC-SHA256 hesapla (Message Authentication Code) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>HMAC-SHA256 implementasyonu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HMAC anahtarı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mesaj </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>messageLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mesaj uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HMAC çıktısı (32 byte - 64 karakter hex string) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>RFC 2104 uyumlu HMAC-SHA256 (Hash-based Message Authentication Code) hesaplar. HMAC = SHA256(o_key_pad || SHA256(i_key_pad || message))</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HMAC anahtarı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anahtar uzunluğu (byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mesaj (doğrulanacak veri) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>messageLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mesaj uzunluğu (byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>HMAC çıktısı (64 karakter hex string + null terminator) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer, sıfır uzunluk vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="694" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="694" bodyend="756" declfile="src/travelexpense/header/encryption.h" declline="140" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a53f29cf73c5a46e8ff3c3344408bcefa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::pbkdf2</definition>
+        <argsstring>(const char *password, size_t passwordLen, const uint8_t *salt, size_t saltLen, uint32_t iterations, size_t keyLen, uint8_t *output)</argsstring>
+        <name>pbkdf2</name>
+        <qualifiedname>TravelExpense::Encryption::pbkdf2</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>password</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>passwordLen</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>salt</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>saltLen</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>iterations</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keyLen</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>PBKDF2 key derivation (Password-Based Key Derivation Function 2) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>passwordLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>salt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Salt değeri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>saltLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Salt uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iterations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İterasyon sayısı (önerilen: 10000+) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İstenen anahtar uzunluğu (byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Türetilen anahtar çıktısı </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>RFC 2898 uyumlu PBKDF2 implementasyonu. Şifre ve salt&apos;tan güçlü bir anahtar türetir. HMAC-SHA256 kullanır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre (plaintext) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>passwordLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre uzunluğu (byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>salt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Salt değeri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>saltLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Salt uzunluğu (byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iterations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İterasyon sayısı (önerilen: 10000+) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İstenen anahtar uzunluğu (byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Türetilen anahtar çıktısı </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer, sıfır uzunluk, sıfır iterasyon vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="773" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="773" bodyend="838" declfile="src/travelexpense/header/encryption.h" declline="156" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1aab13cbee61c87e29e4f07badb68ee006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::generateRandomBytes</definition>
+        <argsstring>(uint8_t *output, size_t length)</argsstring>
+        <name>generateRandomBytes</name>
+        <qualifiedname>TravelExpense::Encryption::generateRandomBytes</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Güvenli rastgele byte dizisi oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Güvenli rastgele byte üretimi.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı buffer&apos;ı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İstenen uzunluk (byte) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>Platform-specific güvenli rastgele sayı üreticisi kullanır:<itemizedlist>
+<listitem><para>Windows: CryptGenRandom (Windows CryptoAPI)</para>
+</listitem><listitem><para>Linux/Unix: /dev/urandom</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rastgele byte çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İstenen uzunluk (byte) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer, sıfır uzunluk, platform hatası) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="851" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="851" bodyend="881" declfile="src/travelexpense/header/encryption.h" declline="168" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1af19dc3b309d69a616590466cd620921c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::generateIV</definition>
+        <argsstring>(uint8_t *iv)</argsstring>
+        <name>generateIV</name>
+        <qualifiedname>TravelExpense::Encryption::generateIV</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>iv</declname>
+        </param>
+        <briefdescription>
+<para>IV (Initialization Vector) oluştur (16 byte - AES block size) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>IV (Initialization Vector) oluştur.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IV çıktısı (16 byte) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>AES şifreleme için 16 byte (AES block size) güvenli rastgele IV oluşturur.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IV çıktısı (16 byte) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer veya rastgele sayı üretilemedi) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="891" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="891" bodyend="897" declfile="src/travelexpense/header/encryption.h" declline="176" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a1bc8df3a6e90bff77d7c9eb843036ba5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::constantTimeCompare</definition>
+        <argsstring>(const char *a, const char *b, size_t length)</argsstring>
+        <name>constantTimeCompare</name>
+        <qualifiedname>TravelExpense::Encryption::constantTimeCompare</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Constant-time string karşılaştırma (timing attack koruması) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constant-time karşılaştırma.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İlk string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İkinci string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Karşılaştırılacak uzunluk </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Eşit, false Farklı</para>
+</simplesect>
+</para>
+<para>Timing attack&apos;lara karşı koruma sağlayan sabit zamanlı string karşılaştırma. Her karakteri karşılaştırır ve sonucu XOR ile birleştirir. Bu sayede karşılaştırma süresi string içeriğinden bağımsızdır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İlk string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İkinci string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Karşılaştırılacak uzunluk (byte) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Eşit, false Farklı veya hata (null pointer, sıfır uzunluk) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="911" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="911" bodyend="923" declfile="src/travelexpense/header/encryption.h" declline="186" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a0195e1357626a5075951ae990e99ca8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::encryptFile</definition>
+        <argsstring>(const char *inputFile, const char *outputFile, const uint8_t *key, const uint8_t *iv=nullptr)</argsstring>
+        <name>encryptFile</name>
+        <qualifiedname>TravelExpense::Encryption::encryptFile</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>inputFile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>outputFile</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>iv</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Dosyayı AES-256-CBC ile şifrele. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Dosya şifreleme (AES-256-CBC)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Giriş dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıkış dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifreleme anahtarı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IV (16 byte), nullptr ise otomatik oluşturulur </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>Dosyayı AES-256-CBC ile şifreler ve çıktı dosyasına yazar. Çıktı formatı: [IV (16 byte)][Ciphertext (padded)]</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Girdi dosyası yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı dosyası yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifreleme anahtarı (32 byte - AES-256) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IV (nullptr ise otomatik oluşturulur) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (dosya açılamadı, şifreleme başarısız vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="937" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="937" bodyend="994" declfile="src/travelexpense/header/encryption.h" declline="197" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a7d0d5da1d2c1edf0044d80f025c889b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::decryptFile</definition>
+        <argsstring>(const char *inputFile, const char *outputFile, const uint8_t *key, const uint8_t *iv=nullptr)</argsstring>
+        <name>decryptFile</name>
+        <qualifiedname>TravelExpense::Encryption::decryptFile</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>inputFile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>outputFile</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>iv</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Şifrelenmiş dosyayı çöz. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Dosya şifre çözme (AES-256-CBC)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çözülmüş dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifreleme anahtarı (32 byte) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IV (16 byte), nullptr ise dosyadan okunur </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>AES-256-CBC ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı: [IV (16 byte)][Ciphertext (padded)]</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Girdi dosyası yolu (şifrelenmiş) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı dosyası yolu (şifre çözülmüş) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifreleme anahtarı (32 byte - AES-256) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IV (nullptr ise dosyadan okunur) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (dosya açılamadı, şifre çözme başarısız vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="1008" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1008" bodyend="1068" declfile="src/travelexpense/header/encryption.h" declline="209" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a90b1f8daf4e4e6a110cce5aa4a1a135f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::encryptWhiteboxDES</definition>
+        <argsstring>(const void *plaintext, size_t plaintextLen, void *ciphertext, size_t &amp;ciphertextLen)</argsstring>
+        <name>encryptWhiteboxDES</name>
+        <qualifiedname>TravelExpense::Encryption::encryptWhiteboxDES</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>plaintext</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>plaintextLen</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ciphertext</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>ciphertextLen</declname>
+        </param>
+        <briefdescription>
+<para>Whitebox DES ile veri şifreleme. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Whitebox DES Şifreleme.</para>
+<para>Whitebox kriptografi, anahtarın kod içine gömülü olduğu ve reverse engineering&apos;i zorlaştıran bir tekniktir. Lookup table&apos;lar kullanarak anahtar bilgisini maskeleyen bir implementasyondur.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu (8 byte&apos;un katı olmalı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (plaintextLen ile aynı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>Gömülü anahtar ile DES şifreleme yapar. Anahtar koda gömülü olduğu için whitebox implementasyonu. PKCS7 padding kullanır (8-byte blocks).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu (byte, 8&apos;in katı olmalı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer, geçersiz uzunluk vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="1431" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1431" bodyend="1451" declfile="src/travelexpense/header/encryption.h" declline="225" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a894ef88976e4ddeccc27e33506180f6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::decryptWhiteboxDES</definition>
+        <argsstring>(const void *ciphertext, size_t ciphertextLen, void *plaintext, size_t &amp;plaintextLen)</argsstring>
+        <name>decryptWhiteboxDES</name>
+        <qualifiedname>TravelExpense::Encryption::decryptWhiteboxDES</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>ciphertext</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ciphertextLen</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>plaintext</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>plaintextLen</declname>
+        </param>
+        <briefdescription>
+<para>Whitebox DES ile veri şifre çözme. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Whitebox DES Şifre Çözme.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (8 byte&apos;un katı olmalı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri uzunluğu (ciphertextLen ile aynı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>Gömülü anahtar ile DES şifre çözme yapar. PKCS7 padding&apos;i kaldırır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (byte, 8&apos;in katı olmalı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri uzunluğu (çıktı, padding olmadan) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer, geçersiz uzunluk, padding hatası vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="1464" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1464" bodyend="1484" declfile="src/travelexpense/header/encryption.h" declline="237" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a531df9d656f8e6e5b539c2db02ff09b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::encryptFileWhiteboxDES</definition>
+        <argsstring>(const char *inputFile, const char *outputFile)</argsstring>
+        <name>encryptFileWhiteboxDES</name>
+        <qualifiedname>TravelExpense::Encryption::encryptFileWhiteboxDES</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>inputFile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>outputFile</declname>
+        </param>
+        <briefdescription>
+<para>Dosyayı Whitebox DES ile şifrele. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Whitebox DES Dosya Şifreleme.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Giriş dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıkış dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>Dosyayı whitebox DES ile şifreler ve çıktı dosyasına yazar. Çıktı formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Girdi dosyası yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı dosyası yolu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (dosya açılamadı, şifreleme başarısız vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="1496" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1496" bodyend="1550" declfile="src/travelexpense/header/encryption.h" declline="247" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a34495d70a42f169639fe1d6d51f4fa79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::decryptFileWhiteboxDES</definition>
+        <argsstring>(const char *inputFile, const char *outputFile)</argsstring>
+        <name>decryptFileWhiteboxDES</name>
+        <qualifiedname>TravelExpense::Encryption::decryptFileWhiteboxDES</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>inputFile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>outputFile</declname>
+        </param>
+        <briefdescription>
+<para>Whitebox DES ile şifrelenmiş dosyayı çöz. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Whitebox DES Dosya Şifre Çözme.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çözülmüş dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>Whitebox DES ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Girdi dosyası yolu (şifrelenmiş) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı dosyası yolu (şifre çözülmüş) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (dosya açılamadı, şifre çözme başarısız vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="1562" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1562" bodyend="1634" declfile="src/travelexpense/header/encryption.h" declline="256" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1ac04f3733c0d1a05113a11221e344e0e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::encryptWhiteboxAES</definition>
+        <argsstring>(const void *plaintext, size_t plaintextLen, void *ciphertext, size_t &amp;ciphertextLen)</argsstring>
+        <name>encryptWhiteboxAES</name>
+        <qualifiedname>TravelExpense::Encryption::encryptWhiteboxAES</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>plaintext</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>plaintextLen</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ciphertext</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>ciphertextLen</declname>
+        </param>
+        <briefdescription>
+<para>Whitebox AES ile veri şifreleme. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Whitebox AES Şifreleme.</para>
+<para>Whitebox kriptografi, anahtarın kod içine gömülü olduğu ve reverse engineering&apos;i zorlaştıran bir tekniktir. Lookup table&apos;lar kullanarak anahtar bilgisini maskeleyen bir implementasyondur. Bu implementasyon, embedded key ile çalışır ve key schedule whitening teknikleri kullanır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu (16 byte&apos;un katı olmalı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (plaintextLen ile aynı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>Gömülü anahtar ile AES-256 şifreleme yapar. PKCS7 padding kullanır (16-byte blocks).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu (byte, 16&apos;nın katı olmalı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer, geçersiz uzunluk vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="1977" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1977" bodyend="1994" declfile="src/travelexpense/header/encryption.h" declline="276" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a539e19ad6f2560392c8a73000fb71e21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::decryptWhiteboxAES</definition>
+        <argsstring>(const void *ciphertext, size_t ciphertextLen, void *plaintext, size_t &amp;plaintextLen)</argsstring>
+        <name>decryptWhiteboxAES</name>
+        <qualifiedname>TravelExpense::Encryption::decryptWhiteboxAES</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>ciphertext</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>ciphertextLen</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>plaintext</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>plaintextLen</declname>
+        </param>
+        <briefdescription>
+<para>Whitebox AES ile veri şifre çözme. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Whitebox AES Şifre Çözme.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (16 byte&apos;un katı olmalı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri uzunluğu (ciphertextLen ile aynı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>Gömülü anahtar ile AES-256 şifre çözme yapar. PKCS7 padding&apos;i kaldırır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ciphertext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ciphertextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş veri uzunluğu (byte, 16&apos;nın katı olmalı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintext</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri çıktısı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>plaintextLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre çözülmüş veri uzunluğu (çıktı, padding olmadan) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (null pointer, geçersiz uzunluk, padding hatası vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="2007" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2007" bodyend="2024" declfile="src/travelexpense/header/encryption.h" declline="288" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1ad2ec9054ce42bc1b7376ed47caf91e56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::encryptFileWhiteboxAES</definition>
+        <argsstring>(const char *inputFile, const char *outputFile)</argsstring>
+        <name>encryptFileWhiteboxAES</name>
+        <qualifiedname>TravelExpense::Encryption::encryptFileWhiteboxAES</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>inputFile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>outputFile</declname>
+        </param>
+        <briefdescription>
+<para>Dosyayı Whitebox AES ile şifrele. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Whitebox AES Dosya Şifreleme.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Giriş dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıkış dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>Dosyayı whitebox AES ile şifreler ve çıktı dosyasına yazar. Çıktı formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Girdi dosyası yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı dosyası yolu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (dosya açılamadı, şifreleme başarısız vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="2036" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2036" bodyend="2090" declfile="src/travelexpense/header/encryption.h" declline="298" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1ae7b964b2a339d09c81020de250276b43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Encryption::decryptFileWhiteboxAES</definition>
+        <argsstring>(const char *inputFile, const char *outputFile)</argsstring>
+        <name>decryptFileWhiteboxAES</name>
+        <qualifiedname>TravelExpense::Encryption::decryptFileWhiteboxAES</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>inputFile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>outputFile</declname>
+        </param>
+        <briefdescription>
+<para>Whitebox AES ile şifrelenmiş dosyayı çöz. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Whitebox AES Dosya Şifre Çözme.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifrelenmiş dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çözülmüş dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata</para>
+</simplesect>
+</para>
+<para>Whitebox AES ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Girdi dosyası yolu (şifrelenmiş) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Çıktı dosyası yolu (şifre çözülmüş) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata (dosya açılamadı, şifre çözme başarısız vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/encryption.cpp" line="2102" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2102" bodyend="2174" declfile="src/travelexpense/header/encryption.h" declline="307" declcolumn="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Seyahat Gideri Takibi - Şifreleme Fonksiyonları </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu dosya, veri şifreleme ve hash fonksiyonlarının bildirimlerini içerir.</para>
+<para><simplesect kind="author"><para>Binnur Altınışık </para>
+</simplesect>
+<simplesect kind="date"><para>2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ENCRYPTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENCRYPTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="export_8h" kindref="compound">export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{<sp/></highlight><highlight class="comment">//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="namespace_travel_expense_1_1_encryption" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_encryption" kindref="compound">Encryption</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1adfcb32aabe9079b29064bb520f474e43" kindref="member">sha256Hash</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>inputLen,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1aba07992223a35358d74456b63764eb4d" kindref="member">generateSalt</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*salt);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1a218390c34597e2a8896f6f3c4ba1672e" kindref="member">hashPassword</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*password,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*salt,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1a4860c004d6b6d05f4723dfc0c90f35cd" kindref="member">verifyPassword</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*password,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*salt,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*storedHash);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1aba26f33ed7139866139f516576826c8d" kindref="member">encryptAES256</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*plaintext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>plaintextLen,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*iv,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ciphertext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;ciphertextLen);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1a8b06d829778298f0975c1b85ed746270" kindref="member">decryptAES256</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ciphertext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ciphertextLen,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*iv,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*plaintext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;plaintextLen);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1a9556af2bcbc41232a11630b9de1d36d0" kindref="member">hmacSHA256</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*key,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyLen,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*message,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>messageLen,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1a53f29cf73c5a46e8ff3c3344408bcefa" kindref="member">pbkdf2</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*password,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>passwordLen,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*salt,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>saltLen,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>iterations,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyLen,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*output);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1aab13cbee61c87e29e4f07badb68ee006" kindref="member">generateRandomBytes</ref>(uint8_t<sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1af19dc3b309d69a616590466cd620921c" kindref="member">generateIV</ref>(uint8_t<sp/>*iv);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1a1bc8df3a6e90bff77d7c9eb843036ba5" kindref="member">constantTimeCompare</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*b,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1a0195e1357626a5075951ae990e99ca8d" kindref="member">encryptFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*inputFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*outputFile,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*iv<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1a7d0d5da1d2c1edf0044d80f025c889b4" kindref="member">decryptFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*inputFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*outputFile,</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*iv<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1a90b1f8daf4e4e6a110cce5aa4a1a135f" kindref="member">encryptWhiteboxDES</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*plaintext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>plaintextLen,</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ciphertext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;ciphertextLen);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1a894ef88976e4ddeccc27e33506180f6f" kindref="member">decryptWhiteboxDES</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ciphertext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ciphertextLen,</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*plaintext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;plaintextLen);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1a531df9d656f8e6e5b539c2db02ff09b0" kindref="member">encryptFileWhiteboxDES</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*inputFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*outputFile);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1a34495d70a42f169639fe1d6d51f4fa79" kindref="member">decryptFileWhiteboxDES</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*inputFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*outputFile);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WHITEBOX<sp/>AES<sp/>IMPLEMENTATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1ac04f3733c0d1a05113a11221e344e0e7" kindref="member">encryptWhiteboxAES</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*plaintext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>plaintextLen,</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ciphertext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;ciphertextLen);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1a539e19ad6f2560392c8a73000fb71e21" kindref="member">decryptWhiteboxAES</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ciphertext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ciphertextLen,</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*plaintext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;plaintextLen);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1ad2ec9054ce42bc1b7376ed47caf91e56" kindref="member">encryptFileWhiteboxAES</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*inputFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*outputFile);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_encryption_1ae7b964b2a339d09c81020de250276b43" kindref="member">decryptFileWhiteboxAES</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*inputFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*outputFile);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>ENCRYPTION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/travelexpense/header/encryption.h"/>
+  </compounddef>
+</doxygen>

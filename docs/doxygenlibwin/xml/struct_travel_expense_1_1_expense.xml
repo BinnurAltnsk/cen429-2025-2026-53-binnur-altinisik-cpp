@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_travel_expense_1_1_expense" kind="struct" language="C++" prot="public">
+    <compoundname>TravelExpense::Expense</compoundname>
+    <includes refid="common_types_8h" local="no">commonTypes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_travel_expense_1_1_expense_1a8b8d0d8ab050ba52969213b047f9f503" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t TravelExpense::Expense::expenseId</definition>
+        <argsstring></argsstring>
+        <name>expenseId</name>
+        <qualifiedname>TravelExpense::Expense::expenseId</qualifiedname>
+        <briefdescription>
+<para>Gider kimliği. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="99" column="11" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_expense_1a5e2b7f2582ecff9f3e7c20b441b1428e" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t TravelExpense::Expense::tripId</definition>
+        <argsstring></argsstring>
+        <name>tripId</name>
+        <qualifiedname>TravelExpense::Expense::tripId</qualifiedname>
+        <briefdescription>
+<para>Seyahat kimliği. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="100" column="11" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_expense_1a9cfd21fc4f2d632e4c92e229ed9a5076" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_travel_expense_1a3c96c6d4d2d9f4441ba6d1d2d3124b62" kindref="member">ExpenseCategory</ref></type>
+        <definition>ExpenseCategory TravelExpense::Expense::category</definition>
+        <argsstring></argsstring>
+        <name>category</name>
+        <qualifiedname>TravelExpense::Expense::category</qualifiedname>
+        <briefdescription>
+<para>Gider kategorisi. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="101" column="19" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_expense_1a9befa852d17625a297af572e6e48239c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TravelExpense::Expense::amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <qualifiedname>TravelExpense::Expense::amount</qualifiedname>
+        <briefdescription>
+<para>Gider tutarı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="102" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_expense_1ab773ece2064231345a2684dadae3cfbd" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::Expense::currency[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>currency</name>
+        <qualifiedname>TravelExpense::Expense::currency</qualifiedname>
+        <briefdescription>
+<para>Para birimi (TRY, USD, EUR, vb.) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="103" column="8" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_expense_1ab5b36883541b77fb18feec3cf9602623" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::Expense::date[11]</definition>
+        <argsstring>[11]</argsstring>
+        <name>date</name>
+        <qualifiedname>TravelExpense::Expense::date</qualifiedname>
+        <briefdescription>
+<para>Tarih (YYYY-MM-DD) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="104" column="8" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_expense_1a6ead31c5484d9ddc9d6d419536c8821e" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::Expense::paymentMethod[50]</definition>
+        <argsstring>[50]</argsstring>
+        <name>paymentMethod</name>
+        <qualifiedname>TravelExpense::Expense::paymentMethod</qualifiedname>
+        <briefdescription>
+<para>Ödeme yöntemi (Nakit, Kredi Kartı, vb.) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="105" column="8" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_expense_1a0b62d0af8229f9b9d743909fb4d66b87" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::Expense::description[200]</definition>
+        <argsstring>[200]</argsstring>
+        <name>description</name>
+        <qualifiedname>TravelExpense::Expense::description</qualifiedname>
+        <briefdescription>
+<para>Gider açıklaması </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="106" column="8" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_expense_1ab41221d87f44f7e4c358f4fb629f91b0" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t TravelExpense::Expense::createdAt</definition>
+        <argsstring></argsstring>
+        <name>createdAt</name>
+        <qualifiedname>TravelExpense::Expense::createdAt</qualifiedname>
+        <briefdescription>
+<para>Oluşturulma zamanı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="107" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_travel_expense_1_1_expense_1a22e75d7cb8a8fa7c7e4bdbf18b773930" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TravelExpense::Expense::Expense</definition>
+        <argsstring>()</argsstring>
+        <name>Expense</name>
+        <qualifiedname>TravelExpense::Expense::Expense</qualifiedname>
+        <briefdescription>
+<para><ref refid="struct_travel_expense_1_1_expense" kindref="compound">Expense</ref> constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Varsayılan değerlerle yeni bir <ref refid="struct_travel_expense_1_1_expense" kindref="compound">Expense</ref> oluşturur. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="114" column="3" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="114" bodyend="120"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Gider veri modeli. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>TravelExpense::Expense</label>
+        <link refid="struct_travel_expense_1_1_expense"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/travelexpense/header/commonTypes.h" line="98" column="1" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="98" bodyend="121"/>
+    <listofallmembers>
+      <member refid="struct_travel_expense_1_1_expense_1a9befa852d17625a297af572e6e48239c" prot="public" virt="non-virtual"><scope>TravelExpense::Expense</scope><name>amount</name></member>
+      <member refid="struct_travel_expense_1_1_expense_1a9cfd21fc4f2d632e4c92e229ed9a5076" prot="public" virt="non-virtual"><scope>TravelExpense::Expense</scope><name>category</name></member>
+      <member refid="struct_travel_expense_1_1_expense_1ab41221d87f44f7e4c358f4fb629f91b0" prot="public" virt="non-virtual"><scope>TravelExpense::Expense</scope><name>createdAt</name></member>
+      <member refid="struct_travel_expense_1_1_expense_1ab773ece2064231345a2684dadae3cfbd" prot="public" virt="non-virtual"><scope>TravelExpense::Expense</scope><name>currency</name></member>
+      <member refid="struct_travel_expense_1_1_expense_1ab5b36883541b77fb18feec3cf9602623" prot="public" virt="non-virtual"><scope>TravelExpense::Expense</scope><name>date</name></member>
+      <member refid="struct_travel_expense_1_1_expense_1a0b62d0af8229f9b9d743909fb4d66b87" prot="public" virt="non-virtual"><scope>TravelExpense::Expense</scope><name>description</name></member>
+      <member refid="struct_travel_expense_1_1_expense_1a22e75d7cb8a8fa7c7e4bdbf18b773930" prot="public" virt="non-virtual"><scope>TravelExpense::Expense</scope><name>Expense</name></member>
+      <member refid="struct_travel_expense_1_1_expense_1a8b8d0d8ab050ba52969213b047f9f503" prot="public" virt="non-virtual"><scope>TravelExpense::Expense</scope><name>expenseId</name></member>
+      <member refid="struct_travel_expense_1_1_expense_1a6ead31c5484d9ddc9d6d419536c8821e" prot="public" virt="non-virtual"><scope>TravelExpense::Expense</scope><name>paymentMethod</name></member>
+      <member refid="struct_travel_expense_1_1_expense_1a5e2b7f2582ecff9f3e7c20b441b1428e" prot="public" virt="non-virtual"><scope>TravelExpense::Expense</scope><name>tripId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

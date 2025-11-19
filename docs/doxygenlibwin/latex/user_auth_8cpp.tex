@@ -1,0 +1,55 @@
+\doxysection{src/travelexpense/src/user\+Auth.cpp File Reference}
+\hypertarget{user_auth_8cpp}{}\label{user_auth_8cpp}\index{src/travelexpense/src/userAuth.cpp@{src/travelexpense/src/userAuth.cpp}}
+
+
+Seyahat Gideri Takibi -\/ Kullanıcı Kimlik Doğrulama Implementation.  
+
+
+{\ttfamily \#include \"{}../header/user\+Auth.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/database.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/encryption.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/security.\+h\"{}}\newline
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+Include dependency graph for user\+Auth.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{user_auth_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense}{Travel\+Expense}}
+\begin{DoxyCompactList}\small\item\em Ana namespace -\/ Seyahat Gideri Takibi uygulaması \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_user_auth}{Travel\+Expense\+::\+User\+Auth}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_user_auth_a63e9c88135b8d5f2911f99ce322d1a50}{Travel\+Expense\+::\+User\+Auth\+::register\+User}} (const char \texorpdfstring{$\ast$}{*}username, const char \texorpdfstring{$\ast$}{*}password)
+\begin{DoxyCompactList}\small\item\em Kullanıcı kaydı \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_user_auth_a8f83e74a4b8d2833cb23051e7661c0f0}{Travel\+Expense\+::\+User\+Auth\+::login\+User}} (const char \texorpdfstring{$\ast$}{*}username, const char \texorpdfstring{$\ast$}{*}password)
+\begin{DoxyCompactList}\small\item\em Kullanıcı girişi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_user_auth_a8777e8f207ceeaedc2eb75753756b1f1}{Travel\+Expense\+::\+User\+Auth\+::enable\+Guest\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Misafir modunu etkinleştir. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} void \mbox{\hyperlink{namespace_travel_expense_1_1_user_auth_ad71c3866e8f46267153654e60014d99f}{Travel\+Expense\+::\+User\+Auth\+::logout\+User}} ()
+\begin{DoxyCompactList}\small\item\em Kullanıcı çıkışı \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{struct_travel_expense_1_1_user}{User}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_travel_expense_1_1_user_auth_a4ebfa893e3a0e71ccaac4869f6395785}{Travel\+Expense\+::\+User\+Auth\+::get\+Current\+User}} ()
+\begin{DoxyCompactList}\small\item\em Mevcut kullanıcı bilgisini al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_user_auth_a0a20e8d4744950670b6f19c9888e74f6}{Travel\+Expense\+::\+User\+Auth\+::get\+User\+By\+Id}} (int32\+\_\+t user\+Id, \mbox{\hyperlink{struct_travel_expense_1_1_user}{User}} \&user)
+\begin{DoxyCompactList}\small\item\em Kullanıcı ID\textquotesingle{}ye göre kullanıcı bilgisini al. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ Kullanıcı Kimlik Doğrulama Implementation. 
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}

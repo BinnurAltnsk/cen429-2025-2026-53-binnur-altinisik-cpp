@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_database" kind="namespace" language="C++">
+    <compoundname>Database</compoundname>
+    <briefdescription>
+<para>SQLite veritabanı yönetimi modülü </para>
+    </briefdescription>
+    <detaileddescription>
+<para>SQLite veritabanı yönetimi modülü implementasyonu.</para>
+<para>Bu modül, SQLite veritabanı bağlantı yönetimi ve temel işlemlerini sağlar. Singleton pattern kullanarak tek bir veritabanı bağlantısı yönetir. Veritabanı tablolarının oluşturulması, sorgu çalıştırma ve bağlantı yönetimi işlemlerini yönetir. </para>
+    </detaileddescription>
+    <location file="src/travelexpense/header/database.h" line="23" column="1"/>
+  </compounddef>
+</doxygen>

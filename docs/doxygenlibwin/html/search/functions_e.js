@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['safeconcat_0',['safeConcat',['../namespace_travel_expense_1_1_safe_string.html#a569736a8bdffe728575d3baf0a515712',1,'TravelExpense::SafeString']]],
+  ['safecopy_1',['safeCopy',['../namespace_travel_expense_1_1_safe_string.html#a5555a53d845f3644d0dfc17c0f097075',1,'TravelExpense::SafeString']]],
+  ['savelastid_2',['saveLastId',['../namespace_travel_expense_1_1_file_i_o.html#a62bef7a2f4e9800f9e1cd658b2b2736f',1,'TravelExpense::FileIO']]],
+  ['savereport_3',['saveReport',['../namespace_travel_expense_1_1_report_generator.html#a01211ec6473b3250e051bf1a41e96d60',1,'TravelExpense::ReportGenerator']]],
+  ['securecleanup_4',['secureCleanup',['../namespace_travel_expense_1_1_security.html#afb3af2295588c9ff5fd055651d3f3ac7',1,'TravelExpense::Security']]],
+  ['secureclearobfuscatedstring_5',['secureClearObfuscatedString',['../namespace_travel_expense_1_1_code_hardening.html#ad24cfcb00108f4eb544c0a32bc4776a3',1,'TravelExpense::CodeHardening']]],
+  ['securememorycleanup_6',['secureMemoryCleanup',['../namespace_travel_expense_1_1_security.html#a146f27ab484fcf4d9f824709194ba931',1,'TravelExpense::Security']]],
+  ['securememset_7',['secureMemset',['../namespace_travel_expense_1_1_security.html#a2f60f65c6c6216fc1926ab85b3a8fee2',1,'TravelExpense::Security']]],
+  ['sendtls_8',['sendTLS',['../namespace_travel_expense_1_1_t_l_s.html#aea3adfe31d55f246cc04f0d5355608a8',1,'TravelExpense::TLS']]],
+  ['setbudget_9',['setBudget',['../namespace_travel_expense_1_1_budget_manager.html#a87ed02030d083a4a76b3ba7212cbeaa7',1,'TravelExpense::BudgetManager']]],
+  ['setcapath_10',['setCAPath',['../namespace_travel_expense_1_1_t_l_s.html#ab6f8f820ccd83d1e6062de39cc1d7386',1,'TravelExpense::TLS']]],
+  ['setprotectionscheme_11',['setProtectionScheme',['../namespace_travel_expense_1_1_asset_manager.html#ad6039789a53809ffd63c8acc4dfeb17e',1,'TravelExpense::AssetManager']]],
+  ['sha256hash_12',['sha256Hash',['../namespace_travel_expense_1_1_encryption.html#adfcb32aabe9079b29064bb520f474e43',1,'TravelExpense::Encryption']]],
+  ['shutdown_13',['shutdown',['../namespace_travel_expense_1_1_soft_h_s_m.html#aa08cccf8f5db8d63231a3b706351b212',1,'TravelExpense::SoftHSM']]],
+  ['shutdownrasp_14',['shutdownRASP',['../namespace_travel_expense_1_1_r_a_s_p.html#a7591d62c4d3369e25dd690b12c1064f7',1,'TravelExpense::RASP']]],
+  ['sign_15',['sign',['../namespace_travel_expense_1_1_soft_h_s_m.html#ac14ac62bb1ee91f10908af2ba8f7a832',1,'TravelExpense::SoftHSM']]],
+  ['signdata_16',['signData',['../namespace_travel_expense_1_1_session_manager.html#ad56f31d3d436c019b72a4e7e530c2270',1,'TravelExpense::SessionManager']]],
+  ['startperiodicchecksum_17',['startPeriodicChecksum',['../namespace_travel_expense_1_1_r_a_s_p.html#ac5a292bac3cec6b36cbdf2bb82bd6739',1,'TravelExpense::RASP']]],
+  ['stopperiodicchecksum_18',['stopPeriodicChecksum',['../namespace_travel_expense_1_1_r_a_s_p.html#a0efff0dbecdada8159cf0b3cb36cb893',1,'TravelExpense::RASP']]]
+];

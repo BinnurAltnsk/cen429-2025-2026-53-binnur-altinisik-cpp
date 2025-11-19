@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_travel_expense_1_1_trip" kind="struct" language="C++" prot="public">
+    <compoundname>TravelExpense::Trip</compoundname>
+    <includes refid="common_types_8h" local="no">commonTypes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_travel_expense_1_1_trip_1aa46fcc235f25f50cfef9aebbc6040ade" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t TravelExpense::Trip::tripId</definition>
+        <argsstring></argsstring>
+        <name>tripId</name>
+        <qualifiedname>TravelExpense::Trip::tripId</qualifiedname>
+        <briefdescription>
+<para>Seyahat kimliği. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="56" column="11" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_trip_1a3e331ff4035a3269150c8d99f08c874a" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t TravelExpense::Trip::userId</definition>
+        <argsstring></argsstring>
+        <name>userId</name>
+        <qualifiedname>TravelExpense::Trip::userId</qualifiedname>
+        <briefdescription>
+<para>Kullanıcı kimliği. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="57" column="11" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_trip_1afd98a09bdb753d91200b64d78d6704c1" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::Trip::destination[100]</definition>
+        <argsstring>[100]</argsstring>
+        <name>destination</name>
+        <qualifiedname>TravelExpense::Trip::destination</qualifiedname>
+        <briefdescription>
+<para>Seyahat hedefi. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="58" column="8" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_trip_1ac5a834a054677985faf4b7330b9689ac" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::Trip::startDate[11]</definition>
+        <argsstring>[11]</argsstring>
+        <name>startDate</name>
+        <qualifiedname>TravelExpense::Trip::startDate</qualifiedname>
+        <briefdescription>
+<para>Başlangıç tarihi (YYYY-MM-DD formatı) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="59" column="8" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_trip_1a324df3d5c655543161f59c78f88a1666" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::Trip::endDate[11]</definition>
+        <argsstring>[11]</argsstring>
+        <name>endDate</name>
+        <qualifiedname>TravelExpense::Trip::endDate</qualifiedname>
+        <briefdescription>
+<para>Bitiş tarihi (YYYY-MM-DD formatı) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="60" column="8" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_trip_1abd14f42c5baec4e98e017a798f16eeb9" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::Trip::accommodation[200]</definition>
+        <argsstring>[200]</argsstring>
+        <name>accommodation</name>
+        <qualifiedname>TravelExpense::Trip::accommodation</qualifiedname>
+        <briefdescription>
+<para>Konaklama bilgisi. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="61" column="8" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_trip_1ab669c2d5e68f7546b7c8696f4a85e53d" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::Trip::transportation[100]</definition>
+        <argsstring>[100]</argsstring>
+        <name>transportation</name>
+        <qualifiedname>TravelExpense::Trip::transportation</qualifiedname>
+        <briefdescription>
+<para>Ulaşım bilgisi. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="62" column="8" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_trip_1aef741342c3407345bd9dc3b5beb56eb9" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TravelExpense::Trip::budget</definition>
+        <argsstring></argsstring>
+        <name>budget</name>
+        <qualifiedname>TravelExpense::Trip::budget</qualifiedname>
+        <briefdescription>
+<para>Bütçe. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="63" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_trip_1a91fa6e04133accc77988ee4ecf19cc77" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TravelExpense::Trip::totalExpenses</definition>
+        <argsstring></argsstring>
+        <name>totalExpenses</name>
+        <qualifiedname>TravelExpense::Trip::totalExpenses</qualifiedname>
+        <briefdescription>
+<para>Toplam gider. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="64" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_trip_1aa8a9d62c7db7af79c25136386a9bee70" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t TravelExpense::Trip::createdAt</definition>
+        <argsstring></argsstring>
+        <name>createdAt</name>
+        <qualifiedname>TravelExpense::Trip::createdAt</qualifiedname>
+        <briefdescription>
+<para>Oluşturulma zamanı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="65" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_trip_1a28f9028c8257a3ad54038e18ab0422d0" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t TravelExpense::Trip::updatedAt</definition>
+        <argsstring></argsstring>
+        <name>updatedAt</name>
+        <qualifiedname>TravelExpense::Trip::updatedAt</qualifiedname>
+        <briefdescription>
+<para>Güncellenme zamanı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="66" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_travel_expense_1_1_trip_1a2b0e5496b4460de325004462b1c94133" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TravelExpense::Trip::Trip</definition>
+        <argsstring>()</argsstring>
+        <name>Trip</name>
+        <qualifiedname>TravelExpense::Trip::Trip</qualifiedname>
+        <briefdescription>
+<para><ref refid="struct_travel_expense_1_1_trip" kindref="compound">Trip</ref> constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Varsayılan değerlerle yeni bir <ref refid="struct_travel_expense_1_1_trip" kindref="compound">Trip</ref> oluşturur. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="73" column="3" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="73" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Seyahat veri modeli. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>TravelExpense::Trip</label>
+        <link refid="struct_travel_expense_1_1_trip"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/travelexpense/header/commonTypes.h" line="55" column="1" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="55" bodyend="81"/>
+    <listofallmembers>
+      <member refid="struct_travel_expense_1_1_trip_1abd14f42c5baec4e98e017a798f16eeb9" prot="public" virt="non-virtual"><scope>TravelExpense::Trip</scope><name>accommodation</name></member>
+      <member refid="struct_travel_expense_1_1_trip_1aef741342c3407345bd9dc3b5beb56eb9" prot="public" virt="non-virtual"><scope>TravelExpense::Trip</scope><name>budget</name></member>
+      <member refid="struct_travel_expense_1_1_trip_1aa8a9d62c7db7af79c25136386a9bee70" prot="public" virt="non-virtual"><scope>TravelExpense::Trip</scope><name>createdAt</name></member>
+      <member refid="struct_travel_expense_1_1_trip_1afd98a09bdb753d91200b64d78d6704c1" prot="public" virt="non-virtual"><scope>TravelExpense::Trip</scope><name>destination</name></member>
+      <member refid="struct_travel_expense_1_1_trip_1a324df3d5c655543161f59c78f88a1666" prot="public" virt="non-virtual"><scope>TravelExpense::Trip</scope><name>endDate</name></member>
+      <member refid="struct_travel_expense_1_1_trip_1ac5a834a054677985faf4b7330b9689ac" prot="public" virt="non-virtual"><scope>TravelExpense::Trip</scope><name>startDate</name></member>
+      <member refid="struct_travel_expense_1_1_trip_1a91fa6e04133accc77988ee4ecf19cc77" prot="public" virt="non-virtual"><scope>TravelExpense::Trip</scope><name>totalExpenses</name></member>
+      <member refid="struct_travel_expense_1_1_trip_1ab669c2d5e68f7546b7c8696f4a85e53d" prot="public" virt="non-virtual"><scope>TravelExpense::Trip</scope><name>transportation</name></member>
+      <member refid="struct_travel_expense_1_1_trip_1a2b0e5496b4460de325004462b1c94133" prot="public" virt="non-virtual"><scope>TravelExpense::Trip</scope><name>Trip</name></member>
+      <member refid="struct_travel_expense_1_1_trip_1aa46fcc235f25f50cfef9aebbc6040ade" prot="public" virt="non-virtual"><scope>TravelExpense::Trip</scope><name>tripId</name></member>
+      <member refid="struct_travel_expense_1_1_trip_1a28f9028c8257a3ad54038e18ab0422d0" prot="public" virt="non-virtual"><scope>TravelExpense::Trip</scope><name>updatedAt</name></member>
+      <member refid="struct_travel_expense_1_1_trip_1a3e331ff4035a3269150c8d99f08c874a" prot="public" virt="non-virtual"><scope>TravelExpense::Trip</scope><name>userId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

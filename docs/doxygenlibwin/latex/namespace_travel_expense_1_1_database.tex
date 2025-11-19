@@ -1,0 +1,175 @@
+\doxysection{Travel\+Expense\+::Database Namespace Reference}
+\hypertarget{namespace_travel_expense_1_1_database}{}\label{namespace_travel_expense_1_1_database}\index{TravelExpense::Database@{TravelExpense::Database}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} sqlite3 \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_travel_expense_1_1_database_ae9f9e2befdc1734e0096e402864e98e7}{initialize\+Database}} (const char \texorpdfstring{$\ast$}{*}db\+Path=nullptr)
+\begin{DoxyCompactList}\small\item\em Veritabanı bağlantısını başlat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_database_a2af129a13996d54e28626bb31ea628dd}{close\+Database}} (sqlite3 \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Veritabanı bağlantısını kapat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_database_a99d005e75737c809467eaa2bc6a50618}{create\+Tables}} (sqlite3 \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Veritabanı tablolarını oluştur (migration) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} sqlite3 \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_travel_expense_1_1_database_a0f85378d912f28f14a19aba99432dcca}{get\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Veritabanı handle\textquotesingle{}ını al (singleton pattern) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_database_af40f61d51e24a23410e02d43bde19b52}{reset\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Veritabanı bağlantısını sıfırla (yeniden bağlan) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_database_aff8adb5540160c816b2cf5c81bd12766}{execute\+Query}} (sqlite3 \texorpdfstring{$\ast$}{*}db, const char \texorpdfstring{$\ast$}{*}sql)
+\begin{DoxyCompactList}\small\item\em SQL sorgusu çalıştır (basit) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} int64\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_database_a2a2fd018c29919ea9a677f61dde3b4db}{get\+Last\+Insert\+Row\+Id}} (sqlite3 \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Son eklenen satırın ID\textquotesingle{}sini al. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_1_1_database_a2af129a13996d54e28626bb31ea628dd}\label{namespace_travel_expense_1_1_database_a2af129a13996d54e28626bb31ea628dd} 
+\index{TravelExpense::Database@{TravelExpense::Database}!closeDatabase@{closeDatabase}}
+\index{closeDatabase@{closeDatabase}!TravelExpense::Database@{TravelExpense::Database}}
+\doxysubsubsection{\texorpdfstring{closeDatabase()}{closeDatabase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Database\+::close\+Database (\begin{DoxyParamCaption}\item[{sqlite3 \texorpdfstring{$\ast$}{*}}]{db }\end{DoxyParamCaption})}
+
+
+
+Veritabanı bağlantısını kapat. 
+
+Açık olan SQLite veritabanı bağlantısını kapatır ve kaynakları temizler. Tüm prepared statement\textquotesingle{}lar ve transaction\textquotesingle{}lar kapatılır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, nullptr handle\textquotesingle{}ı geçerli kabul eder ve Success döner. Bağlantı kapatıldıktan sonra, handle geçersiz hale gelir.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Veritabanı handle\textquotesingle{}ı (nullptr ise hiçbir işlem yapılmaz) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, \doxylink{namespace_travel_expense_1_1_file_i_o}{File\+IO} vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_database_a99d005e75737c809467eaa2bc6a50618}\label{namespace_travel_expense_1_1_database_a99d005e75737c809467eaa2bc6a50618} 
+\index{TravelExpense::Database@{TravelExpense::Database}!createTables@{createTables}}
+\index{createTables@{createTables}!TravelExpense::Database@{TravelExpense::Database}}
+\doxysubsubsection{\texorpdfstring{createTables()}{createTables()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Database\+::create\+Tables (\begin{DoxyParamCaption}\item[{sqlite3 \texorpdfstring{$\ast$}{*}}]{db }\end{DoxyParamCaption})}
+
+
+
+Veritabanı tablolarını oluştur (migration) 
+
+Veritabanında gerekli tabloları oluşturur (users, trips, expenses, budgets). Tablolar zaten varsa hata vermez (IF NOT EXISTS kullanılır).
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, veritabanı şemasını initialize eder. Her tablo için CREATE TABLE IF NOT EXISTS komutu çalıştırılır.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Veritabanı handle\textquotesingle{}ı (nullptr ise Invalid\+Input döner) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, Invalid\+Input, \doxylink{namespace_travel_expense_1_1_file_i_o}{File\+IO} vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_database_aff8adb5540160c816b2cf5c81bd12766}\label{namespace_travel_expense_1_1_database_aff8adb5540160c816b2cf5c81bd12766} 
+\index{TravelExpense::Database@{TravelExpense::Database}!executeQuery@{executeQuery}}
+\index{executeQuery@{executeQuery}!TravelExpense::Database@{TravelExpense::Database}}
+\doxysubsubsection{\texorpdfstring{executeQuery()}{executeQuery()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Database\+::execute\+Query (\begin{DoxyParamCaption}\item[{sqlite3 \texorpdfstring{$\ast$}{*}}]{db,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{sql }\end{DoxyParamCaption})}
+
+
+
+SQL sorgusu çalıştır (basit) 
+
+Basit SQL sorgularını (INSERT, UPDATE, DELETE gibi) çalıştırır. Sonuç döndürmeyen sorgular için kullanılır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, sqlite3\+\_\+exec() kullanarak sorguyu çalıştırır. SELECT sorguları için kullanılmaz (sonuç döndürmez). Prepared statement kullanmak daha güvenlidir.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Veritabanı handle\textquotesingle{}ı (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em sql} & SQL sorgusu (nullptr ise Invalid\+Input döner, null-\/terminated string olmalı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, Invalid\+Input, \doxylink{namespace_travel_expense_1_1_file_i_o}{File\+IO} vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_database_a0f85378d912f28f14a19aba99432dcca}\label{namespace_travel_expense_1_1_database_a0f85378d912f28f14a19aba99432dcca} 
+\index{TravelExpense::Database@{TravelExpense::Database}!getDatabase@{getDatabase}}
+\index{getDatabase@{getDatabase}!TravelExpense::Database@{TravelExpense::Database}}
+\doxysubsubsection{\texorpdfstring{getDatabase()}{getDatabase()}}
+{\footnotesize\ttfamily sqlite3 \texorpdfstring{$\ast$}{*} Travel\+Expense\+::\+Database\+::get\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Veritabanı handle\textquotesingle{}ını al (singleton pattern) 
+
+Mevcut veritabanı bağlantısını döndürür. Eğer bağlantı yoksa yeni bir bağlantı oluşturur (\doxylink{namespace_travel_expense_1_1_database_ae9f9e2befdc1734e0096e402864e98e7}{initialize\+Database()} çağrılır).
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, singleton pattern kullanarak tek bir veritabanı bağlantısı yönetir. İlk çağrıda bağlantı oluşturulur.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+sqlite3\texorpdfstring{$\ast$}{*} Veritabanı handle\textquotesingle{}ı (nullptr ise bağlantı oluşturulamadı) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_database_a2a2fd018c29919ea9a677f61dde3b4db}\label{namespace_travel_expense_1_1_database_a2a2fd018c29919ea9a677f61dde3b4db} 
+\index{TravelExpense::Database@{TravelExpense::Database}!getLastInsertRowId@{getLastInsertRowId}}
+\index{getLastInsertRowId@{getLastInsertRowId}!TravelExpense::Database@{TravelExpense::Database}}
+\doxysubsubsection{\texorpdfstring{getLastInsertRowId()}{getLastInsertRowId()}}
+{\footnotesize\ttfamily int64\+\_\+t Travel\+Expense\+::\+Database\+::get\+Last\+Insert\+Row\+Id (\begin{DoxyParamCaption}\item[{sqlite3 \texorpdfstring{$\ast$}{*}}]{db }\end{DoxyParamCaption})}
+
+
+
+Son eklenen satırın ID\textquotesingle{}sini al. 
+
+Son INSERT işleminde eklenen satırın auto-\/increment ID\textquotesingle{}sini döndürür. SQLite\textquotesingle{}in last\+\_\+insert\+\_\+rowid() fonksiyonunu kullanır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, son INSERT işleminden sonra çağrılmalıdır. Eğer INSERT işlemi yapılmadıysa veya hata varsa, 0 döner.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em db} & Veritabanı handle\textquotesingle{}ı (nullptr ise 0 döner) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int64\+\_\+t Son eklenen satır ID\textquotesingle{}si, 0 ise hata veya satır eklenmemiş 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_database_ae9f9e2befdc1734e0096e402864e98e7}\label{namespace_travel_expense_1_1_database_ae9f9e2befdc1734e0096e402864e98e7} 
+\index{TravelExpense::Database@{TravelExpense::Database}!initializeDatabase@{initializeDatabase}}
+\index{initializeDatabase@{initializeDatabase}!TravelExpense::Database@{TravelExpense::Database}}
+\doxysubsubsection{\texorpdfstring{initializeDatabase()}{initializeDatabase()}}
+{\footnotesize\ttfamily sqlite3 \texorpdfstring{$\ast$}{*} Travel\+Expense\+::\+Database\+::initialize\+Database (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{db\+Path = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Veritabanı bağlantısını başlat. 
+
+SQLite veritabanı dosyasına bağlantı açar. Dosya yoksa oluşturur. Veritabanı dosyası, belirtilen yolda oluşturulur veya açılır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, veritabanı dosyasının bulunduğu dizini oluşturmaz. Dizin önceden oluşturulmuş olmalıdır. Eğer dizin yoksa, hata döner.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em db\+Path} & Veritabanı dosya yolu (nullptr ise \"{}data/travelexpense.\+db\"{} kullanılır) Dosya yolu geçerli olmalı ve dizin mevcut olmalı. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sqlite3\texorpdfstring{$\ast$}{*} Veritabanı handle\textquotesingle{}ı, nullptr ise hata (dosya açılamadı, izin hatası vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_database_af40f61d51e24a23410e02d43bde19b52}\label{namespace_travel_expense_1_1_database_af40f61d51e24a23410e02d43bde19b52} 
+\index{TravelExpense::Database@{TravelExpense::Database}!resetDatabase@{resetDatabase}}
+\index{resetDatabase@{resetDatabase}!TravelExpense::Database@{TravelExpense::Database}}
+\doxysubsubsection{\texorpdfstring{resetDatabase()}{resetDatabase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Database\+::reset\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Veritabanı bağlantısını sıfırla (yeniden bağlan) 
+
+Mevcut bağlantıyı kapatır ve yeni bir bağlantı açar. Singleton pattern\textquotesingle{}deki bağlantıyı yeniden başlatır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, veritabanı bağlantısını yeniden başlatmak için kullanılır. Tüm açık transaction\textquotesingle{}lar ve prepared statement\textquotesingle{}lar kapatılır.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, \doxylink{namespace_travel_expense_1_1_file_i_o}{File\+IO}, File\+Not\+Found vb.) 
+\end{DoxyReturn}

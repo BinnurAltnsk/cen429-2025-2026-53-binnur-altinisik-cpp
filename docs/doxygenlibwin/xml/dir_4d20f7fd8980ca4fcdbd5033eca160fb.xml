@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_4d20f7fd8980ca4fcdbd5033eca160fb" kind="dir">
+    <compoundname>src/travelexpense/header</compoundname>
+    <innerfile refid="asset_manager_8h">assetManager.h</innerfile>
+    <innerfile refid="budget_manager_8h">budgetManager.h</innerfile>
+    <innerfile refid="codehardening_8h">codehardening.h</innerfile>
+    <innerfile refid="common_types_8h">commonTypes.h</innerfile>
+    <innerfile refid="database_8h">database.h</innerfile>
+    <innerfile refid="encryption_8h">encryption.h</innerfile>
+    <innerfile refid="error__codes_8h">error_codes.h</innerfile>
+    <innerfile refid="expense_manager_8h">expenseManager.h</innerfile>
+    <innerfile refid="export_8h">export.h</innerfile>
+    <innerfile refid="file_i_o_8h">fileIO.h</innerfile>
+    <innerfile refid="fingerprinting_8h">fingerprinting.h</innerfile>
+    <innerfile refid="helpers_8h">helpers.h</innerfile>
+    <innerfile refid="migration_8h">migration.h</innerfile>
+    <innerfile refid="rasp_8h">rasp.h</innerfile>
+    <innerfile refid="report_generator_8h">reportGenerator.h</innerfile>
+    <innerfile refid="safe__string_8h">safe_string.h</innerfile>
+    <innerfile refid="security_8h">security.h</innerfile>
+    <innerfile refid="session_manager_8h">sessionManager.h</innerfile>
+    <innerfile refid="softhsm_8h">softhsm.h</innerfile>
+    <innerfile refid="tls_8h">tls.h</innerfile>
+    <innerfile refid="travelexpense_8h">travelexpense.h</innerfile>
+    <innerfile refid="trip_manager_8h">tripManager.h</innerfile>
+    <innerfile refid="user_auth_8h">userAuth.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/travelexpense/header/"/>
+  </compounddef>
+</doxygen>

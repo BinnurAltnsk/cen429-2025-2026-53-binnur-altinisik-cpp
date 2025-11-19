@@ -1,0 +1,100 @@
+\doxysection{src/travelexpense/src/database.cpp File Reference}
+\hypertarget{database_8cpp}{}\label{database_8cpp}\index{src/travelexpense/src/database.cpp@{src/travelexpense/src/database.cpp}}
+
+
+Seyahat Gideri Takibi -\/ SQLite Veritabanı Yönetimi Implementation.  
+
+
+{\ttfamily \#include \"{}../header/database.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/file\+IO.\+h\"{}}\newline
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for database.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{database_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense}{Travel\+Expense}}
+\begin{DoxyCompactList}\small\item\em Ana namespace -\/ Seyahat Gideri Takibi uygulaması \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_database}{Database}}
+\begin{DoxyCompactList}\small\item\em SQLite veritabanı yönetimi modülü \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_database}{Travel\+Expense\+::\+Database}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{database_8cpp_a2b42ceef59ec198c6eee355a96d2cd1c}{MKDIR}}(dir)~mkdir(dir.\+c\+\_\+str(), 0755)
+\begin{DoxyCompactList}\small\item\em Linux/\+Unix için dizin oluşturma macro\textquotesingle{}su. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{database_8cpp_ae37f2aaf4837802590f2bd11facb80ea}{ACCESS}}(path,  mode)~access(path, mode)
+\begin{DoxyCompactList}\small\item\em Linux/\+Unix için dosya erişim kontrolü macro\textquotesingle{}su. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} sqlite3 \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_travel_expense_1_1_database_ae9f9e2befdc1734e0096e402864e98e7}{Travel\+Expense\+::\+Database\+::initialize\+Database}} (const char \texorpdfstring{$\ast$}{*}db\+Path=nullptr)
+\begin{DoxyCompactList}\small\item\em Veritabanı bağlantısını başlat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_database_a2af129a13996d54e28626bb31ea628dd}{Travel\+Expense\+::\+Database\+::close\+Database}} (sqlite3 \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Veritabanı bağlantısını kapat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_database_a99d005e75737c809467eaa2bc6a50618}{Travel\+Expense\+::\+Database\+::create\+Tables}} (sqlite3 \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Veritabanı tablolarını oluştur (migration) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} sqlite3 \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_travel_expense_1_1_database_a0f85378d912f28f14a19aba99432dcca}{Travel\+Expense\+::\+Database\+::get\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Veritabanı handle\textquotesingle{}ını al (singleton pattern) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_database_af40f61d51e24a23410e02d43bde19b52}{Travel\+Expense\+::\+Database\+::reset\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Veritabanı bağlantısını sıfırla (yeniden bağlan) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_database_aff8adb5540160c816b2cf5c81bd12766}{Travel\+Expense\+::\+Database\+::execute\+Query}} (sqlite3 \texorpdfstring{$\ast$}{*}db, const char \texorpdfstring{$\ast$}{*}sql)
+\begin{DoxyCompactList}\small\item\em SQL sorgusu çalıştır (basit) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} int64\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_database_a2a2fd018c29919ea9a677f61dde3b4db}{Travel\+Expense\+::\+Database\+::get\+Last\+Insert\+Row\+Id}} (sqlite3 \texorpdfstring{$\ast$}{*}db)
+\begin{DoxyCompactList}\small\item\em Son eklenen satırın ID\textquotesingle{}sini al. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ SQLite Veritabanı Yönetimi Implementation. 
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{database_8cpp_ae37f2aaf4837802590f2bd11facb80ea}\label{database_8cpp_ae37f2aaf4837802590f2bd11facb80ea} 
+\index{database.cpp@{database.cpp}!ACCESS@{ACCESS}}
+\index{ACCESS@{ACCESS}!database.cpp@{database.cpp}}
+\doxysubsubsection{\texorpdfstring{ACCESS}{ACCESS}}
+{\footnotesize\ttfamily \#define ACCESS(\begin{DoxyParamCaption}\item[{}]{path,  }\item[{}]{mode }\end{DoxyParamCaption})~access(path, mode)}
+
+
+
+Linux/\+Unix için dosya erişim kontrolü macro\textquotesingle{}su. 
+
+Linux/\+Unix platformunda dosya erişim kontrolü yapmak için access() fonksiyonunu kullanır. 
+\begin{DoxyParams}{Parameters}
+{\em path} & Kontrol edilecek dosya yolu (std\+::string) \\
+\hline
+{\em mode} & Erişim modu (int) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{database_8cpp_a2b42ceef59ec198c6eee355a96d2cd1c}\label{database_8cpp_a2b42ceef59ec198c6eee355a96d2cd1c} 
+\index{database.cpp@{database.cpp}!MKDIR@{MKDIR}}
+\index{MKDIR@{MKDIR}!database.cpp@{database.cpp}}
+\doxysubsubsection{\texorpdfstring{MKDIR}{MKDIR}}
+{\footnotesize\ttfamily \#define MKDIR(\begin{DoxyParamCaption}\item[{}]{dir }\end{DoxyParamCaption})~mkdir(dir.\+c\+\_\+str(), 0755)}
+
+
+
+Linux/\+Unix için dizin oluşturma macro\textquotesingle{}su. 
+
+Linux/\+Unix platformunda dizin oluşturmak için mkdir() fonksiyonunu kullanır. Dizin izinleri 0755 olarak ayarlanır (rwxr-\/xr-\/x). 
+\begin{DoxyParams}{Parameters}
+{\em dir} & Oluşturulacak dizin yolu (std\+::string) \\
+\hline
+\end{DoxyParams}

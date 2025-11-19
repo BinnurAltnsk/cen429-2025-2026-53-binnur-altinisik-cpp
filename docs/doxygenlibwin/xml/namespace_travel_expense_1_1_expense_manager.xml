@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_travel_expense_1_1_expense_manager" kind="namespace" language="C++">
+    <compoundname>TravelExpense::ExpenseManager</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_expense_manager_1acfa22e551ca4dd536dc6307b49c3b41d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::ExpenseManager::logExpense</definition>
+        <argsstring>(const Expense &amp;expense, int32_t &amp;expenseId)</argsstring>
+        <name>logExpense</name>
+        <qualifiedname>TravelExpense::ExpenseManager::logExpense</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_travel_expense_1_1_expense" kindref="compound">Expense</ref> &amp;</type>
+          <declname>expense</declname>
+        </param>
+        <param>
+          <type>int32_t &amp;</type>
+          <declname>expenseId</declname>
+        </param>
+        <briefdescription>
+<para>Yeni gider kaydet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen gider bilgilerini veritabanına kaydeder ve benzersiz bir expenseId oluşturur. Gider, seyahat ID&apos;si, kategori, miktar ve tarih bilgilerini içerir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, bütçe kontrolü yapmaz. Bütçe kontrolü için <ref refid="namespace_travel_expense_1_1_budget_manager_1a6635276a27a73233c16e25046e1476ae" kindref="member">BudgetManager::checkBudgetLimit()</ref> fonksiyonu ayrıca çağrılmalıdır.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expense</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gider bilgileri (const referans, <ref refid="struct_travel_expense_1_1_expense" kindref="compound">Expense</ref> struct&apos;ı) İçerik: tripId, category, amount, date, description vb. Tüm alanlar geçerli olmalı (tripId &gt; 0, amount &gt;= 0 vb.). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>expenseId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oluşturulan giderin benzersiz ID&apos;si (çıktı parametresi) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput, FileNotFound vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/expenseManager.cpp" line="20" column="11" bodyfile="src/travelexpense/src/expenseManager.cpp" bodystart="20" bodyend="67" declfile="src/travelexpense/header/expenseManager.h" declline="44" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_expense_manager_1a0300bc40e04d73db76bb14857a2bae35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::ExpenseManager::getExpenses</definition>
+        <argsstring>(int32_t tripId, std::vector&lt; Expense &gt; &amp;expenses)</argsstring>
+        <name>getExpenses</name>
+        <qualifiedname>TravelExpense::ExpenseManager::getExpenses</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>tripId</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_travel_expense_1_1_expense" kindref="compound">Expense</ref> &gt; &amp;</type>
+          <declname>expenses</declname>
+        </param>
+        <briefdescription>
+<para>Seyahate ait giderleri listele. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen seyahat ID&apos;sine ait tüm giderleri veritabanından alır ve expenses vektörüne doldurur. Giderler tarih sırasına göre sıralanabilir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, expenses vektörünü temizler ve yeni giderlerle doldurur. Eğer seyahat için gider bulunamazsa, expenses vektörü boş kalır.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tripId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Seyahat ID (geçerli bir tripId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>expenses</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gider listesi (çıktı parametresi, std::vector&lt;Expense&gt;) Fonksiyon çağrıldığında temizlenir ve yeni giderlerle doldurulur. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/expenseManager.cpp" line="69" column="11" bodyfile="src/travelexpense/src/expenseManager.cpp" bodystart="69" bodyend="115" declfile="src/travelexpense/header/expenseManager.h" declline="60" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_expense_manager_1a299a02f1b9bbb93d906b93c1cf0e6d00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::ExpenseManager::updateExpense</definition>
+        <argsstring>(int32_t expenseId, const Expense &amp;expense)</argsstring>
+        <name>updateExpense</name>
+        <qualifiedname>TravelExpense::ExpenseManager::updateExpense</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>expenseId</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_travel_expense_1_1_expense" kindref="compound">Expense</ref> &amp;</type>
+          <declname>expense</declname>
+        </param>
+        <briefdescription>
+<para>Gider bilgisini güncelle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen expenseId&apos;ye sahip gideri, yeni gider bilgileriyle günceller. Kategori, miktar, tarih ve açıklama gibi alanlar değiştirilebilir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, mevcut gider kaydını günceller. Eğer expenseId geçersizse veya gider bulunamazsa, FileNotFound hatası döner.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expenseId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Güncellenecek giderin benzersiz ID&apos;si (geçerli bir expenseId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>expense</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Güncellenmiş gider bilgileri (const referans, <ref refid="struct_travel_expense_1_1_expense" kindref="compound">Expense</ref> struct&apos;ı) İçerik: tripId, category, amount, date, description vb. Tüm alanlar geçerli olmalı. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/expenseManager.cpp" line="117" column="11" bodyfile="src/travelexpense/src/expenseManager.cpp" bodystart="117" bodyend="162" declfile="src/travelexpense/header/expenseManager.h" declline="77" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_expense_manager_1ac0f66a51dd97d9257947357b1e1483bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::ExpenseManager::deleteExpense</definition>
+        <argsstring>(int32_t expenseId)</argsstring>
+        <name>deleteExpense</name>
+        <qualifiedname>TravelExpense::ExpenseManager::deleteExpense</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>expenseId</declname>
+        </param>
+        <briefdescription>
+<para>Gideri sil. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen expenseId&apos;ye sahip gideri veritabanından kalıcı olarak siler.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, gideri kalıcı olarak siler. Silinen gider geri getirilemez. Eğer expenseId geçersizse veya gider bulunamazsa, FileNotFound hatası döner.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expenseId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Silinecek giderin benzersiz ID&apos;si (geçerli bir expenseId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/expenseManager.cpp" line="164" column="11" bodyfile="src/travelexpense/src/expenseManager.cpp" bodystart="164" bodyend="197" declfile="src/travelexpense/header/expenseManager.h" declline="90" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_expense_manager_1ad3c6bb22de70782f9107931693bbe039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::ExpenseManager::getExpense</definition>
+        <argsstring>(int32_t expenseId, Expense &amp;expense)</argsstring>
+        <name>getExpense</name>
+        <qualifiedname>TravelExpense::ExpenseManager::getExpense</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>expenseId</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_expense" kindref="compound">Expense</ref> &amp;</type>
+          <declname>expense</declname>
+        </param>
+        <briefdescription>
+<para>Gider detayını al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen expenseId&apos;ye sahip giderin detaylı bilgilerini veritabanından alır ve expense parametresine doldurur.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, tek bir giderin detaylarını getirir. Eğer gider bulunamazsa, FileNotFound hatası döner.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expenseId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gider ID (geçerli bir expenseId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>expense</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gider bilgisi (çıktı parametresi, <ref refid="struct_travel_expense_1_1_expense" kindref="compound">Expense</ref> struct&apos;ı) İçerik: expenseId, tripId, category, amount, date, description vb. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/expenseManager.cpp" line="199" column="11" bodyfile="src/travelexpense/src/expenseManager.cpp" bodystart="199" bodyend="246" declfile="src/travelexpense/header/expenseManager.h" declline="106" declcolumn="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/travelexpense/header/expenseManager.h" line="28" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,146 @@
+\doxysection{Travel\+Expense\+::User\+Auth Namespace Reference}
+\hypertarget{namespace_travel_expense_1_1_user_auth}{}\label{namespace_travel_expense_1_1_user_auth}\index{TravelExpense::UserAuth@{TravelExpense::UserAuth}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_user_auth_a63e9c88135b8d5f2911f99ce322d1a50}{register\+User}} (const char \texorpdfstring{$\ast$}{*}username, const char \texorpdfstring{$\ast$}{*}password)
+\begin{DoxyCompactList}\small\item\em Kullanıcı kaydı \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_user_auth_a8f83e74a4b8d2833cb23051e7661c0f0}{login\+User}} (const char \texorpdfstring{$\ast$}{*}username, const char \texorpdfstring{$\ast$}{*}password)
+\begin{DoxyCompactList}\small\item\em Kullanıcı girişi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_user_auth_a8777e8f207ceeaedc2eb75753756b1f1}{enable\+Guest\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Misafir modunu etkinleştir. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} void \mbox{\hyperlink{namespace_travel_expense_1_1_user_auth_ad71c3866e8f46267153654e60014d99f}{logout\+User}} ()
+\begin{DoxyCompactList}\small\item\em Kullanıcı çıkışı \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{struct_travel_expense_1_1_user}{User}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_travel_expense_1_1_user_auth_a4ebfa893e3a0e71ccaac4869f6395785}{get\+Current\+User}} ()
+\begin{DoxyCompactList}\small\item\em Mevcut kullanıcı bilgisini al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_user_auth_a0a20e8d4744950670b6f19c9888e74f6}{get\+User\+By\+Id}} (int32\+\_\+t user\+Id, \mbox{\hyperlink{struct_travel_expense_1_1_user}{User}} \&user)
+\begin{DoxyCompactList}\small\item\em Kullanıcı ID\textquotesingle{}ye göre kullanıcı bilgisini al. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_1_1_user_auth_a8777e8f207ceeaedc2eb75753756b1f1}\label{namespace_travel_expense_1_1_user_auth_a8777e8f207ceeaedc2eb75753756b1f1} 
+\index{TravelExpense::UserAuth@{TravelExpense::UserAuth}!enableGuestMode@{enableGuestMode}}
+\index{enableGuestMode@{enableGuestMode}!TravelExpense::UserAuth@{TravelExpense::UserAuth}}
+\doxysubsubsection{\texorpdfstring{enableGuestMode()}{enableGuestMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+User\+Auth\+::enable\+Guest\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Misafir modunu etkinleştir. 
+
+Misafir kullanıcı modunu etkinleştirir. Misafir modunda, kullanıcı kaydı veya girişi gerekmez, ancak bazı özellikler sınırlı olabilir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, geçici bir misafir kullanıcısı oluşturur. Misafir modu, oturum sonlandığında veya \doxylink{namespace_travel_expense_1_1_user_auth_ad71c3866e8f46267153654e60014d99f}{logout\+User()} çağrıldığında sonlanır.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, Invalid\+Input vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_user_auth_a4ebfa893e3a0e71ccaac4869f6395785}\label{namespace_travel_expense_1_1_user_auth_a4ebfa893e3a0e71ccaac4869f6395785} 
+\index{TravelExpense::UserAuth@{TravelExpense::UserAuth}!getCurrentUser@{getCurrentUser}}
+\index{getCurrentUser@{getCurrentUser}!TravelExpense::UserAuth@{TravelExpense::UserAuth}}
+\doxysubsubsection{\texorpdfstring{getCurrentUser()}{getCurrentUser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_travel_expense_1_1_user}{User}} \texorpdfstring{$\ast$}{*} Travel\+Expense\+::\+User\+Auth\+::get\+Current\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mevcut kullanıcı bilgisini al. 
+
+Aktif oturumdaki kullanıcı bilgisini döndürür. Eğer oturum yoksa (giriş yapılmamış veya \doxylink{namespace_travel_expense_1_1_user_auth_ad71c3866e8f46267153654e60014d99f}{logout\+User()} çağrılmış), nullptr döner.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, \doxylink{namespace_travel_expense_1_1_user_auth_a4ebfa893e3a0e71ccaac4869f6395785}{get\+Current\+User()} ile alınan pointer, \doxylink{namespace_travel_expense_1_1_user_auth_ad71c3866e8f46267153654e60014d99f}{logout\+User()} çağrılana kadar geçerlidir. Pointer\textquotesingle{}ı saklamak güvenli değildir.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+User\texorpdfstring{$\ast$}{*} Mevcut kullanıcı pointer\textquotesingle{}ı (nullptr ise giriş yapılmamış veya oturum sonlandırılmış) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_user_auth_a0a20e8d4744950670b6f19c9888e74f6}\label{namespace_travel_expense_1_1_user_auth_a0a20e8d4744950670b6f19c9888e74f6} 
+\index{TravelExpense::UserAuth@{TravelExpense::UserAuth}!getUserById@{getUserById}}
+\index{getUserById@{getUserById}!TravelExpense::UserAuth@{TravelExpense::UserAuth}}
+\doxysubsubsection{\texorpdfstring{getUserById()}{getUserById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+User\+Auth\+::get\+User\+By\+Id (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{user\+Id,  }\item[{\mbox{\hyperlink{struct_travel_expense_1_1_user}{User}} \&}]{user }\end{DoxyParamCaption})}
+
+
+
+Kullanıcı ID\textquotesingle{}ye göre kullanıcı bilgisini al. 
+
+Belirtilen user\+Id\textquotesingle{}ye sahip kullanıcının bilgilerini veritabanından alır ve user parametresine doldurur.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, kullanıcı ID\textquotesingle{}sine göre kullanıcı bilgilerini getirir. Eğer kullanıcı bulunamazsa, File\+Not\+Found hatası döner.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & Kullanıcı ID (geçerli bir user\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+{\em user} & Kullanıcı bilgisinin yazılacağı struct (çıktı parametresi, \doxylink{struct_travel_expense_1_1_user}{User} struct\textquotesingle{}ı) İçerik\+: user\+Id, username, email, registration\+Date vb. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, File\+Not\+Found, Invalid\+Input vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_user_auth_a8f83e74a4b8d2833cb23051e7661c0f0}\label{namespace_travel_expense_1_1_user_auth_a8f83e74a4b8d2833cb23051e7661c0f0} 
+\index{TravelExpense::UserAuth@{TravelExpense::UserAuth}!loginUser@{loginUser}}
+\index{loginUser@{loginUser}!TravelExpense::UserAuth@{TravelExpense::UserAuth}}
+\doxysubsubsection{\texorpdfstring{loginUser()}{loginUser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+User\+Auth\+::login\+User (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{username,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{password }\end{DoxyParamCaption})}
+
+
+
+Kullanıcı girişi. 
+
+Belirtilen kullanıcı adı ve şifre ile giriş yapar. Şifre hash\textquotesingle{}i doğrulanır ve doğruysa kullanıcı oturumu başlatılır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, şifreyi hash\textquotesingle{}ler ve veritabanındaki hash ile karşılaştırır. Constant-\/time comparison kullanarak timing attack\textquotesingle{}lara karşı koruma sağlar. Başarılı giriş sonrası, \doxylink{namespace_travel_expense_1_1_user_auth_a4ebfa893e3a0e71ccaac4869f6395785}{get\+Current\+User()} ile kullanıcı bilgisi alınabilir.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em username} & Kullanıcı adı (nullptr ise Invalid\+Input döner) \\
+\hline
+{\em password} & Şifre (nullptr ise Invalid\+Input döner) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, Invalid\+Input, Invalid\+User vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_user_auth_ad71c3866e8f46267153654e60014d99f}\label{namespace_travel_expense_1_1_user_auth_ad71c3866e8f46267153654e60014d99f} 
+\index{TravelExpense::UserAuth@{TravelExpense::UserAuth}!logoutUser@{logoutUser}}
+\index{logoutUser@{logoutUser}!TravelExpense::UserAuth@{TravelExpense::UserAuth}}
+\doxysubsubsection{\texorpdfstring{logoutUser()}{logoutUser()}}
+{\footnotesize\ttfamily void Travel\+Expense\+::\+User\+Auth\+::logout\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Kullanıcı çıkışı 
+
+Mevcut kullanıcı oturumunu sonlandırır. Kullanıcı bilgileri temizlenir ve \doxylink{namespace_travel_expense_1_1_user_auth_a4ebfa893e3a0e71ccaac4869f6395785}{get\+Current\+User()} nullptr döner.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, misafir modu dahil tüm oturumları sonlandırır. Oturum sonlandıktan sonra, yeni giriş veya misafir modu gerekir. 
+\end{DoxyNote}
+\Hypertarget{namespace_travel_expense_1_1_user_auth_a63e9c88135b8d5f2911f99ce322d1a50}\label{namespace_travel_expense_1_1_user_auth_a63e9c88135b8d5f2911f99ce322d1a50} 
+\index{TravelExpense::UserAuth@{TravelExpense::UserAuth}!registerUser@{registerUser}}
+\index{registerUser@{registerUser}!TravelExpense::UserAuth@{TravelExpense::UserAuth}}
+\doxysubsubsection{\texorpdfstring{registerUser()}{registerUser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+User\+Auth\+::register\+User (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{username,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{password }\end{DoxyParamCaption})}
+
+
+
+Kullanıcı kaydı 
+
+Yeni bir kullanıcı kaydı oluşturur. Şifre hash\textquotesingle{}lenir ve salt ile birlikte veritabanına kaydedilir. Kullanıcı adı benzersiz olmalıdır.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, şifreyi SHA-\/256 ile hash\textquotesingle{}ler ve salt ekler. Eğer kullanıcı adı zaten varsa, Invalid\+Input hatası döner.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em username} & Kullanıcı adı (nullptr ise Invalid\+Input döner, benzersiz olmalı) \\
+\hline
+{\em password} & Şifre (nullptr ise Invalid\+Input döner, minimum uzunluk kontrolü yapılabilir) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, Invalid\+Input, File\+Not\+Found vb.) 
+\end{DoxyReturn}

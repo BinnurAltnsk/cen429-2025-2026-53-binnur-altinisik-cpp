@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="report_generator_8h" kind="file" language="C++">
+    <compoundname>reportGenerator.h</compoundname>
+    <includes refid="common_types_8h" local="yes">commonTypes.h</includes>
+    <includes refid="export_8h" local="yes">export.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="travelexpense_8h" local="yes">src/travelexpense/header/travelexpense.h</includedby>
+    <includedby refid="report_generator_8cpp" local="yes">src/travelexpense/src/reportGenerator.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>commonTypes.h</label>
+        <link refid="common_types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>error_codes.h</label>
+        <link refid="error__codes_8h"/>
+      </node>
+      <node id="7">
+        <label>export.h</label>
+        <link refid="export_8h"/>
+      </node>
+      <node id="1">
+        <label>src/travelexpense/header/reportGenerator.h</label>
+        <link refid="report_generator_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>cstring</label>
+      </node>
+      <node id="4">
+        <label>ctime</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/travelexpense/header/reportGenerator.h</label>
+        <link refid="report_generator_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/travelexpense/header/travelexpense.h</label>
+        <link refid="travelexpense_8h"/>
+      </node>
+      <node id="3">
+        <label>src/travelexpense/src/reportGenerator.cpp</label>
+        <link refid="report_generator_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
+    <innernamespace refid="namespace_report_generator">ReportGenerator</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_report_generator">TravelExpense::ReportGenerator</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_report_generator_1a11092ae6775867e46e8394b8dc9df738" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::ReportGenerator::generateReport</definition>
+        <argsstring>(int32_t tripId, std::string &amp;report)</argsstring>
+        <name>generateReport</name>
+        <qualifiedname>TravelExpense::ReportGenerator::generateReport</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>tripId</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>report</declname>
+        </param>
+        <briefdescription>
+<para>Seyahat için özet rapor oluştur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen seyahat ID&apos;sine ait giderler ve bütçe bilgilerini kullanarak özet rapor oluşturur. Rapor, toplam harcama, kategori bazlı harcamalar, bütçe durumu ve gider listesi gibi bilgileri içerir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, raporu string formatında oluşturur. Rapor formatı: JSON, XML veya plain text olabilir.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tripId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Seyahat ID (geçerli bir tripId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>report</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oluşturulan rapor (çıktı parametresi, std::string) Rapor içeriği: seyahat bilgileri, gider özeti, bütçe durumu vb. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/reportGenerator.cpp" line="21" column="11" bodyfile="src/travelexpense/src/reportGenerator.cpp" bodystart="21" bodyend="59" declfile="src/travelexpense/header/reportGenerator.h" declline="45" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_report_generator_1a148c9b2e6caba9a6bb8cafada8ac6058" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::ReportGenerator::getReports</definition>
+        <argsstring>(int32_t userId, std::vector&lt; std::string &gt; &amp;reports)</argsstring>
+        <name>getReports</name>
+        <qualifiedname>TravelExpense::ReportGenerator::getReports</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>userId</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt; &amp;</type>
+          <declname>reports</declname>
+        </param>
+        <briefdescription>
+<para>Kullanıcıya ait raporları listele. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen kullanıcı ID&apos;sine ait tüm seyahat raporlarını listeler. Raporlar, seyahat ID&apos;sine göre sıralanabilir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, reports vektörünü temizler ve yeni raporlarla doldurur. Eğer kullanıcı için rapor bulunamazsa, reports vektörü boş kalır.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>userId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kullanıcı ID (geçerli bir userId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reports</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rapor listesi (çıktı parametresi, std::vector&lt;std::string&gt;) Her öğe bir seyahat raporunu temsil eder. Fonksiyon çağrıldığında temizlenir ve yeni raporlarla doldurulur. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/reportGenerator.cpp" line="61" column="11" bodyfile="src/travelexpense/src/reportGenerator.cpp" bodystart="61" bodyend="65" declfile="src/travelexpense/header/reportGenerator.h" declline="62" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_report_generator_1a01211ec6473b3250e051bf1a41e96d60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::ReportGenerator::saveReport</definition>
+        <argsstring>(int32_t tripId, const char *filepath)</argsstring>
+        <name>saveReport</name>
+        <qualifiedname>TravelExpense::ReportGenerator::saveReport</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>tripId</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filepath</declname>
+        </param>
+        <briefdescription>
+<para>Raporu dosyaya kaydet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen seyahat için oluşturulan raporu dosyaya kaydeder. Dosya yoksa oluşturulur, varsa üzerine yazılır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, <ref refid="namespace_travel_expense_1_1_report_generator_1a11092ae6775867e46e8394b8dc9df738" kindref="member">generateReport()</ref> ile oluşturulan raporu dosyaya yazar. Dosya formatı: .txt, .json veya .xml olabilir.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tripId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Seyahat ID (geçerli bir tripId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filepath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Dosya yolu (nullptr ise InvalidInput döner) Dosya yolu geçerli ve yazılabilir olmalı. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, <ref refid="namespace_travel_expense_1_1_file_i_o" kindref="compound">FileIO</ref>, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/reportGenerator.cpp" line="67" column="11" bodyfile="src/travelexpense/src/reportGenerator.cpp" bodystart="67" bodyend="83" declfile="src/travelexpense/header/reportGenerator.h" declline="78" declcolumn="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Seyahat Gideri Takibi - Rapor Oluşturma Modülü </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu dosya, rapor oluşturma işlemlerinin fonksiyon bildirimlerini içerir.</para>
+<para><simplesect kind="author"><para>Binnur Altınışık </para>
+</simplesect>
+<simplesect kind="date"><para>2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>REPORT_GENERATOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REPORT_GENERATOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common_types_8h" kindref="compound">commonTypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="export_8h" kindref="compound">export.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{<sp/></highlight><highlight class="comment">//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="namespace_travel_expense_1_1_report_generator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_report_generator" kindref="compound">ReportGenerator</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_report_generator_1a11092ae6775867e46e8394b8dc9df738" kindref="member">generateReport</ref>(int32_t<sp/>tripId,<sp/>std::string<sp/>&amp;report);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_report_generator_1a148c9b2e6caba9a6bb8cafada8ac6058" kindref="member">getReports</ref>(int32_t<sp/>userId,<sp/>std::vector&lt;std::string&gt;<sp/>&amp;reports);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_report_generator_1a01211ec6473b3250e051bf1a41e96d60" kindref="member">saveReport</ref>(int32_t<sp/>tripId,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filepath);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense<sp/>//<sp/>LCOV_EXCL_LINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>REPORT_GENERATOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/travelexpense/header/reportGenerator.h"/>
+  </compounddef>
+</doxygen>

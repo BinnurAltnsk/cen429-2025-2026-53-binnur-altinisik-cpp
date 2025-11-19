@@ -1,0 +1,141 @@
+\doxysection{Travel\+Expense\+::Expense\+Manager Namespace Reference}
+\hypertarget{namespace_travel_expense_1_1_expense_manager}{}\label{namespace_travel_expense_1_1_expense_manager}\index{TravelExpense::ExpenseManager@{TravelExpense::ExpenseManager}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_expense_manager_acfa22e551ca4dd536dc6307b49c3b41d}{log\+Expense}} (const \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} \&expense, int32\+\_\+t \&expense\+Id)
+\begin{DoxyCompactList}\small\item\em Yeni gider kaydet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_expense_manager_a0300bc40e04d73db76bb14857a2bae35}{get\+Expenses}} (int32\+\_\+t trip\+Id, std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} $>$ \&expenses)
+\begin{DoxyCompactList}\small\item\em Seyahate ait giderleri listele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_expense_manager_a299a02f1b9bbb93d906b93c1cf0e6d00}{update\+Expense}} (int32\+\_\+t expense\+Id, const \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} \&expense)
+\begin{DoxyCompactList}\small\item\em Gider bilgisini güncelle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_expense_manager_ac0f66a51dd97d9257947357b1e1483bf}{delete\+Expense}} (int32\+\_\+t expense\+Id)
+\begin{DoxyCompactList}\small\item\em Gideri sil. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_expense_manager_ad3c6bb22de70782f9107931693bbe039}{get\+Expense}} (int32\+\_\+t expense\+Id, \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} \&expense)
+\begin{DoxyCompactList}\small\item\em Gider detayını al. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_1_1_expense_manager_ac0f66a51dd97d9257947357b1e1483bf}\label{namespace_travel_expense_1_1_expense_manager_ac0f66a51dd97d9257947357b1e1483bf} 
+\index{TravelExpense::ExpenseManager@{TravelExpense::ExpenseManager}!deleteExpense@{deleteExpense}}
+\index{deleteExpense@{deleteExpense}!TravelExpense::ExpenseManager@{TravelExpense::ExpenseManager}}
+\doxysubsubsection{\texorpdfstring{deleteExpense()}{deleteExpense()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Expense\+Manager\+::delete\+Expense (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{expense\+Id }\end{DoxyParamCaption})}
+
+
+
+Gideri sil. 
+
+Belirtilen expense\+Id\textquotesingle{}ye sahip gideri veritabanından kalıcı olarak siler.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, gideri kalıcı olarak siler. Silinen gider geri getirilemez. Eğer expense\+Id geçersizse veya gider bulunamazsa, File\+Not\+Found hatası döner.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em expense\+Id} & Silinecek giderin benzersiz ID\textquotesingle{}si (geçerli bir expense\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, File\+Not\+Found, Invalid\+Input vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_expense_manager_ad3c6bb22de70782f9107931693bbe039}\label{namespace_travel_expense_1_1_expense_manager_ad3c6bb22de70782f9107931693bbe039} 
+\index{TravelExpense::ExpenseManager@{TravelExpense::ExpenseManager}!getExpense@{getExpense}}
+\index{getExpense@{getExpense}!TravelExpense::ExpenseManager@{TravelExpense::ExpenseManager}}
+\doxysubsubsection{\texorpdfstring{getExpense()}{getExpense()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Expense\+Manager\+::get\+Expense (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{expense\+Id,  }\item[{\mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} \&}]{expense }\end{DoxyParamCaption})}
+
+
+
+Gider detayını al. 
+
+Belirtilen expense\+Id\textquotesingle{}ye sahip giderin detaylı bilgilerini veritabanından alır ve expense parametresine doldurur.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, tek bir giderin detaylarını getirir. Eğer gider bulunamazsa, File\+Not\+Found hatası döner.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em expense\+Id} & Gider ID (geçerli bir expense\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+{\em expense} & Gider bilgisi (çıktı parametresi, \doxylink{struct_travel_expense_1_1_expense}{Expense} struct\textquotesingle{}ı) İçerik\+: expense\+Id, trip\+Id, category, amount, date, description vb. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, File\+Not\+Found, Invalid\+Input vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_expense_manager_a0300bc40e04d73db76bb14857a2bae35}\label{namespace_travel_expense_1_1_expense_manager_a0300bc40e04d73db76bb14857a2bae35} 
+\index{TravelExpense::ExpenseManager@{TravelExpense::ExpenseManager}!getExpenses@{getExpenses}}
+\index{getExpenses@{getExpenses}!TravelExpense::ExpenseManager@{TravelExpense::ExpenseManager}}
+\doxysubsubsection{\texorpdfstring{getExpenses()}{getExpenses()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Expense\+Manager\+::get\+Expenses (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{trip\+Id,  }\item[{std\+::vector$<$ \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} $>$ \&}]{expenses }\end{DoxyParamCaption})}
+
+
+
+Seyahate ait giderleri listele. 
+
+Belirtilen seyahat ID\textquotesingle{}sine ait tüm giderleri veritabanından alır ve expenses vektörüne doldurur. Giderler tarih sırasına göre sıralanabilir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, expenses vektörünü temizler ve yeni giderlerle doldurur. Eğer seyahat için gider bulunamazsa, expenses vektörü boş kalır.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em trip\+Id} & Seyahat ID (geçerli bir trip\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+{\em expenses} & Gider listesi (çıktı parametresi, std\+::vector$<$\+Expense$>$) Fonksiyon çağrıldığında temizlenir ve yeni giderlerle doldurulur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, File\+Not\+Found, Invalid\+Input vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_expense_manager_acfa22e551ca4dd536dc6307b49c3b41d}\label{namespace_travel_expense_1_1_expense_manager_acfa22e551ca4dd536dc6307b49c3b41d} 
+\index{TravelExpense::ExpenseManager@{TravelExpense::ExpenseManager}!logExpense@{logExpense}}
+\index{logExpense@{logExpense}!TravelExpense::ExpenseManager@{TravelExpense::ExpenseManager}}
+\doxysubsubsection{\texorpdfstring{logExpense()}{logExpense()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Expense\+Manager\+::log\+Expense (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} \&}]{expense,  }\item[{int32\+\_\+t \&}]{expense\+Id }\end{DoxyParamCaption})}
+
+
+
+Yeni gider kaydet. 
+
+Belirtilen gider bilgilerini veritabanına kaydeder ve benzersiz bir expense\+Id oluşturur. Gider, seyahat ID\textquotesingle{}si, kategori, miktar ve tarih bilgilerini içerir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, bütçe kontrolü yapmaz. Bütçe kontrolü için \doxylink{namespace_travel_expense_1_1_budget_manager_a6635276a27a73233c16e25046e1476ae}{Budget\+Manager\+::check\+Budget\+Limit()} fonksiyonu ayrıca çağrılmalıdır.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em expense} & Gider bilgileri (const referans, \doxylink{struct_travel_expense_1_1_expense}{Expense} struct\textquotesingle{}ı) İçerik\+: trip\+Id, category, amount, date, description vb. Tüm alanlar geçerli olmalı (trip\+Id \texorpdfstring{$>$}{>} 0, amount \texorpdfstring{$>$}{>}= 0 vb.). \\
+\hline
+{\em expense\+Id} & Oluşturulan giderin benzersiz ID\textquotesingle{}si (çıktı parametresi) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, Invalid\+Input, File\+Not\+Found vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_expense_manager_a299a02f1b9bbb93d906b93c1cf0e6d00}\label{namespace_travel_expense_1_1_expense_manager_a299a02f1b9bbb93d906b93c1cf0e6d00} 
+\index{TravelExpense::ExpenseManager@{TravelExpense::ExpenseManager}!updateExpense@{updateExpense}}
+\index{updateExpense@{updateExpense}!TravelExpense::ExpenseManager@{TravelExpense::ExpenseManager}}
+\doxysubsubsection{\texorpdfstring{updateExpense()}{updateExpense()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} Travel\+Expense\+::\+Expense\+Manager\+::update\+Expense (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{expense\+Id,  }\item[{const \mbox{\hyperlink{struct_travel_expense_1_1_expense}{Expense}} \&}]{expense }\end{DoxyParamCaption})}
+
+
+
+Gider bilgisini güncelle. 
+
+Belirtilen expense\+Id\textquotesingle{}ye sahip gideri, yeni gider bilgileriyle günceller. Kategori, miktar, tarih ve açıklama gibi alanlar değiştirilebilir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, mevcut gider kaydını günceller. Eğer expense\+Id geçersizse veya gider bulunamazsa, File\+Not\+Found hatası döner.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em expense\+Id} & Güncellenecek giderin benzersiz ID\textquotesingle{}si (geçerli bir expense\+Id olmalı, 0\textquotesingle{}dan büyük) \\
+\hline
+{\em expense} & Güncellenmiş gider bilgileri (const referans, \doxylink{struct_travel_expense_1_1_expense}{Expense} struct\textquotesingle{}ı) İçerik\+: trip\+Id, category, amount, date, description vb. Tüm alanlar geçerli olmalı. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (Success, File\+Not\+Found, Invalid\+Input vb.) 
+\end{DoxyReturn}

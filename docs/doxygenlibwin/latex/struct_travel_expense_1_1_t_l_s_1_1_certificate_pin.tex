@@ -1,0 +1,101 @@
+\doxysection{Travel\+Expense\+::TLS\+::Certificate\+Pin Struct Reference}
+\hypertarget{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin}{}\label{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin}\index{TravelExpense::TLS::CertificatePin@{TravelExpense::TLS::CertificatePin}}
+
+
+Sertifika pin bilgisi.  
+
+
+
+
+{\ttfamily \#include $<$tls.\+h$>$}
+
+
+
+Collaboration diagram for Travel\+Expense\+::TLS\+::Certificate\+Pin\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_aa6ab5f33c9d6eb212f691ff5a2918266}{hostname}} \mbox{[}256\mbox{]}
+\begin{DoxyCompactList}\small\item\em Hostname (max 255 karakter) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_ae6beb42cddbf78ba417898fee109fcb5}{fingerprint}} \mbox{[}65\mbox{]}
+\begin{DoxyCompactList}\small\item\em SHA-\/256 fingerprint (64 karakter hex string + null terminator) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_aec0c308348644af9c92beaa672f06d23}{public\+Key\+Hash}} \mbox{[}65\mbox{]}
+\begin{DoxyCompactList}\small\item\em Public key hash (64 karakter hex string + null terminator) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_a143d1a034bc36ccc2e8ac270e466cc21}{pin\+Certificate}}
+\begin{DoxyCompactList}\small\item\em Sertifika pin\textquotesingle{}i etkin mi? (true = pin aktif, false = pin pasif) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_ac4b30c9d1432b91805a5129f65497c15}{pin\+Public\+Key}}
+\begin{DoxyCompactList}\small\item\em Public key pin\textquotesingle{}i etkin mi? (true = pin aktif, false = pin pasif) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sertifika pin bilgisi. 
+
+Bu yapı, pin\textquotesingle{}lenecek sertifika bilgilerini saklar. Certificate pinning, sunucu sertifikasının beklenen değerlerle eşleşmesini zorunlu kılar.
+
+\begin{DoxyNote}{Note}
+Hem fingerprint hem de public key hash pin\textquotesingle{}lenebilir. En güvenli yaklaşım, her ikisini de pin\textquotesingle{}lemektir. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_ae6beb42cddbf78ba417898fee109fcb5}\label{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_ae6beb42cddbf78ba417898fee109fcb5} 
+\index{TravelExpense::TLS::CertificatePin@{TravelExpense::TLS::CertificatePin}!fingerprint@{fingerprint}}
+\index{fingerprint@{fingerprint}!TravelExpense::TLS::CertificatePin@{TravelExpense::TLS::CertificatePin}}
+\doxysubsubsection{\texorpdfstring{fingerprint}{fingerprint}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+TLS\+::\+Certificate\+Pin\+::fingerprint\mbox{[}65\mbox{]}}
+
+
+
+SHA-\/256 fingerprint (64 karakter hex string + null terminator) 
+
+\Hypertarget{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_aa6ab5f33c9d6eb212f691ff5a2918266}\label{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_aa6ab5f33c9d6eb212f691ff5a2918266} 
+\index{TravelExpense::TLS::CertificatePin@{TravelExpense::TLS::CertificatePin}!hostname@{hostname}}
+\index{hostname@{hostname}!TravelExpense::TLS::CertificatePin@{TravelExpense::TLS::CertificatePin}}
+\doxysubsubsection{\texorpdfstring{hostname}{hostname}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+TLS\+::\+Certificate\+Pin\+::hostname\mbox{[}256\mbox{]}}
+
+
+
+Hostname (max 255 karakter) 
+
+\Hypertarget{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_a143d1a034bc36ccc2e8ac270e466cc21}\label{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_a143d1a034bc36ccc2e8ac270e466cc21} 
+\index{TravelExpense::TLS::CertificatePin@{TravelExpense::TLS::CertificatePin}!pinCertificate@{pinCertificate}}
+\index{pinCertificate@{pinCertificate}!TravelExpense::TLS::CertificatePin@{TravelExpense::TLS::CertificatePin}}
+\doxysubsubsection{\texorpdfstring{pinCertificate}{pinCertificate}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+TLS\+::\+Certificate\+Pin\+::pin\+Certificate}
+
+
+
+Sertifika pin\textquotesingle{}i etkin mi? (true = pin aktif, false = pin pasif) 
+
+\Hypertarget{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_ac4b30c9d1432b91805a5129f65497c15}\label{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_ac4b30c9d1432b91805a5129f65497c15} 
+\index{TravelExpense::TLS::CertificatePin@{TravelExpense::TLS::CertificatePin}!pinPublicKey@{pinPublicKey}}
+\index{pinPublicKey@{pinPublicKey}!TravelExpense::TLS::CertificatePin@{TravelExpense::TLS::CertificatePin}}
+\doxysubsubsection{\texorpdfstring{pinPublicKey}{pinPublicKey}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+TLS\+::\+Certificate\+Pin\+::pin\+Public\+Key}
+
+
+
+Public key pin\textquotesingle{}i etkin mi? (true = pin aktif, false = pin pasif) 
+
+\Hypertarget{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_aec0c308348644af9c92beaa672f06d23}\label{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_aec0c308348644af9c92beaa672f06d23} 
+\index{TravelExpense::TLS::CertificatePin@{TravelExpense::TLS::CertificatePin}!publicKeyHash@{publicKeyHash}}
+\index{publicKeyHash@{publicKeyHash}!TravelExpense::TLS::CertificatePin@{TravelExpense::TLS::CertificatePin}}
+\doxysubsubsection{\texorpdfstring{publicKeyHash}{publicKeyHash}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+TLS\+::\+Certificate\+Pin\+::public\+Key\+Hash\mbox{[}65\mbox{]}}
+
+
+
+Public key hash (64 karakter hex string + null terminator) 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/travelexpense/header/\mbox{\hyperlink{tls_8h}{tls.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,37 @@
+\doxysection{database.\+h}
+\hypertarget{database_8h_source}{}\label{database_8h_source}\index{src/travelexpense/header/database.h@{src/travelexpense/header/database.h}}
+\mbox{\hyperlink{database_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ DATABASE\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ DATABASE\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{common_types_8h}{commonTypes.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{export_8h}{export.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <sqlite3.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_travel_expense}{TravelExpense}}\ \{\ \textcolor{comment}{//\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_database}{Database}}\ \{}
+\DoxyCodeLine{00045\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ sqlite3\ *\mbox{\hyperlink{namespace_travel_expense_1_1_database_ae9f9e2befdc1734e0096e402864e98e7}{initializeDatabase}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *dbPath\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00059\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_database_a2af129a13996d54e28626bb31ea628dd}{closeDatabase}}(sqlite3\ *db);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00073\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_database_a99d005e75737c809467eaa2bc6a50618}{createTables}}(sqlite3\ *db);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00086\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ sqlite3\ *\mbox{\hyperlink{namespace_travel_expense_1_1_database_a0f85378d912f28f14a19aba99432dcca}{getDatabase}}();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00099\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_database_af40f61d51e24a23410e02d43bde19b52}{resetDatabase}}();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00115\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_database_aff8adb5540160c816b2cf5c81bd12766}{executeQuery}}(sqlite3\ *db,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *sql);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00129\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ int64\_t\ \mbox{\hyperlink{namespace_travel_expense_1_1_database_a2a2fd018c29919ea9a677f61dde3b4db}{getLastInsertRowId}}(sqlite3\ *db);}
+\DoxyCodeLine{00130\ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \}\ \textcolor{comment}{//\ namespace\ TravelExpense\ //\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DATABASE\_H}}
+\DoxyCodeLine{00135\ }
+
+\end{DoxyCode}

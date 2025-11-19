@@ -1,0 +1,160 @@
+\doxysection{Travel\+Expense\+::Expense Struct Reference}
+\hypertarget{struct_travel_expense_1_1_expense}{}\label{struct_travel_expense_1_1_expense}\index{TravelExpense::Expense@{TravelExpense::Expense}}
+
+
+Gider veri modeli.  
+
+
+
+
+{\ttfamily \#include $<$common\+Types.\+h$>$}
+
+
+
+Collaboration diagram for Travel\+Expense\+::Expense\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{struct_travel_expense_1_1_expense__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_travel_expense_1_1_expense_a22e75d7cb8a8fa7c7e4bdbf18b773930}{Expense}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_travel_expense_1_1_expense}{Expense} constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{struct_travel_expense_1_1_expense_a8b8d0d8ab050ba52969213b047f9f503}{expense\+Id}}
+\begin{DoxyCompactList}\small\item\em Gider kimliği. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{struct_travel_expense_1_1_expense_a5e2b7f2582ecff9f3e7c20b441b1428e}{trip\+Id}}
+\begin{DoxyCompactList}\small\item\em Seyahat kimliği. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62}{Expense\+Category}} \mbox{\hyperlink{struct_travel_expense_1_1_expense_a9cfd21fc4f2d632e4c92e229ed9a5076}{category}}
+\begin{DoxyCompactList}\small\item\em Gider kategorisi. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_travel_expense_1_1_expense_a9befa852d17625a297af572e6e48239c}{amount}}
+\begin{DoxyCompactList}\small\item\em Gider tutarı \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_expense_ab773ece2064231345a2684dadae3cfbd}{currency}} \mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em Para birimi (TRY, USD, EUR, vb.) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_expense_ab5b36883541b77fb18feec3cf9602623}{date}} \mbox{[}11\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tarih (YYYY-\/\+MM-\/\+DD) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_expense_a6ead31c5484d9ddc9d6d419536c8821e}{payment\+Method}} \mbox{[}50\mbox{]}
+\begin{DoxyCompactList}\small\item\em Ödeme yöntemi (Nakit, Kredi Kartı, vb.) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_expense_a0b62d0af8229f9b9d743909fb4d66b87}{description}} \mbox{[}200\mbox{]}
+\begin{DoxyCompactList}\small\item\em Gider açıklaması \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{struct_travel_expense_1_1_expense_ab41221d87f44f7e4c358f4fb629f91b0}{created\+At}}
+\begin{DoxyCompactList}\small\item\em Oluşturulma zamanı \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gider veri modeli. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_travel_expense_1_1_expense_a22e75d7cb8a8fa7c7e4bdbf18b773930}\label{struct_travel_expense_1_1_expense_a22e75d7cb8a8fa7c7e4bdbf18b773930} 
+\index{TravelExpense::Expense@{TravelExpense::Expense}!Expense@{Expense}}
+\index{Expense@{Expense}!TravelExpense::Expense@{TravelExpense::Expense}}
+\doxysubsubsection{\texorpdfstring{Expense()}{Expense()}}
+{\footnotesize\ttfamily Travel\+Expense\+::\+Expense\+::\+Expense (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{struct_travel_expense_1_1_expense}{Expense} constructor. 
+
+Varsayılan değerlerle yeni bir \doxylink{struct_travel_expense_1_1_expense}{Expense} oluşturur. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_travel_expense_1_1_expense_a9befa852d17625a297af572e6e48239c}\label{struct_travel_expense_1_1_expense_a9befa852d17625a297af572e6e48239c} 
+\index{TravelExpense::Expense@{TravelExpense::Expense}!amount@{amount}}
+\index{amount@{amount}!TravelExpense::Expense@{TravelExpense::Expense}}
+\doxysubsubsection{\texorpdfstring{amount}{amount}}
+{\footnotesize\ttfamily double Travel\+Expense\+::\+Expense\+::amount}
+
+
+
+Gider tutarı 
+
+\Hypertarget{struct_travel_expense_1_1_expense_a9cfd21fc4f2d632e4c92e229ed9a5076}\label{struct_travel_expense_1_1_expense_a9cfd21fc4f2d632e4c92e229ed9a5076} 
+\index{TravelExpense::Expense@{TravelExpense::Expense}!category@{category}}
+\index{category@{category}!TravelExpense::Expense@{TravelExpense::Expense}}
+\doxysubsubsection{\texorpdfstring{category}{category}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3c96c6d4d2d9f4441ba6d1d2d3124b62}{Expense\+Category}} Travel\+Expense\+::\+Expense\+::category}
+
+
+
+Gider kategorisi. 
+
+\Hypertarget{struct_travel_expense_1_1_expense_ab41221d87f44f7e4c358f4fb629f91b0}\label{struct_travel_expense_1_1_expense_ab41221d87f44f7e4c358f4fb629f91b0} 
+\index{TravelExpense::Expense@{TravelExpense::Expense}!createdAt@{createdAt}}
+\index{createdAt@{createdAt}!TravelExpense::Expense@{TravelExpense::Expense}}
+\doxysubsubsection{\texorpdfstring{createdAt}{createdAt}}
+{\footnotesize\ttfamily time\+\_\+t Travel\+Expense\+::\+Expense\+::created\+At}
+
+
+
+Oluşturulma zamanı 
+
+\Hypertarget{struct_travel_expense_1_1_expense_ab773ece2064231345a2684dadae3cfbd}\label{struct_travel_expense_1_1_expense_ab773ece2064231345a2684dadae3cfbd} 
+\index{TravelExpense::Expense@{TravelExpense::Expense}!currency@{currency}}
+\index{currency@{currency}!TravelExpense::Expense@{TravelExpense::Expense}}
+\doxysubsubsection{\texorpdfstring{currency}{currency}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+Expense\+::currency\mbox{[}4\mbox{]}}
+
+
+
+Para birimi (TRY, USD, EUR, vb.) 
+
+\Hypertarget{struct_travel_expense_1_1_expense_ab5b36883541b77fb18feec3cf9602623}\label{struct_travel_expense_1_1_expense_ab5b36883541b77fb18feec3cf9602623} 
+\index{TravelExpense::Expense@{TravelExpense::Expense}!date@{date}}
+\index{date@{date}!TravelExpense::Expense@{TravelExpense::Expense}}
+\doxysubsubsection{\texorpdfstring{date}{date}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+Expense\+::date\mbox{[}11\mbox{]}}
+
+
+
+Tarih (YYYY-\/\+MM-\/\+DD) 
+
+\Hypertarget{struct_travel_expense_1_1_expense_a0b62d0af8229f9b9d743909fb4d66b87}\label{struct_travel_expense_1_1_expense_a0b62d0af8229f9b9d743909fb4d66b87} 
+\index{TravelExpense::Expense@{TravelExpense::Expense}!description@{description}}
+\index{description@{description}!TravelExpense::Expense@{TravelExpense::Expense}}
+\doxysubsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+Expense\+::description\mbox{[}200\mbox{]}}
+
+
+
+Gider açıklaması 
+
+\Hypertarget{struct_travel_expense_1_1_expense_a8b8d0d8ab050ba52969213b047f9f503}\label{struct_travel_expense_1_1_expense_a8b8d0d8ab050ba52969213b047f9f503} 
+\index{TravelExpense::Expense@{TravelExpense::Expense}!expenseId@{expenseId}}
+\index{expenseId@{expenseId}!TravelExpense::Expense@{TravelExpense::Expense}}
+\doxysubsubsection{\texorpdfstring{expenseId}{expenseId}}
+{\footnotesize\ttfamily int32\+\_\+t Travel\+Expense\+::\+Expense\+::expense\+Id}
+
+
+
+Gider kimliği. 
+
+\Hypertarget{struct_travel_expense_1_1_expense_a6ead31c5484d9ddc9d6d419536c8821e}\label{struct_travel_expense_1_1_expense_a6ead31c5484d9ddc9d6d419536c8821e} 
+\index{TravelExpense::Expense@{TravelExpense::Expense}!paymentMethod@{paymentMethod}}
+\index{paymentMethod@{paymentMethod}!TravelExpense::Expense@{TravelExpense::Expense}}
+\doxysubsubsection{\texorpdfstring{paymentMethod}{paymentMethod}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+Expense\+::payment\+Method\mbox{[}50\mbox{]}}
+
+
+
+Ödeme yöntemi (Nakit, Kredi Kartı, vb.) 
+
+\Hypertarget{struct_travel_expense_1_1_expense_a5e2b7f2582ecff9f3e7c20b441b1428e}\label{struct_travel_expense_1_1_expense_a5e2b7f2582ecff9f3e7c20b441b1428e} 
+\index{TravelExpense::Expense@{TravelExpense::Expense}!tripId@{tripId}}
+\index{tripId@{tripId}!TravelExpense::Expense@{TravelExpense::Expense}}
+\doxysubsubsection{\texorpdfstring{tripId}{tripId}}
+{\footnotesize\ttfamily int32\+\_\+t Travel\+Expense\+::\+Expense\+::trip\+Id}
+
+
+
+Seyahat kimliği. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/travelexpense/header/\mbox{\hyperlink{common_types_8h}{common\+Types.\+h}}\end{DoxyCompactItemize}

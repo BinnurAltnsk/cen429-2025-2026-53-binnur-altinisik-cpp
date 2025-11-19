@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_travel_expense_1_1_asset_manager_1_1_asset" kind="struct" language="C++" prot="public">
+    <compoundname>TravelExpense::AssetManager::Asset</compoundname>
+    <includes refid="asset_manager_8h" local="no">assetManager.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1a986c8230bbcc243780250752e1c75276" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t TravelExpense::AssetManager::Asset::assetId</definition>
+        <argsstring></argsstring>
+        <name>assetId</name>
+        <qualifiedname>TravelExpense::AssetManager::Asset::assetId</qualifiedname>
+        <briefdescription>
+<para>Varlık kimliği. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="74" column="11" bodyfile="src/travelexpense/header/assetManager.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1a088985bed7307cea0baded90e87c0512" prot="public" static="no" mutable="no">
+        <type><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036" kindref="member">AssetType</ref></type>
+        <definition>AssetType TravelExpense::AssetManager::Asset::assetType</definition>
+        <argsstring></argsstring>
+        <name>assetType</name>
+        <qualifiedname>TravelExpense::AssetManager::Asset::assetType</qualifiedname>
+        <briefdescription>
+<para>Varlık tipi. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="75" column="13" bodyfile="src/travelexpense/header/assetManager.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1a4c169d5889293f4d105b034e6fc2218c" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::AssetManager::Asset::name[100]</definition>
+        <argsstring>[100]</argsstring>
+        <name>name</name>
+        <qualifiedname>TravelExpense::AssetManager::Asset::name</qualifiedname>
+        <briefdescription>
+<para>Varlık adı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="76" column="8" bodyfile="src/travelexpense/header/assetManager.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1a61d14f4b2f3877e037e0e362f669e55e" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::AssetManager::Asset::description[500]</definition>
+        <argsstring>[500]</argsstring>
+        <name>description</name>
+        <qualifiedname>TravelExpense::AssetManager::Asset::description</qualifiedname>
+        <briefdescription>
+<para>Varlık açıklaması </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="77" column="8" bodyfile="src/travelexpense/header/assetManager.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1a714eed1010cdf1f4ea7da880d90d494e" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::AssetManager::Asset::location[200]</definition>
+        <argsstring>[200]</argsstring>
+        <name>location</name>
+        <qualifiedname>TravelExpense::AssetManager::Asset::location</qualifiedname>
+        <briefdescription>
+<para>Konum (veritabanı, tablo, sütun) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="78" column="8" bodyfile="src/travelexpense/header/assetManager.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1ae0dbfd7c5c7eba966e65f3c21bd595ca" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::AssetManager::Asset::source[200]</definition>
+        <argsstring>[200]</argsstring>
+        <name>source</name>
+        <qualifiedname>TravelExpense::AssetManager::Asset::source</qualifiedname>
+        <briefdescription>
+<para>Kaynak. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="79" column="8" bodyfile="src/travelexpense/header/assetManager.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1a051fb7b159bac648ed7c05605e6c57ea" prot="public" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t TravelExpense::AssetManager::Asset::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>TravelExpense::AssetManager::Asset::size</qualifiedname>
+        <briefdescription>
+<para>Boyut (byte) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="80" column="11" bodyfile="src/travelexpense/header/assetManager.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1aa3a5d6719dbe319a885e415965664289" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t TravelExpense::AssetManager::Asset::createdAt</definition>
+        <argsstring></argsstring>
+        <name>createdAt</name>
+        <qualifiedname>TravelExpense::AssetManager::Asset::createdAt</qualifiedname>
+        <briefdescription>
+<para>Oluşturulma zamanı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="81" column="10" bodyfile="src/travelexpense/header/assetManager.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1a4fbe11c20d6d6104bba02cfd49e7fbba" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t TravelExpense::AssetManager::Asset::deletedAt</definition>
+        <argsstring></argsstring>
+        <name>deletedAt</name>
+        <qualifiedname>TravelExpense::AssetManager::Asset::deletedAt</qualifiedname>
+        <briefdescription>
+<para>Silinme zamanı (0 = silinmemiş) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="82" column="10" bodyfile="src/travelexpense/header/assetManager.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1ad940f2534891c4337c471cd041e623c2" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::AssetManager::Asset::defaultValue[500]</definition>
+        <argsstring>[500]</argsstring>
+        <name>defaultValue</name>
+        <qualifiedname>TravelExpense::AssetManager::Asset::defaultValue</qualifiedname>
+        <briefdescription>
+<para>Varsayılan değer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="83" column="8" bodyfile="src/travelexpense/header/assetManager.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1a2e780b5ecfe34dd4b006785747ebc27f" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t TravelExpense::AssetManager::Asset::protectionScheme</definition>
+        <argsstring></argsstring>
+        <name>protectionScheme</name>
+        <qualifiedname>TravelExpense::AssetManager::Asset::protectionScheme</qualifiedname>
+        <briefdescription>
+<para>Koruma şeması (bit flags) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="84" column="11" bodyfile="src/travelexpense/header/assetManager.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1a946e38d5cff7598bf5dcd0803af4e1c0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TravelExpense::AssetManager::Asset::isEncrypted</definition>
+        <argsstring></argsstring>
+        <name>isEncrypted</name>
+        <qualifiedname>TravelExpense::AssetManager::Asset::isEncrypted</qualifiedname>
+        <briefdescription>
+<para>Şifrelenmiş mi? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="85" column="8" bodyfile="src/travelexpense/header/assetManager.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1a1e0ea888fc82efdca59cfc16f1c4b409" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TravelExpense::AssetManager::Asset::isActive</definition>
+        <argsstring></argsstring>
+        <name>isActive</name>
+        <qualifiedname>TravelExpense::AssetManager::Asset::isActive</qualifiedname>
+        <briefdescription>
+<para>Aktif mi? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="86" column="8" bodyfile="src/travelexpense/header/assetManager.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1a8ae977d0ef54c270ff01f06399025944" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TravelExpense::AssetManager::Asset::Asset</definition>
+        <argsstring>()</argsstring>
+        <name>Asset</name>
+        <qualifiedname>TravelExpense::AssetManager::Asset::Asset</qualifiedname>
+        <briefdescription>
+<para><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset" kindref="compound">Asset</ref> constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Varsayılan değerlerle yeni bir <ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset" kindref="compound">Asset</ref> oluşturur. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="93" column="3" bodyfile="src/travelexpense/header/assetManager.h" bodystart="93" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Varlık veri modeli. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>TravelExpense::AssetManager::Asset</label>
+        <link refid="struct_travel_expense_1_1_asset_manager_1_1_asset"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+protectionScheme</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>uint8_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/travelexpense/header/assetManager.h" line="73" column="1" bodyfile="src/travelexpense/header/assetManager.h" bodystart="73" bodyend="102"/>
+    <listofallmembers>
+      <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a8ae977d0ef54c270ff01f06399025944" prot="public" virt="non-virtual"><scope>TravelExpense::AssetManager::Asset</scope><name>Asset</name></member>
+      <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a986c8230bbcc243780250752e1c75276" prot="public" virt="non-virtual"><scope>TravelExpense::AssetManager::Asset</scope><name>assetId</name></member>
+      <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a088985bed7307cea0baded90e87c0512" prot="public" virt="non-virtual"><scope>TravelExpense::AssetManager::Asset</scope><name>assetType</name></member>
+      <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1aa3a5d6719dbe319a885e415965664289" prot="public" virt="non-virtual"><scope>TravelExpense::AssetManager::Asset</scope><name>createdAt</name></member>
+      <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1ad940f2534891c4337c471cd041e623c2" prot="public" virt="non-virtual"><scope>TravelExpense::AssetManager::Asset</scope><name>defaultValue</name></member>
+      <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a4fbe11c20d6d6104bba02cfd49e7fbba" prot="public" virt="non-virtual"><scope>TravelExpense::AssetManager::Asset</scope><name>deletedAt</name></member>
+      <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a61d14f4b2f3877e037e0e362f669e55e" prot="public" virt="non-virtual"><scope>TravelExpense::AssetManager::Asset</scope><name>description</name></member>
+      <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a1e0ea888fc82efdca59cfc16f1c4b409" prot="public" virt="non-virtual"><scope>TravelExpense::AssetManager::Asset</scope><name>isActive</name></member>
+      <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a946e38d5cff7598bf5dcd0803af4e1c0" prot="public" virt="non-virtual"><scope>TravelExpense::AssetManager::Asset</scope><name>isEncrypted</name></member>
+      <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a714eed1010cdf1f4ea7da880d90d494e" prot="public" virt="non-virtual"><scope>TravelExpense::AssetManager::Asset</scope><name>location</name></member>
+      <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a4c169d5889293f4d105b034e6fc2218c" prot="public" virt="non-virtual"><scope>TravelExpense::AssetManager::Asset</scope><name>name</name></member>
+      <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a2e780b5ecfe34dd4b006785747ebc27f" prot="public" virt="non-virtual"><scope>TravelExpense::AssetManager::Asset</scope><name>protectionScheme</name></member>
+      <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a051fb7b159bac648ed7c05605e6c57ea" prot="public" virt="non-virtual"><scope>TravelExpense::AssetManager::Asset</scope><name>size</name></member>
+      <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1ae0dbfd7c5c7eba966e65f3c21bd595ca" prot="public" virt="non-virtual"><scope>TravelExpense::AssetManager::Asset</scope><name>source</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

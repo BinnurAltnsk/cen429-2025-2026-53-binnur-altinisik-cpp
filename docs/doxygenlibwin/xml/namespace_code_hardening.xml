@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_code_hardening" kind="namespace" language="C++">
+    <compoundname>CodeHardening</compoundname>
+    <briefdescription>
+<para>Kod sertleştirme teknikleri modülü </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Kod sertleştirme teknikleri modülü implementasyonu.</para>
+<para>Bu modül, kod sertleştirme tekniklerini sağlar: opaque loops (kontrol akışı gizleme), string obfuscation (string gizleme), fonksiyon gizleme ve opaque boolean değişkenleri. Reverse engineering ve code analysis&apos;a karşı koruma sağlar. </para>
+    </detaileddescription>
+    <location file="src/travelexpense/header/codehardening.h" line="26" column="1"/>
+  </compounddef>
+</doxygen>

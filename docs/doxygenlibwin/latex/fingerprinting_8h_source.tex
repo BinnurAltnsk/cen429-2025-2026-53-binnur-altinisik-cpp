@@ -1,0 +1,56 @@
+\doxysection{fingerprinting.\+h}
+\hypertarget{fingerprinting_8h_source}{}\label{fingerprinting_8h_source}\index{src/travelexpense/header/fingerprinting.h@{src/travelexpense/header/fingerprinting.h}}
+\mbox{\hyperlink{fingerprinting_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ FINGERPRINTING\_H}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ FINGERPRINTING\_H}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{common_types_8h}{commonTypes.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{export_8h}{export.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_travel_expense}{TravelExpense}}\ \{\ \textcolor{comment}{//\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_fingerprinting}{Fingerprinting}}\ \{}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ CİHAZ\ FİNGERPRİNTİNG}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00047\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_a28a42fb823573e94bfc33e9d17aaec15}{generateDeviceFingerprint}}(\textcolor{keywordtype}{char}\ *fingerprint);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00057\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_a191e063655ff8a03f4fb50febd6f59c8}{verifyDeviceFingerprint}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expectedFingerprint);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00060\ \textcolor{comment}{//\ UYGULAMA\ FİNGERPRİNTİNG}}
+\DoxyCodeLine{00061\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00073\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_ad3a5d90d7f0cc6eb6f61bc2212ebcafb}{generateApplicationFingerprint}}(\textcolor{keywordtype}{char}\ *fingerprint);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00083\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_ad1d7ddf7b4c19319abf133d25423a1b2}{verifyApplicationFingerprint}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expectedFingerprint);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00094\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_a74e595b94de77e3ff726e9ee8c431842}{generateCombinedFingerprint}}(\textcolor{keywordtype}{char}\ *fingerprint);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ DİNAMİK\ ANAHTAR\ YÖNETİMİ}}
+\DoxyCodeLine{00098\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00111\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_a5bdef5dde8993c3b60f622d1f7ce4879}{generateDynamicKey}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *fingerprint,}
+\DoxyCodeLine{00112\ \ \ \ \ uint8\_t\ *key,\ \textcolor{keywordtype}{size\_t}\ keyLen);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00123\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_a0b557777926cc48a61ef92293ef512fa}{generateDeviceBasedKey}}(uint8\_t\ *key,\ \textcolor{keywordtype}{size\_t}\ keyLen);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00134\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_acb1654b3c7d1bfee4884fccb3c96e092}{generateApplicationBasedKey}}(uint8\_t\ *key,\ \textcolor{keywordtype}{size\_t}\ keyLen);}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00146\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_a60ea4c07ed4974e73e33c8ae00257aa0}{generateCombinedKey}}(uint8\_t\ *key,\ \textcolor{keywordtype}{size\_t}\ keyLen);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \}\ \textcolor{comment}{//\ namespace\ Fingerprinting}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \}\ \textcolor{comment}{//\ namespace\ TravelExpense\ //\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FINGERPRINTING\_H}}
+\DoxyCodeLine{00153\ }
+
+\end{DoxyCode}

@@ -1,0 +1,58 @@
+\doxysection{src/travelexpense/header/export.h File Reference}
+\hypertarget{export_8h}{}\label{export_8h}\index{src/travelexpense/header/export.h@{src/travelexpense/header/export.h}}
+
+
+Seyahat Gideri Takibi -\/ DLL Export/\+Import Macros.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{export_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}}
+\begin{DoxyCompactList}\small\item\em Linux/\+Unix shared library -\/ SO kullanıldığında kullanılır. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{export_8h_ab7e5ee0cfe82490598f5a3f6752d9894}{TRAVELEXPENSE\+\_\+\+INTERNAL}}
+\begin{DoxyCompactList}\small\item\em Internal fonksiyonlar için export gerekmiyorsa kullanılır. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ DLL Export/\+Import Macros. 
+
+Bu dosya, Windows ve Linux platformlarında DLL/\+SO export/import için gerekli macro tanımlamalarını içerir.
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}\label{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6} 
+\index{export.h@{export.h}!TRAVELEXPENSE\_API@{TRAVELEXPENSE\_API}}
+\index{TRAVELEXPENSE\_API@{TRAVELEXPENSE\_API}!export.h@{export.h}}
+\doxysubsubsection{\texorpdfstring{TRAVELEXPENSE\_API}{TRAVELEXPENSE\_API}}
+{\footnotesize\ttfamily \#define TRAVELEXPENSE\+\_\+\+API}
+
+
+
+Linux/\+Unix shared library -\/ SO kullanıldığında kullanılır. 
+
+\Hypertarget{export_8h_ab7e5ee0cfe82490598f5a3f6752d9894}\label{export_8h_ab7e5ee0cfe82490598f5a3f6752d9894} 
+\index{export.h@{export.h}!TRAVELEXPENSE\_INTERNAL@{TRAVELEXPENSE\_INTERNAL}}
+\index{TRAVELEXPENSE\_INTERNAL@{TRAVELEXPENSE\_INTERNAL}!export.h@{export.h}}
+\doxysubsubsection{\texorpdfstring{TRAVELEXPENSE\_INTERNAL}{TRAVELEXPENSE\_INTERNAL}}
+{\footnotesize\ttfamily \#define TRAVELEXPENSE\+\_\+\+INTERNAL}
+
+
+
+Internal fonksiyonlar için export gerekmiyorsa kullanılır. 
+
+Bu macro, sadece library içinde kullanılan fonksiyonlar için kullanılır. Dışarıdan erişilemez ve export edilmez. 

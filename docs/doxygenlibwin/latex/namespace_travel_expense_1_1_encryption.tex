@@ -1,0 +1,950 @@
+\doxysection{Travel\+Expense\+::Encryption Namespace Reference}
+\hypertarget{namespace_travel_expense_1_1_encryption}{}\label{namespace_travel_expense_1_1_encryption}\index{TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_adfcb32aabe9079b29064bb520f474e43}{sha256\+Hash}} (const void \texorpdfstring{$\ast$}{*}input, size\+\_\+t input\+Len, char \texorpdfstring{$\ast$}{*}output)
+\begin{DoxyCompactList}\small\item\em SHA-\/256 hash hesapla. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_aba07992223a35358d74456b63764eb4d}{generate\+Salt}} (char \texorpdfstring{$\ast$}{*}salt)
+\begin{DoxyCompactList}\small\item\em Salt oluştur (kriptografik olarak güvenli rastgele) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a218390c34597e2a8896f6f3c4ba1672e}{hash\+Password}} (const char \texorpdfstring{$\ast$}{*}password, const char \texorpdfstring{$\ast$}{*}salt, char \texorpdfstring{$\ast$}{*}hash)
+\begin{DoxyCompactList}\small\item\em Şifreyi hash\textquotesingle{}le (SHA-\/256 + Salt) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a4860c004d6b6d05f4723dfc0c90f35cd}{verify\+Password}} (const char \texorpdfstring{$\ast$}{*}password, const char \texorpdfstring{$\ast$}{*}salt, const char \texorpdfstring{$\ast$}{*}stored\+Hash)
+\begin{DoxyCompactList}\small\item\em Şifre doğrulama (constant-\/time comparison) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_aba26f33ed7139866139f516576826c8d}{encrypt\+AES256}} (const void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t plaintext\+Len, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}iv, void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t \&ciphertext\+Len)
+\begin{DoxyCompactList}\small\item\em AES-\/256 ile veri şifreleme (basit implementasyon -\/ başlangıç) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a8b06d829778298f0975c1b85ed746270}{decrypt\+AES256}} (const void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t ciphertext\+Len, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}iv, void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t \&plaintext\+Len)
+\begin{DoxyCompactList}\small\item\em AES-\/256 ile veri şifre çözme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a9556af2bcbc41232a11630b9de1d36d0}{hmac\+SHA256}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key, size\+\_\+t key\+Len, const void \texorpdfstring{$\ast$}{*}message, size\+\_\+t message\+Len, char \texorpdfstring{$\ast$}{*}output)
+\begin{DoxyCompactList}\small\item\em HMAC-\/\+SHA256 hesapla (Message Authentication Code) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a53f29cf73c5a46e8ff3c3344408bcefa}{pbkdf2}} (const char \texorpdfstring{$\ast$}{*}password, size\+\_\+t password\+Len, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}salt, size\+\_\+t salt\+Len, uint32\+\_\+t iterations, size\+\_\+t key\+Len, uint8\+\_\+t \texorpdfstring{$\ast$}{*}output)
+\begin{DoxyCompactList}\small\item\em PBKDF2 key derivation (Password-\/\+Based Key Derivation Function 2) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_aab13cbee61c87e29e4f07badb68ee006}{generate\+Random\+Bytes}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}output, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Güvenli rastgele byte dizisi oluştur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_af19dc3b309d69a616590466cd620921c}{generate\+IV}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}iv)
+\begin{DoxyCompactList}\small\item\em IV (Initialization Vector) oluştur (16 byte -\/ AES block size) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a1bc8df3a6e90bff77d7c9eb843036ba5}{constant\+Time\+Compare}} (const char \texorpdfstring{$\ast$}{*}a, const char \texorpdfstring{$\ast$}{*}b, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Constant-\/time string karşılaştırma (timing attack koruması) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a0195e1357626a5075951ae990e99ca8d}{encrypt\+File}} (const char \texorpdfstring{$\ast$}{*}input\+File, const char \texorpdfstring{$\ast$}{*}output\+File, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}iv=nullptr)
+\begin{DoxyCompactList}\small\item\em Dosyayı AES-\/256-\/\+CBC ile şifrele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a7d0d5da1d2c1edf0044d80f025c889b4}{decrypt\+File}} (const char \texorpdfstring{$\ast$}{*}input\+File, const char \texorpdfstring{$\ast$}{*}output\+File, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}key, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}iv=nullptr)
+\begin{DoxyCompactList}\small\item\em Şifrelenmiş dosyayı çöz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a90b1f8daf4e4e6a110cce5aa4a1a135f}{encrypt\+Whitebox\+DES}} (const void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t plaintext\+Len, void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t \&ciphertext\+Len)
+\begin{DoxyCompactList}\small\item\em Whitebox DES ile veri şifreleme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a894ef88976e4ddeccc27e33506180f6f}{decrypt\+Whitebox\+DES}} (const void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t ciphertext\+Len, void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t \&plaintext\+Len)
+\begin{DoxyCompactList}\small\item\em Whitebox DES ile veri şifre çözme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a531df9d656f8e6e5b539c2db02ff09b0}{encrypt\+File\+Whitebox\+DES}} (const char \texorpdfstring{$\ast$}{*}input\+File, const char \texorpdfstring{$\ast$}{*}output\+File)
+\begin{DoxyCompactList}\small\item\em Dosyayı Whitebox DES ile şifrele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a34495d70a42f169639fe1d6d51f4fa79}{decrypt\+File\+Whitebox\+DES}} (const char \texorpdfstring{$\ast$}{*}input\+File, const char \texorpdfstring{$\ast$}{*}output\+File)
+\begin{DoxyCompactList}\small\item\em Whitebox DES ile şifrelenmiş dosyayı çöz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_ac04f3733c0d1a05113a11221e344e0e7}{encrypt\+Whitebox\+AES}} (const void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t plaintext\+Len, void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t \&ciphertext\+Len)
+\begin{DoxyCompactList}\small\item\em Whitebox AES ile veri şifreleme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_a539e19ad6f2560392c8a73000fb71e21}{decrypt\+Whitebox\+AES}} (const void \texorpdfstring{$\ast$}{*}ciphertext, size\+\_\+t ciphertext\+Len, void \texorpdfstring{$\ast$}{*}plaintext, size\+\_\+t \&plaintext\+Len)
+\begin{DoxyCompactList}\small\item\em Whitebox AES ile veri şifre çözme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_ad2ec9054ce42bc1b7376ed47caf91e56}{encrypt\+File\+Whitebox\+AES}} (const char \texorpdfstring{$\ast$}{*}input\+File, const char \texorpdfstring{$\ast$}{*}output\+File)
+\begin{DoxyCompactList}\small\item\em Dosyayı Whitebox AES ile şifrele. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_encryption_ae7b964b2a339d09c81020de250276b43}{decrypt\+File\+Whitebox\+AES}} (const char \texorpdfstring{$\ast$}{*}input\+File, const char \texorpdfstring{$\ast$}{*}output\+File)
+\begin{DoxyCompactList}\small\item\em Whitebox AES ile şifrelenmiş dosyayı çöz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_1_1_encryption_a1bc8df3a6e90bff77d7c9eb843036ba5}\label{namespace_travel_expense_1_1_encryption_a1bc8df3a6e90bff77d7c9eb843036ba5} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!constantTimeCompare@{constantTimeCompare}}
+\index{constantTimeCompare@{constantTimeCompare}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{constantTimeCompare()}{constantTimeCompare()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::constant\+Time\+Compare (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{a,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{b,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Constant-\/time string karşılaştırma (timing attack koruması) 
+
+Constant-\/time karşılaştırma.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & İlk string \\
+\hline
+{\em b} & İkinci string \\
+\hline
+{\em length} & Karşılaştırılacak uzunluk \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Eşit, false Farklı
+\end{DoxyReturn}
+
+
+Timing attack\textquotesingle{}lara karşı koruma sağlayan sabit zamanlı string karşılaştırma. Her karakteri karşılaştırır ve sonucu XOR ile birleştirir. Bu sayede karşılaştırma süresi string içeriğinden bağımsızdır.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & İlk string \\
+\hline
+{\em b} & İkinci string \\
+\hline
+{\em length} & Karşılaştırılacak uzunluk (byte) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Eşit, false Farklı veya hata (null pointer, sıfır uzunluk) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_a8b06d829778298f0975c1b85ed746270}\label{namespace_travel_expense_1_1_encryption_a8b06d829778298f0975c1b85ed746270} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!decryptAES256@{decryptAES256}}
+\index{decryptAES256@{decryptAES256}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{decryptAES256()}{decryptAES256()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::decrypt\+AES256 (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{ciphertext,  }\item[{size\+\_\+t}]{ciphertext\+Len,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{key,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{iv,  }\item[{void \texorpdfstring{$\ast$}{*}}]{plaintext,  }\item[{size\+\_\+t \&}]{plaintext\+Len }\end{DoxyParamCaption})}
+
+
+
+AES-\/256 ile veri şifre çözme. 
+
+AES-\/256-\/\+CBC şifre çözme.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ciphertext} & Şifrelenmiş veri \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu \\
+\hline
+{\em key} & Şifreleme anahtarı (32 byte) \\
+\hline
+{\em iv} & Initialization Vector (16 byte) \\
+\hline
+{\em plaintext} & Şifre çözülmüş veri çıktısı \\
+\hline
+{\em plaintext\+Len} & Şifre çözülmüş veri uzunluğu (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+AES-\/256 algoritması ile CBC modunda şifre çözme yapar. PKCS7 padding\textquotesingle{}i kaldırır ve her blok önceki şifrelenmiş blok ile XOR\textquotesingle{}lanır.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ciphertext} & Şifrelenmiş veri \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu (byte, 16\textquotesingle{}nın katı olmalı) \\
+\hline
+{\em key} & Şifreleme anahtarı (32 byte -\/ AES-\/256) \\
+\hline
+{\em iv} & Initialization Vector (16 byte) \\
+\hline
+{\em plaintext} & Şifre çözülmüş veri çıktısı \\
+\hline
+{\em plaintext\+Len} & Şifre çözülmüş veri uzunluğu (çıktı, padding olmadan) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer, geçersiz uzunluk, padding hatası) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_a7d0d5da1d2c1edf0044d80f025c889b4}\label{namespace_travel_expense_1_1_encryption_a7d0d5da1d2c1edf0044d80f025c889b4} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!decryptFile@{decryptFile}}
+\index{decryptFile@{decryptFile}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{decryptFile()}{decryptFile()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::decrypt\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{input\+File,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{output\+File,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{key,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{iv = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Şifrelenmiş dosyayı çöz. 
+
+Dosya şifre çözme (AES-\/256-\/\+CBC)
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Şifrelenmiş dosya yolu \\
+\hline
+{\em output\+File} & Çözülmüş dosya yolu \\
+\hline
+{\em key} & Şifreleme anahtarı (32 byte) \\
+\hline
+{\em iv} & IV (16 byte), nullptr ise dosyadan okunur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+AES-\/256-\/\+CBC ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı\+: \mbox{[}IV (16 byte)\mbox{]}\mbox{[}Ciphertext (padded)\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Girdi dosyası yolu (şifrelenmiş) \\
+\hline
+{\em output\+File} & Çıktı dosyası yolu (şifre çözülmüş) \\
+\hline
+{\em key} & Şifreleme anahtarı (32 byte -\/ AES-\/256) \\
+\hline
+{\em iv} & IV (nullptr ise dosyadan okunur) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (dosya açılamadı, şifre çözme başarısız vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_ae7b964b2a339d09c81020de250276b43}\label{namespace_travel_expense_1_1_encryption_ae7b964b2a339d09c81020de250276b43} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!decryptFileWhiteboxAES@{decryptFileWhiteboxAES}}
+\index{decryptFileWhiteboxAES@{decryptFileWhiteboxAES}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{decryptFileWhiteboxAES()}{decryptFileWhiteboxAES()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::decrypt\+File\+Whitebox\+AES (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{input\+File,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{output\+File }\end{DoxyParamCaption})}
+
+
+
+Whitebox AES ile şifrelenmiş dosyayı çöz. 
+
+Whitebox AES Dosya Şifre Çözme.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Şifrelenmiş dosya yolu \\
+\hline
+{\em output\+File} & Çözülmüş dosya yolu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+Whitebox AES ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı\+: \mbox{[}Original Size (8 byte)\mbox{]}\mbox{[}Ciphertext (padded)\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Girdi dosyası yolu (şifrelenmiş) \\
+\hline
+{\em output\+File} & Çıktı dosyası yolu (şifre çözülmüş) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (dosya açılamadı, şifre çözme başarısız vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_a34495d70a42f169639fe1d6d51f4fa79}\label{namespace_travel_expense_1_1_encryption_a34495d70a42f169639fe1d6d51f4fa79} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!decryptFileWhiteboxDES@{decryptFileWhiteboxDES}}
+\index{decryptFileWhiteboxDES@{decryptFileWhiteboxDES}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{decryptFileWhiteboxDES()}{decryptFileWhiteboxDES()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::decrypt\+File\+Whitebox\+DES (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{input\+File,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{output\+File }\end{DoxyParamCaption})}
+
+
+
+Whitebox DES ile şifrelenmiş dosyayı çöz. 
+
+Whitebox DES Dosya Şifre Çözme.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Şifrelenmiş dosya yolu \\
+\hline
+{\em output\+File} & Çözülmüş dosya yolu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+Whitebox DES ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı\+: \mbox{[}Original Size (8 byte)\mbox{]}\mbox{[}Ciphertext (padded)\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Girdi dosyası yolu (şifrelenmiş) \\
+\hline
+{\em output\+File} & Çıktı dosyası yolu (şifre çözülmüş) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (dosya açılamadı, şifre çözme başarısız vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_a539e19ad6f2560392c8a73000fb71e21}\label{namespace_travel_expense_1_1_encryption_a539e19ad6f2560392c8a73000fb71e21} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!decryptWhiteboxAES@{decryptWhiteboxAES}}
+\index{decryptWhiteboxAES@{decryptWhiteboxAES}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{decryptWhiteboxAES()}{decryptWhiteboxAES()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::decrypt\+Whitebox\+AES (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{ciphertext,  }\item[{size\+\_\+t}]{ciphertext\+Len,  }\item[{void \texorpdfstring{$\ast$}{*}}]{plaintext,  }\item[{size\+\_\+t \&}]{plaintext\+Len }\end{DoxyParamCaption})}
+
+
+
+Whitebox AES ile veri şifre çözme. 
+
+Whitebox AES Şifre Çözme.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ciphertext} & Şifrelenmiş veri \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu (16 byte\textquotesingle{}un katı olmalı) \\
+\hline
+{\em plaintext} & Şifre çözülmüş veri çıktısı \\
+\hline
+{\em plaintext\+Len} & Şifre çözülmüş veri uzunluğu (ciphertext\+Len ile aynı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+Gömülü anahtar ile AES-\/256 şifre çözme yapar. PKCS7 padding\textquotesingle{}i kaldırır.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ciphertext} & Şifrelenmiş veri \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu (byte, 16\textquotesingle{}nın katı olmalı) \\
+\hline
+{\em plaintext} & Şifre çözülmüş veri çıktısı \\
+\hline
+{\em plaintext\+Len} & Şifre çözülmüş veri uzunluğu (çıktı, padding olmadan) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer, geçersiz uzunluk, padding hatası vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_a894ef88976e4ddeccc27e33506180f6f}\label{namespace_travel_expense_1_1_encryption_a894ef88976e4ddeccc27e33506180f6f} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!decryptWhiteboxDES@{decryptWhiteboxDES}}
+\index{decryptWhiteboxDES@{decryptWhiteboxDES}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{decryptWhiteboxDES()}{decryptWhiteboxDES()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::decrypt\+Whitebox\+DES (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{ciphertext,  }\item[{size\+\_\+t}]{ciphertext\+Len,  }\item[{void \texorpdfstring{$\ast$}{*}}]{plaintext,  }\item[{size\+\_\+t \&}]{plaintext\+Len }\end{DoxyParamCaption})}
+
+
+
+Whitebox DES ile veri şifre çözme. 
+
+Whitebox DES Şifre Çözme.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ciphertext} & Şifrelenmiş veri \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu (8 byte\textquotesingle{}un katı olmalı) \\
+\hline
+{\em plaintext} & Şifre çözülmüş veri çıktısı \\
+\hline
+{\em plaintext\+Len} & Şifre çözülmüş veri uzunluğu (ciphertext\+Len ile aynı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+Gömülü anahtar ile DES şifre çözme yapar. PKCS7 padding\textquotesingle{}i kaldırır.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ciphertext} & Şifrelenmiş veri \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu (byte, 8\textquotesingle{}in katı olmalı) \\
+\hline
+{\em plaintext} & Şifre çözülmüş veri çıktısı \\
+\hline
+{\em plaintext\+Len} & Şifre çözülmüş veri uzunluğu (çıktı, padding olmadan) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer, geçersiz uzunluk, padding hatası vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_aba26f33ed7139866139f516576826c8d}\label{namespace_travel_expense_1_1_encryption_aba26f33ed7139866139f516576826c8d} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!encryptAES256@{encryptAES256}}
+\index{encryptAES256@{encryptAES256}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{encryptAES256()}{encryptAES256()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::encrypt\+AES256 (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{plaintext,  }\item[{size\+\_\+t}]{plaintext\+Len,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{key,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{iv,  }\item[{void \texorpdfstring{$\ast$}{*}}]{ciphertext,  }\item[{size\+\_\+t \&}]{ciphertext\+Len }\end{DoxyParamCaption})}
+
+
+
+AES-\/256 ile veri şifreleme (basit implementasyon -\/ başlangıç) 
+
+AES-\/256-\/\+CBC şifreleme (gerçek implementasyon)
+
+
+\begin{DoxyParams}{Parameters}
+{\em plaintext} & Şifrelenecek veri \\
+\hline
+{\em plaintext\+Len} & Veri uzunluğu \\
+\hline
+{\em key} & Şifreleme anahtarı (32 byte) \\
+\hline
+{\em iv} & Initialization Vector (16 byte) \\
+\hline
+{\em ciphertext} & Şifrelenmiş veri çıktısı \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+AES-\/256 algoritması ile CBC (Cipher Block Chaining) modunda şifreleme yapar. PKCS7 padding kullanır ve her blok önceki şifrelenmiş blok ile XOR\textquotesingle{}lanır.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plaintext} & Şifrelenecek veri \\
+\hline
+{\em plaintext\+Len} & Veri uzunluğu (byte) \\
+\hline
+{\em key} & Şifreleme anahtarı (32 byte -\/ AES-\/256) \\
+\hline
+{\em iv} & Initialization Vector (16 byte) \\
+\hline
+{\em ciphertext} & Şifrelenmiş veri çıktısı \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu (çıktı, padding dahil) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer, sıfır uzunluk vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_a0195e1357626a5075951ae990e99ca8d}\label{namespace_travel_expense_1_1_encryption_a0195e1357626a5075951ae990e99ca8d} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!encryptFile@{encryptFile}}
+\index{encryptFile@{encryptFile}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{encryptFile()}{encryptFile()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::encrypt\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{input\+File,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{output\+File,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{key,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{iv = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Dosyayı AES-\/256-\/\+CBC ile şifrele. 
+
+Dosya şifreleme (AES-\/256-\/\+CBC)
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Giriş dosya yolu \\
+\hline
+{\em output\+File} & Çıkış dosya yolu \\
+\hline
+{\em key} & Şifreleme anahtarı (32 byte) \\
+\hline
+{\em iv} & IV (16 byte), nullptr ise otomatik oluşturulur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+Dosyayı AES-\/256-\/\+CBC ile şifreler ve çıktı dosyasına yazar. Çıktı formatı\+: \mbox{[}IV (16 byte)\mbox{]}\mbox{[}Ciphertext (padded)\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Girdi dosyası yolu \\
+\hline
+{\em output\+File} & Çıktı dosyası yolu \\
+\hline
+{\em key} & Şifreleme anahtarı (32 byte -\/ AES-\/256) \\
+\hline
+{\em iv} & IV (nullptr ise otomatik oluşturulur) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (dosya açılamadı, şifreleme başarısız vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_ad2ec9054ce42bc1b7376ed47caf91e56}\label{namespace_travel_expense_1_1_encryption_ad2ec9054ce42bc1b7376ed47caf91e56} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!encryptFileWhiteboxAES@{encryptFileWhiteboxAES}}
+\index{encryptFileWhiteboxAES@{encryptFileWhiteboxAES}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{encryptFileWhiteboxAES()}{encryptFileWhiteboxAES()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::encrypt\+File\+Whitebox\+AES (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{input\+File,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{output\+File }\end{DoxyParamCaption})}
+
+
+
+Dosyayı Whitebox AES ile şifrele. 
+
+Whitebox AES Dosya Şifreleme.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Giriş dosya yolu \\
+\hline
+{\em output\+File} & Çıkış dosya yolu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+Dosyayı whitebox AES ile şifreler ve çıktı dosyasına yazar. Çıktı formatı\+: \mbox{[}Original Size (8 byte)\mbox{]}\mbox{[}Ciphertext (padded)\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Girdi dosyası yolu \\
+\hline
+{\em output\+File} & Çıktı dosyası yolu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (dosya açılamadı, şifreleme başarısız vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_a531df9d656f8e6e5b539c2db02ff09b0}\label{namespace_travel_expense_1_1_encryption_a531df9d656f8e6e5b539c2db02ff09b0} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!encryptFileWhiteboxDES@{encryptFileWhiteboxDES}}
+\index{encryptFileWhiteboxDES@{encryptFileWhiteboxDES}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{encryptFileWhiteboxDES()}{encryptFileWhiteboxDES()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::encrypt\+File\+Whitebox\+DES (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{input\+File,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{output\+File }\end{DoxyParamCaption})}
+
+
+
+Dosyayı Whitebox DES ile şifrele. 
+
+Whitebox DES Dosya Şifreleme.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Giriş dosya yolu \\
+\hline
+{\em output\+File} & Çıkış dosya yolu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+Dosyayı whitebox DES ile şifreler ve çıktı dosyasına yazar. Çıktı formatı\+: \mbox{[}Original Size (8 byte)\mbox{]}\mbox{[}Ciphertext (padded)\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Girdi dosyası yolu \\
+\hline
+{\em output\+File} & Çıktı dosyası yolu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (dosya açılamadı, şifreleme başarısız vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_ac04f3733c0d1a05113a11221e344e0e7}\label{namespace_travel_expense_1_1_encryption_ac04f3733c0d1a05113a11221e344e0e7} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!encryptWhiteboxAES@{encryptWhiteboxAES}}
+\index{encryptWhiteboxAES@{encryptWhiteboxAES}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{encryptWhiteboxAES()}{encryptWhiteboxAES()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::encrypt\+Whitebox\+AES (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{plaintext,  }\item[{size\+\_\+t}]{plaintext\+Len,  }\item[{void \texorpdfstring{$\ast$}{*}}]{ciphertext,  }\item[{size\+\_\+t \&}]{ciphertext\+Len }\end{DoxyParamCaption})}
+
+
+
+Whitebox AES ile veri şifreleme. 
+
+Whitebox AES Şifreleme.
+
+Whitebox kriptografi, anahtarın kod içine gömülü olduğu ve reverse engineering\textquotesingle{}i zorlaştıran bir tekniktir. Lookup table\textquotesingle{}lar kullanarak anahtar bilgisini maskeleyen bir implementasyondur. Bu implementasyon, embedded key ile çalışır ve key schedule whitening teknikleri kullanır.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plaintext} & Şifrelenecek veri \\
+\hline
+{\em plaintext\+Len} & Veri uzunluğu (16 byte\textquotesingle{}un katı olmalı) \\
+\hline
+{\em ciphertext} & Şifrelenmiş veri çıktısı \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu (plaintext\+Len ile aynı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+Gömülü anahtar ile AES-\/256 şifreleme yapar. PKCS7 padding kullanır (16-\/byte blocks).
+
+
+\begin{DoxyParams}{Parameters}
+{\em plaintext} & Şifrelenecek veri \\
+\hline
+{\em plaintext\+Len} & Veri uzunluğu (byte, 16\textquotesingle{}nın katı olmalı) \\
+\hline
+{\em ciphertext} & Şifrelenmiş veri çıktısı \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer, geçersiz uzunluk vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_a90b1f8daf4e4e6a110cce5aa4a1a135f}\label{namespace_travel_expense_1_1_encryption_a90b1f8daf4e4e6a110cce5aa4a1a135f} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!encryptWhiteboxDES@{encryptWhiteboxDES}}
+\index{encryptWhiteboxDES@{encryptWhiteboxDES}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{encryptWhiteboxDES()}{encryptWhiteboxDES()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::encrypt\+Whitebox\+DES (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{plaintext,  }\item[{size\+\_\+t}]{plaintext\+Len,  }\item[{void \texorpdfstring{$\ast$}{*}}]{ciphertext,  }\item[{size\+\_\+t \&}]{ciphertext\+Len }\end{DoxyParamCaption})}
+
+
+
+Whitebox DES ile veri şifreleme. 
+
+Whitebox DES Şifreleme.
+
+Whitebox kriptografi, anahtarın kod içine gömülü olduğu ve reverse engineering\textquotesingle{}i zorlaştıran bir tekniktir. Lookup table\textquotesingle{}lar kullanarak anahtar bilgisini maskeleyen bir implementasyondur.
+
+
+\begin{DoxyParams}{Parameters}
+{\em plaintext} & Şifrelenecek veri \\
+\hline
+{\em plaintext\+Len} & Veri uzunluğu (8 byte\textquotesingle{}un katı olmalı) \\
+\hline
+{\em ciphertext} & Şifrelenmiş veri çıktısı \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu (plaintext\+Len ile aynı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+Gömülü anahtar ile DES şifreleme yapar. Anahtar koda gömülü olduğu için whitebox implementasyonu. PKCS7 padding kullanır (8-\/byte blocks).
+
+
+\begin{DoxyParams}{Parameters}
+{\em plaintext} & Şifrelenecek veri \\
+\hline
+{\em plaintext\+Len} & Veri uzunluğu (byte, 8\textquotesingle{}in katı olmalı) \\
+\hline
+{\em ciphertext} & Şifrelenmiş veri çıktısı \\
+\hline
+{\em ciphertext\+Len} & Şifrelenmiş veri uzunluğu (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer, geçersiz uzunluk vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_af19dc3b309d69a616590466cd620921c}\label{namespace_travel_expense_1_1_encryption_af19dc3b309d69a616590466cd620921c} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!generateIV@{generateIV}}
+\index{generateIV@{generateIV}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{generateIV()}{generateIV()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::generate\+IV (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{iv }\end{DoxyParamCaption})}
+
+
+
+IV (Initialization Vector) oluştur (16 byte -\/ AES block size) 
+
+IV (Initialization Vector) oluştur.
+
+
+\begin{DoxyParams}{Parameters}
+{\em iv} & IV çıktısı (16 byte) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+AES şifreleme için 16 byte (AES block size) güvenli rastgele IV oluşturur.
+
+
+\begin{DoxyParams}{Parameters}
+{\em iv} & IV çıktısı (16 byte) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer veya rastgele sayı üretilemedi) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_aab13cbee61c87e29e4f07badb68ee006}\label{namespace_travel_expense_1_1_encryption_aab13cbee61c87e29e4f07badb68ee006} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!generateRandomBytes@{generateRandomBytes}}
+\index{generateRandomBytes@{generateRandomBytes}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{generateRandomBytes()}{generateRandomBytes()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::generate\+Random\+Bytes (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{output,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Güvenli rastgele byte dizisi oluştur. 
+
+Güvenli rastgele byte üretimi.
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & Çıktı buffer\textquotesingle{}ı \\
+\hline
+{\em length} & İstenen uzunluk (byte) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+Platform-\/specific güvenli rastgele sayı üreticisi kullanır\+:
+\begin{DoxyItemize}
+\item Windows\+: Crypt\+Gen\+Random (Windows Crypto\+API)
+\item Linux/\+Unix\+: /dev/urandom
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & Rastgele byte çıktısı \\
+\hline
+{\em length} & İstenen uzunluk (byte) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer, sıfır uzunluk, platform hatası) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_aba07992223a35358d74456b63764eb4d}\label{namespace_travel_expense_1_1_encryption_aba07992223a35358d74456b63764eb4d} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!generateSalt@{generateSalt}}
+\index{generateSalt@{generateSalt}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{generateSalt()}{generateSalt()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::generate\+Salt (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{salt }\end{DoxyParamCaption})}
+
+
+
+Salt oluştur (kriptografik olarak güvenli rastgele) 
+
+Salt oluştur (rastgele)
+
+Kriptografik olarak güvenli rastgele sayı üreticisi kullanarak 32 byte (256 bit) salt oluşturur. Salt, şifre hash\textquotesingle{}leme işlemlerinde kullanılır ve rainbow table saldırılarına karşı koruma sağlar.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, platform-\/specific güvenli rastgele sayı üreticisi kullanır (Windows\+: Crypt\+Gen\+Random, Linux\+: /dev/urandom). Salt çıktısı, 64 karakter hex string formatında döndürülür.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em salt} & Salt çıktısı (64 karakter hex string + null terminator, nullptr ise false döner) Output buffer en az 65 byte olmalıdır. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer, rastgele sayı üretme hatası vb.)
+\end{DoxyReturn}
+
+
+Güvenli rastgele sayı üreticisi kullanarak 16 byte (32 karakter hex string) salt değeri oluşturur. Bu salt, şifre hash\textquotesingle{}leme işlemlerinde kullanılır.
+
+
+\begin{DoxyParams}{Parameters}
+{\em salt} & Salt çıktısı (33 byte buffer\+: 32 karakter hex + null terminator) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer veya rastgele sayı üretilemedi) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_a218390c34597e2a8896f6f3c4ba1672e}\label{namespace_travel_expense_1_1_encryption_a218390c34597e2a8896f6f3c4ba1672e} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!hashPassword@{hashPassword}}
+\index{hashPassword@{hashPassword}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{hashPassword()}{hashPassword()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::hash\+Password (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{password,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{salt,  }\item[{char \texorpdfstring{$\ast$}{*}}]{hash }\end{DoxyParamCaption})}
+
+
+
+Şifreyi hash\textquotesingle{}le (SHA-\/256 + Salt) 
+
+Belirtilen şifreyi salt ile birleştirerek SHA-\/256 hash\textquotesingle{}ler. Salt, şifre hash\textquotesingle{}leme işlemlerinde kullanılır ve aynı şifre için farklı hash\textquotesingle{}ler üretilmesini sağlar.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, şifreyi salt ile birleştirir ve SHA-\/256 ile hash\textquotesingle{}ler. Format\+: SHA256(password + salt) veya SHA256(salt + password). Hash çıktısı, 64 karakter hex string formatında döndürülür.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em password} & Şifre (nullptr ise false döner) \\
+\hline
+{\em salt} & Salt değeri (64 karakter hex string, nullptr ise false döner) \\
+\hline
+{\em hash} & Hash çıktısı (64 karakter hex string + null terminator, nullptr ise false döner) Output buffer en az 65 byte olmalıdır. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer, geçersiz salt formatı vb.)
+\end{DoxyReturn}
+
+
+Şifreyi salt ile birleştirip SHA-\/256 hash\textquotesingle{}ini hesaplar. Format\+: SHA256(password + salt)
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & Şifre (plaintext) \\
+\hline
+{\em salt} & Salt değeri (32 karakter hex string) \\
+\hline
+{\em hash} & Hash çıktısı (64 karakter hex string + null terminator) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer veya hash hesaplanamadı) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_a9556af2bcbc41232a11630b9de1d36d0}\label{namespace_travel_expense_1_1_encryption_a9556af2bcbc41232a11630b9de1d36d0} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!hmacSHA256@{hmacSHA256}}
+\index{hmacSHA256@{hmacSHA256}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{hmacSHA256()}{hmacSHA256()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::hmac\+SHA256 (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{key,  }\item[{size\+\_\+t}]{key\+Len,  }\item[{const void \texorpdfstring{$\ast$}{*}}]{message,  }\item[{size\+\_\+t}]{message\+Len,  }\item[{char \texorpdfstring{$\ast$}{*}}]{output }\end{DoxyParamCaption})}
+
+
+
+HMAC-\/\+SHA256 hesapla (Message Authentication Code) 
+
+HMAC-\/\+SHA256 implementasyonu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & HMAC anahtarı \\
+\hline
+{\em key\+Len} & Anahtar uzunluğu \\
+\hline
+{\em message} & Mesaj \\
+\hline
+{\em message\+Len} & Mesaj uzunluğu \\
+\hline
+{\em output} & HMAC çıktısı (32 byte -\/ 64 karakter hex string) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+RFC 2104 uyumlu HMAC-\/\+SHA256 (Hash-\/based Message Authentication Code) hesaplar. HMAC = SHA256(o\+\_\+key\+\_\+pad \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} SHA256(i\+\_\+key\+\_\+pad \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} message))
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & HMAC anahtarı \\
+\hline
+{\em key\+Len} & Anahtar uzunluğu (byte) \\
+\hline
+{\em message} & Mesaj (doğrulanacak veri) \\
+\hline
+{\em message\+Len} & Mesaj uzunluğu (byte) \\
+\hline
+{\em output} & HMAC çıktısı (64 karakter hex string + null terminator) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer, sıfır uzunluk vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_a53f29cf73c5a46e8ff3c3344408bcefa}\label{namespace_travel_expense_1_1_encryption_a53f29cf73c5a46e8ff3c3344408bcefa} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!pbkdf2@{pbkdf2}}
+\index{pbkdf2@{pbkdf2}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{pbkdf2()}{pbkdf2()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::pbkdf2 (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{password,  }\item[{size\+\_\+t}]{password\+Len,  }\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{salt,  }\item[{size\+\_\+t}]{salt\+Len,  }\item[{uint32\+\_\+t}]{iterations,  }\item[{size\+\_\+t}]{key\+Len,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{output }\end{DoxyParamCaption})}
+
+
+
+PBKDF2 key derivation (Password-\/\+Based Key Derivation Function 2) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & Şifre \\
+\hline
+{\em password\+Len} & Şifre uzunluğu \\
+\hline
+{\em salt} & Salt değeri \\
+\hline
+{\em salt\+Len} & Salt uzunluğu \\
+\hline
+{\em iterations} & İterasyon sayısı (önerilen\+: 10000+) \\
+\hline
+{\em key\+Len} & İstenen anahtar uzunluğu (byte) \\
+\hline
+{\em output} & Türetilen anahtar çıktısı \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata
+\end{DoxyReturn}
+
+
+RFC 2898 uyumlu PBKDF2 implementasyonu. Şifre ve salt\textquotesingle{}tan güçlü bir anahtar türetir. HMAC-\/\+SHA256 kullanır.
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & Şifre (plaintext) \\
+\hline
+{\em password\+Len} & Şifre uzunluğu (byte) \\
+\hline
+{\em salt} & Salt değeri \\
+\hline
+{\em salt\+Len} & Salt uzunluğu (byte) \\
+\hline
+{\em iterations} & İterasyon sayısı (önerilen\+: 10000+) \\
+\hline
+{\em key\+Len} & İstenen anahtar uzunluğu (byte) \\
+\hline
+{\em output} & Türetilen anahtar çıktısı \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer, sıfır uzunluk, sıfır iterasyon vb.) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_adfcb32aabe9079b29064bb520f474e43}\label{namespace_travel_expense_1_1_encryption_adfcb32aabe9079b29064bb520f474e43} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!sha256Hash@{sha256Hash}}
+\index{sha256Hash@{sha256Hash}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{sha256Hash()}{sha256Hash()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::sha256\+Hash (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{input,  }\item[{size\+\_\+t}]{input\+Len,  }\item[{char \texorpdfstring{$\ast$}{*}}]{output }\end{DoxyParamCaption})}
+
+
+
+SHA-\/256 hash hesapla. 
+
+SHA-\/256 hash hesapla (gerçek implementasyon)
+
+RFC 6234 uyumlu tam SHA-\/256 hash implementasyonu. Girdi verisini 512-\/bit chunk\textquotesingle{}lara böler, her chunk\textquotesingle{}ı işler ve sonuç olarak 256-\/bit (32 byte) hash üretir.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, kriptografik olarak güvenli SHA-\/256 hash hesaplar. Hash çıktısı, 64 karakter hex string formatında döndürülür.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Hash\textquotesingle{}lenecek veri (nullptr ise false döner) \\
+\hline
+{\em input\+Len} & Veri uzunluğu (byte, 0 ise false döner) \\
+\hline
+{\em output} & Hash çıktısı (64 karakter hex string + null terminator, nullptr ise false döner) Output buffer en az 65 byte olmalıdır. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer, sıfır uzunluk vb.)
+\end{DoxyReturn}
+
+
+RFC 6234 uyumlu tam SHA-\/256 hash implementasyonu. Girdi verisini 512-\/bit chunk\textquotesingle{}lara böler, her chunk\textquotesingle{}ı işler ve sonuç olarak 256-\/bit (32 byte) hash üretir.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Hash\textquotesingle{}lenecek veri \\
+\hline
+{\em input\+Len} & Veri uzunluğu (byte) \\
+\hline
+{\em output} & Hash çıktısı (64 karakter hex string + null terminator) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Başarılı, false Hata (null pointer veya sıfır uzunluk) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_encryption_a4860c004d6b6d05f4723dfc0c90f35cd}\label{namespace_travel_expense_1_1_encryption_a4860c004d6b6d05f4723dfc0c90f35cd} 
+\index{TravelExpense::Encryption@{TravelExpense::Encryption}!verifyPassword@{verifyPassword}}
+\index{verifyPassword@{verifyPassword}!TravelExpense::Encryption@{TravelExpense::Encryption}}
+\doxysubsubsection{\texorpdfstring{verifyPassword()}{verifyPassword()}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+Encryption\+::verify\+Password (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{password,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{salt,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{stored\+Hash }\end{DoxyParamCaption})}
+
+
+
+Şifre doğrulama (constant-\/time comparison) 
+
+Şifre doğrulama.
+
+Girilen şifreyi hash\textquotesingle{}ler ve saklanan hash ile karşılaştırır. Constant-\/time comparison kullanarak timing attack\textquotesingle{}lara karşı koruma sağlar.
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, şifreyi salt ile hash\textquotesingle{}ler ve stored\+Hash ile karşılaştırır. Constant-\/time comparison kullanarak, şifre doğru/yanlış olmasına bakılmaksızın aynı sürede çalışır. Bu, timing attack\textquotesingle{}lara karşı koruma sağlar.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em password} & Girilen şifre (nullptr ise false döner) \\
+\hline
+{\em salt} & Salt değeri (64 karakter hex string, nullptr ise false döner) \\
+\hline
+{\em stored\+Hash} & Saklanan hash değeri (64 karakter hex string, nullptr ise false döner) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Şifre doğru, false Yanlış veya hata
+\end{DoxyReturn}
+
+
+Girilen şifreyi salt ile hash\textquotesingle{}leyip saklanan hash ile karşılaştırır. Constant-\/time comparison kullanarak timing attack\textquotesingle{}lara karşı koruma sağlar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & Girilen şifre (plaintext) \\
+\hline
+{\em salt} & Salt değeri (32 karakter hex string) \\
+\hline
+{\em stored\+Hash} & Saklanan hash değeri (64 karakter hex string) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Şifre doğru, false Şifre yanlış veya hata 
+\end{DoxyReturn}

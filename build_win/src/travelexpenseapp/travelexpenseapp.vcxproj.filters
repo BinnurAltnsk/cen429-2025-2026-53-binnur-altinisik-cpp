@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpenseapp\src\travelexpenseapp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpenseapp\header\travelexpenseapp.h">
+      <Filter>header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpenseapp\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="header">
+      <UniqueIdentifier>{519CAAE5-F724-3D2D-BC2D-44C23A8E253D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{54E3E583-A46C-373B-95A0-13BD97D125BA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

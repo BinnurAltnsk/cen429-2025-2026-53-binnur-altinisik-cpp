@@ -1,0 +1,113 @@
+\doxysection{Travel\+Expense\+::TLS\+::TLSContext Struct Reference}
+\hypertarget{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{}\label{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}\index{TravelExpense::TLS::TLSContext@{TravelExpense::TLS::TLSContext}}
+
+
+\doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamı (context) yapısı  
+
+
+
+
+{\ttfamily \#include $<$tls.\+h$>$}
+
+
+
+Collaboration diagram for Travel\+Expense\+::TLS\+::TLSContext\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a03cbedda9059a1a399a9590581d70cf5}{ssl\+Context}}
+\begin{DoxyCompactList}\small\item\em Open\+SSL SSL\+\_\+\+CTX\texorpdfstring{$\ast$}{*} veya benzeri bağlam işaretçisi. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a7d916e9bcf4e7221fe1835efd01c9893}{ssl\+Connection}}
+\begin{DoxyCompactList}\small\item\em Open\+SSL SSL\texorpdfstring{$\ast$}{*} veya benzeri bağlantı işaretçisi. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a195268e4ab901bb69a2a2c6ec69bf4bc}{is\+Initialized}}
+\begin{DoxyCompactList}\small\item\em Bağlam başlatıldı mı? (true = başlatıldı, false = başlatılmadı) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_ad9e5bf2bd00930fa875d2092ace10065}{is\+Connected}}
+\begin{DoxyCompactList}\small\item\em Bağlantı kuruldu mu? (true = bağlı, false = bağlı değil) \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a92d6e50864d85ef5ac229282ca3e567c}{server\+Hostname}} \mbox{[}256\mbox{]}
+\begin{DoxyCompactList}\small\item\em Sunucu hostname (max 255 karakter) \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_adb3077ae341f641b97e5e9e18170a203}{server\+Port}}
+\begin{DoxyCompactList}\small\item\em Sunucu port numarası (1-\/65535) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamı (context) yapısı 
+
+Bu yapı, \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlantı bilgilerini saklar. Gerçek implementasyonda Open\+SSL SSL\+\_\+\+CTX veya benzeri kullanılabilir.
+
+\begin{DoxyNote}{Note}
+Bu yapı, \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlantısının yaşam döngüsü boyunca geçerli kalır. Bağlantı kapatıldığında \doxylink{namespace_travel_expense_1_1_t_l_s_a6033407b89e93d95ee934725ec8d0473}{cleanup\+TLSContext()} ile temizlenmelidir. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_ad9e5bf2bd00930fa875d2092ace10065}\label{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_ad9e5bf2bd00930fa875d2092ace10065} 
+\index{TravelExpense::TLS::TLSContext@{TravelExpense::TLS::TLSContext}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!TravelExpense::TLS::TLSContext@{TravelExpense::TLS::TLSContext}}
+\doxysubsubsection{\texorpdfstring{isConnected}{isConnected}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+TLS\+::\+TLSContext\+::is\+Connected}
+
+
+
+Bağlantı kuruldu mu? (true = bağlı, false = bağlı değil) 
+
+\Hypertarget{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a195268e4ab901bb69a2a2c6ec69bf4bc}\label{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a195268e4ab901bb69a2a2c6ec69bf4bc} 
+\index{TravelExpense::TLS::TLSContext@{TravelExpense::TLS::TLSContext}!isInitialized@{isInitialized}}
+\index{isInitialized@{isInitialized}!TravelExpense::TLS::TLSContext@{TravelExpense::TLS::TLSContext}}
+\doxysubsubsection{\texorpdfstring{isInitialized}{isInitialized}}
+{\footnotesize\ttfamily bool Travel\+Expense\+::\+TLS\+::\+TLSContext\+::is\+Initialized}
+
+
+
+Bağlam başlatıldı mı? (true = başlatıldı, false = başlatılmadı) 
+
+\Hypertarget{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a92d6e50864d85ef5ac229282ca3e567c}\label{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a92d6e50864d85ef5ac229282ca3e567c} 
+\index{TravelExpense::TLS::TLSContext@{TravelExpense::TLS::TLSContext}!serverHostname@{serverHostname}}
+\index{serverHostname@{serverHostname}!TravelExpense::TLS::TLSContext@{TravelExpense::TLS::TLSContext}}
+\doxysubsubsection{\texorpdfstring{serverHostname}{serverHostname}}
+{\footnotesize\ttfamily char Travel\+Expense\+::\+TLS\+::\+TLSContext\+::server\+Hostname\mbox{[}256\mbox{]}}
+
+
+
+Sunucu hostname (max 255 karakter) 
+
+\Hypertarget{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_adb3077ae341f641b97e5e9e18170a203}\label{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_adb3077ae341f641b97e5e9e18170a203} 
+\index{TravelExpense::TLS::TLSContext@{TravelExpense::TLS::TLSContext}!serverPort@{serverPort}}
+\index{serverPort@{serverPort}!TravelExpense::TLS::TLSContext@{TravelExpense::TLS::TLSContext}}
+\doxysubsubsection{\texorpdfstring{serverPort}{serverPort}}
+{\footnotesize\ttfamily uint16\+\_\+t Travel\+Expense\+::\+TLS\+::\+TLSContext\+::server\+Port}
+
+
+
+Sunucu port numarası (1-\/65535) 
+
+\Hypertarget{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a7d916e9bcf4e7221fe1835efd01c9893}\label{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a7d916e9bcf4e7221fe1835efd01c9893} 
+\index{TravelExpense::TLS::TLSContext@{TravelExpense::TLS::TLSContext}!sslConnection@{sslConnection}}
+\index{sslConnection@{sslConnection}!TravelExpense::TLS::TLSContext@{TravelExpense::TLS::TLSContext}}
+\doxysubsubsection{\texorpdfstring{sslConnection}{sslConnection}}
+{\footnotesize\ttfamily void\texorpdfstring{$\ast$}{*} Travel\+Expense\+::\+TLS\+::\+TLSContext\+::ssl\+Connection}
+
+
+
+Open\+SSL SSL\texorpdfstring{$\ast$}{*} veya benzeri bağlantı işaretçisi. 
+
+\Hypertarget{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a03cbedda9059a1a399a9590581d70cf5}\label{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_a03cbedda9059a1a399a9590581d70cf5} 
+\index{TravelExpense::TLS::TLSContext@{TravelExpense::TLS::TLSContext}!sslContext@{sslContext}}
+\index{sslContext@{sslContext}!TravelExpense::TLS::TLSContext@{TravelExpense::TLS::TLSContext}}
+\doxysubsubsection{\texorpdfstring{sslContext}{sslContext}}
+{\footnotesize\ttfamily void\texorpdfstring{$\ast$}{*} Travel\+Expense\+::\+TLS\+::\+TLSContext\+::ssl\+Context}
+
+
+
+Open\+SSL SSL\+\_\+\+CTX\texorpdfstring{$\ast$}{*} veya benzeri bağlam işaretçisi. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/travelexpense/header/\mbox{\hyperlink{tls_8h}{tls.\+h}}\end{DoxyCompactItemize}

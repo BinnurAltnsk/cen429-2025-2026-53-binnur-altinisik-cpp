@@ -1,0 +1,92 @@
+\doxysection{src/travelexpense/src/file\+IO.cpp File Reference}
+\hypertarget{file_i_o_8cpp}{}\label{file_i_o_8cpp}\index{src/travelexpense/src/fileIO.cpp@{src/travelexpense/src/fileIO.cpp}}
+
+
+Seyahat Gideri Takibi -\/ Dosya I/O Yardımcı Fonksiyonlar Implementation.  
+
+
+{\ttfamily \#include \"{}../header/file\+IO.\+h\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for file\+IO.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{file_i_o_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense}{Travel\+Expense}}
+\begin{DoxyCompactList}\small\item\em Ana namespace -\/ Seyahat Gideri Takibi uygulaması \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_file_i_o}{File\+IO}}
+\begin{DoxyCompactList}\small\item\em Dosya I/O yardımcı fonksiyonları \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_file_i_o}{Travel\+Expense\+::\+File\+IO}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{file_i_o_8cpp_a2b42ceef59ec198c6eee355a96d2cd1c}{MKDIR}}(dir)~mkdir(dir.\+c\+\_\+str(), 0755)
+\begin{DoxyCompactList}\small\item\em Linux/\+Unix için dizin oluşturma macro\textquotesingle{}su. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{file_i_o_8cpp_ae37f2aaf4837802590f2bd11facb80ea}{ACCESS}}(path,  mode)~access(path, mode)
+\begin{DoxyCompactList}\small\item\em Linux/\+Unix için dosya erişim kontrolü macro\textquotesingle{}su. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_file_i_o_a5b48ea5d727f176d8ccc873b44bde6bd}{Travel\+Expense\+::\+File\+IO\+::ensure\+Data\+Directory}} ()
+\begin{DoxyCompactList}\small\item\em Veri dizinini oluştur (yoksa) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} int32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_file_i_o_a00cc394b17a375d8944fdeff726d2007}{Travel\+Expense\+::\+File\+IO\+::get\+Last\+Id}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Son ID\textquotesingle{}yi dosyadan al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_file_i_o_a62bef7a2f4e9800f9e1cd658b2b2736f}{Travel\+Expense\+::\+File\+IO\+::save\+Last\+Id}} (const char \texorpdfstring{$\ast$}{*}filename, int32\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em Son ID\textquotesingle{}yi dosyaya kaydet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} int32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_file_i_o_ad66f05fcd39352e4f9a2aa8fdf32ce48}{Travel\+Expense\+::\+File\+IO\+::generate\+Id}} (const char \texorpdfstring{$\ast$}{*}entity\+Name)
+\begin{DoxyCompactList}\small\item\em Yeni ID oluştur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ Dosya I/O Yardımcı Fonksiyonlar Implementation. 
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{file_i_o_8cpp_ae37f2aaf4837802590f2bd11facb80ea}\label{file_i_o_8cpp_ae37f2aaf4837802590f2bd11facb80ea} 
+\index{fileIO.cpp@{fileIO.cpp}!ACCESS@{ACCESS}}
+\index{ACCESS@{ACCESS}!fileIO.cpp@{fileIO.cpp}}
+\doxysubsubsection{\texorpdfstring{ACCESS}{ACCESS}}
+{\footnotesize\ttfamily \#define ACCESS(\begin{DoxyParamCaption}\item[{}]{path,  }\item[{}]{mode }\end{DoxyParamCaption})~access(path, mode)}
+
+
+
+Linux/\+Unix için dosya erişim kontrolü macro\textquotesingle{}su. 
+
+Linux/\+Unix platformunda dosya erişim kontrolü yapmak için access() fonksiyonunu kullanır. 
+\begin{DoxyParams}{Parameters}
+{\em path} & Kontrol edilecek dosya yolu (std\+::string) \\
+\hline
+{\em mode} & Erişim modu (int) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{file_i_o_8cpp_a2b42ceef59ec198c6eee355a96d2cd1c}\label{file_i_o_8cpp_a2b42ceef59ec198c6eee355a96d2cd1c} 
+\index{fileIO.cpp@{fileIO.cpp}!MKDIR@{MKDIR}}
+\index{MKDIR@{MKDIR}!fileIO.cpp@{fileIO.cpp}}
+\doxysubsubsection{\texorpdfstring{MKDIR}{MKDIR}}
+{\footnotesize\ttfamily \#define MKDIR(\begin{DoxyParamCaption}\item[{}]{dir }\end{DoxyParamCaption})~mkdir(dir.\+c\+\_\+str(), 0755)}
+
+
+
+Linux/\+Unix için dizin oluşturma macro\textquotesingle{}su. 
+
+Linux/\+Unix platformunda dizin oluşturmak için mkdir() fonksiyonunu kullanır. Dizin izinleri 0755 olarak ayarlanır (rwxr-\/xr-\/x). 
+\begin{DoxyParams}{Parameters}
+{\em dir} & Oluşturulacak dizin yolu (std\+::string) \\
+\hline
+\end{DoxyParams}

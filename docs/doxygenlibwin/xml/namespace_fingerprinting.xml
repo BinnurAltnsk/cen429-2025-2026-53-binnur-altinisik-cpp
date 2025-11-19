@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_fingerprinting" kind="namespace" language="C++">
+    <compoundname>Fingerprinting</compoundname>
+    <briefdescription>
+<para>Cihaz ve uygulama fingerprinting modülü </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu modül, cihaz ve uygulama fingerprint&apos;lerinin oluşturulması, doğrulanması ve dinamik anahtar yönetimi işlemlerini sağlar. Dinamik varlıkların korunması gereksinimlerini karşılar. </para>
+    </detaileddescription>
+    <location file="src/travelexpense/header/fingerprinting.h" line="25" column="1"/>
+  </compounddef>
+</doxygen>

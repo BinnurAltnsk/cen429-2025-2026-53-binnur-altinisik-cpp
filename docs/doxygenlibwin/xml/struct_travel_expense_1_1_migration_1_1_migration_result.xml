@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_travel_expense_1_1_migration_1_1_migration_result" kind="struct" language="C++" prot="public">
+    <compoundname>TravelExpense::Migration::MigrationResult</compoundname>
+    <includes refid="migration_8h" local="no">migration.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_travel_expense_1_1_migration_1_1_migration_result_1a7aa7569434d4029a50c8e1215f308b8b" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t TravelExpense::Migration::MigrationResult::usersMigrated</definition>
+        <argsstring></argsstring>
+        <name>usersMigrated</name>
+        <qualifiedname>TravelExpense::Migration::MigrationResult::usersMigrated</qualifiedname>
+        <briefdescription>
+<para>Migrate edilen kullanıcı sayısı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/migration.h" line="36" column="11" bodyfile="src/travelexpense/header/migration.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_migration_1_1_migration_result_1a75804a51631f8eeadd03ddd45cdbaa4d" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t TravelExpense::Migration::MigrationResult::tripsMigrated</definition>
+        <argsstring></argsstring>
+        <name>tripsMigrated</name>
+        <qualifiedname>TravelExpense::Migration::MigrationResult::tripsMigrated</qualifiedname>
+        <briefdescription>
+<para>Migrate edilen seyahat sayısı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/migration.h" line="37" column="11" bodyfile="src/travelexpense/header/migration.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_migration_1_1_migration_result_1adf1505dbb8e408de75f15723bd507f34" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t TravelExpense::Migration::MigrationResult::expensesMigrated</definition>
+        <argsstring></argsstring>
+        <name>expensesMigrated</name>
+        <qualifiedname>TravelExpense::Migration::MigrationResult::expensesMigrated</qualifiedname>
+        <briefdescription>
+<para>Migrate edilen gider sayısı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/migration.h" line="38" column="11" bodyfile="src/travelexpense/header/migration.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_migration_1_1_migration_result_1a82e3f9aa5a5a47e3ccb5c06556a47c3f" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t TravelExpense::Migration::MigrationResult::budgetsMigrated</definition>
+        <argsstring></argsstring>
+        <name>budgetsMigrated</name>
+        <qualifiedname>TravelExpense::Migration::MigrationResult::budgetsMigrated</qualifiedname>
+        <briefdescription>
+<para>Migrate edilen bütçe sayısı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/migration.h" line="39" column="11" bodyfile="src/travelexpense/header/migration.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_migration_1_1_migration_result_1a70f10c951670748182ba4ee21e6f0a2a" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t TravelExpense::Migration::MigrationResult::errors</definition>
+        <argsstring></argsstring>
+        <name>errors</name>
+        <qualifiedname>TravelExpense::Migration::MigrationResult::errors</qualifiedname>
+        <briefdescription>
+<para>Hata sayısı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/migration.h" line="40" column="11" bodyfile="src/travelexpense/header/migration.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_migration_1_1_migration_result_1aeca0af1a63544272e9f84e4e549de395" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TravelExpense::Migration::MigrationResult::success</definition>
+        <argsstring></argsstring>
+        <name>success</name>
+        <qualifiedname>TravelExpense::Migration::MigrationResult::success</qualifiedname>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_migration" kindref="compound">Migration</ref> başarılı mı? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/migration.h" line="41" column="8" bodyfile="src/travelexpense/header/migration.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_migration" kindref="compound">Migration</ref> sonuç yapısı </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>TravelExpense::Migration::MigrationResult</label>
+        <link refid="struct_travel_expense_1_1_migration_1_1_migration_result"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/travelexpense/header/migration.h" line="35" column="1" bodyfile="src/travelexpense/header/migration.h" bodystart="35" bodyend="42"/>
+    <listofallmembers>
+      <member refid="struct_travel_expense_1_1_migration_1_1_migration_result_1a82e3f9aa5a5a47e3ccb5c06556a47c3f" prot="public" virt="non-virtual"><scope>TravelExpense::Migration::MigrationResult</scope><name>budgetsMigrated</name></member>
+      <member refid="struct_travel_expense_1_1_migration_1_1_migration_result_1a70f10c951670748182ba4ee21e6f0a2a" prot="public" virt="non-virtual"><scope>TravelExpense::Migration::MigrationResult</scope><name>errors</name></member>
+      <member refid="struct_travel_expense_1_1_migration_1_1_migration_result_1adf1505dbb8e408de75f15723bd507f34" prot="public" virt="non-virtual"><scope>TravelExpense::Migration::MigrationResult</scope><name>expensesMigrated</name></member>
+      <member refid="struct_travel_expense_1_1_migration_1_1_migration_result_1aeca0af1a63544272e9f84e4e549de395" prot="public" virt="non-virtual"><scope>TravelExpense::Migration::MigrationResult</scope><name>success</name></member>
+      <member refid="struct_travel_expense_1_1_migration_1_1_migration_result_1a75804a51631f8eeadd03ddd45cdbaa4d" prot="public" virt="non-virtual"><scope>TravelExpense::Migration::MigrationResult</scope><name>tripsMigrated</name></member>
+      <member refid="struct_travel_expense_1_1_migration_1_1_migration_result_1a7aa7569434d4029a50c8e1215f308b8b" prot="public" virt="non-virtual"><scope>TravelExpense::Migration::MigrationResult</scope><name>usersMigrated</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

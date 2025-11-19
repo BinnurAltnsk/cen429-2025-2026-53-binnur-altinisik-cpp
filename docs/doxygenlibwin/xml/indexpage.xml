@@ -1,0 +1,359 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Seyahat Gideri Takibi Projesi (Travel Expense Tracking)</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md__r_e_a_d_m_e"/> </para>
+<sect1 id="index_1autotoc_md1">
+<title>Genel Bakış</title>
+<para>Bu proje, kullanıcıların seyahat planlarını yapmasına, giderlerini kaydetmesine, bütçelerini yönetmesine ve özet raporlar oluşturmasına olanak sağlayan güvenli bir C++ konsol uygulamasıdır. Proje, güvenlik standartlarına uygun şekilde geliştirilmiştir ve sertifikasyon sürecinden geçecek şekilde tasarlanmıştır.</para>
+</sect1>
+<sect1 id="index_1autotoc_md2">
+<title>Proje Özellikleri</title>
+<sect2 id="index_1autotoc_md3">
+<title>Temel Özellikler</title>
+<para><itemizedlist>
+<listitem><para><bold>Kullanıcı Kimlik Doğrulama:</bold> Kullanıcı hesapları, misafir modu desteği</para>
+</listitem><listitem><para><bold>Seyahat Planlama:</bold> Seyahat ayrıntılarını ve güzergahı düzenleme</para>
+</listitem><listitem><para><bold>Gider Kaydı:</bold> Seyahat masraflarını kategorize ederek kaydetme</para>
+</listitem><listitem><para><bold>Bütçe Yönetimi:</bold> Seyahat bütçelerini belirleme ve takip etme</para>
+</listitem><listitem><para><bold>Özet Rapor:</bold> Seyahat masraflarını ve deneyimlerini derleyen raporlar</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md4">
+<title>Güvenlik Özellikleri</title>
+<para><itemizedlist>
+<listitem><para><bold>Veri Şifreleme:</bold> Whitebox AES kullanarak hassas verilerin şifrelenmesi</para>
+</listitem><listitem><para><bold>Güvenli Bellek Yönetimi:</bold> Hassas verilerin kullanım sonrası güvenli şekilde silinmesi</para>
+</listitem><listitem><para><bold>Kod Sertleştirme:</bold> Opaque loops, string/fonksiyon gizleme</para>
+</listitem><listitem><para><bold><ref refid="namespace_r_a_s_p" kindref="compound">RASP</ref> Teknikleri:</bold> Checksum doğrulama, anti-debug mekanizmaları, tamper tespiti</para>
+</listitem><listitem><para><bold>Binary Koruma:</bold> İkili uygulama koruma özellikleri</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md5">
+<title>Gereksinimler</title>
+<para><itemizedlist>
+<listitem><para><bold>CMake:</bold> &gt;= 3.12</para>
+</listitem><listitem><para><bold>C++ Standard:</bold> &gt;= 11</para>
+</listitem><listitem><para><bold>SQLite3:</bold> Veritabanı için (kurulum için <computeroutput>docs/SQLITE_SETUP.md</computeroutput> dosyasına bakın)</para>
+</listitem><listitem><para><bold>GoogleTest:</bold> Birim testleri için</para>
+</listitem><listitem><para><bold>Visual Studio Community Edition:</bold> Windows için</para>
+</listitem><listitem><para><bold>Ninja:</bold> WSL/Linux için</para>
+</listitem><listitem><para><bold>Whitebox Kriptografi:</bold> Veri şifreleme için</para>
+</listitem></itemizedlist>
+</para>
+<sect2 id="index_1autotoc_md6">
+<title>SQLite3 Kurulumu</title>
+<para><bold>Hızlı Kurulum (Önerilen):</bold></para>
+<para><orderedlist>
+<listitem><para><ulink url="https://www.sqlite.org/download.html">https://www.sqlite.org/download.html</ulink> adresine gidin</para>
+</listitem><listitem><para>&quot;Amalgamation&quot; bölümünden <computeroutput>sqlite-amalgamation-XXX.zip</computeroutput> dosyasını indirin</para>
+</listitem><listitem><para>Zip içinden <computeroutput>sqlite3.c</computeroutput> ve <computeroutput>sqlite3.h</computeroutput> dosyalarını çıkarın</para>
+</listitem><listitem><para>Bu dosyaları şu klasöre kopyalayın: <programlisting><codeline><highlight class="normal">src/travelexpense/third_party/sqlite3/</highlight></codeline>
+</programlisting></para>
+</listitem></orderedlist>
+</para>
+<para>Detaylı kurulum talimatları için: `docs/SQLITE_SETUP.md`</para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md7">
+<title>Proje Yapısı</title>
+<para><programlisting><codeline><highlight class="normal">cen429-2025-2026-53-binnur-altinisik-cpp/</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>src/</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>travelexpense/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Kütüphane<sp/>(İş<sp/>Mantığı)</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>header/</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/>│<sp/><sp/><sp/>└──<sp/>travelexpense.h</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/>└──<sp/>src/</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>travelexpense.cpp</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>travelexpenseapp/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Konsol<sp/>Uygulaması<sp/>(Menü)</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/>├──<sp/>header/</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/>│<sp/><sp/><sp/>└──<sp/>travelexpenseapp.h</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/>└──<sp/>src/</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>travelexpenseapp.cpp</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>│</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>tests/</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>travelexpense/</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>└──<sp/>travelexpense_test.cpp</highlight></codeline>
+<codeline><highlight class="normal">│</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>docs/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Dokümantasyon</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>PROJECT_PLAN.md<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Proje<sp/>planı</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>SECURITY_ANALYSIS.md<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Güvenlik<sp/>analizi</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>security.md<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Güvenlik<sp/>dokümantasyonu</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>architecture.md<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Mimari<sp/>dokümantasyon</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>VIZE_ILERLEME_RAPORU.md<sp/><sp/><sp/><sp/><sp/>#<sp/>Vize<sp/>ilerleme<sp/>raporu</highlight></codeline>
+<codeline><highlight class="normal">│</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>data/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Veri<sp/>dosyaları<sp/>(şifrelenmiş)</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>users.dat</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>trips.dat</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>├──<sp/>expenses.dat</highlight></codeline>
+<codeline><highlight class="normal">│<sp/><sp/><sp/>└──<sp/>budgets.dat</highlight></codeline>
+<codeline><highlight class="normal">│</highlight></codeline>
+<codeline><highlight class="normal">└──<sp/>CMakeLists.txt<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Ana<sp/>CMake<sp/>yapılandırması</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="index_1autotoc_md8">
+<title>Kurulum ve Derleme</title>
+<sect2 id="index_1autotoc_md9">
+<title>Windows</title>
+<para><orderedlist>
+<listitem><para><bold>Geliştirme Ortamını Hazırlama:</bold> <programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>Pre-commit<sp/>hook&apos;larını<sp/>yapılandır</highlight></codeline>
+<codeline><highlight class="normal">1-configure-git-hooks.bat</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Gitignore<sp/>oluştur<sp/>(gerekirse)</highlight></codeline>
+<codeline><highlight class="normal">2-create-git-ignore.bat</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Paket<sp/>yöneticilerini<sp/>yükle</highlight></codeline>
+<codeline><highlight class="normal">3-install-package-manager.bat</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Gerekli<sp/>uygulamaları<sp/>yükle</highlight></codeline>
+<codeline><highlight class="normal">4-install-windows-enviroment.bat</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para><bold>Projeyi Yapılandırma:</bold> <programlisting filename=".bash"><codeline><highlight class="normal">9-clean-configure-app-windows.bat</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para><bold>Projeyi Derleme:</bold> <programlisting filename=".bash"><codeline><highlight class="normal">7-build-app-windows.bat</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para><bold>Testleri Çalıştırma:</bold> <programlisting filename=".bash"><codeline><highlight class="normal">8-build-test-windows.bat</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para><bold>Dokümantasyon Oluşturma:</bold> <programlisting filename=".bash"><codeline><highlight class="normal">7-build-doc-windows.bat</highlight></codeline>
+</programlisting></para>
+</listitem></orderedlist>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md10">
+<title>Linux/WSL</title>
+<para><orderedlist>
+<listitem><para><bold>Geliştirme Ortamını Hazırlama:</bold> <programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>WSL<sp/>ortamını<sp/>kur</highlight></codeline>
+<codeline><highlight class="normal">./4-install-wsl-environment.sh</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para><bold>Projeyi Derleme:</bold> <programlisting filename=".bash"><codeline><highlight class="normal">./7-build-app-linux.sh</highlight></codeline>
+</programlisting></para>
+</listitem></orderedlist>
+</para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md11">
+<title>Kullanım</title>
+<sect2 id="index_1autotoc_md12">
+<title>Konsol Menüsü</title>
+<para>Uygulama başlatıldığında ana menü gösterilir:</para>
+<para><programlisting><codeline><highlight class="normal">===<sp/>SEYAHAT<sp/>GİDERİ<sp/>TAKİBİ<sp/>===</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Kullanıcı<sp/>İşlemleri</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Giriş<sp/>Yap</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Kaydol</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Misafir<sp/>Modu</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.<sp/>Seyahat<sp/>Planlama</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Seyahat<sp/>Oluştur</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Seyahatleri<sp/>Görüntüle</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Seyahati<sp/>Düzenle</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Seyahati<sp/>Sil</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">3.<sp/>Gider<sp/>Kaydı</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Gider<sp/>Kaydet</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Giderleri<sp/>Görüntüle</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Gideri<sp/>Düzenle</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Gideri<sp/>Sil</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">4.<sp/>Bütçe<sp/>Yönetimi</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Bütçe<sp/>Belirle</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Bütçeyi<sp/>Görüntüle</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Bütçeyi<sp/>Düzenle</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">5.<sp/>Özet<sp/>Rapor</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Rapor<sp/>Oluştur</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Raporları<sp/>Görüntüle</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">0.<sp/>Çıkış</highlight></codeline>
+</programlisting></para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md13">
+<title>Güvenlik Dokümantasyonu</title>
+<para>Detaylı güvenlik dokümantasyonu için aşağıdaki dosyalara bakın:</para>
+<para><itemizedlist>
+<listitem><para><bold>Güvenlik Analizi</bold> - Güvenlik açıkları, tehdit modelleme, risk değerlendirme</para>
+</listitem><listitem><para><bold>Güvenlik Dokümantasyonu</bold> - Güvenlik mimarisi ve uygulanan önlemler</para>
+</listitem><listitem><para><bold>Mimari Dokümantasyon</bold> - Sistem mimarisi ve tasarım</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md14">
+<title>Proje Planı</title>
+<para>Proje planı ve iş paketleri için:<itemizedlist>
+<listitem><para><bold>Proje Planı</bold> - İş paketleri, takvim, risk yönetimi</para>
+</listitem><listitem><para><bold>Final Rapor</bold> - Kapsamlı final raporu ve değerlendirme</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md15">
+<title>Test Coverage</title>
+<sect2 id="index_1autotoc_md16">
+<title>Test Coverage Hedefleri</title>
+<para><itemizedlist>
+<listitem><para><bold>Hedef Coverage:</bold> %80+</para>
+</listitem><listitem><para><bold>Mevcut Coverage:</bold> %82 (Genel)</para>
+</listitem><listitem><para><bold>Branch Coverage:</bold> %78</para>
+</listitem><listitem><para><bold>Function Coverage:</bold> %87</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md17">
+<title>Coverage Raporu Oluşturma</title>
+<sect3 id="index_1autotoc_md18">
+<title>Windows</title>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">10-generate-coverage-windows.bat</highlight></codeline>
+</programlisting></para>
+<para><bold>Gereksinimler:</bold><itemizedlist>
+<listitem><para>OpenCppCoverage (kurulu olmalı)</para>
+</listitem><listitem><para><ref refid="namespace_report_generator" kindref="compound">ReportGenerator</ref> (opsiyonel, HTML raporu için)</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="index_1autotoc_md19">
+<title>Linux</title>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">chmod<sp/>+x<sp/>10-generate-coverage-linux.sh</highlight></codeline>
+<codeline><highlight class="normal">./10-generate-coverage-linux.sh</highlight></codeline>
+</programlisting></para>
+<para><bold>Gereksinimler:</bold><itemizedlist>
+<listitem><para>lcov (kurulu olmalı)</para>
+</listitem><listitem><para>genhtml (lcov ile birlikte gelir)</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+</sect2>
+<sect2 id="index_1autotoc_md20">
+<title>Coverage Raporları</title>
+<para>Coverage raporları aşağıdaki konumlarda bulunabilir:<itemizedlist>
+<listitem><para><bold>Windows:</bold> <computeroutput>docs/testcoverage/html/index.html</computeroutput></para>
+</listitem><listitem><para><bold>Linux:</bold> <computeroutput>docs/testcoverage/html/index.html</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+<para>Detaylı coverage analizi için: `docs/TEST_COVERAGE_ANALYSIS.md`</para>
+</sect2>
+<sect2 id="index_1autotoc_md21">
+<title>Test Sonuçları</title>
+<para>Test sonuçları build işlemi sonrası <computeroutput>testresults/</computeroutput> klasöründe bulunabilir.</para>
+</sect2>
+<sect2 id="index_1autotoc_md22">
+<title>Penetrasyon Testi</title>
+<para>Proje için kapsamlı bir penetrasyon testi planı hazırlanmış ve test sonuçları dokümante edilmiştir.</para>
+<para><bold>Test Sonuçları:</bold><itemizedlist>
+<listitem><para><bold>Toplam Test:</bold> 91</para>
+</listitem><listitem><para><bold>Başarılı Test:</bold> 89 (%97.8)</para>
+</listitem><listitem><para><bold>Genel Risk Seviyesi:</bold> DÜŞÜK</para>
+</listitem></itemizedlist>
+</para>
+<para>Detaylı penetrasyon testi planı ve sonuçları için: `docs/PENETRATION_TEST_PLAN.md`</para>
+</sect2>
+<sect2 id="index_1autotoc_md23">
+<title>Güvenlik Standartları Uyumluluğu</title>
+<para>Proje, uluslararası güvenlik standartlarına uygun şekilde geliştirilmiştir.</para>
+<para><bold>Uyumluluk Özeti:</bold><itemizedlist>
+<listitem><para><bold>ETSI:</bold> %100 uyumlu</para>
+</listitem><listitem><para><bold>EMV:</bold> %100 uyumlu</para>
+</listitem><listitem><para><bold>GSMA:</bold> %100 uyumlu</para>
+</listitem><listitem><para><bold>FIPS:</bold> %92 uyumlu</para>
+</listitem><listitem><para><bold>OWASP Top 10 (2021):</bold> %96 uyumlu</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Genel Uyumluluk:</bold> %95</para>
+<para>Detaylı güvenlik standartları uyumluluk raporu için: `docs/SECURITY_STANDARDS_COMPLIANCE.md`</para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md24">
+<title>Güvenlik Özellikleri Detayı</title>
+<sect2 id="index_1autotoc_md25">
+<title>Veri Güvenliği</title>
+<para><itemizedlist>
+<listitem><para><bold>Depolama:</bold> Whitebox AES ile şifrelenmiş dosyalar</para>
+</listitem><listitem><para><bold>Bellek:</bold> Güvenli bellek silme mekanizmaları</para>
+</listitem><listitem><para><bold>İletim:</bold> Oturum anahtarları ile şifrelenmiş veri aktarımı</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md26">
+<title>Kod Sertleştirme</title>
+<para><itemizedlist>
+<listitem><para>Opaque loops ile kontrol akışı gizleme</para>
+</listitem><listitem><para>String ve fonksiyon isimlerinin gizlenmesi</para>
+</listitem><listitem><para>Bellek koruma mekanizmaları</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md27">
+<title>RASP (Runtime Application Self-Protection)</title>
+<para><itemizedlist>
+<listitem><para>Checksum doğrulama</para>
+</listitem><listitem><para>Anti-debug mekanizmaları</para>
+</listitem><listitem><para>Tamper tespiti</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md28">
+<title>Katkıda Bulunma</title>
+<para>Bu bir akademik projedir ve özel bir projedir.</para>
+</sect1>
+<sect1 id="index_1autotoc_md29">
+<title>Lisans</title>
+<para>[Lisans bilgisi eklenecek]</para>
+</sect1>
+<sect1 id="index_1autotoc_md30">
+<title>İletişim</title>
+<para><bold>Öğrenci:</bold> Binnur Altınışık <linebreak/>
+ <bold>Ders:</bold> Güvenli Programlama <linebreak/>
+ <bold>Dönem:</bold> 2025-2026</para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md32">
+<title>Desteklenen Platformlar</title>
+<para><image type="html" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+ <image type="latex" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+ <image type="rtf" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+ <image type="docbook" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+ <image type="xml" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+ <image type="html" name="badge-macos.svg" inline="yes">macOS badge</image>
+ <image type="latex" name="badge-macos.svg" inline="yes">macOS badge</image>
+ <image type="rtf" name="badge-macos.svg" inline="yes">macOS badge</image>
+ <image type="docbook" name="badge-macos.svg" inline="yes">macOS badge</image>
+ <image type="xml" name="badge-macos.svg" inline="yes">macOS badge</image>
+ <image type="html" name="badge-windows.svg" inline="yes">Windows badge</image>
+ <image type="latex" name="badge-windows.svg" inline="yes">Windows badge</image>
+ <image type="rtf" name="badge-windows.svg" inline="yes">Windows badge</image>
+ <image type="docbook" name="badge-windows.svg" inline="yes">Windows badge</image>
+ <image type="xml" name="badge-windows.svg" inline="yes">Windows badge</image>
+</para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md34">
+<title>Sürüm Geçmişi</title>
+<para><table rows="2" cols="3"><row>
+<entry thead="yes"><para>Versiyon   </para>
+</entry><entry thead="yes"><para>Tarih   </para>
+</entry><entry thead="yes"><para>Değişiklikler    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>0.1.0   </para>
+</entry><entry thead="no"><para>[Tarih]   </para>
+</entry><entry thead="no"><para>İlk versiyon - Proje planlama ve dokümantasyon   </para>
+</entry></row>
+</table>
+</para>
+<para><hruler/>
+</para>
+<para><bold>Not:</bold> Bu proje Güvenli Programlama dersi kapsamında geliştirilmektedir ve sertifikasyon sürecinden geçecektir. </para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

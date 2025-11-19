@@ -1,0 +1,158 @@
+\doxysection{src/travelexpense/header/codehardening.h File Reference}
+\hypertarget{codehardening_8h}{}\label{codehardening_8h}\index{src/travelexpense/header/codehardening.h@{src/travelexpense/header/codehardening.h}}
+
+
+Seyahat Gideri Takibi -\/ Kod Sertleştirme Fonksiyonları  
+
+
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \"{}export.\+h\"{}}\newline
+Include dependency graph for codehardening.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{codehardening_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{codehardening_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense}{Travel\+Expense}}
+\begin{DoxyCompactList}\small\item\em Ana namespace -\/ Seyahat Gideri Takibi uygulaması \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_code_hardening}{Code\+Hardening}}
+\begin{DoxyCompactList}\small\item\em Kod sertleştirme teknikleri modülü \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening}{Travel\+Expense\+::\+Code\+Hardening}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{codehardening_8h_a987be372294289b6b50fb7f661e3b828}{OBFUSCATE\+\_\+\+FUNC\+\_\+\+NAME}}(name)~  \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_addad1bb570357bf02f353333473cb2eb}{Travel\+Expense\+::\+Code\+Hardening\+::obfuscate\+Function\+Pointer}}(reinterpret\+\_\+cast$<$void\texorpdfstring{$\ast$}{*}$>$(name))
+\begin{DoxyCompactList}\small\item\em Fonksiyon ismini gizlemek için makro. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{codehardening_8h_a61426ab0b61493d6c40c1880c633b123}{CALL\+\_\+\+OBFUSCATED\+\_\+\+FUNC}}(ret\+Type,  obf\+Ptr, ...)~  (reinterpret\+\_\+cast$<$ret\+Type(\texorpdfstring{$\ast$}{*})$>$(\mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_acfece1523d826b4d4452b58b6710d301}{Travel\+Expense\+::\+Code\+Hardening\+::deobfuscate\+Function\+Pointer}}(obf\+Ptr)))(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Obfuscated fonksiyonu çağırmak için makro. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{codehardening_8h_a830676c1f0b50e2a255ae4e2e334d909}{OPAQUE\+\_\+\+LOOP}}(var,  limit,  increment)
+\begin{DoxyCompactList}\small\item\em Opaque loop için yardımcı makro. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{codehardening_8h_a0d0bec467a2aaeb875470d7d2d86cf73}{OBFUSCATED\+\_\+\+STRING}}(obf,  obf\+Len,  key,  buf,  buf\+Size)~  \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_aaf489f94aa6a167ad49358d38d7dd4b9}{Travel\+Expense\+::\+Code\+Hardening\+::get\+Obfuscated\+String}}(obf, obf\+Len, key, buf, buf\+Size)
+\begin{DoxyCompactList}\small\item\em Opaque string için yardımcı makro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a828ac59ea8c553d8583d1b749290e2d0}{Travel\+Expense\+::\+Code\+Hardening\+::create\+Opaque\+Counter}} (uint32\+\_\+t base, uint32\+\_\+t offset)
+\begin{DoxyCompactList}\small\item\em Opaque loop counter oluştur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a672620a323d70b733e20e41740975228}{Travel\+Expense\+::\+Code\+Hardening\+::check\+Opaque\+Loop\+Condition}} (uint32\+\_\+t current, uint32\+\_\+t limit)
+\begin{DoxyCompactList}\small\item\em Opaque loop condition kontrolü \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_af5e0a7847c70ae9cd622ea48f577178e}{Travel\+Expense\+::\+Code\+Hardening\+::opaque\+Increment}} (uint32\+\_\+t value, uint32\+\_\+t increment)
+\begin{DoxyCompactList}\small\item\em Opaque loop increment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a9551c47b4bd98f91527ac23186dd8709}{Travel\+Expense\+::\+Code\+Hardening\+::opaque\+Decrement}} (uint32\+\_\+t value, uint32\+\_\+t decrement)
+\begin{DoxyCompactList}\small\item\em Opaque loop decrement. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint8\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_aa9916facd38ff180b62777399ef07237}{Travel\+Expense\+::\+Code\+Hardening\+::obfuscate\+String}} (const char \texorpdfstring{$\ast$}{*}input, size\+\_\+t input\+Len, uint8\+\_\+t key, size\+\_\+t \&output\+Len)
+\begin{DoxyCompactList}\small\item\em String\textquotesingle{}i obfuscate et (şifrele) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a9c5a5827aef07f92d0e050851e200e67}{Travel\+Expense\+::\+Code\+Hardening\+::deobfuscate\+String}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}obfuscated, size\+\_\+t obfuscated\+Len, uint8\+\_\+t key, size\+\_\+t \&output\+Len)
+\begin{DoxyCompactList}\small\item\em Obfuscated string\textquotesingle{}i deobfuscate et (şifre çöz) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_aaf489f94aa6a167ad49358d38d7dd4b9}{Travel\+Expense\+::\+Code\+Hardening\+::get\+Obfuscated\+String}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}obfuscated, size\+\_\+t obfuscated\+Len, uint8\+\_\+t key, char \texorpdfstring{$\ast$}{*}output, size\+\_\+t output\+Size)
+\begin{DoxyCompactList}\small\item\em String\textquotesingle{}i runtime\textquotesingle{}da deobfuscate et ve kullan. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} void \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_ad24cfcb00108f4eb544c0a32bc4776a3}{Travel\+Expense\+::\+Code\+Hardening\+::secure\+Clear\+Obfuscated\+String}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}obfuscated, size\+\_\+t obfuscated\+Len)
+\begin{DoxyCompactList}\small\item\em Obfuscated string için güvenli temizlik. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_addad1bb570357bf02f353333473cb2eb}{Travel\+Expense\+::\+Code\+Hardening\+::obfuscate\+Function\+Pointer}} (void \texorpdfstring{$\ast$}{*}func\+Ptr)
+\begin{DoxyCompactList}\small\item\em Fonksiyon pointer\textquotesingle{}ını obfuscate et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_acfece1523d826b4d4452b58b6710d301}{Travel\+Expense\+::\+Code\+Hardening\+::deobfuscate\+Function\+Pointer}} (void \texorpdfstring{$\ast$}{*}obfuscated)
+\begin{DoxyCompactList}\small\item\em Obfuscated fonksiyon pointer\textquotesingle{}ını deobfuscate et. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_aaa9a69c131469aef9cfcc1c35994481d}{Travel\+Expense\+::\+Code\+Hardening\+::create\+Opaque\+Boolean}} (bool value)
+\begin{DoxyCompactList}\small\item\em Boolean değerini opaque flag\textquotesingle{}e dönüştür. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_ae23f659a4a6eac9d1fbd948ac1037390}{Travel\+Expense\+::\+Code\+Hardening\+::get\+Opaque\+Boolean}} (uint32\+\_\+t opaque\+Flag)
+\begin{DoxyCompactList}\small\item\em Opaque flag\textquotesingle{}i boolean\textquotesingle{}a dönüştür. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a52652759091af100bc0ae95b5a135546}{Travel\+Expense\+::\+Code\+Hardening\+::compare\+Opaque\+Flags}} (uint32\+\_\+t flag1, uint32\+\_\+t flag2)
+\begin{DoxyCompactList}\small\item\em İki opaque flag\textquotesingle{}i karşılaştır. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a218fad6204a74fc60eb80eb5b74e8007}{Travel\+Expense\+::\+Code\+Hardening\+::combine\+Opaque\+Flags}} (const bool \texorpdfstring{$\ast$}{*}values, size\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Opaque flag kombinasyonu oluştur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} bool \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a77d09f0238262836f4856105cd98c62f}{Travel\+Expense\+::\+Code\+Hardening\+::get\+Opaque\+Flag\+At}} (uint32\+\_\+t combined\+Flag, size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Opaque flag kombinasyonundan boolean değeri al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a75bc7146f1565519f5f2cb01ae836e8a}{Travel\+Expense\+::\+Code\+Hardening\+::opaque\+XOR}} (uint32\+\_\+t a, uint32\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Opaque XOR işlemi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_aa135cd231714ad26ccd8a574d82195b7}{Travel\+Expense\+::\+Code\+Hardening\+::opaque\+AND}} (uint32\+\_\+t a, uint32\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Opaque AND işlemi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a54e6de63e3cd3464bbc4030b7930cb6f}{Travel\+Expense\+::\+Code\+Hardening\+::opaque\+OR}} (uint32\+\_\+t a, uint32\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Opaque OR işlemi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} uint32\+\_\+t \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a204fadf1cee37c67cdaf94cd972a57d6}{Travel\+Expense\+::\+Code\+Hardening\+::opaque\+NOT}} (uint32\+\_\+t a)
+\begin{DoxyCompactList}\small\item\em Opaque NOT işlemi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ Kod Sertleştirme Fonksiyonları 
+
+Bu dosya, kod sertleştirme tekniklerinin bildirimlerini içerir\+:
+\begin{DoxyItemize}
+\item Opaque loops (Kontrol akışı gizleme)
+\item String obfuscation (String gizleme)
+\item Fonksiyon gizleme
+\item Opaque boolean değişkenleri
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{codehardening_8h_a61426ab0b61493d6c40c1880c633b123}\label{codehardening_8h_a61426ab0b61493d6c40c1880c633b123} 
+\index{codehardening.h@{codehardening.h}!CALL\_OBFUSCATED\_FUNC@{CALL\_OBFUSCATED\_FUNC}}
+\index{CALL\_OBFUSCATED\_FUNC@{CALL\_OBFUSCATED\_FUNC}!codehardening.h@{codehardening.h}}
+\doxysubsubsection{\texorpdfstring{CALL\_OBFUSCATED\_FUNC}{CALL\_OBFUSCATED\_FUNC}}
+{\footnotesize\ttfamily \#define CALL\+\_\+\+OBFUSCATED\+\_\+\+FUNC(\begin{DoxyParamCaption}\item[{}]{ret\+Type,  }\item[{}]{obf\+Ptr,  }\item[{}]{... }\end{DoxyParamCaption})~  (reinterpret\+\_\+cast$<$ret\+Type(\texorpdfstring{$\ast$}{*})$>$(\mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_acfece1523d826b4d4452b58b6710d301}{Travel\+Expense\+::\+Code\+Hardening\+::deobfuscate\+Function\+Pointer}}(obf\+Ptr)))(\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+)}
+
+
+
+Obfuscated fonksiyonu çağırmak için makro. 
+
+Kullanım\+: \doxylink{codehardening_8h_a61426ab0b61493d6c40c1880c633b123}{CALL\+\_\+\+OBFUSCATED\+\_\+\+FUNC(return\+Type, obfuscated\+Ptr, args...)} \Hypertarget{codehardening_8h_a987be372294289b6b50fb7f661e3b828}\label{codehardening_8h_a987be372294289b6b50fb7f661e3b828} 
+\index{codehardening.h@{codehardening.h}!OBFUSCATE\_FUNC\_NAME@{OBFUSCATE\_FUNC\_NAME}}
+\index{OBFUSCATE\_FUNC\_NAME@{OBFUSCATE\_FUNC\_NAME}!codehardening.h@{codehardening.h}}
+\doxysubsubsection{\texorpdfstring{OBFUSCATE\_FUNC\_NAME}{OBFUSCATE\_FUNC\_NAME}}
+{\footnotesize\ttfamily \#define OBFUSCATE\+\_\+\+FUNC\+\_\+\+NAME(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~  \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_addad1bb570357bf02f353333473cb2eb}{Travel\+Expense\+::\+Code\+Hardening\+::obfuscate\+Function\+Pointer}}(reinterpret\+\_\+cast$<$void\texorpdfstring{$\ast$}{*}$>$(name))}
+
+
+
+Fonksiyon ismini gizlemek için makro. 
+
+Kullanım\+: \doxylink{codehardening_8h_a987be372294289b6b50fb7f661e3b828}{OBFUSCATE\+\_\+\+FUNC\+\_\+\+NAME(function\+Name)} -\/\texorpdfstring{$>$}{>} obfuscated\+\_\+function\+Name \Hypertarget{codehardening_8h_a0d0bec467a2aaeb875470d7d2d86cf73}\label{codehardening_8h_a0d0bec467a2aaeb875470d7d2d86cf73} 
+\index{codehardening.h@{codehardening.h}!OBFUSCATED\_STRING@{OBFUSCATED\_STRING}}
+\index{OBFUSCATED\_STRING@{OBFUSCATED\_STRING}!codehardening.h@{codehardening.h}}
+\doxysubsubsection{\texorpdfstring{OBFUSCATED\_STRING}{OBFUSCATED\_STRING}}
+{\footnotesize\ttfamily \#define OBFUSCATED\+\_\+\+STRING(\begin{DoxyParamCaption}\item[{}]{obf,  }\item[{}]{obf\+Len,  }\item[{}]{key,  }\item[{}]{buf,  }\item[{}]{buf\+Size }\end{DoxyParamCaption})~  \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_aaf489f94aa6a167ad49358d38d7dd4b9}{Travel\+Expense\+::\+Code\+Hardening\+::get\+Obfuscated\+String}}(obf, obf\+Len, key, buf, buf\+Size)}
+
+
+
+Opaque string için yardımcı makro. 
+
+Obfuscated string\textquotesingle{}i runtime\textquotesingle{}da decode edip kullanır
+
+Kullanım\+: char buffer\mbox{[}256\mbox{]}; \doxylink{codehardening_8h_a0d0bec467a2aaeb875470d7d2d86cf73}{OBFUSCATED\+\_\+\+STRING(obfuscated\+\_\+data, obfuscated\+\_\+len, key, buffer, sizeof(buffer))} \Hypertarget{codehardening_8h_a830676c1f0b50e2a255ae4e2e334d909}\label{codehardening_8h_a830676c1f0b50e2a255ae4e2e334d909} 
+\index{codehardening.h@{codehardening.h}!OPAQUE\_LOOP@{OPAQUE\_LOOP}}
+\index{OPAQUE\_LOOP@{OPAQUE\_LOOP}!codehardening.h@{codehardening.h}}
+\doxysubsubsection{\texorpdfstring{OPAQUE\_LOOP}{OPAQUE\_LOOP}}
+{\footnotesize\ttfamily \#define OPAQUE\+\_\+\+LOOP(\begin{DoxyParamCaption}\item[{}]{var,  }\item[{}]{limit,  }\item[{}]{increment }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{for}\ (uint32\_t\ var\ =\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_a828ac59ea8c553d8583d1b749290e2d0}{TravelExpense::CodeHardening::createOpaqueCounter}}(0,\ increment);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ TravelExpense::CodeHardening::checkOpaqueLoopCondition(var,\ limit);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ var\ =\ \mbox{\hyperlink{namespace_travel_expense_1_1_code_hardening_af5e0a7847c70ae9cd622ea48f577178e}{TravelExpense::CodeHardening::opaqueIncrement}}(var,\ increment))}
+
+\end{DoxyCode}
+
+
+Opaque loop için yardımcı makro. 
+
+Kullanım\+: \doxylink{codehardening_8h_a830676c1f0b50e2a255ae4e2e334d909}{OPAQUE\+\_\+\+LOOP(var, limit, increment)} \{ ... \} 

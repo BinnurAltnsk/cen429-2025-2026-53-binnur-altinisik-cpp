@@ -1,0 +1,92 @@
+\doxysection{softhsm.\+h}
+\hypertarget{softhsm_8h_source}{}\label{softhsm_8h_source}\index{src/travelexpense/header/softhsm.h@{src/travelexpense/header/softhsm.h}}
+\mbox{\hyperlink{softhsm_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ SOFTHSM\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ SOFTHSM\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{common_types_8h}{commonTypes.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{export_8h}{export.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_travel_expense}{TravelExpense}}\ \{\ \textcolor{comment}{//\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_soft_h_s_m}{SoftHSM}}\ \{\ \textcolor{comment}{//\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24a}{InitStatus}}\ \{}
+\DoxyCodeLine{00034\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aa02de9649e258d1dd94056e676061e969}{NOT\_INITIALIZED}}\ =\ 0,\ \ }
+\DoxyCodeLine{00035\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aadee5f03c2c4e73657824e028494b18c0}{INITIALIZED}}\ =\ 1,\ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24aabb1ca97ec761fc37101737ba0aa2e7c5}{ERROR}}\ =\ -\/1\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021a}{KeyType}}\ \{}
+\DoxyCodeLine{00045\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021aa78a61f5f64f7ea0d31a7cc487d2b14e8}{AES\_256}}\ =\ 0,\ \ \ }
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021aa5b3bf47dace955c9874047820a78d5b8}{RSA\_2048}}\ =\ 1,\ \ }
+\DoxyCodeLine{00047\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021aac5e459c10e5e8348c719df2702c3abe6}{EC\_P256}}\ =\ 2\ \ \ \ }
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42}{KeyUsage}}\ \{}
+\DoxyCodeLine{00056\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42a52db93ea6808e2184bfb7a4c8a3c0151}{ENCRYPT\_DECRYPT}}\ =\ 0,\ \ }
+\DoxyCodeLine{00057\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42a6540894fc3bdc9f2597e6d1d4ea0e190}{SIGN\_VERIFY}}\ =\ 1,\ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42a7464a3e54ec3ca720fa0d199d59426a4}{WRAP\_UNWRAP}}\ =\ 2,\ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42abc63603c862fa6bdbb49fae1611c572c}{DERIVE}}\ =\ 3\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00070\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_af71b3824984e7e34e84fc5c0a606b418}{initialize}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *libraryPath\ =\ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *tokenLabel\ =\ \textcolor{keyword}{nullptr},}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *pin\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aa08cccf8f5db8d63231a3b706351b212}{shutdown}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aad0a58fc42af71a6793bf6449a75b24a}{InitStatus}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a0fa272e6522244baa0af55f77332e6f5}{getStatus}}();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00096\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a0d330cfb5deff1a7731392c78c8a4757}{createToken}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *label,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *pin,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *soPin);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00105\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a1dd53afa782d6054163658a225a3e3bf}{openToken}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *label,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *pin);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00112\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a355d45677c9adebfb9afa591275bb8d4}{closeToken}}();}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00123\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a100a3043a4e2c9d8cd6922248a46f335}{generateKey}}(\mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021a}{KeyType}}\ keyType,\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ada96f17213af3032466f091866ca6e42}{KeyUsage}}\ keyUsage,}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *keyLabel,\ uint8\_t\ *keyId,\ \textcolor{keywordtype}{size\_t}\ \&keyIdLen);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00136\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a04b9cc48d95cd483ab84818c43ed967d}{importKey}}(\mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a8859119f0e92029bcc9c29081d79021a}{KeyType}}\ keyType,}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *keyData,\ \textcolor{keywordtype}{size\_t}\ keyDataLen,}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *keyLabel,\ uint8\_t\ *keyId,\ \textcolor{keywordtype}{size\_t}\ \&keyIdLen);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00148\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_af8527db38f2e8d22d54baf72e43315cf}{findKey}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *keyLabel,\ uint8\_t\ *keyId,\ \textcolor{keywordtype}{size\_t}\ \&keyIdLen);}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00157\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aa4b7ad5db79291a92b339855944a4208}{deleteKey}}(\textcolor{keyword}{const}\ uint8\_t\ *keyId,\ \textcolor{keywordtype}{size\_t}\ keyIdLen);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00171\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_aa76da1d2f45b48a32039219d89930d6b}{encrypt}}(\textcolor{keyword}{const}\ uint8\_t\ *keyId,\ \textcolor{keywordtype}{size\_t}\ keyIdLen,}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *plaintext,\ \textcolor{keywordtype}{size\_t}\ plaintextLen,}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *ciphertext,\ \textcolor{keywordtype}{size\_t}\ \&ciphertextLen,}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ *iv\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00188\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_af50d97c17003e1b54df285fbf5fa76b9}{decrypt}}(\textcolor{keyword}{const}\ uint8\_t\ *keyId,\ \textcolor{keywordtype}{size\_t}\ keyIdLen,}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *ciphertext,\ \textcolor{keywordtype}{size\_t}\ ciphertextLen,}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *plaintext,\ \textcolor{keywordtype}{size\_t}\ \&plaintextLen,}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ *iv\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00204\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ac14ac62bb1ee91f10908af2ba8f7a832}{sign}}(\textcolor{keyword}{const}\ uint8\_t\ *keyId,\ \textcolor{keywordtype}{size\_t}\ keyIdLen,}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{size\_t}\ dataLen,}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *signature,\ \textcolor{keywordtype}{size\_t}\ \&signatureLen);}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00219\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a6e1b43ac34b60670eafe4cb1c347335a}{verify}}(\textcolor{keyword}{const}\ uint8\_t\ *keyId,\ \textcolor{keywordtype}{size\_t}\ keyIdLen,}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *data,\ \textcolor{keywordtype}{size\_t}\ dataLen,}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *signature,\ \textcolor{keywordtype}{size\_t}\ signatureLen);}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00230\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ac132d386ec4642b70cbfc87db1dd84f3}{generateRandom}}(uint8\_t\ *output,\ \textcolor{keywordtype}{size\_t}\ length);}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00239\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a627d80f41250c6562b1cd91521787245}{listTokens}}(\textcolor{keywordtype}{char}\ labels[][64],\ \textcolor{keywordtype}{size\_t}\ \&count);}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00248\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_ae037de28b34ae8a110a65f222e52ac06}{listKeys}}(\textcolor{keywordtype}{char}\ labels[][64],\ \textcolor{keywordtype}{size\_t}\ \&count);}
+\DoxyCodeLine{00249\ \}\ \textcolor{comment}{//\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \}\ \textcolor{comment}{//\ namespace\ TravelExpense\ //\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SOFTHSM\_H}}
+\DoxyCodeLine{00254\ }
+
+\end{DoxyCode}

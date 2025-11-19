@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_travel_expense_1_1_asset_manager" kind="namespace" language="C++">
+    <compoundname>TravelExpense::AssetManager</compoundname>
+    <innerclass refid="struct_travel_expense_1_1_asset_manager_1_1_asset" prot="public">TravelExpense::AssetManager::Asset</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>AssetType</name>
+        <qualifiedname>TravelExpense::AssetManager::AssetType</qualifiedname>
+        <enumvalue id="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a92b88f40b6fded293e62bb292b687afe" prot="public">
+          <name>USER_DATA</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Kullanıcı verileri. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036acc5f630cdb1d9a7493b64899f1103cb4" prot="public">
+          <name>TRIP_DATA</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>Seyahat verileri. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a4e73617e2a63787c8a4b4d705a1f1644" prot="public">
+          <name>EXPENSE_DATA</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>Gider verileri. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a7d3525c0a7a81d48ef14b7b668188554" prot="public">
+          <name>BUDGET_DATA</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>Bütçe verileri. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036ab5cbe81d2939ba7ec0e72e8cff758dab" prot="public">
+          <name>SESSION_DATA</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>Oturum verileri. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a7f50cb1a4957ebc516d71e864068a308" prot="public">
+          <name>ENCRYPTION_KEY</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>Şifreleme anahtarları </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036aec7e491fc5a65ca0d1dcf313a8a51134" prot="public">
+          <name>CONFIG_DATA</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para>Yapılandırma verileri. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Varlık tipleri. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="49" column="1" bodyfile="src/travelexpense/header/assetManager.h" bodystart="49" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_travel_expense_1_1_asset_manager_1aced1c857447d9058ac4c5779fb771d0b" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ProtectionScheme</name>
+        <qualifiedname>TravelExpense::AssetManager::ProtectionScheme</qualifiedname>
+        <enumvalue id="namespace_travel_expense_1_1_asset_manager_1aced1c857447d9058ac4c5779fb771d0ba4ddb4b92d87973bd0fc314979deba833" prot="public">
+          <name>CONFIDENTIALITY</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+<para>Gizlilik. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1_1_asset_manager_1aced1c857447d9058ac4c5779fb771d0ba9922a31d0eb8cadab61858b5ca94e9df" prot="public">
+          <name>INTEGRITY</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+<para>Bütünlük. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_travel_expense_1_1_asset_manager_1aced1c857447d9058ac4c5779fb771d0bac1f244be04c43841756fff0cdb74f994" prot="public">
+          <name>AUTHENTICATION</name>
+          <initializer>= 0x04</initializer>
+          <briefdescription>
+<para>Kimlik Doğrulama. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Varlık koruma şemaları </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/assetManager.h" line="63" column="1" bodyfile="src/travelexpense/header/assetManager.h" bodystart="63" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1a33ae1a53f9af6e03e81b1acb903c6958" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::AssetManager::registerAsset</definition>
+        <argsstring>(const Asset &amp;asset, int32_t &amp;assetId)</argsstring>
+        <name>registerAsset</name>
+        <qualifiedname>TravelExpense::AssetManager::registerAsset</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset" kindref="compound">Asset</ref> &amp;</type>
+          <declname>asset</declname>
+        </param>
+        <param>
+          <type>int32_t &amp;</type>
+          <declname>assetId</declname>
+        </param>
+        <briefdescription>
+<para>Varlık kaydet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>asset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Varlık bilgileri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>assetId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Oluşturulan varlık ID&apos;si (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/assetManager.cpp" line="27" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="27" bodyend="80" declfile="src/travelexpense/header/assetManager.h" declline="113" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1a000f5700909ef864a26945183de16404" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::AssetManager::getAsset</definition>
+        <argsstring>(int32_t assetId, Asset &amp;asset)</argsstring>
+        <name>getAsset</name>
+        <qualifiedname>TravelExpense::AssetManager::getAsset</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>assetId</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset" kindref="compound">Asset</ref> &amp;</type>
+          <declname>asset</declname>
+        </param>
+        <briefdescription>
+<para>Varlık bilgilerini al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>assetId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Varlık ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>asset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Varlık bilgileri (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/assetManager.cpp" line="82" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="82" bodyend="138" declfile="src/travelexpense/header/assetManager.h" declline="122" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1a35d1fbd75c391130eab2e700b9f8a75f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::AssetManager::updateAsset</definition>
+        <argsstring>(int32_t assetId, const Asset &amp;asset)</argsstring>
+        <name>updateAsset</name>
+        <qualifiedname>TravelExpense::AssetManager::updateAsset</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>assetId</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset" kindref="compound">Asset</ref> &amp;</type>
+          <declname>asset</declname>
+        </param>
+        <briefdescription>
+<para>Varlık bilgilerini güncelle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>assetId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Varlık ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>asset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Güncellenmiş varlık bilgileri </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/assetManager.cpp" line="140" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="140" bodyend="187" declfile="src/travelexpense/header/assetManager.h" declline="131" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1abb26bb2442086fa911159baf2c80668f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::AssetManager::deleteAsset</definition>
+        <argsstring>(int32_t assetId)</argsstring>
+        <name>deleteAsset</name>
+        <qualifiedname>TravelExpense::AssetManager::deleteAsset</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>assetId</declname>
+        </param>
+        <briefdescription>
+<para>Varlık sil (soft delete) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>assetId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Varlık ID </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/assetManager.cpp" line="189" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="189" bodyend="225" declfile="src/travelexpense/header/assetManager.h" declline="139" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1a8905f38d9bd74d60801d67a798d1c9de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::AssetManager::listAssets</definition>
+        <argsstring>(std::vector&lt; Asset &gt; &amp;assets)</argsstring>
+        <name>listAssets</name>
+        <qualifiedname>TravelExpense::AssetManager::listAssets</qualifiedname>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset" kindref="compound">Asset</ref> &gt; &amp;</type>
+          <declname>assets</declname>
+        </param>
+        <briefdescription>
+<para>Tüm varlıkları listele. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>assets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Varlık listesi (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/assetManager.cpp" line="227" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="227" bodyend="277" declfile="src/travelexpense/header/assetManager.h" declline="147" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1ae88b60bbe936e860fbb648a8fc024951" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::AssetManager::listAssetsByType</definition>
+        <argsstring>(AssetType assetType, std::vector&lt; Asset &gt; &amp;assets)</argsstring>
+        <name>listAssetsByType</name>
+        <qualifiedname>TravelExpense::AssetManager::listAssetsByType</qualifiedname>
+        <param>
+          <type><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036" kindref="member">AssetType</ref></type>
+          <declname>assetType</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset" kindref="compound">Asset</ref> &gt; &amp;</type>
+          <declname>assets</declname>
+        </param>
+        <briefdescription>
+<para>Tipe göre varlıkları listele. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>assetType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Varlık tipi </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>assets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Varlık listesi (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/assetManager.cpp" line="279" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="279" bodyend="331" declfile="src/travelexpense/header/assetManager.h" declline="156" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1ad6039789a53809ffd63c8acc4dfeb17e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::AssetManager::setProtectionScheme</definition>
+        <argsstring>(int32_t assetId, uint8_t protectionScheme)</argsstring>
+        <name>setProtectionScheme</name>
+        <qualifiedname>TravelExpense::AssetManager::setProtectionScheme</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>assetId</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>protectionScheme</declname>
+        </param>
+        <briefdescription>
+<para>Varlık koruma şemasını ayarla. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>assetId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Varlık ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>protectionScheme</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Koruma şeması (bit flags) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/assetManager.cpp" line="337" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="337" bodyend="372" declfile="src/travelexpense/header/assetManager.h" declline="167" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1aa4e8c39db1d427c8fee2e3d6deb3c05f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::AssetManager::getProtectionScheme</definition>
+        <argsstring>(int32_t assetId, uint8_t &amp;protectionScheme)</argsstring>
+        <name>getProtectionScheme</name>
+        <qualifiedname>TravelExpense::AssetManager::getProtectionScheme</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>assetId</declname>
+        </param>
+        <param>
+          <type>uint8_t &amp;</type>
+          <declname>protectionScheme</declname>
+        </param>
+        <briefdescription>
+<para>Varlık koruma şemasını al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>assetId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Varlık ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>protectionScheme</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Koruma şeması (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/assetManager.cpp" line="374" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="374" bodyend="410" declfile="src/travelexpense/header/assetManager.h" declline="176" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1ab6141a7865bafc003e40f228550b388c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::AssetManager::verifyProtectionScheme</definition>
+        <argsstring>(int32_t assetId, uint8_t requiredScheme)</argsstring>
+        <name>verifyProtectionScheme</name>
+        <qualifiedname>TravelExpense::AssetManager::verifyProtectionScheme</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>assetId</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>requiredScheme</declname>
+        </param>
+        <briefdescription>
+<para>Varlık koruma şeması doğrula. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>assetId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Varlık ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>requiredScheme</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gerekli koruma şeması </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Koruma şeması uygun, false Uygun değil </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/assetManager.cpp" line="412" column="6" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="412" bodyend="421" declfile="src/travelexpense/header/assetManager.h" declline="185" declcolumn="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/travelexpense/header/assetManager.h" line="43" column="1"/>
+  </compounddef>
+</doxygen>

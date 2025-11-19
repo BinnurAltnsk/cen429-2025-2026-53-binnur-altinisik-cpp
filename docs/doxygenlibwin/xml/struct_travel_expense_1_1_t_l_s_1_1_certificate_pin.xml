@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin" kind="struct" language="C++" prot="public">
+    <compoundname>TravelExpense::TLS::CertificatePin</compoundname>
+    <includes refid="tls_8h" local="no">tls.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_1aa6ab5f33c9d6eb212f691ff5a2918266" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::TLS::CertificatePin::hostname[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>hostname</name>
+        <qualifiedname>TravelExpense::TLS::CertificatePin::hostname</qualifiedname>
+        <briefdescription>
+<para>Hostname (max 255 karakter) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/tls.h" line="129" column="8" bodyfile="src/travelexpense/header/tls.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_1ae6beb42cddbf78ba417898fee109fcb5" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::TLS::CertificatePin::fingerprint[65]</definition>
+        <argsstring>[65]</argsstring>
+        <name>fingerprint</name>
+        <qualifiedname>TravelExpense::TLS::CertificatePin::fingerprint</qualifiedname>
+        <briefdescription>
+<para>SHA-256 fingerprint (64 karakter hex string + null terminator) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/tls.h" line="131" column="8" bodyfile="src/travelexpense/header/tls.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_1aec0c308348644af9c92beaa672f06d23" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::TLS::CertificatePin::publicKeyHash[65]</definition>
+        <argsstring>[65]</argsstring>
+        <name>publicKeyHash</name>
+        <qualifiedname>TravelExpense::TLS::CertificatePin::publicKeyHash</qualifiedname>
+        <briefdescription>
+<para>Public key hash (64 karakter hex string + null terminator) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/tls.h" line="133" column="8" bodyfile="src/travelexpense/header/tls.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_1a143d1a034bc36ccc2e8ac270e466cc21" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TravelExpense::TLS::CertificatePin::pinCertificate</definition>
+        <argsstring></argsstring>
+        <name>pinCertificate</name>
+        <qualifiedname>TravelExpense::TLS::CertificatePin::pinCertificate</qualifiedname>
+        <briefdescription>
+<para>Sertifika pin&apos;i etkin mi? (true = pin aktif, false = pin pasif) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/tls.h" line="135" column="8" bodyfile="src/travelexpense/header/tls.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_1ac4b30c9d1432b91805a5129f65497c15" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TravelExpense::TLS::CertificatePin::pinPublicKey</definition>
+        <argsstring></argsstring>
+        <name>pinPublicKey</name>
+        <qualifiedname>TravelExpense::TLS::CertificatePin::pinPublicKey</qualifiedname>
+        <briefdescription>
+<para>Public key pin&apos;i etkin mi? (true = pin aktif, false = pin pasif) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/tls.h" line="137" column="8" bodyfile="src/travelexpense/header/tls.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Sertifika pin bilgisi. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu yapı, pin&apos;lenecek sertifika bilgilerini saklar. Certificate pinning, sunucu sertifikasının beklenen değerlerle eşleşmesini zorunlu kılar.</para>
+<para><simplesect kind="note"><para>Hem fingerprint hem de public key hash pin&apos;lenebilir. En güvenli yaklaşım, her ikisini de pin&apos;lemektir. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>TravelExpense::TLS::CertificatePin</label>
+        <link refid="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/travelexpense/header/tls.h" line="127" column="1" bodyfile="src/travelexpense/header/tls.h" bodystart="127" bodyend="138"/>
+    <listofallmembers>
+      <member refid="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_1ae6beb42cddbf78ba417898fee109fcb5" prot="public" virt="non-virtual"><scope>TravelExpense::TLS::CertificatePin</scope><name>fingerprint</name></member>
+      <member refid="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_1aa6ab5f33c9d6eb212f691ff5a2918266" prot="public" virt="non-virtual"><scope>TravelExpense::TLS::CertificatePin</scope><name>hostname</name></member>
+      <member refid="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_1a143d1a034bc36ccc2e8ac270e466cc21" prot="public" virt="non-virtual"><scope>TravelExpense::TLS::CertificatePin</scope><name>pinCertificate</name></member>
+      <member refid="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_1ac4b30c9d1432b91805a5129f65497c15" prot="public" virt="non-virtual"><scope>TravelExpense::TLS::CertificatePin</scope><name>pinPublicKey</name></member>
+      <member refid="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_1aec0c308348644af9c92beaa672f06d23" prot="public" virt="non-virtual"><scope>TravelExpense::TLS::CertificatePin</scope><name>publicKeyHash</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

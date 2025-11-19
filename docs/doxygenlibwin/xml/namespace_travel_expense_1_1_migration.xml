@@ -1,0 +1,482 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_travel_expense_1_1_migration" kind="namespace" language="C++">
+    <compoundname>TravelExpense::Migration</compoundname>
+    <innerclass refid="struct_travel_expense_1_1_migration_1_1_migration_result" prot="public">TravelExpense::Migration::MigrationResult</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1a955c1f9b5d20a45b3d2aeb281a547ce1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Migration::checkBinaryFileExists</definition>
+        <argsstring>(const char *entityName)</argsstring>
+        <name>checkBinaryFileExists</name>
+        <qualifiedname>TravelExpense::Migration::checkBinaryFileExists</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>entityName</declname>
+        </param>
+        <briefdescription>
+<para>Binary dosya formatını kontrol et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entityName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entity adı (users, trips, expenses, budgets) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Binary dosya mevcut, false Mevcut değil </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/migration.cpp" line="35" column="6" bodyfile="src/travelexpense/src/migration.cpp" bodystart="35" bodyend="42" declfile="src/travelexpense/header/migration.h" declline="50" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1a93c2b602b2307e02959d597329d82777" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Migration::readUsersFromBinary</definition>
+        <argsstring>(const char *filePath, std::vector&lt; User &gt; &amp;users)</argsstring>
+        <name>readUsersFromBinary</name>
+        <qualifiedname>TravelExpense::Migration::readUsersFromBinary</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_travel_expense_1_1_user" kindref="compound">User</ref> &gt; &amp;</type>
+          <declname>users</declname>
+        </param>
+        <briefdescription>
+<para>Binary dosyadan <ref refid="struct_travel_expense_1_1_user" kindref="compound">User</ref> verilerini oku. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Binary dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>users</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Okunan <ref refid="struct_travel_expense_1_1_user" kindref="compound">User</ref> verileri </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/migration.cpp" line="44" column="6" bodyfile="src/travelexpense/src/migration.cpp" bodystart="44" bodyend="84" declfile="src/travelexpense/header/migration.h" declline="59" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1aaa5d0a04ab4b2489a7b9f6996125a480" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Migration::readTripsFromBinary</definition>
+        <argsstring>(const char *filePath, std::vector&lt; Trip &gt; &amp;trips)</argsstring>
+        <name>readTripsFromBinary</name>
+        <qualifiedname>TravelExpense::Migration::readTripsFromBinary</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_travel_expense_1_1_trip" kindref="compound">Trip</ref> &gt; &amp;</type>
+          <declname>trips</declname>
+        </param>
+        <briefdescription>
+<para>Binary dosyadan <ref refid="struct_travel_expense_1_1_trip" kindref="compound">Trip</ref> verilerini oku. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Binary dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trips</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Okunan <ref refid="struct_travel_expense_1_1_trip" kindref="compound">Trip</ref> verileri </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/migration.cpp" line="86" column="6" bodyfile="src/travelexpense/src/migration.cpp" bodystart="86" bodyend="125" declfile="src/travelexpense/header/migration.h" declline="68" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1a4bda6ee9a2a9014bdd07abf585368609" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Migration::readExpensesFromBinary</definition>
+        <argsstring>(const char *filePath, std::vector&lt; Expense &gt; &amp;expenses)</argsstring>
+        <name>readExpensesFromBinary</name>
+        <qualifiedname>TravelExpense::Migration::readExpensesFromBinary</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_travel_expense_1_1_expense" kindref="compound">Expense</ref> &gt; &amp;</type>
+          <declname>expenses</declname>
+        </param>
+        <briefdescription>
+<para>Binary dosyadan <ref refid="struct_travel_expense_1_1_expense" kindref="compound">Expense</ref> verilerini oku. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Binary dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>expenses</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Okunan <ref refid="struct_travel_expense_1_1_expense" kindref="compound">Expense</ref> verileri </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/migration.cpp" line="127" column="6" bodyfile="src/travelexpense/src/migration.cpp" bodystart="127" bodyend="166" declfile="src/travelexpense/header/migration.h" declline="77" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1a7192c5df2a455e3fd9833c78f1328640" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Migration::readBudgetsFromBinary</definition>
+        <argsstring>(const char *filePath, std::vector&lt; Budget &gt; &amp;budgets)</argsstring>
+        <name>readBudgetsFromBinary</name>
+        <qualifiedname>TravelExpense::Migration::readBudgetsFromBinary</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_travel_expense_1_1_budget" kindref="compound">Budget</ref> &gt; &amp;</type>
+          <declname>budgets</declname>
+        </param>
+        <briefdescription>
+<para>Binary dosyadan <ref refid="struct_travel_expense_1_1_budget" kindref="compound">Budget</ref> verilerini oku. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Binary dosya yolu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>budgets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Okunan <ref refid="struct_travel_expense_1_1_budget" kindref="compound">Budget</ref> verileri </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true Başarılı, false Hata </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/migration.cpp" line="168" column="6" bodyfile="src/travelexpense/src/migration.cpp" bodystart="168" bodyend="207" declfile="src/travelexpense/header/migration.h" declline="86" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1ad9ea52c32ab75768e4f494a5f381a37f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::Migration::migrateUsersToDatabase</definition>
+        <argsstring>(const std::vector&lt; User &gt; &amp;users, int32_t &amp;migratedCount)</argsstring>
+        <name>migrateUsersToDatabase</name>
+        <qualifiedname>TravelExpense::Migration::migrateUsersToDatabase</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="struct_travel_expense_1_1_user" kindref="compound">User</ref> &gt; &amp;</type>
+          <declname>users</declname>
+        </param>
+        <param>
+          <type>int32_t &amp;</type>
+          <declname>migratedCount</declname>
+        </param>
+        <briefdescription>
+<para>Users verilerini SQLite veritabanına migrate et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>users</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Migrate edilecek <ref refid="struct_travel_expense_1_1_user" kindref="compound">User</ref> verileri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>migratedCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Migrate edilen kayıt sayısı </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode İşlem sonucu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/migration.cpp" line="209" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="209" bodyend="273" declfile="src/travelexpense/header/migration.h" declline="95" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1a336f33556eca236abeee8c07a092174a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::Migration::migrateTripsToDatabase</definition>
+        <argsstring>(const std::vector&lt; Trip &gt; &amp;trips, int32_t &amp;migratedCount)</argsstring>
+        <name>migrateTripsToDatabase</name>
+        <qualifiedname>TravelExpense::Migration::migrateTripsToDatabase</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="struct_travel_expense_1_1_trip" kindref="compound">Trip</ref> &gt; &amp;</type>
+          <declname>trips</declname>
+        </param>
+        <param>
+          <type>int32_t &amp;</type>
+          <declname>migratedCount</declname>
+        </param>
+        <briefdescription>
+<para>Trips verilerini SQLite veritabanına migrate et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trips</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Migrate edilecek <ref refid="struct_travel_expense_1_1_trip" kindref="compound">Trip</ref> verileri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>migratedCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Migrate edilen kayıt sayısı </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode İşlem sonucu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/migration.cpp" line="275" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="275" bodyend="342" declfile="src/travelexpense/header/migration.h" declline="104" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1a183d7e8c8198b4545072decb2d3a147c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::Migration::migrateExpensesToDatabase</definition>
+        <argsstring>(const std::vector&lt; Expense &gt; &amp;expenses, int32_t &amp;migratedCount)</argsstring>
+        <name>migrateExpensesToDatabase</name>
+        <qualifiedname>TravelExpense::Migration::migrateExpensesToDatabase</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="struct_travel_expense_1_1_expense" kindref="compound">Expense</ref> &gt; &amp;</type>
+          <declname>expenses</declname>
+        </param>
+        <param>
+          <type>int32_t &amp;</type>
+          <declname>migratedCount</declname>
+        </param>
+        <briefdescription>
+<para>Expenses verilerini SQLite veritabanına migrate et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expenses</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Migrate edilecek <ref refid="struct_travel_expense_1_1_expense" kindref="compound">Expense</ref> verileri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>migratedCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Migrate edilen kayıt sayısı </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode İşlem sonucu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/migration.cpp" line="344" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="344" bodyend="408" declfile="src/travelexpense/header/migration.h" declline="113" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1a0585996bd000e2e35d0e36022d08bd6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::Migration::migrateBudgetsToDatabase</definition>
+        <argsstring>(const std::vector&lt; Budget &gt; &amp;budgets, int32_t &amp;migratedCount)</argsstring>
+        <name>migrateBudgetsToDatabase</name>
+        <qualifiedname>TravelExpense::Migration::migrateBudgetsToDatabase</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="struct_travel_expense_1_1_budget" kindref="compound">Budget</ref> &gt; &amp;</type>
+          <declname>budgets</declname>
+        </param>
+        <param>
+          <type>int32_t &amp;</type>
+          <declname>migratedCount</declname>
+        </param>
+        <briefdescription>
+<para>Budgets verilerini SQLite veritabanına migrate et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>budgets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Migrate edilecek <ref refid="struct_travel_expense_1_1_budget" kindref="compound">Budget</ref> verileri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>migratedCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Migrate edilen kayıt sayısı </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode İşlem sonucu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/migration.cpp" line="410" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="410" bodyend="483" declfile="src/travelexpense/header/migration.h" declline="122" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1abac0abce63e7e7b06bad2913e311f552" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::Migration::migrateIdFiles</definition>
+        <argsstring>()</argsstring>
+        <name>migrateIdFiles</name>
+        <qualifiedname>TravelExpense::Migration::migrateIdFiles</qualifiedname>
+        <briefdescription>
+<para>ID dosyalarını migrate et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>ID dosyalarından (user.id, trip.id, vb.) maksimum ID değerlerini alır ve veritabanındaki AUTOINCREMENT&apos;i ayarlar.</para>
+<para><simplesect kind="return"><para>ErrorCode İşlem sonucu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/migration.cpp" line="485" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="485" bodyend="508" declfile="src/travelexpense/header/migration.h" declline="132" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1ac56a5704bf31629e1b35b2dcd161a98b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+        <definition>ErrorCode TravelExpense::Migration::migrateAllFromBinary</definition>
+        <argsstring>(const char *dataDir, MigrationResult &amp;result)</argsstring>
+        <name>migrateAllFromBinary</name>
+        <qualifiedname>TravelExpense::Migration::migrateAllFromBinary</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>dataDir</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_migration_1_1_migration_result" kindref="compound">MigrationResult</ref> &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para>Tüm binary dosyaları SQLite veritabanına migrate et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataDir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Binary dosyaların bulunduğu dizin (varsayılan: &quot;data&quot;) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_migration" kindref="compound">Migration</ref> sonuçları </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode İşlem sonucu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/migration.cpp" line="536" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="536" bodyend="661" declfile="src/travelexpense/header/migration.h" declline="141" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1aa03aad8d3d6ebd000572fc61b10ba1ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
+        <definition>bool TravelExpense::Migration::isMigrationNeeded</definition>
+        <argsstring>(const char *dataDir)</argsstring>
+        <name>isMigrationNeeded</name>
+        <qualifiedname>TravelExpense::Migration::isMigrationNeeded</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>dataDir</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_migration" kindref="compound">Migration</ref> durumunu kontrol et. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataDir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Binary dosyaların bulunduğu dizin </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true <ref refid="namespace_travel_expense_1_1_migration" kindref="compound">Migration</ref> gerekli (binary dosyalar var), false Gerekli değil </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/migration.cpp" line="510" column="6" bodyfile="src/travelexpense/src/migration.cpp" bodystart="510" bodyend="534" declfile="src/travelexpense/header/migration.h" declline="149" declcolumn="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/travelexpense/header/migration.h" line="30" column="1"/>
+  </compounddef>
+</doxygen>

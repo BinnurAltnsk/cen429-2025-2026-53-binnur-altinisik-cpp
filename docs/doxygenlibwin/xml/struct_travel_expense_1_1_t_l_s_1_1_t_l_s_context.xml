@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context" kind="struct" language="C++" prot="public">
+    <compoundname>TravelExpense::TLS::TLSContext</compoundname>
+    <includes refid="tls_8h" local="no">tls.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_1a03cbedda9059a1a399a9590581d70cf5" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* TravelExpense::TLS::TLSContext::sslContext</definition>
+        <argsstring></argsstring>
+        <name>sslContext</name>
+        <qualifiedname>TravelExpense::TLS::TLSContext::sslContext</qualifiedname>
+        <briefdescription>
+<para>OpenSSL SSL_CTX* veya benzeri bağlam işaretçisi. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/tls.h" line="45" column="8" bodyfile="src/travelexpense/header/tls.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_1a7d916e9bcf4e7221fe1835efd01c9893" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* TravelExpense::TLS::TLSContext::sslConnection</definition>
+        <argsstring></argsstring>
+        <name>sslConnection</name>
+        <qualifiedname>TravelExpense::TLS::TLSContext::sslConnection</qualifiedname>
+        <briefdescription>
+<para>OpenSSL SSL* veya benzeri bağlantı işaretçisi. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/tls.h" line="47" column="8" bodyfile="src/travelexpense/header/tls.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_1a195268e4ab901bb69a2a2c6ec69bf4bc" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TravelExpense::TLS::TLSContext::isInitialized</definition>
+        <argsstring></argsstring>
+        <name>isInitialized</name>
+        <qualifiedname>TravelExpense::TLS::TLSContext::isInitialized</qualifiedname>
+        <briefdescription>
+<para>Bağlam başlatıldı mı? (true = başlatıldı, false = başlatılmadı) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/tls.h" line="49" column="8" bodyfile="src/travelexpense/header/tls.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_1ad9e5bf2bd00930fa875d2092ace10065" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TravelExpense::TLS::TLSContext::isConnected</definition>
+        <argsstring></argsstring>
+        <name>isConnected</name>
+        <qualifiedname>TravelExpense::TLS::TLSContext::isConnected</qualifiedname>
+        <briefdescription>
+<para>Bağlantı kuruldu mu? (true = bağlı, false = bağlı değil) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/tls.h" line="51" column="8" bodyfile="src/travelexpense/header/tls.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_1a92d6e50864d85ef5ac229282ca3e567c" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::TLS::TLSContext::serverHostname[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>serverHostname</name>
+        <qualifiedname>TravelExpense::TLS::TLSContext::serverHostname</qualifiedname>
+        <briefdescription>
+<para>Sunucu hostname (max 255 karakter) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/tls.h" line="53" column="8" bodyfile="src/travelexpense/header/tls.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_1adb3077ae341f641b97e5e9e18170a203" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t TravelExpense::TLS::TLSContext::serverPort</definition>
+        <argsstring></argsstring>
+        <name>serverPort</name>
+        <qualifiedname>TravelExpense::TLS::TLSContext::serverPort</qualifiedname>
+        <briefdescription>
+<para>Sunucu port numarası (1-65535) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/tls.h" line="55" column="12" bodyfile="src/travelexpense/header/tls.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı (context) yapısı </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu yapı, <ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlantı bilgilerini saklar. Gerçek implementasyonda OpenSSL SSL_CTX veya benzeri kullanılabilir.</para>
+<para><simplesect kind="note"><para>Bu yapı, <ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlantısının yaşam döngüsü boyunca geçerli kalır. Bağlantı kapatıldığında <ref refid="namespace_travel_expense_1_1_t_l_s_1a6033407b89e93d95ee934725ec8d0473" kindref="member">cleanupTLSContext()</ref> ile temizlenmelidir. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>TravelExpense::TLS::TLSContext</label>
+        <link refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/travelexpense/header/tls.h" line="43" column="1" bodyfile="src/travelexpense/header/tls.h" bodystart="43" bodyend="56"/>
+    <listofallmembers>
+      <member refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_1ad9e5bf2bd00930fa875d2092ace10065" prot="public" virt="non-virtual"><scope>TravelExpense::TLS::TLSContext</scope><name>isConnected</name></member>
+      <member refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_1a195268e4ab901bb69a2a2c6ec69bf4bc" prot="public" virt="non-virtual"><scope>TravelExpense::TLS::TLSContext</scope><name>isInitialized</name></member>
+      <member refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_1a92d6e50864d85ef5ac229282ca3e567c" prot="public" virt="non-virtual"><scope>TravelExpense::TLS::TLSContext</scope><name>serverHostname</name></member>
+      <member refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_1adb3077ae341f641b97e5e9e18170a203" prot="public" virt="non-virtual"><scope>TravelExpense::TLS::TLSContext</scope><name>serverPort</name></member>
+      <member refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_1a7d916e9bcf4e7221fe1835efd01c9893" prot="public" virt="non-virtual"><scope>TravelExpense::TLS::TLSContext</scope><name>sslConnection</name></member>
+      <member refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_1a03cbedda9059a1a399a9590581d70cf5" prot="public" virt="non-virtual"><scope>TravelExpense::TLS::TLSContext</scope><name>sslContext</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

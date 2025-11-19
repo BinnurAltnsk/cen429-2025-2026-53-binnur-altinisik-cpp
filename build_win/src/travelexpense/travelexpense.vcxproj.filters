@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\assetManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\budgetManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\codehardening.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\database.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\encryption.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\expenseManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\fileIO.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\fingerprinting.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\helpers.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\migration.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\rasp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\reportGenerator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\security.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\sessionManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\softhsm.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\tls.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\travelexpense.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\tripManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\src\userAuth.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\third_party\sqlite3\sqlite3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\assetManager.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\budgetManager.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\codehardening.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\commonTypes.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\database.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\encryption.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\error_codes.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\expenseManager.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\export.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\fileIO.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\fingerprinting.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\helpers.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\migration.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\rasp.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\reportGenerator.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\safe_string.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\security.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\sessionManager.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\softhsm.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\tls.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\travelexpense.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\tripManager.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\header\userAuth.h">
+      <Filter>header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\x_user\Desktop\cen429-2025-2026-53-binnur-altinisik-cpp\src\travelexpense\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{1DE1A7CA-030A-32B1-B3D5-579141727C54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="header">
+      <UniqueIdentifier>{519CAAE5-F724-3D2D-BC2D-44C23A8E253D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{54E3E583-A46C-373B-95A0-13BD97D125BA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

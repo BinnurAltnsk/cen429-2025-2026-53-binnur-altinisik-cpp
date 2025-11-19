@@ -1,0 +1,58 @@
+\doxysection{migration.\+h}
+\hypertarget{migration_8h_source}{}\label{migration_8h_source}\index{src/travelexpense/header/migration.h@{src/travelexpense/header/migration.h}}
+\mbox{\hyperlink{migration_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ MIGRATION\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MIGRATION\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{common_types_8h}{commonTypes.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{export_8h}{export.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_travel_expense}{TravelExpense}}\ \{\ \textcolor{comment}{//\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_migration}{Migration}}\ \{}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_travel_expense_1_1_migration_1_1_migration_result}{MigrationResult}}\ \{}
+\DoxyCodeLine{00036\ \ \ int32\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_migration_1_1_migration_result_a7aa7569434d4029a50c8e1215f308b8b}{usersMigrated}};\ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ int32\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_migration_1_1_migration_result_a75804a51631f8eeadd03ddd45cdbaa4d}{tripsMigrated}};\ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ int32\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_migration_1_1_migration_result_adf1505dbb8e408de75f15723bd507f34}{expensesMigrated}};\ \ \ }
+\DoxyCodeLine{00039\ \ \ int32\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_migration_1_1_migration_result_a82e3f9aa5a5a47e3ccb5c06556a47c3f}{budgetsMigrated}};\ \ \ \ }
+\DoxyCodeLine{00040\ \ \ int32\_t\ \mbox{\hyperlink{struct_travel_expense_1_1_migration_1_1_migration_result_a70f10c951670748182ba4ee21e6f0a2a}{errors}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_travel_expense_1_1_migration_1_1_migration_result_aeca0af1a63544272e9f84e4e549de395}{success}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00050\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_migration_a955c1f9b5d20a45b3d2aeb281a547ce1}{checkBinaryFileExists}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *entityName);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00059\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_migration_a93c2b602b2307e02959d597329d82777}{readUsersFromBinary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filePath,\ std::vector<User>\ \&users);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00068\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_migration_aaa5d0a04ab4b2489a7b9f6996125a480}{readTripsFromBinary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filePath,\ std::vector<Trip>\ \&trips);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00077\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_migration_a4bda6ee9a2a9014bdd07abf585368609}{readExpensesFromBinary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filePath,\ std::vector<Expense>\ \&expenses);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00086\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_migration_a7192c5df2a455e3fd9833c78f1328640}{readBudgetsFromBinary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filePath,\ std::vector<Budget>\ \&budgets);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00095\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_migration_ad9ea52c32ab75768e4f494a5f381a37f}{migrateUsersToDatabase}}(\textcolor{keyword}{const}\ std::vector<User>\ \&users,\ int32\_t\ \&migratedCount);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00104\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_migration_a336f33556eca236abeee8c07a092174a}{migrateTripsToDatabase}}(\textcolor{keyword}{const}\ std::vector<Trip>\ \&trips,\ int32\_t\ \&migratedCount);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00113\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_migration_a183d7e8c8198b4545072decb2d3a147c}{migrateExpensesToDatabase}}(\textcolor{keyword}{const}\ std::vector<Expense>\ \&expenses,\ int32\_t\ \&migratedCount);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00122\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_migration_a0585996bd000e2e35d0e36022d08bd6c}{migrateBudgetsToDatabase}}(\textcolor{keyword}{const}\ std::vector<Budget>\ \&budgets,\ int32\_t\ \&migratedCount);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00132\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_migration_abac0abce63e7e7b06bad2913e311f552}{migrateIdFiles}}();}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00141\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{ErrorCode}}\ \mbox{\hyperlink{namespace_travel_expense_1_1_migration_ac56a5704bf31629e1b35b2dcd161a98b}{migrateAllFromBinary}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *dataDir,\ \mbox{\hyperlink{struct_travel_expense_1_1_migration_1_1_migration_result}{MigrationResult}}\ \&result);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00149\ \mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\_API}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_travel_expense_1_1_migration_aa03aad8d3d6ebd000572fc61b10ba1ed}{isMigrationNeeded}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *dataDir);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \}\ \textcolor{comment}{//\ namespace\ Migration}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \}\ \textcolor{comment}{//\ namespace\ TravelExpense\ //\ LCOV\_EXCL\_LINE}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MIGRATION\_H}}
+\DoxyCodeLine{00156\ }
+
+\end{DoxyCode}

@@ -1,0 +1,70 @@
+\doxysection{src/travelexpense/src/fingerprinting.cpp File Reference}
+\hypertarget{fingerprinting_8cpp}{}\label{fingerprinting_8cpp}\index{src/travelexpense/src/fingerprinting.cpp@{src/travelexpense/src/fingerprinting.cpp}}
+
+
+Seyahat Gideri Takibi -\/ Cihaz ve Uygulama \doxylink{namespace_fingerprinting}{Fingerprinting} Implementation.  
+
+
+{\ttfamily \#include \"{}../header/fingerprinting.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/encryption.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/rasp.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/session\+Manager.\+h\"{}}\newline
+{\ttfamily \#include \"{}../header/safe\+\_\+string.\+h\"{}}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/ioctl.\+h$>$}\newline
+{\ttfamily \#include $<$net/if.\+h$>$}\newline
+{\ttfamily \#include $<$ifaddrs.\+h$>$}\newline
+{\ttfamily \#include $<$sys/utsname.\+h$>$}\newline
+Include dependency graph for fingerprinting.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fingerprinting_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_travel_expense}{Travel\+Expense}}
+\begin{DoxyCompactList}\small\item\em Ana namespace -\/ Seyahat Gideri Takibi uygulaması \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting}{Travel\+Expense\+::\+Fingerprinting}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_a28a42fb823573e94bfc33e9d17aaec15}{Travel\+Expense\+::\+Fingerprinting\+::generate\+Device\+Fingerprint}} (char \texorpdfstring{$\ast$}{*}fingerprint)
+\begin{DoxyCompactList}\small\item\em Cihaz fingerprint\textquotesingle{}ini oluştur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_a191e063655ff8a03f4fb50febd6f59c8}{Travel\+Expense\+::\+Fingerprinting\+::verify\+Device\+Fingerprint}} (const char \texorpdfstring{$\ast$}{*}expected\+Fingerprint)
+\begin{DoxyCompactList}\small\item\em Cihaz fingerprint\textquotesingle{}ini doğrula. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_ad3a5d90d7f0cc6eb6f61bc2212ebcafb}{Travel\+Expense\+::\+Fingerprinting\+::generate\+Application\+Fingerprint}} (char \texorpdfstring{$\ast$}{*}fingerprint)
+\begin{DoxyCompactList}\small\item\em Uygulama fingerprint\textquotesingle{}ini oluştur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_ad1d7ddf7b4c19319abf133d25423a1b2}{Travel\+Expense\+::\+Fingerprinting\+::verify\+Application\+Fingerprint}} (const char \texorpdfstring{$\ast$}{*}expected\+Fingerprint)
+\begin{DoxyCompactList}\small\item\em Uygulama fingerprint\textquotesingle{}ini doğrula. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_a74e595b94de77e3ff726e9ee8c431842}{Travel\+Expense\+::\+Fingerprinting\+::generate\+Combined\+Fingerprint}} (char \texorpdfstring{$\ast$}{*}fingerprint)
+\begin{DoxyCompactList}\small\item\em Birleşik fingerprint oluştur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_a5bdef5dde8993c3b60f622d1f7ce4879}{Travel\+Expense\+::\+Fingerprinting\+::generate\+Dynamic\+Key}} (const char \texorpdfstring{$\ast$}{*}fingerprint, uint8\+\_\+t \texorpdfstring{$\ast$}{*}key, size\+\_\+t key\+Len)
+\begin{DoxyCompactList}\small\item\em Dinamik anahtar oluştur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_a0b557777926cc48a61ef92293ef512fa}{Travel\+Expense\+::\+Fingerprinting\+::generate\+Device\+Based\+Key}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}key, size\+\_\+t key\+Len)
+\begin{DoxyCompactList}\small\item\em Cihaz bazlı anahtar oluştur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_acb1654b3c7d1bfee4884fccb3c96e092}{Travel\+Expense\+::\+Fingerprinting\+::generate\+Application\+Based\+Key}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}key, size\+\_\+t key\+Len)
+\begin{DoxyCompactList}\small\item\em Uygulama bazlı anahtar oluştur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_fingerprinting_a60ea4c07ed4974e73e33c8ae00257aa0}{Travel\+Expense\+::\+Fingerprinting\+::generate\+Combined\+Key}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}key, size\+\_\+t key\+Len)
+\begin{DoxyCompactList}\small\item\em Birleşik anahtar oluştur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Seyahat Gideri Takibi -\/ Cihaz ve Uygulama \doxylink{namespace_fingerprinting}{Fingerprinting} Implementation. 
+
+Bu dosya, Dinamik Varlıkların Korunması gereksinimlerinin implementasyonlarını içerir.
+
+\begin{DoxyAuthor}{Author}
+Binnur Altınışık 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}

@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_travel_expense_1_1_user" kind="struct" language="C++" prot="public">
+    <compoundname>TravelExpense::User</compoundname>
+    <includes refid="common_types_8h" local="no">commonTypes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_travel_expense_1_1_user_1a4cec5fe99724491f8257d41396940c70" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t TravelExpense::User::userId</definition>
+        <argsstring></argsstring>
+        <name>userId</name>
+        <qualifiedname>TravelExpense::User::userId</qualifiedname>
+        <briefdescription>
+<para>Kullanıcı kimliği. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="31" column="11" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_user_1a7f54291ba35d532e5938771f83e061de" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::User::username[50]</definition>
+        <argsstring>[50]</argsstring>
+        <name>username</name>
+        <qualifiedname>TravelExpense::User::username</qualifiedname>
+        <briefdescription>
+<para>Kullanıcı adı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="32" column="8" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_user_1af81ef00d0811c65e427d2ff19780ba05" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::User::passwordHash[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>passwordHash</name>
+        <qualifiedname>TravelExpense::User::passwordHash</qualifiedname>
+        <briefdescription>
+<para>SHA-256 hash (32 bytes hex = 64 chars) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="33" column="8" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_user_1a06181fd6756249e6e4d537c6378691dd" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TravelExpense::User::salt[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>salt</name>
+        <qualifiedname>TravelExpense::User::salt</qualifiedname>
+        <briefdescription>
+<para>Salt değeri (16 bytes hex = 32 chars) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="34" column="8" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_user_1a320d17e6980555c332bb5269e5cb5938" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TravelExpense::User::isGuest</definition>
+        <argsstring></argsstring>
+        <name>isGuest</name>
+        <qualifiedname>TravelExpense::User::isGuest</qualifiedname>
+        <briefdescription>
+<para>Misafir kullanıcı mı? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="35" column="8" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_user_1a3304e0e4fdd2d60ad4d9a2a530c08d51" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t TravelExpense::User::createdAt</definition>
+        <argsstring></argsstring>
+        <name>createdAt</name>
+        <qualifiedname>TravelExpense::User::createdAt</qualifiedname>
+        <briefdescription>
+<para>Oluşturulma zamanı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="36" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_travel_expense_1_1_user_1afdd67cdd7df39e0ea95f92742eb6c6fd" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t TravelExpense::User::lastLogin</definition>
+        <argsstring></argsstring>
+        <name>lastLogin</name>
+        <qualifiedname>TravelExpense::User::lastLogin</qualifiedname>
+        <briefdescription>
+<para>Son giriş zamanı </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="37" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_travel_expense_1_1_user_1a3602bdcbdd2ea037db5c536f1de39a47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TravelExpense::User::User</definition>
+        <argsstring>()</argsstring>
+        <name>User</name>
+        <qualifiedname>TravelExpense::User::User</qualifiedname>
+        <briefdescription>
+<para><ref refid="struct_travel_expense_1_1_user" kindref="compound">User</ref> constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Varsayılan değerlerle yeni bir <ref refid="struct_travel_expense_1_1_user" kindref="compound">User</ref> oluşturur. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/header/commonTypes.h" line="44" column="3" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="44" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Kullanıcı veri modeli. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>TravelExpense::User</label>
+        <link refid="struct_travel_expense_1_1_user"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/travelexpense/header/commonTypes.h" line="30" column="1" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="30" bodyend="49"/>
+    <listofallmembers>
+      <member refid="struct_travel_expense_1_1_user_1a3304e0e4fdd2d60ad4d9a2a530c08d51" prot="public" virt="non-virtual"><scope>TravelExpense::User</scope><name>createdAt</name></member>
+      <member refid="struct_travel_expense_1_1_user_1a320d17e6980555c332bb5269e5cb5938" prot="public" virt="non-virtual"><scope>TravelExpense::User</scope><name>isGuest</name></member>
+      <member refid="struct_travel_expense_1_1_user_1afdd67cdd7df39e0ea95f92742eb6c6fd" prot="public" virt="non-virtual"><scope>TravelExpense::User</scope><name>lastLogin</name></member>
+      <member refid="struct_travel_expense_1_1_user_1af81ef00d0811c65e427d2ff19780ba05" prot="public" virt="non-virtual"><scope>TravelExpense::User</scope><name>passwordHash</name></member>
+      <member refid="struct_travel_expense_1_1_user_1a06181fd6756249e6e4d537c6378691dd" prot="public" virt="non-virtual"><scope>TravelExpense::User</scope><name>salt</name></member>
+      <member refid="struct_travel_expense_1_1_user_1a3602bdcbdd2ea037db5c536f1de39a47" prot="public" virt="non-virtual"><scope>TravelExpense::User</scope><name>User</name></member>
+      <member refid="struct_travel_expense_1_1_user_1a4cec5fe99724491f8257d41396940c70" prot="public" virt="non-virtual"><scope>TravelExpense::User</scope><name>userId</name></member>
+      <member refid="struct_travel_expense_1_1_user_1a7f54291ba35d532e5938771f83e061de" prot="public" virt="non-virtual"><scope>TravelExpense::User</scope><name>username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

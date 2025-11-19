@@ -1,0 +1,361 @@
+\doxysection{Travel\+Expense\+::TLS Namespace Reference}
+\hypertarget{namespace_travel_expense_1_1_t_l_s}{}\label{namespace_travel_expense_1_1_t_l_s}\index{TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin}{Certificate\+Pin}}
+\begin{DoxyCompactList}\small\item\em Sertifika pin bilgisi. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamı (context) yapısı \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a1f4b0ad3a0bf0c1ee5ab94b4cc50e026}{initialize\+TLSContext}} (\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamını başlat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a6033407b89e93d95ee934725ec8d0473}{cleanup\+TLSContext}} (\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamını temizle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a6cf999cc3f7623c8381b586c9c338a8b}{connect\+TLS}} (\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}ctx, const char \texorpdfstring{$\ast$}{*}hostname, uint16\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlantısı kur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a98d4f54141bfa0bda8cb66567d232e21}{disconnect\+TLS}} (\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlantısını kapat. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_aea3adfe31d55f246cc04f0d5355608a8}{send\+TLS}} (\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}ctx, const void \texorpdfstring{$\ast$}{*}data, size\+\_\+t data\+Len, size\+\_\+t \&bytes\+Sent)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} üzerinden veri gönder. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a3df401b12f4a6007d35adb739e4e52b4}{receive\+TLS}} (\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}ctx, void \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t buffer\+Len, size\+\_\+t \&bytes\+Received)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} üzerinden veri al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a2bbc4fef6bf456551a761d3891672098}{register\+Certificate\+Pin}} (const \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin}{Certificate\+Pin}} \texorpdfstring{$\ast$}{*}pin)
+\begin{DoxyCompactList}\small\item\em Certificate pin kaydet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a0164fd8bb76e186edd32156957f30c67}{verify\+Certificate\+Pin}} (\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}ctx, const char \texorpdfstring{$\ast$}{*}hostname)
+\begin{DoxyCompactList}\small\item\em Certificate pin doğrula. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_aee9c0722df199d9ce6a08ae0099f7658}{get\+Certificate\+Fingerprint}} (\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}ctx, char \texorpdfstring{$\ast$}{*}fingerprint)
+\begin{DoxyCompactList}\small\item\em Sunucu sertifikasının fingerprint\textquotesingle{}ini al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a0bc182873d8e7010c15d2356d92bbabd}{get\+Certificate\+Public\+Key\+Hash}} (\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}ctx, char \texorpdfstring{$\ast$}{*}public\+Key\+Hash)
+\begin{DoxyCompactList}\small\item\em Sunucu sertifikasının public key hash\textquotesingle{}ini al. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_af3eee0c7c6f7d4d47aa903007191e8ba}{load\+Client\+Certificate}} (\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}ctx, const char \texorpdfstring{$\ast$}{*}cert\+Path, const char \texorpdfstring{$\ast$}{*}key\+Path, const char \texorpdfstring{$\ast$}{*}key\+Password)
+\begin{DoxyCompactList}\small\item\em İstemci sertifikası yükle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_ab6f8f820ccd83d1e6062de39cc1d7386}{set\+CAPath}} (\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}ctx, const char \texorpdfstring{$\ast$}{*}ca\+Path)
+\begin{DoxyCompactList}\small\item\em CA sertifika yolu ayarla. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a7ec0910cdb0e632435dae6af7f06b345}{verify\+Server\+Certificate}} (\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em Sunucu sertifikası doğrula. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_ac17ef09e926723c9e4c55d10b7cf186c}{calculate\+Certificate\+Fingerprint}} (const char \texorpdfstring{$\ast$}{*}cert\+Path, char \texorpdfstring{$\ast$}{*}fingerprint)
+\begin{DoxyCompactList}\small\item\em Sertifika fingerprint hesapla. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{export_8h_a21d78c0dc6e2907cbb76e2b0468cceb6}{TRAVELEXPENSE\+\_\+\+API}} \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} \mbox{\hyperlink{namespace_travel_expense_1_1_t_l_s_a6016f41b99ba6f5ffa92ae72bad03b15}{get\+TLSError\+Message}} (\mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}} error\+Code, char \texorpdfstring{$\ast$}{*}message, size\+\_\+t message\+Len)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} hata mesajı al. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_travel_expense_1_1_t_l_s_ac17ef09e926723c9e4c55d10b7cf186c}\label{namespace_travel_expense_1_1_t_l_s_ac17ef09e926723c9e4c55d10b7cf186c} 
+\index{TravelExpense::TLS@{TravelExpense::TLS}!calculateCertificateFingerprint@{calculateCertificateFingerprint}}
+\index{calculateCertificateFingerprint@{calculateCertificateFingerprint}!TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection{\texorpdfstring{calculateCertificateFingerprint()}{calculateCertificateFingerprint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} Travel\+Expense\+::\+TLS\+::calculate\+Certificate\+Fingerprint (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{cert\+Path,  }\item[{char \texorpdfstring{$\ast$}{*}}]{fingerprint }\end{DoxyParamCaption})}
+
+
+
+Sertifika fingerprint hesapla. 
+
+Sertifika dosyasından SHA-\/256 fingerprint hesaplar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cert\+Path} & Sertifika dosyası yolu (PEM veya DER format) \\
+\hline
+{\em fingerprint} & Fingerprint çıktısı (64 karakter hex) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_t_l_s_a6033407b89e93d95ee934725ec8d0473}\label{namespace_travel_expense_1_1_t_l_s_a6033407b89e93d95ee934725ec8d0473} 
+\index{TravelExpense::TLS@{TravelExpense::TLS}!cleanupTLSContext@{cleanupTLSContext}}
+\index{cleanupTLSContext@{cleanupTLSContext}!TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection{\texorpdfstring{cleanupTLSContext()}{cleanupTLSContext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} Travel\+Expense\+::\+TLS\+::cleanup\+TLSContext (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamını temizle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamı \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_t_l_s_a6cf999cc3f7623c8381b586c9c338a8b}\label{namespace_travel_expense_1_1_t_l_s_a6cf999cc3f7623c8381b586c9c338a8b} 
+\index{TravelExpense::TLS@{TravelExpense::TLS}!connectTLS@{connectTLS}}
+\index{connectTLS@{connectTLS}!TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection{\texorpdfstring{connectTLS()}{connectTLS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} Travel\+Expense\+::\+TLS\+::connect\+TLS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{hostname,  }\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlantısı kur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamı \\
+\hline
+{\em hostname} & Sunucu hostname \\
+\hline
+{\em port} & Sunucu port \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_t_l_s_a98d4f54141bfa0bda8cb66567d232e21}\label{namespace_travel_expense_1_1_t_l_s_a98d4f54141bfa0bda8cb66567d232e21} 
+\index{TravelExpense::TLS@{TravelExpense::TLS}!disconnectTLS@{disconnectTLS}}
+\index{disconnectTLS@{disconnectTLS}!TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection{\texorpdfstring{disconnectTLS()}{disconnectTLS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} Travel\+Expense\+::\+TLS\+::disconnect\+TLS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlantısını kapat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamı \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_t_l_s_aee9c0722df199d9ce6a08ae0099f7658}\label{namespace_travel_expense_1_1_t_l_s_aee9c0722df199d9ce6a08ae0099f7658} 
+\index{TravelExpense::TLS@{TravelExpense::TLS}!getCertificateFingerprint@{getCertificateFingerprint}}
+\index{getCertificateFingerprint@{getCertificateFingerprint}!TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection{\texorpdfstring{getCertificateFingerprint()}{getCertificateFingerprint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} Travel\+Expense\+::\+TLS\+::get\+Certificate\+Fingerprint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{char \texorpdfstring{$\ast$}{*}}]{fingerprint }\end{DoxyParamCaption})}
+
+
+
+Sunucu sertifikasının fingerprint\textquotesingle{}ini al. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamı \\
+\hline
+{\em fingerprint} & Sertifika fingerprint çıktısı (64 karakter hex) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_t_l_s_a0bc182873d8e7010c15d2356d92bbabd}\label{namespace_travel_expense_1_1_t_l_s_a0bc182873d8e7010c15d2356d92bbabd} 
+\index{TravelExpense::TLS@{TravelExpense::TLS}!getCertificatePublicKeyHash@{getCertificatePublicKeyHash}}
+\index{getCertificatePublicKeyHash@{getCertificatePublicKeyHash}!TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection{\texorpdfstring{getCertificatePublicKeyHash()}{getCertificatePublicKeyHash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} Travel\+Expense\+::\+TLS\+::get\+Certificate\+Public\+Key\+Hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{char \texorpdfstring{$\ast$}{*}}]{public\+Key\+Hash }\end{DoxyParamCaption})}
+
+
+
+Sunucu sertifikasının public key hash\textquotesingle{}ini al. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamı \\
+\hline
+{\em public\+Key\+Hash} & Public key hash çıktısı (64 karakter hex) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_t_l_s_a6016f41b99ba6f5ffa92ae72bad03b15}\label{namespace_travel_expense_1_1_t_l_s_a6016f41b99ba6f5ffa92ae72bad03b15} 
+\index{TravelExpense::TLS@{TravelExpense::TLS}!getTLSErrorMessage@{getTLSErrorMessage}}
+\index{getTLSErrorMessage@{getTLSErrorMessage}!TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection{\texorpdfstring{getTLSErrorMessage()}{getTLSErrorMessage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} Travel\+Expense\+::\+TLS\+::get\+TLSError\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Error\+Code}}}]{error\+Code,  }\item[{char \texorpdfstring{$\ast$}{*}}]{message,  }\item[{size\+\_\+t}]{message\+Len }\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} hata mesajı al. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+Code} & Hata kodu \\
+\hline
+{\em message} & Hata mesajı buffer\textquotesingle{}ı \\
+\hline
+{\em message\+Len} & Buffer uzunluğu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_t_l_s_a1f4b0ad3a0bf0c1ee5ab94b4cc50e026}\label{namespace_travel_expense_1_1_t_l_s_a1f4b0ad3a0bf0c1ee5ab94b4cc50e026} 
+\index{TravelExpense::TLS@{TravelExpense::TLS}!initializeTLSContext@{initializeTLSContext}}
+\index{initializeTLSContext@{initializeTLSContext}!TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection{\texorpdfstring{initializeTLSContext()}{initializeTLSContext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} Travel\+Expense\+::\+TLS\+::initialize\+TLSContext (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamını başlat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamı (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_t_l_s_af3eee0c7c6f7d4d47aa903007191e8ba}\label{namespace_travel_expense_1_1_t_l_s_af3eee0c7c6f7d4d47aa903007191e8ba} 
+\index{TravelExpense::TLS@{TravelExpense::TLS}!loadClientCertificate@{loadClientCertificate}}
+\index{loadClientCertificate@{loadClientCertificate}!TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection{\texorpdfstring{loadClientCertificate()}{loadClientCertificate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} Travel\+Expense\+::\+TLS\+::load\+Client\+Certificate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{cert\+Path,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{key\+Path,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{key\+Password }\end{DoxyParamCaption})}
+
+
+
+İstemci sertifikası yükle. 
+
+Mutual authentication için istemci sertifikası ve private key\textquotesingle{}i yükler.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamı \\
+\hline
+{\em cert\+Path} & İstemci sertifika dosyası yolu (PEM format) \\
+\hline
+{\em key\+Path} & İstemci private key dosyası yolu (PEM format) \\
+\hline
+{\em key\+Password} & Private key şifresi (nullptr ise şifre yok) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_t_l_s_a3df401b12f4a6007d35adb739e4e52b4}\label{namespace_travel_expense_1_1_t_l_s_a3df401b12f4a6007d35adb739e4e52b4} 
+\index{TravelExpense::TLS@{TravelExpense::TLS}!receiveTLS@{receiveTLS}}
+\index{receiveTLS@{receiveTLS}!TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection{\texorpdfstring{receiveTLS()}{receiveTLS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} Travel\+Expense\+::\+TLS\+::receive\+TLS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{void \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{size\+\_\+t}]{buffer\+Len,  }\item[{size\+\_\+t \&}]{bytes\+Received }\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} üzerinden veri al. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamı \\
+\hline
+{\em buffer} & Alınacak veri buffer\textquotesingle{}ı \\
+\hline
+{\em buffer\+Len} & Buffer uzunluğu \\
+\hline
+{\em bytes\+Received} & Alınan byte sayısı (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_t_l_s_a2bbc4fef6bf456551a761d3891672098}\label{namespace_travel_expense_1_1_t_l_s_a2bbc4fef6bf456551a761d3891672098} 
+\index{TravelExpense::TLS@{TravelExpense::TLS}!registerCertificatePin@{registerCertificatePin}}
+\index{registerCertificatePin@{registerCertificatePin}!TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection{\texorpdfstring{registerCertificatePin()}{registerCertificatePin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} Travel\+Expense\+::\+TLS\+::register\+Certificate\+Pin (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_certificate_pin}{Certificate\+Pin}} \texorpdfstring{$\ast$}{*}}]{pin }\end{DoxyParamCaption})}
+
+
+
+Certificate pin kaydet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & Certificate pin bilgisi \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_t_l_s_aea3adfe31d55f246cc04f0d5355608a8}\label{namespace_travel_expense_1_1_t_l_s_aea3adfe31d55f246cc04f0d5355608a8} 
+\index{TravelExpense::TLS@{TravelExpense::TLS}!sendTLS@{sendTLS}}
+\index{sendTLS@{sendTLS}!TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection{\texorpdfstring{sendTLS()}{sendTLS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} Travel\+Expense\+::\+TLS\+::send\+TLS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{const void \texorpdfstring{$\ast$}{*}}]{data,  }\item[{size\+\_\+t}]{data\+Len,  }\item[{size\+\_\+t \&}]{bytes\+Sent }\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} üzerinden veri gönder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamı \\
+\hline
+{\em data} & Gönderilecek veri \\
+\hline
+{\em data\+Len} & Veri uzunluğu \\
+\hline
+{\em bytes\+Sent} & Gönderilen byte sayısı (çıktı) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_t_l_s_ab6f8f820ccd83d1e6062de39cc1d7386}\label{namespace_travel_expense_1_1_t_l_s_ab6f8f820ccd83d1e6062de39cc1d7386} 
+\index{TravelExpense::TLS@{TravelExpense::TLS}!setCAPath@{setCAPath}}
+\index{setCAPath@{setCAPath}!TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection{\texorpdfstring{setCAPath()}{setCAPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} Travel\+Expense\+::\+TLS\+::set\+CAPath (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{ca\+Path }\end{DoxyParamCaption})}
+
+
+
+CA sertifika yolu ayarla. 
+
+Sunucu sertifikasını doğrulamak için CA sertifika dizinini ayarlar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamı \\
+\hline
+{\em ca\+Path} & CA sertifika dosyası yolu veya dizin yolu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_t_l_s_a0164fd8bb76e186edd32156957f30c67}\label{namespace_travel_expense_1_1_t_l_s_a0164fd8bb76e186edd32156957f30c67} 
+\index{TravelExpense::TLS@{TravelExpense::TLS}!verifyCertificatePin@{verifyCertificatePin}}
+\index{verifyCertificatePin@{verifyCertificatePin}!TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection{\texorpdfstring{verifyCertificatePin()}{verifyCertificatePin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} Travel\+Expense\+::\+TLS\+::verify\+Certificate\+Pin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}}]{ctx,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{hostname }\end{DoxyParamCaption})}
+
+
+
+Certificate pin doğrula. 
+
+Mevcut sertifika ile kayıtlı pin\textquotesingle{}i karşılaştırır.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamı \\
+\hline
+{\em hostname} & Sunucu hostname \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) 
+\end{DoxyReturn}
+\Hypertarget{namespace_travel_expense_1_1_t_l_s_a7ec0910cdb0e632435dae6af7f06b345}\label{namespace_travel_expense_1_1_t_l_s_a7ec0910cdb0e632435dae6af7f06b345} 
+\index{TravelExpense::TLS@{TravelExpense::TLS}!verifyServerCertificate@{verifyServerCertificate}}
+\index{verifyServerCertificate@{verifyServerCertificate}!TravelExpense::TLS@{TravelExpense::TLS}}
+\doxysubsubsection{\texorpdfstring{verifyServerCertificate()}{verifyServerCertificate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}} Travel\+Expense\+::\+TLS\+::verify\+Server\+Certificate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context}{TLSContext}} \texorpdfstring{$\ast$}{*}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Sunucu sertifikası doğrula. 
+
+Sunucu sertifikasının geçerliliğini kontrol eder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & \doxylink{namespace_travel_expense_1_1_t_l_s}{TLS} bağlamı \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error\+Code Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) 
+\end{DoxyReturn}

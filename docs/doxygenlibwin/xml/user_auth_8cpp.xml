@@ -1,0 +1,648 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="user_auth_8cpp" kind="file" language="C++">
+    <compoundname>userAuth.cpp</compoundname>
+    <includes refid="user_auth_8h" local="yes">../header/userAuth.h</includes>
+    <includes refid="database_8h" local="yes">../header/database.h</includes>
+    <includes refid="encryption_8h" local="yes">../header/encryption.h</includes>
+    <includes refid="security_8h" local="yes">../header/security.h</includes>
+    <includes local="no">sqlite3.h</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">ctime</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>commonTypes.h</label>
+        <link refid="common_types_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>../header/database.h</label>
+        <link refid="database_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../header/encryption.h</label>
+        <link refid="encryption_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>error_codes.h</label>
+        <link refid="error__codes_8h"/>
+      </node>
+      <node id="8">
+        <label>export.h</label>
+        <link refid="export_8h"/>
+      </node>
+      <node id="14">
+        <label>../header/security.h</label>
+        <link refid="security_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../header/userAuth.h</label>
+        <link refid="user_auth_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/travelexpense/src/userAuth.cpp</label>
+        <link refid="user_auth_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="6">
+        <label>cstring</label>
+      </node>
+      <node id="5">
+        <label>ctime</label>
+      </node>
+      <node id="10">
+        <label>sqlite3.h</label>
+      </node>
+      <node id="15">
+        <label>sstream</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_user_auth">TravelExpense::UserAuth</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_user_auth_1a42131080d5a38e3a230c75c984a74871" prot="public" static="yes" mutable="no">
+        <type>User *</type>
+        <definition>User* TravelExpense::UserAuth::currentUser</definition>
+        <argsstring></argsstring>
+        <name>currentUser</name>
+        <qualifiedname>TravelExpense::UserAuth::currentUser</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/userAuth.cpp" line="23" column="13" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a63e9c88135b8d5f2911f99ce322d1a50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::UserAuth::registerUser</definition>
+        <argsstring>(const char *username, const char *password)</argsstring>
+        <name>registerUser</name>
+        <qualifiedname>TravelExpense::UserAuth::registerUser</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+<para>Kullanıcı kaydı </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Yeni bir kullanıcı kaydı oluşturur. Şifre hash&apos;lenir ve salt ile birlikte veritabanına kaydedilir. Kullanıcı adı benzersiz olmalıdır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, şifreyi SHA-256 ile hash&apos;ler ve salt ekler. Eğer kullanıcı adı zaten varsa, InvalidInput hatası döner.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kullanıcı adı (nullptr ise InvalidInput döner, benzersiz olmalı) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre (nullptr ise InvalidInput döner, minimum uzunluk kontrolü yapılabilir) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput, FileNotFound vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/userAuth.cpp" line="25" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="25" bodyend="113" declfile="src/travelexpense/header/userAuth.h" declline="41" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a8f83e74a4b8d2833cb23051e7661c0f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::UserAuth::loginUser</definition>
+        <argsstring>(const char *username, const char *password)</argsstring>
+        <name>loginUser</name>
+        <qualifiedname>TravelExpense::UserAuth::loginUser</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+<para>Kullanıcı girişi. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen kullanıcı adı ve şifre ile giriş yapar. Şifre hash&apos;i doğrulanır ve doğruysa kullanıcı oturumu başlatılır.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, şifreyi hash&apos;ler ve veritabanındaki hash ile karşılaştırır. Constant-time comparison kullanarak timing attack&apos;lara karşı koruma sağlar. Başarılı giriş sonrası, <ref refid="namespace_travel_expense_1_1_user_auth_1a4ebfa893e3a0e71ccaac4869f6395785" kindref="member">getCurrentUser()</ref> ile kullanıcı bilgisi alınabilir.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kullanıcı adı (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Şifre (nullptr ise InvalidInput döner) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput, InvalidUser vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/userAuth.cpp" line="115" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="115" bodyend="234" declfile="src/travelexpense/header/userAuth.h" declline="57" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a8777e8f207ceeaedc2eb75753756b1f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::UserAuth::enableGuestMode</definition>
+        <argsstring>()</argsstring>
+        <name>enableGuestMode</name>
+        <qualifiedname>TravelExpense::UserAuth::enableGuestMode</qualifiedname>
+        <briefdescription>
+<para>Misafir modunu etkinleştir. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Misafir kullanıcı modunu etkinleştirir. Misafir modunda, kullanıcı kaydı veya girişi gerekmez, ancak bazı özellikler sınırlı olabilir.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, geçici bir misafir kullanıcısı oluşturur. Misafir modu, oturum sonlandığında veya <ref refid="namespace_travel_expense_1_1_user_auth_1ad71c3866e8f46267153654e60014d99f" kindref="member">logoutUser()</ref> çağrıldığında sonlanır.</para>
+</simplesect>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/userAuth.cpp" line="236" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="236" bodyend="247" declfile="src/travelexpense/header/userAuth.h" declline="70" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1ad71c3866e8f46267153654e60014d99f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void</type>
+        <definition>void TravelExpense::UserAuth::logoutUser</definition>
+        <argsstring>()</argsstring>
+        <name>logoutUser</name>
+        <qualifiedname>TravelExpense::UserAuth::logoutUser</qualifiedname>
+        <briefdescription>
+<para>Kullanıcı çıkışı </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mevcut kullanıcı oturumunu sonlandırır. Kullanıcı bilgileri temizlenir ve <ref refid="namespace_travel_expense_1_1_user_auth_1a4ebfa893e3a0e71ccaac4869f6395785" kindref="member">getCurrentUser()</ref> nullptr döner.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, misafir modu dahil tüm oturumları sonlandırır. Oturum sonlandıktan sonra, yeni giriş veya misafir modu gerekir. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/userAuth.cpp" line="249" column="6" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="249" bodyend="254" declfile="src/travelexpense/header/userAuth.h" declline="81" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a4ebfa893e3a0e71ccaac4869f6395785" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> User *</type>
+        <definition>User * TravelExpense::UserAuth::getCurrentUser</definition>
+        <argsstring>()</argsstring>
+        <name>getCurrentUser</name>
+        <qualifiedname>TravelExpense::UserAuth::getCurrentUser</qualifiedname>
+        <briefdescription>
+<para>Mevcut kullanıcı bilgisini al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Aktif oturumdaki kullanıcı bilgisini döndürür. Eğer oturum yoksa (giriş yapılmamış veya <ref refid="namespace_travel_expense_1_1_user_auth_1ad71c3866e8f46267153654e60014d99f" kindref="member">logoutUser()</ref> çağrılmış), nullptr döner.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, <ref refid="namespace_travel_expense_1_1_user_auth_1a4ebfa893e3a0e71ccaac4869f6395785" kindref="member">getCurrentUser()</ref> ile alınan pointer, <ref refid="namespace_travel_expense_1_1_user_auth_1ad71c3866e8f46267153654e60014d99f" kindref="member">logoutUser()</ref> çağrılana kadar geçerlidir. Pointer&apos;ı saklamak güvenli değildir.</para>
+</simplesect>
+<simplesect kind="return"><para>User* Mevcut kullanıcı pointer&apos;ı (nullptr ise giriş yapılmamış veya oturum sonlandırılmış) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/userAuth.cpp" line="256" column="6" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="256" bodyend="258" declfile="src/travelexpense/header/userAuth.h" declline="94" declcolumn="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a0a20e8d4744950670b6f19c9888e74f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
+        <definition>ErrorCode TravelExpense::UserAuth::getUserById</definition>
+        <argsstring>(int32_t userId, User &amp;user)</argsstring>
+        <name>getUserById</name>
+        <qualifiedname>TravelExpense::UserAuth::getUserById</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>userId</declname>
+        </param>
+        <param>
+          <type>User &amp;</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+<para>Kullanıcı ID&apos;ye göre kullanıcı bilgisini al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Belirtilen userId&apos;ye sahip kullanıcının bilgilerini veritabanından alır ve user parametresine doldurur.</para>
+<para><simplesect kind="note"><para>Bu fonksiyon, kullanıcı ID&apos;sine göre kullanıcı bilgilerini getirir. Eğer kullanıcı bulunamazsa, FileNotFound hatası döner.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>userId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kullanıcı ID (geçerli bir userId olmalı, 0&apos;dan büyük) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Kullanıcı bilgisinin yazılacağı struct (çıktı parametresi, <ref refid="struct_travel_expense_1_1_user" kindref="compound">User</ref> struct&apos;ı) İçerik: userId, username, email, registrationDate vb. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/userAuth.cpp" line="260" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="260" bodyend="303" declfile="src/travelexpense/header/userAuth.h" declline="110" declcolumn="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Seyahat Gideri Takibi - Kullanıcı Kimlik Doğrulama Implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Binnur Altınışık </para>
+</simplesect>
+<simplesect kind="date"><para>2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/userAuth.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/database.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/encryption.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/security.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sqlite3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctime&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_user_auth" kindref="compound">UserAuth</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Global<sp/>mevcut<sp/>kullanıcı<sp/>pointer&apos;ı</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>User<sp/>*currentUser<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_user_auth_1a63e9c88135b8d5f2911f99ce322d1a50" kindref="member">registerUser</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*username,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*password)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!username<sp/>||<sp/>!password<sp/>||<sp/>strlen(username)<sp/>==<sp/>0<sp/>||<sp/>strlen(password)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Şimdilik<sp/>basit<sp/>bir<sp/>kontrol</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strlen(username)<sp/>&gt;=<sp/>50)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SQLite<sp/>veritabanını<sp/>al</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>sqlite3<sp/>*db<sp/>=<sp/><ref refid="namespace_travel_expense_1_1_database_1a0f85378d912f28f14a19aba99432dcca" kindref="member">Database::getDatabase</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!db)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba2767828026039e8ba7b38973cbb701f2" kindref="member">ErrorCode::FileNotFound</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Salt<sp/>oluştur</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>salt[33]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>passwordHash[65]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="namespace_travel_expense_1_1_encryption_1aba07992223a35358d74456b63764eb4d" kindref="member">Encryption::generateSalt</ref>(salt))<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba6a10b4834f9cabcc57ddbf0ee05eeb47" kindref="member">ErrorCode::MemoryAllocation</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Şifreyi<sp/>hash&apos;le<sp/>(SHA-256<sp/>+<sp/>Salt)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="namespace_travel_expense_1_1_encryption_1a218390c34597e2a8896f6f3c4ba1672e" kindref="member">Encryption::hashPassword</ref>(password,<sp/>salt,<sp/>passwordHash))<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Salt&apos;ı<sp/>güvenli<sp/>şekilde<sp/>sil</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_travel_expense_1_1_security_1afb3af2295588c9ff5fd055651d3f3ac7" kindref="member">Security::secureCleanup</ref>(salt,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(salt));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_travel_expense_1_1_security_1afb3af2295588c9ff5fd055651d3f3ac7" kindref="member">Security::secureCleanup</ref>(passwordHash,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(passwordHash));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabaf8bf95b659f617159eb42c2099352a26" kindref="member">ErrorCode::EncryptionFailed</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Hash<sp/>ve<sp/>salt<sp/>uzunluklarını<sp/>kontrol<sp/>et<sp/>(kaydetmeden<sp/>önce)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hashLen<sp/>=<sp/>strlen(passwordHash);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>saltLen<sp/>=<sp/>strlen(salt);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hashLen<sp/>!=<sp/>64<sp/>||<sp/>saltLen<sp/>!=<sp/>32)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_travel_expense_1_1_security_1afb3af2295588c9ff5fd055651d3f3ac7" kindref="member">Security::secureCleanup</ref>(salt,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(salt));</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_travel_expense_1_1_security_1afb3af2295588c9ff5fd055651d3f3ac7" kindref="member">Security::secureCleanup</ref>(passwordHash,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(passwordHash));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabaf8bf95b659f617159eb42c2099352a26" kindref="member">ErrorCode::EncryptionFailed</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SQL<sp/>sorgusu<sp/>hazırla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sql<sp/>=<sp/>R</highlight><highlight class="stringliteral">&quot;(</highlight></codeline>
+<codeline lineno="70"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INSERT<sp/>INTO<sp/>users<sp/>(username,<sp/>password_hash,<sp/>salt,<sp/>is_guest,<sp/>created_at,<sp/>last_login)</highlight></codeline>
+<codeline lineno="71"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VALUES<sp/>(?,<sp/>?,<sp/>?,<sp/>0,<sp/>?,<sp/>0);</highlight></codeline>
+<codeline lineno="72"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)&quot;;</highlight></codeline>
+<codeline lineno="73"><highlight class="stringliteral"><sp/><sp/>sqlite3_stmt<sp/>*stmt<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>sqlite3_prepare_v2(db,<sp/>sql,<sp/>-1,<sp/>&amp;stmt,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>!=<sp/>SQLITE_OK)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_travel_expense_1_1_security_1afb3af2295588c9ff5fd055651d3f3ac7" kindref="member">Security::secureCleanup</ref>(salt,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(salt));</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_travel_expense_1_1_security_1afb3af2295588c9ff5fd055651d3f3ac7" kindref="member">Security::secureCleanup</ref>(passwordHash,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(passwordHash));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba86bef3f9f8669a7395a877ff014aecd9" kindref="member">ErrorCode::FileIO</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Parametreleri<sp/>bağla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>time_t<sp/>createdAt<sp/>=<sp/>time(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>sqlite3_bind_text(stmt,<sp/>1,<sp/>username,<sp/>-1,<sp/>SQLITE_TRANSIENT);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>sqlite3_bind_text(stmt,<sp/>2,<sp/>passwordHash,<sp/>-1,<sp/>SQLITE_TRANSIENT);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>sqlite3_bind_text(stmt,<sp/>3,<sp/>salt,<sp/>-1,<sp/>SQLITE_TRANSIENT);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>sqlite3_bind_int64(stmt,<sp/>4,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">sqlite3_int64</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(createdAt));</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Sorguyu<sp/>çalıştır</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>rc<sp/>=<sp/>sqlite3_step(stmt);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>!=<sp/>SQLITE_DONE)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>sqlite3_finalize(stmt);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_travel_expense_1_1_security_1afb3af2295588c9ff5fd055651d3f3ac7" kindref="member">Security::secureCleanup</ref>(salt,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(salt));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_travel_expense_1_1_security_1afb3af2295588c9ff5fd055651d3f3ac7" kindref="member">Security::secureCleanup</ref>(passwordHash,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(passwordHash));</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>UNIQUE<sp/>constraint<sp/>hatası<sp/>(kullanıcı<sp/>zaten<sp/>var)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>==<sp/>SQLITE_CONSTRAINT)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dababe4679ad0ec4fefd37bc5b23679d0e7d" kindref="member">ErrorCode::InvalidUser</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba86bef3f9f8669a7395a877ff014aecd9" kindref="member">ErrorCode::FileIO</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>sqlite3_finalize(stmt);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Verilerin<sp/>commit<sp/>edildiğinden<sp/>emin<sp/>ol</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SQLite&apos;da<sp/>autocommit<sp/>mode<sp/>varsayılan<sp/>olarak<sp/>açıktır,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ama<sp/>bazı<sp/>durumlarda<sp/>açıkça<sp/>commit<sp/>etmek<sp/>gerekebilir</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>sqlite3_exec(db,<sp/></highlight><highlight class="stringliteral">&quot;COMMIT;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Güvenli<sp/>temizlik</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_security_1afb3af2295588c9ff5fd055651d3f3ac7" kindref="member">Security::secureCleanup</ref>(salt,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(salt));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_security_1afb3af2295588c9ff5fd055651d3f3ac7" kindref="member">Security::secureCleanup</ref>(passwordHash,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(passwordHash));</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_user_auth_1a8f83e74a4b8d2833cb23051e7661c0f0" kindref="member">loginUser</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*username,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*password)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!username<sp/>||<sp/>!password<sp/>||<sp/>strlen(username)<sp/>==<sp/>0<sp/>||<sp/>strlen(password)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SQLite<sp/>veritabanını<sp/>al</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>sqlite3<sp/>*db<sp/>=<sp/><ref refid="namespace_travel_expense_1_1_database_1a0f85378d912f28f14a19aba99432dcca" kindref="member">Database::getDatabase</ref>();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!db)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba2767828026039e8ba7b38973cbb701f2" kindref="member">ErrorCode::FileNotFound</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SQL<sp/>sorgusu<sp/>hazırla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>user_id,<sp/>username,<sp/>password_hash,<sp/>salt,<sp/>is_guest,<sp/>created_at,<sp/>last_login<sp/>FROM<sp/>users<sp/>WHERE<sp/>username<sp/>=<sp/>?;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>sqlite3_stmt<sp/>*stmt<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>sqlite3_prepare_v2(db,<sp/>sql,<sp/>-1,<sp/>&amp;stmt,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>!=<sp/>SQLITE_OK)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba86bef3f9f8669a7395a877ff014aecd9" kindref="member">ErrorCode::FileIO</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Parametreleri<sp/>bağla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>rc<sp/>=<sp/>sqlite3_bind_text(stmt,<sp/>1,<sp/>username,<sp/>-1,<sp/>SQLITE_STATIC);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>!=<sp/>SQLITE_OK)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>sqlite3_finalize(stmt);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba86bef3f9f8669a7395a877ff014aecd9" kindref="member">ErrorCode::FileIO</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Sorguyu<sp/>çalıştır</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>rc<sp/>=<sp/>sqlite3_step(stmt);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>!=<sp/>SQLITE_ROW)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Eğer<sp/>kullanıcı<sp/>bulunamadıysa,<sp/>hatayı<sp/>döndür</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>sqlite3_finalize(stmt);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dababe4679ad0ec4fefd37bc5b23679d0e7d" kindref="member">ErrorCode::InvalidUser</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Sonuçları<sp/>al</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>User<sp/>foundUser;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>foundUser.userId<sp/>=<sp/>sqlite3_column_int(stmt,<sp/>0);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Veritabanından<sp/>okunan<sp/>değerlerin<sp/>null<sp/>olup<sp/>olmadığını<sp/>kontrol<sp/>et</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sqlite3_column_type(stmt,<sp/>1)<sp/>==<sp/>SQLITE_NULL<sp/>||</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sqlite3_column_type(stmt,<sp/>2)<sp/>==<sp/>SQLITE_NULL<sp/>||</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sqlite3_column_type(stmt,<sp/>3)<sp/>==<sp/>SQLITE_NULL)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>sqlite3_finalize(stmt);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dababe4679ad0ec4fefd37bc5b23679d0e7d" kindref="member">ErrorCode::InvalidUser</ref>;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dbUsername<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(sqlite3_column_text(stmt,<sp/>1));</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*storedHash<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(sqlite3_column_text(stmt,<sp/>2));</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*storedSalt<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(sqlite3_column_text(stmt,<sp/>3));</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Null<sp/>pointer<sp/>kontrolü</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!dbUsername<sp/>||<sp/>!storedHash<sp/>||<sp/>!storedSalt)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>sqlite3_finalize(stmt);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dababe4679ad0ec4fefd37bc5b23679d0e7d" kindref="member">ErrorCode::InvalidUser</ref>;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>foundUser.isGuest<sp/>=<sp/>(sqlite3_column_int(stmt,<sp/>4)<sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>foundUser.createdAt<sp/>=<sp/>sqlite3_column_int64(stmt,<sp/>5);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/>foundUser.lastLogin<sp/>=<sp/>sqlite3_column_int64(stmt,<sp/>6);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>strncpy(foundUser.username,<sp/>dbUsername,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(foundUser.username)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>foundUser.username[</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(foundUser.username)<sp/>-<sp/>1]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Hash<sp/>ve<sp/>salt&apos;ı<sp/>kopyala<sp/>(hash<sp/>64<sp/>karakter,<sp/>salt<sp/>32<sp/>karakter)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>strncpy<sp/>kullanarak<sp/>tam<sp/>uzunluğu<sp/>kopyala,<sp/>sonra<sp/>null<sp/>terminator<sp/>ekle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hashLen<sp/>=<sp/>strlen(storedHash);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>saltLen<sp/>=<sp/>strlen(storedSalt);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Hash<sp/>ve<sp/>salt<sp/>uzunluklarını<sp/>kontrol<sp/>et</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hashLen<sp/>!=<sp/>64<sp/>||<sp/>saltLen<sp/>!=<sp/>32)<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>sqlite3_finalize(stmt);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dababe4679ad0ec4fefd37bc5b23679d0e7d" kindref="member">ErrorCode::InvalidUser</ref>;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Hash<sp/>ve<sp/>salt&apos;ı<sp/>tam<sp/>uzunlukta<sp/>kopyala</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>passwordHash[64]<sp/>buffer&apos;ı<sp/>var<sp/>(0-63<sp/>arası<sp/>indeksler<sp/>=<sp/>64<sp/>byte)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Hash<sp/>64<sp/>karakter,<sp/>salt<sp/>32<sp/>karakter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Buffer&apos;ı<sp/>tam<sp/>kullanıp<sp/>null<sp/>terminator<sp/>eklememek<sp/>doğru</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>verifyPassword<sp/>fonksiyonunda<sp/>strlen<sp/>yerine<sp/>sabit<sp/>64<sp/>kullanacağız</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/>memcpy(foundUser.passwordHash,<sp/>storedHash,<sp/>64);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/>memcpy(foundUser.salt,<sp/>storedSalt,<sp/>32);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Null<sp/>terminator<sp/>eklemiyoruz<sp/>çünkü<sp/>buffer<sp/>tam<sp/>dolu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>verifyPassword<sp/>fonksiyonunda<sp/>strlen<sp/>yerine<sp/>sabit<sp/>64<sp/>kullanılacak</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/>sqlite3_finalize(stmt);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Şifre<sp/>doğrulama<sp/>(SHA-256<sp/>hash<sp/>kontrolü)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Hash<sp/>ve<sp/>salt<sp/>uzunlukları<sp/>zaten<sp/>kontrol<sp/>edildi<sp/>ve<sp/>doğru<sp/>kopyalandı</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="namespace_travel_expense_1_1_encryption_1a4860c004d6b6d05f4723dfc0c90f35cd" kindref="member">Encryption::verifyPassword</ref>(password,<sp/>foundUser.salt,<sp/>foundUser.passwordHash))<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Güvenli<sp/>temizlik</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_travel_expense_1_1_security_1a146f27ab484fcf4d9f824709194ba931" kindref="member">Security::secureMemoryCleanup</ref>(&amp;foundUser,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(User));</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dababe4679ad0ec4fefd37bc5b23679d0e7d" kindref="member">ErrorCode::InvalidUser</ref>;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Last<sp/>login&apos;i<sp/>güncelle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/>time_t<sp/>now<sp/>=<sp/>time(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*updateSql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;UPDATE<sp/>users<sp/>SET<sp/>last_login<sp/>=<sp/>?<sp/>WHERE<sp/>user_id<sp/>=<sp/>?;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>sqlite3_stmt<sp/>*updateStmt<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/>rc<sp/>=<sp/>sqlite3_prepare_v2(db,<sp/>updateSql,<sp/>-1,<sp/>&amp;updateStmt,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>==<sp/>SQLITE_OK)<sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>sqlite3_bind_int64(updateStmt,<sp/>1,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">sqlite3_int64</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(now));</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>sqlite3_bind_int(updateStmt,<sp/>2,<sp/>foundUser.userId);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>sqlite3_step(updateStmt);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>sqlite3_finalize(updateStmt);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>foundUser.lastLogin<sp/>=<sp/>now;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Mevcut<sp/>kullanıcıyı<sp/>ayarla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentUser<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_travel_expense_1_1_security_1a146f27ab484fcf4d9f824709194ba931" kindref="member">Security::secureMemoryCleanup</ref>(currentUser,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(User));</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>currentUser;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/>currentUser<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>User(foundUser);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Geçici<sp/>değişkeni<sp/>güvenli<sp/>şekilde<sp/>temizle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_security_1a146f27ab484fcf4d9f824709194ba931" kindref="member">Security::secureMemoryCleanup</ref>(&amp;foundUser,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(User));</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_user_auth_1a8777e8f207ceeaedc2eb75753756b1f1" kindref="member">enableGuestMode</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentUser<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>currentUser;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/>currentUser<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>User();</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/>currentUser-&gt;<ref refid="struct_travel_expense_1_1_user_1a4cec5fe99724491f8257d41396940c70" kindref="member">userId</ref><sp/>=<sp/>-1;<sp/></highlight><highlight class="comment">//<sp/>Guest<sp/>kullanıcı<sp/>ID&apos;si</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/>currentUser-&gt;<ref refid="struct_travel_expense_1_1_user_1a320d17e6980555c332bb5269e5cb5938" kindref="member">isGuest</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/>strncpy(currentUser-&gt;<ref refid="struct_travel_expense_1_1_user_1a7f54291ba35d532e5938771f83e061de" kindref="member">username</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Guest&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(currentUser-&gt;<ref refid="struct_travel_expense_1_1_user_1a7f54291ba35d532e5938771f83e061de" kindref="member">username</ref>)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/>currentUser-&gt;<ref refid="struct_travel_expense_1_1_user_1a3304e0e4fdd2d60ad4d9a2a530c08d51" kindref="member">createdAt</ref><sp/>=<sp/>time(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_user_auth_1ad71c3866e8f46267153654e60014d99f" kindref="member">logoutUser</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentUser<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>currentUser;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>currentUser<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal">User<sp/>*<ref refid="namespace_travel_expense_1_1_user_auth_1a4ebfa893e3a0e71ccaac4869f6395785" kindref="member">getCurrentUser</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>currentUser;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_user_auth_1a0a20e8d4744950670b6f19c9888e74f6" kindref="member">getUserById</ref>(int32_t<sp/>userId,<sp/>User<sp/>&amp;user)<sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SQLite<sp/>veritabanını<sp/>al</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/>sqlite3<sp/>*db<sp/>=<sp/><ref refid="namespace_travel_expense_1_1_database_1a0f85378d912f28f14a19aba99432dcca" kindref="member">Database::getDatabase</ref>();</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!db)<sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba2767828026039e8ba7b38973cbb701f2" kindref="member">ErrorCode::FileNotFound</ref>;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SQL<sp/>sorgusu<sp/>hazırla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sql<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>user_id,<sp/>username,<sp/>password_hash,<sp/>salt,<sp/>is_guest,<sp/>created_at,<sp/>last_login<sp/>FROM<sp/>users<sp/>WHERE<sp/>user_id<sp/>=<sp/>?;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/>sqlite3_stmt<sp/>*stmt<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>sqlite3_prepare_v2(db,<sp/>sql,<sp/>-1,<sp/>&amp;stmt,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>!=<sp/>SQLITE_OK)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba86bef3f9f8669a7395a877ff014aecd9" kindref="member">ErrorCode::FileIO</ref>;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Parametreleri<sp/>bağla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/>sqlite3_bind_int(stmt,<sp/>1,<sp/>userId);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Sorguyu<sp/>çalıştır</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/>rc<sp/>=<sp/>sqlite3_step(stmt);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rc<sp/>!=<sp/>SQLITE_ROW)<sp/>{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>sqlite3_finalize(stmt);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dababe4679ad0ec4fefd37bc5b23679d0e7d" kindref="member">ErrorCode::InvalidUser</ref>;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Sonuçları<sp/>al</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/>user.userId<sp/>=<sp/>sqlite3_column_int(stmt,<sp/>0);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dbUsername<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(sqlite3_column_text(stmt,<sp/>1));</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*storedHash<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(sqlite3_column_text(stmt,<sp/>2));</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*storedSalt<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(sqlite3_column_text(stmt,<sp/>3));</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/>user.isGuest<sp/>=<sp/>(sqlite3_column_int(stmt,<sp/>4)<sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/>user.createdAt<sp/>=<sp/>sqlite3_column_int64(stmt,<sp/>5);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/>user.lastLogin<sp/>=<sp/>sqlite3_column_int64(stmt,<sp/>6);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/>strncpy(user.username,<sp/>dbUsername,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(user.username)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/>user.username[</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(user.username)<sp/>-<sp/>1]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/>strncpy(user.passwordHash,<sp/>storedHash,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(user.passwordHash)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/>user.passwordHash[</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(user.passwordHash)<sp/>-<sp/>1]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/>strncpy(user.salt,<sp/>storedSalt,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(user.salt)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/>user.salt[</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(user.salt)<sp/>-<sp/>1]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/>sqlite3_finalize(stmt);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/travelexpense/src/userAuth.cpp"/>
+  </compounddef>
+</doxygen>

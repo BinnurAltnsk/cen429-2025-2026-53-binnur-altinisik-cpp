@@ -1,0 +1,731 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_travel_expense_1_1_t_l_s" kind="namespace" language="C++">
+    <compoundname>TravelExpense::TLS</compoundname>
+    <innerclass refid="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin" prot="public">TravelExpense::TLS::CertificatePin</innerclass>
+    <innerclass refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context" prot="public">TravelExpense::TLS::TLSContext</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_t_l_s_1aa356788c9cb3e059de8224d8105e5cd5" prot="public" static="yes" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin" kindref="compound">CertificatePin</ref> &gt;</type>
+        <definition>std::map&lt;std::string, CertificatePin&gt; TravelExpense::TLS::g_certificatePins</definition>
+        <argsstring></argsstring>
+        <name>g_certificatePins</name>
+        <qualifiedname>TravelExpense::TLS::g_certificatePins</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="33" column="17" bodyfile="src/travelexpense/src/tls.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_t_l_s_1af703925af881d0a7d67a5edd65d549dd" prot="public" static="yes" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex TravelExpense::TLS::g_pinsMutex</definition>
+        <argsstring></argsstring>
+        <name>g_pinsMutex</name>
+        <qualifiedname>TravelExpense::TLS::g_pinsMutex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="34" column="19" bodyfile="src/travelexpense/src/tls.cpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a1f4b0ad3a0bf0c1ee5ab94b4cc50e026" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::initializeTLSContext</definition>
+        <argsstring>(TLSContext *ctx)</argsstring>
+        <name>initializeTLSContext</name>
+        <qualifiedname>TravelExpense::TLS::initializeTLSContext</qualifiedname>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context" kindref="compound">TLSContext</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamını başlat. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="40" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="40" bodyend="60" declfile="src/travelexpense/header/tls.h" declline="64" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a6033407b89e93d95ee934725ec8d0473" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::cleanupTLSContext</definition>
+        <argsstring>(TLSContext *ctx)</argsstring>
+        <name>cleanupTLSContext</name>
+        <qualifiedname>TravelExpense::TLS::cleanupTLSContext</qualifiedname>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context" kindref="compound">TLSContext</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamını temizle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="62" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="62" bodyend="84" declfile="src/travelexpense/header/tls.h" declline="72" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a6cf999cc3f7623c8381b586c9c338a8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::connectTLS</definition>
+        <argsstring>(TLSContext *ctx, const char *hostname, uint16_t port)</argsstring>
+        <name>connectTLS</name>
+        <qualifiedname>TravelExpense::TLS::connectTLS</qualifiedname>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context" kindref="compound">TLSContext</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>hostname</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlantısı kur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hostname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sunucu hostname </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sunucu port </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="86" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="86" bodyend="114" declfile="src/travelexpense/header/tls.h" declline="82" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a98d4f54141bfa0bda8cb66567d232e21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::disconnectTLS</definition>
+        <argsstring>(TLSContext *ctx)</argsstring>
+        <name>disconnectTLS</name>
+        <qualifiedname>TravelExpense::TLS::disconnectTLS</qualifiedname>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context" kindref="compound">TLSContext</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlantısını kapat. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="116" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="116" bodyend="129" declfile="src/travelexpense/header/tls.h" declline="90" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1aea3adfe31d55f246cc04f0d5355608a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::sendTLS</definition>
+        <argsstring>(TLSContext *ctx, const void *data, size_t dataLen, size_t &amp;bytesSent)</argsstring>
+        <name>sendTLS</name>
+        <qualifiedname>TravelExpense::TLS::sendTLS</qualifiedname>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context" kindref="compound">TLSContext</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dataLen</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>bytesSent</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> üzerinden veri gönder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gönderilecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bytesSent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gönderilen byte sayısı (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="131" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="131" bodyend="142" declfile="src/travelexpense/header/tls.h" declline="101" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a3df401b12f4a6007d35adb739e4e52b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::receiveTLS</definition>
+        <argsstring>(TLSContext *ctx, void *buffer, size_t bufferLen, size_t &amp;bytesReceived)</argsstring>
+        <name>receiveTLS</name>
+        <qualifiedname>TravelExpense::TLS::receiveTLS</qualifiedname>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context" kindref="compound">TLSContext</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bufferLen</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>bytesReceived</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> üzerinden veri al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alınacak veri buffer&apos;ı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bufferLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bytesReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alınan byte sayısı (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="144" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="144" bodyend="162" declfile="src/travelexpense/header/tls.h" declline="112" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a2bbc4fef6bf456551a761d3891672098" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::registerCertificatePin</definition>
+        <argsstring>(const CertificatePin *pin)</argsstring>
+        <name>registerCertificatePin</name>
+        <qualifiedname>TravelExpense::TLS::registerCertificatePin</qualifiedname>
+        <param>
+          <type>const <ref refid="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin" kindref="compound">CertificatePin</ref> *</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Certificate pin kaydet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Certificate pin bilgisi </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="168" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="168" bodyend="178" declfile="src/travelexpense/header/tls.h" declline="146" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a0164fd8bb76e186edd32156957f30c67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::verifyCertificatePin</definition>
+        <argsstring>(TLSContext *ctx, const char *hostname)</argsstring>
+        <name>verifyCertificatePin</name>
+        <qualifiedname>TravelExpense::TLS::verifyCertificatePin</qualifiedname>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context" kindref="compound">TLSContext</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+<para>Certificate pin doğrula. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mevcut sertifika ile kayıtlı pin&apos;i karşılaştırır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hostname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sunucu hostname </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="180" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="180" bodyend="239" declfile="src/travelexpense/header/tls.h" declline="157" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1aee9c0722df199d9ce6a08ae0099f7658" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::getCertificateFingerprint</definition>
+        <argsstring>(TLSContext *ctx, char *fingerprint)</argsstring>
+        <name>getCertificateFingerprint</name>
+        <qualifiedname>TravelExpense::TLS::getCertificateFingerprint</qualifiedname>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context" kindref="compound">TLSContext</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>fingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Sunucu sertifikasının fingerprint&apos;ini al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sertifika fingerprint çıktısı (64 karakter hex) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="241" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="241" bodyend="266" declfile="src/travelexpense/header/tls.h" declline="166" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a0bc182873d8e7010c15d2356d92bbabd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::getCertificatePublicKeyHash</definition>
+        <argsstring>(TLSContext *ctx, char *publicKeyHash)</argsstring>
+        <name>getCertificatePublicKeyHash</name>
+        <qualifiedname>TravelExpense::TLS::getCertificatePublicKeyHash</qualifiedname>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context" kindref="compound">TLSContext</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>publicKeyHash</declname>
+        </param>
+        <briefdescription>
+<para>Sunucu sertifikasının public key hash&apos;ini al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>publicKeyHash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Public key hash çıktısı (64 karakter hex) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="268" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="268" bodyend="301" declfile="src/travelexpense/header/tls.h" declline="175" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1af3eee0c7c6f7d4d47aa903007191e8ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::loadClientCertificate</definition>
+        <argsstring>(TLSContext *ctx, const char *certPath, const char *keyPath, const char *keyPassword)</argsstring>
+        <name>loadClientCertificate</name>
+        <qualifiedname>TravelExpense::TLS::loadClientCertificate</qualifiedname>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context" kindref="compound">TLSContext</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>certPath</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>keyPath</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>keyPassword</declname>
+        </param>
+        <briefdescription>
+<para>İstemci sertifikası yükle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mutual authentication için istemci sertifikası ve private key&apos;i yükler.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>certPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İstemci sertifika dosyası yolu (PEM format) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İstemci private key dosyası yolu (PEM format) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyPassword</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Private key şifresi (nullptr ise şifre yok) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="307" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="307" bodyend="327" declfile="src/travelexpense/header/tls.h" declline="192" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1ab6f8f820ccd83d1e6062de39cc1d7386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::setCAPath</definition>
+        <argsstring>(TLSContext *ctx, const char *caPath)</argsstring>
+        <name>setCAPath</name>
+        <qualifiedname>TravelExpense::TLS::setCAPath</qualifiedname>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context" kindref="compound">TLSContext</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>caPath</declname>
+        </param>
+        <briefdescription>
+<para>CA sertifika yolu ayarla. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sunucu sertifikasını doğrulamak için CA sertifika dizinini ayarlar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>caPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CA sertifika dosyası yolu veya dizin yolu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="329" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="329" bodyend="345" declfile="src/travelexpense/header/tls.h" declline="204" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a7ec0910cdb0e632435dae6af7f06b345" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::verifyServerCertificate</definition>
+        <argsstring>(TLSContext *ctx)</argsstring>
+        <name>verifyServerCertificate</name>
+        <qualifiedname>TravelExpense::TLS::verifyServerCertificate</qualifiedname>
+        <param>
+          <type><ref refid="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context" kindref="compound">TLSContext</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Sunucu sertifikası doğrula. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sunucu sertifikasının geçerliliğini kontrol eder.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="347" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="347" bodyend="364" declfile="src/travelexpense/header/tls.h" declline="214" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1ac17ef09e926723c9e4c55d10b7cf186c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::calculateCertificateFingerprint</definition>
+        <argsstring>(const char *certPath, char *fingerprint)</argsstring>
+        <name>calculateCertificateFingerprint</name>
+        <qualifiedname>TravelExpense::TLS::calculateCertificateFingerprint</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>certPath</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>fingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Sertifika fingerprint hesapla. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sertifika dosyasından SHA-256 fingerprint hesaplar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>certPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sertifika dosyası yolu (PEM veya DER format) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fingerprint çıktısı (64 karakter hex) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="370" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="370" bodyend="377" declfile="src/travelexpense/header/tls.h" declline="229" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a6016f41b99ba6f5ffa92ae72bad03b15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::getTLSErrorMessage</definition>
+        <argsstring>(ErrorCode errorCode, char *message, size_t messageLen)</argsstring>
+        <name>getTLSErrorMessage</name>
+        <qualifiedname>TravelExpense::TLS::getTLSErrorMessage</qualifiedname>
+        <param>
+          <type><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref></type>
+          <declname>errorCode</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>messageLen</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> hata mesajı al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errorCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hata kodu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hata mesajı buffer&apos;ı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>messageLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="379" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="379" bodyend="414" declfile="src/travelexpense/header/tls.h" declline="239" declcolumn="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/travelexpense/header/tls.h" line="28" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="tls_8cpp" kind="file" language="C++">
+    <compoundname>tls.cpp</compoundname>
+    <includes refid="tls_8h" local="yes">../header/tls.h</includes>
+    <includes refid="encryption_8h" local="yes">../header/encryption.h</includes>
+    <includes refid="security_8h" local="yes">../header/security.h</includes>
+    <includes refid="safe__string_8h" local="yes">../header/safe_string.h</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includes local="no">mutex</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>commonTypes.h</label>
+        <link refid="common_types_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>../header/encryption.h</label>
+        <link refid="encryption_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>error_codes.h</label>
+        <link refid="error__codes_8h"/>
+      </node>
+      <node id="8">
+        <label>export.h</label>
+        <link refid="export_8h"/>
+      </node>
+      <node id="12">
+        <label>../header/safe_string.h</label>
+        <link refid="safe__string_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../header/security.h</label>
+        <link refid="security_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../header/tls.h</label>
+        <link refid="tls_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/travelexpense/src/tls.cpp</label>
+        <link refid="tls_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="6">
+        <label>cstring</label>
+      </node>
+      <node id="5">
+        <label>ctime</label>
+      </node>
+      <node id="14">
+        <label>map</label>
+      </node>
+      <node id="15">
+        <label>mutex</label>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
+    <innernamespace refid="namespace_travel_expense_1_1_t_l_s">TravelExpense::TLS</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_t_l_s_1aa356788c9cb3e059de8224d8105e5cd5" prot="public" static="yes" mutable="no">
+        <type>std::map&lt; std::string, CertificatePin &gt;</type>
+        <definition>std::map&lt;std::string, CertificatePin&gt; TravelExpense::TLS::g_certificatePins</definition>
+        <argsstring></argsstring>
+        <name>g_certificatePins</name>
+        <qualifiedname>TravelExpense::TLS::g_certificatePins</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="33" column="17" bodyfile="src/travelexpense/src/tls.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_t_l_s_1af703925af881d0a7d67a5edd65d549dd" prot="public" static="yes" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex TravelExpense::TLS::g_pinsMutex</definition>
+        <argsstring></argsstring>
+        <name>g_pinsMutex</name>
+        <qualifiedname>TravelExpense::TLS::g_pinsMutex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="34" column="19" bodyfile="src/travelexpense/src/tls.cpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a1f4b0ad3a0bf0c1ee5ab94b4cc50e026" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::initializeTLSContext</definition>
+        <argsstring>(TLSContext *ctx)</argsstring>
+        <name>initializeTLSContext</name>
+        <qualifiedname>TravelExpense::TLS::initializeTLSContext</qualifiedname>
+        <param>
+          <type>TLSContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamını başlat. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="40" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="40" bodyend="60" declfile="src/travelexpense/header/tls.h" declline="64" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a6033407b89e93d95ee934725ec8d0473" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::cleanupTLSContext</definition>
+        <argsstring>(TLSContext *ctx)</argsstring>
+        <name>cleanupTLSContext</name>
+        <qualifiedname>TravelExpense::TLS::cleanupTLSContext</qualifiedname>
+        <param>
+          <type>TLSContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamını temizle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="62" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="62" bodyend="84" declfile="src/travelexpense/header/tls.h" declline="72" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a6cf999cc3f7623c8381b586c9c338a8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::connectTLS</definition>
+        <argsstring>(TLSContext *ctx, const char *hostname, uint16_t port)</argsstring>
+        <name>connectTLS</name>
+        <qualifiedname>TravelExpense::TLS::connectTLS</qualifiedname>
+        <param>
+          <type>TLSContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>hostname</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlantısı kur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hostname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sunucu hostname </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sunucu port </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="86" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="86" bodyend="114" declfile="src/travelexpense/header/tls.h" declline="82" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a98d4f54141bfa0bda8cb66567d232e21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::disconnectTLS</definition>
+        <argsstring>(TLSContext *ctx)</argsstring>
+        <name>disconnectTLS</name>
+        <qualifiedname>TravelExpense::TLS::disconnectTLS</qualifiedname>
+        <param>
+          <type>TLSContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlantısını kapat. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="116" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="116" bodyend="129" declfile="src/travelexpense/header/tls.h" declline="90" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1aea3adfe31d55f246cc04f0d5355608a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::sendTLS</definition>
+        <argsstring>(TLSContext *ctx, const void *data, size_t dataLen, size_t &amp;bytesSent)</argsstring>
+        <name>sendTLS</name>
+        <qualifiedname>TravelExpense::TLS::sendTLS</qualifiedname>
+        <param>
+          <type>TLSContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dataLen</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>bytesSent</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> üzerinden veri gönder. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gönderilecek veri </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Veri uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bytesSent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gönderilen byte sayısı (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="131" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="131" bodyend="142" declfile="src/travelexpense/header/tls.h" declline="101" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a3df401b12f4a6007d35adb739e4e52b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::receiveTLS</definition>
+        <argsstring>(TLSContext *ctx, void *buffer, size_t bufferLen, size_t &amp;bytesReceived)</argsstring>
+        <name>receiveTLS</name>
+        <qualifiedname>TravelExpense::TLS::receiveTLS</qualifiedname>
+        <param>
+          <type>TLSContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bufferLen</declname>
+        </param>
+        <param>
+          <type>size_t &amp;</type>
+          <declname>bytesReceived</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> üzerinden veri al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alınacak veri buffer&apos;ı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bufferLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bytesReceived</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Alınan byte sayısı (çıktı) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="144" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="144" bodyend="162" declfile="src/travelexpense/header/tls.h" declline="112" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a2bbc4fef6bf456551a761d3891672098" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::registerCertificatePin</definition>
+        <argsstring>(const CertificatePin *pin)</argsstring>
+        <name>registerCertificatePin</name>
+        <qualifiedname>TravelExpense::TLS::registerCertificatePin</qualifiedname>
+        <param>
+          <type>const CertificatePin *</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Certificate pin kaydet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Certificate pin bilgisi </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="168" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="168" bodyend="178" declfile="src/travelexpense/header/tls.h" declline="146" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a0164fd8bb76e186edd32156957f30c67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::verifyCertificatePin</definition>
+        <argsstring>(TLSContext *ctx, const char *hostname)</argsstring>
+        <name>verifyCertificatePin</name>
+        <qualifiedname>TravelExpense::TLS::verifyCertificatePin</qualifiedname>
+        <param>
+          <type>TLSContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>hostname</declname>
+        </param>
+        <briefdescription>
+<para>Certificate pin doğrula. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mevcut sertifika ile kayıtlı pin&apos;i karşılaştırır.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hostname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sunucu hostname </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="180" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="180" bodyend="239" declfile="src/travelexpense/header/tls.h" declline="157" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1aee9c0722df199d9ce6a08ae0099f7658" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::getCertificateFingerprint</definition>
+        <argsstring>(TLSContext *ctx, char *fingerprint)</argsstring>
+        <name>getCertificateFingerprint</name>
+        <qualifiedname>TravelExpense::TLS::getCertificateFingerprint</qualifiedname>
+        <param>
+          <type>TLSContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>fingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Sunucu sertifikasının fingerprint&apos;ini al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sertifika fingerprint çıktısı (64 karakter hex) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="241" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="241" bodyend="266" declfile="src/travelexpense/header/tls.h" declline="166" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a0bc182873d8e7010c15d2356d92bbabd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::getCertificatePublicKeyHash</definition>
+        <argsstring>(TLSContext *ctx, char *publicKeyHash)</argsstring>
+        <name>getCertificatePublicKeyHash</name>
+        <qualifiedname>TravelExpense::TLS::getCertificatePublicKeyHash</qualifiedname>
+        <param>
+          <type>TLSContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>publicKeyHash</declname>
+        </param>
+        <briefdescription>
+<para>Sunucu sertifikasının public key hash&apos;ini al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>publicKeyHash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Public key hash çıktısı (64 karakter hex) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="268" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="268" bodyend="301" declfile="src/travelexpense/header/tls.h" declline="175" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1af3eee0c7c6f7d4d47aa903007191e8ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::loadClientCertificate</definition>
+        <argsstring>(TLSContext *ctx, const char *certPath, const char *keyPath, const char *keyPassword)</argsstring>
+        <name>loadClientCertificate</name>
+        <qualifiedname>TravelExpense::TLS::loadClientCertificate</qualifiedname>
+        <param>
+          <type>TLSContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>certPath</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>keyPath</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>keyPassword</declname>
+        </param>
+        <briefdescription>
+<para>İstemci sertifikası yükle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mutual authentication için istemci sertifikası ve private key&apos;i yükler.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>certPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İstemci sertifika dosyası yolu (PEM format) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>İstemci private key dosyası yolu (PEM format) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyPassword</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Private key şifresi (nullptr ise şifre yok) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="307" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="307" bodyend="327" declfile="src/travelexpense/header/tls.h" declline="192" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1ab6f8f820ccd83d1e6062de39cc1d7386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::setCAPath</definition>
+        <argsstring>(TLSContext *ctx, const char *caPath)</argsstring>
+        <name>setCAPath</name>
+        <qualifiedname>TravelExpense::TLS::setCAPath</qualifiedname>
+        <param>
+          <type>TLSContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>caPath</declname>
+        </param>
+        <briefdescription>
+<para>CA sertifika yolu ayarla. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sunucu sertifikasını doğrulamak için CA sertifika dizinini ayarlar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>caPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CA sertifika dosyası yolu veya dizin yolu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="329" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="329" bodyend="345" declfile="src/travelexpense/header/tls.h" declline="204" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a7ec0910cdb0e632435dae6af7f06b345" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::verifyServerCertificate</definition>
+        <argsstring>(TLSContext *ctx)</argsstring>
+        <name>verifyServerCertificate</name>
+        <qualifiedname>TravelExpense::TLS::verifyServerCertificate</qualifiedname>
+        <param>
+          <type>TLSContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Sunucu sertifikası doğrula. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sunucu sertifikasının geçerliliğini kontrol eder.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="347" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="347" bodyend="364" declfile="src/travelexpense/header/tls.h" declline="214" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1ac17ef09e926723c9e4c55d10b7cf186c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::calculateCertificateFingerprint</definition>
+        <argsstring>(const char *certPath, char *fingerprint)</argsstring>
+        <name>calculateCertificateFingerprint</name>
+        <qualifiedname>TravelExpense::TLS::calculateCertificateFingerprint</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>certPath</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>fingerprint</declname>
+        </param>
+        <briefdescription>
+<para>Sertifika fingerprint hesapla. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sertifika dosyasından SHA-256 fingerprint hesaplar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>certPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sertifika dosyası yolu (PEM veya DER format) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fingerprint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fingerprint çıktısı (64 karakter hex) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="370" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="370" bodyend="377" declfile="src/travelexpense/header/tls.h" declline="229" declcolumn="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_travel_expense_1_1_t_l_s_1a6016f41b99ba6f5ffa92ae72bad03b15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> <ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
+        <definition>TravelExpense::ErrorCode TravelExpense::TLS::getTLSErrorMessage</definition>
+        <argsstring>(ErrorCode errorCode, char *message, size_t messageLen)</argsstring>
+        <name>getTLSErrorMessage</name>
+        <qualifiedname>TravelExpense::TLS::getTLSErrorMessage</qualifiedname>
+        <param>
+          <type>ErrorCode</type>
+          <declname>errorCode</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>messageLen</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> hata mesajı al. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errorCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hata kodu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hata mesajı buffer&apos;ı </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>messageLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer uzunluğu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/travelexpense/src/tls.cpp" line="379" column="26" bodyfile="src/travelexpense/src/tls.cpp" bodystart="379" bodyend="414" declfile="src/travelexpense/header/tls.h" declline="239" declcolumn="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Seyahat Gideri Takibi - SSL/TLS ve Certificate Pinning Implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Bu dosya, SSL/TLS ve Certificate Pinning gereksinimlerinin implementasyonlarını içerir.</para>
+<para>NOT: Konsol uygulaması olduğu için network iletişimi sınırlıdır. Gerçek bir <ref refid="namespace_t_l_s" kindref="compound">TLS</ref> implementasyonu için OpenSSL veya benzeri bir kütüphane entegre edilebilir. Bu implementasyon, temel <ref refid="namespace_t_l_s" kindref="compound">TLS</ref> fonksiyonlarını sağlar ve certificate pinning mekanizmasını içerir.</para>
+<para><simplesect kind="author"><para>Binnur Altınışık </para>
+</simplesect>
+<simplesect kind="date"><para>2025 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/tls.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/encryption.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/security.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/safe_string.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_t_l_s" kindref="compound">TLS</ref><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>INTERNAL<sp/>STATE<sp/>-<sp/>İç<sp/>Durum<sp/>Yönetimi</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Certificate<sp/>pin<sp/>kayıtları<sp/>(hostname<sp/>-&gt;<sp/>pin<sp/>bilgisi)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>CertificatePin&gt;<sp/>g_certificatePins;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::mutex<sp/>g_pinsMutex;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SSL/TLS<sp/>BAĞLANTI<sp/>YÖNETİMİ</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1a1f4b0ad3a0bf0c1ee5ab94b4cc50e026" kindref="member">initializeTLSContext</ref>(TLSContext<sp/>*ctx)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Bağlamı<sp/>sıfırla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>std::memset(ctx,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(TLSContext));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>ctx-&gt;sslContext<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>ctx-&gt;sslConnection<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>ctx-&gt;isInitialized<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>ctx-&gt;isConnected<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>ctx-&gt;serverPort<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NOT:<sp/>Gerçek<sp/>implementasyonda<sp/>OpenSSL<sp/>SSL_CTX_new()<sp/>çağrısı<sp/>yapılmalı</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Şimdilik<sp/>stub<sp/>implementasyon:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SSL_CTX*<sp/>ssl_ctx<sp/>=<sp/>SSL_CTX_new(TLS_client_method());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ctx-&gt;sslContext<sp/>=<sp/>ssl_ctx;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Burada<sp/>OpenSSL<sp/>olmadan<sp/>temel<sp/>başlatma<sp/>yapılabilir</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Gerçek<sp/>uygulamada<sp/>OpenSSL<sp/>SSL_CTX<sp/>oluşturulur</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>ctx-&gt;isInitialized<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1a6033407b89e93d95ee934725ec8d0473" kindref="member">cleanupTLSContext</ref>(TLSContext<sp/>*ctx)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Bağlantıyı<sp/>kapat</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ctx-&gt;isConnected)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1a98d4f54141bfa0bda8cb66567d232e21" kindref="member">disconnectTLS</ref>(ctx);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NOT:<sp/>Gerçek<sp/>implementasyonda<sp/>OpenSSL<sp/>temizliği<sp/>yapılmalı</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(ctx-&gt;sslConnection)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>SSL_free((SSL*)ctx-&gt;sslConnection);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>ctx-&gt;sslConnection<sp/>=<sp/>nullptr;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(ctx-&gt;sslContext)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>SSL_CTX_free((SSL_CTX*)ctx-&gt;sslContext);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>ctx-&gt;sslContext<sp/>=<sp/>nullptr;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Bağlamı<sp/>sıfırla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>std::memset(ctx,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(TLSContext));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1a6cf999cc3f7623c8381b586c9c338a8b" kindref="member">connectTLS</ref>(TLSContext<sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hostname,<sp/>uint16_t<sp/>port)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx<sp/>||<sp/>!hostname<sp/>||<sp/>!ctx-&gt;isInitialized)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Hostname<sp/>ve<sp/>port&apos;u<sp/>kaydet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_safe_string_1a5555a53d845f3644d0dfc17c0f097075" kindref="member">SafeString::safeCopy</ref>(ctx-&gt;serverHostname,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ctx-&gt;serverHostname),<sp/>hostname);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>ctx-&gt;serverPort<sp/>=<sp/>port;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NOT:<sp/>Gerçek<sp/>implementasyonda<sp/>OpenSSL<sp/>ile<sp/>TLS<sp/>bağlantısı<sp/>kurulmalı</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Bu<sp/>örnek<sp/>sadece<sp/>temel<sp/>yapıyı<sp/>gösterir:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>1.<sp/>Socket<sp/>oluştur<sp/>ve<sp/>bağlan</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>2.<sp/>SSL_new()<sp/>ile<sp/>SSL<sp/>bağlantısı<sp/>oluştur</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>3.<sp/>SSL_set_fd()<sp/>ile<sp/>socket&apos;i<sp/>SSL&apos;e<sp/>bağla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>4.<sp/>SSL_connect()<sp/>ile<sp/>TLS<sp/>handshake<sp/>yap</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>5.<sp/>Certificate<sp/>pinning<sp/>kontrolü<sp/>yap</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Stub<sp/>implementasyon:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>ctx-&gt;isConnected<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Certificate<sp/>pinning<sp/>kontrolü<sp/>yap</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/>pinResult<sp/>=<sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1a0164fd8bb76e186edd32156957f30c67" kindref="member">verifyCertificatePin</ref>(ctx,<sp/>hostname);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pinResult<sp/>!=<sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Certificate<sp/>pinning<sp/>başarısız<sp/>-<sp/>bağlantıyı<sp/>kapat</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1a98d4f54141bfa0bda8cb66567d232e21" kindref="member">disconnectTLS</ref>(ctx);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabaf49c172e5177f15fafb78d0baade4ee5" kindref="member">ErrorCode::SecurityFailed</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1a98d4f54141bfa0bda8cb66567d232e21" kindref="member">disconnectTLS</ref>(TLSContext<sp/>*ctx)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NOT:<sp/>Gerçek<sp/>implementasyonda<sp/>OpenSSL<sp/>bağlantı<sp/>kapatılmalı</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(ctx-&gt;sslConnection)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>SSL_shutdown((SSL*)ctx-&gt;sslConnection);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>SSL_free((SSL*)ctx-&gt;sslConnection);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>ctx-&gt;sslConnection<sp/>=<sp/>nullptr;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>ctx-&gt;isConnected<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1aea3adfe31d55f246cc04f0d5355608a8" kindref="member">sendTLS</ref>(TLSContext<sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dataLen,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;bytesSent)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx<sp/>||<sp/>!data<sp/>||<sp/>dataLen<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx-&gt;isConnected)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabaaf98071f760be899f4fcf1d53a29ba17" kindref="member">ErrorCode::ConnectionFailed</ref>;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>bytesSent<sp/>=<sp/>dataLen;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1a3df401b12f4a6007d35adb739e4e52b4" kindref="member">receiveTLS</ref>(TLSContext<sp/>*ctx,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bufferLen,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;bytesReceived)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx<sp/>||<sp/>!buffer<sp/>||<sp/>bufferLen<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx-&gt;isConnected)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabaaf98071f760be899f4fcf1d53a29ba17" kindref="member">ErrorCode::ConnectionFailed</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NOT:<sp/>Gerçek<sp/>implementasyonda<sp/>OpenSSL<sp/>SSL_read()<sp/>çağrısı<sp/>yapılmalı</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>result<sp/>=<sp/>SSL_read((SSL*)ctx-&gt;sslConnection,<sp/>buffer,<sp/>static_cast&lt;int&gt;(bufferLen));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(result<sp/>&lt;=<sp/>0)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>return<sp/>TravelExpense::ErrorCode::ConnectionFailed;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>bytesReceived<sp/>=<sp/>static_cast&lt;size_t&gt;(result);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Stub<sp/>implementasyon:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>bytesReceived<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CERTIFICATE<sp/>PINNING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1a2bbc4fef6bf456551a761d3891672098" kindref="member">registerCertificatePin</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CertificatePin<sp/>*pin)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!pin<sp/>||<sp/>!pin-&gt;hostname[0])<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lock(g_pinsMutex);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Pin<sp/>bilgisini<sp/>kaydet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>std::string<sp/>hostname(pin-&gt;hostname);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>g_certificatePins[hostname]<sp/>=<sp/>*pin;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1a0164fd8bb76e186edd32156957f30c67" kindref="member">verifyCertificatePin</ref>(TLSContext<sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hostname)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx<sp/>||<sp/>!hostname)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lock(g_pinsMutex);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Hostname<sp/>için<sp/>pin<sp/>kaydı<sp/>var<sp/>mı<sp/>kontrol<sp/>et</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>std::string<sp/>hostnameStr(hostname);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>g_certificatePins.find(hostnameStr);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>==<sp/>g_certificatePins.end())<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pin<sp/>kaydı<sp/>yok<sp/>-<sp/>geçerli<sp/>kabul<sp/>et<sp/>(pin<sp/>zorunlu<sp/>değilse)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CertificatePin<sp/>&amp;expectedPin<sp/>=<sp/>it-&gt;second;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Sunucu<sp/>sertifikasının<sp/>fingerprint&apos;ini<sp/>al</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>actualFingerprint[65]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(expectedPin.pinCertificate)<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespace_travel_expense_1_1_t_l_s_1aee9c0722df199d9ce6a08ae0099f7658" kindref="member">getCertificateFingerprint</ref>(ctx,<sp/>actualFingerprint)<sp/>!=<sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabaf49c172e5177f15fafb78d0baade4ee5" kindref="member">ErrorCode::SecurityFailed</ref>;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fingerprint&apos;leri<sp/>karşılaştır<sp/>(case-insensitive)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_strnicmp(actualFingerprint,<sp/>expectedPin.fingerprint,<sp/>64)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strncasecmp(actualFingerprint,<sp/>expectedPin.fingerprint,<sp/>64)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fingerprint<sp/>uyuşmuyor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabaf49c172e5177f15fafb78d0baade4ee5" kindref="member">ErrorCode::SecurityFailed</ref>;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Public<sp/>key<sp/>hash<sp/>kontrolü</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(expectedPin.pinPublicKey)<sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>actualPublicKeyHash[65]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespace_travel_expense_1_1_t_l_s_1a0bc182873d8e7010c15d2356d92bbabd" kindref="member">getCertificatePublicKeyHash</ref>(ctx,<sp/>actualPublicKeyHash)<sp/>!=<sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabaf49c172e5177f15fafb78d0baade4ee5" kindref="member">ErrorCode::SecurityFailed</ref>;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Public<sp/>key<sp/>hash&apos;lerini<sp/>karşılaştır<sp/>(case-insensitive)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_strnicmp(actualPublicKeyHash,<sp/>expectedPin.publicKeyHash,<sp/>64)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strncasecmp(actualPublicKeyHash,<sp/>expectedPin.publicKeyHash,<sp/>64)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Public<sp/>key<sp/>hash<sp/>uyuşmuyor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabaf49c172e5177f15fafb78d0baade4ee5" kindref="member">ErrorCode::SecurityFailed</ref>;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1aee9c0722df199d9ce6a08ae0099f7658" kindref="member">getCertificateFingerprint</ref>(TLSContext<sp/>*ctx,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fingerprint)<sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx<sp/>||<sp/>!fingerprint)<sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NOT:<sp/>Gerçek<sp/>implementasyonda<sp/>OpenSSL<sp/>ile<sp/>sertifika<sp/>fingerprint&apos;i<sp/>alınmalı</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>X509*<sp/>cert<sp/>=<sp/>SSL_get_peer_certificate((SSL*)ctx-&gt;sslConnection);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(!cert)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>return<sp/>TravelExpense::ErrorCode::SecurityFailed;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>//<sp/>Sertifika<sp/>fingerprint&apos;ini<sp/>hesapla<sp/>(SHA-256)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>unsigned<sp/>char<sp/>hash[SHA256_DIGEST_LENGTH];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>unsigned<sp/>int<sp/>hashLen;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>X509_digest(cert,<sp/>EVP_sha256(),<sp/>hash,<sp/>&amp;hashLen);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>X509_free(cert);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>//<sp/>Hex<sp/>string&apos;e<sp/>çevir</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>SHA256_DIGEST_LENGTH;<sp/>++i)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>sprintf(&amp;fingerprint[i<sp/>*<sp/>2],<sp/>&quot;%02x&quot;,<sp/>hash[i]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Stub<sp/>implementasyon:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Gerçek<sp/>uygulamada<sp/>sunucu<sp/>sertifikasından<sp/>fingerprint<sp/>hesaplanır</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/>std::memset(fingerprint,<sp/>0,<sp/>65);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1a0bc182873d8e7010c15d2356d92bbabd" kindref="member">getCertificatePublicKeyHash</ref>(TLSContext<sp/>*ctx,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*publicKeyHash)<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx<sp/>||<sp/>!publicKeyHash)<sp/>{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NOT:<sp/>Gerçek<sp/>implementasyonda<sp/>OpenSSL<sp/>ile<sp/>public<sp/>key<sp/>hash&apos;i<sp/>alınmalı</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>X509*<sp/>cert<sp/>=<sp/>SSL_get_peer_certificate((SSL*)ctx-&gt;sslConnection);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(!cert)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>return<sp/>TravelExpense::ErrorCode::SecurityFailed;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>EVP_PKEY*<sp/>pkey<sp/>=<sp/>X509_get_pubkey(cert);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(!pkey)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>X509_free(cert);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>return<sp/>TravelExpense::ErrorCode::SecurityFailed;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>//<sp/>Public<sp/>key<sp/>hash&apos;ini<sp/>hesapla<sp/>(SHA-256)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>unsigned<sp/>char<sp/>hash[SHA256_DIGEST_LENGTH];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>unsigned<sp/>int<sp/>hashLen;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>//<sp/>Public<sp/>key&apos;den<sp/>hash<sp/>hesapla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>//<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>EVP_PKEY_free(pkey);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>X509_free(cert);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>//<sp/>Hex<sp/>string&apos;e<sp/>çevir</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>SHA256_DIGEST_LENGTH;<sp/>++i)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>sprintf(&amp;publicKeyHash[i<sp/>*<sp/>2],<sp/>&quot;%02x&quot;,<sp/>hash[i]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Stub<sp/>implementasyon:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Gerçek<sp/>uygulamada<sp/>sunucu<sp/>sertifikasının<sp/>public<sp/>key&apos;inden<sp/>hash<sp/>hesaplanır</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/>std::memset(publicKeyHash,<sp/>0,<sp/>65);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MUTUAL<sp/>AUTHENTICATION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1af3eee0c7c6f7d4d47aa903007191e8ba" kindref="member">loadClientCertificate</ref>(TLSContext<sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*certPath,</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*keyPath,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*keyPassword)<sp/>{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx<sp/>||<sp/>!certPath<sp/>||<sp/>!keyPath)<sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx-&gt;isInitialized)<sp/>{</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NOT:<sp/>Gerçek<sp/>implementasyonda<sp/>OpenSSL<sp/>ile<sp/>istemci<sp/>sertifikası<sp/>yüklenmeli</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SSL_CTX_use_certificate_file((SSL_CTX*)ctx-&gt;sslContext,<sp/>certPath,<sp/>SSL_FILETYPE_PEM);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(keyPassword)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>SSL_CTX_set_default_passwd_cb_userdata((SSL_CTX*)ctx-&gt;sslContext,<sp/>(void*)keyPassword);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SSL_CTX_use_PrivateKey_file((SSL_CTX*)ctx-&gt;sslContext,<sp/>keyPath,<sp/>SSL_FILETYPE_PEM);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SSL_CTX_check_private_key((SSL_CTX*)ctx-&gt;sslContext);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Stub<sp/>implementasyon:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Gerçek<sp/>uygulamada<sp/>OpenSSL<sp/>ile<sp/>sertifika<sp/>yüklenir</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1ab6f8f820ccd83d1e6062de39cc1d7386" kindref="member">setCAPath</ref>(TLSContext<sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*caPath)<sp/>{</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx<sp/>||<sp/>!caPath)<sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx-&gt;isInitialized)<sp/>{</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NOT:<sp/>Gerçek<sp/>implementasyonda<sp/>OpenSSL<sp/>ile<sp/>CA<sp/>sertifika<sp/>yolu<sp/>ayarlanmalı</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SSL_CTX_load_verify_locations((SSL_CTX*)ctx-&gt;sslContext,<sp/>caPath,<sp/>nullptr);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>veya</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SSL_CTX_load_verify_locations((SSL_CTX*)ctx-&gt;sslContext,<sp/>nullptr,<sp/>caPath);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Stub<sp/>implementasyon:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Gerçek<sp/>uygulamada<sp/>OpenSSL<sp/>ile<sp/>CA<sp/>yolu<sp/>ayarlanır</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1a7ec0910cdb0e632435dae6af7f06b345" kindref="member">verifyServerCertificate</ref>(TLSContext<sp/>*ctx)<sp/>{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx)<sp/>{</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx-&gt;isConnected)<sp/>{</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabaaf98071f760be899f4fcf1d53a29ba17" kindref="member">ErrorCode::ConnectionFailed</ref>;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NOT:<sp/>Gerçek<sp/>implementasyonda<sp/>OpenSSL<sp/>ile<sp/>sunucu<sp/>sertifikası<sp/>doğrulanmalı</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>long<sp/>verifyResult<sp/>=<sp/>SSL_get_verify_result((SSL*)ctx-&gt;sslConnection);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(verifyResult<sp/>!=<sp/>X509_V_OK)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>return<sp/>ErrorCode::ERROR_SECURITY_FAILED;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Stub<sp/>implementasyon:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Gerçek<sp/>uygulamada<sp/>OpenSSL<sp/>ile<sp/>sertifika<sp/>doğrulaması<sp/>yapılır</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="364"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight><highlight class="comment">//<sp/>YARDIMCI<sp/>FONKSİYONLAR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1ac17ef09e926723c9e4c55d10b7cf186c" kindref="member">calculateCertificateFingerprint</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*certPath,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fingerprint)<sp/>{</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!certPath<sp/>||<sp/>!fingerprint)<sp/>{</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/>std::memset(fingerprint,<sp/>0,<sp/>65);</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="377"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_t_l_s_1a6016f41b99ba6f5ffa92ae72bad03b15" kindref="member">getTLSErrorMessage</ref>(<ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/>errorCode,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*message,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>messageLen)<sp/>{</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!message<sp/>||<sp/>messageLen<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*errorMsg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Unknown<sp/>TLS<sp/>error&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(errorCode)<sp/>{</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabaaf98071f760be899f4fcf1d53a29ba17" kindref="member">ErrorCode::ConnectionFailed</ref>:</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>errorMsg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;TLS<sp/>connection<sp/>failed&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabaf49c172e5177f15fafb78d0baade4ee5" kindref="member">ErrorCode::SecurityFailed</ref>:</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>errorMsg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;TLS<sp/>security<sp/>check<sp/>failed<sp/>(certificate<sp/>pinning<sp/>failed)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>:</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>errorMsg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>TLS<sp/>input<sp/>parameter&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba2767828026039e8ba7b38973cbb701f2" kindref="member">ErrorCode::FileNotFound</ref>:</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>errorMsg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;TLS<sp/>certificate<sp/>file<sp/>not<sp/>found&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba86bef3f9f8669a7395a877ff014aecd9" kindref="member">ErrorCode::FileIO</ref>:</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>errorMsg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;TLS<sp/>file<sp/>I/O<sp/>error&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>errorMsg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Unknown<sp/>TLS<sp/>error&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_safe_string_1a5555a53d845f3644d0dfc17c0f097075" kindref="member">SafeString::safeCopy</ref>(message,<sp/>messageLen,<sp/>errorMsg);</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
+<codeline lineno="414"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TLS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>TravelExpense</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/travelexpense/src/tls.cpp"/>
+  </compounddef>
+</doxygen>
