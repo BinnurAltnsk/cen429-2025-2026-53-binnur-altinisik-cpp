@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="report_generator_8h" kind="file" language="C++">
     <compoundname>reportGenerator.h</compoundname>
     <includes refid="common_types_8h" local="yes">commonTypes.h</includes>
@@ -78,7 +78,7 @@
     <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
     <innernamespace refid="namespace_report_generator">ReportGenerator</innernamespace>
     <innernamespace refid="namespace_travel_expense_1_1_report_generator">TravelExpense::ReportGenerator</innernamespace>
-      <sectiondef kind="func">
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_report_generator_1a11092ae6775867e46e8394b8dc9df738" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
         <definition>ErrorCode TravelExpense::ReportGenerator::generateReport</definition>
@@ -117,7 +117,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -163,7 +163,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -209,7 +209,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, <ref refid="namespace_travel_expense_1_1_file_i_o" kindref="compound">FileIO</ref>, InvalidInput vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, <ref refid="namespace_travel_expense_1_1_file_i_o" kindref="compound">FileIO</ref>, InvalidInput vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -217,7 +217,7 @@
         </inbodydescription>
         <location file="src/travelexpense/src/reportGenerator.cpp" line="67" column="11" bodyfile="src/travelexpense/src/reportGenerator.cpp" bodystart="67" bodyend="83" declfile="src/travelexpense/header/reportGenerator.h" declline="78" declcolumn="29"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Seyahat Gideri Takibi - Rapor Oluşturma Modülü </para>
     </briefdescription>
@@ -231,6 +231,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>REPORT_GENERATOR_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REPORT_GENERATOR_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>

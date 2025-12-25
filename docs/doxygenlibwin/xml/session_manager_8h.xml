@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="session_manager_8h" kind="file" language="C++">
     <compoundname>sessionManager.h</compoundname>
     <includes refid="common_types_8h" local="yes">commonTypes.h</includes>
@@ -82,7 +82,7 @@
     <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
     <innernamespace refid="namespace_session_manager">SessionManager</innernamespace>
     <innernamespace refid="namespace_travel_expense_1_1_session_manager">TravelExpense::SessionManager</innernamespace>
-      <sectiondef kind="func">
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a12a41739ca5b6def4d5c42ef155d951c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
         <definition>ErrorCode TravelExpense::SessionManager::generateSessionKey</definition>
@@ -118,7 +118,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -174,7 +174,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -229,7 +229,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -261,7 +261,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -304,7 +304,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -348,7 +348,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -428,7 +428,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -507,7 +507,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -575,7 +575,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -642,7 +642,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR_CHECKSUM_MISMATCH = geçersiz) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (SUCCESS = geçerli, ERROR_CHECKSUM_MISMATCH = geçersiz) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -698,7 +698,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -753,7 +753,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR_CHECKSUM_MISMATCH = geçersiz) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (SUCCESS = geçerli, ERROR_CHECKSUM_MISMATCH = geçersiz) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -761,7 +761,7 @@
         </inbodydescription>
         <location file="src/travelexpense/src/sessionManager.cpp" line="380" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="380" bodyend="399" declfile="src/travelexpense/header/sessionManager.h" declline="203" declcolumn="29"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Seyahat Gideri Takibi - Oturum Yönetimi ve İletim Güvenliği. </para>
     </briefdescription>
@@ -783,6 +783,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SESSION_MANAGER_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SESSION_MANAGER_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>

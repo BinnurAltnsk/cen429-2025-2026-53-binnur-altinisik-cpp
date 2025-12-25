@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="session_manager_8cpp" kind="file" language="C++">
     <compoundname>sessionManager.cpp</compoundname>
     <includes refid="session_manager_8h" local="yes">../header/sessionManager.h</includes>
@@ -134,7 +134,7 @@
     </incdepgraph>
     <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
     <innernamespace refid="namespace_travel_expense_1_1_session_manager">TravelExpense::SessionManager</innernamespace>
-      <sectiondef kind="func">
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_session_manager_1a12a41739ca5b6def4d5c42ef155d951c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
         <definition>ErrorCode TravelExpense::SessionManager::generateSessionKey</definition>
@@ -170,7 +170,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -226,7 +226,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -281,7 +281,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -313,7 +313,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -356,7 +356,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -400,7 +400,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -480,7 +480,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -559,7 +559,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -627,7 +627,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -694,7 +694,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR_CHECKSUM_MISMATCH = geçersiz) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (SUCCESS = geçerli, ERROR_CHECKSUM_MISMATCH = geçersiz) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -750,7 +750,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -805,7 +805,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR_CHECKSUM_MISMATCH = geçersiz) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (SUCCESS = geçerli, ERROR_CHECKSUM_MISMATCH = geçersiz) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -813,7 +813,7 @@
         </inbodydescription>
         <location file="src/travelexpense/src/sessionManager.cpp" line="380" column="11" bodyfile="src/travelexpense/src/sessionManager.cpp" bodystart="380" bodyend="399" declfile="src/travelexpense/header/sessionManager.h" declline="203" declcolumn="29"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Seyahat Gideri Takibi - Oturum Yönetimi ve İletim Güvenliği Implementation. </para>
     </briefdescription>
@@ -827,10 +827,11 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/sessionManager.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/encryption.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/security.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/safe_string.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="session_manager_8h" kindref="compound">../header/sessionManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="encryption_8h" kindref="compound">../header/encryption.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="security_8h" kindref="compound">../header/security.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="safe__string_8h" kindref="compound">../header/safe_string.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctime&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -841,7 +842,7 @@
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>NOMINMAX</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&lt;iphlpapi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#pragma<sp/>comment(lib,<sp/>&quot;iphlpapi.lib&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#pragma<sp/>comment(lib,<sp/>&quot;iphlpapi.lib&quot;)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&lt;sys/ioctl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -851,7 +852,7 @@
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_session_manager" kindref="compound">SessionManager</ref><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense_1_1_session_manager" kindref="compound">SessionManager</ref><sp/>{</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>OTURUM<sp/>ANAHTARI<sp/>YÖNETİMİ</highlight><highlight class="normal"></highlight></codeline>

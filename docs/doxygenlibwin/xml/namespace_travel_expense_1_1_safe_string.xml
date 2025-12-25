@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="namespace_travel_expense_1_1_safe_string" kind="namespace" language="C++">
     <compoundname>TravelExpense::SafeString</compoundname>
-      <sectiondef kind="func">
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_safe_string_1a5555a53d845f3644d0dfc17c0f097075" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
         <definition>bool TravelExpense::SafeString::safeCopy</definition>
@@ -115,7 +115,7 @@
         </inbodydescription>
         <location file="src/travelexpense/header/safe_string.h" line="73" column="13" bodyfile="src/travelexpense/header/safe_string.h" bodystart="73" bodyend="100"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

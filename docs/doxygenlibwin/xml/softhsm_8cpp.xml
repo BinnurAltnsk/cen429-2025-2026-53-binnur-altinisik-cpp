@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="softhsm_8cpp" kind="file" language="C++">
     <compoundname>softhsm.cpp</compoundname>
     <includes refid="softhsm_8h" local="yes">../header/softhsm.h</includes>
@@ -107,7 +107,7 @@
     </incdepgraph>
     <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
     <innernamespace refid="namespace_travel_expense_1_1_soft_h_s_m">TravelExpense::SoftHSM</innernamespace>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="softhsm_8cpp_1a1abc5e0851defa37515dd9da299f411e" prot="public" static="no">
         <name>PKCS11_NO_EXPORTS</name>
         <briefdescription>
@@ -190,11 +190,11 @@
         </inbodydescription>
         <location file="src/travelexpense/src/softhsm.cpp" line="69" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="69" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" prot="public" static="no">
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" prot="public" static="no">
         <type><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref></type>
-        <definition>using TravelExpense::SoftHSM::ErrorCode = typedef TravelExpense::ErrorCode</definition>
+        <definition>using TravelExpense::SoftHSM::ErrorCode =  TravelExpense::ErrorCode</definition>
         <argsstring></argsstring>
         <name>ErrorCode</name>
         <qualifiedname>TravelExpense::SoftHSM::ErrorCode</qualifiedname>
@@ -206,8 +206,8 @@
         </inbodydescription>
         <location file="src/travelexpense/src/softhsm.cpp" line="77" column="1" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="77" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
+    </sectiondef>
+    <sectiondef kind="var">
       <memberdef kind="variable" id="namespace_travel_expense_1_1_soft_h_s_m_1a25b47e9b2a2df901ca4dc5044147214a" prot="public" static="yes" mutable="no">
         <type><ref refid="softhsm_8cpp_1a3b81e0f561932d8761fb8675437e2659" kindref="member">DL_HANDLE</ref></type>
         <definition>DL_HANDLE TravelExpense::SoftHSM::g_pkcs11Library</definition>
@@ -304,7 +304,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/softhsm.cpp" line="96" column="13" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="96" bodyend="-1"/>
+        <location file="src/travelexpense/src/softhsm.cpp" line="96" column="13" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="96" bodyend="96"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_soft_h_s_m_1a18fb49db0706ae6bc570f9054425004d" prot="public" static="yes" mutable="no">
         <type>char</type>
@@ -320,10 +320,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/softhsm.cpp" line="98" column="13" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="98" bodyend="-1"/>
+        <location file="src/travelexpense/src/softhsm.cpp" line="98" column="13" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="98" bodyend="98"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="softhsm_8cpp_1a10f23ed946357e78d5d1b9a75dea7c33" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
         <definition>static int file_exists_helper</definition>
@@ -366,10 +366,10 @@
           <declname>rv</declname>
         </param>
         <briefdescription>
-<para>PKCS#11 return code&apos;unu ErrorCode&apos;a çevir. </para>
+<para>PKCS#11 return code&apos;unu <ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref>&apos;a çevir. </para>
         </briefdescription>
         <detaileddescription>
-<para>Bu helper fonksiyon, PKCS#11 standardından dönen return code&apos;ları uygulamanın ErrorCode enum&apos;una çevirir. PKCS#11 hata kodları CKR_* formatında olup, bunlar uygulama seviyesinde daha anlamlı hata kodlarına dönüştürülür.</para>
+<para>Bu helper fonksiyon, PKCS#11 standardından dönen return code&apos;ları uygulamanın <ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> enum&apos;una çevirir. PKCS#11 hata kodları CKR_* formatında olup, bunlar uygulama seviyesinde daha anlamlı hata kodlarına dönüştürülür.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>rv</parametername>
@@ -379,7 +379,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Uygulama seviyesinde hata kodu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Uygulama seviyesinde hata kodu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -445,7 +445,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, Unknown) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu (Success, FileNotFound, Unknown) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -503,10 +503,9 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu</para>
 </simplesect>
-</para>
-<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> modülünü başlatır ve belirtilen PKCS#11 kütüphanesini yükler. Eğer <computeroutput>libraryPath</computeroutput> nullptr ise, sistemdeki varsayılan kütüphane aranır. <computeroutput>tokenLabel</computeroutput> ve <computeroutput>pin</computeroutput> nullptr ise varsayılan değerler kullanılır.</para>
+<ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> modülünü başlatır ve belirtilen PKCS#11 kütüphanesini yükler. Eğer <computeroutput>libraryPath</computeroutput> nullptr ise, sistemdeki varsayılan kütüphane aranır. <computeroutput>tokenLabel</computeroutput> ve <computeroutput>pin</computeroutput> nullptr ise varsayılan değerler kullanılır.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, zaten başlatılmışsa (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24aadee5f03c2c4e73657824e028494b18c0" kindref="member">InitStatus::INITIALIZED</ref>) hiçbir işlem yapmaz ve Success döner. PKCS#11 kütüphanesi yüklendikten sonra, C_Initialize() çağrılır ve token label ile PIN kaydedilir.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -534,7 +533,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -552,13 +551,12 @@
 <para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref>&apos;yi kapat ve kaynakları temizle. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+<para><simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu</para>
 </simplesect>
-</para>
-<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> modülünü kapatır ve tüm kaynakları temizler. Açık session varsa kapatılır, PKCS#11 finalize edilir ve dinamik kütüphane kapatılır. Token label ve PIN bilgileri güvenli şekilde temizlenir.</para>
+<ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> modülünü kapatır ve tüm kaynakları temizler. Açık session varsa kapatılır, PKCS#11 finalize edilir ve dinamik kütüphane kapatılır. Token label ve PIN bilgileri güvenli şekilde temizlenir.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, zaten kapatılmışsa (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24aa02de9649e258d1dd94056e676061e969" kindref="member">InitStatus::NOT_INITIALIZED</ref>) hiçbir işlem yapmaz ve Success döner.</para>
 </simplesect>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -576,11 +574,10 @@
 <para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> başlatma durumunu kontrol et. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>InitStatus Başlatma durumu</para>
+<para><simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24a" kindref="member">InitStatus</ref> Başlatma durumu</para>
 </simplesect>
-</para>
-<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> modülünün mevcut başlatma durumunu döndürür.</para>
-<para><simplesect kind="return"><para>InitStatus Mevcut durum (NOT_INITIALIZED, INITIALIZED, ERROR) </para>
+<ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> modülünün mevcut başlatma durumunu döndürür.</para>
+<para><simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24a" kindref="member">InitStatus</ref> Mevcut durum (NOT_INITIALIZED, INITIALIZED, ERROR) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -636,10 +633,9 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu</para>
 </simplesect>
-</para>
-<para><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> token&apos;ları genellikle sistem seviyesinde oluşturulur. Bu fonksiyon sadece token label ve PIN bilgilerini kaydeder. Gerçek token oluşturma işlemi için <ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> CLI komutları gerekir.</para>
+<ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> token&apos;ları genellikle sistem seviyesinde oluşturulur. Bu fonksiyon sadece token label ve PIN bilgilerini kaydeder. Gerçek token oluşturma işlemi için <ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref> CLI komutları gerekir.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, simplified bir implementasyon olup gerçek token oluşturma işlemini yapmaz. Sadece parametreleri saklar.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -667,7 +663,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -711,10 +707,9 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu</para>
 </simplesect>
-</para>
-<para>Belirtilen token&apos;ı açar ve PKCS#11 session başlatır. Token label&apos;a göre slot listesinde token aranır, bulunduktan sonra session açılır ve PIN ile login yapılır.</para>
+Belirtilen token&apos;ı açar ve PKCS#11 session başlatır. Token label&apos;a göre slot listesinde token aranır, bulunduktan sonra session açılır ve PIN ile login yapılır.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, <ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref>&apos;nin INITIALIZED durumunda olmasını gerektirir. Eğer label nullptr ise, kaydedilmiş g_tokenLabel kullanılır. Eğer pin nullptr ise, kaydedilmiş g_pin kullanılır.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -734,27 +729,11 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
-<para>Slot listesi alma</para>
-<para>C_GetSlotList ile token içeren slot&apos;ların listesi alınır. İlk çağrıda slot sayısı alınır, ikinci çağrıda slot ID&apos;leri alınır.</para>
-<para>&lt; Token içeren slot sayısı (çıktı)</para>
-<para>&lt; Slot ID&apos;leri dizisi</para>
-<para>Label&apos;a göre token bulma</para>
-<para>Her slot&apos;taki token&apos;ın label&apos;ı kontrol edilir ve aranan label ile karşılaştırılır. Token label&apos;ları PKCS#11&apos;de null-terminated değildir, boşluklarla doldurulmuş olabilir, bu nedenle temizlenir.</para>
-<para>&lt; Varsayılan olarak ilk slot</para>
-<para>&lt; Aranacak token label</para>
-<para>Token label karşılaştırması</para>
-<para>Her slot&apos;taki token&apos;ın label&apos;ı C_GetTokenInfo ile alınır ve aranan label ile karşılaştırılır. Eşleşme bulunursa, o slot seçilir.</para>
-<para>PKCS#11 session açma</para>
-<para>Seçilen slot&apos;ta read-write session açılır. CKF_RW_SESSION flag&apos;i ile yazma işlemleri yapılabilir, CKF_SERIAL_SESSION flag&apos;i ile serial session açılır (paralel session değil).</para>
-<para>&lt; Read-write ve serial session flag&apos;leri</para>
-<para>PIN ile login</para>
-<para>Kullanıcı PIN&apos;i ile token&apos;a login yapılır. CKU_USER ile normal kullanıcı olarak login yapılır. Eğer zaten login yapılmışsa (CKR_USER_ALREADY_LOGGED_IN), hata olarak kabul edilmez.</para>
-<para>&lt; Kullanılacak PIN (parametre veya kaydedilmiş)</para>
 <para>Slot listesi alma</para>
 <para>C_GetSlotList ile token içeren slot&apos;ların listesi alınır. İlk çağrıda slot sayısı alınır, ikinci çağrıda slot ID&apos;leri alınır.</para>
 <para>&lt; Token içeren slot sayısı (çıktı)</para>
@@ -785,13 +764,12 @@
         </briefdescription>
         <detaileddescription>
 <para>Token kapat ve session&apos;ı sonlandır.</para>
-<para><simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+<para><simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu</para>
 </simplesect>
-</para>
-<para>Açık token session&apos;ını kapatır. Önce logout yapılır, sonra session kapatılır. Session handle ve current slot sıfırlanır.</para>
+Açık token session&apos;ını kapatır. Önce logout yapılır, sonra session kapatılır. Session handle ve current slot sıfırlanır.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, session açık değilse hiçbir işlem yapmaz ve Success döner.</para>
 </simplesect>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -863,10 +841,9 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu</para>
 </simplesect>
-</para>
-<para>Belirtilen tipte ve kullanım amacına göre kriptografik anahtar oluşturur. Desteklenen anahtar tipleri: AES-256, RSA-2048, EC-P256. Anahtar, token üzerinde saklanır ve keyId olarak döndürülür.</para>
+Belirtilen tipte ve kullanım amacına göre kriptografik anahtar oluşturur. Desteklenen anahtar tipleri: AES-256, RSA-2048, EC-P256. Anahtar, token üzerinde saklanır ve keyId olarak döndürülür.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Simetrik anahtarlar (AES) için C_GenerateKey, asimetrik anahtarlar (RSA, EC) için C_GenerateKeyPair kullanılır.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -910,54 +887,11 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
-<para>PKCS#11 mekanizma ve attribute template oluşturma</para>
-<para>Key type&apos;a göre uygun PKCS#11 mekanizması ve attribute template&apos;leri oluşturulur. Her anahtar tipi için farklı mekanizma ve key class kullanılır.</para>
-<para>&lt; Varsayılan: Secret key (AES için)</para>
-<para>&lt; Varsayılan: AES key type</para>
-<para>&lt; 32 bytes for AES-256</para>
-<para>Anahtar tipine göre PKCS#11 mekanizması ve key class ayarlama</para>
-<para>Her anahtar tipi için farklı PKCS#11 mekanizması ve key class kullanılır:<itemizedlist>
-<listitem><para>AES_256: CKM_AES_KEY_GEN, CKO_SECRET_KEY, CKK_AES</para>
-</listitem><listitem><para>RSA_2048: CKM_RSA_PKCS_KEY_PAIR_GEN, CKO_PRIVATE_KEY, CKK_RSA</para>
-</listitem><listitem><para>EC_P256: CKM_EC_KEY_PAIR_GEN, CKO_PRIVATE_KEY, CKK_EC</para>
-</listitem></itemizedlist>
-</para>
-<para>PKCS#11 attribute template oluşturma</para>
-<para>Anahtar özelliklerini belirten PKCS#11 attribute&apos;ları oluşturulur. Her attribute, anahtarın nasıl kullanılacağını ve saklanacağını belirtir.</para>
-<para>&lt; Anahtar sınıfı (secret key veya private key)</para>
-<para>&lt; Anahtar tipi (AES, RSA, EC)</para>
-<para>&lt; Anahtar etiketi (kullanıcı tanımlı)</para>
-<para>&lt; Boolean true değeri (PKCS#11 attribute&apos;ları için)</para>
-<para>&lt; Boolean false değeri (kullanılmıyor)</para>
-<para>&lt; Anahtar token&apos;da saklanacak (kalıcı)</para>
-<para>&lt; Anahtar private (sadece PIN ile erişilebilir)</para>
-<para>Key usage attributes - Anahtar kullanım amacına göre özellikler</para>
-<para>Anahtarın hangi işlemler için kullanılabileceğini belirten attribute&apos;lar eklenir:<itemizedlist>
-<listitem><para>ENCRYPT_DECRYPT: CKA_ENCRYPT ve CKA_DECRYPT attribute&apos;ları</para>
-</listitem><listitem><para>SIGN_VERIFY: CKA_SIGN ve CKA_VERIFY attribute&apos;ları</para>
-</listitem></itemizedlist>
-</para>
-<para>AES için key size attribute&apos;u</para>
-<para>AES anahtarları için key size (256 bit = 32 byte) belirtilir. RSA ve EC anahtarları için key size attribute&apos;u gerekmez.</para>
-<para>&lt; AES anahtar uzunluğu (32 byte)</para>
-<para>PKCS#11 anahtar oluşturma</para>
-<para>Simetrik anahtarlar (AES) için C_GenerateKey, asimetrik anahtarlar (RSA, EC) için C_GenerateKeyPair kullanılır. Key pair generation için public key template&apos;i de oluşturulmalıdır.</para>
-<para>&lt; Oluşturulan anahtar handle&apos;ı</para>
-<para>&lt; PKCS#11 return code</para>
-<para>Key pair generation - Public key template</para>
-<para>Asimetrik anahtarlar (RSA, EC) için public key template&apos;i oluşturulur. Public key template&apos;i, key class ve key type bilgilerini içerir.</para>
-<para>&lt; Public key attribute template</para>
-<para>&lt; Public key template attribute sayısı</para>
-<para>Key ID oluşturma</para>
-<para>Oluşturulan anahtarın handle&apos;ı keyId olarak kullanılır. Eğer keyId buffer yeterli büyüklükteyse (CK_OBJECT_HANDLE boyutu), handle kopyalanır. Aksi takdirde, label&apos;den hash oluşturulur.</para>
-<para>Key ID buffer yeterli: handle&apos;ı kopyala</para>
-<para>Key ID buffer küçük: label&apos;den hash oluştur</para>
-<para>Bu durumda, label&apos;ın ilk N karakteri keyId olarak kullanılır. N, keyId buffer boyutu ve label uzunluğunun minimum&apos;udur.</para>
 <para>PKCS#11 mekanizma ve attribute template oluşturma</para>
 <para>Key type&apos;a göre uygun PKCS#11 mekanizması ve attribute template&apos;leri oluşturulur. Her anahtar tipi için farklı mekanizma ve key class kullanılır.</para>
 <para>&lt; Varsayılan: Secret key (AES için)</para>
@@ -1052,10 +986,9 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu</para>
 </simplesect>
-</para>
-<para>Belirtilen label&apos;a sahip anahtarı token üzerinde arar ve keyId&apos;sini döndürür. Arama, C_FindObjectsInit ve C_FindObjects kullanılarak yapılır.</para>
+Belirtilen label&apos;a sahip anahtarı token üzerinde arar ve keyId&apos;sini döndürür. Arama, C_FindObjectsInit ve C_FindObjects kullanılarak yapılır.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Anahtar bulunamazsa FileNotFound döner.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -1083,7 +1016,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu (Success, FileNotFound, InvalidInput) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1126,10 +1059,9 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu</para>
 </simplesect>
-</para>
-<para>Belirtilen keyId&apos;ye sahip anahtarı token üzerinden siler. C_DestroyObject kullanılarak anahtar kalıcı olarak silinir.</para>
+Belirtilen keyId&apos;ye sahip anahtarı token üzerinden siler. C_DestroyObject kullanılarak anahtar kalıcı olarak silinir.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Anahtar silindikten sonra geri getirilemez.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -1149,7 +1081,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1254,10 +1186,9 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu</para>
 </simplesect>
-</para>
-<para>Belirtilen anahtar ile veriyi AES-CBC modunda şifreler. IV (Initialization Vector) belirtilmemişse, PKCS#11&apos;nin rastgele sayı üreticisi ile oluşturulur.</para>
+Belirtilen anahtar ile veriyi AES-CBC modunda şifreler. IV (Initialization Vector) belirtilmemişse, PKCS#11&apos;nin rastgele sayı üreticisi ile oluşturulur.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). AES-CBC-PAD mekanizması kullanılır, bu nedenle padding otomatik olarak eklenir. Ciphertext boyutu, plaintext boyutundan büyük olabilir.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -1317,20 +1248,11 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
-<para>IV (Initialization Vector) oluşturma</para>
-<para>Eğer IV verilmemişse, PKCS#11&apos;nin rastgele sayı üreticisi ile 16 byte (128 bit) IV oluşturulur. IV, AES-CBC modunda her şifreleme işlemi için benzersiz olmalıdır.</para>
-<para>&lt; Local IV buffer (16 byte = AES block size)</para>
-<para>IV verilmemiş: PKCS#11 ile rastgele IV oluştur</para>
-<para>AES-CBC mekanizması ayarlama</para>
-<para>CKM_AES_CBC_PAD mekanizması kullanılır. Bu mekanizma, PKCS7 padding otomatik olarak ekler ve kaldırır. IV, mechanism parametresi olarak belirtilir (16 byte).</para>
-<para>&lt; AES-CBC modu + PKCS7 padding</para>
-<para>&lt; IV (16 byte)</para>
-<para>&lt; IV uzunluğu (16 byte)</para>
 <para>IV (Initialization Vector) oluşturma</para>
 <para>Eğer IV verilmemişse, PKCS#11&apos;nin rastgele sayı üreticisi ile 16 byte (128 bit) IV oluşturulur. IV, AES-CBC modunda her şifreleme işlemi için benzersiz olmalıdır.</para>
 <para>&lt; Local IV buffer (16 byte = AES block size)</para>
@@ -1440,10 +1362,9 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu</para>
 </simplesect>
-</para>
-<para>Belirtilen anahtar ile şifrelenmiş veriyi AES-CBC modunda çözer. IV (Initialization Vector) belirtilmemişse, ciphertext&apos;in ilk 16 byte&apos;ı IV olarak kullanılır.</para>
+Belirtilen anahtar ile şifrelenmiş veriyi AES-CBC modunda çözer. IV (Initialization Vector) belirtilmemişse, ciphertext&apos;in ilk 16 byte&apos;ı IV olarak kullanılır.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). AES-CBC-PAD mekanizması kullanılır, bu nedenle padding otomatik olarak kaldırılır. Plaintext boyutu, ciphertext boyutundan küçük veya eşit olabilir.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -1503,21 +1424,11 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
-<para>IV (Initialization Vector) alma</para>
-<para>Eğer IV verilmemişse, ciphertext&apos;in ilk 16 byte&apos;ı IV olarak kullanılır. Bu, yaygın bir uygulama pratiğidir (IV + ciphertext formatı). Eğer IV verilmemiş ve ciphertext 16 byte&apos;dan küçükse, hata döner.</para>
-<para>&lt; Local IV buffer (16 byte = AES block size)</para>
-<para>IV verilmemiş ve ciphertext yeterli uzunlukta: Ciphertext&apos;in ilk 16 byte&apos;ı IV olarak kullanılır.</para>
-<para>IV verilmemiş ve ciphertext yeterli uzunlukta değil: hata</para>
-<para>AES-CBC mekanizması ayarlama</para>
-<para>CKM_AES_CBC_PAD mekanizması kullanılır. Bu mekanizma, PKCS7 padding otomatik olarak kaldırır. IV, mechanism parametresi olarak belirtilir (16 byte).</para>
-<para>&lt; AES-CBC modu + PKCS7 padding</para>
-<para>&lt; IV (16 byte)</para>
-<para>&lt; IV uzunluğu (16 byte)</para>
 <para>IV (Initialization Vector) alma</para>
 <para>Eğer IV verilmemişse, ciphertext&apos;in ilk 16 byte&apos;ı IV olarak kullanılır. Bu, yaygın bir uygulama pratiğidir (IV + ciphertext formatı). Eğer IV verilmemiş ve ciphertext 16 byte&apos;dan küçükse, hata döner.</para>
 <para>&lt; Local IV buffer (16 byte = AES block size)</para>
@@ -1615,10 +1526,9 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu</para>
 </simplesect>
-</para>
-<para>Belirtilen anahtar ile veriyi SHA256 hash&apos;leyip RSA-PKCS imzası oluşturur. SHA256-RSA-PKCS mekanizması kullanılır.</para>
+Belirtilen anahtar ile veriyi SHA256 hash&apos;leyip RSA-PKCS imzası oluşturur. SHA256-RSA-PKCS mekanizması kullanılır.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Veri önce SHA256 ile hash&apos;lenir, sonra RSA ile imzalanır. Signature boyutu, RSA anahtar boyutuna bağlıdır (2048-bit için 256 byte).</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -1670,21 +1580,11 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
-<para>SHA256-RSA-PKCS mekanizması ayarlama</para>
-<para>CKM_SHA256_RSA_PKCS mekanizması kullanılır. Bu mekanizma, veriyi önce SHA-256 ile hash&apos;ler, sonra RSA-PKCS ile imzalar. Parametre gerektirmez.</para>
-<para>&lt; SHA-256 hash + RSA-PKCS imzalama</para>
-<para>&lt; Parametre gerekmez</para>
-<para>&lt; Parametre uzunluğu 0</para>
-<para>İmzalama işlemini başlatma</para>
-<para>C_SignInit ile imzalama mekanizması ve anahtar ayarlanır. Bu işlem, sonraki C_Sign çağrısı için hazırlık yapar.</para>
-<para>Veriyi imzalama</para>
-<para>C_Sign ile veri imzalanır. Veri önce SHA-256 ile hash&apos;lenir, sonra RSA-PKCS ile imzalanır. İmza boyutu, RSA anahtar boyutuna bağlıdır (2048-bit için 256 byte).</para>
-<para>&lt; İmza buffer boyutu (giriş), gerçek imza boyutu (çıktı)</para>
 <para>SHA256-RSA-PKCS mekanizması ayarlama</para>
 <para>CKM_SHA256_RSA_PKCS mekanizması kullanılır. Bu mekanizma, veriyi önce SHA-256 ile hash&apos;ler, sonra RSA-PKCS ile imzalar. Parametre gerektirmez.</para>
 <para>&lt; SHA-256 hash + RSA-PKCS imzalama</para>
@@ -1784,8 +1684,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true İmza geçerli, false Geçersiz</para>
 </simplesect>
-</para>
-<para>Belirtilen anahtar ile veriyi SHA256 hash&apos;leyip RSA-PKCS imzasını doğrular. SHA256-RSA-PKCS mekanizması kullanılır.</para>
+Belirtilen anahtar ile veriyi SHA256 hash&apos;leyip RSA-PKCS imzasını doğrular. SHA256-RSA-PKCS mekanizması kullanılır.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Veri önce SHA256 ile hash&apos;lenir, sonra RSA ile imza doğrulanır.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -1852,16 +1751,6 @@
 <para>İmzayı doğrulama</para>
 <para>C_Verify ile imza doğrulanır. Veri önce SHA-256 ile hash&apos;lenir, sonra RSA-PKCS ile imza doğrulanır. İmza geçerliyse CKR_OK döner.</para>
 <para>&lt; true = imza geçerli, false = imza geçersiz veya hata</para>
-<para>SHA256-RSA-PKCS mekanizması ayarlama</para>
-<para>CKM_SHA256_RSA_PKCS mekanizması kullanılır. Bu mekanizma, veriyi önce SHA-256 ile hash&apos;ler, sonra RSA-PKCS ile imza doğrular. Parametre gerektirmez.</para>
-<para>&lt; SHA-256 hash + RSA-PKCS imza doğrulama</para>
-<para>&lt; Parametre gerekmez</para>
-<para>&lt; Parametre uzunluğu 0</para>
-<para>İmza doğrulama işlemini başlatma</para>
-<para>C_VerifyInit ile imza doğrulama mekanizması ve anahtar ayarlanır. Bu işlem, sonraki C_Verify çağrısı için hazırlık yapar.</para>
-<para>İmzayı doğrulama</para>
-<para>C_Verify ile imza doğrulanır. Veri önce SHA-256 ile hash&apos;lenir, sonra RSA-PKCS ile imza doğrulanır. İmza geçerliyse CKR_OK döner.</para>
-<para>&lt; true = imza geçerli, false = imza geçersiz veya hata</para>
         </inbodydescription>
         <location file="src/travelexpense/src/softhsm.cpp" line="1128" column="6" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="1128" bodyend="1180" declfile="src/travelexpense/header/softhsm.h" declline="219" declcolumn="24"/>
       </memberdef>
@@ -1901,10 +1790,9 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu</para>
 </simplesect>
-</para>
-<para>PKCS#11&apos;nin rastgele sayı üreticisini kullanarak kriptografik olarak güvenli rastgele veri üretir. C_GenerateRandom fonksiyonu kullanılır.</para>
+PKCS#11&apos;nin rastgele sayı üreticisini kullanarak kriptografik olarak güvenli rastgele veri üretir. C_GenerateRandom fonksiyonu kullanılır.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Üretilen rastgele veriler, kriptografik işlemler için uygundur (IV, salt, vb.).</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -1924,7 +1812,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -1968,10 +1856,9 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu</para>
 </simplesect>
-</para>
-<para>Sistemde mevcut tüm token&apos;ların label&apos;larını listeler. C_GetSlotList ve C_GetTokenInfo kullanılarak token bilgileri alınır.</para>
+Sistemde mevcut tüm token&apos;ların label&apos;larını listeler. C_GetSlotList ve C_GetTokenInfo kullanılarak token bilgileri alınır.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, <ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref>&apos;nin INITIALIZED durumunda olmasını gerektirir. Maksimum 10 token listelenir. Token label&apos;ları, boşluklarla doldurulmuş olabilir, bu nedenle son boşluklar temizlenir.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -1991,17 +1878,11 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
-<para>Token label&apos;larını toplama</para>
-<para>Her slot&apos;taki token&apos;ın label&apos;ı alınır ve listeye eklenir. Maksimum 10 token listelenir (performans için sınır). Token label&apos;ları PKCS#11&apos;de boşluklarla doldurulmuş olabilir, bu nedenle son boşluklar temizlenir.</para>
-<para>&lt; Bulunan token sayısı</para>
-<para>&lt; Token bilgisi</para>
-<para>Token bulundu: Label&apos;i kopyala ve boşlukları temizle</para>
-<para>PKCS#11 token label&apos;ları 32 byte uzunluğunda ve null-terminated değildir. Boşluklarla doldurulmuş olabilir, bu nedenle son boşluklar temizlenir.</para>
 <para>Token label&apos;larını toplama</para>
 <para>Her slot&apos;taki token&apos;ın label&apos;ı alınır ve listeye eklenir. Maksimum 10 token listelenir (performans için sınır). Token label&apos;ları PKCS#11&apos;de boşluklarla doldurulmuş olabilir, bu nedenle son boşluklar temizlenir.</para>
 <para>&lt; Bulunan token sayısı</para>
@@ -2047,10 +1928,9 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu</para>
 </simplesect>
-</para>
-<para>Token üzerinde mevcut tüm secret key&apos;lerin label&apos;larını listeler. C_FindObjectsInit, C_FindObjects ve C_GetAttributeValue kullanılarak anahtar bilgileri alınır.</para>
+Token üzerinde mevcut tüm secret key&apos;lerin label&apos;larını listeler. C_FindObjectsInit, C_FindObjects ve C_GetAttributeValue kullanılarak anahtar bilgileri alınır.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Maksimum 50 anahtar listelenir. Sadece secret key&apos;ler listelenir.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -2070,27 +1950,11 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
-<para>Anahtar label&apos;larını toplama</para>
-<para>Token üzerindeki tüm secret key&apos;lerin label&apos;ları alınır ve listeye eklenir. Maksimum 50 anahtar listelenir (performans için sınır). Her anahtar için C_GetAttributeValue ile label attribute&apos;u alınır.</para>
-<para>&lt; Bulunan anahtar sayısı</para>
-<para>&lt; Maksimum listelenecek anahtar sayısı</para>
-<para>Anahtar bulma ve label alma döngüsü</para>
-<para>C_FindObjects ile her iterasyonda bir anahtar bulunur. Her anahtar için C_GetAttributeValue ile label attribute&apos;u alınır. Label bulunursa, listeye eklenir.</para>
-<para>&lt; Bulunan anahtar handle&apos;ı</para>
-<para>&lt; Bulunan obje sayısı</para>
-<para>Anahtar bulunamadı: döngüden çık</para>
-<para>Label attribute&apos;unu alma</para>
-<para>C_GetAttributeValue ile anahtarın CKA_LABEL attribute&apos;u alınır. Label, 64 karakter buffer&apos;a yazılır ve null-terminated olarak ayarlanır.</para>
-<para>&lt; Label attribute tipi</para>
-<para>&lt; Label buffer (64 karakter)</para>
-<para>&lt; Buffer boyutu - 1 (null terminator için)</para>
-<para>Label başarıyla alındı: listeye ekle</para>
-<para>&lt; Null terminator garanti</para>
 <para>Anahtar label&apos;larını toplama</para>
 <para>Token üzerindeki tüm secret key&apos;lerin label&apos;ları alınır ve listeye eklenir. Maksimum 50 anahtar listelenir (performans için sınır). Her anahtar için C_GetAttributeValue ile label attribute&apos;u alınır.</para>
 <para>&lt; Bulunan anahtar sayısı</para>
@@ -2186,10 +2050,9 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu</para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu</para>
 </simplesect>
-</para>
-<para>Belirtilen anahtar verisini token üzerine import eder. C_CreateObject kullanılarak anahtar oluşturulur ve token üzerinde saklanır.</para>
+Belirtilen anahtar verisini token üzerine import eder. C_CreateObject kullanılarak anahtar oluşturulur ve token üzerinde saklanır.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, açık bir session gerektirir (<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken()</ref> çağrılmış olmalı). Desteklenen anahtar tipleri: AES-256, RSA-2048, EC-P256. Anahtar, token üzerinde saklanır ve keyId olarak döndürülür.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -2241,7 +2104,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -2285,49 +2148,10 @@
 <para>Key ID buffer yeterli: handle&apos;ı kopyala</para>
 <para>Key ID buffer yetersiz: hata döner</para>
 <para>Import işleminde, keyId buffer mutlaka CK_OBJECT_HANDLE boyutunda olmalıdır. Aksi takdirde, handle kopyalanamaz.</para>
-<para>PKCS#11 attribute template oluşturma (import için)</para>
-<para>Import edilecek anahtar için PKCS#11 attribute template&apos;i oluşturulur. Anahtar tipine göre farklı key class ve key type kullanılır.</para>
-<para>&lt; Attribute template dizisi (max 10 attribute)</para>
-<para>&lt; Template attribute sayısı</para>
-<para>&lt; Varsayılan: Secret key (AES için)</para>
-<para>&lt; Varsayılan: AES key type</para>
-<para>&lt; Boolean true değeri</para>
-<para>Anahtar tipine göre key class ve key type ayarlama</para>
-<para>Her anahtar tipi için farklı key class ve key type kullanılır:<itemizedlist>
-<listitem><para>AES_256: CKO_SECRET_KEY, CKK_AES</para>
-</listitem><listitem><para>RSA_2048: CKO_PRIVATE_KEY, CKK_RSA</para>
-</listitem><listitem><para>EC_P256: CKO_PRIVATE_KEY, CKK_EC</para>
-</listitem></itemizedlist>
-</para>
-<para>PKCS#11 attribute template oluşturma (import anahtar için)</para>
-<para>Import edilecek anahtar için gerekli attribute&apos;lar oluşturulur:<itemizedlist>
-<listitem><para>CKA_CLASS: Anahtar sınıfı (secret key veya private key)</para>
-</listitem><listitem><para>CKA_KEY_TYPE: Anahtar tipi (AES, RSA, EC)</para>
-</listitem><listitem><para>CKA_LABEL: Anahtar etiketi</para>
-</listitem><listitem><para>CKA_VALUE: Anahtar verisi (import edilecek anahtar)</para>
-</listitem><listitem><para>CKA_TOKEN: Token&apos;da saklanacak (kalıcı)</para>
-</listitem><listitem><para>CKA_ENCRYPT/CKA_DECRYPT: Şifreleme/şifre çözme için kullanılabilir</para>
-</listitem></itemizedlist>
-</para>
-<para>&lt; Anahtar sınıfı</para>
-<para>&lt; Anahtar tipi</para>
-<para>&lt; Anahtar etiketi</para>
-<para>&lt; Anahtar verisi (import edilecek)</para>
-<para>&lt; Token&apos;da saklanacak (kalıcı)</para>
-<para>&lt; Şifreleme için kullanılabilir</para>
-<para>&lt; Şifre çözme için kullanılabilir</para>
-<para>PKCS#11 anahtar oluşturma (import)</para>
-<para>C_CreateObject ile import edilecek anahtar token üzerinde oluşturulur. Anahtar verisi (CKA_VALUE) template içinde belirtilir.</para>
-<para>&lt; Oluşturulan anahtar handle&apos;ı</para>
-<para>Key ID oluşturma (import için)</para>
-<para>Import edilen anahtarın handle&apos;ı keyId olarak kullanılır. keyId buffer, CK_OBJECT_HANDLE boyutunda olmalıdır. Eğer buffer yeterli değilse, InvalidInput hatası döner.</para>
-<para>Key ID buffer yeterli: handle&apos;ı kopyala</para>
-<para>Key ID buffer yetersiz: hata döner</para>
-<para>Import işleminde, keyId buffer mutlaka CK_OBJECT_HANDLE boyutunda olmalıdır. Aksi takdirde, handle kopyalanamaz.</para>
         </inbodydescription>
         <location file="src/travelexpense/src/softhsm.cpp" line="1382" column="11" bodyfile="src/travelexpense/src/softhsm.cpp" bodystart="1382" bodyend="1502" declfile="src/travelexpense/header/softhsm.h" declline="136" declcolumn="29"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Seyahat Gideri Takibi - <ref refid="namespace_soft_h_s_m" kindref="compound">SoftHSM</ref> (PKCS#11) Implementation. </para>
     </briefdescription>
@@ -2341,8 +2165,9 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/softhsm.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/safe_string.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="softhsm_8h" kindref="compound">../header/softhsm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="safe__string_8h" kindref="compound">../header/safe_string.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>PKCS11<sp/>macro<sp/>redefinition<sp/>önlemek<sp/>için<sp/>koruma<sp/>ekle</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PKCS11_NO_EXPORTS</highlight><highlight class="normal"></highlight></codeline>
@@ -2393,10 +2218,10 @@
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_soft_h_s_m" kindref="compound">SoftHSM</ref><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m" kindref="compound">SoftHSM</ref><sp/>{</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Using<sp/>directive<sp/>for<sp/>ErrorCode</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/>=<sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/>=<sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">TravelExpense::ErrorCode</ref>;</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="softhsm_8cpp_1a3b81e0f561932d8761fb8675437e2659" kindref="member">DL_HANDLE</ref><sp/>g_pkcs11Library<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>CK_FUNCTION_LIST<sp/>*g_pFunctionList<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
@@ -2406,7 +2231,7 @@
 <codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>g_tokenLabel[64]<sp/>=<sp/>{<sp/>0<sp/>};</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>g_pin[32]<sp/>=<sp/>{<sp/>0<sp/>};</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/>pkcs11ToErrorCode(CK_ULONG<sp/>rv)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/>pkcs11ToErrorCode(CK_ULONG<sp/>rv)<sp/>{</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(rv)<sp/>{</highlight></codeline>
 <codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CKR_OK:</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
@@ -2480,7 +2305,7 @@
 <codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="204"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="205"><highlight class="normal"></highlight></codeline>
-<codeline lineno="220"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/>loadPKCS11Library(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*libraryPath)<sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/>loadPKCS11Library(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*libraryPath)<sp/>{</highlight></codeline>
 <codeline lineno="221"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_pkcs11Library<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
 <codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Zaten<sp/>yüklü</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
@@ -2524,14 +2349,14 @@
 <codeline lineno="261"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
 <codeline lineno="262"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="263"><highlight class="normal"></highlight></codeline>
-<codeline lineno="280"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1af71b3824984e7e34e84fc5c0a606b418" kindref="member">initialize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*libraryPath,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tokenLabel,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pin)<sp/>{</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1af71b3824984e7e34e84fc5c0a606b418" kindref="member">initialize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*libraryPath,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tokenLabel,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pin)<sp/>{</highlight></codeline>
 <codeline lineno="281"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_status<sp/>==<sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24aadee5f03c2c4e73657824e028494b18c0" kindref="member">InitStatus::INITIALIZED</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Zaten<sp/>başlatılmış</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
 <codeline lineno="284"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="285"><highlight class="normal"></highlight></codeline>
 <codeline lineno="286"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>PKCS#11<sp/>kütüphanesini<sp/>yükle</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="287"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/>result<sp/>=<sp/>loadPKCS11Library(libraryPath);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/>result<sp/>=<sp/>loadPKCS11Library(libraryPath);</highlight></codeline>
 <codeline lineno="288"><highlight class="normal"></highlight></codeline>
 <codeline lineno="289"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>!=<sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>g_status<sp/>=<sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24aabb1ca97ec761fc37101737ba0aa2e7c5" kindref="member">InitStatus::ERROR</ref>;</highlight></codeline>
@@ -2563,7 +2388,7 @@
 <codeline lineno="316"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
 <codeline lineno="317"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="318"><highlight class="normal"></highlight></codeline>
-<codeline lineno="331"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aa08cccf8f5db8d63231a3b706351b212" kindref="member">shutdown</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aa08cccf8f5db8d63231a3b706351b212" kindref="member">shutdown</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="332"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_status<sp/>!=<sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24aadee5f03c2c4e73657824e028494b18c0" kindref="member">InitStatus::INITIALIZED</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
 <codeline lineno="334"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -2596,7 +2421,7 @@
 <codeline lineno="368"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>g_status;</highlight></codeline>
 <codeline lineno="369"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="370"><highlight class="normal"></highlight></codeline>
-<codeline lineno="386"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a0d330cfb5deff1a7731392c78c8a4757" kindref="member">createToken</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*label,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pin,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*soPin)<sp/>{</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a0d330cfb5deff1a7731392c78c8a4757" kindref="member">createToken</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*label,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pin,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*soPin)<sp/>{</highlight></codeline>
 <codeline lineno="387"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SoftHSM<sp/>token&apos;ları<sp/>genellikle<sp/>sistem<sp/>seviyesinde<sp/>oluşturulur</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="388"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Burada<sp/>sadece<sp/>label&apos;i<sp/>kaydediyoruz</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="389"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!label<sp/>||<sp/>!pin)<sp/>{</highlight></codeline>
@@ -2610,7 +2435,7 @@
 <codeline lineno="397"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
 <codeline lineno="398"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="399"><highlight class="normal"></highlight></codeline>
-<codeline lineno="415"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*label,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pin)<sp/>{</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a1dd53afa782d6054163658a225a3e3bf" kindref="member">openToken</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*label,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pin)<sp/>{</highlight></codeline>
 <codeline lineno="416"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_status<sp/>!=<sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24aadee5f03c2c4e73657824e028494b18c0" kindref="member">InitStatus::INITIALIZED</ref><sp/>||<sp/>!g_pFunctionList)<sp/>{</highlight></codeline>
 <codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
 <codeline lineno="418"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -2633,6 +2458,7 @@
 <codeline lineno="448"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Label&apos;a<sp/>göre<sp/>token<sp/>bul</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="449"><highlight class="normal"><sp/><sp/>CK_SLOT_ID<sp/>selectedSlot<sp/>=<sp/>slots[0];<sp/><sp/></highlight></codeline>
 <codeline lineno="450"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*searchLabel<sp/>=<sp/>label<sp/>?<sp/>label<sp/>:<sp/>g_tokenLabel;<sp/><sp/></highlight></codeline>
+<codeline lineno="451"><highlight class="normal"></highlight></codeline>
 <codeline lineno="458"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(CK_ULONG<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>slotCount;<sp/>++i)<sp/>{</highlight></codeline>
 <codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/>CK_TOKEN_INFO<sp/>tokenInfo;</highlight></codeline>
 <codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/>rv<sp/>=<sp/>g_pFunctionList-&gt;C_GetTokenInfo(slots[i],<sp/>&amp;tokenInfo);</highlight></codeline>
@@ -2679,7 +2505,7 @@
 <codeline lineno="515"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
 <codeline lineno="516"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="517"><highlight class="normal"></highlight></codeline>
-<codeline lineno="528"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a355d45677c9adebfb9afa591275bb8d4" kindref="member">closeToken</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a355d45677c9adebfb9afa591275bb8d4" kindref="member">closeToken</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="529"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_sessionHandle<sp/>==<sp/>0<sp/>||<sp/>!g_pFunctionList)<sp/>{</highlight></codeline>
 <codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
 <codeline lineno="531"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -2691,7 +2517,7 @@
 <codeline lineno="537"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
 <codeline lineno="538"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="539"><highlight class="normal"></highlight></codeline>
-<codeline lineno="558"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a100a3043a4e2c9d8cd6922248a46f335" kindref="member">generateKey</ref>(<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a8859119f0e92029bcc9c29081d79021a" kindref="member">KeyType</ref><sp/>keyType,<sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1ada96f17213af3032466f091866ca6e42" kindref="member">KeyUsage</ref><sp/>keyUsage,</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a100a3043a4e2c9d8cd6922248a46f335" kindref="member">generateKey</ref>(<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a8859119f0e92029bcc9c29081d79021a" kindref="member">KeyType</ref><sp/>keyType,<sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1ada96f17213af3032466f091866ca6e42" kindref="member">KeyUsage</ref><sp/>keyUsage,</highlight></codeline>
 <codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*keyLabel,<sp/>uint8_t<sp/>*keyId,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;keyIdLen)<sp/>{</highlight></codeline>
 <codeline lineno="560"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_sessionHandle<sp/>==<sp/>0<sp/>||<sp/>!g_pFunctionList<sp/>||<sp/>!keyLabel<sp/>||<sp/>!keyId)<sp/>{</highlight></codeline>
 <codeline lineno="561"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
@@ -2704,6 +2530,7 @@
 <codeline lineno="574"><highlight class="normal"><sp/><sp/>CK_ULONG<sp/>keyClass<sp/>=<sp/>CKO_SECRET_KEY;<sp/><sp/></highlight></codeline>
 <codeline lineno="575"><highlight class="normal"><sp/><sp/>CK_ULONG<sp/>ckKeyType<sp/>=<sp/>CKK_AES;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="576"><highlight class="normal"><sp/><sp/>CK_ULONG<sp/>keySize<sp/>=<sp/>256<sp/>/<sp/>8;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="577"><highlight class="normal"></highlight></codeline>
 <codeline lineno="586"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(keyType)<sp/>{</highlight></codeline>
 <codeline lineno="587"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a8859119f0e92029bcc9c29081d79021aa78a61f5f64f7ea0d31a7cc487d2b14e8" kindref="member">KeyType::AES_256</ref>:</highlight></codeline>
 <codeline lineno="588"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>mechanism.mechanism<sp/>=<sp/>CKM_AES_KEY_GEN;</highlight></codeline>
@@ -2782,6 +2609,7 @@
 <codeline lineno="687"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Key<sp/>generate</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="688"><highlight class="normal"><sp/><sp/>CK_OBJECT_HANDLE<sp/>keyHandle<sp/>=<sp/>0;<sp/><sp/></highlight></codeline>
 <codeline lineno="689"><highlight class="normal"><sp/><sp/>CK_ULONG<sp/>rv;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="690"><highlight class="normal"></highlight></codeline>
 <codeline lineno="691"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(keyType<sp/>==<sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a8859119f0e92029bcc9c29081d79021aa5b3bf47dace955c9874047820a78d5b8" kindref="member">KeyType::RSA_2048</ref><sp/>||<sp/>keyType<sp/>==<sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a8859119f0e92029bcc9c29081d79021aac5e459c10e5e8348c719df2702c3abe6" kindref="member">KeyType::EC_P256</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="698"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Key<sp/>pair<sp/>generation</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="699"><highlight class="normal"><sp/><sp/><sp/><sp/>CK_ATTRIBUTE<sp/>pubTemplate[5];<sp/><sp/></highlight></codeline>
@@ -2828,7 +2656,7 @@
 <codeline lineno="754"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
 <codeline lineno="755"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="756"><highlight class="normal"></highlight></codeline>
-<codeline lineno="771"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1af8527db38f2e8d22d54baf72e43315cf" kindref="member">findKey</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*keyLabel,<sp/>uint8_t<sp/>*keyId,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;keyIdLen)<sp/>{</highlight></codeline>
+<codeline lineno="771"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1af8527db38f2e8d22d54baf72e43315cf" kindref="member">findKey</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*keyLabel,<sp/>uint8_t<sp/>*keyId,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;keyIdLen)<sp/>{</highlight></codeline>
 <codeline lineno="772"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_sessionHandle<sp/>==<sp/>0<sp/>||<sp/>!g_pFunctionList<sp/>||<sp/>!keyLabel<sp/>||<sp/>!keyId)<sp/>{</highlight></codeline>
 <codeline lineno="773"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
 <codeline lineno="774"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -2872,7 +2700,7 @@
 <codeline lineno="812"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
 <codeline lineno="813"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="814"><highlight class="normal"></highlight></codeline>
-<codeline lineno="828"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aa4b7ad5db79291a92b339855944a4208" kindref="member">deleteKey</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*keyId,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyIdLen)<sp/>{</highlight></codeline>
+<codeline lineno="828"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aa4b7ad5db79291a92b339855944a4208" kindref="member">deleteKey</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*keyId,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyIdLen)<sp/>{</highlight></codeline>
 <codeline lineno="829"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_sessionHandle<sp/>==<sp/>0<sp/>||<sp/>!g_pFunctionList<sp/>||<sp/>!keyId)<sp/>{</highlight></codeline>
 <codeline lineno="830"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
 <codeline lineno="831"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -2889,7 +2717,7 @@
 <codeline lineno="842"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pkcs11ToErrorCode(rv);</highlight></codeline>
 <codeline lineno="843"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="844"><highlight class="normal"></highlight></codeline>
-<codeline lineno="865"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aa76da1d2f45b48a32039219d89930d6b" kindref="member">encrypt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*keyId,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyIdLen,</highlight></codeline>
+<codeline lineno="865"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aa76da1d2f45b48a32039219d89930d6b" kindref="member">encrypt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*keyId,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyIdLen,</highlight></codeline>
 <codeline lineno="866"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*plaintext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>plaintextLen,</highlight></codeline>
 <codeline lineno="867"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ciphertext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;ciphertextLen,</highlight></codeline>
 <codeline lineno="868"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*iv)<sp/>{</highlight></codeline>
@@ -2908,6 +2736,7 @@
 <codeline lineno="881"><highlight class="normal"></highlight></codeline>
 <codeline lineno="889"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>IV<sp/>oluştur<sp/>(eğer<sp/>verilmemişse)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="890"><highlight class="normal"><sp/><sp/>uint8_t<sp/>localIV[16]<sp/>=<sp/>{<sp/>0<sp/>};<sp/><sp/></highlight></codeline>
+<codeline lineno="891"><highlight class="normal"></highlight></codeline>
 <codeline lineno="892"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!iv)<sp/>{</highlight></codeline>
 <codeline lineno="894"><highlight class="normal"><sp/><sp/><sp/><sp/>CK_ULONG<sp/>rv<sp/>=<sp/>g_pFunctionList-&gt;C_GenerateRandom(g_sessionHandle,<sp/>localIV,<sp/>16);</highlight></codeline>
 <codeline lineno="895"><highlight class="normal"></highlight></codeline>
@@ -2945,7 +2774,7 @@
 <codeline lineno="934"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
 <codeline lineno="935"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="936"><highlight class="normal"></highlight></codeline>
-<codeline lineno="957"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1af50d97c17003e1b54df285fbf5fa76b9" kindref="member">decrypt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*keyId,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyIdLen,</highlight></codeline>
+<codeline lineno="957"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1af50d97c17003e1b54df285fbf5fa76b9" kindref="member">decrypt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*keyId,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyIdLen,</highlight></codeline>
 <codeline lineno="958"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ciphertext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ciphertextLen,</highlight></codeline>
 <codeline lineno="959"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*plaintext,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;plaintextLen,</highlight></codeline>
 <codeline lineno="960"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*iv)<sp/>{</highlight></codeline>
@@ -2964,6 +2793,7 @@
 <codeline lineno="973"><highlight class="normal"></highlight></codeline>
 <codeline lineno="981"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>IV<sp/>(ciphertext&apos;in<sp/>başından<sp/>okunabilir<sp/>veya<sp/>parametre<sp/>olarak<sp/>verilebilir)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="982"><highlight class="normal"><sp/><sp/>uint8_t<sp/>localIV[16]<sp/>=<sp/>{<sp/>0<sp/>};<sp/><sp/></highlight></codeline>
+<codeline lineno="983"><highlight class="normal"></highlight></codeline>
 <codeline lineno="984"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!iv<sp/>&amp;&amp;<sp/>ciphertextLen<sp/>&gt;=<sp/>16)<sp/>{</highlight></codeline>
 <codeline lineno="989"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>İlk<sp/>16<sp/>byte<sp/>IV</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="990"><highlight class="normal"><sp/><sp/><sp/><sp/>std::memcpy(localIV,<sp/>ciphertext,<sp/>16);</highlight></codeline>
@@ -3000,7 +2830,7 @@
 <codeline lineno="1028"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
 <codeline lineno="1029"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="1030"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1049"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1ac14ac62bb1ee91f10908af2ba8f7a832" kindref="member">sign</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*keyId,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyIdLen,</highlight></codeline>
+<codeline lineno="1049"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1ac14ac62bb1ee91f10908af2ba8f7a832" kindref="member">sign</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*keyId,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyIdLen,</highlight></codeline>
 <codeline lineno="1050"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dataLen,</highlight></codeline>
 <codeline lineno="1051"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*signature,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;signatureLen)<sp/>{</highlight></codeline>
 <codeline lineno="1052"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_sessionHandle<sp/>==<sp/>0<sp/>||<sp/>!g_pFunctionList<sp/>||<sp/>!keyId<sp/>||<sp/>!data<sp/>||</highlight></codeline>
@@ -3079,7 +2909,7 @@
 <codeline lineno="1179"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(rv<sp/>==<sp/>CKR_OK);<sp/><sp/></highlight></codeline>
 <codeline lineno="1180"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="1181"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1195"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1ac132d386ec4642b70cbfc87db1dd84f3" kindref="member">generateRandom</ref>(uint8_t<sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length)<sp/>{</highlight></codeline>
+<codeline lineno="1195"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1ac132d386ec4642b70cbfc87db1dd84f3" kindref="member">generateRandom</ref>(uint8_t<sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length)<sp/>{</highlight></codeline>
 <codeline lineno="1196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_sessionHandle<sp/>==<sp/>0<sp/>||<sp/>!g_pFunctionList<sp/>||<sp/>!output<sp/>||<sp/>length<sp/>==<sp/>0)<sp/>{</highlight></codeline>
 <codeline lineno="1197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
 <codeline lineno="1198"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -3089,7 +2919,7 @@
 <codeline lineno="1202"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pkcs11ToErrorCode(rv);</highlight></codeline>
 <codeline lineno="1203"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="1204"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1219"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a627d80f41250c6562b1cd91521787245" kindref="member">listTokens</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>labels[][64],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;count)<sp/>{</highlight></codeline>
+<codeline lineno="1219"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a627d80f41250c6562b1cd91521787245" kindref="member">listTokens</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>labels[][64],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;count)<sp/>{</highlight></codeline>
 <codeline lineno="1220"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_status<sp/>!=<sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1aad0a58fc42af71a6793bf6449a75b24aadee5f03c2c4e73657824e028494b18c0" kindref="member">InitStatus::INITIALIZED</ref><sp/>||<sp/>!g_pFunctionList<sp/>||<sp/>!labels)<sp/>{</highlight></codeline>
 <codeline lineno="1221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
 <codeline lineno="1222"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -3111,6 +2941,7 @@
 <codeline lineno="1238"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="1239"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1248"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>foundCount<sp/>=<sp/>0;<sp/><sp/></highlight></codeline>
+<codeline lineno="1249"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1250"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(CK_ULONG<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>slotCount<sp/>&amp;&amp;<sp/>foundCount<sp/>&lt;<sp/>count<sp/>&amp;&amp;<sp/>foundCount<sp/>&lt;<sp/>10;<sp/>++i)<sp/>{</highlight></codeline>
 <codeline lineno="1251"><highlight class="normal"><sp/><sp/><sp/><sp/>CK_TOKEN_INFO<sp/>tokenInfo;<sp/><sp/></highlight></codeline>
 <codeline lineno="1252"><highlight class="normal"><sp/><sp/><sp/><sp/>rv<sp/>=<sp/>g_pFunctionList-&gt;C_GetTokenInfo(slots[i],<sp/>&amp;tokenInfo);</highlight></codeline>
@@ -3133,7 +2964,7 @@
 <codeline lineno="1275"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
 <codeline lineno="1276"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="1277"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1292"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1ae037de28b34ae8a110a65f222e52ac06" kindref="member">listKeys</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>labels[][64],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;count)<sp/>{</highlight></codeline>
+<codeline lineno="1292"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1ae037de28b34ae8a110a65f222e52ac06" kindref="member">listKeys</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>labels[][64],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;count)<sp/>{</highlight></codeline>
 <codeline lineno="1293"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_sessionHandle<sp/>==<sp/>0<sp/>||<sp/>!g_pFunctionList<sp/>||<sp/>!labels)<sp/>{</highlight></codeline>
 <codeline lineno="1294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dabad8f78ca9a692a9411afbc7584b69d043" kindref="member">ErrorCode::InvalidInput</ref>;</highlight></codeline>
 <codeline lineno="1295"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
@@ -3153,6 +2984,7 @@
 <codeline lineno="1309"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1317"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>foundCount<sp/>=<sp/>0;<sp/><sp/></highlight></codeline>
 <codeline lineno="1318"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>maxKeys<sp/>=<sp/>(count<sp/>&lt;<sp/>50)<sp/>?<sp/>count<sp/>:<sp/>50;<sp/><sp/></highlight></codeline>
+<codeline lineno="1319"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1327"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>maxKeys;<sp/>++i)<sp/>{</highlight></codeline>
 <codeline lineno="1328"><highlight class="normal"><sp/><sp/><sp/><sp/>CK_OBJECT_HANDLE<sp/>keyHandle<sp/>=<sp/>0;<sp/><sp/></highlight></codeline>
 <codeline lineno="1329"><highlight class="normal"><sp/><sp/><sp/><sp/>CK_ULONG<sp/>objCount<sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -3182,7 +3014,7 @@
 <codeline lineno="1361"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
 <codeline lineno="1362"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="1363"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1382"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a04b9cc48d95cd483ab84818c43ed967d" kindref="member">importKey</ref>(<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a8859119f0e92029bcc9c29081d79021a" kindref="member">KeyType</ref><sp/>keyType,</highlight></codeline>
+<codeline lineno="1382"><highlight class="normal"><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a04b9cc48d95cd483ab84818c43ed967d" kindref="member">importKey</ref>(<ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a8859119f0e92029bcc9c29081d79021a" kindref="member">KeyType</ref><sp/>keyType,</highlight></codeline>
 <codeline lineno="1383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*keyData,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keyDataLen,</highlight></codeline>
 <codeline lineno="1384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*keyLabel,<sp/>uint8_t<sp/>*keyId,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>&amp;keyIdLen)<sp/>{</highlight></codeline>
 <codeline lineno="1385"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(g_sessionHandle<sp/>==<sp/>0<sp/>||<sp/>!g_pFunctionList<sp/>||<sp/>!keyData<sp/>||<sp/>keyDataLen<sp/>==<sp/>0<sp/>||</highlight></codeline>
@@ -3195,6 +3027,7 @@
 <codeline lineno="1398"><highlight class="normal"><sp/><sp/>CK_ULONG<sp/>keyClass<sp/>=<sp/>CKO_SECRET_KEY;<sp/><sp/></highlight></codeline>
 <codeline lineno="1399"><highlight class="normal"><sp/><sp/>CK_ULONG<sp/>ckKeyType<sp/>=<sp/>CKK_AES;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="1400"><highlight class="normal"><sp/><sp/>CK_BYTE<sp/>true_value<sp/>=<sp/>CK_TRUE;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="1401"><highlight class="normal"></highlight></codeline>
 <codeline lineno="1410"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(keyType)<sp/>{</highlight></codeline>
 <codeline lineno="1411"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_soft_h_s_m_1a8859119f0e92029bcc9c29081d79021aa78a61f5f64f7ea0d31a7cc487d2b14e8" kindref="member">KeyType::AES_256</ref>:</highlight></codeline>
 <codeline lineno="1412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ckKeyType<sp/>=<sp/>CKK_AES;</highlight></codeline>

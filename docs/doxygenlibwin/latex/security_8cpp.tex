@@ -5,7 +5,7 @@
 Seyahat Gideri Takibi -\/ Güvenlik Fonksiyonları Implementation.  
 
 
-{\ttfamily \#include \"{}../header/security.\+h\"{}}\newline
+{\ttfamily \#include "{}../header/security.\+h"{}}\newline
 {\ttfamily \#include $<$cstring$>$}\newline
 {\ttfamily \#include $<$cstdlib$>$}\newline
 {\ttfamily \#include $<$ctime$>$}\newline
@@ -27,7 +27,7 @@ namespace \mbox{\hyperlink{namespace_travel_expense_1_1_security}{Travel\+Expens
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{security_8cpp_a3152de7cea26a509abf9bca65c93ba97}{Secure\+Zero\+Memory}}(ptr,  size)~secure\+\_\+memset(ptr, 0, size)
+\#define \mbox{\hyperlink{security_8cpp_a3152de7cea26a509abf9bca65c93ba97}{Secure\+Zero\+Memory}}(ptr,  size)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -51,10 +51,17 @@ Binnur Altınışık
 \end{DoxyDate}
 
 
+\label{doc-define-members}
+\Hypertarget{security_8cpp_doc-define-members}
 \doxysubsection{Macro Definition Documentation}
-\Hypertarget{security_8cpp_a3152de7cea26a509abf9bca65c93ba97}\label{security_8cpp_a3152de7cea26a509abf9bca65c93ba97} 
-\index{security.cpp@{security.cpp}!SecureZeroMemory@{SecureZeroMemory}}
+\Hypertarget{security_8cpp_a3152de7cea26a509abf9bca65c93ba97}\index{security.cpp@{security.cpp}!SecureZeroMemory@{SecureZeroMemory}}
 \index{SecureZeroMemory@{SecureZeroMemory}!security.cpp@{security.cpp}}
 \doxysubsubsection{\texorpdfstring{SecureZeroMemory}{SecureZeroMemory}}
-{\footnotesize\ttfamily \#define Secure\+Zero\+Memory(\begin{DoxyParamCaption}\item[{}]{ptr,  }\item[{}]{size }\end{DoxyParamCaption})~secure\+\_\+memset(ptr, 0, size)}
+{\footnotesize\ttfamily \label{security_8cpp_a3152de7cea26a509abf9bca65c93ba97} 
+\#define Secure\+Zero\+Memory(\begin{DoxyParamCaption}\item[{}]{ptr}{, }\item[{}]{size}{}\end{DoxyParamCaption})}
 
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{secure\_memset(ptr,\ 0,\ size)}
+
+\end{DoxyCode}

@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="struct_travel_expense_1_1_expense" kind="struct" language="C++" prot="public">
     <compoundname>TravelExpense::Expense</compoundname>
     <includes refid="common_types_8h" local="no">commonTypes.h</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct_travel_expense_1_1_expense_1a8b8d0d8ab050ba52969213b047f9f503" prot="public" static="no" mutable="no">
         <type>int32_t</type>
         <definition>int32_t TravelExpense::Expense::expenseId</definition>
@@ -139,8 +139,8 @@
         </inbodydescription>
         <location file="src/travelexpense/header/commonTypes.h" line="107" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="107" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
+    </sectiondef>
+    <sectiondef kind="public-func">
       <memberdef kind="function" id="struct_travel_expense_1_1_expense_1a22e75d7cb8a8fa7c7e4bdbf18b773930" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>TravelExpense::Expense::Expense</definition>
@@ -157,7 +157,7 @@
         </inbodydescription>
         <location file="src/travelexpense/header/commonTypes.h" line="114" column="3" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="114" bodyend="120"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Gider veri modeli. </para>
     </briefdescription>

@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="struct_travel_expense_1_1_migration_1_1_migration_result" kind="struct" language="C++" prot="public">
     <compoundname>TravelExpense::Migration::MigrationResult</compoundname>
     <includes refid="migration_8h" local="no">migration.h</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct_travel_expense_1_1_migration_1_1_migration_result_1a7aa7569434d4029a50c8e1215f308b8b" prot="public" static="no" mutable="no">
         <type>int32_t</type>
         <definition>int32_t TravelExpense::Migration::MigrationResult::usersMigrated</definition>
@@ -94,7 +94,7 @@
         </inbodydescription>
         <location file="src/travelexpense/header/migration.h" line="41" column="8" bodyfile="src/travelexpense/header/migration.h" bodystart="41" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para><ref refid="namespace_travel_expense_1_1_migration" kindref="compound">Migration</ref> sonuç yapısı </para>
     </briefdescription>

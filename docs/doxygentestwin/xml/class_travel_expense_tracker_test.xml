@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="class_travel_expense_tracker_test" kind="class" language="C++" prot="public">
     <compoundname>TravelExpenseTrackerTest</compoundname>
     <basecompoundref prot="public" virt="non-virtual">testing::Test</basecompoundref>
-      <sectiondef kind="protected-func">
+    <sectiondef kind="protected-func">
       <memberdef kind="function" id="class_travel_expense_tracker_test_1afc2ea39bd2f8fa9a1dc6b685e69ab3b2" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void TravelExpenseTrackerTest::SetUp</definition>
@@ -11,14 +11,14 @@
         <name>SetUp</name>
         <qualifiedname>TravelExpenseTrackerTest::SetUp</qualifiedname>
         <briefdescription>
-<para>Test baÅŸlangÄ±cÄ±nda Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r. </para>
+<para>Test başlangıcında çalıştırılır. </para>
         </briefdescription>
         <detaileddescription>
-<para>Her test Ã¶ncesi veritabanÄ± ve gerekli dizinleri hazÄ±rlar. </para>
+<para>Her test öncesi veritabanı ve gerekli dizinleri hazırlar. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tests/travelexpense/travelexpense_test.cpp" line="50" column="10" bodyfile="src/tests/travelexpense/travelexpense_test.cpp" bodystart="50" bodyend="73"/>
+        <location file="src/tests/travelexpense/travelexpense_test.cpp" line="50" column="6" bodyfile="src/tests/travelexpense/travelexpense_test.cpp" bodystart="50" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="class_travel_expense_tracker_test_1a68b63dc0abfd705b1faec4a0d08c512c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -27,21 +27,21 @@
         <name>TearDown</name>
         <qualifiedname>TravelExpenseTrackerTest::TearDown</qualifiedname>
         <briefdescription>
-<para>Test sonunda Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r. </para>
+<para>Test sonunda çalıştırılır. </para>
         </briefdescription>
         <detaileddescription>
-<para>Her test sonrasÄ± temizlik iÅŸlemlerini yapar. </para>
+<para>Her test sonrası temizlik işlemlerini yapar. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/tests/travelexpense/travelexpense_test.cpp" line="80" column="10" bodyfile="src/tests/travelexpense/travelexpense_test.cpp" bodystart="80" bodyend="87"/>
+        <location file="src/tests/travelexpense/travelexpense_test.cpp" line="80" column="6" bodyfile="src/tests/travelexpense/travelexpense_test.cpp" bodystart="80" bodyend="87"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
-<para>Test fixture sÄ±nÄ±fÄ± </para>
+<para>Test fixture sınıfı. </para>
     </briefdescription>
     <detaileddescription>
-<para>TÃ¼m testler iÃ§in ortak setup ve teardown iÅŸlemlerini saÄŸlar. </para>
+<para>Tüm testler için ortak setup ve teardown işlemlerini sağlar. </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">

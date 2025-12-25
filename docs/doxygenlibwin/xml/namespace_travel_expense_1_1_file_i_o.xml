@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="namespace_travel_expense_1_1_file_i_o" kind="namespace" language="C++">
     <compoundname>TravelExpense::FileIO</compoundname>
-      <sectiondef kind="func">
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_file_i_o_1a5b48ea5d727f176d8ccc873b44bde6bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
         <definition>bool TravelExpense::FileIO::ensureDataDirectory</definition>
@@ -138,7 +138,7 @@
         </inbodydescription>
         <location file="src/travelexpense/src/fileIO.cpp" line="115" column="9" bodyfile="src/travelexpense/src/fileIO.cpp" bodystart="115" bodyend="120" declfile="src/travelexpense/header/fileIO.h" declline="88" declcolumn="27"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

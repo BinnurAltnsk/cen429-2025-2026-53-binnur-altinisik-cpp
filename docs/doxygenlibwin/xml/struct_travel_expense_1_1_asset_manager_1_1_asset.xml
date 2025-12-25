@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="struct_travel_expense_1_1_asset_manager_1_1_asset" kind="struct" language="C++" prot="public">
     <compoundname>TravelExpense::AssetManager::Asset</compoundname>
     <includes refid="asset_manager_8h" local="no">assetManager.h</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1a986c8230bbcc243780250752e1c75276" prot="public" static="no" mutable="no">
         <type>int32_t</type>
         <definition>int32_t TravelExpense::AssetManager::Asset::assetId</definition>
@@ -199,8 +199,8 @@
         </inbodydescription>
         <location file="src/travelexpense/header/assetManager.h" line="86" column="8" bodyfile="src/travelexpense/header/assetManager.h" bodystart="86" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
+    </sectiondef>
+    <sectiondef kind="public-func">
       <memberdef kind="function" id="struct_travel_expense_1_1_asset_manager_1_1_asset_1a8ae977d0ef54c270ff01f06399025944" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>TravelExpense::AssetManager::Asset::Asset</definition>
@@ -217,7 +217,7 @@
         </inbodydescription>
         <location file="src/travelexpense/header/assetManager.h" line="93" column="3" bodyfile="src/travelexpense/header/assetManager.h" bodystart="93" bodyend="101"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Varlık veri modeli. </para>
     </briefdescription>
@@ -227,12 +227,6 @@
       <node id="1">
         <label>TravelExpense::AssetManager::Asset</label>
         <link refid="struct_travel_expense_1_1_asset_manager_1_1_asset"/>
-        <childnode refid="2" relation="usage">
-          <edgelabel>+protectionScheme</edgelabel>
-        </childnode>
-      </node>
-      <node id="2">
-        <label>uint8_t</label>
       </node>
     </collaborationgraph>
     <location file="src/travelexpense/header/assetManager.h" line="73" column="1" bodyfile="src/travelexpense/header/assetManager.h" bodystart="73" bodyend="102"/>

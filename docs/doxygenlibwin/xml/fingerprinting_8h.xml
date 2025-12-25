@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="fingerprinting_8h" kind="file" language="C++">
     <compoundname>fingerprinting.h</compoundname>
     <includes refid="common_types_8h" local="yes">commonTypes.h</includes>
@@ -75,7 +75,7 @@
     <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
     <innernamespace refid="namespace_fingerprinting">Fingerprinting</innernamespace>
     <innernamespace refid="namespace_travel_expense_1_1_fingerprinting">TravelExpense::Fingerprinting</innernamespace>
-      <sectiondef kind="func">
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_fingerprinting_1a28a42fb823573e94bfc33e9d17aaec15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
         <definition>ErrorCode TravelExpense::Fingerprinting::generateDeviceFingerprint</definition>
@@ -100,7 +100,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -132,7 +132,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -164,7 +164,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -196,7 +196,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (SUCCESS = geçerli, ERROR = geçersiz) </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -228,7 +228,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -284,7 +284,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -328,7 +328,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -372,7 +372,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -416,7 +416,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -424,7 +424,7 @@
         </inbodydescription>
         <location file="src/travelexpense/src/fingerprinting.cpp" line="338" column="11" bodyfile="src/travelexpense/src/fingerprinting.cpp" bodystart="338" bodyend="352" declfile="src/travelexpense/header/fingerprinting.h" declline="146" declcolumn="29"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Seyahat Gideri Takibi - Cihaz ve Uygulama <ref refid="namespace_fingerprinting" kindref="compound">Fingerprinting</ref>. </para>
     </briefdescription>
@@ -443,6 +443,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FINGERPRINTING_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FINGERPRINTING_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>

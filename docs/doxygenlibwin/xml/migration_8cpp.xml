@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="migration_8cpp" kind="file" language="C++">
     <compoundname>migration.cpp</compoundname>
     <includes refid="migration_8h" local="yes">../header/migration.h</includes>
@@ -127,7 +127,7 @@
     </incdepgraph>
     <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
     <innernamespace refid="namespace_travel_expense_1_1_migration">TravelExpense::Migration</innernamespace>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="migration_8cpp_1ae37f2aaf4837802590f2bd11facb80ea" prot="public" static="no">
         <name>ACCESS</name>
         <param><defname>path</defname></param>
@@ -141,8 +141,8 @@
         </inbodydescription>
         <location file="src/travelexpense/src/migration.cpp" line="29" column="18" bodyfile="src/travelexpense/src/migration.cpp" bodystart="29" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1a955c1f9b5d20a45b3d2aeb281a547ce1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
         <definition>bool TravelExpense::Migration::checkBinaryFileExists</definition>
@@ -381,13 +381,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode İşlem sonucu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> İşlem sonucu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/migration.cpp" line="209" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="209" bodyend="273" declfile="src/travelexpense/header/migration.h" declline="95" declcolumn="29"/>
+        <location file="src/travelexpense/src/migration.cpp" line="209" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="209" bodyend="270" declfile="src/travelexpense/header/migration.h" declline="95" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1a336f33556eca236abeee8c07a092174a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -424,13 +424,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode İşlem sonucu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> İşlem sonucu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/migration.cpp" line="275" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="275" bodyend="342" declfile="src/travelexpense/header/migration.h" declline="104" declcolumn="29"/>
+        <location file="src/travelexpense/src/migration.cpp" line="272" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="272" bodyend="334" declfile="src/travelexpense/header/migration.h" declline="104" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1a183d7e8c8198b4545072decb2d3a147c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -467,13 +467,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode İşlem sonucu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> İşlem sonucu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/migration.cpp" line="344" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="344" bodyend="408" declfile="src/travelexpense/header/migration.h" declline="113" declcolumn="29"/>
+        <location file="src/travelexpense/src/migration.cpp" line="336" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="336" bodyend="396" declfile="src/travelexpense/header/migration.h" declline="113" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1a0585996bd000e2e35d0e36022d08bd6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -510,13 +510,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode İşlem sonucu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> İşlem sonucu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/migration.cpp" line="410" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="410" bodyend="483" declfile="src/travelexpense/header/migration.h" declline="122" declcolumn="29"/>
+        <location file="src/travelexpense/src/migration.cpp" line="398" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="398" bodyend="463" declfile="src/travelexpense/header/migration.h" declline="122" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1abac0abce63e7e7b06bad2913e311f552" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -529,13 +529,13 @@
         </briefdescription>
         <detaileddescription>
 <para>ID dosyalarından (user.id, trip.id, vb.) maksimum ID değerlerini alır ve veritabanındaki AUTOINCREMENT&apos;i ayarlar.</para>
-<para><simplesect kind="return"><para>ErrorCode İşlem sonucu </para>
+<para><simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> İşlem sonucu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/migration.cpp" line="485" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="485" bodyend="508" declfile="src/travelexpense/header/migration.h" declline="132" declcolumn="29"/>
+        <location file="src/travelexpense/src/migration.cpp" line="465" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="465" bodyend="488" declfile="src/travelexpense/header/migration.h" declline="132" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1aa03aad8d3d6ebd000572fc61b10ba1ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -566,7 +566,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/migration.cpp" line="510" column="6" bodyfile="src/travelexpense/src/migration.cpp" bodystart="510" bodyend="534" declfile="src/travelexpense/header/migration.h" declline="149" declcolumn="24"/>
+        <location file="src/travelexpense/src/migration.cpp" line="490" column="6" bodyfile="src/travelexpense/src/migration.cpp" bodystart="490" bodyend="514" declfile="src/travelexpense/header/migration.h" declline="149" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_migration_1ac56a5704bf31629e1b35b2dcd161a98b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -603,15 +603,15 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode İşlem sonucu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> İşlem sonucu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/migration.cpp" line="536" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="536" bodyend="661" declfile="src/travelexpense/header/migration.h" declline="141" declcolumn="29"/>
+        <location file="src/travelexpense/src/migration.cpp" line="516" column="11" bodyfile="src/travelexpense/src/migration.cpp" bodystart="516" bodyend="641" declfile="src/travelexpense/header/migration.h" declline="141" declcolumn="29"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Seyahat Gideri Takibi - Binary → SQLite <ref refid="namespace_migration" kindref="compound">Migration</ref> Implementation. </para>
     </briefdescription>
@@ -625,9 +625,10 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/migration.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/database.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/fileIO.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="migration_8h" kindref="compound">../header/migration.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="database_8h" kindref="compound">../header/database.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="file_i_o_8h" kindref="compound">../header/fileIO.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -646,7 +647,7 @@
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_migration" kindref="compound">Migration</ref><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense_1_1_migration" kindref="compound">Migration</ref><sp/>{</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_migration_1a955c1f9b5d20a45b3d2aeb281a547ce1" kindref="member">checkBinaryFileExists</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*entityName)<sp/>{</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!entityName)<sp/>{</highlight></codeline>
@@ -1149,7 +1150,7 @@
 <codeline lineno="533"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Hiç<sp/>binary<sp/>dosya<sp/>yok</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="534"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="535"><highlight class="normal"></highlight></codeline>
-<codeline lineno="536"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_migration_1ac56a5704bf31629e1b35b2dcd161a98b" kindref="member">migrateAllFromBinary</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dataDir,<sp/>MigrationResult<sp/>&amp;result)<sp/>{</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref><sp/><ref refid="namespace_travel_expense_1_1_migration_1ac56a5704bf31629e1b35b2dcd161a98b" kindref="member">migrateAllFromBinary</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dataDir,<sp/><ref refid="struct_travel_expense_1_1_migration_1_1_migration_result" kindref="compound">MigrationResult</ref><sp/>&amp;result)<sp/>{</highlight></codeline>
 <codeline lineno="537"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Sonuç<sp/>yapısını<sp/>sıfırla</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="538"><highlight class="normal"><sp/><sp/>result.usersMigrated<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="539"><highlight class="normal"><sp/><sp/>result.tripsMigrated<sp/>=<sp/>0;</highlight></codeline>

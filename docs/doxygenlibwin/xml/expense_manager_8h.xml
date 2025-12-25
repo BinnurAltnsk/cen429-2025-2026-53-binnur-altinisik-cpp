@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="expense_manager_8h" kind="file" language="C++">
     <compoundname>expenseManager.h</compoundname>
     <includes refid="common_types_8h" local="yes">commonTypes.h</includes>
@@ -79,7 +79,7 @@
     <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
     <innernamespace refid="namespace_expense_manager">ExpenseManager</innernamespace>
     <innernamespace refid="namespace_travel_expense_1_1_expense_manager">TravelExpense::ExpenseManager</innernamespace>
-      <sectiondef kind="func">
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_expense_manager_1acfa22e551ca4dd536dc6307b49c3b41d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
         <definition>ErrorCode TravelExpense::ExpenseManager::logExpense</definition>
@@ -118,13 +118,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput, FileNotFound vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, InvalidInput, FileNotFound vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/expenseManager.cpp" line="20" column="11" bodyfile="src/travelexpense/src/expenseManager.cpp" bodystart="20" bodyend="67" declfile="src/travelexpense/header/expenseManager.h" declline="44" declcolumn="29"/>
+        <location file="src/travelexpense/src/expenseManager.cpp" line="20" column="11" bodyfile="src/travelexpense/src/expenseManager.cpp" bodystart="20" bodyend="63" declfile="src/travelexpense/header/expenseManager.h" declline="44" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_expense_manager_1a0300bc40e04d73db76bb14857a2bae35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -164,13 +164,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/expenseManager.cpp" line="69" column="11" bodyfile="src/travelexpense/src/expenseManager.cpp" bodystart="69" bodyend="115" declfile="src/travelexpense/header/expenseManager.h" declline="60" declcolumn="29"/>
+        <location file="src/travelexpense/src/expenseManager.cpp" line="65" column="11" bodyfile="src/travelexpense/src/expenseManager.cpp" bodystart="65" bodyend="107" declfile="src/travelexpense/header/expenseManager.h" declline="60" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_expense_manager_1a299a02f1b9bbb93d906b93c1cf0e6d00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -210,13 +210,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/expenseManager.cpp" line="117" column="11" bodyfile="src/travelexpense/src/expenseManager.cpp" bodystart="117" bodyend="162" declfile="src/travelexpense/header/expenseManager.h" declline="77" declcolumn="29"/>
+        <location file="src/travelexpense/src/expenseManager.cpp" line="109" column="11" bodyfile="src/travelexpense/src/expenseManager.cpp" bodystart="109" bodyend="149" declfile="src/travelexpense/header/expenseManager.h" declline="77" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_expense_manager_1ac0f66a51dd97d9257947357b1e1483bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -244,13 +244,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/expenseManager.cpp" line="164" column="11" bodyfile="src/travelexpense/src/expenseManager.cpp" bodystart="164" bodyend="197" declfile="src/travelexpense/header/expenseManager.h" declline="90" declcolumn="29"/>
+        <location file="src/travelexpense/src/expenseManager.cpp" line="151" column="11" bodyfile="src/travelexpense/src/expenseManager.cpp" bodystart="151" bodyend="184" declfile="src/travelexpense/header/expenseManager.h" declline="90" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_expense_manager_1ad3c6bb22de70782f9107931693bbe039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -290,15 +290,15 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/expenseManager.cpp" line="199" column="11" bodyfile="src/travelexpense/src/expenseManager.cpp" bodystart="199" bodyend="246" declfile="src/travelexpense/header/expenseManager.h" declline="106" declcolumn="29"/>
+        <location file="src/travelexpense/src/expenseManager.cpp" line="186" column="11" bodyfile="src/travelexpense/src/expenseManager.cpp" bodystart="186" bodyend="229" declfile="src/travelexpense/header/expenseManager.h" declline="106" declcolumn="29"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Seyahat Gideri Takibi - Gider Yönetimi Modülü </para>
     </briefdescription>
@@ -312,6 +312,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EXPENSE_MANAGER_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXPENSE_MANAGER_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>

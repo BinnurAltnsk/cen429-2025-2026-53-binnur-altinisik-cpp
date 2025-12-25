@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="user_auth_8cpp" kind="file" language="C++">
     <compoundname>userAuth.cpp</compoundname>
     <includes refid="user_auth_8h" local="yes">../header/userAuth.h</includes>
@@ -113,7 +113,7 @@
     </incdepgraph>
     <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
     <innernamespace refid="namespace_travel_expense_1_1_user_auth">TravelExpense::UserAuth</innernamespace>
-      <sectiondef kind="var">
+    <sectiondef kind="var">
       <memberdef kind="variable" id="namespace_travel_expense_1_1_user_auth_1a42131080d5a38e3a230c75c984a74871" prot="public" static="yes" mutable="no">
         <type>User *</type>
         <definition>User* TravelExpense::UserAuth::currentUser</definition>
@@ -129,8 +129,8 @@
         </inbodydescription>
         <location file="src/travelexpense/src/userAuth.cpp" line="23" column="13" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="23" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a63e9c88135b8d5f2911f99ce322d1a50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
         <definition>ErrorCode TravelExpense::UserAuth::registerUser</definition>
@@ -169,13 +169,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput, FileNotFound vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, InvalidInput, FileNotFound vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/userAuth.cpp" line="25" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="25" bodyend="113" declfile="src/travelexpense/header/userAuth.h" declline="41" declcolumn="29"/>
+        <location file="src/travelexpense/src/userAuth.cpp" line="25" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="25" bodyend="110" declfile="src/travelexpense/header/userAuth.h" declline="41" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a8f83e74a4b8d2833cb23051e7661c0f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -215,13 +215,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput, InvalidUser vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, InvalidInput, InvalidUser vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/userAuth.cpp" line="115" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="115" bodyend="234" declfile="src/travelexpense/header/userAuth.h" declline="57" declcolumn="29"/>
+        <location file="src/travelexpense/src/userAuth.cpp" line="112" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="112" bodyend="231" declfile="src/travelexpense/header/userAuth.h" declline="57" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a8777e8f207ceeaedc2eb75753756b1f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -236,13 +236,13 @@
 <para>Misafir kullanıcı modunu etkinleştirir. Misafir modunda, kullanıcı kaydı veya girişi gerekmez, ancak bazı özellikler sınırlı olabilir.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, geçici bir misafir kullanıcısı oluşturur. Misafir modu, oturum sonlandığında veya <ref refid="namespace_travel_expense_1_1_user_auth_1ad71c3866e8f46267153654e60014d99f" kindref="member">logoutUser()</ref> çağrıldığında sonlanır.</para>
 </simplesect>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, InvalidInput vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/userAuth.cpp" line="236" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="236" bodyend="247" declfile="src/travelexpense/header/userAuth.h" declline="70" declcolumn="29"/>
+        <location file="src/travelexpense/src/userAuth.cpp" line="233" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="233" bodyend="244" declfile="src/travelexpense/header/userAuth.h" declline="70" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1ad71c3866e8f46267153654e60014d99f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void</type>
@@ -261,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/userAuth.cpp" line="249" column="6" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="249" bodyend="254" declfile="src/travelexpense/header/userAuth.h" declline="81" declcolumn="24"/>
+        <location file="src/travelexpense/src/userAuth.cpp" line="246" column="6" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="246" bodyend="251" declfile="src/travelexpense/header/userAuth.h" declline="81" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a4ebfa893e3a0e71ccaac4869f6395785" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> User *</type>
@@ -282,7 +282,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/userAuth.cpp" line="256" column="6" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="256" bodyend="258" declfile="src/travelexpense/header/userAuth.h" declline="94" declcolumn="24"/>
+        <location file="src/travelexpense/src/userAuth.cpp" line="253" column="6" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="253" bodyend="255" declfile="src/travelexpense/header/userAuth.h" declline="94" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a0a20e8d4744950670b6f19c9888e74f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -322,15 +322,15 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/userAuth.cpp" line="260" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="260" bodyend="303" declfile="src/travelexpense/header/userAuth.h" declline="110" declcolumn="29"/>
+        <location file="src/travelexpense/src/userAuth.cpp" line="257" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="257" bodyend="300" declfile="src/travelexpense/header/userAuth.h" declline="110" declcolumn="29"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Seyahat Gideri Takibi - Kullanıcı Kimlik Doğrulama Implementation. </para>
     </briefdescription>
@@ -343,10 +343,11 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/userAuth.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/database.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/encryption.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/security.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="user_auth_8h" kindref="compound">../header/userAuth.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="database_8h" kindref="compound">../header/database.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="encryption_8h" kindref="compound">../header/encryption.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="security_8h" kindref="compound">../header/security.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sqlite3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -354,7 +355,7 @@
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_user_auth" kindref="compound">UserAuth</ref><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense_1_1_user_auth" kindref="compound">UserAuth</ref><sp/>{</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Global<sp/>mevcut<sp/>kullanıcı<sp/>pointer&apos;ı</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>User<sp/>*currentUser<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
@@ -576,10 +577,10 @@
 <codeline lineno="239"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="240"><highlight class="normal"></highlight></codeline>
 <codeline lineno="241"><highlight class="normal"><sp/><sp/>currentUser<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>User();</highlight></codeline>
-<codeline lineno="242"><highlight class="normal"><sp/><sp/>currentUser-&gt;<ref refid="struct_travel_expense_1_1_user_1a4cec5fe99724491f8257d41396940c70" kindref="member">userId</ref><sp/>=<sp/>-1;<sp/></highlight><highlight class="comment">//<sp/>Guest<sp/>kullanıcı<sp/>ID&apos;si</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="243"><highlight class="normal"><sp/><sp/>currentUser-&gt;<ref refid="struct_travel_expense_1_1_user_1a320d17e6980555c332bb5269e5cb5938" kindref="member">isGuest</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="244"><highlight class="normal"><sp/><sp/>strncpy(currentUser-&gt;<ref refid="struct_travel_expense_1_1_user_1a7f54291ba35d532e5938771f83e061de" kindref="member">username</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Guest&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(currentUser-&gt;<ref refid="struct_travel_expense_1_1_user_1a7f54291ba35d532e5938771f83e061de" kindref="member">username</ref>)<sp/>-<sp/>1);</highlight></codeline>
-<codeline lineno="245"><highlight class="normal"><sp/><sp/>currentUser-&gt;<ref refid="struct_travel_expense_1_1_user_1a3304e0e4fdd2d60ad4d9a2a530c08d51" kindref="member">createdAt</ref><sp/>=<sp/>time(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/>currentUser-&gt;userId<sp/>=<sp/>-1;<sp/></highlight><highlight class="comment">//<sp/>Guest<sp/>kullanıcı<sp/>ID&apos;si</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/>currentUser-&gt;isGuest<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/>strncpy(currentUser-&gt;username,<sp/></highlight><highlight class="stringliteral">&quot;Guest&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(currentUser-&gt;username)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/>currentUser-&gt;createdAt<sp/>=<sp/>time(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="246"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383daba505a83f220c02df2f85c3810cd9ceb38" kindref="member">ErrorCode::Success</ref>;</highlight></codeline>
 <codeline lineno="247"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="248"><highlight class="normal"></highlight></codeline>

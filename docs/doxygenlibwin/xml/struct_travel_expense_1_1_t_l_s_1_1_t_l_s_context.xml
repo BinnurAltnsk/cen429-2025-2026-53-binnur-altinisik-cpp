@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context" kind="struct" language="C++" prot="public">
     <compoundname>TravelExpense::TLS::TLSContext</compoundname>
     <includes refid="tls_8h" local="no">tls.h</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct_travel_expense_1_1_t_l_s_1_1_t_l_s_context_1a03cbedda9059a1a399a9590581d70cf5" prot="public" static="no" mutable="no">
         <type>void *</type>
         <definition>void* TravelExpense::TLS::TLSContext::sslContext</definition>
@@ -94,7 +94,7 @@
         </inbodydescription>
         <location file="src/travelexpense/header/tls.h" line="55" column="12" bodyfile="src/travelexpense/header/tls.h" bodystart="55" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para><ref refid="namespace_travel_expense_1_1_t_l_s" kindref="compound">TLS</ref> bağlamı (context) yapısı </para>
     </briefdescription>

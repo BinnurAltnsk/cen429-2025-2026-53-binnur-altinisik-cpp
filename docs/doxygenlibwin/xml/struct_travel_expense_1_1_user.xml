@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="struct_travel_expense_1_1_user" kind="struct" language="C++" prot="public">
     <compoundname>TravelExpense::User</compoundname>
     <includes refid="common_types_8h" local="no">commonTypes.h</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct_travel_expense_1_1_user_1a4cec5fe99724491f8257d41396940c70" prot="public" static="no" mutable="no">
         <type>int32_t</type>
         <definition>int32_t TravelExpense::User::userId</definition>
@@ -109,8 +109,8 @@
         </inbodydescription>
         <location file="src/travelexpense/header/commonTypes.h" line="37" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="37" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
+    </sectiondef>
+    <sectiondef kind="public-func">
       <memberdef kind="function" id="struct_travel_expense_1_1_user_1a3602bdcbdd2ea037db5c536f1de39a47" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>TravelExpense::User::User</definition>
@@ -127,7 +127,7 @@
         </inbodydescription>
         <location file="src/travelexpense/header/commonTypes.h" line="44" column="3" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="44" bodyend="48"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Kullanıcı veri modeli. </para>
     </briefdescription>

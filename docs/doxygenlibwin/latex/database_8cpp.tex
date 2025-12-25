@@ -5,8 +5,8 @@
 Seyahat Gideri Takibi -\/ SQLite Veritabanı Yönetimi Implementation.  
 
 
-{\ttfamily \#include \"{}../header/database.\+h\"{}}\newline
-{\ttfamily \#include \"{}../header/file\+IO.\+h\"{}}\newline
+{\ttfamily \#include "{}../header/database.\+h"{}}\newline
+{\ttfamily \#include "{}../header/file\+IO.\+h"{}}\newline
 {\ttfamily \#include $<$sqlite3.\+h$>$}\newline
 {\ttfamily \#include $<$cstring$>$}\newline
 {\ttfamily \#include $<$cstdio$>$}\newline
@@ -31,9 +31,9 @@ namespace \mbox{\hyperlink{namespace_travel_expense_1_1_database}{Travel\+Expens
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{database_8cpp_a2b42ceef59ec198c6eee355a96d2cd1c}{MKDIR}}(dir)~mkdir(dir.\+c\+\_\+str(), 0755)
+\#define \mbox{\hyperlink{database_8cpp_a2b42ceef59ec198c6eee355a96d2cd1c}{MKDIR}}(dir)
 \begin{DoxyCompactList}\small\item\em Linux/\+Unix için dizin oluşturma macro\textquotesingle{}su. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{database_8cpp_ae37f2aaf4837802590f2bd11facb80ea}{ACCESS}}(path,  mode)~access(path, mode)
+\#define \mbox{\hyperlink{database_8cpp_ae37f2aaf4837802590f2bd11facb80ea}{ACCESS}}(path,  mode)
 \begin{DoxyCompactList}\small\item\em Linux/\+Unix için dosya erişim kontrolü macro\textquotesingle{}su. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -65,13 +65,20 @@ Binnur Altınışık
 \end{DoxyDate}
 
 
+\label{doc-define-members}
+\Hypertarget{database_8cpp_doc-define-members}
 \doxysubsection{Macro Definition Documentation}
-\Hypertarget{database_8cpp_ae37f2aaf4837802590f2bd11facb80ea}\label{database_8cpp_ae37f2aaf4837802590f2bd11facb80ea} 
-\index{database.cpp@{database.cpp}!ACCESS@{ACCESS}}
+\Hypertarget{database_8cpp_ae37f2aaf4837802590f2bd11facb80ea}\index{database.cpp@{database.cpp}!ACCESS@{ACCESS}}
 \index{ACCESS@{ACCESS}!database.cpp@{database.cpp}}
 \doxysubsubsection{\texorpdfstring{ACCESS}{ACCESS}}
-{\footnotesize\ttfamily \#define ACCESS(\begin{DoxyParamCaption}\item[{}]{path,  }\item[{}]{mode }\end{DoxyParamCaption})~access(path, mode)}
+{\footnotesize\ttfamily \label{database_8cpp_ae37f2aaf4837802590f2bd11facb80ea} 
+\#define ACCESS(\begin{DoxyParamCaption}\item[{}]{path}{, }\item[{}]{mode}{}\end{DoxyParamCaption})}
 
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{access(path,\ mode)}
+
+\end{DoxyCode}
 
 
 Linux/\+Unix için dosya erişim kontrolü macro\textquotesingle{}su. 
@@ -83,12 +90,17 @@ Linux/\+Unix platformunda dosya erişim kontrolü yapmak için access() fonksiyo
 {\em mode} & Erişim modu (int) \\
 \hline
 \end{DoxyParams}
-\Hypertarget{database_8cpp_a2b42ceef59ec198c6eee355a96d2cd1c}\label{database_8cpp_a2b42ceef59ec198c6eee355a96d2cd1c} 
-\index{database.cpp@{database.cpp}!MKDIR@{MKDIR}}
+\Hypertarget{database_8cpp_a2b42ceef59ec198c6eee355a96d2cd1c}\index{database.cpp@{database.cpp}!MKDIR@{MKDIR}}
 \index{MKDIR@{MKDIR}!database.cpp@{database.cpp}}
 \doxysubsubsection{\texorpdfstring{MKDIR}{MKDIR}}
-{\footnotesize\ttfamily \#define MKDIR(\begin{DoxyParamCaption}\item[{}]{dir }\end{DoxyParamCaption})~mkdir(dir.\+c\+\_\+str(), 0755)}
+{\footnotesize\ttfamily \label{database_8cpp_a2b42ceef59ec198c6eee355a96d2cd1c} 
+\#define MKDIR(\begin{DoxyParamCaption}\item[{}]{dir}{}\end{DoxyParamCaption})}
 
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir(dir.c\_str(),\ 0755)}
+
+\end{DoxyCode}
 
 
 Linux/\+Unix için dizin oluşturma macro\textquotesingle{}su. 

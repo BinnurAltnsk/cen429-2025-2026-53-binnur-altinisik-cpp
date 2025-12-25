@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="struct_travel_expense_1_1_budget" kind="struct" language="C++" prot="public">
     <compoundname>TravelExpense::Budget</compoundname>
     <includes refid="common_types_8h" local="no">commonTypes.h</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct_travel_expense_1_1_budget_1a767da4abb6223ee5ade59c404cbb5d09" prot="public" static="no" mutable="no">
         <type>int32_t</type>
         <definition>int32_t TravelExpense::Budget::budgetId</definition>
@@ -124,8 +124,8 @@
         </inbodydescription>
         <location file="src/travelexpense/header/commonTypes.h" line="135" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="135" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
+    </sectiondef>
+    <sectiondef kind="public-func">
       <memberdef kind="function" id="struct_travel_expense_1_1_budget_1a16518e438fdc159f7a000352ab111f52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>TravelExpense::Budget::Budget</definition>
@@ -142,7 +142,7 @@
         </inbodydescription>
         <location file="src/travelexpense/header/commonTypes.h" line="142" column="3" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="142" bodyend="146"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Bütçe veri modeli. </para>
     </briefdescription>

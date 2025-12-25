@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="asset_manager_8h" kind="file" language="C++">
     <compoundname>assetManager.h</compoundname>
     <includes refid="common_types_8h" local="yes">commonTypes.h</includes>
@@ -88,7 +88,7 @@
     <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
     <innernamespace refid="namespace_asset_manager">AssetManager</innernamespace>
     <innernamespace refid="namespace_travel_expense_1_1_asset_manager">TravelExpense::AssetManager</innernamespace>
-      <sectiondef kind="enum">
+    <sectiondef kind="enum">
       <memberdef kind="enum" id="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036" prot="public" static="no" strong="yes">
         <type></type>
         <name>AssetType</name>
@@ -205,8 +205,8 @@
         </inbodydescription>
         <location file="src/travelexpense/header/assetManager.h" line="63" column="1" bodyfile="src/travelexpense/header/assetManager.h" bodystart="63" bodyend="67"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1a33ae1a53f9af6e03e81b1acb903c6958" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
         <definition>ErrorCode TravelExpense::AssetManager::registerAsset</definition>
@@ -242,13 +242,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/assetManager.cpp" line="27" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="27" bodyend="80" declfile="src/travelexpense/header/assetManager.h" declline="113" declcolumn="29"/>
+        <location file="src/travelexpense/src/assetManager.cpp" line="27" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="27" bodyend="73" declfile="src/travelexpense/header/assetManager.h" declline="113" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1a000f5700909ef864a26945183de16404" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -285,13 +285,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/assetManager.cpp" line="82" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="82" bodyend="138" declfile="src/travelexpense/header/assetManager.h" declline="122" declcolumn="29"/>
+        <location file="src/travelexpense/src/assetManager.cpp" line="75" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="75" bodyend="125" declfile="src/travelexpense/header/assetManager.h" declline="122" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1a35d1fbd75c391130eab2e700b9f8a75f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -328,13 +328,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/assetManager.cpp" line="140" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="140" bodyend="187" declfile="src/travelexpense/header/assetManager.h" declline="131" declcolumn="29"/>
+        <location file="src/travelexpense/src/assetManager.cpp" line="127" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="127" bodyend="168" declfile="src/travelexpense/header/assetManager.h" declline="131" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1abb26bb2442086fa911159baf2c80668f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -359,13 +359,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/assetManager.cpp" line="189" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="189" bodyend="225" declfile="src/travelexpense/header/assetManager.h" declline="139" declcolumn="29"/>
+        <location file="src/travelexpense/src/assetManager.cpp" line="170" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="170" bodyend="202" declfile="src/travelexpense/header/assetManager.h" declline="139" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1a8905f38d9bd74d60801d67a798d1c9de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -390,13 +390,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/assetManager.cpp" line="227" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="227" bodyend="277" declfile="src/travelexpense/header/assetManager.h" declline="147" declcolumn="29"/>
+        <location file="src/travelexpense/src/assetManager.cpp" line="204" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="204" bodyend="247" declfile="src/travelexpense/header/assetManager.h" declline="147" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1ae88b60bbe936e860fbb648a8fc024951" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -433,13 +433,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/assetManager.cpp" line="279" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="279" bodyend="331" declfile="src/travelexpense/header/assetManager.h" declline="156" declcolumn="29"/>
+        <location file="src/travelexpense/src/assetManager.cpp" line="249" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="249" bodyend="294" declfile="src/travelexpense/header/assetManager.h" declline="156" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1ad6039789a53809ffd63c8acc4dfeb17e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -476,13 +476,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/assetManager.cpp" line="337" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="337" bodyend="372" declfile="src/travelexpense/header/assetManager.h" declline="167" declcolumn="29"/>
+        <location file="src/travelexpense/src/assetManager.cpp" line="300" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="300" bodyend="331" declfile="src/travelexpense/header/assetManager.h" declline="167" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1aa4e8c39db1d427c8fee2e3d6deb3c05f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -519,13 +519,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/assetManager.cpp" line="374" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="374" bodyend="410" declfile="src/travelexpense/header/assetManager.h" declline="176" declcolumn="29"/>
+        <location file="src/travelexpense/src/assetManager.cpp" line="333" column="11" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="333" bodyend="365" declfile="src/travelexpense/header/assetManager.h" declline="176" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_asset_manager_1ab6141a7865bafc003e40f228550b388c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -568,9 +568,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/assetManager.cpp" line="412" column="6" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="412" bodyend="421" declfile="src/travelexpense/header/assetManager.h" declline="185" declcolumn="24"/>
+        <location file="src/travelexpense/src/assetManager.cpp" line="367" column="6" bodyfile="src/travelexpense/src/assetManager.cpp" bodystart="367" bodyend="376" declfile="src/travelexpense/header/assetManager.h" declline="185" declcolumn="24"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Seyahat Gideri Takibi - Varlık Yönetimi. </para>
     </briefdescription>
@@ -595,6 +595,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ASSET_MANAGER_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASSET_MANAGER_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
@@ -611,22 +612,22 @@
 <codeline lineno="43" refid="namespace_travel_expense_1_1_asset_manager" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_asset_manager" kindref="compound">AssetManager</ref><sp/>{</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="49" refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036" kindref="member">AssetType</ref><sp/>{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a92b88f40b6fded293e62bb292b687afe" kindref="member">USER_DATA</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036acc5f630cdb1d9a7493b64899f1103cb4" kindref="member">TRIP_DATA</ref><sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a4e73617e2a63787c8a4b4d705a1f1644" kindref="member">EXPENSE_DATA</ref><sp/>=<sp/>2,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a7d3525c0a7a81d48ef14b7b668188554" kindref="member">BUDGET_DATA</ref><sp/>=<sp/>3,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036ab5cbe81d2939ba7ec0e72e8cff758dab" kindref="member">SESSION_DATA</ref><sp/>=<sp/>4,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a7f50cb1a4957ebc516d71e864068a308" kindref="member">ENCRYPTION_KEY</ref><sp/>=<sp/>5,<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036aec7e491fc5a65ca0d1dcf313a8a51134" kindref="member">CONFIG_DATA</ref><sp/>=<sp/>6<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a92b88f40b6fded293e62bb292b687afe" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a92b88f40b6fded293e62bb292b687afe" kindref="member">USER_DATA</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036acc5f630cdb1d9a7493b64899f1103cb4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036acc5f630cdb1d9a7493b64899f1103cb4" kindref="member">TRIP_DATA</ref><sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a4e73617e2a63787c8a4b4d705a1f1644" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a4e73617e2a63787c8a4b4d705a1f1644" kindref="member">EXPENSE_DATA</ref><sp/>=<sp/>2,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a7d3525c0a7a81d48ef14b7b668188554" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a7d3525c0a7a81d48ef14b7b668188554" kindref="member">BUDGET_DATA</ref><sp/>=<sp/>3,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036ab5cbe81d2939ba7ec0e72e8cff758dab" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036ab5cbe81d2939ba7ec0e72e8cff758dab" kindref="member">SESSION_DATA</ref><sp/>=<sp/>4,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a7f50cb1a4957ebc516d71e864068a308" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a7f50cb1a4957ebc516d71e864068a308" kindref="member">ENCRYPTION_KEY</ref><sp/>=<sp/>5,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036aec7e491fc5a65ca0d1dcf313a8a51134" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036aec7e491fc5a65ca0d1dcf313a8a51134" kindref="member">CONFIG_DATA</ref><sp/>=<sp/>6<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="57"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
 <codeline lineno="63" refid="namespace_travel_expense_1_1_asset_manager_1aced1c857447d9058ac4c5779fb771d0b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1aced1c857447d9058ac4c5779fb771d0b" kindref="member">ProtectionScheme</ref><sp/>{</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1aced1c857447d9058ac4c5779fb771d0ba4ddb4b92d87973bd0fc314979deba833" kindref="member">CONFIDENTIALITY</ref><sp/>=<sp/>0x01,<sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1aced1c857447d9058ac4c5779fb771d0ba9922a31d0eb8cadab61858b5ca94e9df" kindref="member">INTEGRITY</ref><sp/>=<sp/>0x02,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1aced1c857447d9058ac4c5779fb771d0bac1f244be04c43841756fff0cdb74f994" kindref="member">AUTHENTICATION</ref><sp/>=<sp/>0x04<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="namespace_travel_expense_1_1_asset_manager_1aced1c857447d9058ac4c5779fb771d0ba4ddb4b92d87973bd0fc314979deba833" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1aced1c857447d9058ac4c5779fb771d0ba4ddb4b92d87973bd0fc314979deba833" kindref="member">CONFIDENTIALITY</ref><sp/>=<sp/>0x01,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="namespace_travel_expense_1_1_asset_manager_1aced1c857447d9058ac4c5779fb771d0ba9922a31d0eb8cadab61858b5ca94e9df" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1aced1c857447d9058ac4c5779fb771d0ba9922a31d0eb8cadab61858b5ca94e9df" kindref="member">INTEGRITY</ref><sp/>=<sp/>0x02,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="namespace_travel_expense_1_1_asset_manager_1aced1c857447d9058ac4c5779fb771d0bac1f244be04c43841756fff0cdb74f994" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1aced1c857447d9058ac4c5779fb771d0bac1f244be04c43841756fff0cdb74f994" kindref="member">AUTHENTICATION</ref><sp/>=<sp/>0x04<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="67"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73" refid="struct_travel_expense_1_1_asset_manager_1_1_asset" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset" kindref="compound">Asset</ref><sp/>{</highlight></codeline>
+<codeline lineno="73" refid="struct_travel_expense_1_1_asset_manager_1_1_asset" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a8ae977d0ef54c270ff01f06399025944" kindref="member">Asset</ref><sp/>{</highlight></codeline>
 <codeline lineno="74" refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a986c8230bbcc243780250752e1c75276" refkind="member"><highlight class="normal"><sp/><sp/>int32_t<sp/><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a986c8230bbcc243780250752e1c75276" kindref="member">assetId</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="75" refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a088985bed7307cea0baded90e87c0512" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036" kindref="member">AssetType</ref><sp/><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a088985bed7307cea0baded90e87c0512" kindref="member">assetType</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="76" refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a4c169d5889293f4d105b034e6fc2218c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a4c169d5889293f4d105b034e6fc2218c" kindref="member">name</ref>[100];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -640,6 +641,7 @@
 <codeline lineno="84" refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a2e780b5ecfe34dd4b006785747ebc27f" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a2e780b5ecfe34dd4b006785747ebc27f" kindref="member">protectionScheme</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="85" refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a946e38d5cff7598bf5dcd0803af4e1c0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a946e38d5cff7598bf5dcd0803af4e1c0" kindref="member">isEncrypted</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="86" refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a1e0ea888fc82efdca59cfc16f1c4b409" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a1e0ea888fc82efdca59cfc16f1c4b409" kindref="member">isActive</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
 <codeline lineno="93" refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a8ae977d0ef54c270ff01f06399025944" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a8ae977d0ef54c270ff01f06399025944" kindref="member">Asset</ref>()<sp/>:<sp/><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a986c8230bbcc243780250752e1c75276" kindref="member">assetId</ref>(0),<sp/><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a088985bed7307cea0baded90e87c0512" kindref="member">assetType</ref>(<ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036" kindref="member">AssetType</ref>::<ref refid="namespace_travel_expense_1_1_asset_manager_1a80868bce24855c8dc089231ee9fd6036a92b88f40b6fded293e62bb292b687afe" kindref="member">USER_DATA</ref>),</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a051fb7b159bac648ed7c05605e6c57ea" kindref="member">size</ref>(0),<sp/><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1aa3a5d6719dbe319a885e415965664289" kindref="member">createdAt</ref>(0),<sp/><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a4fbe11c20d6d6104bba02cfd49e7fbba" kindref="member">deletedAt</ref>(0),</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a2e780b5ecfe34dd4b006785747ebc27f" kindref="member">protectionScheme</ref>(0),<sp/><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a946e38d5cff7598bf5dcd0803af4e1c0" kindref="member">isEncrypted</ref>(false),<sp/><ref refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a1e0ea888fc82efdca59cfc16f1c4b409" kindref="member">isActive</ref>(true)<sp/>{</highlight></codeline>

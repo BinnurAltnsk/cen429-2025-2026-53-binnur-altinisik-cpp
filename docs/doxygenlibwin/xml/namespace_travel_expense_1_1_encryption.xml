@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="namespace_travel_expense_1_1_encryption" kind="namespace" language="C++">
     <compoundname>TravelExpense::Encryption</compoundname>
-      <sectiondef kind="var">
+    <sectiondef kind="var">
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1a171c1ba8fe48cb797af76b8118db7ae4" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
         <definition>const uint8_t TravelExpense::Encryption::DES_SBOX[8][4][16]</definition>
@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1198" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1198" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1201" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1201" bodyend="1250"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1ada0587bba502a11214b955e0eb1aa4cd" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1254" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1254" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1257" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1257" bodyend="1262"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1ac3ded76cf60aa87e96a8de192c6b6b81" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1267" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1267" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1270" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1270" bodyend="1275"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1a5cabf8ac9238178392c4ef3a1a2d425d" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1279" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1279" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1282" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1282" bodyend="1287"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1ac2135b936686e48b64a6c9a8e1e14868" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1291" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1291" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1294" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1294" bodyend="1297"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1a79322dbd295d3667fe20667a41ac62cf" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1301" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1301" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1304" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1304" bodyend="1309"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1a9d270a8a0b57667c48bcd0f09ed27421" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -147,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1313" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1313" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1316" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1316" bodyend="1321"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1a12e914f70722e440cf9bd66734f1f766" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -166,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1325" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1325" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1328" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1328" bodyend="1330"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1ae7ec65eb3ab1870a8d621f96a7c34f05" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1337" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1337" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1340" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1340" bodyend="1342"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1a345a2cb3a56ab3da7f5fa1b317ca2893" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -213,7 +213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1766" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1766" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1769" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1769" bodyend="1774"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1abc5b82337e0c82092aaff2968e5f6c50" prot="public" static="yes" mutable="no">
         <type>const uint8_t</type>
@@ -235,7 +235,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1779" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1779" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1782" column="22" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1782" bodyend="1787"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1af4ad2ac1e8add87ec4cd90e588c20c0a" prot="public" static="yes" mutable="no">
         <type>uint8_t</type>
@@ -260,7 +260,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1801" column="16" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1801" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1804" column="16" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1804" bodyend="1804"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_encryption_1a34ec3b4b4d572219959c2a7e4873a3e5" prot="public" static="yes" mutable="no">
         <type>bool</type>
@@ -275,10 +275,10 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1802" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1802" bodyend="-1"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1805" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1805" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1adfcb32aabe9079b29064bb520f474e43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
         <definition>bool TravelExpense::Encryption::sha256Hash</definition>
@@ -332,8 +332,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata (null pointer, sıfır uzunluk vb.)</para>
 </simplesect>
-</para>
-<para>RFC 6234 uyumlu tam SHA-256 hash implementasyonu. Girdi verisini 512-bit chunk&apos;lara böler, her chunk&apos;ı işler ve sonuç olarak 256-bit (32 byte) hash üretir.</para>
+RFC 6234 uyumlu tam SHA-256 hash implementasyonu. Girdi verisini 512-bit chunk&apos;lara böler, her chunk&apos;ı işler ve sonuç olarak 256-bit (32 byte) hash üretir.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>input</parametername>
@@ -396,8 +395,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata (null pointer, rastgele sayı üretme hatası vb.)</para>
 </simplesect>
-</para>
-<para>Güvenli rastgele sayı üreticisi kullanarak 16 byte (32 karakter hex string) salt değeri oluşturur. Bu salt, şifre hash&apos;leme işlemlerinde kullanılır.</para>
+Güvenli rastgele sayı üreticisi kullanarak 16 byte (32 karakter hex string) salt değeri oluşturur. Bu salt, şifre hash&apos;leme işlemlerinde kullanılır.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>salt</parametername>
@@ -467,8 +465,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata (null pointer, geçersiz salt formatı vb.)</para>
 </simplesect>
-</para>
-<para>Şifreyi salt ile birleştirip SHA-256 hash&apos;ini hesaplar. Format: SHA256(password + salt)</para>
+Şifreyi salt ile birleştirip SHA-256 hash&apos;ini hesaplar. Format: SHA256(password + salt)</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>password</parametername>
@@ -555,8 +552,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Şifre doğru, false Yanlış veya hata</para>
 </simplesect>
-</para>
-<para>Girilen şifreyi salt ile hash&apos;leyip saklanan hash ile karşılaştırır. Constant-time comparison kullanarak timing attack&apos;lara karşı koruma sağlar.</para>
+Girilen şifreyi salt ile hash&apos;leyip saklanan hash ile karşılaştırır. Constant-time comparison kullanarak timing attack&apos;lara karşı koruma sağlar.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>password</parametername>
@@ -676,8 +672,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>AES-256 algoritması ile CBC (Cipher Block Chaining) modunda şifreleme yapar. PKCS7 padding kullanır ve her blok önceki şifrelenmiş blok ile XOR&apos;lanır.</para>
+AES-256 algoritması ile CBC (Cipher Block Chaining) modunda şifreleme yapar. PKCS7 padding kullanır ve her blok önceki şifrelenmiş blok ile XOR&apos;lanır.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>plaintext</parametername>
@@ -733,7 +728,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="557" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="557" bodyend="600" declfile="src/travelexpense/header/encryption.h" declline="111" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="557" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="557" bodyend="602" declfile="src/travelexpense/header/encryption.h" declline="111" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a8b06d829778298f0975c1b85ed746270" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -821,8 +816,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>AES-256 algoritması ile CBC modunda şifre çözme yapar. PKCS7 padding&apos;i kaldırır ve her blok önceki şifrelenmiş blok ile XOR&apos;lanır.</para>
+AES-256 algoritması ile CBC modunda şifre çözme yapar. PKCS7 padding&apos;i kaldırır ve her blok önceki şifrelenmiş blok ile XOR&apos;lanır.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ciphertext</parametername>
@@ -878,7 +872,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="711" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="711" bodyend="797" declfile="src/travelexpense/header/encryption.h" declline="126" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="713" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="713" bodyend="800" declfile="src/travelexpense/header/encryption.h" declline="126" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a9556af2bcbc41232a11630b9de1d36d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -954,8 +948,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>RFC 2104 uyumlu HMAC-SHA256 (Hash-based Message Authentication Code) hesaplar. HMAC = SHA256(o_key_pad || SHA256(i_key_pad || message))</para>
+RFC 2104 uyumlu HMAC-SHA256 (Hash-based Message Authentication Code) hesaplar. HMAC = SHA256(o_key_pad || SHA256(i_key_pad || message))</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>key</parametername>
@@ -1003,7 +996,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="812" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="812" bodyend="874" declfile="src/travelexpense/header/encryption.h" declline="140" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="815" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="815" bodyend="877" declfile="src/travelexpense/header/encryption.h" declline="140" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a53f29cf73c5a46e8ff3c3344408bcefa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1102,8 +1095,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>RFC 2898 uyumlu PBKDF2 implementasyonu. Şifre ve salt&apos;tan güçlü bir anahtar türetir. HMAC-SHA256 kullanır.</para>
+RFC 2898 uyumlu PBKDF2 implementasyonu. Şifre ve salt&apos;tan güçlü bir anahtar türetir. HMAC-SHA256 kullanır.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>password</parametername>
@@ -1167,7 +1159,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="891" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="891" bodyend="956" declfile="src/travelexpense/header/encryption.h" declline="156" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="894" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="894" bodyend="959" declfile="src/travelexpense/header/encryption.h" declline="156" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1aab13cbee61c87e29e4f07badb68ee006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1207,8 +1199,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Platform-specific güvenli rastgele sayı üreticisi kullanır:<itemizedlist>
+Platform-specific güvenli rastgele sayı üreticisi kullanır:<itemizedlist>
 <listitem><para>Windows: CryptGenRandom (Windows CryptoAPI)</para>
 </listitem><listitem><para>Linux/Unix: /dev/urandom</para>
 </listitem></itemizedlist>
@@ -1236,7 +1227,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="969" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="969" bodyend="999" declfile="src/travelexpense/header/encryption.h" declline="168" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="972" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="972" bodyend="1002" declfile="src/travelexpense/header/encryption.h" declline="168" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1af19dc3b309d69a616590466cd620921c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1264,8 +1255,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>AES şifreleme için 16 byte (AES block size) güvenli rastgele IV oluşturur.</para>
+AES şifreleme için 16 byte (AES block size) güvenli rastgele IV oluşturur.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>iv</parametername>
@@ -1281,7 +1271,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1009" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1009" bodyend="1015" declfile="src/travelexpense/header/encryption.h" declline="176" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1012" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1012" bodyend="1018" declfile="src/travelexpense/header/encryption.h" declline="176" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a1bc8df3a6e90bff77d7c9eb843036ba5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1333,8 +1323,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Eşit, false Farklı</para>
 </simplesect>
-</para>
-<para>Timing attack&apos;lara karşı koruma sağlayan sabit zamanlı string karşılaştırma. Her karakteri karşılaştırır ve sonucu XOR ile birleştirir. Bu sayede karşılaştırma süresi string içeriğinden bağımsızdır.</para>
+Timing attack&apos;lara karşı koruma sağlayan sabit zamanlı string karşılaştırma. Her karakteri karşılaştırır ve sonucu XOR ile birleştirir. Bu sayede karşılaştırma süresi string içeriğinden bağımsızdır.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>a</parametername>
@@ -1366,7 +1355,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1029" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1029" bodyend="1041" declfile="src/travelexpense/header/encryption.h" declline="186" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1032" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1032" bodyend="1044" declfile="src/travelexpense/header/encryption.h" declline="186" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a0195e1357626a5075951ae990e99ca8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1431,8 +1420,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Dosyayı AES-256-CBC ile şifreler ve çıktı dosyasına yazar. Çıktı formatı: [IV (16 byte)][Ciphertext (padded)]</para>
+Dosyayı AES-256-CBC ile şifreler ve çıktı dosyasına yazar. Çıktı formatı: [IV (16 byte)][Ciphertext (padded)]</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>inputFile</parametername>
@@ -1472,7 +1460,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1055" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1055" bodyend="1112" declfile="src/travelexpense/header/encryption.h" declline="197" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1058" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1058" bodyend="1115" declfile="src/travelexpense/header/encryption.h" declline="197" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a7d0d5da1d2c1edf0044d80f025c889b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1537,8 +1525,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>AES-256-CBC ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı: [IV (16 byte)][Ciphertext (padded)]</para>
+AES-256-CBC ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı: [IV (16 byte)][Ciphertext (padded)]</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>inputFile</parametername>
@@ -1578,7 +1565,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1126" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1126" bodyend="1186" declfile="src/travelexpense/header/encryption.h" declline="209" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1129" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1129" bodyend="1189" declfile="src/travelexpense/header/encryption.h" declline="209" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a90b1f8daf4e4e6a110cce5aa4a1a135f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1643,8 +1630,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Gömülü anahtar ile DES şifreleme yapar. Anahtar koda gömülü olduğu için whitebox implementasyonu. PKCS7 padding kullanır (8-byte blocks).</para>
+Gömülü anahtar ile DES şifreleme yapar. Anahtar koda gömülü olduğu için whitebox implementasyonu. PKCS7 padding kullanır (8-byte blocks).</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>plaintext</parametername>
@@ -1684,7 +1670,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1549" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1549" bodyend="1569" declfile="src/travelexpense/header/encryption.h" declline="225" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1552" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1552" bodyend="1572" declfile="src/travelexpense/header/encryption.h" declline="225" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a894ef88976e4ddeccc27e33506180f6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1748,8 +1734,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Gömülü anahtar ile DES şifre çözme yapar. PKCS7 padding&apos;i kaldırır.</para>
+Gömülü anahtar ile DES şifre çözme yapar. PKCS7 padding&apos;i kaldırır.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ciphertext</parametername>
@@ -1789,7 +1774,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1582" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1582" bodyend="1602" declfile="src/travelexpense/header/encryption.h" declline="237" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1585" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1585" bodyend="1605" declfile="src/travelexpense/header/encryption.h" declline="237" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a531df9d656f8e6e5b539c2db02ff09b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1829,8 +1814,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Dosyayı whitebox DES ile şifreler ve çıktı dosyasına yazar. Çıktı formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
+Dosyayı whitebox DES ile şifreler ve çıktı dosyasına yazar. Çıktı formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>inputFile</parametername>
@@ -1854,7 +1838,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1614" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1614" bodyend="1668" declfile="src/travelexpense/header/encryption.h" declline="247" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1617" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1617" bodyend="1671" declfile="src/travelexpense/header/encryption.h" declline="247" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a34495d70a42f169639fe1d6d51f4fa79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1894,8 +1878,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Whitebox DES ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
+Whitebox DES ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>inputFile</parametername>
@@ -1919,7 +1902,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1680" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1680" bodyend="1752" declfile="src/travelexpense/header/encryption.h" declline="256" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1683" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1683" bodyend="1755" declfile="src/travelexpense/header/encryption.h" declline="256" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1ac04f3733c0d1a05113a11221e344e0e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1984,8 +1967,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Gömülü anahtar ile AES-256 şifreleme yapar. PKCS7 padding kullanır (16-byte blocks).</para>
+Gömülü anahtar ile AES-256 şifreleme yapar. PKCS7 padding kullanır (16-byte blocks).</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>plaintext</parametername>
@@ -2025,7 +2007,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="2095" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2095" bodyend="2112" declfile="src/travelexpense/header/encryption.h" declline="276" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="2098" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2098" bodyend="2115" declfile="src/travelexpense/header/encryption.h" declline="276" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a539e19ad6f2560392c8a73000fb71e21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -2089,8 +2071,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Gömülü anahtar ile AES-256 şifre çözme yapar. PKCS7 padding&apos;i kaldırır.</para>
+Gömülü anahtar ile AES-256 şifre çözme yapar. PKCS7 padding&apos;i kaldırır.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ciphertext</parametername>
@@ -2130,7 +2111,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="2125" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2125" bodyend="2142" declfile="src/travelexpense/header/encryption.h" declline="288" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="2128" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2128" bodyend="2145" declfile="src/travelexpense/header/encryption.h" declline="288" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1ad2ec9054ce42bc1b7376ed47caf91e56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -2170,8 +2151,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Dosyayı whitebox AES ile şifreler ve çıktı dosyasına yazar. Çıktı formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
+Dosyayı whitebox AES ile şifreler ve çıktı dosyasına yazar. Çıktı formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>inputFile</parametername>
@@ -2195,7 +2175,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="2154" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2154" bodyend="2208" declfile="src/travelexpense/header/encryption.h" declline="298" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="2157" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2157" bodyend="2211" declfile="src/travelexpense/header/encryption.h" declline="298" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1ae7b964b2a339d09c81020de250276b43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -2235,8 +2215,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Whitebox AES ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
+Whitebox AES ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>inputFile</parametername>
@@ -2260,7 +2239,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="2220" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2220" bodyend="2292" declfile="src/travelexpense/header/encryption.h" declline="307" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="2223" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2223" bodyend="2295" declfile="src/travelexpense/header/encryption.h" declline="307" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a7f4e7da39c6111a455c5eac7742ee2ca" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>uint8_t</type>
@@ -2456,7 +2435,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="613" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="613" bodyend="695"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="615" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="615" bodyend="697"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1aa21281925ebbddc33d8d9b1e21a3e9f3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint64_t</type>
@@ -2512,7 +2491,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1351" column="17" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1351" bodyend="1363"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1354" column="17" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1354" bodyend="1366"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a2223bb19403d3c90b2065255495234c4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -2544,7 +2523,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1374" column="17" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1374" bodyend="1386"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1377" column="17" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1377" bodyend="1389"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a21eded60c1cf7235461197fd2460b70d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2575,7 +2554,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1395" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1395" bodyend="1421"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1398" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1398" bodyend="1424"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a243ea97669400e7912592845c92ab449" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint32_t</type>
@@ -2619,7 +2598,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1433" column="17" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1433" bodyend="1451"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1436" column="17" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1436" bodyend="1454"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a3cb83cfc9a9de8f4d8ce6b2aff8b11f5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2674,7 +2653,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1463" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1463" bodyend="1493"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1466" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1466" bodyend="1496"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1aa7953e65818b5d62653b95ca7809b56d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2729,7 +2708,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1505" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1505" bodyend="1535"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1508" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1508" bodyend="1538"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a6a3e9d695986ac31ede29ddf25508afc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2760,7 +2739,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1812" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1812" bodyend="1859"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1815" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1815" bodyend="1862"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1afcf186a72103b15843f033e602b31da1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2791,7 +2770,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1869" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1869" bodyend="1892"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1872" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1872" bodyend="1895"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1ac0fb577cc25e724fa38273806e7b5f2e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2833,7 +2812,7 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1903" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1903" bodyend="1986"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1906" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1906" bodyend="1989"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1aceb10e0ec6c2eefebeeea4ae2c1cb1cf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2875,9 +2854,9 @@ Format: WHITEBOX_T_BOX[round][byte_value][column_index]<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1997" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1997" bodyend="2082"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="2000" column="13" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2000" bodyend="2085"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -1,5 +1,16 @@
 var searchData=
 [
-  ['name_0',['name',['../struct_travel_expense_1_1_asset_manager_1_1_asset.html#a4c169d5889293f4d105b034e6fc2218c',1,'TravelExpense::AssetManager::Asset']]],
-  ['not_5finitialized_1',['NOT_INITIALIZED',['../namespace_travel_expense_1_1_soft_h_s_m.html#aad0a58fc42af71a6793bf6449a75b24aa02de9649e258d1dd94056e676061e969',1,'TravelExpense::SoftHSM']]]
+  ['memoryallocation_0',['MemoryAllocation',['../namespace_travel_expense.html#a3bda90e999d060d311aeaafaca383daba6a10b4834f9cabcc57ddbf0ee05eeb47',1,'TravelExpense']]],
+  ['menüsü_1',['Konsol Menüsü',['../index.html#autotoc_md12',1,'']]],
+  ['migrateallfrombinary_2',['migrateAllFromBinary',['../namespace_travel_expense_1_1_migration.html#ac56a5704bf31629e1b35b2dcd161a98b',1,'TravelExpense::Migration']]],
+  ['migratebudgetstodatabase_3',['migrateBudgetsToDatabase',['../namespace_travel_expense_1_1_migration.html#a0585996bd000e2e35d0e36022d08bd6c',1,'TravelExpense::Migration']]],
+  ['migrateexpensestodatabase_4',['migrateExpensesToDatabase',['../namespace_travel_expense_1_1_migration.html#a183d7e8c8198b4545072decb2d3a147c',1,'TravelExpense::Migration']]],
+  ['migrateidfiles_5',['migrateIdFiles',['../namespace_travel_expense_1_1_migration.html#abac0abce63e7e7b06bad2913e311f552',1,'TravelExpense::Migration']]],
+  ['migratetripstodatabase_6',['migrateTripsToDatabase',['../namespace_travel_expense_1_1_migration.html#a336f33556eca236abeee8c07a092174a',1,'TravelExpense::Migration']]],
+  ['migrateuserstodatabase_7',['migrateUsersToDatabase',['../namespace_travel_expense_1_1_migration.html#ad9ea52c32ab75768e4f494a5f381a37f',1,'TravelExpense::Migration']]],
+  ['migration_8',['Migration',['../namespace_migration.html',1,'']]],
+  ['migration_2ecpp_9',['migration.cpp',['../migration_8cpp.html',1,'']]],
+  ['migration_2eh_10',['migration.h',['../migration_8h.html',1,'']]],
+  ['migrationresult_11',['MigrationResult',['../struct_travel_expense_1_1_migration_1_1_migration_result.html',1,'TravelExpense::Migration']]],
+  ['mkdir_12',['MKDIR',['../database_8cpp.html#a2b42ceef59ec198c6eee355a96d2cd1c',1,'MKDIR:&#160;database.cpp'],['../file_i_o_8cpp.html#a2b42ceef59ec198c6eee355a96d2cd1c',1,'MKDIR:&#160;fileIO.cpp']]]
 ];

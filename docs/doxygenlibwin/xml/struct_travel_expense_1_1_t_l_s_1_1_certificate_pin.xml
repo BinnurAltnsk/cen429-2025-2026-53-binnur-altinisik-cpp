@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin" kind="struct" language="C++" prot="public">
     <compoundname>TravelExpense::TLS::CertificatePin</compoundname>
     <includes refid="tls_8h" local="no">tls.h</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct_travel_expense_1_1_t_l_s_1_1_certificate_pin_1aa6ab5f33c9d6eb212f691ff5a2918266" prot="public" static="no" mutable="no">
         <type>char</type>
         <definition>char TravelExpense::TLS::CertificatePin::hostname[256]</definition>
@@ -79,7 +79,7 @@
         </inbodydescription>
         <location file="src/travelexpense/header/tls.h" line="137" column="8" bodyfile="src/travelexpense/header/tls.h" bodystart="137" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Sertifika pin bilgisi. </para>
     </briefdescription>

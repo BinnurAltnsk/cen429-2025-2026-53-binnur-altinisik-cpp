@@ -1,17 +1,18 @@
 var searchData=
 [
-  ['validatedeviceandversion_0',['validateDeviceAndVersion',['../namespace_travel_expense_1_1_session_manager.html#ad6e58bd9ca5d725609dd33e56febf537',1,'TravelExpense::SessionManager']]],
-  ['verify_1',['verify',['../namespace_travel_expense_1_1_soft_h_s_m.html#a6e1b43ac34b60670eafe4cb1c347335a',1,'TravelExpense::SoftHSM']]],
-  ['verifyapplicationfingerprint_2',['verifyApplicationFingerprint',['../namespace_travel_expense_1_1_fingerprinting.html#ad1d7ddf7b4c19319abf133d25423a1b2',1,'TravelExpense::Fingerprinting']]],
-  ['verifycertificatepin_3',['verifyCertificatePin',['../namespace_travel_expense_1_1_t_l_s.html#a0164fd8bb76e186edd32156957f30c67',1,'TravelExpense::TLS']]],
-  ['verifycodechecksum_4',['verifyCodeChecksum',['../namespace_travel_expense_1_1_r_a_s_p.html#a82253cae91dc52bb085b258bcfb97e30',1,'TravelExpense::RASP']]],
-  ['verifycontrolflowcounter_5',['verifyControlFlowCounter',['../namespace_travel_expense_1_1_r_a_s_p.html#a85af5ca5f027e162efd80ca365be1dc7',1,'TravelExpense::RASP']]],
-  ['verifydevicefingerprint_6',['verifyDeviceFingerprint',['../namespace_travel_expense_1_1_fingerprinting.html#a191e063655ff8a03f4fb50febd6f59c8',1,'TravelExpense::Fingerprinting']]],
-  ['verifyfilechecksum_7',['verifyFileChecksum',['../namespace_travel_expense_1_1_r_a_s_p.html#acd000c0f527936b798be3dd63780a24c',1,'TravelExpense::RASP']]],
-  ['verifyhmac_8',['verifyHMAC',['../namespace_travel_expense_1_1_session_manager.html#aceef3c52f919a1a4f68686d3985b0812',1,'TravelExpense::SessionManager']]],
-  ['verifypassword_9',['verifyPassword',['../namespace_travel_expense_1_1_encryption.html#a4860c004d6b6d05f4723dfc0c90f35cd',1,'TravelExpense::Encryption']]],
-  ['verifyprotectionscheme_10',['verifyProtectionScheme',['../namespace_travel_expense_1_1_asset_manager.html#ab6141a7865bafc003e40f228550b388c',1,'TravelExpense::AssetManager']]],
-  ['verifyselfchecksum_11',['verifySelfChecksum',['../namespace_travel_expense_1_1_r_a_s_p.html#a7b85af9ddfe675010dffac4a7b2d504f',1,'TravelExpense::RASP']]],
-  ['verifyservercertificate_12',['verifyServerCertificate',['../namespace_travel_expense_1_1_t_l_s.html#a7ec0910cdb0e632435dae6af7f06b345',1,'TravelExpense::TLS']]],
-  ['verifysignature_13',['verifySignature',['../namespace_travel_expense_1_1_session_manager.html#aaf4139a793d646ebb66eac13338753b5',1,'TravelExpense::SessionManager']]]
+  ['unknown_0',['Unknown',['../namespace_travel_expense.html#a3bda90e999d060d311aeaafaca383daba88183b946cc5f0e8c96b2e66e1c74a7e',1,'TravelExpense']]],
+  ['updateasset_1',['updateAsset',['../namespace_travel_expense_1_1_asset_manager.html#a35d1fbd75c391130eab2e700b9f8a75f',1,'TravelExpense::AssetManager']]],
+  ['updatebudget_2',['updateBudget',['../namespace_travel_expense_1_1_budget_manager.html#aa6d74518da8cb56fda03f783e7664c05',1,'TravelExpense::BudgetManager']]],
+  ['updatedat_3',['updatedAt',['../struct_travel_expense_1_1_trip.html#a28f9028c8257a3ad54038e18ab0422d0',1,'TravelExpense::Trip::updatedAt'],['../struct_travel_expense_1_1_budget.html#ab9bd8b9ca6b45f9a89c487ee5c914254',1,'TravelExpense::Budget::updatedAt']]],
+  ['updateexpense_4',['updateExpense',['../namespace_travel_expense_1_1_expense_manager.html#a299a02f1b9bbb93d906b93c1cf0e6d00',1,'TravelExpense::ExpenseManager']]],
+  ['updatetrip_5',['updateTrip',['../namespace_travel_expense_1_1_trip_manager.html#a39bc3ac908aab3ead121a77c6f290ea0',1,'TravelExpense::TripManager']]],
+  ['user_6',['User',['../struct_travel_expense_1_1_user.html',1,'TravelExpense::User'],['../struct_travel_expense_1_1_user.html#a3602bdcbdd2ea037db5c536f1de39a47',1,'TravelExpense::User::User()']]],
+  ['user_5fdata_7',['USER_DATA',['../namespace_travel_expense_1_1_asset_manager.html#a80868bce24855c8dc089231ee9fd6036a92b88f40b6fded293e62bb292b687afe',1,'TravelExpense::AssetManager']]],
+  ['userauth_8',['UserAuth',['../namespace_user_auth.html',1,'']]],
+  ['userauth_2ecpp_9',['userAuth.cpp',['../user_auth_8cpp.html',1,'']]],
+  ['userauth_2eh_10',['userAuth.h',['../user_auth_8h.html',1,'']]],
+  ['userid_11',['userId',['../struct_travel_expense_1_1_user.html#a4cec5fe99724491f8257d41396940c70',1,'TravelExpense::User::userId'],['../struct_travel_expense_1_1_trip.html#a3e331ff4035a3269150c8d99f08c874a',1,'TravelExpense::Trip::userId']]],
+  ['username_12',['username',['../struct_travel_expense_1_1_user.html#a7f54291ba35d532e5938771f83e061de',1,'TravelExpense::User']]],
+  ['usersmigrated_13',['usersMigrated',['../struct_travel_expense_1_1_migration_1_1_migration_result.html#a7aa7569434d4029a50c8e1215f308b8b',1,'TravelExpense::Migration::MigrationResult']]],
+  ['uyumluluğu_14',['Güvenlik Standartları Uyumluluğu',['../index.html#autotoc_md23',1,'']]]
 ];

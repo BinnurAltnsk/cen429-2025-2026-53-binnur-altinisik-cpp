@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="namespace_travel_expense_1_1_code_hardening" kind="namespace" language="C++">
     <compoundname>TravelExpense::CodeHardening</compoundname>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1a9004e21532759d85900572705b58e005" prot="public" static="yes" mutable="no">
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1a80a4ca57741affb6f17bc2f535dca871" prot="public" static="yes" mutable="no">
         <type>const uint32_t</type>
-        <definition>TravelExpense::CodeHardening::OPAQUE_MAGIC_1</definition>
+        <definition>const uint32_t TravelExpense::CodeHardening::OPAQUE_MAGIC_1</definition>
         <argsstring></argsstring>
         <name>OPAQUE_MAGIC_1</name>
         <qualifiedname>TravelExpense::CodeHardening::OPAQUE_MAGIC_1</qualifiedname>
@@ -31,9 +31,9 @@
         </inbodydescription>
         <location file="src/travelexpense/src/codehardening.cpp" line="60" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="60" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1aa44a1b58de50a659ad89338efe7f9fbf" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1ad59af875ff7837f8dc36c825beb06a66" prot="public" static="yes" mutable="no">
         <type>const uint32_t</type>
-        <definition>TravelExpense::CodeHardening::OPAQUE_MAGIC_2</definition>
+        <definition>const uint32_t TravelExpense::CodeHardening::OPAQUE_MAGIC_2</definition>
         <argsstring></argsstring>
         <name>OPAQUE_MAGIC_2</name>
         <qualifiedname>TravelExpense::CodeHardening::OPAQUE_MAGIC_2</qualifiedname>
@@ -59,9 +59,9 @@
         </inbodydescription>
         <location file="src/travelexpense/src/codehardening.cpp" line="76" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="76" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1ac7039568414267f978e25326e076684f" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1a8dda534478fef383d5e50d7ae787cad4" prot="public" static="yes" mutable="no">
         <type>const uint32_t</type>
-        <definition>TravelExpense::CodeHardening::OPAQUE_MAGIC_3</definition>
+        <definition>const uint32_t TravelExpense::CodeHardening::OPAQUE_MAGIC_3</definition>
         <argsstring></argsstring>
         <name>OPAQUE_MAGIC_3</name>
         <qualifiedname>TravelExpense::CodeHardening::OPAQUE_MAGIC_3</qualifiedname>
@@ -87,9 +87,9 @@
         </inbodydescription>
         <location file="src/travelexpense/src/codehardening.cpp" line="92" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="92" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1ad60d5ac50ff2dbed00f0c646f558b74d" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1a3ccb5c78ec2437b2b386440bb9f3b918" prot="public" static="yes" mutable="no">
         <type>const uint32_t</type>
-        <definition>TravelExpense::CodeHardening::OPAQUE_MAGIC_4</definition>
+        <definition>const uint32_t TravelExpense::CodeHardening::OPAQUE_MAGIC_4</definition>
         <argsstring></argsstring>
         <name>OPAQUE_MAGIC_4</name>
         <qualifiedname>TravelExpense::CodeHardening::OPAQUE_MAGIC_4</qualifiedname>
@@ -160,9 +160,9 @@
         </inbodydescription>
         <location file="src/travelexpense/src/codehardening.cpp" line="306" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="306" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1ad70178ecd532452d80f25072b89f74b6" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1ab2a975f58040b6d9609298dd0b966036" prot="public" static="yes" mutable="no">
         <type>const uint32_t</type>
-        <definition>TravelExpense::CodeHardening::DEAD_BRANCH_MAGIC_1</definition>
+        <definition>const uint32_t TravelExpense::CodeHardening::DEAD_BRANCH_MAGIC_1</definition>
         <argsstring></argsstring>
         <name>DEAD_BRANCH_MAGIC_1</name>
         <qualifiedname>TravelExpense::CodeHardening::DEAD_BRANCH_MAGIC_1</qualifiedname>
@@ -176,9 +176,9 @@
         </inbodydescription>
         <location file="src/travelexpense/src/codehardening.cpp" line="469" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="469" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1a9d81cde1c71e600ce3db7e6f6f87efda" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_code_hardening_1a2e340224d1b7a03aa5b3352eaaa617dc" prot="public" static="yes" mutable="no">
         <type>const uint32_t</type>
-        <definition>TravelExpense::CodeHardening::DEAD_BRANCH_MAGIC_2</definition>
+        <definition>const uint32_t TravelExpense::CodeHardening::DEAD_BRANCH_MAGIC_2</definition>
         <argsstring></argsstring>
         <name>DEAD_BRANCH_MAGIC_2</name>
         <qualifiedname>TravelExpense::CodeHardening::DEAD_BRANCH_MAGIC_2</qualifiedname>
@@ -192,8 +192,8 @@
         </inbodydescription>
         <location file="src/travelexpense/src/codehardening.cpp" line="475" column="23" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="475" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a828ac59ea8c553d8583d1b749290e2d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
         <definition>uint32_t TravelExpense::CodeHardening::createOpaqueCounter</definition>
@@ -1257,7 +1257,7 @@
         </inbodydescription>
         <location file="src/travelexpense/src/codehardening.cpp" line="583" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="583" bodyend="610" declfile="src/travelexpense/header/codehardening.h" declline="318" declcolumn="24"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

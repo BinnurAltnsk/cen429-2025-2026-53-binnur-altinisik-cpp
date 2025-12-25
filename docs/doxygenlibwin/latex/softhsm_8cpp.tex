@@ -5,9 +5,9 @@
 Seyahat Gideri Takibi -\/ \doxylink{namespace_soft_h_s_m}{Soft\+HSM} (PKCS\#11) Implementation.  
 
 
-{\ttfamily \#include \"{}../header/softhsm.\+h\"{}}\newline
-{\ttfamily \#include \"{}../header/safe\+\_\+string.\+h\"{}}\newline
-{\ttfamily \#include \"{}../third\+\_\+party/pkcs11/pkcs11.\+h\"{}}\newline
+{\ttfamily \#include "{}../header/softhsm.\+h"{}}\newline
+{\ttfamily \#include "{}../header/safe\+\_\+string.\+h"{}}\newline
+{\ttfamily \#include "{}../third\+\_\+party/pkcs11/pkcs11.\+h"{}}\newline
 {\ttfamily \#include $<$cstring$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$memory$>$}\newline
@@ -33,22 +33,22 @@ namespace \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m}{Travel\+Expe
 \item 
 \#define \mbox{\hyperlink{softhsm_8cpp_a1abc5e0851defa37515dd9da299f411e}{PKCS11\+\_\+\+NO\+\_\+\+EXPORTS}}
 \item 
-\#define \mbox{\hyperlink{softhsm_8cpp_a4bdc0245afe661f69ff2948076aaaf1b}{FILE\+\_\+\+EXISTS}}(path)~file\+\_\+exists\+\_\+helper(path)
+\#define \mbox{\hyperlink{softhsm_8cpp_a4bdc0245afe661f69ff2948076aaaf1b}{FILE\+\_\+\+EXISTS}}(path)
 \item 
 \#define \mbox{\hyperlink{softhsm_8cpp_a3b81e0f561932d8761fb8675437e2659}{DL\+\_\+\+HANDLE}}~void\texorpdfstring{$\ast$}{*}
 \item 
-\#define \mbox{\hyperlink{softhsm_8cpp_a1c69bc484d5f594765b1e700999dc470}{DL\+\_\+\+OPEN}}(path)~dlopen(path, RTLD\+\_\+\+NOW)
+\#define \mbox{\hyperlink{softhsm_8cpp_a1c69bc484d5f594765b1e700999dc470}{DL\+\_\+\+OPEN}}(path)
 \item 
-\#define \mbox{\hyperlink{softhsm_8cpp_ac2c1c282afbcfd1fdda90bb1b922f97c}{DL\+\_\+\+CLOSE}}(handle)~dlclose(handle)
+\#define \mbox{\hyperlink{softhsm_8cpp_ac2c1c282afbcfd1fdda90bb1b922f97c}{DL\+\_\+\+CLOSE}}(handle)
 \item 
-\#define \mbox{\hyperlink{softhsm_8cpp_a292a39d6dd5417956880f1eb1b656ce5}{DL\+\_\+\+SYM}}(handle,  name)~dlsym(handle, name)
+\#define \mbox{\hyperlink{softhsm_8cpp_a292a39d6dd5417956880f1eb1b656ce5}{DL\+\_\+\+SYM}}(handle,  name)
 \item 
-\#define \mbox{\hyperlink{softhsm_8cpp_ac1374fad0b402b055ede739566f0957f}{DL\+\_\+\+ERROR}}()~dlerror()
+\#define \mbox{\hyperlink{softhsm_8cpp_ac1374fad0b402b055ede739566f0957f}{DL\+\_\+\+ERROR}}()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a6fb8347ca19497bb25f5f0a6e696d96f}{Travel\+Expense\+::\+Soft\+HSM\+::\+Error\+Code}} = \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}}
+using \mbox{\hyperlink{namespace_travel_expense_1_1_soft_h_s_m_a5027751f2d53787df3d1e51363fc38b5}{Travel\+Expense\+::\+Soft\+HSM\+::\+Error\+Code}} = \mbox{\hyperlink{namespace_travel_expense_a3bda90e999d060d311aeaafaca383dab}{Travel\+Expense\+::\+Error\+Code}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -102,46 +102,73 @@ Binnur Altınışık
 \end{DoxyDate}
 
 
+\label{doc-define-members}
+\Hypertarget{softhsm_8cpp_doc-define-members}
 \doxysubsection{Macro Definition Documentation}
-\Hypertarget{softhsm_8cpp_ac2c1c282afbcfd1fdda90bb1b922f97c}\label{softhsm_8cpp_ac2c1c282afbcfd1fdda90bb1b922f97c} 
-\index{softhsm.cpp@{softhsm.cpp}!DL\_CLOSE@{DL\_CLOSE}}
+\Hypertarget{softhsm_8cpp_ac2c1c282afbcfd1fdda90bb1b922f97c}\index{softhsm.cpp@{softhsm.cpp}!DL\_CLOSE@{DL\_CLOSE}}
 \index{DL\_CLOSE@{DL\_CLOSE}!softhsm.cpp@{softhsm.cpp}}
 \doxysubsubsection{\texorpdfstring{DL\_CLOSE}{DL\_CLOSE}}
-{\footnotesize\ttfamily \#define DL\+\_\+\+CLOSE(\begin{DoxyParamCaption}\item[{}]{handle }\end{DoxyParamCaption})~dlclose(handle)}
+{\footnotesize\ttfamily \label{softhsm_8cpp_ac2c1c282afbcfd1fdda90bb1b922f97c} 
+\#define DL\+\_\+\+CLOSE(\begin{DoxyParamCaption}\item[{}]{handle}{}\end{DoxyParamCaption})}
 
-\Hypertarget{softhsm_8cpp_ac1374fad0b402b055ede739566f0957f}\label{softhsm_8cpp_ac1374fad0b402b055ede739566f0957f} 
-\index{softhsm.cpp@{softhsm.cpp}!DL\_ERROR@{DL\_ERROR}}
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{dlclose(handle)}
+
+\end{DoxyCode}
+\Hypertarget{softhsm_8cpp_ac1374fad0b402b055ede739566f0957f}\index{softhsm.cpp@{softhsm.cpp}!DL\_ERROR@{DL\_ERROR}}
 \index{DL\_ERROR@{DL\_ERROR}!softhsm.cpp@{softhsm.cpp}}
 \doxysubsubsection{\texorpdfstring{DL\_ERROR}{DL\_ERROR}}
-{\footnotesize\ttfamily \#define DL\+\_\+\+ERROR(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~dlerror()}
+{\footnotesize\ttfamily \label{softhsm_8cpp_ac1374fad0b402b055ede739566f0957f} 
+\#define DL\+\_\+\+ERROR(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-\Hypertarget{softhsm_8cpp_a3b81e0f561932d8761fb8675437e2659}\label{softhsm_8cpp_a3b81e0f561932d8761fb8675437e2659} 
-\index{softhsm.cpp@{softhsm.cpp}!DL\_HANDLE@{DL\_HANDLE}}
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{dlerror()}
+
+\end{DoxyCode}
+\Hypertarget{softhsm_8cpp_a3b81e0f561932d8761fb8675437e2659}\index{softhsm.cpp@{softhsm.cpp}!DL\_HANDLE@{DL\_HANDLE}}
 \index{DL\_HANDLE@{DL\_HANDLE}!softhsm.cpp@{softhsm.cpp}}
 \doxysubsubsection{\texorpdfstring{DL\_HANDLE}{DL\_HANDLE}}
-{\footnotesize\ttfamily \#define DL\+\_\+\+HANDLE~void\texorpdfstring{$\ast$}{*}}
+{\footnotesize\ttfamily \label{softhsm_8cpp_a3b81e0f561932d8761fb8675437e2659} 
+\#define DL\+\_\+\+HANDLE~void\texorpdfstring{$\ast$}{*}}
 
-\Hypertarget{softhsm_8cpp_a1c69bc484d5f594765b1e700999dc470}\label{softhsm_8cpp_a1c69bc484d5f594765b1e700999dc470} 
-\index{softhsm.cpp@{softhsm.cpp}!DL\_OPEN@{DL\_OPEN}}
+\Hypertarget{softhsm_8cpp_a1c69bc484d5f594765b1e700999dc470}\index{softhsm.cpp@{softhsm.cpp}!DL\_OPEN@{DL\_OPEN}}
 \index{DL\_OPEN@{DL\_OPEN}!softhsm.cpp@{softhsm.cpp}}
 \doxysubsubsection{\texorpdfstring{DL\_OPEN}{DL\_OPEN}}
-{\footnotesize\ttfamily \#define DL\+\_\+\+OPEN(\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})~dlopen(path, RTLD\+\_\+\+NOW)}
+{\footnotesize\ttfamily \label{softhsm_8cpp_a1c69bc484d5f594765b1e700999dc470} 
+\#define DL\+\_\+\+OPEN(\begin{DoxyParamCaption}\item[{}]{path}{}\end{DoxyParamCaption})}
 
-\Hypertarget{softhsm_8cpp_a292a39d6dd5417956880f1eb1b656ce5}\label{softhsm_8cpp_a292a39d6dd5417956880f1eb1b656ce5} 
-\index{softhsm.cpp@{softhsm.cpp}!DL\_SYM@{DL\_SYM}}
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{dlopen(path,\ RTLD\_NOW)}
+
+\end{DoxyCode}
+\Hypertarget{softhsm_8cpp_a292a39d6dd5417956880f1eb1b656ce5}\index{softhsm.cpp@{softhsm.cpp}!DL\_SYM@{DL\_SYM}}
 \index{DL\_SYM@{DL\_SYM}!softhsm.cpp@{softhsm.cpp}}
 \doxysubsubsection{\texorpdfstring{DL\_SYM}{DL\_SYM}}
-{\footnotesize\ttfamily \#define DL\+\_\+\+SYM(\begin{DoxyParamCaption}\item[{}]{handle,  }\item[{}]{name }\end{DoxyParamCaption})~dlsym(handle, name)}
+{\footnotesize\ttfamily \label{softhsm_8cpp_a292a39d6dd5417956880f1eb1b656ce5} 
+\#define DL\+\_\+\+SYM(\begin{DoxyParamCaption}\item[{}]{handle}{, }\item[{}]{name}{}\end{DoxyParamCaption})}
 
-\Hypertarget{softhsm_8cpp_a4bdc0245afe661f69ff2948076aaaf1b}\label{softhsm_8cpp_a4bdc0245afe661f69ff2948076aaaf1b} 
-\index{softhsm.cpp@{softhsm.cpp}!FILE\_EXISTS@{FILE\_EXISTS}}
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{dlsym(handle,\ name)}
+
+\end{DoxyCode}
+\Hypertarget{softhsm_8cpp_a4bdc0245afe661f69ff2948076aaaf1b}\index{softhsm.cpp@{softhsm.cpp}!FILE\_EXISTS@{FILE\_EXISTS}}
 \index{FILE\_EXISTS@{FILE\_EXISTS}!softhsm.cpp@{softhsm.cpp}}
 \doxysubsubsection{\texorpdfstring{FILE\_EXISTS}{FILE\_EXISTS}}
-{\footnotesize\ttfamily \#define FILE\+\_\+\+EXISTS(\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})~file\+\_\+exists\+\_\+helper(path)}
+{\footnotesize\ttfamily \label{softhsm_8cpp_a4bdc0245afe661f69ff2948076aaaf1b} 
+\#define FILE\+\_\+\+EXISTS(\begin{DoxyParamCaption}\item[{}]{path}{}\end{DoxyParamCaption})}
 
-\Hypertarget{softhsm_8cpp_a1abc5e0851defa37515dd9da299f411e}\label{softhsm_8cpp_a1abc5e0851defa37515dd9da299f411e} 
-\index{softhsm.cpp@{softhsm.cpp}!PKCS11\_NO\_EXPORTS@{PKCS11\_NO\_EXPORTS}}
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{file\_exists\_helper(path)}
+
+\end{DoxyCode}
+\Hypertarget{softhsm_8cpp_a1abc5e0851defa37515dd9da299f411e}\index{softhsm.cpp@{softhsm.cpp}!PKCS11\_NO\_EXPORTS@{PKCS11\_NO\_EXPORTS}}
 \index{PKCS11\_NO\_EXPORTS@{PKCS11\_NO\_EXPORTS}!softhsm.cpp@{softhsm.cpp}}
 \doxysubsubsection{\texorpdfstring{PKCS11\_NO\_EXPORTS}{PKCS11\_NO\_EXPORTS}}
-{\footnotesize\ttfamily \#define PKCS11\+\_\+\+NO\+\_\+\+EXPORTS}
+{\footnotesize\ttfamily \label{softhsm_8cpp_a1abc5e0851defa37515dd9da299f411e} 
+\#define PKCS11\+\_\+\+NO\+\_\+\+EXPORTS}
 

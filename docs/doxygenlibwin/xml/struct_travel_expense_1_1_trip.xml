@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="struct_travel_expense_1_1_trip" kind="struct" language="C++" prot="public">
     <compoundname>TravelExpense::Trip</compoundname>
     <includes refid="common_types_8h" local="no">commonTypes.h</includes>
-      <sectiondef kind="public-attrib">
+    <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct_travel_expense_1_1_trip_1aa46fcc235f25f50cfef9aebbc6040ade" prot="public" static="no" mutable="no">
         <type>int32_t</type>
         <definition>int32_t TravelExpense::Trip::tripId</definition>
@@ -169,8 +169,8 @@
         </inbodydescription>
         <location file="src/travelexpense/header/commonTypes.h" line="66" column="10" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="66" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-func">
+    </sectiondef>
+    <sectiondef kind="public-func">
       <memberdef kind="function" id="struct_travel_expense_1_1_trip_1a2b0e5496b4460de325004462b1c94133" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
         <definition>TravelExpense::Trip::Trip</definition>
@@ -187,7 +187,7 @@
         </inbodydescription>
         <location file="src/travelexpense/header/commonTypes.h" line="73" column="3" bodyfile="src/travelexpense/header/commonTypes.h" bodystart="73" bodyend="80"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Seyahat veri modeli. </para>
     </briefdescription>

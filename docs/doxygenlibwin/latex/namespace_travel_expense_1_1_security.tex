@@ -11,12 +11,14 @@
 \begin{DoxyCompactList}\small\item\em Bellek bölgesini sıfırla (memset güvenli versiyonu) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\label{doc-func-members}
+\Hypertarget{namespace_travel_expense_1_1_security_doc-func-members}
 \doxysubsection{Function Documentation}
-\Hypertarget{namespace_travel_expense_1_1_security_afb3af2295588c9ff5fd055651d3f3ac7}\label{namespace_travel_expense_1_1_security_afb3af2295588c9ff5fd055651d3f3ac7} 
-\index{TravelExpense::Security@{TravelExpense::Security}!secureCleanup@{secureCleanup}}
+\Hypertarget{namespace_travel_expense_1_1_security_afb3af2295588c9ff5fd055651d3f3ac7}\index{TravelExpense::Security@{TravelExpense::Security}!secureCleanup@{secureCleanup}}
 \index{secureCleanup@{secureCleanup}!TravelExpense::Security@{TravelExpense::Security}}
 \doxysubsubsection{\texorpdfstring{secureCleanup()}{secureCleanup()}}
-{\footnotesize\ttfamily void Travel\+Expense\+::\+Security\+::secure\+Cleanup (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{namespace_travel_expense_1_1_security_afb3af2295588c9ff5fd055651d3f3ac7} 
+void Travel\+Expense\+::\+Security\+::secure\+Cleanup (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{size\+\_\+t}]{size}{}\end{DoxyParamCaption})}
 
 
 
@@ -31,8 +33,6 @@ Buffer içeriğini güvenli şekilde temizle (char array için overload)
 {\em size} & Buffer boyutu\\
 \hline
 \end{DoxyParams}
-
-
 Bu fonksiyon, char buffer içeriğini güvenli şekilde temizler. {\ttfamily \doxylink{namespace_travel_expense_1_1_security_a146f27ab484fcf4d9f824709194ba931}{secure\+Memory\+Cleanup()}} fonksiyonunu çağırarak çoklu geçişli temizleme algoritmasını kullanır.
 
 \begin{DoxyNote}{Note}
@@ -45,11 +45,11 @@ Bu fonksiyon, özellikle string buffer\textquotesingle{}ları (şifreler, token\
 {\em size} & Buffer boyutu (byte, 0 ise işlem yapılmaz) \\
 \hline
 \end{DoxyParams}
-\Hypertarget{namespace_travel_expense_1_1_security_a146f27ab484fcf4d9f824709194ba931}\label{namespace_travel_expense_1_1_security_a146f27ab484fcf4d9f824709194ba931} 
-\index{TravelExpense::Security@{TravelExpense::Security}!secureMemoryCleanup@{secureMemoryCleanup}}
+\Hypertarget{namespace_travel_expense_1_1_security_a146f27ab484fcf4d9f824709194ba931}\index{TravelExpense::Security@{TravelExpense::Security}!secureMemoryCleanup@{secureMemoryCleanup}}
 \index{secureMemoryCleanup@{secureMemoryCleanup}!TravelExpense::Security@{TravelExpense::Security}}
 \doxysubsubsection{\texorpdfstring{secureMemoryCleanup()}{secureMemoryCleanup()}}
-{\footnotesize\ttfamily bool Travel\+Expense\+::\+Security\+::secure\+Memory\+Cleanup (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ptr,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{namespace_travel_expense_1_1_security_a146f27ab484fcf4d9f824709194ba931} 
+bool Travel\+Expense\+::\+Security\+::secure\+Memory\+Cleanup (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ptr}{, }\item[{size\+\_\+t}]{size}{}\end{DoxyParamCaption})}
 
 
 
@@ -69,8 +69,6 @@ Bu fonksiyon, bellek içeriğini sıfırlar ve ardından rastgele verilerle dold
 \begin{DoxyReturn}{Returns}
 true Başarılı, false Hata
 \end{DoxyReturn}
-
-
 Bu fonksiyon, bellek içeriğini üç geçişli bir algoritma ile güvenli şekilde siler\+:
 \begin{DoxyEnumerate}
 \item Geçiş\+: Bellek alanını sıfırlama (Secure\+Zero\+Memory veya secure\+\_\+memset)
@@ -93,11 +91,11 @@ Bu fonksiyon, platform-\/specific güvenli bellek silme fonksiyonlarını kullan
 \begin{DoxyReturn}{Returns}
 true Başarılı, false Hata (null pointer veya sıfır uzunluk) 
 \end{DoxyReturn}
-\Hypertarget{namespace_travel_expense_1_1_security_a2f60f65c6c6216fc1926ab85b3a8fee2}\label{namespace_travel_expense_1_1_security_a2f60f65c6c6216fc1926ab85b3a8fee2} 
-\index{TravelExpense::Security@{TravelExpense::Security}!secureMemset@{secureMemset}}
+\Hypertarget{namespace_travel_expense_1_1_security_a2f60f65c6c6216fc1926ab85b3a8fee2}\index{TravelExpense::Security@{TravelExpense::Security}!secureMemset@{secureMemset}}
 \index{secureMemset@{secureMemset}!TravelExpense::Security@{TravelExpense::Security}}
 \doxysubsubsection{\texorpdfstring{secureMemset()}{secureMemset()}}
-{\footnotesize\ttfamily void Travel\+Expense\+::\+Security\+::secure\+Memset (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ptr,  }\item[{int}]{value,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{namespace_travel_expense_1_1_security_a2f60f65c6c6216fc1926ab85b3a8fee2} 
+void Travel\+Expense\+::\+Security\+::secure\+Memset (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ptr}{, }\item[{int}]{value}{, }\item[{size\+\_\+t}]{size}{}\end{DoxyParamCaption})}
 
 
 
@@ -114,8 +112,6 @@ Bellek bölgesini güvenli şekilde doldur (memset güvenli versiyonu)
 {\em value} & Doldurulacak değer (genellikle 0)\\
 \hline
 \end{DoxyParams}
-
-
 Bu fonksiyon, bellek alanını belirtilen değerle doldurur. Volatile pointer kullanarak compiler optimizer\textquotesingle{}ın bu işlemi atlamasını engeller. Bu sayede hassas verilerin güvenli şekilde temizlenmesi sağlanır.
 
 \begin{DoxyNote}{Note}

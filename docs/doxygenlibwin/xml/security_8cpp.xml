@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="security_8cpp" kind="file" language="C++">
     <compoundname>security.cpp</compoundname>
     <includes refid="security_8h" local="yes">../header/security.h</includes>
@@ -52,7 +52,7 @@
     </incdepgraph>
     <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
     <innernamespace refid="namespace_travel_expense_1_1_security">TravelExpense::Security</innernamespace>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="security_8cpp_1a3152de7cea26a509abf9bca65c93ba97" prot="public" static="no">
         <name>SecureZeroMemory</name>
         <param><defname>ptr</defname></param>
@@ -66,8 +66,8 @@
         </inbodydescription>
         <location file="src/travelexpense/src/security.cpp" line="44" column="9" bodyfile="src/travelexpense/src/security.cpp" bodystart="44" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="security_8cpp_1a8ec04d3131aa3739c395b2875ca70877" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
         <definition>static void * secure_memset</definition>
@@ -171,8 +171,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-</para>
-<para>Bu fonksiyon, bellek alanını belirtilen değerle doldurur. Volatile pointer kullanarak compiler optimizer&apos;ın bu işlemi atlamasını engeller. Bu sayede hassas verilerin güvenli şekilde temizlenmesi sağlanır.</para>
+Bu fonksiyon, bellek alanını belirtilen değerle doldurur. Volatile pointer kullanarak compiler optimizer&apos;ın bu işlemi atlamasını engeller. Bu sayede hassas verilerin güvenli şekilde temizlenmesi sağlanır.</para>
 <para><simplesect kind="note"><para>Standart memset() fonksiyonundan farklı olarak, bu fonksiyon optimizer&apos;ın silme işlemini atlamasını engellemek için volatile pointer kullanır. Bu, hassas verilerin (şifreler, anahtarlar vb.) güvenli şekilde temizlenmesi için kritiktir.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -245,8 +244,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Bu fonksiyon, bellek içeriğini üç geçişli bir algoritma ile güvenli şekilde siler:<orderedlist>
+Bu fonksiyon, bellek içeriğini üç geçişli bir algoritma ile güvenli şekilde siler:<orderedlist>
 <listitem><para>Geçiş: Bellek alanını sıfırlama (SecureZeroMemory veya secure_memset)</para>
 </listitem><listitem><para>Geçiş: Rastgele verilerle doldurma (veri kurtarmayı zorlaştırmak için)</para>
 </listitem><listitem><para>Geçiş: Tekrar sıfırlama ve volatile pointer ile kontrol</para>
@@ -316,8 +314,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-</para>
-<para>Bu fonksiyon, char buffer içeriğini güvenli şekilde temizler. <computeroutput><ref refid="namespace_travel_expense_1_1_security_1a146f27ab484fcf4d9f824709194ba931" kindref="member">secureMemoryCleanup()</ref></computeroutput> fonksiyonunu çağırarak çoklu geçişli temizleme algoritmasını kullanır.</para>
+Bu fonksiyon, char buffer içeriğini güvenli şekilde temizler. <computeroutput><ref refid="namespace_travel_expense_1_1_security_1a146f27ab484fcf4d9f824709194ba931" kindref="member">secureMemoryCleanup()</ref></computeroutput> fonksiyonunu çağırarak çoklu geçişli temizleme algoritmasını kullanır.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, özellikle string buffer&apos;ları (şifreler, token&apos;lar vb.) temizlemek için kullanılır. Null pointer veya sıfır uzunluk kontrolü yapılır.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -343,7 +340,7 @@
         </inbodydescription>
         <location file="src/travelexpense/src/security.cpp" line="152" column="6" bodyfile="src/travelexpense/src/security.cpp" bodystart="152" bodyend="158" declfile="src/travelexpense/header/security.h" declline="47" declcolumn="24"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Seyahat Gideri Takibi - Güvenlik Fonksiyonları Implementation. </para>
     </briefdescription>
@@ -356,7 +353,8 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/security.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="security_8h" kindref="compound">../header/security.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctime&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -383,7 +381,7 @@
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_security" kindref="compound">Security</ref><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense_1_1_security" kindref="compound">Security</ref><sp/>{</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespace_travel_expense_1_1_security_1a2f60f65c6c6216fc1926ab85b3a8fee2" kindref="member">secureMemset</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size)<sp/>{</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ptr<sp/>||<sp/>size<sp/>==<sp/>0)<sp/>{</highlight></codeline>

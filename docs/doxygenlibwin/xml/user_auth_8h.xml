@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="user_auth_8h" kind="file" language="C++">
     <compoundname>userAuth.h</compoundname>
     <includes refid="common_types_8h" local="yes">commonTypes.h</includes>
@@ -66,7 +66,7 @@
     <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
     <innernamespace refid="namespace_user_auth">UserAuth</innernamespace>
     <innernamespace refid="namespace_travel_expense_1_1_user_auth">TravelExpense::UserAuth</innernamespace>
-      <sectiondef kind="func">
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a63e9c88135b8d5f2911f99ce322d1a50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
         <definition>ErrorCode TravelExpense::UserAuth::registerUser</definition>
@@ -105,13 +105,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput, FileNotFound vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, InvalidInput, FileNotFound vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/userAuth.cpp" line="25" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="25" bodyend="113" declfile="src/travelexpense/header/userAuth.h" declline="41" declcolumn="29"/>
+        <location file="src/travelexpense/src/userAuth.cpp" line="25" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="25" bodyend="110" declfile="src/travelexpense/header/userAuth.h" declline="41" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a8f83e74a4b8d2833cb23051e7661c0f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -151,13 +151,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput, InvalidUser vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, InvalidInput, InvalidUser vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/userAuth.cpp" line="115" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="115" bodyend="234" declfile="src/travelexpense/header/userAuth.h" declline="57" declcolumn="29"/>
+        <location file="src/travelexpense/src/userAuth.cpp" line="112" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="112" bodyend="231" declfile="src/travelexpense/header/userAuth.h" declline="57" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a8777e8f207ceeaedc2eb75753756b1f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -172,13 +172,13 @@
 <para>Misafir kullanıcı modunu etkinleştirir. Misafir modunda, kullanıcı kaydı veya girişi gerekmez, ancak bazı özellikler sınırlı olabilir.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, geçici bir misafir kullanıcısı oluşturur. Misafir modu, oturum sonlandığında veya <ref refid="namespace_travel_expense_1_1_user_auth_1ad71c3866e8f46267153654e60014d99f" kindref="member">logoutUser()</ref> çağrıldığında sonlanır.</para>
 </simplesect>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, InvalidInput vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, InvalidInput vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/userAuth.cpp" line="236" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="236" bodyend="247" declfile="src/travelexpense/header/userAuth.h" declline="70" declcolumn="29"/>
+        <location file="src/travelexpense/src/userAuth.cpp" line="233" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="233" bodyend="244" declfile="src/travelexpense/header/userAuth.h" declline="70" declcolumn="29"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1ad71c3866e8f46267153654e60014d99f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> void</type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/userAuth.cpp" line="249" column="6" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="249" bodyend="254" declfile="src/travelexpense/header/userAuth.h" declline="81" declcolumn="24"/>
+        <location file="src/travelexpense/src/userAuth.cpp" line="246" column="6" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="246" bodyend="251" declfile="src/travelexpense/header/userAuth.h" declline="81" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a4ebfa893e3a0e71ccaac4869f6395785" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> User *</type>
@@ -218,7 +218,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/userAuth.cpp" line="256" column="6" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="256" bodyend="258" declfile="src/travelexpense/header/userAuth.h" declline="94" declcolumn="24"/>
+        <location file="src/travelexpense/src/userAuth.cpp" line="253" column="6" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="253" bodyend="255" declfile="src/travelexpense/header/userAuth.h" declline="94" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_user_auth_1a0a20e8d4744950670b6f19c9888e74f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> ErrorCode</type>
@@ -258,15 +258,15 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>ErrorCode Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
+<simplesect kind="return"><para><ref refid="namespace_travel_expense_1a3bda90e999d060d311aeaafaca383dab" kindref="member">ErrorCode</ref> Başarı durumu (Success, FileNotFound, InvalidInput vb.) </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/userAuth.cpp" line="260" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="260" bodyend="303" declfile="src/travelexpense/header/userAuth.h" declline="110" declcolumn="29"/>
+        <location file="src/travelexpense/src/userAuth.cpp" line="257" column="11" bodyfile="src/travelexpense/src/userAuth.cpp" bodystart="257" bodyend="300" declfile="src/travelexpense/header/userAuth.h" declline="110" declcolumn="29"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Seyahat Gideri Takibi - Kullanıcı Kimlik Doğrulama Modülü </para>
     </briefdescription>
@@ -280,6 +280,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>USER_AUTH_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USER_AUTH_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>

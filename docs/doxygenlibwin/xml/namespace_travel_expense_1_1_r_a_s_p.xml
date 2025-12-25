@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="namespace_travel_expense_1_1_r_a_s_p" kind="namespace" language="C++">
     <compoundname>TravelExpense::RASP</compoundname>
-      <sectiondef kind="typedef">
+    <sectiondef kind="typedef">
       <memberdef kind="typedef" id="namespace_travel_expense_1_1_r_a_s_p_1a24b145da3df213c68dbecdfd2ccafece" prot="public" static="no">
         <type>bool(*</type>
         <definition>typedef bool(* TravelExpense::RASP::ChecksumCallback) ()</definition>
@@ -21,11 +21,11 @@
         </inbodydescription>
         <location file="src/travelexpense/header/rasp.h" line="109" column="9" bodyfile="src/travelexpense/header/rasp.h" bodystart="109" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="namespace_travel_expense_1_1_r_a_s_p_1a7dc79c571124ed9a9dfbfe87ba610b0b" prot="public" static="yes" mutable="no">
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_r_a_s_p_1aaf079e4b9d9d26f4e2e8cb34d7694d1a" prot="public" static="yes" mutable="no">
         <type>char</type>
-        <definition>TravelExpense::RASP::g_expectedSelfChecksum</definition>
+        <definition>char TravelExpense::RASP::g_expectedSelfChecksum[65]</definition>
         <argsstring>[65]</argsstring>
         <name>g_expectedSelfChecksum</name>
         <qualifiedname>TravelExpense::RASP::g_expectedSelfChecksum</qualifiedname>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/rasp.cpp" line="207" column="13" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="207" bodyend="-1"/>
+        <location file="src/travelexpense/src/rasp.cpp" line="207" column="13" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="207" bodyend="207"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_r_a_s_p_1a2fd0dd18bf241394231ab86d91e032db" prot="public" static="yes" mutable="no">
         <type>std::vector&lt; void * &gt;</type>
@@ -61,8 +61,8 @@
         </inbodydescription>
         <location file="src/travelexpense/src/rasp.cpp" line="770" column="20" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="770" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a13447aefd17bbea8f1eb6bef277cdf88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
         <definition>bool TravelExpense::RASP::calculateCodeChecksum</definition>
@@ -1313,7 +1313,7 @@
         </inbodydescription>
         <location file="src/travelexpense/src/rasp.cpp" line="884" column="17" declfile="src/travelexpense/src/rasp.cpp" declline="884" declcolumn="17"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

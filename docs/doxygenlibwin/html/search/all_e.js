@@ -1,15 +1,18 @@
 var searchData=
 [
-  ['passwordhash_0',['passwordHash',['../struct_travel_expense_1_1_user.html#af81ef00d0811c65e427d2ff19780ba05',1,'TravelExpense::User']]],
-  ['paymentmethod_1',['paymentMethod',['../struct_travel_expense_1_1_expense.html#a6ead31c5484d9ddc9d6d419536c8821e',1,'TravelExpense::Expense']]],
-  ['pbkdf2_2',['pbkdf2',['../namespace_travel_expense_1_1_encryption.html#a53f29cf73c5a46e8ff3c3344408bcefa',1,'TravelExpense::Encryption']]],
-  ['performantidebugcheck_3',['performAntiDebugCheck',['../namespace_travel_expense_1_1_r_a_s_p.html#ab81bdd68990b24f747b0239a19038dd4',1,'TravelExpense::RASP']]],
-  ['performcontrolflowcheck_4',['performControlFlowCheck',['../namespace_travel_expense_1_1_r_a_s_p.html#af842523d29168b17f6c00a0dae85d83e',1,'TravelExpense::RASP']]],
-  ['performtampercheck_5',['performTamperCheck',['../namespace_travel_expense_1_1_r_a_s_p.html#a0b672b79a27062f943444a92aee6d4a6',1,'TravelExpense::RASP']]],
-  ['pincertificate_6',['pinCertificate',['../struct_travel_expense_1_1_t_l_s_1_1_certificate_pin.html#a143d1a034bc36ccc2e8ac270e466cc21',1,'TravelExpense::TLS::CertificatePin']]],
-  ['pinpublickey_7',['pinPublicKey',['../struct_travel_expense_1_1_t_l_s_1_1_certificate_pin.html#ac4b30c9d1432b91805a5129f65497c15',1,'TravelExpense::TLS::CertificatePin']]],
-  ['pkcs11_5fno_5fexports_8',['PKCS11_NO_EXPORTS',['../softhsm_8cpp.html#a1abc5e0851defa37515dd9da299f411e',1,'softhsm.cpp']]],
-  ['protectionscheme_9',['protectionScheme',['../struct_travel_expense_1_1_asset_manager_1_1_asset.html#a2e780b5ecfe34dd4b006785747ebc27f',1,'TravelExpense::AssetManager::Asset']]],
-  ['protectionscheme_10',['ProtectionScheme',['../namespace_travel_expense_1_1_asset_manager.html#aced1c857447d9058ac4c5779fb771d0b',1,'TravelExpense::AssetManager']]],
-  ['publickeyhash_11',['publicKeyHash',['../struct_travel_expense_1_1_t_l_s_1_1_certificate_pin.html#aec0c308348644af9c92beaa672f06d23',1,'TravelExpense::TLS::CertificatePin']]]
+  ['obfuscate_5ffunc_5fname_0',['OBFUSCATE_FUNC_NAME',['../codehardening_8h.html#a987be372294289b6b50fb7f661e3b828',1,'codehardening.h']]],
+  ['obfuscated_5fstring_1',['OBFUSCATED_STRING',['../codehardening_8h.html#a0d0bec467a2aaeb875470d7d2d86cf73',1,'codehardening.h']]],
+  ['obfuscatefunctionpointer_2',['obfuscateFunctionPointer',['../namespace_travel_expense_1_1_code_hardening.html#addad1bb570357bf02f353333473cb2eb',1,'TravelExpense::CodeHardening']]],
+  ['obfuscatestring_3',['obfuscateString',['../namespace_travel_expense_1_1_code_hardening.html#aa9916facd38ff180b62777399ef07237',1,'TravelExpense::CodeHardening']]],
+  ['oluşturma_4',['Coverage Raporu Oluşturma',['../index.html#autotoc_md17',1,'']]],
+  ['opaque_5floop_5',['OPAQUE_LOOP',['../codehardening_8h.html#a830676c1f0b50e2a255ae4e2e334d909',1,'codehardening.h']]],
+  ['opaqueand_6',['opaqueAND',['../namespace_travel_expense_1_1_code_hardening.html#aa135cd231714ad26ccd8a574d82195b7',1,'TravelExpense::CodeHardening']]],
+  ['opaquedecrement_7',['opaqueDecrement',['../namespace_travel_expense_1_1_code_hardening.html#a9551c47b4bd98f91527ac23186dd8709',1,'TravelExpense::CodeHardening']]],
+  ['opaqueincrement_8',['opaqueIncrement',['../namespace_travel_expense_1_1_code_hardening.html#af5e0a7847c70ae9cd622ea48f577178e',1,'TravelExpense::CodeHardening']]],
+  ['opaquenot_9',['opaqueNOT',['../namespace_travel_expense_1_1_code_hardening.html#a204fadf1cee37c67cdaf94cd972a57d6',1,'TravelExpense::CodeHardening']]],
+  ['opaqueor_10',['opaqueOR',['../namespace_travel_expense_1_1_code_hardening.html#a54e6de63e3cd3464bbc4030b7930cb6f',1,'TravelExpense::CodeHardening']]],
+  ['opaquepredicatealwaystrue_11',['opaquePredicateAlwaysTrue',['../namespace_travel_expense_1_1_code_hardening.html#acfb7ff38bd363b969590d6e38253e5eb',1,'TravelExpense::CodeHardening']]],
+  ['opaquepredicateimpossible_12',['opaquePredicateImpossible',['../namespace_travel_expense_1_1_code_hardening.html#ace43b2745bd11c3b21c29faf4b8d657f',1,'TravelExpense::CodeHardening']]],
+  ['opaquexor_13',['opaqueXOR',['../namespace_travel_expense_1_1_code_hardening.html#a75bc7146f1565519f5f2cb01ae836e8a',1,'TravelExpense::CodeHardening']]],
+  ['opentoken_14',['openToken',['../namespace_travel_expense_1_1_soft_h_s_m.html#a1dd53afa782d6054163658a225a3e3bf',1,'TravelExpense::SoftHSM']]]
 ];

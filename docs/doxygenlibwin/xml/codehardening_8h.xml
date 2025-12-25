@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="codehardening_8h" kind="file" language="C++">
     <compoundname>codehardening.h</compoundname>
     <includes local="no">cstddef</includes>
@@ -56,7 +56,7 @@
     <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
     <innernamespace refid="namespace_code_hardening">CodeHardening</innernamespace>
     <innernamespace refid="namespace_travel_expense_1_1_code_hardening">TravelExpense::CodeHardening</innernamespace>
-      <sectiondef kind="define">
+    <sectiondef kind="define">
       <memberdef kind="define" id="codehardening_8h_1a987be372294289b6b50fb7f661e3b828" prot="public" static="no">
         <name>OBFUSCATE_FUNC_NAME</name>
         <param><defname>name</defname></param>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/header/codehardening.h" line="334" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="334" bodyend="-1"/>
+        <location file="src/travelexpense/header/codehardening.h" line="334" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="334" bodyend="335"/>
       </memberdef>
       <memberdef kind="define" id="codehardening_8h_1a61426ab0b61493d6c40c1880c633b123" prot="public" static="no">
         <name>CALL_OBFUSCATED_FUNC</name>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/header/codehardening.h" line="343" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="343" bodyend="-1"/>
+        <location file="src/travelexpense/header/codehardening.h" line="343" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="343" bodyend="344"/>
       </memberdef>
       <memberdef kind="define" id="codehardening_8h_1a830676c1f0b50e2a255ae4e2e334d909" prot="public" static="no">
         <name>OPAQUE_LOOP</name>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/header/codehardening.h" line="352" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="352" bodyend="-1"/>
+        <location file="src/travelexpense/header/codehardening.h" line="352" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="352" bodyend="355"/>
       </memberdef>
       <memberdef kind="define" id="codehardening_8h_1a0d0bec467a2aaeb875470d7d2d86cf73" prot="public" static="no">
         <name>OBFUSCATED_STRING</name>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/header/codehardening.h" line="366" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="366" bodyend="-1"/>
+        <location file="src/travelexpense/header/codehardening.h" line="366" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="366" bodyend="367"/>
       </memberdef>
       <memberdef kind="define" id="codehardening_8h_1abf6bf1c1247bb8f89edec8d6bef5c6b0" prot="public" static="no">
         <name>DEAD_BRANCH</name>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/header/codehardening.h" line="381" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="381" bodyend="-1"/>
+        <location file="src/travelexpense/header/codehardening.h" line="381" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="381" bodyend="382"/>
       </memberdef>
       <memberdef kind="define" id="codehardening_8h_1a0fe692a61733f7553ff1ddf77537565b" prot="public" static="no">
         <name>ALWAYS_TRUE_BRANCH</name>
@@ -152,10 +152,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/header/codehardening.h" line="395" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="395" bodyend="-1"/>
+        <location file="src/travelexpense/header/codehardening.h" line="395" column="9" bodyfile="src/travelexpense/header/codehardening.h" bodystart="395" bodyend="396"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_code_hardening_1a828ac59ea8c553d8583d1b749290e2d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> uint32_t</type>
         <definition>uint32_t TravelExpense::CodeHardening::createOpaqueCounter</definition>
@@ -1219,7 +1219,7 @@
         </inbodydescription>
         <location file="src/travelexpense/src/codehardening.cpp" line="583" column="6" bodyfile="src/travelexpense/src/codehardening.cpp" bodystart="583" bodyend="610" declfile="src/travelexpense/header/codehardening.h" declline="318" declcolumn="24"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Seyahat Gideri Takibi - Kod Sertleştirme Fonksiyonları </para>
     </briefdescription>
@@ -1240,6 +1240,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CODEHARDENING_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CODEHARDENING_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>

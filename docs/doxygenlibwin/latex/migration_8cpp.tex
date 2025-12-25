@@ -5,9 +5,9 @@
 Seyahat Gideri Takibi -\/ Binary → SQLite \doxylink{namespace_migration}{Migration} Implementation.  
 
 
-{\ttfamily \#include \"{}../header/migration.\+h\"{}}\newline
-{\ttfamily \#include \"{}../header/database.\+h\"{}}\newline
-{\ttfamily \#include \"{}../header/file\+IO.\+h\"{}}\newline
+{\ttfamily \#include "{}../header/migration.\+h"{}}\newline
+{\ttfamily \#include "{}../header/database.\+h"{}}\newline
+{\ttfamily \#include "{}../header/file\+IO.\+h"{}}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
@@ -33,7 +33,7 @@ namespace \mbox{\hyperlink{namespace_travel_expense_1_1_migration}{Travel\+Expen
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{migration_8cpp_ae37f2aaf4837802590f2bd11facb80ea}{ACCESS}}(path,  mode)~access(path, mode)
+\#define \mbox{\hyperlink{migration_8cpp_ae37f2aaf4837802590f2bd11facb80ea}{ACCESS}}(path,  mode)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -77,10 +77,17 @@ Binnur Altınışık
 \end{DoxyDate}
 
 
+\label{doc-define-members}
+\Hypertarget{migration_8cpp_doc-define-members}
 \doxysubsection{Macro Definition Documentation}
-\Hypertarget{migration_8cpp_ae37f2aaf4837802590f2bd11facb80ea}\label{migration_8cpp_ae37f2aaf4837802590f2bd11facb80ea} 
-\index{migration.cpp@{migration.cpp}!ACCESS@{ACCESS}}
+\Hypertarget{migration_8cpp_ae37f2aaf4837802590f2bd11facb80ea}\index{migration.cpp@{migration.cpp}!ACCESS@{ACCESS}}
 \index{ACCESS@{ACCESS}!migration.cpp@{migration.cpp}}
 \doxysubsubsection{\texorpdfstring{ACCESS}{ACCESS}}
-{\footnotesize\ttfamily \#define ACCESS(\begin{DoxyParamCaption}\item[{}]{path,  }\item[{}]{mode }\end{DoxyParamCaption})~access(path, mode)}
+{\footnotesize\ttfamily \label{migration_8cpp_ae37f2aaf4837802590f2bd11facb80ea} 
+\#define ACCESS(\begin{DoxyParamCaption}\item[{}]{path}{, }\item[{}]{mode}{}\end{DoxyParamCaption})}
 
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{access(path,\ mode)}
+
+\end{DoxyCode}

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="encryption_8h" kind="file" language="C++">
     <compoundname>encryption.h</compoundname>
     <includes local="no">cstdint</includes>
@@ -85,7 +85,7 @@
     <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
     <innernamespace refid="namespace_encryption">Encryption</innernamespace>
     <innernamespace refid="namespace_travel_expense_1_1_encryption">TravelExpense::Encryption</innernamespace>
-      <sectiondef kind="func">
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1adfcb32aabe9079b29064bb520f474e43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
         <definition>bool TravelExpense::Encryption::sha256Hash</definition>
@@ -139,8 +139,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata (null pointer, sıfır uzunluk vb.)</para>
 </simplesect>
-</para>
-<para>RFC 6234 uyumlu tam SHA-256 hash implementasyonu. Girdi verisini 512-bit chunk&apos;lara böler, her chunk&apos;ı işler ve sonuç olarak 256-bit (32 byte) hash üretir.</para>
+RFC 6234 uyumlu tam SHA-256 hash implementasyonu. Girdi verisini 512-bit chunk&apos;lara böler, her chunk&apos;ı işler ve sonuç olarak 256-bit (32 byte) hash üretir.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>input</parametername>
@@ -203,8 +202,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata (null pointer, rastgele sayı üretme hatası vb.)</para>
 </simplesect>
-</para>
-<para>Güvenli rastgele sayı üreticisi kullanarak 16 byte (32 karakter hex string) salt değeri oluşturur. Bu salt, şifre hash&apos;leme işlemlerinde kullanılır.</para>
+Güvenli rastgele sayı üreticisi kullanarak 16 byte (32 karakter hex string) salt değeri oluşturur. Bu salt, şifre hash&apos;leme işlemlerinde kullanılır.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>salt</parametername>
@@ -274,8 +272,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata (null pointer, geçersiz salt formatı vb.)</para>
 </simplesect>
-</para>
-<para>Şifreyi salt ile birleştirip SHA-256 hash&apos;ini hesaplar. Format: SHA256(password + salt)</para>
+Şifreyi salt ile birleştirip SHA-256 hash&apos;ini hesaplar. Format: SHA256(password + salt)</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>password</parametername>
@@ -362,8 +359,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Şifre doğru, false Yanlış veya hata</para>
 </simplesect>
-</para>
-<para>Girilen şifreyi salt ile hash&apos;leyip saklanan hash ile karşılaştırır. Constant-time comparison kullanarak timing attack&apos;lara karşı koruma sağlar.</para>
+Girilen şifreyi salt ile hash&apos;leyip saklanan hash ile karşılaştırır. Constant-time comparison kullanarak timing attack&apos;lara karşı koruma sağlar.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>password</parametername>
@@ -483,8 +479,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>AES-256 algoritması ile CBC (Cipher Block Chaining) modunda şifreleme yapar. PKCS7 padding kullanır ve her blok önceki şifrelenmiş blok ile XOR&apos;lanır.</para>
+AES-256 algoritması ile CBC (Cipher Block Chaining) modunda şifreleme yapar. PKCS7 padding kullanır ve her blok önceki şifrelenmiş blok ile XOR&apos;lanır.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>plaintext</parametername>
@@ -540,7 +535,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="557" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="557" bodyend="600" declfile="src/travelexpense/header/encryption.h" declline="111" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="557" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="557" bodyend="602" declfile="src/travelexpense/header/encryption.h" declline="111" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a8b06d829778298f0975c1b85ed746270" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -628,8 +623,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>AES-256 algoritması ile CBC modunda şifre çözme yapar. PKCS7 padding&apos;i kaldırır ve her blok önceki şifrelenmiş blok ile XOR&apos;lanır.</para>
+AES-256 algoritması ile CBC modunda şifre çözme yapar. PKCS7 padding&apos;i kaldırır ve her blok önceki şifrelenmiş blok ile XOR&apos;lanır.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ciphertext</parametername>
@@ -685,7 +679,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="711" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="711" bodyend="797" declfile="src/travelexpense/header/encryption.h" declline="126" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="713" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="713" bodyend="800" declfile="src/travelexpense/header/encryption.h" declline="126" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a9556af2bcbc41232a11630b9de1d36d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -761,8 +755,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>RFC 2104 uyumlu HMAC-SHA256 (Hash-based Message Authentication Code) hesaplar. HMAC = SHA256(o_key_pad || SHA256(i_key_pad || message))</para>
+RFC 2104 uyumlu HMAC-SHA256 (Hash-based Message Authentication Code) hesaplar. HMAC = SHA256(o_key_pad || SHA256(i_key_pad || message))</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>key</parametername>
@@ -810,7 +803,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="812" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="812" bodyend="874" declfile="src/travelexpense/header/encryption.h" declline="140" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="815" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="815" bodyend="877" declfile="src/travelexpense/header/encryption.h" declline="140" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a53f29cf73c5a46e8ff3c3344408bcefa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -909,8 +902,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>RFC 2898 uyumlu PBKDF2 implementasyonu. Şifre ve salt&apos;tan güçlü bir anahtar türetir. HMAC-SHA256 kullanır.</para>
+RFC 2898 uyumlu PBKDF2 implementasyonu. Şifre ve salt&apos;tan güçlü bir anahtar türetir. HMAC-SHA256 kullanır.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>password</parametername>
@@ -974,7 +966,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="891" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="891" bodyend="956" declfile="src/travelexpense/header/encryption.h" declline="156" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="894" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="894" bodyend="959" declfile="src/travelexpense/header/encryption.h" declline="156" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1aab13cbee61c87e29e4f07badb68ee006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1014,8 +1006,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Platform-specific güvenli rastgele sayı üreticisi kullanır:<itemizedlist>
+Platform-specific güvenli rastgele sayı üreticisi kullanır:<itemizedlist>
 <listitem><para>Windows: CryptGenRandom (Windows CryptoAPI)</para>
 </listitem><listitem><para>Linux/Unix: /dev/urandom</para>
 </listitem></itemizedlist>
@@ -1043,7 +1034,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="969" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="969" bodyend="999" declfile="src/travelexpense/header/encryption.h" declline="168" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="972" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="972" bodyend="1002" declfile="src/travelexpense/header/encryption.h" declline="168" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1af19dc3b309d69a616590466cd620921c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1071,8 +1062,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>AES şifreleme için 16 byte (AES block size) güvenli rastgele IV oluşturur.</para>
+AES şifreleme için 16 byte (AES block size) güvenli rastgele IV oluşturur.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>iv</parametername>
@@ -1088,7 +1078,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1009" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1009" bodyend="1015" declfile="src/travelexpense/header/encryption.h" declline="176" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1012" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1012" bodyend="1018" declfile="src/travelexpense/header/encryption.h" declline="176" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a1bc8df3a6e90bff77d7c9eb843036ba5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1140,8 +1130,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Eşit, false Farklı</para>
 </simplesect>
-</para>
-<para>Timing attack&apos;lara karşı koruma sağlayan sabit zamanlı string karşılaştırma. Her karakteri karşılaştırır ve sonucu XOR ile birleştirir. Bu sayede karşılaştırma süresi string içeriğinden bağımsızdır.</para>
+Timing attack&apos;lara karşı koruma sağlayan sabit zamanlı string karşılaştırma. Her karakteri karşılaştırır ve sonucu XOR ile birleştirir. Bu sayede karşılaştırma süresi string içeriğinden bağımsızdır.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>a</parametername>
@@ -1173,7 +1162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1029" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1029" bodyend="1041" declfile="src/travelexpense/header/encryption.h" declline="186" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1032" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1032" bodyend="1044" declfile="src/travelexpense/header/encryption.h" declline="186" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a0195e1357626a5075951ae990e99ca8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1238,8 +1227,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Dosyayı AES-256-CBC ile şifreler ve çıktı dosyasına yazar. Çıktı formatı: [IV (16 byte)][Ciphertext (padded)]</para>
+Dosyayı AES-256-CBC ile şifreler ve çıktı dosyasına yazar. Çıktı formatı: [IV (16 byte)][Ciphertext (padded)]</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>inputFile</parametername>
@@ -1279,7 +1267,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1055" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1055" bodyend="1112" declfile="src/travelexpense/header/encryption.h" declline="197" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1058" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1058" bodyend="1115" declfile="src/travelexpense/header/encryption.h" declline="197" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a7d0d5da1d2c1edf0044d80f025c889b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1344,8 +1332,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>AES-256-CBC ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı: [IV (16 byte)][Ciphertext (padded)]</para>
+AES-256-CBC ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı: [IV (16 byte)][Ciphertext (padded)]</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>inputFile</parametername>
@@ -1385,7 +1372,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1126" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1126" bodyend="1186" declfile="src/travelexpense/header/encryption.h" declline="209" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1129" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1129" bodyend="1189" declfile="src/travelexpense/header/encryption.h" declline="209" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a90b1f8daf4e4e6a110cce5aa4a1a135f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1450,8 +1437,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Gömülü anahtar ile DES şifreleme yapar. Anahtar koda gömülü olduğu için whitebox implementasyonu. PKCS7 padding kullanır (8-byte blocks).</para>
+Gömülü anahtar ile DES şifreleme yapar. Anahtar koda gömülü olduğu için whitebox implementasyonu. PKCS7 padding kullanır (8-byte blocks).</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>plaintext</parametername>
@@ -1491,7 +1477,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1549" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1549" bodyend="1569" declfile="src/travelexpense/header/encryption.h" declline="225" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1552" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1552" bodyend="1572" declfile="src/travelexpense/header/encryption.h" declline="225" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a894ef88976e4ddeccc27e33506180f6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1555,8 +1541,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Gömülü anahtar ile DES şifre çözme yapar. PKCS7 padding&apos;i kaldırır.</para>
+Gömülü anahtar ile DES şifre çözme yapar. PKCS7 padding&apos;i kaldırır.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ciphertext</parametername>
@@ -1596,7 +1581,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1582" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1582" bodyend="1602" declfile="src/travelexpense/header/encryption.h" declline="237" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1585" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1585" bodyend="1605" declfile="src/travelexpense/header/encryption.h" declline="237" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a531df9d656f8e6e5b539c2db02ff09b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1636,8 +1621,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Dosyayı whitebox DES ile şifreler ve çıktı dosyasına yazar. Çıktı formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
+Dosyayı whitebox DES ile şifreler ve çıktı dosyasına yazar. Çıktı formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>inputFile</parametername>
@@ -1661,7 +1645,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1614" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1614" bodyend="1668" declfile="src/travelexpense/header/encryption.h" declline="247" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1617" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1617" bodyend="1671" declfile="src/travelexpense/header/encryption.h" declline="247" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a34495d70a42f169639fe1d6d51f4fa79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1701,8 +1685,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Whitebox DES ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
+Whitebox DES ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>inputFile</parametername>
@@ -1726,7 +1709,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="1680" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1680" bodyend="1752" declfile="src/travelexpense/header/encryption.h" declline="256" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="1683" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="1683" bodyend="1755" declfile="src/travelexpense/header/encryption.h" declline="256" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1ac04f3733c0d1a05113a11221e344e0e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1791,8 +1774,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Gömülü anahtar ile AES-256 şifreleme yapar. PKCS7 padding kullanır (16-byte blocks).</para>
+Gömülü anahtar ile AES-256 şifreleme yapar. PKCS7 padding kullanır (16-byte blocks).</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>plaintext</parametername>
@@ -1832,7 +1814,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="2095" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2095" bodyend="2112" declfile="src/travelexpense/header/encryption.h" declline="276" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="2098" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2098" bodyend="2115" declfile="src/travelexpense/header/encryption.h" declline="276" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1a539e19ad6f2560392c8a73000fb71e21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1896,8 +1878,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Gömülü anahtar ile AES-256 şifre çözme yapar. PKCS7 padding&apos;i kaldırır.</para>
+Gömülü anahtar ile AES-256 şifre çözme yapar. PKCS7 padding&apos;i kaldırır.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>ciphertext</parametername>
@@ -1937,7 +1918,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="2125" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2125" bodyend="2142" declfile="src/travelexpense/header/encryption.h" declline="288" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="2128" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2128" bodyend="2145" declfile="src/travelexpense/header/encryption.h" declline="288" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1ad2ec9054ce42bc1b7376ed47caf91e56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -1977,8 +1958,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Dosyayı whitebox AES ile şifreler ve çıktı dosyasına yazar. Çıktı formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
+Dosyayı whitebox AES ile şifreler ve çıktı dosyasına yazar. Çıktı formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>inputFile</parametername>
@@ -2002,7 +1982,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="2154" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2154" bodyend="2208" declfile="src/travelexpense/header/encryption.h" declline="298" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="2157" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2157" bodyend="2211" declfile="src/travelexpense/header/encryption.h" declline="298" declcolumn="24"/>
       </memberdef>
       <memberdef kind="function" id="namespace_travel_expense_1_1_encryption_1ae7b964b2a339d09c81020de250276b43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
@@ -2042,8 +2022,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Whitebox AES ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
+Whitebox AES ile şifrelenmiş dosyayı çözer ve çıktı dosyasına yazar. Girdi formatı: [Original Size (8 byte)][Ciphertext (padded)]</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>inputFile</parametername>
@@ -2067,9 +2046,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/encryption.cpp" line="2220" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2220" bodyend="2292" declfile="src/travelexpense/header/encryption.h" declline="307" declcolumn="24"/>
+        <location file="src/travelexpense/src/encryption.cpp" line="2223" column="6" bodyfile="src/travelexpense/src/encryption.cpp" bodystart="2223" bodyend="2295" declfile="src/travelexpense/header/encryption.h" declline="307" declcolumn="24"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Seyahat Gideri Takibi - Şifreleme Fonksiyonları </para>
     </briefdescription>
@@ -2083,6 +2062,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ENCRYPTION_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENCRYPTION_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>

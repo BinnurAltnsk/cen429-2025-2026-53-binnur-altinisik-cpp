@@ -13,18 +13,20 @@
 \begin{DoxyCompactList}\small\item\em Yeni ID oluştur. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\label{doc-func-members}
+\Hypertarget{namespace_travel_expense_1_1_file_i_o_doc-func-members}
 \doxysubsection{Function Documentation}
-\Hypertarget{namespace_travel_expense_1_1_file_i_o_a5b48ea5d727f176d8ccc873b44bde6bd}\label{namespace_travel_expense_1_1_file_i_o_a5b48ea5d727f176d8ccc873b44bde6bd} 
-\index{TravelExpense::FileIO@{TravelExpense::FileIO}!ensureDataDirectory@{ensureDataDirectory}}
+\Hypertarget{namespace_travel_expense_1_1_file_i_o_a5b48ea5d727f176d8ccc873b44bde6bd}\index{TravelExpense::FileIO@{TravelExpense::FileIO}!ensureDataDirectory@{ensureDataDirectory}}
 \index{ensureDataDirectory@{ensureDataDirectory}!TravelExpense::FileIO@{TravelExpense::FileIO}}
 \doxysubsubsection{\texorpdfstring{ensureDataDirectory()}{ensureDataDirectory()}}
-{\footnotesize\ttfamily bool Travel\+Expense\+::\+File\+IO\+::ensure\+Data\+Directory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{namespace_travel_expense_1_1_file_i_o_a5b48ea5d727f176d8ccc873b44bde6bd} 
+bool Travel\+Expense\+::\+File\+IO\+::ensure\+Data\+Directory (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
 Veri dizinini oluştur (yoksa) 
 
-Uygulama veri dizinini (varsayılan\+: \"{}data\"{}) oluşturur. Eğer dizin zaten varsa, hiçbir işlem yapmaz.
+Uygulama veri dizinini (varsayılan\+: "{}data"{}) oluşturur. Eğer dizin zaten varsa, hiçbir işlem yapmaz.
 
 \begin{DoxyNote}{Note}
 Bu fonksiyon, uygulama başlatıldığında çağrılmalıdır. Dizin oluşturulamazsa (örneğin izin hatası), false döner.
@@ -32,11 +34,11 @@ Bu fonksiyon, uygulama başlatıldığında çağrılmalıdır. Dizin oluşturul
 \begin{DoxyReturn}{Returns}
 true Başarılı (dizin oluşturuldu veya zaten var), false Hata (izin hatası vb.) 
 \end{DoxyReturn}
-\Hypertarget{namespace_travel_expense_1_1_file_i_o_ad66f05fcd39352e4f9a2aa8fdf32ce48}\label{namespace_travel_expense_1_1_file_i_o_ad66f05fcd39352e4f9a2aa8fdf32ce48} 
-\index{TravelExpense::FileIO@{TravelExpense::FileIO}!generateId@{generateId}}
+\Hypertarget{namespace_travel_expense_1_1_file_i_o_ad66f05fcd39352e4f9a2aa8fdf32ce48}\index{TravelExpense::FileIO@{TravelExpense::FileIO}!generateId@{generateId}}
 \index{generateId@{generateId}!TravelExpense::FileIO@{TravelExpense::FileIO}}
 \doxysubsubsection{\texorpdfstring{generateId()}{generateId()}}
-{\footnotesize\ttfamily int32\+\_\+t Travel\+Expense\+::\+File\+IO\+::generate\+Id (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{entity\+Name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{namespace_travel_expense_1_1_file_i_o_ad66f05fcd39352e4f9a2aa8fdf32ce48} 
+int32\+\_\+t Travel\+Expense\+::\+File\+IO\+::generate\+Id (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{entity\+Name}{}\end{DoxyParamCaption})}
 
 
 
@@ -55,11 +57,11 @@ Bu fonksiyon, atomik ID oluşturma sağlar. Eğer dosya yoksa, 1 ile başlar.
 \begin{DoxyReturn}{Returns}
 int32\+\_\+t Yeni ID (1\textquotesingle{}den başlar, her çağrıda 1 artar), 0 ise hata 
 \end{DoxyReturn}
-\Hypertarget{namespace_travel_expense_1_1_file_i_o_a00cc394b17a375d8944fdeff726d2007}\label{namespace_travel_expense_1_1_file_i_o_a00cc394b17a375d8944fdeff726d2007} 
-\index{TravelExpense::FileIO@{TravelExpense::FileIO}!getLastId@{getLastId}}
+\Hypertarget{namespace_travel_expense_1_1_file_i_o_a00cc394b17a375d8944fdeff726d2007}\index{TravelExpense::FileIO@{TravelExpense::FileIO}!getLastId@{getLastId}}
 \index{getLastId@{getLastId}!TravelExpense::FileIO@{TravelExpense::FileIO}}
 \doxysubsubsection{\texorpdfstring{getLastId()}{getLastId()}}
-{\footnotesize\ttfamily int32\+\_\+t Travel\+Expense\+::\+File\+IO\+::get\+Last\+Id (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{namespace_travel_expense_1_1_file_i_o_a00cc394b17a375d8944fdeff726d2007} 
+int32\+\_\+t Travel\+Expense\+::\+File\+IO\+::get\+Last\+Id (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{}\end{DoxyParamCaption})}
 
 
 
@@ -72,17 +74,17 @@ Bu fonksiyon, entity ID\textquotesingle{}lerini takip etmek için kullanılır. 
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
-{\em filename} & Entity adı (user, trip, expense, budget) Dosya yolu\+: \"{}data/\{filename\}\+\_\+id.\+txt\"{} formatında nullptr ise 0 döner. \\
+{\em filename} & Entity adı (user, trip, expense, budget) Dosya yolu\+: "{}data/\{filename\}\+\_\+id.\+txt"{} formatında nullptr ise 0 döner. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 int32\+\_\+t Son ID, 0 ise dosya yok veya okuma hatası 
 \end{DoxyReturn}
-\Hypertarget{namespace_travel_expense_1_1_file_i_o_a62bef7a2f4e9800f9e1cd658b2b2736f}\label{namespace_travel_expense_1_1_file_i_o_a62bef7a2f4e9800f9e1cd658b2b2736f} 
-\index{TravelExpense::FileIO@{TravelExpense::FileIO}!saveLastId@{saveLastId}}
+\Hypertarget{namespace_travel_expense_1_1_file_i_o_a62bef7a2f4e9800f9e1cd658b2b2736f}\index{TravelExpense::FileIO@{TravelExpense::FileIO}!saveLastId@{saveLastId}}
 \index{saveLastId@{saveLastId}!TravelExpense::FileIO@{TravelExpense::FileIO}}
 \doxysubsubsection{\texorpdfstring{saveLastId()}{saveLastId()}}
-{\footnotesize\ttfamily bool Travel\+Expense\+::\+File\+IO\+::save\+Last\+Id (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{int32\+\_\+t}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{namespace_travel_expense_1_1_file_i_o_a62bef7a2f4e9800f9e1cd658b2b2736f} 
+bool Travel\+Expense\+::\+File\+IO\+::save\+Last\+Id (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename}{, }\item[{int32\+\_\+t}]{id}{}\end{DoxyParamCaption})}
 
 
 
@@ -95,7 +97,7 @@ Bu fonksiyon, ID tracking için kullanılır. Dosya formatı\+: ASCII sayı olar
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
-{\em filename} & Entity adı (user, trip, expense, budget) Dosya yolu\+: \"{}data/\{filename\}\+\_\+id.\+txt\"{} formatında nullptr ise false döner. \\
+{\em filename} & Entity adı (user, trip, expense, budget) Dosya yolu\+: "{}data/\{filename\}\+\_\+id.\+txt"{} formatında nullptr ise false döner. \\
 \hline
 {\em id} & Kaydedilecek ID (0\textquotesingle{}dan büyük olmalı) \\
 \hline

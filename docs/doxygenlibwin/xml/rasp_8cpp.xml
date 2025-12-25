@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="rasp_8cpp" kind="file" language="C++">
     <compoundname>rasp.cpp</compoundname>
     <includes local="no">cstdint</includes>
@@ -174,10 +174,10 @@
     <innernamespace refid="namespace_travel_expense">TravelExpense</innernamespace>
     <innernamespace refid="namespace_r_a_s_p">RASP</innernamespace>
     <innernamespace refid="namespace_travel_expense_1_1_r_a_s_p">TravelExpense::RASP</innernamespace>
-      <sectiondef kind="var">
-      <memberdef kind="variable" id="namespace_travel_expense_1_1_r_a_s_p_1a7dc79c571124ed9a9dfbfe87ba610b0b" prot="public" static="yes" mutable="no">
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_travel_expense_1_1_r_a_s_p_1aaf079e4b9d9d26f4e2e8cb34d7694d1a" prot="public" static="yes" mutable="no">
         <type>char</type>
-        <definition>TravelExpense::RASP::g_expectedSelfChecksum</definition>
+        <definition>char TravelExpense::RASP::g_expectedSelfChecksum[65]</definition>
         <argsstring>[65]</argsstring>
         <name>g_expectedSelfChecksum</name>
         <qualifiedname>TravelExpense::RASP::g_expectedSelfChecksum</qualifiedname>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/travelexpense/src/rasp.cpp" line="207" column="13" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="207" bodyend="-1"/>
+        <location file="src/travelexpense/src/rasp.cpp" line="207" column="13" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="207" bodyend="207"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_travel_expense_1_1_r_a_s_p_1a2fd0dd18bf241394231ab86d91e032db" prot="public" static="yes" mutable="no">
         <type>std::vector&lt; void * &gt;</type>
@@ -213,8 +213,8 @@
         </inbodydescription>
         <location file="src/travelexpense/src/rasp.cpp" line="770" column="20" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="770" bodyend="-1"/>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="func">
+    </sectiondef>
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_r_a_s_p_1a69aab7fc42c2f89170695f4daa2f99de" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::atomic&lt; bool &gt;</type>
         <definition>static std::atomic&lt; bool &gt; TravelExpense::RASP::g_raspActive</definition>
@@ -1465,7 +1465,7 @@
         </inbodydescription>
         <location file="src/travelexpense/src/rasp.cpp" line="1155" column="6" bodyfile="src/travelexpense/src/rasp.cpp" bodystart="1155" bodyend="1167" declfile="src/travelexpense/header/rasp.h" declline="415" declcolumn="24"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
 <para>Seyahat Gideri Takibi - <ref refid="namespace_r_a_s_p" kindref="compound">RASP</ref> (Runtime Application Self-Protection) Fonksiyonları </para>
     </briefdescription>
@@ -1545,9 +1545,9 @@
 <codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Note:<sp/>Process32FirstA<sp/>and<sp/>Process32NextA<sp/>are<sp/>in<sp/>kernel32.lib</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Linking<sp/>is<sp/>done<sp/>in<sp/>CMakeLists.txt<sp/>via<sp/>target_link_libraries</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#pragma<sp/>comment<sp/>directives<sp/>ensure<sp/>linking<sp/>even<sp/>if<sp/>CMake<sp/>fails</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>comment(lib,<sp/>&quot;kernel32.lib&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>comment(lib,<sp/>&quot;psapi.lib&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>comment(lib,<sp/>&quot;advapi32.lib&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>comment(lib,<sp/>&quot;kernel32.lib&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>comment(lib,<sp/>&quot;psapi.lib&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>comment(lib,<sp/>&quot;advapi32.lib&quot;)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;intrin.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -1581,7 +1581,7 @@
 <codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="108"><highlight class="normal"></highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense" kindref="compound">TravelExpense</ref><sp/>{</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_r_a_s_p" kindref="compound">RASP</ref><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_travel_expense_1_1_r_a_s_p" kindref="compound">RASP</ref><sp/>{</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"></highlight></codeline>
 <codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//<sp/>============================================================================</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GLOBAL<sp/>STATE<sp/>-<sp/>Global<sp/>Durum<sp/>Değişkenleri</highlight><highlight class="normal"></highlight></codeline>

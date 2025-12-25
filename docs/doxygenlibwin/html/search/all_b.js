@@ -1,15 +1,16 @@
 var searchData=
 [
-  ['memoryallocation_0',['MemoryAllocation',['../namespace_travel_expense.html#a3bda90e999d060d311aeaafaca383daba6a10b4834f9cabcc57ddbf0ee05eeb47',1,'TravelExpense']]],
-  ['migrateallfrombinary_1',['migrateAllFromBinary',['../namespace_travel_expense_1_1_migration.html#ac56a5704bf31629e1b35b2dcd161a98b',1,'TravelExpense::Migration']]],
-  ['migratebudgetstodatabase_2',['migrateBudgetsToDatabase',['../namespace_travel_expense_1_1_migration.html#a0585996bd000e2e35d0e36022d08bd6c',1,'TravelExpense::Migration']]],
-  ['migrateexpensestodatabase_3',['migrateExpensesToDatabase',['../namespace_travel_expense_1_1_migration.html#a183d7e8c8198b4545072decb2d3a147c',1,'TravelExpense::Migration']]],
-  ['migrateidfiles_4',['migrateIdFiles',['../namespace_travel_expense_1_1_migration.html#abac0abce63e7e7b06bad2913e311f552',1,'TravelExpense::Migration']]],
-  ['migratetripstodatabase_5',['migrateTripsToDatabase',['../namespace_travel_expense_1_1_migration.html#a336f33556eca236abeee8c07a092174a',1,'TravelExpense::Migration']]],
-  ['migrateuserstodatabase_6',['migrateUsersToDatabase',['../namespace_travel_expense_1_1_migration.html#ad9ea52c32ab75768e4f494a5f381a37f',1,'TravelExpense::Migration']]],
-  ['migration_7',['Migration',['../namespace_migration.html',1,'']]],
-  ['migration_2ecpp_8',['migration.cpp',['../migration_8cpp.html',1,'']]],
-  ['migration_2eh_9',['migration.h',['../migration_8h.html',1,'']]],
-  ['migrationresult_10',['MigrationResult',['../struct_travel_expense_1_1_migration_1_1_migration_result.html',1,'TravelExpense::Migration']]],
-  ['mkdir_11',['MKDIR',['../database_8cpp.html#a2b42ceef59ec198c6eee355a96d2cd1c',1,'MKDIR:&#160;database.cpp'],['../file_i_o_8cpp.html#a2b42ceef59ec198c6eee355a96d2cd1c',1,'MKDIR:&#160;fileIO.cpp']]]
+  ['lastlogin_0',['lastLogin',['../struct_travel_expense_1_1_user.html#afdd67cdd7df39e0ea95f92742eb6c6fd',1,'TravelExpense::User']]],
+  ['linux_1',['Linux',['../index.html#autotoc_md19',1,'']]],
+  ['linux_20wsl_2',['Linux/WSL',['../index.html#autotoc_md10',1,'']]],
+  ['lisans_3',['Lisans',['../index.html#autotoc_md29',1,'']]],
+  ['listassets_4',['listAssets',['../namespace_travel_expense_1_1_asset_manager.html#a8905f38d9bd74d60801d67a798d1c9de',1,'TravelExpense::AssetManager']]],
+  ['listassetsbytype_5',['listAssetsByType',['../namespace_travel_expense_1_1_asset_manager.html#ae88b60bbe936e860fbb648a8fc024951',1,'TravelExpense::AssetManager']]],
+  ['listkeys_6',['listKeys',['../namespace_travel_expense_1_1_soft_h_s_m.html#ae037de28b34ae8a110a65f222e52ac06',1,'TravelExpense::SoftHSM']]],
+  ['listtokens_7',['listTokens',['../namespace_travel_expense_1_1_soft_h_s_m.html#a627d80f41250c6562b1cd91521787245',1,'TravelExpense::SoftHSM']]],
+  ['loadclientcertificate_8',['loadClientCertificate',['../namespace_travel_expense_1_1_t_l_s.html#af3eee0c7c6f7d4d47aa903007191e8ba',1,'TravelExpense::TLS']]],
+  ['location_9',['location',['../struct_travel_expense_1_1_asset_manager_1_1_asset.html#a714eed1010cdf1f4ea7da880d90d494e',1,'TravelExpense::AssetManager::Asset']]],
+  ['logexpense_10',['logExpense',['../namespace_travel_expense_1_1_expense_manager.html#acfa22e551ca4dd536dc6307b49c3b41d',1,'TravelExpense::ExpenseManager']]],
+  ['loginuser_11',['loginUser',['../namespace_travel_expense_1_1_user_auth.html#a8f83e74a4b8d2833cb23051e7661c0f0',1,'TravelExpense::UserAuth']]],
+  ['logoutuser_12',['logoutUser',['../namespace_travel_expense_1_1_user_auth.html#ad71c3866e8f46267153654e60014d99f',1,'TravelExpense::UserAuth']]]
 ];

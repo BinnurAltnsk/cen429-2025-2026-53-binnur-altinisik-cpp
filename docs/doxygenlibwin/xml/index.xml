@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.7" xml:lang="en-US">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.14.0" xml:lang="en-US">
   <compound refid="struct_travel_expense_1_1_asset_manager_1_1_asset" kind="struct"><name>TravelExpense::AssetManager::Asset</name>
     <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a986c8230bbcc243780250752e1c75276" kind="variable"><name>assetId</name></member>
     <member refid="struct_travel_expense_1_1_asset_manager_1_1_asset_1a088985bed7307cea0baded90e87c0512" kind="variable"><name>assetType</name></member>
@@ -171,15 +171,15 @@
     <member refid="namespace_travel_expense_1_1_budget_manager_1a6635276a27a73233c16e25046e1476ae" kind="function"><name>checkBudgetLimit</name></member>
   </compound>
   <compound refid="namespace_travel_expense_1_1_code_hardening" kind="namespace"><name>TravelExpense::CodeHardening</name>
-    <member refid="namespace_travel_expense_1_1_code_hardening_1a9004e21532759d85900572705b58e005" kind="variable"><name>OPAQUE_MAGIC_1</name></member>
-    <member refid="namespace_travel_expense_1_1_code_hardening_1aa44a1b58de50a659ad89338efe7f9fbf" kind="variable"><name>OPAQUE_MAGIC_2</name></member>
-    <member refid="namespace_travel_expense_1_1_code_hardening_1ac7039568414267f978e25326e076684f" kind="variable"><name>OPAQUE_MAGIC_3</name></member>
-    <member refid="namespace_travel_expense_1_1_code_hardening_1ad60d5ac50ff2dbed00f0c646f558b74d" kind="variable"><name>OPAQUE_MAGIC_4</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a80a4ca57741affb6f17bc2f535dca871" kind="variable"><name>OPAQUE_MAGIC_1</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1ad59af875ff7837f8dc36c825beb06a66" kind="variable"><name>OPAQUE_MAGIC_2</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a8dda534478fef383d5e50d7ae787cad4" kind="variable"><name>OPAQUE_MAGIC_3</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a3ccb5c78ec2437b2b386440bb9f3b918" kind="variable"><name>OPAQUE_MAGIC_4</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a607257b1a1155ef2a283422c545ce1ec" kind="variable"><name>FUNC_PTR_KEY</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1afd1c8e893ee55184a538c2ec427b9af1" kind="variable"><name>OPAQUE_TRUE</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1acc1290612d3c1d45ad11824d5a4681bc" kind="variable"><name>OPAQUE_FALSE</name></member>
-    <member refid="namespace_travel_expense_1_1_code_hardening_1ad70178ecd532452d80f25072b89f74b6" kind="variable"><name>DEAD_BRANCH_MAGIC_1</name></member>
-    <member refid="namespace_travel_expense_1_1_code_hardening_1a9d81cde1c71e600ce3db7e6f6f87efda" kind="variable"><name>DEAD_BRANCH_MAGIC_2</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1ab2a975f58040b6d9609298dd0b966036" kind="variable"><name>DEAD_BRANCH_MAGIC_1</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a2e340224d1b7a03aa5b3352eaaa617dc" kind="variable"><name>DEAD_BRANCH_MAGIC_2</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a828ac59ea8c553d8583d1b749290e2d0" kind="function"><name>createOpaqueCounter</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a672620a323d70b733e20e41740975228" kind="function"><name>checkOpaqueLoopCondition</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1af5e0a7847c70ae9cd622ea48f577178e" kind="function"><name>opaqueIncrement</name></member>
@@ -207,7 +207,7 @@
     <member refid="namespace_travel_expense_1_1_code_hardening_1a7d380eceb35fac3d0ad286d713470b29" kind="function"><name>dummyOperation</name></member>
   </compound>
   <compound refid="namespace_travel_expense_1_1_database" kind="namespace"><name>TravelExpense::Database</name>
-    <member refid="namespace_travel_expense_1_1_database_1a879bc0655c88733b1bd80c84980d38ba" kind="variable"><name>g_database</name></member>
+    <member refid="namespace_travel_expense_1_1_database_1abfb61a8b3fd854092b5a1c0215c84367" kind="variable"><name>g_database</name></member>
     <member refid="namespace_travel_expense_1_1_database_1ae9f9e2befdc1734e0096e402864e98e7" kind="function"><name>initializeDatabase</name></member>
     <member refid="namespace_travel_expense_1_1_database_1a2af129a13996d54e28626bb31ea628dd" kind="function"><name>closeDatabase</name></member>
     <member refid="namespace_travel_expense_1_1_database_1a99d005e75737c809467eaa2bc6a50618" kind="function"><name>createTables</name></member>
@@ -306,7 +306,7 @@
   </compound>
   <compound refid="namespace_travel_expense_1_1_r_a_s_p" kind="namespace"><name>TravelExpense::RASP</name>
     <member refid="namespace_travel_expense_1_1_r_a_s_p_1a24b145da3df213c68dbecdfd2ccafece" kind="typedef"><name>ChecksumCallback</name></member>
-    <member refid="namespace_travel_expense_1_1_r_a_s_p_1a7dc79c571124ed9a9dfbfe87ba610b0b" kind="variable"><name>g_expectedSelfChecksum</name></member>
+    <member refid="namespace_travel_expense_1_1_r_a_s_p_1aaf079e4b9d9d26f4e2e8cb34d7694d1a" kind="variable"><name>g_expectedSelfChecksum</name></member>
     <member refid="namespace_travel_expense_1_1_r_a_s_p_1a2fd0dd18bf241394231ab86d91e032db" kind="variable"><name>g_criticalFunctions</name></member>
     <member refid="namespace_travel_expense_1_1_r_a_s_p_1a13447aefd17bbea8f1eb6bef277cdf88" kind="function"><name>calculateCodeChecksum</name></member>
     <member refid="namespace_travel_expense_1_1_r_a_s_p_1a82253cae91dc52bb085b258bcfb97e30" kind="function"><name>verifyCodeChecksum</name></member>
@@ -396,7 +396,7 @@
     <member refid="namespace_travel_expense_1_1_soft_h_s_m_1ada96f17213af3032466f091866ca6e42a6540894fc3bdc9f2597e6d1d4ea0e190" kind="enumvalue"><name>SIGN_VERIFY</name></member>
     <member refid="namespace_travel_expense_1_1_soft_h_s_m_1ada96f17213af3032466f091866ca6e42a7464a3e54ec3ca720fa0d199d59426a4" kind="enumvalue"><name>WRAP_UNWRAP</name></member>
     <member refid="namespace_travel_expense_1_1_soft_h_s_m_1ada96f17213af3032466f091866ca6e42abc63603c862fa6bdbb49fae1611c572c" kind="enumvalue"><name>DERIVE</name></member>
-    <member refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kind="typedef"><name>ErrorCode</name></member>
+    <member refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kind="typedef"><name>ErrorCode</name></member>
     <member refid="namespace_travel_expense_1_1_soft_h_s_m_1a25b47e9b2a2df901ca4dc5044147214a" kind="variable"><name>g_pkcs11Library</name></member>
     <member refid="namespace_travel_expense_1_1_soft_h_s_m_1aaeba772df23a3ca6603606546f2bceb1" kind="variable"><name>g_pFunctionList</name></member>
     <member refid="namespace_travel_expense_1_1_soft_h_s_m_1ae9e5e1f09fca7edbf90a13dffd07c6ec" kind="variable"><name>g_currentSlot</name></member>
@@ -780,15 +780,15 @@
     <member refid="namespace_travel_expense_1_1_budget_manager_1a6635276a27a73233c16e25046e1476ae" kind="function"><name>checkBudgetLimit</name></member>
   </compound>
   <compound refid="codehardening_8cpp" kind="file"><name>codehardening.cpp</name>
-    <member refid="namespace_travel_expense_1_1_code_hardening_1a9004e21532759d85900572705b58e005" kind="variable"><name>OPAQUE_MAGIC_1</name></member>
-    <member refid="namespace_travel_expense_1_1_code_hardening_1aa44a1b58de50a659ad89338efe7f9fbf" kind="variable"><name>OPAQUE_MAGIC_2</name></member>
-    <member refid="namespace_travel_expense_1_1_code_hardening_1ac7039568414267f978e25326e076684f" kind="variable"><name>OPAQUE_MAGIC_3</name></member>
-    <member refid="namespace_travel_expense_1_1_code_hardening_1ad60d5ac50ff2dbed00f0c646f558b74d" kind="variable"><name>OPAQUE_MAGIC_4</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a80a4ca57741affb6f17bc2f535dca871" kind="variable"><name>OPAQUE_MAGIC_1</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1ad59af875ff7837f8dc36c825beb06a66" kind="variable"><name>OPAQUE_MAGIC_2</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a8dda534478fef383d5e50d7ae787cad4" kind="variable"><name>OPAQUE_MAGIC_3</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a3ccb5c78ec2437b2b386440bb9f3b918" kind="variable"><name>OPAQUE_MAGIC_4</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a607257b1a1155ef2a283422c545ce1ec" kind="variable"><name>FUNC_PTR_KEY</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1afd1c8e893ee55184a538c2ec427b9af1" kind="variable"><name>OPAQUE_TRUE</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1acc1290612d3c1d45ad11824d5a4681bc" kind="variable"><name>OPAQUE_FALSE</name></member>
-    <member refid="namespace_travel_expense_1_1_code_hardening_1ad70178ecd532452d80f25072b89f74b6" kind="variable"><name>DEAD_BRANCH_MAGIC_1</name></member>
-    <member refid="namespace_travel_expense_1_1_code_hardening_1a9d81cde1c71e600ce3db7e6f6f87efda" kind="variable"><name>DEAD_BRANCH_MAGIC_2</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1ab2a975f58040b6d9609298dd0b966036" kind="variable"><name>DEAD_BRANCH_MAGIC_1</name></member>
+    <member refid="namespace_travel_expense_1_1_code_hardening_1a2e340224d1b7a03aa5b3352eaaa617dc" kind="variable"><name>DEAD_BRANCH_MAGIC_2</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a828ac59ea8c553d8583d1b749290e2d0" kind="function"><name>createOpaqueCounter</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1a672620a323d70b733e20e41740975228" kind="function"><name>checkOpaqueLoopCondition</name></member>
     <member refid="namespace_travel_expense_1_1_code_hardening_1af5e0a7847c70ae9cd622ea48f577178e" kind="function"><name>opaqueIncrement</name></member>
@@ -818,7 +818,7 @@
   <compound refid="database_8cpp" kind="file"><name>database.cpp</name>
     <member refid="database_8cpp_1a2b42ceef59ec198c6eee355a96d2cd1c" kind="define"><name>MKDIR</name></member>
     <member refid="database_8cpp_1ae37f2aaf4837802590f2bd11facb80ea" kind="define"><name>ACCESS</name></member>
-    <member refid="namespace_travel_expense_1_1_database_1a879bc0655c88733b1bd80c84980d38ba" kind="variable"><name>g_database</name></member>
+    <member refid="namespace_travel_expense_1_1_database_1abfb61a8b3fd854092b5a1c0215c84367" kind="variable"><name>g_database</name></member>
     <member refid="namespace_travel_expense_1_1_database_1ae9f9e2befdc1734e0096e402864e98e7" kind="function"><name>initializeDatabase</name></member>
     <member refid="namespace_travel_expense_1_1_database_1a2af129a13996d54e28626bb31ea628dd" kind="function"><name>closeDatabase</name></member>
     <member refid="namespace_travel_expense_1_1_database_1a99d005e75737c809467eaa2bc6a50618" kind="function"><name>createTables</name></member>
@@ -933,7 +933,7 @@
     <member refid="namespace_travel_expense_1_1_migration_1ac56a5704bf31629e1b35b2dcd161a98b" kind="function"><name>migrateAllFromBinary</name></member>
   </compound>
   <compound refid="rasp_8cpp" kind="file"><name>rasp.cpp</name>
-    <member refid="namespace_travel_expense_1_1_r_a_s_p_1a7dc79c571124ed9a9dfbfe87ba610b0b" kind="variable"><name>g_expectedSelfChecksum</name></member>
+    <member refid="namespace_travel_expense_1_1_r_a_s_p_1aaf079e4b9d9d26f4e2e8cb34d7694d1a" kind="variable"><name>g_expectedSelfChecksum</name></member>
     <member refid="namespace_travel_expense_1_1_r_a_s_p_1a2fd0dd18bf241394231ab86d91e032db" kind="variable"><name>g_criticalFunctions</name></member>
     <member refid="namespace_travel_expense_1_1_r_a_s_p_1a69aab7fc42c2f89170695f4daa2f99de" kind="function"><name>g_raspActive</name></member>
     <member refid="namespace_travel_expense_1_1_r_a_s_p_1a9c03d13a00c2b472189ec95753425f1d" kind="function"><name>g_periodicCheckActive</name></member>
@@ -1015,7 +1015,7 @@
     <member refid="softhsm_8cpp_1ac2c1c282afbcfd1fdda90bb1b922f97c" kind="define"><name>DL_CLOSE</name></member>
     <member refid="softhsm_8cpp_1a292a39d6dd5417956880f1eb1b656ce5" kind="define"><name>DL_SYM</name></member>
     <member refid="softhsm_8cpp_1ac1374fad0b402b055ede739566f0957f" kind="define"><name>DL_ERROR</name></member>
-    <member refid="namespace_travel_expense_1_1_soft_h_s_m_1a6fb8347ca19497bb25f5f0a6e696d96f" kind="typedef"><name>ErrorCode</name></member>
+    <member refid="namespace_travel_expense_1_1_soft_h_s_m_1a5027751f2d53787df3d1e51363fc38b5" kind="typedef"><name>ErrorCode</name></member>
     <member refid="namespace_travel_expense_1_1_soft_h_s_m_1a25b47e9b2a2df901ca4dc5044147214a" kind="variable"><name>g_pkcs11Library</name></member>
     <member refid="namespace_travel_expense_1_1_soft_h_s_m_1aaeba772df23a3ca6603606546f2bceb1" kind="variable"><name>g_pFunctionList</name></member>
     <member refid="namespace_travel_expense_1_1_soft_h_s_m_1ae9e5e1f09fca7edbf90a13dffd07c6ec" kind="variable"><name>g_currentSlot</name></member>

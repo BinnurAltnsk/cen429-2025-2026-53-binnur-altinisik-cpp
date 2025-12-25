@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
   <compounddef id="namespace_travel_expense_1_1_security" kind="namespace" language="C++">
     <compoundname>TravelExpense::Security</compoundname>
-      <sectiondef kind="func">
+    <sectiondef kind="func">
       <memberdef kind="function" id="namespace_travel_expense_1_1_security_1a146f27ab484fcf4d9f824709194ba931" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="export_8h_1a21d78c0dc6e2907cbb76e2b0468cceb6" kindref="member">TRAVELEXPENSE_API</ref> bool</type>
         <definition>bool TravelExpense::Security::secureMemoryCleanup</definition>
@@ -42,8 +42,7 @@
 </parameterlist>
 <simplesect kind="return"><para>true Başarılı, false Hata</para>
 </simplesect>
-</para>
-<para>Bu fonksiyon, bellek içeriğini üç geçişli bir algoritma ile güvenli şekilde siler:<orderedlist>
+Bu fonksiyon, bellek içeriğini üç geçişli bir algoritma ile güvenli şekilde siler:<orderedlist>
 <listitem><para>Geçiş: Bellek alanını sıfırlama (SecureZeroMemory veya secure_memset)</para>
 </listitem><listitem><para>Geçiş: Rastgele verilerle doldurma (veri kurtarmayı zorlaştırmak için)</para>
 </listitem><listitem><para>Geçiş: Tekrar sıfırlama ve volatile pointer ile kontrol</para>
@@ -113,8 +112,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-</para>
-<para>Bu fonksiyon, char buffer içeriğini güvenli şekilde temizler. <computeroutput><ref refid="namespace_travel_expense_1_1_security_1a146f27ab484fcf4d9f824709194ba931" kindref="member">secureMemoryCleanup()</ref></computeroutput> fonksiyonunu çağırarak çoklu geçişli temizleme algoritmasını kullanır.</para>
+Bu fonksiyon, char buffer içeriğini güvenli şekilde temizler. <computeroutput><ref refid="namespace_travel_expense_1_1_security_1a146f27ab484fcf4d9f824709194ba931" kindref="member">secureMemoryCleanup()</ref></computeroutput> fonksiyonunu çağırarak çoklu geçişli temizleme algoritmasını kullanır.</para>
 <para><simplesect kind="note"><para>Bu fonksiyon, özellikle string buffer&apos;ları (şifreler, token&apos;lar vb.) temizlemek için kullanılır. Null pointer veya sıfır uzunluk kontrolü yapılır.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -188,8 +186,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-</para>
-<para>Bu fonksiyon, bellek alanını belirtilen değerle doldurur. Volatile pointer kullanarak compiler optimizer&apos;ın bu işlemi atlamasını engeller. Bu sayede hassas verilerin güvenli şekilde temizlenmesi sağlanır.</para>
+Bu fonksiyon, bellek alanını belirtilen değerle doldurur. Volatile pointer kullanarak compiler optimizer&apos;ın bu işlemi atlamasını engeller. Bu sayede hassas verilerin güvenli şekilde temizlenmesi sağlanır.</para>
 <para><simplesect kind="note"><para>Standart memset() fonksiyonundan farklı olarak, bu fonksiyon optimizer&apos;ın silme işlemini atlamasını engellemek için volatile pointer kullanır. Bu, hassas verilerin (şifreler, anahtarlar vb.) güvenli şekilde temizlenmesi için kritiktir.</para>
 </simplesect>
 <parameterlist kind="param"><parameteritem>
@@ -223,7 +220,7 @@
         </inbodydescription>
         <location file="src/travelexpense/src/security.cpp" line="67" column="6" bodyfile="src/travelexpense/src/security.cpp" bodystart="67" bodyend="81" declfile="src/travelexpense/header/security.h" declline="56" declcolumn="24"/>
       </memberdef>
-      </sectiondef>
+    </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
